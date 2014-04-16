@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC 
+"-//Apache Software Foundation//DTD Struts Configuration 1.2//EN"  
+"[WWW] http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+<form-beans>
+    <form-bean name="loginForm" type="org.apache.struts.action.DynaActionForm">
+        <form-property name="username" type="java.lang.String"/>
+    	<form-property name="password" type="java.lang.String"/>
+    	<form-property name="newPassword" type="java.lang.String"/>
+    	<form-property name="newPasswordReentry" type="java.lang.String"/>
+    </form-bean>
+
+    <form-bean name="siatMenu" type="org.apache.struts.action.DynaActionForm">
+        <form-property name="idItemMenuNivel1" type="java.lang.Long"/>
+	  	<form-property name="idItemMenuNivel2" type="java.lang.Long"/>
+		<form-property name="idAccionModulo" type="java.lang.Long"/>
+    </form-bean>
+    <form-bean name="usuarioSiatSearchPage" type="org.apache.struts.action.DynaActionForm"/>
+	<form-bean name="usuarioSiatAdapter"    type="org.apache.struts.action.DynaActionForm"/>
+    <form-bean name="oficinaSearchPage" type="org.apache.struts.action.DynaActionForm"/>
+    <form-bean name="oficinaAdapter" type="org.apache.struts.action.DynaActionForm"/>
+
+</form-beans>
+
+<action-mappings>
+    <action
+     	path="/login/LoginSsl"
+		type="ar.gov.rosario.siat.seg.view.struts.LoginSslAction"
+		scope="request"
+        validate="false"
+		name="loginForm"
+    	input=".seg.view.loginForm"
+        parameter="method"
+		attribute="loginForm">
+            
+    	<forward name="webLoginForm" path=".seg.view.webLoginForm" />
+    	<forward name="intranetLoginForm" path=".seg.view.intranetLoginForm" />
+    	<forward name="siatMenu"  path="/seg/SiatMenu.do?method=build"/>
+    	<forward name="SolPendientes"  path="/cas/BuscarSolicitud.do?method=irPendientesArea"/>
+    	<forward name="loginSelecOficina"  path=".seg.view.loginSelecOficina"/>
+    	<forward name="changePassForm"	 path=".seg.view.changePassForm" />
+    </action>
+
+    <action
+     	path="/seg/Login"
+		type="ar.gov.rosario.siat.seg.view.struts.LoginAction"
+		scope="request"
+        validate="false"
+		name="loginForm"
+    	input=".seg.view.loginForm"
+        parameter="method"
+		attribute="loginForm">
+            
+    	<forward name="siatMenu"  path="/seg/SiatMenu.do?method=build"/>
+    	<forward name="webLoginForm" path=".seg.view.webLoginForm" />
+    	<forward name="intranetLoginForm" path=".seg.view.intranetLoginForm" />
+    	<forward name="loginSelecOficina"  path=".seg.view.loginSelecOficina"/>
+    </action>
+
+    <action
+        path="/seg/SiatMenu"
+        type="ar.gov.rosario.siat.seg.view.struts.SiatMenuAction"
+		parameter="method"
+		name="siatMenu">
+
+        <forward name="menuForm" path=".seg.view.menuForm" />
+    </action>
+
+	<!-- Usuario Siat -->	    
+    <action
+    	path="/seg/BuscarUsuarioSiat"
+        type="ar.gov.rosario.siat.seg.view.struts.BuscarUsuarioSiatDAction"
+		scope="request"
+       	validate="false"
+        name="usuarioSiatSearchPage"
+        parameter="method"
+   		input=".seg.seguridad.view.usuarioSiatSearchPage"
+        attribute="usuarioSiatSearchPage">
+           
+   	    <forward name="usuarioSiatSearchPage"   	path=".seg.seguridad.view.usuarioSiatSearchPage" />
+   	    <forward name="administrarUsuarioSiat" 	path="/seg/AdministrarUsuarioSiat.do?method=inicializar" />
+    </action>
+	
+	<action
+    	path="/seg/AdministrarUsuarioSiat"
+        type="ar.gov.rosario.siat.seg.view.struts.AdministrarUsuarioSiatDAction"
+	    scope="request"
+       	validate="false"
+        name="usuarioSiatAdapter"
+        parameter="method"
+   	    input=".seg.seguridad.view.usuarioSiatEditAdapter"
+        attribute="usuarioSiatAdapter">
+           
+   	    <forward name="usuarioSiatViewAdapter"		path=".seg.seguridad.view.usuarioSiatViewAdapter" />
+   	    <forward name="usuarioSiatEditAdapter"      path=".seg.seguridad.view.usuarioSiatEditAdapter" />
+    </action>
+    <!-- Fin Usuario Siat -->
+
+	<!-- Oficina -->	    
+    <action
+    	path="/seg/BuscarOficina"
+        type="ar.gov.rosario.siat.seg.view.struts.BuscarOficinaDAction"
+		scope="request"
+       	validate="false"
+        name="oficinaSearchPage"
+        parameter="method"
+   		input=".seg.seguridad.view.oficinaSearchPage"
+        attribute="oficinaSearchPage">
+           
+   	    <forward name="areaSearchPage"   	path=".def.configuracion.view.areaSearchPage" />
+   	   	<forward name="oficinaSearchPage" 	path=".seg.seguridad.view.oficinaSearchPage" />
+   	    <forward name="administrarOficina" 	path="/seg/AdministrarOficina.do?method=inicializar" />
+    </action>
+	
+	<action
+   		path="/seg/AdministrarOficina"
+        type="ar.gov.rosario.siat.seg.view.struts.AdministrarOficinaDAction"
+	    scope="request"
+       	validate="false"
+        name="oficinaAdapter"
+        parameter="method"
+   	    input=".seg.seguridad.view.oficinaEditAdapter"
+        attribute="oficinaAdapter">
+           
+   	    <forward name="oficinaViewAdapter"		path=".seg.seguridad.view.oficinaViewAdapter" />
+   	    <forward name="oficinaEditAdapter"      path=".seg.seguridad.view.oficinaEditAdapter" />
+    </action>
+    <!-- Fin Oficina -->
+
+</action-mappings>
+
+</struts-config>

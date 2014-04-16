@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC 
+"-//Apache Software Foundation//DTD Struts Configuration 1.2//EN"  
+"[WWW] http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+
+<global-forwards>
+	<forward name="siatMessage"     		  path=".base.view.siatMessage" />
+	<forward name="siatIndex"    			  path="/SiatIndex.do"/>
+	<forward name="sessionError"   			  path="/seg/Login.do?method=sessionError"/>
+	<forward name="sessionAnonimoError" 	  path=".seg.view.sessionAnonimoError"/>
+	<forward name="siatErrorPrint"     		  path=".base.view.siatErrorPrint" />
+	<forward name="siatErrorNavegacion"		  path=".base.view.siatErrorNavegacion"/>
+	<forward name="siatErrorServer"   	   	  path=".base.view.siatErrorServer"/> <!-- maneja los 404 y 500 -->
+	<forward name="siatOffLine"     		  path=".base.view.siatOffLine" />
+	<forward name="administrarEnvioArchivos"  path="/pro/AdministrarEnvioArchivos.do?method=inicializar" />
+</global-forwards>
+
+<action-mappings>
+	<action path="/Grs" parameter=".base.view.grs" type="org.apache.struts.actions.ForwardAction"/>
+	<action path="/SiatIndex" parameter=".base.view.siatIndex" type="org.apache.struts.actions.ForwardAction"/>
+	<action path="/SiatError" parameter=".base.view.siatErrorServer" type="org.apache.struts.actions.ForwardAction"/>
+</action-mappings>
+
+<controller>
+	<set-property property="processorClass" value="org.apache.struts.tiles.TilesRequestProcessor"/>
+	<set-property property="locale" value="true"/>
+</controller>
+    
+<!-- ================================ Message Resources Definitions -->
+<message-resources key="base" parameter="resources.base" null="false"/>
+<message-resources key="seg"  parameter="resources.seg"  null="false"/>
+<message-resources key="def"  parameter="resources.def"  null="false"/>
+<message-resources key="gde"  parameter="resources.gde"  null="false"/>
+<message-resources key="rec"  parameter="resources.rec"  null="false"/>
+<message-resources key="cas"  parameter="resources.cas"  null="false"/>
+<message-resources key="pad"  parameter="resources.pad"  null="false"/>
+<message-resources key="exe"  parameter="resources.exe"  null="false"/>
+<message-resources key="pro"  parameter="resources.pro"  null="false"/>
+<message-resources key="bal"  parameter="resources.bal"  null="false"/>
+<message-resources key="cyq"  parameter="resources.cyq"  null="false"/>
+<message-resources key="frm"  parameter="resources.frm"  null="false"/>
+<message-resources key="emi"  parameter="resources.emi"  null="false"/>
+<message-resources key="ef"   parameter="resources.ef"   null="false"/>
+<message-resources key="fra"  parameter="resources.fra"  null="false"/>
+<message-resources key="esp"  parameter="resources.esp"  null="false"/>
+<message-resources key="afi"  parameter="resources.afi"  null="false"/>
+<message-resources key="rod"  parameter="resources.rod"  null="false"/>
+<message-resources factory="ar.gov.rosario.siat.fra.view.util.FraseFactory"
+				   key="frase"
+				   parameter="ar.gov.rosario.siat.fra.iface.util.Frase"  
+				   null="false"/>
+<message-resources key="segweb"  parameter="resources.segweb"  null="false"/>				   
+  
+<!-- ======================================= Plug Ins Configuration -->
+<plug-in className="org.apache.struts.tiles.TilesPlugin">
+	<set-property property="definitions-config" 
+		value="/WEB-INF/tiles-defs.xml,
+		/WEB-INF/base/config/tiles-defs-base.xml,
+		/WEB-INF/seg/config/tiles-defs-seg.xml,
+		/WEB-INF/def/config/tiles-defs-def.xml,
+		/WEB-INF/gde/config/tiles-defs-gde.xml,
+		/WEB-INF/rec/config/tiles-defs-rec.xml,
+		/WEB-INF/pad/config/tiles-defs-pad.xml,
+		/WEB-INF/cas/config/tiles-defs-cas.xml,		
+		/WEB-INF/exe/config/tiles-defs-exe.xml,
+		/WEB-INF/bal/config/tiles-defs-bal.xml,
+		/WEB-INF/cyq/config/tiles-defs-cyq.xml,
+		/WEB-INF/pro/config/tiles-defs-pro.xml,
+		/WEB-INF/frm/config/tiles-defs-frm.xml,
+		/WEB-INF/fra/config/tiles-defs-fra.xml,
+		/WEB-INF/emi/config/tiles-defs-emi.xml,
+		/WEB-INF/esp/config/tiles-defs-esp.xml,
+		/WEB-INF/ef/config/tiles-defs-ef.xml,
+		/WEB-INF/afi/config/tiles-defs-afi.xml,
+		/WEB-INF/rod/config/tiles-defs-rod.xml"/>    
+	<set-property property="moduleAware" value="true" />
+	<set-property property="definitions-parser-validate" value="true" />
+</plug-in>
+
+</struts-config>

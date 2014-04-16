@@ -1,0 +1,66 @@
+<project name="migrania" default="dist" basedir=".">
+  <description>
+        Alone in the Siat
+  </description>
+  <!-- set global properties for this build -->
+  <property name="src" location="src"/>
+  <property name="build" location="build/classes"/>
+  <property name="dist"  location="build"/>
+
+  <target name="init">
+    <!-- Create the build directory structure used by compile -->
+    <mkdir dir="${build}"/>
+  	<mkdir dir="${dist}/lib"/>
+  </target>
+
+  <target name="compile" depends="init"
+        description="compile the source " >
+    <!-- Compile the java code from ${src} into ${build} -->
+    <javac srcdir="${src}" destdir="${build}" encoding="iso8859-1" debug="on" deprecation="false">
+      <classpath>
+    	<fileset dir="../../externalJars/lib">
+	  <include name="*.jar" />
+	</fileset>
+	<fileset dir="../../build/lib">
+	  <include name="*.jar" />
+	</fileset>
+	<pathelement path="../grs/build"/>
+    </classpath>
+    </javac>
+  	
+  	<copy todir="${build}">
+	   	<fileset dir="../../view/src/WEB-INF/src" includes="mcr-general.cfg.xml" />
+    	<fileset dir="../../view/src/WEB-INF/src/" includes="siat.hibernate.cfg.xml" />
+    	<fileset dir="../../view/src/WEB-INF/src/" includes="swe.hibernate.cfg.xml" />
+  	</copy>
+
+    <copy todir="${build}">
+    	<fileset dir="${src}" includes="**/*.xml" />
+    	<fileset dir="${src}" includes="**/*.properties" />
+    </copy>
+
+  </target>
+	
+  <target name="dist" depends="compile"
+        description="generate the distribution" >
+    <!-- Create the distribution directory -->
+    <mkdir dir="${dist}/lib"/>
+
+  	<!-- Put everything in ${build} into the adpcore-${version}.jar file -->
+    <jar jarfile="${dist}/lib/alone.jar" basedir="${build}"/>
+
+    <copy todir="${dist}/lib/">
+    	<fileset dir="../../externalJars/lib" includes="*.jar" />
+    	<fileset dir="../../build/lib" includes="*.jar" />
+    </copy>
+
+  </target>
+
+  <target name="clean"
+        description="clean up" >
+    <!-- Delete the ${build} and ${dist} directory trees -->
+    <delete dir="${build}"/>
+    <delete dir="${dist}"/>
+  </target>
+	
+</project>

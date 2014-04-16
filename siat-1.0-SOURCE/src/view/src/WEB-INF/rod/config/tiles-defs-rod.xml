@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+ <!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 1.1//EN"
+       "http://jakarta.apache.org/struts/dtds/tiles-config_1_1.dtd">
+
+<tiles-definitions>
+	
+	<!-- Tramite -->
+    <definition name=".rod.tramite.view.tramiteRASearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/rod/tramite/tramiteRASearchPage.jsp"/>
+    </definition>
+	
+	<definition name=".rod.tramite.view.tramiteRAViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/rod/tramite/tramiteRAViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".rod.tramite.view.tramiteRAEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/rod/tramite/tramiteRAEditAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".rod.tramite.view.tramiteRAAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/rod/tramite/tramiteRAAdapter.jsp"/>
+    </definition>
+    <!-- fin Tramite -->
+
+	<!-- Modelo -->
+    <definition name=".rod.tramite.view.modeloSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/rod/tramite/modeloSearchPage.jsp"/>
+    </definition>
+    <!-- fin Modelo -->
+   
+   
+   	<!-- Propietario -->
+    <definition name=".rod.tramite.view.propietarioEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/rod/tramite/propietarioEditAdapter.jsp"/>
+    </definition>
+        <definition name=".rod.tramite.view.propietarioViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/rod/tramite/propietarioViewAdapter.jsp"/>
+    </definition>
+    
+    <!-- fin Propietario -->
+   
+</tiles-definitions>

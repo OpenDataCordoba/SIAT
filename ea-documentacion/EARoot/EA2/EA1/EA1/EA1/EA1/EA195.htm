@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Reimprimir / Reconfeccionar Cuota</title>
+<link href="../../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="pageHeader"></div>
+<div class="PageBody">
+	<span class="ObjectTitle">Reimprimir / Reconfeccionar Cuota  : public   usecase</span>
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">20/07/2007 16:58:38</td>
+		</tr>
+		<tr>
+			<td class="ObjectDetailsTopic">Modified:</td>
+			<td class="ObjectDetailsValue">01/09/2008 10:44:52</td>
+		</tr>
+		<tr style="height: 10px"><td colspan="2"></td></tr>
+		<tr>
+			<td class="ObjectDetailsTopic"><img src="../../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td class="ObjectDetailsValue">1.0</td>
+		</tr>
+		<tr id="proj02" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Phase:</td>
+			<td class="ObjectDetailsValue">1.0</td>
+		</tr>
+		<tr id="proj03" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Status:</td>
+			<td class="ObjectDetailsValue">R2</td>
+		</tr>
+		<tr id="proj04" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Complexity:</td>
+			<td class="ObjectDetailsValue">Difficult</td>
+		</tr>
+		<tr>
+			<td class="ObjectDetailsTopic"><img src="../../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">UUID:</td>
+			<td class="ObjectDetailsValue">{D13339C6-C4C9-44f4-8F80-B967BE7A4D83}</td>
+		</tr>
+		<tr id="adv01" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
+			<td class="ObjectDetailsValue"><a href="../EA149.htm">Diagrama Gestión de Deuda / Convenios</a></td>
+		</tr>
+	</table>
+	<div class="ObjectDetailsNotes">Este CU permite reconfeccionar uno o varias Cuotas de un Plan vigente, generando un recibo para el pago.<br />La condición para poder reconfeccionar cuotas es que el convenio no puede estar caduco, anulado, cancelado ni recompuesto.</div>
+
+	<div class="TableGroup" id="TableGroup">
+		<ul class="ItemTitle">
+			<li onClick="parent.toggleItem('Scenario');" id="ScenarioTitle">Scenarios</li>
+			<li onClick="parent.toggleItem('Links');" id="LinksTitle">Other Links</li>
+		</ul>
+		<div class="ItemBody" id="ScenarioTable">
+			<table align="center" border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="24%" class="TableHeading">Scenario</td>
+					<td width="8%" class="TableHeading">Type</td>
+					<td width="68%" class="TableHeading">Detail</td>
+				</tr>
+				<tr>
+					<td width="24%" class="TableRow">Reimprimir/Reconfeccionar Cuota</td>
+					<td width="8%" class="TableRow">Alternate</td>
+					<td width="68%" class="TableRow"><div class="ObjectDetailsNotes">Sobre las cuotas seleccionadas se deberá validar que cada una de las cuotas pertenezcan a un mismo plan vigente (no caduco) y que ninguna se encuentre paga, ni se encuentre Indeterminada o  Reclamada.<br /><br />Luego, se deberá verificar si entre las cuotas existen casos en que las mismas estén vencida y casos en que no lo estén.<br /><br />En caso que exista cuota vencida:<br />   . Si el plan es caso social o la cuenta tiene un exención de caso social vigente: No se actualiza<br /><br />   . Si se actualiza, se obtienen los descuentos activos que se pueden aplicar al total de las Cuotas vencidas recibidos como parámetros, de acuerdo a la configuración de los descuentos.  La configuración de un descuento implica determinar los Atributos para los cuales un descuento es válido. (ver: Mantenedor de Descuento) En caso de obtener más de un descuento para una cuota en particular el sistema calculará y aplicará el mejor de ellos. En caso que no se obtengan descuentos el sistema informará que no existen descuentos y la reconfección se realizará sin descuento alguno.<br /><br />    . Se deberá seleccionar una fecha de vencimiento de una lista de posibles. La lista se arma considerando que la fecha deberá estar dentro de los XX días, según se definió en los parámetros de configuración del sistema y ser un día hábil.<br /><br />    . Para cada Cuota:<br /><br />       . Verificar el atributo del Plan Cuota Desde Para Reconfeccionar para saber si el número de cuota a reconfeccionar es posterior al que indica este campo, caso contrario no se podrá reconfeccionar.<br /><br />       . Se invoca al CU &quot;Actualizar Cuota&quot;, con la fecha de vencimiento ingresada por el usuario, para obtener la actualización de la Cuota correspondiente.<br />      . Si la el plan está definido para la exención de caso social o la cuenta tiene vigente una exención de este tipo hoy, la actualización se devuelve 0.<br /><br />       . Se aplican los descuentos sobre cada Tipo Importe (Capital, Interés Financiero o Actualización) según esté definido en el descuento a aplicar, obteniéndose el nuevo importe total de cada Cuota.<br /><br />   . Con estas Cuotas actualizadas y aplicados los descuentos, se genera el Recibo de Reconfección. <br /><br />   . Adicionalmente, se verifica si la acción de reconfección para el rol del usuario logueado posee asociado un sellado, y en caso afirmativo, si se cumplen todas las condiciones del mismo para su aplicación.<br /><br />  . Finalmente, se imprime el formulario correspondiente, agrupando las cuotas por descuentos aplicados (un recibo por descuento).<br /><br /><br />Para todos las Cuotas que no estuviesen vencidas:<br /><br />    . Se debe realizar la reimpresión individual de cada uno. En caso que la cuota nunca haya sido impresa, se debe registrar la Fecha de Impresión de la misma.<br /></div>
+</td>
+				</tr>
+
+			</table>
+		</div>
+		<div class="ItemBody" id="LinksTable">
+			<table align="center" border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="30%" class="TableHeading">Object</td>
+					<td width="15%" class="TableHeading">Type</td>
+					<td width="15%" class="TableHeading">Connection</td>
+					<td width="40%" class="TableHeading">Notes</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="EA192.htm">Gestionar Convenio</a></td>
+					<td width="15%" class="TableRow" valign="top">UseCase</td>
+					<td width="15%" class="TableRow" valign="top">Extends</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../../../../../EA1/EA4/EA48.htm">«Functional» 49-Emitir liquidaciones de deuda, estados de cuenta y certificados de "Libre Deuda" de la cuenta corriente del contribuyente en todos los posibles niveles de agregación (total, por tributo, por objeto imponible, por vía (administrativa/judicial), etc.). </a></td>
+					<td width="15%" class="TableRow" valign="top">Requirement</td>
+					<td width="15%" class="TableRow" valign="top">Realisation</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../../../../../EA1/EA7/EA96.htm">«Functional» 66- Para los convenios formalizados, deberá poderse: reimprimir/reconfeccionar cuotas, emitir cuotas saldo,  realizar saldos por caducidad de convenios caducos y anular convenios totalmente impagos.</a></td>
+					<td width="15%" class="TableRow" valign="top">Requirement</td>
+					<td width="15%" class="TableRow" valign="top">Realisation</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../../../../../EA1/EA5/EA63.htm">«Functional» 1- El sistema deberá dar soporte a todos los procesos de la Administración Tributaria.</a></td>
+					<td width="15%" class="TableRow" valign="top">Requirement</td>
+					<td width="15%" class="TableRow" valign="top">Realisation</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../../../../../EA1/EA4/EA48.htm">«Functional» 49-Emitir liquidaciones de deuda, estados de cuenta y certificados de "Libre Deuda" de la cuenta corriente del contribuyente en todos los posibles niveles de agregación (total, por tributo, por objeto imponible, por vía (administrativa/judicial), etc.). </a></td>
+					<td width="15%" class="TableRow" valign="top">Requirement</td>
+					<td width="15%" class="TableRow" valign="top">Realisation</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../../../../../EA1/EA7/EA96.htm">«Functional» 66- Para los convenios formalizados, deberá poderse: reimprimir/reconfeccionar cuotas, emitir cuotas saldo,  realizar saldos por caducidad de convenios caducos y anular convenios totalmente impagos.</a></td>
+					<td width="15%" class="TableRow" valign="top">Requirement</td>
+					<td width="15%" class="TableRow" valign="top">Realisation</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../../../../../EA1/EA5/EA65.htm">«Functional» 11- Todo evento que incluya la impresión de un documento, deberá contemplar su correspondiente reimpresión.</a></td>
+					<td width="15%" class="TableRow" valign="top">Requirement</td>
+					<td width="15%" class="TableRow" valign="top">Realisation</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+
+			</table>
+		</div>
+	</div>
+<div class="pageFooter"></div>
+ 
+</body>
+</html>

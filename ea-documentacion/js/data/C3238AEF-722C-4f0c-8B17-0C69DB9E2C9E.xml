@@ -1,0 +1,2 @@
+tocTab[tocTab.length] = new Array("2.1.8.1:1", "", "Diagrama de Frases", "EARoot/EA2/EA1/EA8/EA1/EA500.htm", "180.png", "493", "0", "", "Use Case diagram");
+tocTab[tocTab.length] = new Array("2.1.8.1:2", "", "Mantenedor de Frases", "EARoot/EA2/EA1/EA8/EA1/EA502.htm", "7.png", "3088", "0", "", "UseCase");

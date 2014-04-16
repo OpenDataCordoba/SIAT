@@ -1,0 +1,764 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+ <!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 1.1//EN"
+       "http://jakarta.apache.org/struts/dtds/tiles-config_1_1.dtd">
+
+<tiles-definitions>
+	
+	<!-- Indet -->
+    <definition name=".bal.view.indetSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/bal/indet/indetSearchPage.jsp"/>
+    </definition>
+	
+	<definition name=".bal.view.indetViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/indet/indetViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".bal.view.indetEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/indet/indetEditAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".bal.view.indetGenSaldoAFavorAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/indet/indetGenSaldoAFavorAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".bal.view.indetMasivoSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/bal/indet/indetMasivoSearchPage.jsp"/>
+    </definition>
+
+    <definition name=".bal.view.indetMasivoReingreso" extends=".siatStdLayout">
+	    <put name="body" value="/bal/indet/indetMasivoReingreso.jsp"/>
+    </definition>
+    <!-- fin Indet -->
+
+	<!-- Sistema -->
+    <definition name=".bal.view.sistemaSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/bal/definicion/sistemaSearchPage.jsp"/>
+    </definition>
+	
+	<definition name=".bal.view.sistemaViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/definicion/sistemaViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".bal.view.sistemaEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/definicion/sistemaEditAdapter.jsp"/>
+    </definition>
+    <!-- fin Sistema -->
+    
+    <!--  Administrar Deuda Reclamada (SINC) -->
+	<definition name=".bal.reclamo.view.deudaReclamadaIngresoAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/reclamo/deudaReclamadaIngresoAdapter.jsp"/>
+    </definition>
+
+    <definition name=".bal.reclamo.view.deudaReclamadaAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/reclamo/deudaReclamadaAdapter.jsp"/>
+    </definition>
+    <!--  Administrar Deuda Reclamada (SINC) -->
+	
+	<!-- DisPar -->	
+	<definition name=".bal.distribucion.view.disParSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/bal/distribucion/disParSearchPage.jsp"/>
+    </definition>
+
+    <definition name=".bal.distribucion.view.disParEncEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/distribucion/disParEncEditAdapter.jsp"/>
+    </definition>  	
+
+	<definition name=".bal.distribucion.view.disParViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/distribucion/disParViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".bal.distribucion.view.disParAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/distribucion/disParAdapter.jsp"/>
+    </definition>
+	<!-- Fin DisPar -->  
+	
+	<!-- DisParDet -->	
+	<definition name=".bal.distribucion.view.disParDetViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/distribucion/disParDetViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".bal.distribucion.view.disParDetEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/distribucion/disParDetEditAdapter.jsp"/>
+    </definition>
+	<!-- Fin DisParDet --> 
+	
+	<!-- DisParRec -->	
+	<definition name=".bal.distribucion.view.disParRecSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/bal/distribucion/disParRecSearchPage.jsp"/>
+    </definition>
+	
+	<definition name=".bal.distribucion.view.disParRecAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/distribucion/disParRecAdapter.jsp"/>
+    </definition>
+	
+	<definition name=".bal.distribucion.view.disParRecViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/distribucion/disParRecViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".bal.distribucion.view.disParRecEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/distribucion/disParRecEditAdapter.jsp"/>
+    </definition>
+	<!-- Fin DisParRec --> 
+	
+	<!-- DisParPla -->	
+	<definition name=".bal.distribucion.view.disParPlaSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/bal/distribucion/disParPlaSearchPage.jsp"/>
+    </definition>
+	
+	<definition name=".bal.distribucion.view.disParPlaAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/distribucion/disParPlaAdapter.jsp"/>
+    </definition>
+	
+	<definition name=".bal.distribucion.view.disParPlaViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/distribucion/disParPlaViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".bal.distribucion.view.disParPlaEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/distribucion/disParPlaEditAdapter.jsp"/>
+    </definition>
+	<!-- Fin DisParPla --> 
+	
+		<!-- Sellado -->
+    <definition name=".bal.view.selladoSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/bal/definicion/selladoSearchPage.jsp"/>
+    </definition>
+	
+	<definition name=".bal.view.selladoViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/definicion/selladoViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".bal.view.selladoEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/definicion/selladoEditAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".bal.view.selladoEncEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/definicion/selladoEncEditAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".bal.view.selladoAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/definicion/selladoAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".bal.view.impSelEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/definicion/impSelEditAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".bal.view.impSelViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/definicion/impSelViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".bal.view.accionSelladoEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/definicion/accionSelladoEditAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".bal.view.accionSelladoViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/definicion/accionSelladoViewAdapter.jsp"/>
+	</definition>
+	
+	<definition name=".bal.view.parSelEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/definicion/parSelEditAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".bal.view.parSelViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/definicion/parSelViewAdapter.jsp"/>
+	</definition>
+	
+	<!-- Fin Sellado -->
+
+	<!-- Asentamiento -->	
+	<definition name=".bal.asentamiento.view.asentamientoSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/bal/asentamiento/asentamientoSearchPage.jsp"/>
+    </definition>
+
+    <definition name=".bal.asentamiento.view.asentamientoEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/asentamiento/asentamientoEditAdapter.jsp"/>
+    </definition>  	
+
+	<definition name=".bal.asentamiento.view.asentamientoViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/asentamiento/asentamientoViewAdapter.jsp"/>
+    </definition>
+    <!-- Fin Asentamiento -->  
+	
+	<!-- ProcesoAsentamiento -->	
+    <definition name=".bal.asentamiento.view.procesoAsentamientoAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/asentamiento/procesoAsentamientoAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".bal.asentamiento.view.corridaProcesoAsentamientoViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/asentamiento/corridaProcesoAsentamientoViewAdapter.jsp"/>
+    </definition>
+	<!-- Fin ProcesoAsentamiento --> 
+
+	<!-- AseDel -->	
+	<definition name=".bal.delegador.view.aseDelSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/bal/delegador/aseDelSearchPage.jsp"/>
+    </definition>
+
+    <definition name=".bal.delegador.view.aseDelEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/delegador/aseDelEditAdapter.jsp"/>
+    </definition>  	
+
+	<definition name=".bal.delegador.view.aseDelViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/delegador/aseDelViewAdapter.jsp"/>
+    </definition>
+    <!-- Fin AseDel -->  
+	
+	<!-- ProcesoAseDel -->	
+    <definition name=".bal.delegador.view.procesoAseDelAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/delegador/procesoAseDelAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".bal.delegador.view.corridaProcesoAseDelViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/delegador/corridaProcesoAseDelViewAdapter.jsp"/>
+    </definition>
+	<!-- Fin ProcesoAseDel --> 
+	
+	<!-- ABM Ejercicio -->
+		<definition name=".bal.ejercicio.view.ejercicioSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/bal/definicion/ejercicioSearchPage.jsp"/>
+    </definition>
+
+    <definition name=".bal.ejercicio.view.ejercicioEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/definicion/ejercicioEditAdapter.jsp"/>
+    </definition>  	
+
+	<definition name=".bal.ejercicio.view.ejercicioViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/definicion/ejercicioViewAdapter.jsp"/>
+    </definition>
+    <!-- FIN ABM Ejercicio -->
+    
+     <!-- ABM Partida -->
+	  
+	<definition name=".bal.definicion.view.partidaSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/bal/definicion/partidaSearchPage.jsp"/>
+    </definition>
+    <definition name=".bal.definicion.view.partidaEncEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/definicion/partidaEncEditAdapter.jsp"/>
+    </definition>
+    <definition name=".bal.definicion.view.partidaViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/definicion/partidaViewAdapter.jsp"/>
+    </definition>    
+    
+    <definition name=".bal.definicion.view.partidaAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/definicion/partidaAdapter.jsp"/>
+    </definition>
+    
+    <!-- FIN ABM Partida -->
+    
+    <!-- ParCueBan -->	
+    <definition name=".bal.definicion.view.parCueBanEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/definicion/parCueBanEditAdapter.jsp"/>
+    </definition>
+    <definition name=".bal.definicion.view.parCueBanViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/definicion/parCueBanViewAdapter.jsp"/>
+    </definition>
+    <!-- Fin ParCueBan -->
+		
+    <!-- ABM Reclamo -->
+	<definition name=".bal.reclamo.view.reclamoSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/bal/reclamo/reclamoSearchPage.jsp"/>
+    </definition>
+
+    <definition name=".bal.reclamo.view.reclamoEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/reclamo/reclamoEditAdapter.jsp"/>
+    </definition>  	
+
+	<definition name=".bal.reclamo.view.reclamoViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/reclamo/reclamoViewAdapter.jsp"/>
+    </definition>
+    <!-- FIN ABM Reclamo -->
+	
+	
+	    
+    <!-- ABM Saldo a Favor -->
+	<definition name=".bal.saldoafavor.view.saldoAFavorSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/bal/saldoafavor/saldoAFavorSearchPage.jsp"/>
+    </definition>
+
+    <definition name=".bal.saldoafavor.view.saldoAFavorEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/saldoafavor/saldoAFavorEditAdapter.jsp"/>
+    </definition>  	
+
+	<definition name=".bal.saldoafavor.view.saldoAFavorViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/saldoafavor/saldoAFavorViewAdapter.jsp"/>
+    </definition>
+    <!-- FIN ABM Saldo a Favor -->
+		
+	<!-- ABM Cuenta Banco -->
+	<definition name=".bal.definicion.view.cuentaBancoSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/bal/definicion/cuentaBancoSearchPage.jsp"/>
+    </definition>
+
+    <definition name=".bal.definicion.view.cuentaBancoEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/definicion/cuentaBancoEditAdapter.jsp"/>
+    </definition>  	
+
+	<definition name=".bal.definicion.view.cuentaBancoViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/definicion/cuentaBancoViewAdapter.jsp"/>
+    </definition>
+    <!-- FIN ABM Cuenta Banco  -->
+    
+    <!-- ABM Tipo Cuenta Banco -->
+	<definition name=".bal.definicion.view.tipCueBanSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/bal/definicion/tipCueBanSearchPage.jsp"/>
+    </definition>
+
+    <definition name=".bal.definicion.view.tipCueBanEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/definicion/tipCueBanEditAdapter.jsp"/>
+    </definition>  	
+
+	<definition name=".bal.definicion.view.tipCueBanViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/definicion/tipCueBanViewAdapter.jsp"/>
+    </definition>
+    <!-- FIN ABM Tipo Cuenta Banco  -->
+    
+    	
+    <!-- Nodo -->
+	<definition name=".bal.clasificacion.view.nodoSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/bal/clasificacion/nodoSearchPage.jsp"/>
+    </definition>
+
+    <definition name=".bal.clasificacion.view.nodoEncEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/clasificacion/nodoEncEditAdapter.jsp"/>
+    </definition>  	
+
+	<definition name=".bal.clasificacion.view.nodoViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/clasificacion/nodoViewAdapter.jsp"/>
+    </definition>
+
+    <definition name=".bal.clasificacion.view.nodoAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/clasificacion/nodoAdapter.jsp"/>
+    </definition>  	
+    <!-- Fin Nodo -->
+
+    <!-- RelPartida -->
+    <definition name=".bal.clasificacion.view.relPartidaEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/clasificacion/relPartidaEditAdapter.jsp"/>
+    </definition>  	
+
+	<definition name=".bal.clasificacion.view.relPartidaViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/clasificacion/relPartidaViewAdapter.jsp"/>
+    </definition>
+    <!-- Fin RelPartida -->
+
+    <!-- RelCla -->
+    <definition name=".bal.clasificacion.view.relClaEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/clasificacion/relClaEditAdapter.jsp"/>
+    </definition>  	
+
+	<definition name=".bal.clasificacion.view.relClaViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/clasificacion/relClaViewAdapter.jsp"/>
+    </definition>
+    <!-- Fin RelCla -->
+    
+
+    <!-- OtrIngTes -->	
+	<definition name=".bal.otroIngresoTesoreria.view.otrIngTesSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/bal/otroIngresoTesoreria/otrIngTesSearchPage.jsp"/>
+    </definition>
+
+    <definition name=".bal.otroIngresoTesoreria.view.otrIngTesEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/otroIngresoTesoreria/otrIngTesEditAdapter.jsp"/>
+    </definition>  	
+
+	<definition name=".bal.otroIngresoTesoreria.view.otrIngTesViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/otroIngresoTesoreria/otrIngTesViewAdapter.jsp"/>
+    </definition>
+
+	<definition name=".bal.otroIngresoTesoreria.view.otrIngTesReciboPrint" extends=".siatStdLayout">
+	    <put name="body" value="/bal/otroIngresoTesoreria/otrIngTesReciboPrint.jsp"/>
+    </definition>
+    
+    <definition name=".bal.otroIngresoTesoreria.view.otrIngTesAdmAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/otroIngresoTesoreria/otrIngTesAdmAdapter.jsp"/>
+    </definition>
+	<!-- Fin OtrIngTes -->  
+	
+	<!-- OtrIngTesPar -->	
+	<definition name=".bal.otroIngresoTesoreria.view.otrIngTesParViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/otroIngresoTesoreria/otrIngTesParViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".bal.otroIngresoTesoreria.view.otrIngTesParEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/otroIngresoTesoreria/otrIngTesParEditAdapter.jsp"/>
+    </definition>
+	<!-- Fin OtrIngTesPar --> 
+	
+	<!-- Reporte Clasificador -->
+    <definition name=".bal.clasificacion.view.clasificadorReport" extends=".siatStdLayout">
+	    <put name="body" value="/bal/clasificacion/clasificadorReport.jsp"/>
+    </definition>
+
+	<!-- Reporte Rentas -->
+    <definition name=".bal.clasificacion.view.rentasReport" extends=".siatStdLayout">
+	    <put name="body" value="/bal/clasificacion/rentasReport.jsp"/>
+    </definition>
+    
+   	<!-- Reporte Clasificador Comparativo-->
+    <definition name=".bal.clasificacion.view.claComReport" extends=".siatStdLayout">
+	    <put name="body" value="/bal/clasificacion/claComReport.jsp"/>
+    </definition>
+    
+    <!-- Balance -->	
+	<definition name=".bal.balance.view.balanceSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/bal/balance/balanceSearchPage.jsp"/>
+    </definition>
+
+    <definition name=".bal.balance.view.balanceEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/balance/balanceEditAdapter.jsp"/>
+    </definition>  	
+
+	<definition name=".bal.balance.view.balanceViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/balance/balanceViewAdapter.jsp"/>
+    </definition>
+    <!-- Fin Balance -->  
+	
+	<!-- ProcesoBalance -->	
+    <definition name=".bal.balance.view.procesoBalanceAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/balance/procesoBalanceAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".bal.balance.view.corridaProcesoBalanceViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/balance/corridaProcesoBalanceViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".bal.balance.view.caja7EditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/balance/caja7EditAdapter.jsp"/>
+    </definition>  	
+
+	<definition name=".bal.balance.view.caja7ViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/balance/caja7ViewAdapter.jsp"/>
+    </definition>    
+
+    <definition name=".bal.balance.view.caja69EditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/balance/caja69EditAdapter.jsp"/>
+    </definition>  	
+
+	<definition name=".bal.balance.view.caja69ViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/balance/caja69ViewAdapter.jsp"/>
+    </definition>    
+
+    <definition name=".bal.balance.view.tranBalEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/balance/tranBalEditAdapter.jsp"/>
+    </definition>  	
+
+	<definition name=".bal.balance.view.tranBalViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/balance/tranBalViewAdapter.jsp"/>
+    </definition>    
+    
+    <definition name=".bal.balance.view.tranBalSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/bal/balance/tranBalSearchPage.jsp"/>
+    </definition>
+	<!-- Fin ProcesoBalance --> 
+	
+	<!-- ABM Archivo -->
+	<definition name=".bal.archivosBanco.view.archivoSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/bal/archivosBanco/archivoSearchPage.jsp"/>
+    </definition>
+
+	<definition name=".bal.archivosBanco.view.archivoViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/archivosBanco/archivoViewAdapter.jsp"/>
+    </definition>
+    <!-- FIN ABM Archivo -->
+    
+    <!-- Folio -->	
+	<definition name=".bal.folioTesoreria.view.folioSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/bal/folioTesoreria/folioSearchPage.jsp"/>
+    </definition>
+
+    <definition name=".bal.folioTesoreria.view.folioEncEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/folioTesoreria/folioEncEditAdapter.jsp"/>
+    </definition>  	
+
+	<definition name=".bal.folioTesoreria.view.folioViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/folioTesoreria/folioViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".bal.folioTesoreria.view.folioAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/folioTesoreria/folioAdapter.jsp"/>
+    </definition>
+	<!-- Fin Folio -->  
+	
+	<!-- FolCom -->	
+	<definition name=".bal.folioTesoreria.view.folComViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/folioTesoreria/folComViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".bal.folioTesoreria.view.folComEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/folioTesoreria/folComEditAdapter.jsp"/>
+    </definition>
+	<!-- Fin FolCom --> 
+	
+	<!-- FolDiaCob -->	
+	<definition name=".bal.folioTesoreria.view.folDiaCobViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/folioTesoreria/folDiaCobViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".bal.folioTesoreria.view.folDiaCobEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/folioTesoreria/folDiaCobEditAdapter.jsp"/>
+    </definition>
+
+	<definition name=".bal.folioTesoreria.view.folDiaCobSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/bal/folioTesoreria/folDiaCobSearchPage.jsp"/>
+    </definition>
+	<!-- Fin FolDiaCob --> 
+	
+	<!-- TipoCom -->
+    <definition name=".bal.compensacion.view.tipoComSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/bal/compensacion/tipoComSearchPage.jsp"/>
+    </definition>
+	
+	<definition name=".bal.compensacion.view.tipoComViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/compensacion/tipoComViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".bal.compensacion.view.tipoComEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/compensacion/tipoComEditAdapter.jsp"/>
+    </definition>
+    <!-- fin tipoCom -->
+    
+    <!-- Clasificador -->
+    <definition name=".bal.clasificacion.view.clasificadorSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/bal/clasificacion/clasificadorSearchPage.jsp"/>
+    </definition>
+	
+	<definition name=".bal.clasificacion.view.clasificadorViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/clasificacion/clasificadorViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".bal.clasificacion.view.clasificadorEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/clasificacion/clasificadorEditAdapter.jsp"/>
+    </definition>
+    <!-- fin clasificador -->
+    
+    <!-- Compensacion -->	
+	<definition name=".bal.compensacion.view.compensacionSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/bal/compensacion/compensacionSearchPage.jsp"/>
+    </definition>
+
+    <definition name=".bal.compensacion.view.compensacionEncEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/compensacion/compensacionEncEditAdapter.jsp"/>
+    </definition>  	
+
+	<definition name=".bal.compensacion.view.compensacionViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/compensacion/compensacionViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".bal.compensacion.view.compensacionAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/compensacion/compensacionAdapter.jsp"/>
+    </definition>
+	<!-- Fin Compensacion -->  
+	
+	<!-- ComDeu -->	
+	<definition name=".bal.compensacion.view.comDeuViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/compensacion/comDeuViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".bal.compensacion.view.comDeuEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/compensacion/comDeuEditAdapter.jsp"/>
+    </definition>
+	<!-- Fin ComDeu --> 
+
+	<!-- Adm Saldos en Compensacion --> 	
+	<definition name=".bal.compensacion.view.incluirSaldoAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/compensacion/incluirSaldoAdapter.jsp"/>
+    </definition>
+
+	<definition name=".bal.compensacion.view.excluirSaldoAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/compensacion/excluirSaldoAdapter.jsp"/>
+    </definition>
+	<!-- Fin Adm Saldos en Compensacion --> 
+		
+	<!-- Duplice -->
+    <definition name=".bal.view.dupliceSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/bal/compensacion/dupliceSearchPage.jsp"/>
+    </definition>
+	
+	<definition name=".bal.view.dupliceViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/compensacion/dupliceViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".bal.view.dupliceImputarAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/compensacion/dupliceImputarAdapter.jsp"/>
+    </definition>
+
+    <definition name=".bal.view.dupliceGenSaldoAFavorAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/compensacion/dupliceGenSaldoAFavorAdapter.jsp"/>
+    </definition>
+
+	<definition name=".bal.view.dupliceEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/compensacion/dupliceEditAdapter.jsp"/>
+    </definition>
+    <!-- fin Duplice -->
+    
+    <!-- Reingreso -->
+	<definition name=".bal.balance.view.reingresoViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/balance/reingresoViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".bal.balance.view.reingresoEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/balance/reingresoEditAdapter.jsp"/>
+    </definition>
+    <!-- fin Reingreso -->
+    
+    <!-- TipoCob -->
+    <definition name=".bal.folioTesoreria.view.tipoCobSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/bal/folioTesoreria/tipoCobSearchPage.jsp"/>
+    </definition>
+	
+	<definition name=".bal.folioTesoreria.view.tipoCobViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/folioTesoreria/tipoCobViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".bal.folioTesoreria.view.tipoCobEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/folioTesoreria/tipoCobEditAdapter.jsp"/>
+    </definition>
+    <!-- fin TipoCob -->
+    
+    <!-- AuxCaja7 -->
+    <definition name=".bal.balance.view.auxCaja7SearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/bal/balance/auxCaja7SearchPage.jsp"/>
+    </definition>
+	
+	<definition name=".bal.balance.view.auxCaja7ViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/balance/auxCaja7ViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".bal.balance.view.auxCaja7EditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/balance/auxCaja7EditAdapter.jsp"/>
+    </definition>
+    <!-- fin AuxCaja7 -->
+    
+    <!-- Reingresos de Indeterminados -->
+    <definition name=".bal.view.indetReingSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/bal/indet/indetReingSearchPage.jsp"/>
+    </definition>
+	
+	<definition name=".bal.view.indetReingViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/indet/indetReingViewAdapter.jsp"/>
+    </definition>
+    <!-- Fin Reingresos de Indeterminados -->
+    
+    <!-- LeyParAcu -->
+    <definition name=".bal.definicion.view.leyParAcuSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/bal/definicion/leyParAcuSearchPage.jsp"/>
+    </definition>
+	
+	<definition name=".bal.definicion.view.leyParAcuViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/definicion/leyParAcuViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".bal.definicion.view.leyParAcuEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/definicion/leyParAcuEditAdapter.jsp"/>
+    </definition>
+    <!-- fin LeyParAcu -->
+      
+    <!-- Consulta Total por Nodo -->
+    <definition name=".bal.clasificacion.view.consultaNodoSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/bal/clasificacion/consultaNodoSearchPage.jsp"/>
+    </definition>
+    <!-- fin Consulta Total por Nodo -->
+    
+     <!-- Control de Conciliacion -->
+    <definition name=".bal.balance.view.controlConciliacionSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/bal/balance/controlConciliacionSearchPage.jsp"/>
+    </definition>
+    <!-- fin Control de Conciliacion -->
+    
+     <!-- Reporte Total por Partida -->
+    <definition name=".bal.clasificacion.view.totalParReport" extends=".siatStdLayout">
+	    <put name="body" value="/bal/clasificacion/totalParReport.jsp"/>
+    </definition>
+    <!-- fin Reporte Total por Partida -->
+    
+     <!-- Envio Osiris -->
+    <definition name=".bal.envioOsiris.view.envioOsirisSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/bal/envioOsiris/envioOsirisSearchPage.jsp"/>
+    </definition>
+
+    <definition name=".bal.envioOsiris.view.envioOsirisViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/envioOsiris/envioOsirisViewAdapter.jsp"/>
+    </definition>
+    <!-- fin Envio Osiris-->
+    
+    <!-- Cierre Banco -->
+    <definition name=".bal.envioOsiris.view.cierreBancoViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/envioOsiris/cierreBancoViewAdapter.jsp"/>
+    </definition>
+
+    <definition name=".bal.conciliacionOsiris.view.cierreBancoSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/bal/conciliacionOsiris/cierreBancoSearchPage.jsp"/>
+    </definition>
+    
+	<definition name=".bal.conciliacionOsiris.view.cierreBancoEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/conciliacionOsiris/cierreBancoEditAdapter.jsp"/>
+    </definition>
+    <!-- fin Cierre Banco -->
+    
+     <!-- Transaccion Afip -->
+    <definition name=".bal.envioOsiris.view.tranAfipViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/envioOsiris/tranAfipViewAdapter.jsp"/>
+    </definition>
+    <!-- fin Transaccion Afip -->
+    
+    <!-- Detalle DJ -->
+    <definition name=".bal.envioOsiris.view.detalleDJViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/envioOsiris/detalleDJViewAdapter.jsp"/>
+    </definition>
+    <!-- fin Detalle DJ -->
+    
+     <!-- Detalle Pago -->
+    <definition name=".bal.envioOsiris.view.detallePagoViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/envioOsiris/detallePagoViewAdapter.jsp"/>
+    </definition>
+    <!-- fin Detalle Pago -->    
+
+    <!-- Conciliacion -->
+    <definition name=".bal.envioOsiris.view.conciliacionViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/envioOsiris/conciliacionViewAdapter.jsp"/>
+    </definition>
+    <!-- fin Conciliacion -->
+
+     <!-- ABM MovBan -->  
+	<definition name=".bal.conciliacionOsiris.view.movBanSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/bal/conciliacionOsiris/movBanSearchPage.jsp"/>
+    </definition>
+    <definition name=".bal.conciliacionOsiris.view.movBanEncEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/conciliacionOsiris/movBanEncEditAdapter.jsp"/>
+    </definition>
+    <definition name=".bal.conciliacionOsiris.view.movBanViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/conciliacionOsiris/movBanViewAdapter.jsp"/>
+    </definition>    
+    
+    <definition name=".bal.conciliacionOsiris.view.movBanAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/conciliacionOsiris/movBanAdapter.jsp"/>
+    </definition>
+    <!-- Fin ABM MovBan -->
+    
+    <!-- MovBanDet -->	
+    <definition name=".bal.conciliacionOsiris.view.movBanDetEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/conciliacionOsiris/movBanDetEditAdapter.jsp"/>
+    </definition>
+    <definition name=".bal.conciliacionOsiris.view.movBanDetViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/conciliacionOsiris/movBanDetViewAdapter.jsp"/>
+    </definition>
+    <!-- Fin MovBanDet -->
+    
+    <!-- TipoIndet -->
+    <definition name=".bal.definicion.view.tipoIndetSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/bal/definicion/tipoIndetSearchPage.jsp"/>
+    </definition>
+	
+	<definition name=".bal.definicion.view.tipoIndetViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/definicion/tipoIndetViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".bal.definicion.view.tipoIndetEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/bal/definicion/tipoIndetEditAdapter.jsp"/>
+    </definition>
+    <!-- fin TipoIndet -->
+    
+  </tiles-definitions>
+  

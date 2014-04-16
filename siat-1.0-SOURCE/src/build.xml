@@ -1,0 +1,641 @@
+	<project name="siat" default="opendeploy">
+	
+	<property environment="env" />
+	<property name="deploy_intrasiat" value="${env.CATALINA_BASE}/webapps/siat"/>
+	<property name="deploy_adpsiat" value="${env.CATALINA_BASE}/webapps/adpsiat"/>
+	<property name="deploy_websiat" value="${env.CATALINA_BASE}/webapps/siat"/>
+	<property name="deploy_wssiat" value="${env.CATALINA_BASE}/webapps/axis2"/>
+
+	<property name="is_siat_mindeploy" value="false"/>
+
+	<property name="demoda" value="demoda"/>
+	<property name="externalJars" value="externalJars"/>
+	<property name="etc" value="etc"/>
+	
+	<property name="dist" value="build"/>
+	<property name="backup" value="../backup"/>
+	<property name="classes" value="${dist}/classes"/>
+	<property name="dist_intrasiat" value="${dist}/intra/siat"/>
+	<property name="dist_adpsiat" value="${dist}/intra/adpsiat"/>
+	<property name="dist_websiat" value="${dist}/web/siat"/>
+	<property name="dist_webaxis2" value="${dist}/web/axis2"/>
+	<property name="dist_reportes" value="${dist}/reportes"/>
+
+	<property file="${env.SIAT_ENV}.properties"/>
+	
+	<path id="externalJars_path">
+	<fileset dir="${externalJars}">
+		<include name="common/**/*.jar"/>
+		<include name="shared/**/*.jar"/>
+		<include name="lib/**/*.jar"/>
+		<include name="extra/**/*.jar"/>
+	</fileset>
+	</path>
+	
+	
+	<target name="init">
+		<mkdir dir="${dist}"/>
+		<mkdir dir="${classes}"/>
+		<mkdir dir="${dist}/lib"/>
+		<mkdir dir="${dist_intrasiat}"/>
+		<mkdir dir="${dist_adpsiat}"/>
+		<mkdir dir="${dist_websiat}"/>
+		<mkdir dir="${dist_webaxis2}"/>
+		<mkdir dir="${dist_reportes}/publico/general"/>	
+
+		<condition property="is_siat_mindeploy">
+			<isset property="env.SIAT_MINDEPLOY"/>
+		</condition>
+		
+		<echo message="${is_siat_mindeploy}"/>
+	
+	</target>
+		
+	<target name="prepare-reportes" depends="init">
+		<copy failonerror="false" todir="${dist_reportes}/publico/general">
+			<fileset dir="${etc}/fileshare/publico/general" includes="**/*" excludes="**/CVS"/>
+		</copy>
+		<copy failonerror="false" todir="${dist_reportes}/publico/general/reportes">
+			<fileset dir="view/src/WEB-INF/src" includes="version" excludes="**/CVS"/>
+		</copy>
+
+		<tar destfile="${dist_reportes}/reportes.tar.gz" compression="gzip"
+			 basedir="${dist_reportes}" 
+			 includes="publico/**"/>
+	</target>
+	
+		
+	<target name="prepare-intrasiat" depends="init">
+	<!-- copia estructura siat -->
+	<echo>Estructura Webapp Intra Siat</echo>
+	
+	<copy todir="${dist_intrasiat}">
+		<!-- jsp, xml, properties, etc. -->
+		<fileset dir="view/src/"
+		       includes="**/*"
+		       excludes="**/lib/*, **/classes/**, **/\${modulo}/**, **/src/**"/>
+	</copy>
+	
+	<copy todir="${dist_intrasiat}/WEB-INF/classes">
+		<!-- xml, properties, del classes -->
+		<fileset dir="view/src/WEB-INF/src"
+		       includes="**/*"
+		       excludes="**/\${modulo}/**, **/*.java"/>
+	</copy>
+	
+	<copy todir="${dist_intrasiat}/WEB-INF/lib">
+		<!-- jars externos que usa el siat -->
+		<fileset dir="${externalJars}/lib"
+		       includes="**/*.jar"
+			   excludes="servlet-api.jar" />
+	</copy>
+	</target>
+	
+	<target name="prepare-adpsiat">
+	<!-- Prepara estructura adp siat -->
+	<echo>Estructura Webapp de AdpSiat</echo>
+	
+	<copy todir="${dist_adpsiat}">
+		<!-- jsp, xml, properties, etc. -->
+		<fileset dir="adpsiat/src/" 
+		       includes="**/*"
+		       excludes="**/classes/**, **/\${modulo}/**, **/src/**"/>
+	</copy>
+	
+	<copy todir="${dist_adpsiat}/WEB-INF/classes">
+		<!-- xml, properties, del classes -->
+		<fileset dir="adpsiat/src/WEB-INF/src" 
+		       includes="**/*"
+		       excludes="**/*.java"/>
+	
+		<!-- archivo de con de hibernate y mcr-general y version -->
+		<fileset dir="view/src/WEB-INF/src" includes="siat.hibernate.cfg.xml" />
+		<fileset dir="view/src/WEB-INF/src" includes="swe.hibernate.cfg.xml" />
+		<fileset dir="view/src/WEB-INF/src" includes="mcr-general.cfg.xml" />
+		<fileset dir="view/src/WEB-INF/src" includes="version" />
+	</copy>
+	
+	<copy todir="${dist_adpsiat}/WEB-INF/lib">
+		<!-- jars externos que usa el siat -->
+		<fileset dir="${externalJars}/lib"
+		       includes="**/*.jar"
+			   excludes="servlet-api.jar"/>
+	</copy>
+	</target>
+	
+	<target name="clean-classes">
+	<delete quiet="true" includeemptydirs="true">
+		<fileset dir="${dist}/classes" includes="**/*.class"/>
+	</delete>
+	</target>
+	
+	<target name="prepare" depends="prepare-intrasiat, prepare-adpsiat, prepare-reportes">
+	</target>
+	
+	<target name="compile" depends="compile_buss, compile_view, compile_adpsiat">
+	</target>
+	
+	<target name="compile-macho" depends="clean, compile_view, compile_adpsiat">
+	</target>
+	
+	<target name="compile_demoda" depends="prepare">
+	<!-- compile demoda -->
+	<echo>Compile Demoda...</echo>
+	<javac destdir="${classes}"
+		   debug="on" encoding="iso-8859-1" includeAntRuntime="false">
+		<src>
+			<pathelement path="${demoda}/src"/>
+		</src>
+		<classpath>
+			<path refid="externalJars_path"/>
+		</classpath>
+	</javac>
+	
+	<echo>jar Demoda</echo>
+	<jar destfile="${dist}/lib/siatdemoda.jar" 
+		 basedir="${classes}" 
+		 includes="coop/tecso/demoda/**"/>
+	</target>
+	
+	<target name="compile_pantano" depends="prepare">
+	<!-- compile pantano -->
+	<echo>Compile Demoda...</echo>
+	<javac destdir="${classes}"
+		   debug="on" encoding="iso8859-1" includeAntRuntime="false">
+		<src>
+			<pathelement path="tools/pantano/src"/>
+		</src>
+		<classpath>
+			<path refid="externalJars_path"/>
+		</classpath>
+	</javac>
+	
+	<echo>jar Pantano</echo>
+	<jar destfile="${dist}/lib/siatpantano.jar" 
+		 basedir="${classes}" 
+		 includes="coop/tecso/pantano/**"/>
+	</target>
+	
+	
+	<target name="compile_adpcore" depends="compile_demoda">
+	<!-- compile adpcore -->
+	<echo>Compile Siat adpcore ...</echo>
+	<javac destdir="${classes}"
+			   debug="on" encoding="iso8859-1" includeAntRuntime="false">
+		<src>
+			<pathelement path="adpcore/src"/>
+		</src>
+		<classpath>
+			<path refid="externalJars_path"/>
+			<fileset dir="${dist}/lib" includes="siatdemoda.jar"/>
+			<!--fileset dir="${classes}" includes="**/demoda/**"/-->
+		</classpath>
+	</javac>
+	
+	<echo>jar Modulo AdpCore</echo>
+	<jar destfile="${dist}/lib/siatadpcore.jar" 
+			basedir="${classes}" 
+		 	includes="coop/tecso/adpcore/**"/>
+	</target>
+	
+	<target name="compile_iface" depends="compile_demoda">
+	<!-- compile siat iface -->
+	<echo>Compile Siat iface...</echo>
+	<javac destdir="${classes}"
+		   debug="on" encoding="iso8859-1" includeAntRuntime="false">
+		<src>
+			<pathelement path="iface/src"/>
+		</src>
+		<classpath>
+			<path refid="externalJars_path"/>
+			<fileset dir="${dist}/lib" includes="siatdemoda.jar"/>
+			<!--fileset dir="${classes}" includes="**/demoda/**"/-->
+		</classpath>
+	</javac>
+	
+	<echo>jar Modulo Interface Siat</echo>
+	<jar destfile="${dist}/lib/siatiface.jar"
+		 basedir="${classes}" 
+		 includes="ar/gov/rosario/siat/**/iface/**"/>
+	</target>
+	
+	
+	<target name="compile_buss" depends="compile_demoda, compile_adpcore, compile_iface">
+	<!-- compile siat buss -->
+	<echo>Compile Siat buss...</echo>
+	<javac destdir="${classes}"
+		   debug="on" encoding="iso8859-1" includeAntRuntime="false">
+		<src>
+			<pathelement path="buss/src"/>
+		</src>
+		<classpath>
+			<path refid="externalJars_path"/>
+			<fileset dir="${dist}/lib" includes="siatdemoda.jar"/>
+			<fileset dir="${dist}/lib" includes="siatiface.jar"/>
+			<!--fileset dir="${classes}" includes="**/demoda/**"/-->
+			<!--fileset dir="${classes}" includes="**/iface/**"/-->
+		</classpath>
+	</javac>
+	
+	<echo>jar Modulo Base</echo>
+	<jar destfile="${dist}/lib/siatbase.jar"
+		 basedir="${classes}" 
+		 includes="ar/gov/rosario/siat/base/buss/**"/>
+	
+	<echo>jar Modulo Seguridad</echo>
+	<jar destfile="${dist}/lib/siatseg.jar" 
+		 basedir="${classes}" 
+		 includes="ar/gov/rosario/siat/seg/buss/**"/>
+	
+	<echo>jar Modulo Frases</echo>
+	<jar destfile="${dist}/lib/siatfra.jar" 
+		 basedir="${classes}" 
+		 includes="ar/gov/rosario/siat/fra/buss/**"/>
+	
+	<echo>jar Modulo Definicion</echo>
+	<jar destfile="${dist}/lib/siatdef.jar" 
+		 basedir="${classes}" 
+		 includes="ar/gov/rosario/siat/def/buss/**"/>
+	
+	<echo>jar Modulo Padron</echo>
+	<jar destfile="${dist}/lib/siatpad.jar" 
+		 basedir="${classes}" 
+		 includes="ar/gov/rosario/siat/pad/buss/**"/>
+	
+	<echo>jar Modulo Exencion</echo>
+	<jar destfile="${dist}/lib/siatexe.jar" 
+		 basedir="${classes}" 
+		 includes="ar/gov/rosario/siat/exe/buss/**"/>
+	
+	<echo>jar Modulo Gestion Deuda</echo>
+	<jar destfile="${dist}/lib/siatgde.jar" 
+		 basedir="${classes}" 
+		 includes="ar/gov/rosario/siat/gde/buss/**"/>
+	
+	<echo>jar Modulo Casos</echo>
+	<jar destfile="${dist}/lib/siatcas.jar" 
+		 basedir="${classes}" 
+		 includes="ar/gov/rosario/siat/cas/buss/**"/>
+	
+	<echo>jar Modulo Recurso</echo>
+	<jar destfile="${dist}/lib/siatrec.jar" 
+		 basedir="${classes}" 
+		 includes="ar/gov/rosario/siat/rec/buss/**"/>
+	
+	<echo>jar Modulo Concurso y Quiebra</echo>
+	<jar destfile="${dist}/lib/siatcyq.jar" 
+		 basedir="${classes}" 
+		 includes="ar/gov/rosario/siat/cyq/buss/**"/>
+	
+	<echo>jar Modulo Formularios</echo>
+	<jar destfile="${dist}/lib/siatfrm.jar" 
+		 basedir="${classes}" 
+		 includes="ar/gov/rosario/siat/frm/buss/**"/>
+	
+	<echo>jar Modulo Admin Procesos</echo>
+	<jar destfile="${dist}/lib/siatpro.jar" 
+		 basedir="${classes}" 
+		 includes="ar/gov/rosario/siat/pro/buss/**"/>
+	
+	<echo>jar Modulo Balance</echo>
+	<jar destfile="${dist}/lib/siatbal.jar" 
+		 basedir="${classes}" 
+		 includes="ar/gov/rosario/siat/bal/buss/**"/>
+	
+	<echo>jar Modulo Emision</echo>
+	<jar destfile="${dist}/lib/siatemi.jar" 
+		 basedir="${classes}" 
+		 includes="ar/gov/rosario/siat/emi/buss/**"/>
+	
+	<echo>jar Modulo Estrategia Fiscal</echo>
+	<jar destfile="${dist}/lib/siatef.jar" 
+		 basedir="${classes}" 
+		 includes="ar/gov/rosario/siat/ef/buss/**"/>
+	
+	<echo>jar Modulo Espectaculos Publicos</echo>
+	<jar destfile="${dist}/lib/siatesp.jar" 
+		 basedir="${classes}" 
+		 includes="ar/gov/rosario/siat/esp/buss/**"/>
+		
+	<echo>jar Modulo Rodados</echo>
+	<jar destfile="${dist}/lib/siatrod.jar" 
+		 basedir="${classes}" 
+		 includes="ar/gov/rosario/siat/rod/buss/**"/>
+		 
+	<echo>jar Modulo Afip</echo>
+	<jar destfile="${dist}/lib/siatafi.jar" 
+		 basedir="${classes}" 
+		 includes="ar/gov/rosario/siat/afi/buss/**"/>
+
+	<echo>jar Modulo Afip</echo>
+	<jar destfile="${dist}/lib/siatper.jar" 
+		 basedir="${classes}" 
+		 includes="ar/gov/rosario/siat/per/buss/**"/>
+	
+	</target>
+	
+	<target name="compile_view" depends="compile_demoda, compile_iface">
+	<!-- compile siat view -->
+	<echo>Compile Siat view...</echo>
+	<javac destdir="${classes}"
+		   debug="on" encoding="iso8859-1" includeAntRuntime="false">
+		<src>
+			<pathelement path="view/src/WEB-INF/src"/>
+		</src>
+		<classpath>
+			<path refid="externalJars_path"/>
+			<fileset dir="${dist}/lib" includes="siatdemoda.jar"/>
+			<fileset dir="${dist}/lib" includes="siatiface.jar"/>
+			<!--fileset dir="${classes}" includes="**/demoda/**"/-->
+			<!--fileset dir="${classes}" includes="**/iface/**"/-->
+		</classpath>
+	</javac>
+	
+	</target>
+	
+	<target name="compile_adpsiat" depends="compile_demoda, compile_adpcore, compile_iface, compile_buss">
+	<!-- compile adpsiat -->
+	<echo>Compile Siat adpsiat...</echo>
+	<javac destdir="${classes}"
+		   debug="on" encoding="iso8859-1" includeAntRuntime="false">
+		<src>
+			<pathelement path="adpsiat/src/WEB-INF/src"/>
+		</src>
+		<classpath>
+			<path refid="externalJars_path"/>
+			<fileset dir="${dist}/lib" includes="*.jar"/>
+	
+			<!--pathelement path="${classes}"/-->
+			<!--fileset dir="${classes}" includes="**/demoda/**"/>
+			<fileset dir="${classes}" includes="**/iface/**"/>
+			<fileset dir="${classes}" includes="**/buss/**"/-->
+		</classpath>
+	</javac>
+	
+	<echo>jar Modulo Procesos Largos Siat</echo>
+	<jar destfile="${dist}/lib/siatproceso.jar" 
+		 basedir="${classes}" 
+		 includes="ar/gov/rosario/siat/proceso/**"/>
+	</target>
+	
+	<target name="modules" depends="compile">
+	</target>
+	
+	<target name="webapp-intrasiat" depends="modules">
+	<!-- copia estructura siat -->
+	<echo>Generando Webapp Intra Siat</echo>
+	
+	<copy todir="${dist_intrasiat}/WEB-INF/lib" includeEmptyDirs="false">
+		<!-- jars del siat -->
+		<fileset dir="${dist}/lib" 
+		       includes="**/*.jar"/>
+	</copy>
+	
+	<copy todir="${dist_intrasiat}/WEB-INF/classes" includeEmptyDirs="false">
+		<!-- classes del view de siat -->
+		<fileset dir="${classes}" 
+		       includes="ar/gov/rosario/siat/**/view/**"/>
+	</copy>
+	</target>
+	
+	<target name="webapp-adpsiat" depends="modules">
+	<!-- copia estructura siat -->
+	<echo>Generando Webapp AdpSiat</echo>
+	
+	<copy todir="${dist_adpsiat}/WEB-INF/lib" includeEmptyDirs="false">
+		<!-- jars del siat -->
+		<fileset dir="${dist}/lib" 
+		       includes="**/*.jar"/>
+
+	</copy>
+	
+	<copy todir="${dist_adpsiat}/WEB-INF/classes" includeEmptyDirs="false">
+		<!-- classes del view de siat -->
+		<fileset dir="${classes}" 
+		       includes="ar/gov/rosario/siat/servlet/**"/>
+	</copy>
+	</target>
+
+	<target name="apps" depends="webapp-intrasiat, webapp-adpsiat">
+	</target>
+
+	<target name="ws" description="Genera WAR con web services del siat">
+		<echo>Generando Web Services para Siat</echo>
+		<property name="dist_axis2services" value="${dist_webaxis2}/WEB-INF/services"/>
+
+		<echo/>
+		<unzip src="${externalJars}/axis2/axis2.war" dest="${dist_webaxis2}"/>
+		
+		<mkdir dir="${dist_webaxis2}/META-INF"/>
+		<copy todir="${dist_webaxis2}/META-INF">		
+			<fileset dir="view/src/META-INF" includes="context.xml" />
+		</copy>
+
+		<copy todir="${dist_webaxis2}/">		
+			<fileset dir="buss/src/ar/gov/rosario/siat/base/buss/ws" includes="wst.jsp"/>
+			<fileset dir="view/src/base" includes="status.jsp"/>
+		</copy>
+
+		<copy todir="${dist_webaxis2}/WEB-INF/classes">		
+			<fileset dir="view/src/WEB-INF/src" includes="siat.hibernate.cfg.xml" />
+			<fileset dir="view/src/WEB-INF/src" includes="swe.hibernate.cfg.xml" />
+			<fileset dir="view/src/WEB-INF/src" includes="mcr-general.cfg.xml" />
+			<fileset dir="view/src/WEB-INF/src" includes="version" />
+			<fileset dir="view/src/WEB-INF/src" includes="log4j.properties" />
+			
+		</copy>
+
+		<!-- 
+		Copiamos a axis2/WEB-INF/lib
+		los .jar del del siat
+		los .jar externos excepto los que ya hay en axis2
+		-->
+		<copy todir="${dist_webaxis2}/WEB-INF/lib">		
+			<fileset dir="${dist}/lib" includes="**/*.jar"/>
+			<fileset dir="externalJars/lib/" 
+			includes="*.jar" 
+			excludes="XmlSchema*.jar, 
+				activation-gc.jar, 
+				annogen*.jar, 
+				axiom-api*.jar, 
+				axiom-dom*.jar, 
+				axiom-impl*.jar, 
+				axis2-adb*.jar, 
+				axis2-ant-plugin*.jar, 
+				axis2-clustering*.jar, 
+				axis2-corba*.jar, 
+				axis2-fastinfoset*.jar, 
+				axis2-java2wsdl*.jar, 
+				axis2-jaxbri*.jar, 
+				axis2-jaxws*.jar, 
+				axis2-jaxws-api*.jar, 
+				axis2-jibx*.jar, 
+				axis2-json*.jar, 
+				axis2-jws-api*.jar, 
+				axis2-kernel*.jar, 
+				axis2-metadata*.jar, 
+				axis2-mtompolicy*.jar, 
+				axis2-saaj*.jar, 
+				axis2-saaj-api*.jar, 
+				axis2-spring*.jar, 
+				axis2-xmlbeans*.jar, 
+				backport-util-concurrent-gc.jar, 
+				commons-codec-gc.jar, 
+				commons-fileupload-gc.jar, 
+				commons-httpclient-gc.jar, 
+				commons-io-gc.jar, 
+				commons-logging*.jar, 
+				geronimo-annotation_gc_spec-gc.jar, 
+				geronimo-stax-api_gc_spec*.jar, 
+				httpcore-gc-beta1.jar, 
+				httpcore-nio-gc-beta1.jar, 
+				jalopy-gcrc3.jar, 
+				jaxb-api-gc.jar, 
+				jaxb-impl*.jar, 
+				jaxb-xjc*.jar, 
+				jaxen*.jar, 
+				jettison-gc-RC2.jar, 
+				jibx-run*.jar, 
+				log4j*.jar, 
+				mail-gc.jar, 
+				mex*.jar, 
+				neethi*.jar, 
+				soapmonitor*.jar, 
+				woden-api-gcM8.jar, 
+				woden-impl-dom-gcM8.jar, 
+				wsdl4j*.jar, 
+				wstx-asl*.jar, 
+				xalan*.jar, 
+				xercesImpl*.jar, 
+				xml-apis*.jar, 
+				xml-resolver-gc.jar, 
+				xmlbeans*.jar"/>
+		</copy>
+		
+		<!-- ******************************** -->
+		<!-- begin deploy de cada webservice  -->
+		
+		<!--
+		<echo/>
+		<echo>making: stat</echo>
+		<mkdir  dir="${dist_axis2services}/stat/META-INF"/>
+		<copy todir="${dist_axis2services}/stat/META-INF" file="buss/src/ar/gov/rosario/siat/base/buss/ws/stat/services.xml"/>		
+		-->
+		
+		<echo/>
+		<echo>making: drei</echo>
+		<mkdir  dir="${dist_axis2services}/drei/META-INF"/>
+		<copy todir="${dist_axis2services}/drei/META-INF" file="buss/src/ar/gov/rosario/siat/pad/buss/ws/drei/services.xml"/>		
+
+		
+		<!-- end deploy de cada webservice  -->
+		<!-- ****************************** -->		
+
+	</target>
+
+	
+	<target name="war" depends="clean, apps" description="Genera los tres WAR, de intraSiat, webSiat, adpSiat">
+	<jar destfile="${dist}/intra/siat.war"
+		 basedir="${dist_intrasiat}"
+		 includes="**/*"
+		 excludes="**/websiat-key, **/adpcore.jar"/>
+	
+	<jar destfile="${dist}/intra/adpsiat.war"
+		 basedir="${dist_adpsiat}"
+		 includes="**/*"
+	     excludes="**/adpcore.jar"/>
+	
+	<jar destfile="${dist}/web/siat.war"
+		 basedir="${dist_intrasiat}"
+		 includes="**/*"
+		 excludes="**/intrasiat-key, **/adpcore.jar"/>
+
+	<jar destfile="${dist}/web/axis2.war"
+		 basedir="${dist_webaxis2}"
+		 includes="**/*"
+		 excludes=""/>
+	</target>
+	
+	<target name="clean" description="Limpia las classes y estructuras intermedias de la compilacion.">
+	<delete quiet="true" includeemptydirs="true">
+		<fileset dir="${dist}" includes="**/*"/>
+	</delete>
+	</target>
+	
+	<target name="cleandeploy" description="Limpia los archivos desplegados de siat y adpsiat en el CATALINA_BASE">
+	<delete dir="${deploy_intrasiat}"/>
+	<delete file="${env.CATALINA_BASE}/webapps/siat.war"/>
+	<delete file="${env.CATALINA_BASE}/conf/Catalina/localhost/siat.xml"/>
+	
+	<delete dir="${deploy_adpsiat}"/>
+	<delete file="${env.CATALINA_BASE}/webapps/adpsiat.war"/>
+	<delete file="${env.CATALINA_BASE}/conf/Catalina/localhost/adpsiat.xml"/>
+	
+	<delete dir="${deploy_websiat}"/>
+	</target>
+	
+	<target name="reportes">
+	<copy failonerror="false" todir="/mnt/siatgpl">
+		<fileset dir="${etc}/fileshare" includes="**/*" excludes="**/CVS"/>
+	</copy>
+	</target>
+	
+	<target name="wardeploy" depends="clean, apps, deploy" description="Desplegar la aplicacion, copiando los war directamente. Necesita subir y bajar tomcat.">
+	</target>
+	
+	<target name="opendeploy" depends="clean, opendeploy0" description="Desplegar la aplicacion, copiando los archivos directamente. Necesita subir y bajar tomcat.">
+	</target>
+
+	<target name="copy_adpsiat">
+		<mkdir dir="${deploy_adpsiat}"/>
+		
+		<copy todir="${deploy_adpsiat}">
+			<fileset dir="${dist_adpsiat}" includes="**/*" excludes="**/adpcore.jar"/>
+		</copy>
+	</target>
+	
+	<target name="undeploy_adpsiat" if="is_siat_mindeploy">
+		<delete dir="${deploy_adpsiat}"/>
+		<delete file="${env.CATALINA_BASE}/webapps/adpsiat.war"/>
+		<delete file="${env.CATALINA_BASE}/conf/Catalina/localhost/adpsiat.xml"/>
+	</target>
+
+	<target name="opendeploy0" depends="apps">
+	<mkdir dir="${deploy_intrasiat}"/>
+	<copy todir="${deploy_intrasiat}">
+		<fileset dir="${dist_intrasiat}" includes="**/*" excludes="**/adpcore.jar"/>
+	</copy>
+	
+	<!--antcall target="undeploy_adpsiat"/-->
+	<antcall target="copy_adpsiat"/>
+		
+	<tstamp><format property="TODAY" pattern="yyyy-MM-dd hh:mm:ss"/></tstamp>
+	<echo>Finished at:${TODAY}</echo>
+
+	</target>
+
+	
+	<target name="opendeployws0" depends="opendeploy0, ws">
+		<mkdir dir="${deploy_wssiat}"/>
+		<copy todir="${deploy_wssiat}">
+			<fileset dir="${dist_webaxis2}" includes="**/*" />
+		</copy>				
+	</target>
+
+	
+	<target name="deploy" depends="war" description="Desplegar los de aplicacion via Manager. (no implementado)">
+	<echo>Deploy: User: ${deploy.username} ${dist_intrasiat}</echo>
+	</target>
+
+	<target name="backup" description="Realizar backup de war generados.">
+	    <loadfile property="siat_version" srcFile="view/src/WEB-INF/src/version"/>		
+		<echo>Backup version: ${siat_version}</echo>
+
+		<mkdir dir="${backup}"/>
+		<tar destfile="${backup}/siatbackup_${siat_version}.tar.gz" compression="gzip"
+			 basedir="${dist}" 
+			 includes="intra/*.war, web/*.war, reportes/*.tar.gz"/>
+		
+	</target>
+
+</project>

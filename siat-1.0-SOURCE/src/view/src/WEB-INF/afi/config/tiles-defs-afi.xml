@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+ <!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 1.1//EN"
+       "http://jakarta.apache.org/struts/dtds/tiles-config_1_1.dtd">
+
+<tiles-definitions>
+	
+	<!-- ForDecJur -->
+    <definition name=".afi.formulariosDJ.view.forDecJurSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/afi/formulariosDJ/forDecJurSearchPage.jsp"/>
+    </definition>
+	
+	<definition name=".afi.formulariosDJ.view.forDecJurViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/afi/formulariosDJ/forDecJurViewAdapter.jsp"/>
+    </definition>
+    <!-- Fin ForDecJur -->
+     	
+    <!-- ActLoc -->	
+	<definition name=".afi.formulariosDJ.view.actLocViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/afi/formulariosDJ/actLocViewAdapter.jsp"/>
+    </definition>
+    <!-- Fin ActLoc -->
+    
+    <!-- DatosDomicilio -->	
+	<definition name=".afi.formulariosDJ.view.datosDomicilioViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/afi/formulariosDJ/datosDomicilioViewAdapter.jsp"/>
+    </definition>
+    <!-- Fin DatosDomicilio -->
+    
+    <!-- DatosPagoCta -->	
+	<definition name=".afi.formulariosDJ.view.datosPagoCtaViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/afi/formulariosDJ/datosPagoCtaViewAdapter.jsp"/>
+    </definition>
+    <!-- Fin DatosPagoCta -->
+    
+    <!-- DecActLoc -->	
+	<definition name=".afi.formulariosDJ.view.decActLocViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/afi/formulariosDJ/decActLocViewAdapter.jsp"/>
+    </definition>
+    <!-- Fin DecActLoc -->
+    
+    <!-- ExeActLoc -->	
+	<definition name=".afi.formulariosDJ.view.exeActLocViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/afi/formulariosDJ/exeActLocViewAdapter.jsp"/>
+    </definition>
+    <!-- Fin ExeActLoc -->
+    
+    <!-- HabLoc -->	
+	<definition name=".afi.formulariosDJ.view.habLocViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/afi/formulariosDJ/habLocViewAdapter.jsp"/>
+    </definition>
+    <!-- Fin HabLoc -->
+    
+    <!-- Local -->	
+	<definition name=".afi.formulariosDJ.view.localViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/afi/formulariosDJ/localViewAdapter.jsp"/>
+    </definition>
+    <!-- Fin Local -->
+    
+    <!-- OtrosPagos -->	
+	<definition name=".afi.formulariosDJ.view.otrosPagosViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/afi/formulariosDJ/otrosPagosViewAdapter.jsp"/>
+    </definition>
+    <!-- Fin OtrosPagos -->
+    
+    <!-- RetYPer -->	
+	<definition name=".afi.formulariosDJ.view.retYPerViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/afi/formulariosDJ/retYPerViewAdapter.jsp"/>
+    </definition>
+    <!-- Fin RetYPer -->
+    
+    <!-- Socio -->	
+	<definition name=".afi.formulariosDJ.view.socioViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/afi/formulariosDJ/socioViewAdapter.jsp"/>
+    </definition>
+    <!-- Fin Socio -->
+    
+    <!-- TotDerYAccDJ -->	
+	<definition name=".afi.formulariosDJ.view.totDerYAccDJViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/afi/formulariosDJ/totDerYAccDJViewAdapter.jsp"/>
+    </definition>
+    <!-- Fin TotDerYAccDJ -->
+	
+</tiles-definitions>

@@ -1,0 +1,8 @@
+tocTab[tocTab.length] = new Array("2.1.6.2:1", "", "Investigación", "EARoot/EA2/EA1/EA6/EA2/EA474.htm", "180.png", "364", "0", "", "Use Case diagram");
+tocTab[tocTab.length] = new Array("2.1.6.2:2", "", "Administrar Actas de Inicio", "EARoot/EA2/EA1/EA6/EA2/EA476.htm", "7.png", "4177", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.6.2:3", "", "Aprobar Actas", "EARoot/EA2/EA1/EA6/EA2/EA477.htm", "7.png", "4173", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.6.2:4", "", "Administrar Plan de Control Fiscal", "EARoot/EA2/EA1/EA6/EA2/EA479.htm", "7.png", "1704", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.6.2:5", "", "Administrar Operativo de Investigación", "EARoot/EA2/EA1/EA6/EA2/EA480.htm", "7.png", "1706", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.6.2:6", "", "Asignar Actas de Inicio a Investigadores", "EARoot/EA2/EA1/EA6/EA2/EA481.htm", "7.png", "3013", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.6.2:7", "", "Administrar Ordenes de Control Fiscal", "EARoot/EA2/EA1/EA6/EA2/EA482.htm", "7.png", "1714", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.6.2:8", "", "Registrar resultado Investigación (Actas Inicio)", "EARoot/EA2/EA1/EA6/EA2/EA483.htm", "7.png", "1707", "0", "", "UseCase");

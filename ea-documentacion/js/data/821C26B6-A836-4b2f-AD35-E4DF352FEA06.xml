@@ -1,0 +1,15 @@
+tocTab[tocTab.length] = new Array("2.1.9.2:1", "", "Diagrama de Gestión Deuda/Convenios", "EARoot/EA2/EA1/EA9/EA2/EA519.htm", "180.png", "354", "0", "", "Use Case diagram");
+tocTab[tocTab.length] = new Array("2.1.9.2:2", "", "Mantenedor de Abogados", "EARoot/EA2/EA1/EA9/EA2/EA521.htm", "7.png", "4538", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.9.2:3", "", "Mantenedor de Agente de Cobranza", "EARoot/EA2/EA1/EA9/EA2/EA522.htm", "7.png", "5058", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.9.2:4", "", "Mantenedor de Agente de Retención", "EARoot/EA2/EA1/EA9/EA2/EA523.htm", "7.png", "4997", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.9.2:5", "", "Mantenedor de Categoría de Régimen Simplificado DReI", "EARoot/EA2/EA1/EA9/EA2/EA524.htm", "7.png", "4738", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.9.2:6", "", "Mantenedor de Indice de Compensación", "EARoot/EA2/EA1/EA9/EA2/EA525.htm", "7.png", "5059", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.9.2:7", "", "Mantenedor de Juzgados", "EARoot/EA2/EA1/EA9/EA2/EA526.htm", "7.png", "4198", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.9.2:8", "", "Mantenedor de Mandatario", "EARoot/EA2/EA1/EA9/EA2/EA527.htm", "7.png", "5057", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.9.2:9", "", "Mantenedor de tipo de Multa", "EARoot/EA2/EA1/EA9/EA2/EA528.htm", "7.png", "4998", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.9.2:10", "", "Mantenedor Juzgados CyQ", "EARoot/EA2/EA1/EA9/EA2/EA529.htm", "7.png", "4537", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.9.2:11", "", "Mantenedor Plan de Pago", "EARoot/EA2/EA1/EA9/EA2/EA530.htm", "7.png", "1660", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.9.2:12", "", "Mantenedor Descuento General", "EARoot/EA2/EA1/EA9/EA2/EA531.htm", "7.png", "3597", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.9.2:13", "", "Mantenedor Descuento Especial", "EARoot/EA2/EA1/EA9/EA2/EA532.htm", "7.png", "1656", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.9.2:14", "", "Mantenedor Procurador", "EARoot/EA2/EA1/EA9/EA2/EA533.htm", "7.png", "1686", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.9.2:15", "", "Mantenedor Evento Gest. Jud.", "EARoot/EA2/EA1/EA9/EA2/EA534.htm", "7.png", "3060", "0", "", "UseCase");

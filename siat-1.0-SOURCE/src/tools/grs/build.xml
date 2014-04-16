@@ -1,0 +1,78 @@
+<project name="grs" default="compile" basedir=".">
+	<description>GRS - Generador de Reportes Siat</description>
+	
+	<property name="build.sysclasspath" value="last"/>  
+	<property name="test"  value="test"/>
+	<property name="src"   value="src"/>
+	<property name="build" value="build"/>
+	<property name="dist"  value="dist"/>
+	<property name="lib"   value="lib"/>
+
+	<target name="init">
+		<mkdir dir="${build}"/>
+		<mkdir dir="${dist}"/>
+		<mkdir dir="${test}/${build}"/>
+	</target>
+
+	<target name="compile" depends="init">
+		<javac srcdir="${src}" destdir="${build}" encoding="iso8859-1" debug="on" >
+			<classpath>
+				<fileset dir="${lib}">
+					<include name="*.jar"/>
+				</fileset>
+			</classpath>
+		</javac>
+		<copy todir="${build}">
+			<fileset dir="${src}" includes="**/*.properties" />
+		</copy>
+	</target>
+	
+	<target name="dist" depends="clean, compile">
+		<jar jarfile="${dist}/grs.jar" basedir="${build}"/>
+		<copy todir="${dist}">
+			<fileset dir="${lib}">
+				<include name="*.jar"/>
+			</fileset>		
+		</copy>
+	</target>
+	
+	<target name="siatdist" depends="dist">
+		<copy todir="../../externalJars/lib">
+			<fileset dir="${dist}">
+				<include name="*.jar"/>
+			</fileset>		
+		</copy>
+	</target>
+	
+	<target name="compiletest" depends="dist">
+		<javac srcdir="${test}/${src}" destdir="${test}/${build}" encoding="iso8859-1" debug="on" >
+			<classpath>
+				<fileset dir="${dist}">
+					<include name="*.jar"/>
+				</fileset>
+			</classpath>
+		</javac>
+		<copy todir="${test}/${build}">
+			<fileset dir="${test}/${src}" includes="**/*.properties" />
+		</copy>
+	</target>
+	
+	<target name="test-input" depends="compiletest">
+		<echo message="GRS - Input Example"/>
+		<java classname="coop.tecso.grs.test.ExampleInput">
+			<classpath>
+				<pathelement path="${test}/${build}"/>
+				<fileset dir="${dist}">
+					<include name="*.jar"/>
+				</fileset>
+			</classpath>
+		</java>
+	</target>
+		
+	<target name="clean">
+		<delete dir="${test}/${build}"/>
+		<delete dir="${build}"/>
+		<delete dir="${dist}"/>
+	</target>
+	
+</project>

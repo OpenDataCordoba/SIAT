@@ -1,0 +1,156 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Administrar Devolución Deuda por Cuenta</title>
+<link href="../../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="pageHeader"></div>
+<div class="PageBody">
+	<span class="ObjectTitle">Administrar Devolución Deuda por Cuenta  : public   usecase</span>
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">14/03/2008 15:12:16</td>
+		</tr>
+		<tr>
+			<td class="ObjectDetailsTopic">Modified:</td>
+			<td class="ObjectDetailsValue">22/08/2008 18:33:32</td>
+		</tr>
+		<tr style="height: 10px"><td colspan="2"></td></tr>
+		<tr>
+			<td class="ObjectDetailsTopic"><img src="../../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td class="ObjectDetailsValue">tecso</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td class="ObjectDetailsValue">1.0</td>
+		</tr>
+		<tr id="proj02" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Phase:</td>
+			<td class="ObjectDetailsValue">1.0</td>
+		</tr>
+		<tr id="proj03" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Status:</td>
+			<td class="ObjectDetailsValue">R2</td>
+		</tr>
+		<tr id="proj04" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Complexity:</td>
+			<td class="ObjectDetailsValue">Medium</td>
+		</tr>
+		<tr>
+			<td class="ObjectDetailsTopic"><img src="../../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">UUID:</td>
+			<td class="ObjectDetailsValue">{09A80B6B-5C66-4baf-A288-50F7DCCC5FA6}</td>
+		</tr>
+		<tr id="adv01" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+	</table>
+	<div class="ObjectDetailsNotes">Este CU tiene como objetivo realizar la devolución de deuda judicial de una cuenta particular a la vía administrativa. <br />Los registros de deuda a &quot;devolver&quot; pueden haber sido enviados a la vía judicial en momentos distintos, es decir, en diferentes envíos.<br />La devoluciones de deuda de una cuenta particular a la vía administrativa ocurren por otorgamientos de casos sociales, condonaciones, etc. </div>
+
+	<div class="TableGroup" id="TableGroup">
+		<ul class="ItemTitle">
+			<li onClick="parent.toggleItem('Scenario');" id="ScenarioTitle">Scenarios</li>
+			<li onClick="parent.toggleItem('Files');" id="FilesTitle">Files</li>
+			<li onClick="parent.toggleItem('Links');" id="LinksTitle">Other Links</li>
+		</ul>
+		<div class="ItemBody" id="ScenarioTable">
+			<table align="center" border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="24%" class="TableHeading">Scenario</td>
+					<td width="8%" class="TableHeading">Type</td>
+					<td width="68%" class="TableHeading">Detail</td>
+				</tr>
+				<tr>
+					<td width="24%" class="TableRow">Agregar Devolución de Deuda</td>
+					<td width="8%" class="TableRow">Alternate</td>
+					<td width="68%" class="TableRow"><div class="ObjectDetailsNotes">Para realizar una Devolución de deuda judicial a la vía administrativa, deberá ingresarse el Recurso, Procurador, Fecha de Devolución, Cuenta y Observaciones.<br />Con los datos ingresados se obtienen todos los registros de Deuda en vía Judicial correspondientes y por cada uno se muestra una casilla de check seleccionable junto a la opción &quot;Ver Detalle Deuda&quot;.<br />Unicamente podrán devolverse los registros de deuda que cumplan con las siguientes validaciones:<br />. deuda no cancelada.<br />. deuda no indeterminada<br />. deuda no incluida en un convenio de pago, salvo que el estado del mismo sea &quot;Anulado&quot; o &quot;Recompuesto&quot;.<br />En caso que exista deuda incluida en un recibo de reconfección o en una gestión judicial no se impedirá la devolución de la deuda.<br /><br />Una vez seleccionados los registros de deuda a devolver se inicia el proceso de devolución:<br />- se mueve la deuda de la vía judicial a la vía administrativa.<br />- se actualiza el estado de Constancias, Detalles de Constancias y Planillas de Envío que incluyen deudas devueltas:<br />     <br />      * Si todas las deudas incluidas en una Constancia fueron         devueltas a la vía administrativa (devolución total), luego la Constancia pasa al  estado “Anulada”,  los registros del Detalle de la Constancia pasan al estado “Inactivo”, y la Planilla de envío         correspondiente pasa al estado “Anulada”, si es que todas las Constancias asociadas a la misma fueron anuladas, sino pasa al estado “Modificada”.<br />      * Si la devolución fue parcial, es decir que hubo deudas de Constancias que no pudieron ser devueltas o en el caso de que siguen existiendo deudas incluidas en una Constancia, luego pasa al estado “Modificada”, los registros del Detalle de la Constancia que fueron devueltos pasan al estado “Inactivo”, permaneciendo otros con estado “Activo” y la Planilla de Envío correspondiente pasa al estado “Modificada”.<br /><br />- se registra los cambios de estado en los históricos de estados respectivos.</div>
+</td>
+				</tr>
+				<tr>
+					<td width="24%" class="TableRow">Buscar Devoluciones de Deuda</td>
+					<td width="8%" class="TableRow">Alternate</td>
+					<td width="68%" class="TableRow"><div class="ObjectDetailsNotes">Permite consultar las Devoluciones de deudas judiciales por Recurso, Procurador, Cuenta, y rangos de Fechas de Devolución.<br />Si existen resultados se muestra de cada uno de los registros la Fecha de Devolución, el Recurso, Procurador, Cuenta  y las acciones asociadas: &quot;Ver Devolucion de Deuda&quot; y &quot;Modificar Devolucion de Deuda&quot; y &quot;Eliminar Devolución de Deuda&quot;.<br />Para realizar una nueva Devolución, existe la opción &quot;Agregar Devolución de Deuda&quot;.<br /><br /></div>
+</td>
+				</tr>
+				<tr>
+					<td width="24%" class="TableRow">Eliminar Devolución de Deuda</td>
+					<td width="8%" class="TableRow">Alternate</td>
+					<td width="68%" class="TableRow"><div class="ObjectDetailsNotes">Permite eliminar una Devolución en caso que no tenga Detalle asociado, es decir, unicamente se registró la cabecera de la Devolución.</div>
+</td>
+				</tr>
+				<tr>
+					<td width="24%" class="TableRow">Modificar Devolución de Deuda</td>
+					<td width="8%" class="TableRow">Alternate</td>
+					<td width="68%" class="TableRow"><div class="ObjectDetailsNotes">Permite visualizar datos de la Devolución seleccionada y actualizar la Observación de la misma.</div>
+</td>
+				</tr>
+				<tr>
+					<td width="24%" class="TableRow">Ver Devolución de Deuda</td>
+					<td width="8%" class="TableRow">Alternate</td>
+					<td width="68%" class="TableRow"><div class="ObjectDetailsNotes">Permite visualizar información propia de la Devolución de Deuda seleccionada y la lista de Deudas que fueron devueltas a la vía administrativa y por cada una la opción &quot;Ver Detalle Deuda&quot;.<br />La devolución puede incluir tanto deudas en vía judicial sin Constancias asociadas como deudas incluidas en detalles de Constancias.En caso de incluir deudas asociadas a Constancias, se muestra entre los datos de la deuda, el número y año de la constancia original. <br /></div>
+</td>
+				</tr>
+
+			</table>
+		</div>
+		<div class="ItemBody" id="FilesTable">
+			<table border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="50%" class="TableHeading">File</td>
+					<td width="10%" class="TableHeading">Type</td>
+					<td width="40%" class="TableHeading">Details</td>
+				</tr>
+			<tr>
+				<td width="50%" class="TableRow"><a href="c:\siatdoc\docGenerada\capacitacion\gdeuda\Administrar Proc. Judicial\MDU - Administrar Devolucion Deuda por Cuenta.doc">c:\siatdoc\docGenerada\capacitacion\gdeuda\Administrar Proc. Judicial\MDU - Administrar Devolucion Deuda por Cuenta.doc</a></td>
+				<td width="10%" class="TableRow">Local File</td>
+				<td width="40%" class="TableRow">
+					<div class="ObjectDetailsNotes">Manual usuario</div>
+<br />
+					<span class="NoteHeading">File Size:</span> 274 k<br />
+					<span class="NoteHeading">Time Stamp:</span> 08/09/2008 07:36:21 a.m.<br />
+				</td>
+			</tr>
+
+			</table>
+		</div>
+		<div class="ItemBody" id="LinksTable">
+			<table align="center" border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="30%" class="TableHeading">Object</td>
+					<td width="15%" class="TableHeading">Type</td>
+					<td width="15%" class="TableHeading">Connection</td>
+					<td width="40%" class="TableHeading">Notes</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../../../../EA3/EA638.htm">Cobranza Judicial</a></td>
+					<td width="15%" class="TableRow" valign="top">Actor</td>
+					<td width="15%" class="TableRow" valign="top">UseCase</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+
+			</table>
+		</div>
+	</div>
+<div class="pageFooter"></div>
+ 
+</body>
+</html>

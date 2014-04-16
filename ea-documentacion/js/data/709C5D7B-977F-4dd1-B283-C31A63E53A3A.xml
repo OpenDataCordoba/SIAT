@@ -1,0 +1,7 @@
+tocTab[tocTab.length] = new Array("4:1", "", "VARIOSWEB-MD", "EARoot/EA4/EA1512.htm", "175.png", "559", "0", "", "Logical diagram");
+tocTab[tocTab.length] = new Array("4:2", "", "«table» recep_emails", "EARoot/EA4/EA1514.htm", "28.png", "4560", "0", "", "Class");
+tocTab[tocTab.length] = new Array("4:3", "", "«table» reclamos", "EARoot/EA4/EA1515.htm", "28.png", "4558", "0", "", "Class");
+tocTab[tocTab.length] = new Array("4:4", "", "«table» respuestas", "EARoot/EA4/EA1516.htm", "28.png", "4557", "0", "", "Class");
+tocTab[tocTab.length] = new Array("4:5", "", "«table» tipos_tramite", "EARoot/EA4/EA1517.htm", "28.png", "4555", "0", "", "Class");
+tocTab[tocTab.length] = new Array("4:6", "", "«table» tramites_web", "EARoot/EA4/EA1518.htm", "28.png", "4556", "0", "", "Class");
+tocTab[tocTab.length] = new Array("4:7", "", "«table» ult_numero", "EARoot/EA4/EA1519.htm", "28.png", "4559", "0", "", "Class");

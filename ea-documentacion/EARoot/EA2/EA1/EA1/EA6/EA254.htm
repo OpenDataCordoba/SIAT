@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Reporte por Contribuyentes CER</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="pageHeader"></div>
+<div class="PageBody">
+	<span class="ObjectTitle">Reporte por Contribuyentes CER  : public   usecase</span>
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">19/03/2009 13:55:12</td>
+		</tr>
+		<tr>
+			<td class="ObjectDetailsTopic">Modified:</td>
+			<td class="ObjectDetailsValue">28/04/2009 17:38:35</td>
+		</tr>
+		<tr style="height: 10px"><td colspan="2"></td></tr>
+		<tr>
+			<td class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td class="ObjectDetailsValue">hernan</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td class="ObjectDetailsValue">1.0</td>
+		</tr>
+		<tr id="proj02" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Phase:</td>
+			<td class="ObjectDetailsValue">1.0</td>
+		</tr>
+		<tr id="proj03" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Status:</td>
+			<td class="ObjectDetailsValue">R5</td>
+		</tr>
+		<tr id="proj04" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Complexity:</td>
+			<td class="ObjectDetailsValue">Medium</td>
+		</tr>
+		<tr>
+			<td class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">UUID:</td>
+			<td class="ObjectDetailsValue">{A7FD50BB-9FBA-4172-B747-5EF806B2972D}</td>
+		</tr>
+		<tr id="adv01" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
+			<td class="ObjectDetailsValue"><a href="EA241.htm">Diagrama Reportes Operativos</a></td>
+		</tr>
+	</table>
+	<div class="ObjectDetailsNotes">Mediante este caso de uso se obtiene un reporte detallando el ingreso de cada contribuyente CER según criterios de selección ingresados en pantalla, este reporte sumariza los pagos de todos los tributos que posee el Contribuyente.</div>
+
+	<div class="TableGroup" id="TableGroup">
+		<ul class="ItemTitle">
+			<li onClick="parent.toggleItem('Scenario');" id="ScenarioTitle">Scenarios</li>
+			<li onClick="parent.toggleItem('Links');" id="LinksTitle">Other Links</li>
+		</ul>
+		<div class="ItemBody" id="ScenarioTable">
+			<table align="center" border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="24%" class="TableHeading">Scenario</td>
+					<td width="8%" class="TableHeading">Type</td>
+					<td width="68%" class="TableHeading">Detail</td>
+				</tr>
+				<tr>
+					<td width="24%" class="TableRow">Procesar Reporte</td>
+					<td width="8%" class="TableRow">Alternate</td>
+					<td width="68%" class="TableRow"><div class="ObjectDetailsNotes">El sistema presentará en pantalla los siguientes filtros de búsqueda:<br />- Fecha de reporte: campo de fecha, su ingreso es requerido<br />- Recurso: combo con todos los recursos, en defecto con la opción &quot;Todos&quot;<br />- Periodo desde: será requerido y su formato es MM / AAAA<br />- Periodo hasta: será requerido y su formato es MM / AAAA<br />- Fecha de pago desde: campo de fecha, su ingreso es requerido<br />- Fecha de pago hasta: campo de fecha, su ingreso es requerido.<br /><br />Al oprimir el botón &quot;Generar Reporte&quot;:<br /> - Validar que los campos obligatorios hayan sido ingresados y que susu datos sean válidos.<br />- Crear una corrida de ADP.<br />- Obtener los contribuyentes cuyo atributo CER=SI y dicho atributo tiene fechaNovedad &lt;= fecha de Reporte y (fechadesde&lt;= fechaReporte &lt;= fechaHasta)<br />- Obtener la sumatoria de pagos de deuda (gde_pagoDeuda) de los períodos seleccionados que no sean del tipo pago=convenio de pagos.<br />- Agrupar por Contribuyente <br /><br />Mostrar en un archivo Excel las siguientes columnas:<br />- Para cada Contribuyente:<br />     . Contribuyente<br />     . Ingresos: total de pagos &lt;&gt; convenios<br />     . PArticipación CER: total ingreso contribuyente / total ingresos CER<br />    . <br />       Debajo debe mostrar un registro de totales de cada columna</div>
+</td>
+				</tr>
+
+			</table>
+		</div>
+		<div class="ItemBody" id="LinksTable">
+			<table align="center" border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="30%" class="TableHeading">Object</td>
+					<td width="15%" class="TableHeading">Type</td>
+					<td width="15%" class="TableHeading">Connection</td>
+					<td width="40%" class="TableHeading">Notes</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../../../EA3/EA649.htm">Programa CER</a></td>
+					<td width="15%" class="TableRow" valign="top">Actor</td>
+					<td width="15%" class="TableRow" valign="top">UseCase</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+
+			</table>
+		</div>
+	</div>
+<div class="pageFooter"></div>
+ 
+</body>
+</html>

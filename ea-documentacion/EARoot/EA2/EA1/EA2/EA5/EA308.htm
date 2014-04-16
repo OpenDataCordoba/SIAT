@@ -1,0 +1,231 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Mantenedor Broche</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="pageHeader"></div>
+<div class="PageBody">
+	<span class="ObjectTitle">Mantenedor Broche  : public   usecase</span>
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">26/07/2007 12:30:01</td>
+		</tr>
+		<tr>
+			<td class="ObjectDetailsTopic">Modified:</td>
+			<td class="ObjectDetailsValue">08/02/2008 09:16:40</td>
+		</tr>
+		<tr style="height: 10px"><td colspan="2"></td></tr>
+		<tr>
+			<td class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td class="ObjectDetailsValue">1.0</td>
+		</tr>
+		<tr id="proj02" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Phase:</td>
+			<td class="ObjectDetailsValue">1.0</td>
+		</tr>
+		<tr id="proj03" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Status:</td>
+			<td class="ObjectDetailsValue">R1</td>
+		</tr>
+		<tr id="proj04" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Complexity:</td>
+			<td class="ObjectDetailsValue">Easy</td>
+		</tr>
+		<tr>
+			<td class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">UUID:</td>
+			<td class="ObjectDetailsValue">{3104839D-A96F-476a-AB1F-01BCF20D4298}</td>
+		</tr>
+		<tr id="adv01" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
+			<td class="ObjectDetailsValue"><a href="EA305.htm">Diagrama de Distribución</a></td>
+		</tr>
+	</table>
+	<div class="ObjectDetailsNotes">Este CU tiene como objetivo la administración de los broches.<br />Un Broche representa la característica para el envío. Existen disintos tipos de broches. Los hay relacionados con repartidores de finca para zonas, relacionados con repartidores de fincas o baldíos fuera de zona, broches que representan el envío por correo, broches que representan a organismos municipales o provinciales y broches que indican el no envio. Para los Broches de Administración, se permite administrar los datos del titular, domicilio y teléfono. En este caso, también es posible indicar un repartidor fuera de zona para un broche de administración.</div>
+
+	<div class="TableGroup" id="TableGroup">
+		<ul class="ItemTitle">
+			<li onClick="parent.toggleItem('AssociationsFrom');" id="AssociationsFromTitle">Associations From</li>
+			<li onClick="parent.toggleItem('Scenario');" id="ScenarioTitle">Scenarios</li>
+			<li onClick="parent.toggleItem('Files');" id="FilesTitle">Files</li>
+			<li onClick="parent.toggleItem('Links');" id="LinksTitle">Other Links</li>
+		</ul>
+		<div class="ItemBody" id="AssociationsFromTable">
+			<table border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="20%" class="TableHeading">Element</td>
+					<td width="25%" class="TableHeading">Source Role</td>
+					<td width="25%" class="TableHeading">Target Role</td>
+					<td width="30%" class="TableHeading">Details</td>
+				</tr>
+				<tr>
+					<td width="20%" class="TableRow" valign="top">
+						<a href="../../../EA3/EA646.htm">Mantenimiento Padrón y Emisión</a><br />
+						Actor &nbsp;
+					</td>
+					<td width="20%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;
+					</td>
+					<td width="20%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;	
+					</td>
+					<td width="30%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+
+			</table>
+		</div>
+		<div class="ItemBody" id="ScenarioTable">
+			<table align="center" border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="24%" class="TableHeading">Scenario</td>
+					<td width="8%" class="TableHeading">Type</td>
+					<td width="68%" class="TableHeading">Detail</td>
+				</tr>
+				<tr>
+					<td width="24%" class="TableRow">Buscar Broche</td>
+					<td width="8%" class="TableRow">Alternate</td>
+					<td width="68%" class="TableRow"><div class="ObjectDetailsNotes">Permite consultar los broches disponibles en el SIAT mediante diferentes criterios de búsqueda. Permite buscar por Recurso, Tipo y Nro. Si existen resultados se muestra de cada uno de los registros el tipo, nro, descripción del broche, recurso y las acciones asociadas: &quot;Ver broche&quot; &quot;Modificar broche&quot;, &quot;Eliminar broche&quot;, &quot;Activar/Desactivar Broche&quot; y &quot;Asignar cuenta a broche&quot;.<br />Para agregar un nuevo broche, existe la opción &quot;Agregar broche&quot;.</div>
+</td>
+				</tr>
+				<tr>
+					<td width="24%" class="TableRow">Ver Broche</td>
+					<td width="8%" class="TableRow">Alternate</td>
+					<td width="68%" class="TableRow"><div class="ObjectDetailsNotes">Permite visualizar información del broche seleccionado.<br /></div>
+</td>
+				</tr>
+				<tr>
+					<td width="24%" class="TableRow">Agregar Broche</td>
+					<td width="8%" class="TableRow">Alternate</td>
+					<td width="68%" class="TableRow"><div class="ObjectDetailsNotes">Para crear un nuevo broche, debemos ingresar: <br />- Recurso<br />- nro<br />- tipo<br />- descripcion del broche<br />en caso de ser un broche administrativo se debe ingresar además:<br />- titular del broche administrativo (incluye al caso de uso BuscarPersona)<br />- domicilio del broche en caso de que corresponda (Para validar el domicilio ingresado se invoca al CU: Mantendor de Domicilio)<br />- telefono<br />- repartidor (solo para los broches administrativos)<br /></div>
+</td>
+				</tr>
+				<tr>
+					<td width="24%" class="TableRow">Modificar Broche</td>
+					<td width="8%" class="TableRow">Alternate</td>
+					<td width="68%" class="TableRow"><div class="ObjectDetailsNotes">Visualizará toda la información del broche pero solo se permitirá modificar los valores de los campos:<br />- descripción<br />y si es un broche administrativo<br />- titular del broche<br />- domicilio<br />- teléfono<br />- repartidor (dentro de los repartidores fuera de zona)</div>
+</td>
+				</tr>
+				<tr>
+					<td width="24%" class="TableRow">Eliminar Broche</td>
+					<td width="8%" class="TableRow">Alternate</td>
+					<td width="68%" class="TableRow"><div class="ObjectDetailsNotes">Elimina en forma física el broche en caso de no estar siendo referenciado.</div>
+</td>
+				</tr>
+				<tr>
+					<td width="24%" class="TableRow">Activar/Desactivar Broche</td>
+					<td width="8%" class="TableRow">Alternate</td>
+					<td width="68%" class="TableRow"><div class="ObjectDetailsNotes">Si está en estado &quot;Activo&quot;, se procederá a la desactivación del Broche, pasando a estado &quot;Inactivo&quot; y no pudiendo ser referenciado nuevamente.<br />Si está en estado &quot;Inactivo&quot;, se procederá a la activación del Broche, pasando a estado &quot;Activo&quot;, pudiendo ser referenciado nuevamente.</div>
+</td>
+				</tr>
+				<tr>
+					<td width="24%" class="TableRow">Administrar cuentas del broche</td>
+					<td width="8%" class="TableRow">Alternate</td>
+					<td width="68%" class="TableRow"><div class="ObjectDetailsNotes">Permite buscar las cuentas asignadas al broche por cuenta, mostrando a su vez datos del broche como Recurso, Nro, Tipo y Descripción.<br />Si no se ingresa una cuenta, se mostrarán todas las cuentas relacionadas al broche.<br />De cada cuenta encontrada se muestra: fecha desde, fecha hasta, cuenta, caso y las opciones de Ver Cuenta, Modificar Cuenta y Eliminar Cuenta.<br />Para agregar una nueva cuenta al broche, existe la opción &quot;Agregar cuenta a broche&quot;</div>
+</td>
+				</tr>
+				<tr>
+					<td width="24%" class="TableRow">Ver Cuenta en Broche</td>
+					<td width="8%" class="TableRow">Alternate</td>
+					<td width="68%" class="TableRow"><div class="ObjectDetailsNotes">Visualiza los datos del broche y de la cuenta seleccionada.</div>
+</td>
+				</tr>
+				<tr>
+					<td width="24%" class="TableRow">Agregar cuenta a broche</td>
+					<td width="8%" class="TableRow">Alternate</td>
+					<td width="68%" class="TableRow"><div class="ObjectDetailsNotes">Permite buscar la cuenta (del recurso del broche) que se desea agregar por nro de cuenta, catastral y titular.<br />Una vez seleccionada la cuenta que se desea agregar se debe ingresar fecha desde (fecha a partir de la cual tiene vigencia esta cuenta en el broche) y un caso (si es que lo requiere).<br />Se deberá validar que esa cuenta seleccionada no se encuentre vigente en otro broche, en este caso, se deberá advertir con un mensaje de tal situación. Si se continúa con la operación se coloca una fecha hasta en el registro encontrado para finalizar la vigencia y se crea el registro de asignación de cuenta a broche para el broche actual.</div>
+</td>
+				</tr>
+				<tr>
+					<td width="24%" class="TableRow">Modificar Cuenta en Broche</td>
+					<td width="8%" class="TableRow">Alternate</td>
+					<td width="68%" class="TableRow"><div class="ObjectDetailsNotes">Visualiza los datos del broche y de la cuenta y permite el ingreso de la fecha hasta (fecha de fin de vigencia de la cuenta en el broche)</div>
+</td>
+				</tr>
+				<tr>
+					<td width="24%" class="TableRow">Eliminar Cuenta de Broche</td>
+					<td width="8%" class="TableRow">Alternate</td>
+					<td width="68%" class="TableRow"><div class="ObjectDetailsNotes">Se quita la relación entre la cuenta y el broche. Es decir se elimina el registro que relaciona la cuenta seleccionada con el broche actual.</div>
+</td>
+				</tr>
+
+			</table>
+		</div>
+		<div class="ItemBody" id="FilesTable">
+			<table border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="50%" class="TableHeading">File</td>
+					<td width="10%" class="TableHeading">Type</td>
+					<td width="40%" class="TableHeading">Details</td>
+				</tr>
+			<tr>
+				<td width="50%" class="TableRow"><a href="c:\siatdoc\docGenerada\capacitacion\padron\Distribucion\MDU - Mantenedor de Broches.doc">c:\siatdoc\docGenerada\capacitacion\padron\Distribucion\MDU - Mantenedor de Broches.doc</a></td>
+				<td width="10%" class="TableRow">Local File</td>
+				<td width="40%" class="TableRow">
+					<div class="ObjectDetailsNotes">Manual de usuario</div>
+<br />
+					<span class="NoteHeading">File Size:</span> 304 k<br />
+					<span class="NoteHeading">Time Stamp:</span> 08/09/2008 07:36:21 a.m.<br />
+				</td>
+			</tr>
+
+			</table>
+		</div>
+		<div class="ItemBody" id="LinksTable">
+			<table align="center" border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="30%" class="TableHeading">Object</td>
+					<td width="15%" class="TableHeading">Type</td>
+					<td width="15%" class="TableHeading">Connection</td>
+					<td width="40%" class="TableHeading">Notes</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../../../../EA1/EA3/EA38.htm">«Functional» 42- Mantener y automatizar la asignación de repartidores según el criterio definido para cada tributo.</a></td>
+					<td width="15%" class="TableRow" valign="top">Requirement</td>
+					<td width="15%" class="TableRow" valign="top">Realisation</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../../../../EA1/EA5/EA74.htm">«Functional» 4- Se deberá diseñar el sistema teniendo en cuenta que todos los tributos de esta Municipalidad se administran de la misma manera (administración por función y no por tributo).</a></td>
+					<td width="15%" class="TableRow" valign="top">Requirement</td>
+					<td width="15%" class="TableRow" valign="top">Realisation</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../../../../EA1/EA5/EA75.htm">«Functional» 5- El sistema deberá tener un alto grado de parametrización, a efectos de permitir su adecuación a cambios, sin necesidad de modificar las aplicaciones.</a></td>
+					<td width="15%" class="TableRow" valign="top">Requirement</td>
+					<td width="15%" class="TableRow" valign="top">Realisation</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+
+			</table>
+		</div>
+	</div>
+<div class="pageFooter"></div>
+ 
+</body>
+</html>

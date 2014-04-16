@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+ <!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 1.1//EN"
+       "http://jakarta.apache.org/struts/dtds/tiles-config_1_1.dtd">
+
+<tiles-definitions>
+	
+	<!-- Habilitacion -->	
+	<definition name=".esp.habilitacion.view.habilitacionSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/esp/habilitacion/habilitacionSearchPage.jsp"/>
+    </definition>
+
+    <definition name=".esp.habilitacion.view.habilitacionEncEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/esp/habilitacion/habilitacionEncEditAdapter.jsp"/>
+    </definition>  	
+
+	<definition name=".esp.habilitacion.view.habilitacionViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/esp/habilitacion/habilitacionViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".esp.habilitacion.view.habilitacionAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/esp/habilitacion/habilitacionAdapter.jsp"/>
+    </definition>
+
+	<definition name=".esp.habilitacion.view.habilitacionEmiViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/esp/habilitacion/habilitacionEmiViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".esp.habilitacion.view.ddjjEntVenAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/esp/habilitacion/ddjjEntVenAdapter.jsp"/>
+    </definition>
+
+	<definition name=".esp.habilitacion.view.habilitacionReport" extends=".siatStdLayout">
+	    <put name="body" value="/esp/habilitacion/habilitacionReport.jsp"/>
+    </definition>
+
+	<!-- Fin Habilitacion -->  
+	
+	<!-- PrecioEvento -->	
+	<definition name=".esp.habilitacion.view.precioEventoViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/esp/habilitacion/precioEventoViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".esp.habilitacion.view.precioEventoEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/esp/habilitacion/precioEventoEditAdapter.jsp"/>
+    </definition>
+	<!-- Fin PrecioEvento --> 
+	
+	<!-- EntHab -->	
+	<definition name=".esp.habilitacion.view.entHabViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/esp/habilitacion/entHabViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".esp.habilitacion.view.entHabEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/esp/habilitacion/entHabEditAdapter.jsp"/>
+    </definition>
+	<!-- Fin EntHab --> 
+	
+	<!-- EntVen -->	
+	<definition name=".esp.habilitacion.view.entVenViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/esp/habilitacion/entVenViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".esp.habilitacion.view.entVenEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/esp/habilitacion/entVenEditAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".esp.habilitacion.view.entVenAnuEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/esp/habilitacion/entVenAnuEditAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".esp.habilitacion.view.entVenAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/esp/habilitacion/entVenAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".esp.habilitacion.view.entVenOtrIngTesAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/esp/habilitacion/entVenOtrIngTesAdapter.jsp"/>
+    </definition>
+	<!-- Fin EntVen --> 
+
+	<!-- ValoresCargados -->	
+	<definition name=".esp.habilitacion.view.valoresCargadosViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/esp/habilitacion/valoresCargadosViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".esp.habilitacion.view.valoresCargadosEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/esp/habilitacion/valoresCargadosEditAdapter.jsp"/>
+    </definition>
+                      
+    <definition name=".esp.habilitacion.view.valoresCargadosSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/esp/habilitacion/valoresCargadosSearchPage.jsp"/>
+    </definition>
+	<!-- Fin ValoresCargados -->
+	
+	<!-- TipoEntrada -->	
+	<definition name=".esp.habilitacion.view.tipoEntradaViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/esp/habilitacion/tipoEntradaViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".esp.habilitacion.view.tipoEntradaEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/esp/habilitacion/tipoEntradaEditAdapter.jsp"/>
+    </definition>
+                      
+    <definition name=".esp.habilitacion.view.tipoEntradaSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/esp/habilitacion/tipoEntradaSearchPage.jsp"/>
+    </definition>
+	<!-- Fin TipoEntrada -->
+	
+	<!-- HabExe -->	
+	<definition name=".esp.habilitacion.view.habExeViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/esp/habilitacion/habExeViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".esp.habilitacion.view.habExeEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/esp/habilitacion/habExeEditAdapter.jsp"/>
+    </definition>
+	<!-- Fin EntHab --> 
+	
+	<!-- LugarEvento -->	
+	<definition name=".esp.habilitacion.view.lugarEventoViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/esp/habilitacion/lugarEventoViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".esp.habilitacion.view.lugarEventoEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/esp/habilitacion/lugarEventoEditAdapter.jsp"/>
+    </definition>
+                      
+    <definition name=".esp.habilitacion.view.lugarEventoSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/esp/habilitacion/lugarEventoSearchPage.jsp"/>
+    </definition>
+	<!-- Fin LugarEvento -->
+</tiles-definitions>
+  

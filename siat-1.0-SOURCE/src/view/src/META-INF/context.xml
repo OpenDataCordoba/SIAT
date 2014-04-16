@@ -1,0 +1,30 @@
+<Context path="/siat" reloadable="true">
+  <ResourceLink global="jdbc/siat" name="ds/siat"  type="javax.sql.DataSource"/>
+  <ResourceLink global="jdbc/seguridadweb10"  name="ds/seguridadwebdb"  type="javax.sql.DataSource"/>
+  <ResourceLink global="jdbc/swe"  name="ds/swe"  type="javax.sql.DataSource"/>
+  <ResourceLink global="jdbc/gis10"  name="ds/gisdb"  type="javax.sql.DataSource"/>
+  <ResourceLink global="jdbc/genglobal"  name="ds/generaldb" type="javax.sql.DataSource"/>
+  <ResourceLink global="jdbc/indeterminados"  name="ds/indet" type="javax.sql.DataSource"/>
+  <ResourceLink global="jdbc/variosweb"  name="ds/variosweb" type="javax.sql.DataSource"/>  
+  <ResourceLink global="jdbc/gravamenes"  name="ds/gravamenes" type="javax.sql.DataSource"/>
+  <ResourceLink global="jdbc/debitoaut"  name="ds/debitoaut" type="javax.sql.DataSource"/>  
+  <ResourceLink global="jdbc/catastro"   name="ds/catastro" type="javax.sql.DataSource"/>
+  <ResourceLink global="jdbc/rodados"   name="ds/rodados" type="javax.sql.DataSource"/>
+  <ResourceLink global="jdbc/osirisEnvio" name="ds/osirisEnvio" type="javax.sql.DataSource"/>
+
+
+
+   <!-- Parametros de configuracion de la arquitectura siat
+        Nota: al Nombre anteponerle siempre el prefijo /siat/conf
+   -->
+   <!--
+    Nombre                      Valor Defecto        Descripcion        
+    *******************************************************************************
+    TimeoutAnonimo     		    15                   Session timeout de Usuario Siat Anonimo en minutos
+    TimeoutAutenticado       	    60                   Session timeout de Usuario autenticado en minutos, que se loguea usando user y passwd
+   -->
+
+   <Environment name="/siat/conf/TimeoutAnonimo" value="15" type="java.lang.String" override="false"/>
+   <Environment name="/siat/conf/TimeoutAutenticado" value="180" type="java.lang.String" override="false"/>
+
+</Context>

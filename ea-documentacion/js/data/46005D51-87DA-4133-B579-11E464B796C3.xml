@@ -1,0 +1,8 @@
+tocTab[tocTab.length] = new Array("2.4.5:1", "", "Envio Osiris", "EARoot/EA2/EA4/EA5/EA717.htm", "183.png", "627", "0", "", "Statechart diagram");
+tocTab[tocTab.length] = new Array("2.4.5:2", "", "Conciliado", "EARoot/EA2/EA4/EA5/EA719.htm", "20.png", "5162", "0", "", "State");
+tocTab[tocTab.length] = new Array("2.4.5:3", "", "Final", "EARoot/EA2/EA4/EA5/EA720.htm", "69.png", "5165", "0", "", "StateNode");
+tocTab[tocTab.length] = new Array("2.4.5:4", "", "Inconsistente", "EARoot/EA2/EA4/EA5/EA721.htm", "20.png", "5161", "0", "", "State");
+tocTab[tocTab.length] = new Array("2.4.5:5", "", "Inicio", "EARoot/EA2/EA4/EA5/EA722.htm", "68.png", "5159", "0", "", "StateNode");
+tocTab[tocTab.length] = new Array("2.4.5:6", "", "Pendiente.", "EARoot/EA2/EA4/EA5/EA723.htm", "20.png", "5160", "0", "", "State");
+tocTab[tocTab.length] = new Array("2.4.5:7", "", "Procesado con Error", "EARoot/EA2/EA4/EA5/EA724.htm", "20.png", "5164", "0", "", "State");
+tocTab[tocTab.length] = new Array("2.4.5:8", "", "Procesado con Exito", "EARoot/EA2/EA4/EA5/EA725.htm", "20.png", "5163", "0", "", "State");

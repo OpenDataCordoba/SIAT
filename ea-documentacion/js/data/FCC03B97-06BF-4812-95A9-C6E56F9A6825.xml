@@ -1,0 +1,8 @@
+tocTab[tocTab.length] = new Array("2.4.1:1", "", "Administrar Reclamos", "EARoot/EA2/EA4/EA1/EA670.htm", "183.png", "286", "0", "", "Statechart diagram");
+tocTab[tocTab.length] = new Array("2.4.1:2", "", "Aceptado", "EARoot/EA2/EA4/EA1/EA672.htm", "20.png", "1816", "0", "", "State");
+tocTab[tocTab.length] = new Array("2.4.1:3", "", "En Análisis", "EARoot/EA2/EA4/EA1/EA673.htm", "20.png", "1814", "0", "", "State");
+tocTab[tocTab.length] = new Array("2.4.1:4", "", "Final", "EARoot/EA2/EA4/EA1/EA674.htm", "69.png", "1818", "0", "", "StateNode");
+tocTab[tocTab.length] = new Array("2.4.1:5", "", "Initial", "EARoot/EA2/EA4/EA1/EA675.htm", "68.png", "1812", "0", "", "StateNode");
+tocTab[tocTab.length] = new Array("2.4.1:6", "", "Rechazado", "EARoot/EA2/EA4/EA1/EA676.htm", "20.png", "1817", "0", "", "State");
+tocTab[tocTab.length] = new Array("2.4.1:7", "", "Solicitado", "EARoot/EA2/EA4/EA1/EA677.htm", "20.png", "1813", "0", "", "State");
+tocTab[tocTab.length] = new Array("2.4.1:8", "", "Solicitando Información", "EARoot/EA2/EA4/EA1/EA678.htm", "20.png", "1815", "0", "", "State");

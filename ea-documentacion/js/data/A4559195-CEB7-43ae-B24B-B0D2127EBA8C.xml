@@ -1,0 +1,3 @@
+tocTab[tocTab.length] = new Array("2.1.5.4:1", "", "Conciliación de envíos", "EARoot/EA2/EA1/EA5/EA4/EA413.htm", "180.png", "579", "0", "", "Use Case diagram");
+tocTab[tocTab.length] = new Array("2.1.5.4:2", "", "Conciliación de archivos BMROS", "EARoot/EA2/EA1/EA5/EA4/EA415.htm", "7.png", "4783", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.5.4:3", "", "Conciliación de transaccines AFIP", "EARoot/EA2/EA1/EA5/EA4/EA416.htm", "7.png", "4784", "0", "", "UseCase");

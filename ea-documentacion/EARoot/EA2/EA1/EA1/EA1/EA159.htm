@@ -1,0 +1,319 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Gestión de Deuda por Recurso/Cuenta</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="pageHeader"></div>
+<div class="PageBody">
+	<span class="ObjectTitle">Gestión de Deuda por Recurso/Cuenta  : public   usecase</span>
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">16/07/2007 16:07:46</td>
+		</tr>
+		<tr>
+			<td class="ObjectDetailsTopic">Modified:</td>
+			<td class="ObjectDetailsValue">22/08/2008 10:12:44</td>
+		</tr>
+		<tr style="height: 10px"><td colspan="2"></td></tr>
+		<tr>
+			<td class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td class="ObjectDetailsValue">1.0</td>
+		</tr>
+		<tr id="proj02" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Phase:</td>
+			<td class="ObjectDetailsValue">1.0</td>
+		</tr>
+		<tr id="proj03" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Status:</td>
+			<td class="ObjectDetailsValue">R1</td>
+		</tr>
+		<tr id="proj04" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Complexity:</td>
+			<td class="ObjectDetailsValue">Easy</td>
+		</tr>
+		<tr>
+			<td class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">UUID:</td>
+			<td class="ObjectDetailsValue">{DD9C36B9-CC12-4e03-B590-AB6A93D9DFFD}</td>
+		</tr>
+		<tr id="adv01" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
+			<td class="ObjectDetailsValue"><a href="EA149.htm">Diagrama Gestión de Deuda / Convenios</a></td>
+		</tr>
+	</table>
+	<div class="ObjectDetailsNotes">Este CU permite obtener la Liquidación de Deuda para un Recurso/Cuenta.<br />A partir de una Cuenta/Recurso se permite visualizar información propia de la cuenta, del objeto imponible asociado, titulares de la cuenta con sus atributos, histórico de titulares, convenios asociados, unificaciones/desgloses, cuentas relacionadas, exenciones e históricoss de exenciones y bloques de deuda (en C y Q, Judicial y Administrativa)<br />Mediante este CU se podrá además ejecutar diferentes acciones que afectan los registros de deuda seleccionados, como reclamar falta de asentamiento, formalizar un plan de pagos, reimpresión/reconfección de deuda, solicitar un cambio de plan para Contribución de Mejoras, generar una cuota saldo CdM, emisión de certificado de libre deuda y generar estado de cuenta y convenio.<br /><br />Nota: En R1 se incluye: Visualización de atributos del objeto imponible relacionado, visualización de datos de la cuenta, solicitudes y exenciones, histórico de exenciones, lista de cuentas relacionadas, lista de convenios relacionados, lista de deuda en vía admistrativa, judicial y concurso y quiebras. Cada deuda se visualiza actualizada y se consulta: si está indeterminada, si está reclamada, si se encuentra en un concurso/quiebra o en juicio.</div>
+
+	<div class="TableGroup" id="TableGroup">
+		<ul class="ItemTitle">
+			<li onClick="parent.toggleItem('AssociationsFrom');" id="AssociationsFromTitle">Associations From</li>
+			<li onClick="parent.toggleItem('Scenario');" id="ScenarioTitle">Scenarios</li>
+			<li onClick="parent.toggleItem('Files');" id="FilesTitle">Files</li>
+			<li onClick="parent.toggleItem('Links');" id="LinksTitle">Other Links</li>
+		</ul>
+		<div class="ItemBody" id="AssociationsFromTable">
+			<table border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="20%" class="TableHeading">Element</td>
+					<td width="25%" class="TableHeading">Source Role</td>
+					<td width="25%" class="TableHeading">Target Role</td>
+					<td width="30%" class="TableHeading">Details</td>
+				</tr>
+				<tr>
+					<td width="20%" class="TableRow" valign="top">
+						<a href="../../../EA3/EA637.htm">Cobranza Administrativa</a><br />
+						Actor &nbsp;
+					</td>
+					<td width="20%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;
+					</td>
+					<td width="20%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;	
+					</td>
+					<td width="30%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="20%" class="TableRow" valign="top">
+						<a href="../../../EA3/EA640.htm">Contribuyente</a><br />
+						Actor &nbsp;
+					</td>
+					<td width="20%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;
+					</td>
+					<td width="20%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;	
+					</td>
+					<td width="30%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="20%" class="TableRow" valign="top">
+						<a href="../../../EA3/EA654.htm">Usuario CMD</a><br />
+						Actor &nbsp;
+					</td>
+					<td width="20%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;
+					</td>
+					<td width="20%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;	
+					</td>
+					<td width="30%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+
+			</table>
+		</div>
+		<div class="ItemBody" id="ScenarioTable">
+			<table align="center" border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="24%" class="TableHeading">Scenario</td>
+					<td width="8%" class="TableHeading">Type</td>
+					<td width="68%" class="TableHeading">Detail</td>
+				</tr>
+				<tr>
+					<td width="24%" class="TableRow">Obtener Liquidación de Deuda</td>
+					<td width="8%" class="TableRow">Alternate</td>
+					<td width="68%" class="TableRow"><div class="ObjectDetailsNotes">Para obtener la Liquidación de Deuda de un Recurso se deben ingresar los siguientes parámetros:<br /><br />Para un contribuyente:<br />- Cuenta (requerido)<br />- Código de Gestión Personal (requerido)<br /><br />Para el usuario Interno:<br />- Recurso (requerido)<br />- Cuenta (requerido)<br /><br />Cuando el usuario es un Contribuyente se deberá validar el Código de Gestión Personal.<br /><br />Se obtiene los Registros de Deuda correspondientes con los parámetros ingresados por el usuario. <br /><br />Obtenida la deuda, se invoca al CU &quot;Actualizar Deuda&quot;, para obtener la actualización de cada Registro de Deuda a la Fecha <br />Actual. Si la cuenta posee vigente una exención que no actualiza deuda, no se actualiza ningún período, sino se verifica para cada período si existió una exención, si existió no se actualiza el período correspondiente.<br /><br />Luego se muestran los siguientes bloques de información:<br /><br />	Bloque 1 - Datos de la cuenta seleccionada<br />	           - Cuenta, Recurso, Titular Principal, Código de Gestión Personal, Datos del Objeto Imponible, Titulares, Histórico de Contribuyentes, Exenciones, Histórico de excenciones, Datos definidos de la Cuenta, Convenios Formalizados (con links a la Consulta de Convenio, invocando al CU &quot;Consultar Planes Formalizados&quot;), Desgloses/Unificaciones <br /><br />               Cuando el usuario logueado es Interno, por cada Titular de la Cuenta, se habilita un link a la Liquidación de Deuda por Contribuyente, incluyendo el CU &quot;Obtener Liquidacion de Deuda por Contribuyente&quot;. <br /><br />                Cuando existen desgloses/unificaciones asociadas a la cuenta seleccionada, se muestra Nº Cuenta y un link para visualizar información de la cuenta relacionada, invocando este CU con otro identificador de cuenta.<br /><br />	Bloque 2 - Datos de cuentas relacionadas a la seleccionada<br />                            - Nº de Cuenta, Categoría, Recurso. Se habilita por cada cuenta un link para visualizar la cuenta relacionada, invocando este CU con otro identificador de cuenta.<br /><br />                Bloque 3 - Históricos<br />                           - Acceso al histórico del objeto imponible.<br />                           - Acceso al histórico de cotribuyentes.<br />                           - Acceso al histórico de exenciones.<br /><br />	Bloque 4 - Datos de Deuda<br />	<br />         	   Bloque 4.1. - Deuda en Concurso/Quiebra<br /><br />                                      CONCURSOS Y QUIEBRAS <br />		      Nro. Procedimiento: 3125/2007  	 Fecha de Actualización de Deuda: 10/10/2007<br />			Deuda 	F.Vto 	Importe 	Actualización 	Total<br />			01/2005 	10/01/2005 	56,33 	27,06 	83,39<br /> 			02/2005 	10/02/2005 	56,33 	24,92 	81,25<br /><br />       <br />       	   Bloque 4.2. - Deuda en Gestión Judicial<br /><br />	       	       COBRO EN GESTION JUDICIAL    <br />		       Procurador: 0161 - Roberto Perez Casella - Balcarse 109<br />			Deuda 	F.Vto 		Importe 	Actualización 	Total<br /> 			01/2002 	10/01/2002 	Convenio Nro.: 0086619905 - Moratoria 2002<br /> 			02/2002 	10/03/2002 	Convenio Nro.: 0086619905 - Moratoria 2002<br /> 			04/2004 	10/08/2004 	21,72 	10,20 		31,72       	  <br /><br /><br />	  Bloque 4.3. - Deuda en Gestión Administrativa<br /><br />		       TASA GRAL. AL COBRO EJ. VENCIDO<br />			Deuda  	F.Vto  		Importe  	Actualización  	Total 	<br />			08/2006 	30/08/2006 	56,28 	33,11 		89,44 	<br />			09/2006 	30/09/2006 	56,28 	30,95 		87,28 	<br />			10/2006 	30/10/2006 	Pago a Verificar - Reclamo en estad de Análisis.<br />			11/2006 	30/11/2006 	Pago sin Procesar<br />			12/2006 	31/12/2006 	Exento de Pago<br /><br />		       TASA GRAL. AL COBRO EJ. ACTUAL<br />			Deuda  		F.Vto  		Importe  	Actualización  	Total 	<br />			RE 01/2007 	10/01/2007 	49,29 	1,59 		50,88 	<br />			09/2007 		10/09/2007 	49,29 	0,00 		49,29 	<br /><br />		      <br />	   Bloque 5 - Fecha de pagos asentados (se actualiza en el proceso general de balance)<br /><br />       De acuerdo a la selección que realice el usuario sobre los registros del bloque de deuda y el perfil del mismo, pueden <br />habilitarse las siguientes opciones:<br />       <br />         - Reimpresión: Permite la reimpresión/reconfección de registros de deudas. Invoca al CU &quot;Reimprimir/Reconfeccionar <br />Deuda&quot;<br />         - Realizar un reclamo por el no asentamiento de un pago realizado. Invoca al CUS &quot;Generar Reclamo Deuda&quot;<br />         - Formalizar un Convenio. Invoca al CUS &quot;Formalizar Convenio&quot;.<br />         - Formalizar un Convenio Especial.<br />         - Imprimir Liquidacion Deuda y Plan.<br />         - Imprimir Liquidación de Libre Deuda, incluye el CU &quot;Emitir Certificado Libre Deuda&quot;.<br />         - Cambio de Plan, en caso de CDM, invocando al CU &quot;Cambiar Plan CDM&quot;.<br />         - Cuota Saldo CDM, invocando al CU &quot;Cuota Saldo CDM&quot;<br /><br />Notas:<br /><br />  Los estados en que puede estar una deuda son:<br />	- En Plan de facilidades<br />	- Reclamado<br />	- Indeterminado<br />	- Exento<br />	- Prescripto : No se muestra<br />	- Condonado: No se muestra<br />	- Anulado por error: No se muestra<br /><br />  Una deuda puede estar en:<br />	- En vía Administrativa<br />	- En vía Judicial<br />	- Incluida en un Concurso/Quiebra<br /><br />  Los casos en que un periodo vencido impago no se actualiza son: (no se muestra el importe)<br />	- Valores Reclamados<br />	- Valores incluidos en algún plan de pago <br />	- Valores Indeterminados: Para determinar si un determinado período está indeterminado es necesario consultar al 	<br />Sistema de Indeterminados Informix. <br /><br />  En caso de que un periodo se encuentre: <br />	- En un Plan de pago: se muestra la descripción del plan de pago junto con el nro. de convenio. <br />	- Reclamado: se muestra la leyenda Pago a Verificar + informción del estado del reclamo<br />	- Indeterminado: se deberá mostrar una leyenda Pago sin procesar<br /><br />  Reconfección de deuda administrativa: <br />         - Para poder realizar la reimpresión/reconfección de periodos, los mismos deben estar impagos y no poseer las sgtes  <br />características: <br />                <br />	- Valor Reclamado como Pago<br />	- Valor incluido en algún convenio al que no se le hizo aún un saldo por caducidad.<br />	- Valor Indeterminado <br /><br /><br /><br /></div>
+</td>
+				</tr>
+
+			</table>
+		</div>
+		<div class="ItemBody" id="FilesTable">
+			<table border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="50%" class="TableHeading">File</td>
+					<td width="10%" class="TableHeading">Type</td>
+					<td width="40%" class="TableHeading">Details</td>
+				</tr>
+			<tr>
+				<td width="50%" class="TableRow"><a href="C:\siatdoc\docGenerada\analisisDisenio\especificacion\GDEUDA - Obtener Liquidacion de Deuda.doc">C:\siatdoc\docGenerada\analisisDisenio\especificacion\GDEUDA - Obtener Liquidacion de Deuda.doc</a></td>
+				<td width="10%" class="TableRow">Local File</td>
+				<td width="40%" class="TableRow">
+					<div class="ObjectDetailsNotes">Especificación</div>
+<br />
+					<span class="NoteHeading">File Size:</span> 257 k<br />
+					<span class="NoteHeading">Time Stamp:</span> 27/08/2008 12:36:53 p.m.<br />
+				</td>
+			</tr>
+			<tr>
+				<td width="50%" class="TableRow"><a href="c:\siatdoc\docGenerada\capacitacion\gdeuda\Gestion de Deuda  Convenios\MDU - Gestion de Deuda por Recurso - Cuenta.doc">c:\siatdoc\docGenerada\capacitacion\gdeuda\Gestion de Deuda  Convenios\MDU - Gestion de Deuda por Recurso - Cuenta.doc</a></td>
+				<td width="10%" class="TableRow">Local File</td>
+				<td width="40%" class="TableRow">
+					<div class="ObjectDetailsNotes">Manual de usuario</div>
+<br />
+					<span class="NoteHeading">File Size:</span> 1034 k<br />
+					<span class="NoteHeading">Time Stamp:</span> 02/09/2008 01:45:27 p.m.<br />
+				</td>
+			</tr>
+
+			</table>
+		</div>
+		<div class="ItemBody" id="LinksTable">
+			<table align="center" border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="30%" class="TableHeading">Object</td>
+					<td width="15%" class="TableHeading">Type</td>
+					<td width="15%" class="TableHeading">Connection</td>
+					<td width="40%" class="TableHeading">Notes</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="./EA1/EA168.htm">Cambiar Plan CdM</a></td>
+					<td width="15%" class="TableRow" valign="top">UseCase</td>
+					<td width="15%" class="TableRow" valign="top">Includes</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="EA161.htm">Obtener Cuentas por Objeto Imponible</a></td>
+					<td width="15%" class="TableRow" valign="top">UseCase</td>
+					<td width="15%" class="TableRow" valign="top">Includes</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../../../../EA1/EA4/EA47.htm">«Functional» 49-Emitir liquidaciones de deuda, estados de cuenta y certificados de "Libre Deuda" de la cuenta corriente del contribuyente en todos los posibles niveles de agregación (total, por tributo, por objeto imponible, por vía (administrativa/judicial), etc.). </a></td>
+					<td width="15%" class="TableRow" valign="top">Requirement</td>
+					<td width="15%" class="TableRow" valign="top">Realisation</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../../../../EA1/EA5/EA63.htm">«Functional» 1- El sistema deberá dar soporte a todos los procesos de la Administración Tributaria.</a></td>
+					<td width="15%" class="TableRow" valign="top">Requirement</td>
+					<td width="15%" class="TableRow" valign="top">Realisation</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../../../../EA1/EA4/EA47.htm">«Functional» 49-Emitir liquidaciones de deuda, estados de cuenta y certificados de "Libre Deuda" de la cuenta corriente del contribuyente en todos los posibles niveles de agregación (total, por tributo, por objeto imponible, por vía (administrativa/judicial), etc.). </a></td>
+					<td width="15%" class="TableRow" valign="top">Requirement</td>
+					<td width="15%" class="TableRow" valign="top">Realisation</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="./EA1/EA192.htm">Gestionar Convenio</a></td>
+					<td width="15%" class="TableRow" valign="top">UseCase</td>
+					<td width="15%" class="TableRow" valign="top">Extends</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="./EA1/EA194.htm">Reimprimir/ Reconfeccionar Deuda</a></td>
+					<td width="15%" class="TableRow" valign="top">UseCase</td>
+					<td width="15%" class="TableRow" valign="top">Extends</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="./EA1/EA188.htm">Generar Reclamo Asentamiento de Pago de Deuda (SINC)</a></td>
+					<td width="15%" class="TableRow" valign="top">UseCase</td>
+					<td width="15%" class="TableRow" valign="top">Extends</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="EA160.htm">Obtener Cuentas por Contribuyente</a></td>
+					<td width="15%" class="TableRow" valign="top">UseCase</td>
+					<td width="15%" class="TableRow" valign="top">Extends</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../../../EA3/EA638.htm">Cobranza Judicial</a></td>
+					<td width="15%" class="TableRow" valign="top">Actor</td>
+					<td width="15%" class="TableRow" valign="top">UseCase</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../../../EA3/EA648.htm">Procurador</a></td>
+					<td width="15%" class="TableRow" valign="top">Actor</td>
+					<td width="15%" class="TableRow" valign="top">UseCase</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="./EA1/EA187.htm">Emitir Informe de deuda</a></td>
+					<td width="15%" class="TableRow" valign="top">UseCase</td>
+					<td width="15%" class="TableRow" valign="top">Extends</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../../EA5/EA8/EA1/EA1/EA448.htm">Consultar Indeterminado (SINC)</a></td>
+					<td width="15%" class="TableRow" valign="top">UseCase</td>
+					<td width="15%" class="TableRow" valign="top">Includes</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="./EA1/EA170.htm">Cuota Saldo CdM</a></td>
+					<td width="15%" class="TableRow" valign="top">UseCase</td>
+					<td width="15%" class="TableRow" valign="top">Dependency</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="./EA1/EA182.htm">Simular Formalizacion de Convenio</a></td>
+					<td width="15%" class="TableRow" valign="top">UseCase</td>
+					<td width="15%" class="TableRow" valign="top">Includes</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA3/EA219.htm">Consultar Cuentas por Procurador</a></td>
+					<td width="15%" class="TableRow" valign="top">UseCase</td>
+					<td width="15%" class="TableRow" valign="top">Includes</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../../EA2/EA2/EA286.htm">Buzón de Solicitudes de Cambios</a></td>
+					<td width="15%" class="TableRow" valign="top">UseCase</td>
+					<td width="15%" class="TableRow" valign="top">Includes</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../../../../EA1/EA7/EA95.htm">«Functional» 65- Formalizar convenios de pago de los distintos tipos.</a></td>
+					<td width="15%" class="TableRow" valign="top">Requirement</td>
+					<td width="15%" class="TableRow" valign="top">Realisation</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../../../../EA1/EA7/EA96.htm">«Functional» 66- Para los convenios formalizados, deberá poderse: reimprimir/reconfeccionar cuotas, emitir cuotas saldo,  realizar saldos por caducidad de convenios caducos y anular convenios totalmente impagos.</a></td>
+					<td width="15%" class="TableRow" valign="top">Requirement</td>
+					<td width="15%" class="TableRow" valign="top">Realisation</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="EA156.htm">Diagrama Gestión de Deuda / Convenios</a></td>
+					<td width="15%" class="TableRow" valign="top">UseCase</td>
+					<td width="15%" class="TableRow" valign="top">Extends</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../../EA2/EA7/EA339.htm">Declaración Jurada de Entradas Vendidas</a></td>
+					<td width="15%" class="TableRow" valign="top">UseCase</td>
+					<td width="15%" class="TableRow" valign="top">Includes</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+
+			</table>
+		</div>
+	</div>
+<div class="pageFooter"></div>
+ 
+</body>
+</html>

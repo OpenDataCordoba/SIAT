@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+ <!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 1.1//EN"
+       "http://jakarta.apache.org/struts/dtds/tiles-config_1_1.dtd">
+
+<tiles-definitions>
+
+	<!-- TipoObra -->
+    <definition name=".rec.cdm.view.tipoObraSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/rec/cdm/tipoObraSearchPage.jsp"/>
+    </definition>
+
+	<definition name=".rec.cdm.view.tipoObraViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/rec/cdm/tipoObraViewAdapter.jsp"/>
+    </definition>
+
+    <definition name=".rec.cdm.view.tipoObraEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/rec/cdm/tipoObraEditAdapter.jsp"/>
+    </definition>
+    <!-- fin TipoObra -->
+
+	<!-- FormaPago -->
+    <definition name=".rec.cdm.view.formaPagoSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/rec/cdm/formaPagoSearchPage.jsp"/>
+    </definition>
+
+	<definition name=".rec.cdm.view.formaPagoViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/rec/cdm/formaPagoViewAdapter.jsp"/>
+    </definition>
+
+    <definition name=".rec.cdm.view.formaPagoEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/rec/cdm/formaPagoEditAdapter.jsp"/>
+    </definition>
+    <!-- fin FormaPago -->
+    
+	<!-- Contrato -->
+    <definition name=".rec.cdm.view.contratoSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/rec/cdm/contratoSearchPage.jsp"/>
+    </definition>
+
+	<definition name=".rec.cdm.view.contratoViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/rec/cdm/contratoViewAdapter.jsp"/>
+    </definition>
+
+    <definition name=".rec.cdm.view.contratoEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/rec/cdm/contratoEditAdapter.jsp"/>
+    </definition>
+    <!-- fin Contrato -->
+    
+    <!-- PlanillaCuadra (Encabezado) -->
+	<definition name=".rec.cdm.view.planillaCuadraSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/rec/cdm/planillaCuadraSearchPage.jsp"/>
+    </definition>
+
+    <definition name=".rec.cdm.view.planillaCuadraEncEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/rec/cdm/planillaCuadraEncEditAdapter.jsp"/>
+    </definition>  	
+
+	<definition name=".rec.cdm.view.planillaCuadraViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/rec/cdm/planillaCuadraViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".rec.cdm.view.planillaCuadraAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/rec/cdm/planillaCuadraAdapter.jsp"/>
+    </definition>
+	<!-- Fin PlanillaCuadra -->
+    
+	<!-- PlaCuaDet (Detalle)-->
+	<definition name=".rec.cdm.view.plaCuaDetSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/rec/cdm/plaCuaDetSearchPage.jsp"/>
+    </definition>
+
+	<definition name=".rec.cdm.view.plaCuaDetViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/rec/cdm/plaCuaDetViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".rec.cdm.view.plaCuaDetEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/rec/cdm/plaCuaDetEditAdapter.jsp"/>
+    </definition>    
+	<!-- Fin PlaCuaDet -->
+	<!-- Fin PlanillaCuadra -->
+	
+	<!-- Obra (Encabezado) -->
+	<definition name=".rec.cdm.view.obraSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/rec/cdm/obraSearchPage.jsp"/>
+    </definition>
+
+    <definition name=".rec.cdm.view.obraEncEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/rec/cdm/obraEncEditAdapter.jsp"/>
+    </definition>  	
+
+	<definition name=".rec.cdm.view.obraViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/rec/cdm/obraViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".rec.cdm.view.obraAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/rec/cdm/obraAdapter.jsp"/>
+    </definition>
+	    
+	<!-- ObraFormaPago (Detalle) -->
+	<definition name=".rec.cdm.view.obraFormaPagoViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/rec/cdm/obraFormaPagoViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".rec.cdm.view.obraFormaPagoEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/rec/cdm/obraFormaPagoEditAdapter.jsp"/>
+    </definition>    
+	<!-- Fin ObraFormaPago -->
+	
+	<!-- Obra Planilla Cuadra (Detalle) -->	
+	<definition name=".rec.cdm.view.obraPlanillaCuadraViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/rec/cdm/obraPlanillaCuadraViewAdapter.jsp"/>
+    </definition>
+	<!-- Fin Planilla Cuadra -->
+	
+	<!-- Obra Rep. Ven. (Detalle) -->	
+	<definition name=".rec.cdm.view.obrRepVenEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/rec/cdm/obrRepVenEditAdapter.jsp"/>
+    </definition>
+	<!-- Fin Obra Rep. Ven. -->
+	
+	<!-- Asignar repartidor a planillas de la obra -->	
+	<definition name=".rec.cdm.view.planillaCuadraForAsignarRepatidor" extends=".siatStdLayout">
+	    <put name="body" value="/rec/cdm/planillaCuadraForAsignarRepatidor.jsp"/>
+    </definition>
+	<!-- Fin Asignar repartidor a planillas de la obra -->		
+
+	<!-- Fin Obra -->
+	
+	<!-- UsoCdM -->
+    <definition name=".rec.cdm.view.usoCdMSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/rec/cdm/usoCdMSearchPage.jsp"/>
+    </definition>
+
+	<definition name=".rec.cdm.view.usoCdMViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/rec/cdm/usoCdMViewAdapter.jsp"/>
+    </definition>
+
+    <definition name=".rec.cdm.view.usoCdMEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/rec/cdm/usoCdMEditAdapter.jsp"/>
+    </definition>
+    <!-- Fin UsoCdM -->	
+    
+	<!-- AnulacionObra -->
+    <definition name=".rec.cdm.view.anulacionObraSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/rec/cdm/anulacionObraSearchPage.jsp"/>
+    </definition>
+    
+	<definition name=".rec.cdm.view.anulacionObraViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/rec/cdm/anulacionObraViewAdapter.jsp"/>
+    </definition>
+    
+	<definition name=".rec.cdm.view.anulacionObraEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/rec/cdm/anulacionObraEditAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".rec.cdm.view.procesoAnulacionObraAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/rec/cdm/procesoAnulacionObraAdapter.jsp"/>
+    </definition>
+    <!-- Fin AnulacionObra -->
+
+    <!-- Novedades RS -->
+	<definition name=".rec.drei.view.novedadRSSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/rec/drei/novedadRSSearchPage.jsp"/>
+    </definition>    
+    <definition name=".rec.drei.view.novedadRSEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/rec/drei/novedadRSEditAdapter.jsp"/>
+    </definition>
+
+    <definition name=".rec.drei.view.novedadRSConfirmarAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/rec/drei/novedadRSConfirmarAdapter.jsp"/>
+    </definition>        
+          
+    <definition name=".rec.drei.view.actividadDreiEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/rec/drei/actividadDreiEditAdapter.jsp"/>
+    </definition>
+
+    <definition name=".rec.drei.view.novedadRSViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/rec/drei/novedadRSViewAdapter.jsp"/>
+    </definition>
+    <!-- Fin Novedades RS -->
+    
+    <!-- Categorias RS -->
+    <definition name=".rec.drei.view.catRSDreiSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/rec/drei/catRSDreiSearchPage.jsp"/>
+    </definition>
+        
+     <definition name=".rec.drei.view.catRSDreiAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/rec/drei/catRSDreiAdapter.jsp"/>
+    </definition>    
+    
+    <definition name=".rec.drei.view.catRSDreiEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/rec/drei/catRSDreiEditAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".rec.drei.view.catRSDreiViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/rec/drei/catRSDreiViewAdapter.jsp"/>
+    </definition>
+   <!-- Fin Categorias RS -->
+</tiles-definitions>

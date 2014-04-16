@@ -1,0 +1,16 @@
+tocTab[tocTab.length] = new Array("2.1.1.6:1", "", "Diagrama Reportes Operativos", "EARoot/EA2/EA1/EA1/EA6/EA241.htm", "180.png", "414", "0", "", "Use Case diagram");
+tocTab[tocTab.length] = new Array("2.1.1.6:2", "", "Reporte Convenios formalizados por área", "EARoot/EA2/EA1/EA1/EA6/EA243.htm", "7.png", "4103", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.1.6:3", "", "Reporte de Anulación", "EARoot/EA2/EA1/EA1/EA6/EA244.htm", "7.png", "4542", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.1.6:4", "", "Reporte de Convenios a Caducar", "EARoot/EA2/EA1/EA1/EA6/EA245.htm", "7.png", "5076", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.1.6:5", "", "Reporte de detalle Recaudación CER", "EARoot/EA2/EA1/EA1/EA6/EA246.htm", "7.png", "4851", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.1.6:6", "", "Reporte de deuda por procurador", "EARoot/EA2/EA1/EA1/EA6/EA247.htm", "7.png", "4208", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.1.6:7", "", "Reporte de Distribución de Totales Emitidos", "EARoot/EA2/EA1/EA1/EA6/EA248.htm", "7.png", "5075", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.1.6:8", "", "Reporte de Recaudación por Recurso", "EARoot/EA2/EA1/EA1/EA6/EA249.htm", "7.png", "4080", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.1.6:9", "", "Reporte de Respuesta a Operativos", "EARoot/EA2/EA1/EA1/EA6/EA250.htm", "7.png", "4176", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.1.6:10", "", "Reporte de Total de Recaudación CER", "EARoot/EA2/EA1/EA1/EA6/EA251.htm", "7.png", "4848", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.1.6:11", "", "Reporte de Totales de Emisión", "EARoot/EA2/EA1/EA1/EA6/EA252.htm", "7.png", "4535", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.1.6:12", "", "Reporte de Totales por Recurso de Contribuyentes CER", "EARoot/EA2/EA1/EA1/EA6/EA253.htm", "7.png", "4852", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.1.6:13", "", "Reporte por Contribuyentes CER", "EARoot/EA2/EA1/EA1/EA6/EA254.htm", "7.png", "4854", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.1.6:14", "", "Reporte de Convenios", "EARoot/EA2/EA1/EA1/EA6/EA255.htm", "7.png", "3466", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.1.6:15", "", "Reporte Importes recaudados por planes", "EARoot/EA2/EA1/EA1/EA6/EA256.htm", "7.png", "3469", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.1.6:16", "", "Reporte Importes a recaudar por planes", "EARoot/EA2/EA1/EA1/EA6/EA257.htm", "7.png", "3470", "0", "", "UseCase");

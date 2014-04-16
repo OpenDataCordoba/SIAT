@@ -1,0 +1,4 @@
+tocTab[tocTab.length] = new Array("2.1.5.7:1", "", "Compensaciones", "EARoot/EA2/EA1/EA5/EA7/EA432.htm", "180.png", "523", "0", "", "Use Case diagram");
+tocTab[tocTab.length] = new Array("2.1.5.7:2", "", "Administrar Compensaciones", "EARoot/EA2/EA1/EA5/EA7/EA434.htm", "7.png", "4545", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.5.7:3", "", "Administrar Dúplices", "EARoot/EA2/EA1/EA5/EA7/EA435.htm", "7.png", "4861", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.5.7:4", "", "Administrar Saldos a Favor", "EARoot/EA2/EA1/EA5/EA7/EA436.htm", "7.png", "4860", "0", "", "UseCase");

@@ -1,0 +1,199 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Administrar Obras a Emitir - CdM</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="pageHeader"></div>
+<div class="PageBody">
+	<span class="ObjectTitle">Administrar Obras a Emitir - CdM  : public   usecase</span>
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">07/08/2007 10:12:56</td>
+		</tr>
+		<tr>
+			<td class="ObjectDetailsTopic">Modified:</td>
+			<td class="ObjectDetailsValue">23/09/2008 17:29:27</td>
+		</tr>
+		<tr style="height: 10px"><td colspan="2"></td></tr>
+		<tr>
+			<td class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td class="ObjectDetailsValue">1.0</td>
+		</tr>
+		<tr id="proj02" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Phase:</td>
+			<td class="ObjectDetailsValue">1.0</td>
+		</tr>
+		<tr id="proj03" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Status:</td>
+			<td class="ObjectDetailsValue">R2</td>
+		</tr>
+		<tr id="proj04" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Complexity:</td>
+			<td class="ObjectDetailsValue">Medium</td>
+		</tr>
+		<tr>
+			<td class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">UUID:</td>
+			<td class="ObjectDetailsValue">{2E906F41-7533-48e9-BCD2-ABF135B2E295}</td>
+		</tr>
+		<tr id="adv01" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
+			<td class="ObjectDetailsValue"><a href="EA314.htm">Diagrama de estados: Recurso CdM</a></td>
+		</tr>
+	</table>
+	<div class="ObjectDetailsNotes">La administración de Obras a Emitir, implica la conformación de una obra que agrupará a varias planillas previamente cargadas y disponibilizadas a Emisión.<br /><br />Una Obra a emitir incluye distintas planillas. El criterio por medio del cual se seleccionan dependerá de cada caso particular. Por ejemplo, puede ocurrir que se decida generar una única Obra de Emisión donde participen todas las planillas disponibilizadas a Emisión (independientemente de la zona de la ciudad y del tipo de obra realizada). También podría ocurrir que se decida emitir una obra por barrio, con lo cual se deberá seleccionar de las planillas desponibilizadas, solo aquellas que pertenezcan al barrio en cuestión. También podría ocurrir que se decida discriminar por tipo de obra. <br /><br />En cualquiera de los casos, se conformará una Obra en la que se incluirán planillas previamente disponibilizadas por Catastro. Adicionalmente, una Obra deberá indicar las formas de pagos que se obtendrán del maestro de formas de pago pero con el agregado del valor mínimo de la cuota y el interés específico para la Obra. <br /><br />También se deberán indicar los repartidores específicos para tramos de cuadras. </div>
+
+	<div class="TableGroup" id="TableGroup">
+		<ul class="ItemTitle">
+			<li onClick="parent.toggleItem('AssociationsFrom');" id="AssociationsFromTitle">Associations From</li>
+			<li onClick="parent.toggleItem('Scenario');" id="ScenarioTitle">Scenarios</li>
+			<li onClick="parent.toggleItem('Files');" id="FilesTitle">Files</li>
+			<li onClick="parent.toggleItem('Links');" id="LinksTitle">Other Links</li>
+		</ul>
+		<div class="ItemBody" id="AssociationsFromTable">
+			<table border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="20%" class="TableHeading">Element</td>
+					<td width="25%" class="TableHeading">Source Role</td>
+					<td width="25%" class="TableHeading">Target Role</td>
+					<td width="30%" class="TableHeading">Details</td>
+				</tr>
+				<tr>
+					<td width="20%" class="TableRow" valign="top">
+						<a href="../../../EA3/EA646.htm">Mantenimiento Padrón y Emisión</a><br />
+						Actor &nbsp;
+					</td>
+					<td width="20%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;
+					</td>
+					<td width="20%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;	
+					</td>
+					<td width="30%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+
+			</table>
+		</div>
+		<div class="ItemBody" id="ScenarioTable">
+			<table align="center" border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="24%" class="TableHeading">Scenario</td>
+					<td width="8%" class="TableHeading">Type</td>
+					<td width="68%" class="TableHeading">Detail</td>
+				</tr>
+				<tr>
+					<td width="24%" class="TableRow">Buscar Obras</td>
+					<td width="8%" class="TableRow">Alternate</td>
+					<td width="68%" class="TableRow"><div class="ObjectDetailsNotes">Permite buscar las obras que se encuentren en SIAT mediante diferentes criterios de búsqueda. Permite buscar por: número, descripción, tipo de obra y estado.<br />Si se encuentran registros que cumplan con el criterio seleccionado, se mostrará por cada uno: Número, Descripción, Tipo de Obra y Estado, junto con las opciones de &quot;Ver Obra&quot;, &quot;Modificar Obra&quot;, &quot;Eliminar Obra&quot;, &quot;Activar/Desactivar Obra&quot; y &quot;Cargar Planillas&quot;.  Para crear una nueva obra existe la opción &quot;Alta de Obra&quot;.</div>
+</td>
+				</tr>
+				<tr>
+					<td width="24%" class="TableRow">Ver Obra</td>
+					<td width="8%" class="TableRow">Alternate</td>
+					<td width="68%" class="TableRow"><div class="ObjectDetailsNotes">Permite visualizar información de la obra seleccionada y las formas de pago asociadas a la misma.</div>
+</td>
+				</tr>
+				<tr>
+					<td width="24%" class="TableRow">Alta de Obra</td>
+					<td width="8%" class="TableRow">Alternate</td>
+					<td width="68%" class="TableRow"><div class="ObjectDetailsNotes">Para crear una nueva obra, deben indicarse los siguientes datos: Número de Obra, Descripción, Tipo de Obra, si emite contado, si emite plan corto, si emite plan largo, la fecha de inicio de cobro, el expediente asociado (invocando el CU Administrar Casos), la fecha desde y la fecha hasta. <br /><br />Cuando se crea la Obra se le asigna el estado &quot;Creada&quot;.</div>
+</td>
+				</tr>
+				<tr>
+					<td width="24%" class="TableRow">Modificar Obra</td>
+					<td width="8%" class="TableRow">Alternate</td>
+					<td width="68%" class="TableRow"><div class="ObjectDetailsNotes">Permite actualizar la información de la obra cargada en el alta de la obra y definir las formas de pago que poseerá esta obra. Para definir una forma de pago se deberá ingresar:<br />- cantidad de cuotas<br />- monto mínimo de la cuota<br />- descuento<br />- interés financiero<br />- indicar si es especial o no<br />- vigencia</div>
+</td>
+				</tr>
+				<tr>
+					<td width="24%" class="TableRow">Eliminar Obra</td>
+					<td width="8%" class="TableRow">Alternate</td>
+					<td width="68%" class="TableRow"><div class="ObjectDetailsNotes">Eliminará en forma física la obra en caso que no existan registros relacionados.</div>
+</td>
+				</tr>
+				<tr>
+					<td width="24%" class="TableRow">Activar/Desactivar Obra</td>
+					<td width="8%" class="TableRow">Alternate</td>
+					<td width="68%" class="TableRow"><div class="ObjectDetailsNotes">Dependiendo del estado de la Obra, se habilitará una de las dos opciones.<br />	Si está en estado &quot;Activo&quot;, se procederá a la desactivación de la Obra, pasando a estado &quot;Inactivo&quot; y no pudiendo ser referenciada nuevamente.<br />	Si está en estado &quot;Inactivo&quot;, se procederá a la activación de la Obra, pasando a estado &quot;Activo&quot;, pudiendo ser referenciada nuevamente.</div>
+</td>
+				</tr>
+
+			</table>
+		</div>
+		<div class="ItemBody" id="FilesTable">
+			<table border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="50%" class="TableHeading">File</td>
+					<td width="10%" class="TableHeading">Type</td>
+					<td width="40%" class="TableHeading">Details</td>
+				</tr>
+			<tr>
+				<td width="50%" class="TableRow"><a href="c:\siatdoc\docGenerada\analisisDisenio\especificacion\CDM - Administracion de Obras.doc">c:\siatdoc\docGenerada\analisisDisenio\especificacion\CDM - Administracion de Obras.doc</a></td>
+				<td width="10%" class="TableRow">Local File</td>
+				<td width="40%" class="TableRow">
+					<div class="ObjectDetailsNotes">Especificación</div>
+<br />
+					<span class="NoteHeading">File Size:</span> 567 k<br />
+					<span class="NoteHeading">Time Stamp:</span> 10/04/2008 03:56:06 p.m.<br />
+				</td>
+			</tr>
+			<tr>
+				<td width="50%" class="TableRow"><a href="c:\siatdoc\docGenerada\capacitacion\padron\Recurso CdM\MDU - Administrar Obra.doc">c:\siatdoc\docGenerada\capacitacion\padron\Recurso CdM\MDU - Administrar Obra.doc</a></td>
+				<td width="10%" class="TableRow">Local File</td>
+				<td width="40%" class="TableRow">
+					<div class="ObjectDetailsNotes">Manual de usuario</div>
+<br />
+					<span class="NoteHeading">File Size:</span> 834 k<br />
+					<span class="NoteHeading">Time Stamp:</span> 08/09/2008 07:36:20 a.m.<br />
+				</td>
+			</tr>
+
+			</table>
+		</div>
+		<div class="ItemBody" id="LinksTable">
+			<table align="center" border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="30%" class="TableHeading">Object</td>
+					<td width="15%" class="TableHeading">Type</td>
+					<td width="15%" class="TableHeading">Connection</td>
+					<td width="40%" class="TableHeading">Notes</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../../../../EA1/EA5/EA63.htm">«Functional» 1- El sistema deberá dar soporte a todos los procesos de la Administración Tributaria.</a></td>
+					<td width="15%" class="TableRow" valign="top">Requirement</td>
+					<td width="15%" class="TableRow" valign="top">Realisation</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+
+			</table>
+		</div>
+	</div>
+<div class="pageFooter"></div>
+ 
+</body>
+</html>

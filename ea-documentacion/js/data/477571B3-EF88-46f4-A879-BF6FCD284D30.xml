@@ -1,0 +1,8 @@
+tocTab[tocTab.length] = new Array("2.1.9.1", "1", "Habilitación", "EARoot/EA2/EA1/EA9/EA506.htm", "4.png", "", "", "{6C131BB9-6367-4ddd-A343-7B29B7CE854F}", "Package");
+tocTab[tocTab.length] = new Array("2.1.9.2", "1", "Gestión de Deuda / Convenio", "EARoot/EA2/EA1/EA9/EA507.htm", "4.png", "", "", "{821C26B6-A836-4b2f-AD35-E4DF352FEA06}", "Package");
+tocTab[tocTab.length] = new Array("2.1.9.3", "1", "Balance", "EARoot/EA2/EA1/EA9/EA508.htm", "4.png", "", "", "{2D1773BF-090B-4157-AA21-EE6C7524E592}", "Package");
+tocTab[tocTab.length] = new Array("2.1.9.4", "1", "Exenciones", "EARoot/EA2/EA1/EA9/EA509.htm", "4.png", "", "", "{12592452-4223-4e0d-AAAD-49CAE29A1624}", "Package");
+tocTab[tocTab.length] = new Array("2.1.9.5", "1", "Estrategia Fiscal", "EARoot/EA2/EA1/EA9/EA510.htm", "4.png", "", "", "{6138161D-DF43-4e0a-BBF6-5629D67B119B}", "Package");
+tocTab[tocTab.length] = new Array("2.1.9.6", "1", "Calendario", "EARoot/EA2/EA1/EA9/EA511.htm", "4.png", "", "", "{21AA24F2-8F13-4c8a-971D-857DE0CFE3BD}", "Package");
+tocTab[tocTab.length] = new Array("2.1.9.7", "1", "Usuario SIAT", "EARoot/EA2/EA1/EA9/EA512.htm", "4.png", "", "", "{71001477-B908-4bd2-B93D-82B85305F633}", "Package");
+tocTab[tocTab.length] = new Array("2.1.9.8", "1", "Emision", "EARoot/EA2/EA1/EA9/EA513.htm", "4.png", "", "", "{E25999E9-6D3F-4856-B25C-59798F62D6E7}", "Package");

@@ -1,0 +1,202 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Administrar Constancias de Deuda</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="pageHeader"></div>
+<div class="PageBody">
+	<span class="ObjectTitle">Administrar Constancias de Deuda  : public   usecase</span>
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">14/03/2008 16:28:04</td>
+		</tr>
+		<tr>
+			<td class="ObjectDetailsTopic">Modified:</td>
+			<td class="ObjectDetailsValue">21/04/2008 11:01:40</td>
+		</tr>
+		<tr style="height: 10px"><td colspan="2"></td></tr>
+		<tr>
+			<td class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td class="ObjectDetailsValue">tecso</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td class="ObjectDetailsValue">1.0</td>
+		</tr>
+		<tr id="proj02" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Phase:</td>
+			<td class="ObjectDetailsValue">1.0</td>
+		</tr>
+		<tr id="proj03" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Status:</td>
+			<td class="ObjectDetailsValue">R2</td>
+		</tr>
+		<tr id="proj04" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Complexity:</td>
+			<td class="ObjectDetailsValue">Medium</td>
+		</tr>
+		<tr>
+			<td class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">UUID:</td>
+			<td class="ObjectDetailsValue">{AF67E1A0-E8B0-448f-BD43-1D6FF8D83EC6}</td>
+		</tr>
+		<tr id="adv01" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
+			<td class="ObjectDetailsValue"><a href="EA209.htm">Diagrama Administración Proc. Judicial</a></td>
+		</tr>
+	</table>
+	<div class="ObjectDetailsNotes">Este CU tiene como objetivo la administración de las constancias de deuda de procuradores.<br />Permite consultar, modificar (titulares, observación, etc.) y generar nuevas constancias de deuda incorporando deuda en vía judicial asignada al procurador en cuestión y que no haya sido incluída en otra constancia. <br /><br />Con la implementación de SIAT, la deuda que actualmente se encuentra en vía judicial, será migrada sin ser incorporada a ninguna constancia. Para estos casos, será posible generar constancias. </div>
+
+	<div class="TableGroup" id="TableGroup">
+		<ul class="ItemTitle">
+			<li onClick="parent.toggleItem('Scenario');" id="ScenarioTitle">Scenarios</li>
+			<li onClick="parent.toggleItem('Files');" id="FilesTitle">Files</li>
+			<li onClick="parent.toggleItem('Links');" id="LinksTitle">Other Links</li>
+		</ul>
+		<div class="ItemBody" id="ScenarioTable">
+			<table align="center" border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="24%" class="TableHeading">Scenario</td>
+					<td width="8%" class="TableHeading">Type</td>
+					<td width="68%" class="TableHeading">Detail</td>
+				</tr>
+				<tr>
+					<td width="24%" class="TableRow">Buscar Constancias de Deuda</td>
+					<td width="8%" class="TableRow">Alternate</td>
+					<td width="68%" class="TableRow"><div class="ObjectDetailsNotes">Permite realizar la búsqueda de Constancias de Deuda por Procurador, Recurso, Número Planilla, Año Planilla, Número de Constancia, Año de Constancia, Estado de Constancia, Cuenta y rango de Fechas de Envío a Judicial. <br />En el caso que el usuario sea un Procurador, sólo podrá visualizar las Constancias asignadas a él y en caso contrario deberá elegir uno o todos los procuradores.<br />Por cada Constancia de Deuda encontrada se muestra información asociada y las siguientes opciones: &quot;Ver Constancia de Deuda&quot;, &quot;Modificar Constancia de Deuda&quot;, &quot;Habilitar Constancia de Deuda&quot; e &quot;Imprimir Constancia de Deuda&quot;.<br /><br />Además se muestra la opción &quot;Agregar Constancia de Deuda&quot; para generar una nueva Constancia a la cual se incluirán deudas en vía judicial que no pertenezcan a otra Constancia.<br /><br />Una Constancia podrá ser habilitada (opción &quot;Habilitar Constancia de Deuda&quot;) cuando tenga estado &quot;Creada&quot;.<br />Una Constancia podrá ser impresa si tiene estado distinto a &quot;Creada&quot;, es decir, fue previamente activada.<br />Una Constancia podrá ser modificada si tiene estado distinto a &quot;Anulada&quot; o &quot;Cancelada&quot;.<br /></div>
+</td>
+				</tr>
+				<tr>
+					<td width="24%" class="TableRow">Agregar Constancia de Deuda</td>
+					<td width="8%" class="TableRow">Alternate</td>
+					<td width="68%" class="TableRow"><div class="ObjectDetailsNotes">Permite generar una nueva Constancia de Deuda, para lo cual deberán ingresarse los siguientes datos:<br /><br />+ Recurso (muestra todos los recursos que permiten el envío de deuda a judicial)<br />+ Procurador (muestra todos los Procuradores definidos para el Recurso seleccionado).<br />+ Cuenta (permite ir al buscador de cuentas)<br />+ Observaciones (dato no requerido)<br /><br />Durante el alta se insertarán en la Constancia los titulares de la Cuenta ingresada.<br />La nueva Constancia generada se registrará con estado &quot;Creada&quot; y se guarda en el histórico de estados de la Constancia dicho cambio.</div>
+</td>
+				</tr>
+				<tr>
+					<td width="24%" class="TableRow">Habilitar Constancia de Deuda</td>
+					<td width="8%" class="TableRow">Alternate</td>
+					<td width="68%" class="TableRow"><div class="ObjectDetailsNotes">Permite habilitar una Constancia de Deuda con estado &quot;Creada&quot; con el objetivo de que pueda comenzar a utilizarse.<br />Al momento de habilitarse la Constancia se incluye el CU &quot;Habilitar Planillas de Envio y Constancias de Deuda&quot;.</div>
+</td>
+				</tr>
+				<tr>
+					<td width="24%" class="TableRow">Imprimir Constancia de Deuda</td>
+					<td width="8%" class="TableRow">Alternate</td>
+					<td width="68%" class="TableRow"><div class="ObjectDetailsNotes">Permite la impresión de una Constancia de Deuda y su Detalle, mostrando toda la información almacenadada en la BD, sin filtrar ningún registro.<br /><br />La Constancia permanece con el mismo estado previo a la impresión.</div>
+</td>
+				</tr>
+				<tr>
+					<td width="24%" class="TableRow">Modificar Constancia de Deuda</td>
+					<td width="8%" class="TableRow">Alternate</td>
+					<td width="68%" class="TableRow"><div class="ObjectDetailsNotes">Permite actualizar la observación de la Constancia de Deuda y el domicilio de envío asociada a la misma. Luego de la actualización, se valida si el estado de la Constancia es &quot;Creada&quot; luego permanece con dicho estado y si es distinto, la Constancia pasa al estado &quot;Modificada&quot; y se guarda en el histórico de estados de la Constancia dicho cambio.<br /><br />Además se permite agregar o eliminar Titulares de una Constancia, implicando un cambio de estado de la Constancia a &quot;Modificada&quot;<br />si su estado anterior es distinto a &quot;Creada&quot;, de lo contrario permanecerá en estado Creada.<br /><br />Solamente podrán agregarse o eliminarse Deudas de una Constancia si el estado de la misma es &quot;Creada&quot;, es decir que una vez habilitada la misma  (estado “Habilitada”) no podrá modificarse el quantum manualmente.<br /><br />Cualquier cambio de estado implica que se  guarde un registro en el histórico de estados de dicha Constancia.<br /><br />Al momento de dar de alta un nuevo Titular, se deberá realizar la búsqueda de Personas y seleccionar la deseada. Notar que un titular no requiere ser contribuyente.<br />Para realizar la inclusión de una deuda a una Constancia, se debe validar que se encuentre en vía judicial y no este  incluída en ningún Detalle de Constancia con estado &quot;Activo&quot;. Por cada deuda incluída en una Constancia se creará un registro en el detalle de la misma con estado &quot;Inactivo&quot;. <br />En caso de eliminarse una deuda de una Constancia, se quita del detalle de la misma.</div>
+</td>
+				</tr>
+				<tr>
+					<td width="24%" class="TableRow">Recomponer Constancia de Deuda</td>
+					<td width="8%" class="TableRow">Alternate</td>
+					<td width="68%" class="TableRow"><div class="ObjectDetailsNotes">Permite la reimpresión de una Constancia de Deuda, reflejando los datos actuales de la misma. Dicha impresión servirá como comprobante y requerirá de la firma de la persona responsable.<br />Solamente se muestran los registros de deuda de la Constancia con estado &quot;Activos&quot;.<br /><br />Al momento de realizar la impresión el estado de la Constancia de Deuda pasa de &quot;Modificada&quot; a &quot;Recompuesta&quot;  y se guarda en el histórico de estados de la Constancia dicho cambio.</div>
+</td>
+				</tr>
+				<tr>
+					<td width="24%" class="TableRow">Ver Constancia de Deuda</td>
+					<td width="8%" class="TableRow">Alternate</td>
+					<td width="68%" class="TableRow"><div class="ObjectDetailsNotes">Permite visualizar datos de la Constancia de Deuda y la lista de Titulares y Deudas incluidas en la misma.</div>
+</td>
+				</tr>
+
+			</table>
+		</div>
+		<div class="ItemBody" id="FilesTable">
+			<table border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="50%" class="TableHeading">File</td>
+					<td width="10%" class="TableHeading">Type</td>
+					<td width="40%" class="TableHeading">Details</td>
+				</tr>
+			<tr>
+				<td width="50%" class="TableRow"><a href="c:\siatdoc\docGenerada\capacitacion\gdeuda\Administrar Proc. Judicial\MDU - Administrar Constancia de Deuda.doc">c:\siatdoc\docGenerada\capacitacion\gdeuda\Administrar Proc. Judicial\MDU - Administrar Constancia de Deuda.doc</a></td>
+				<td width="10%" class="TableRow">Local File</td>
+				<td width="40%" class="TableRow">
+					<div class="ObjectDetailsNotes">Manual de usuario</div>
+<br />
+					<span class="NoteHeading">File Size:</span> 549 k<br />
+					<span class="NoteHeading">Time Stamp:</span> 20/08/2008 02:29:12 p.m.<br />
+				</td>
+			</tr>
+			<tr>
+				<td width="50%" class="TableRow"><a href="c:\siatdoc\docGenerada\analisisDisenio\especificacion\GDEUDA - Administrar Constancia de Deuda.doc">c:\siatdoc\docGenerada\analisisDisenio\especificacion\GDEUDA - Administrar Constancia de Deuda.doc</a></td>
+				<td width="10%" class="TableRow">Local File</td>
+				<td width="40%" class="TableRow">
+					<div class="ObjectDetailsNotes">Especificación</div>
+<br />
+					<span class="NoteHeading">File Size:</span> 788 k<br />
+					<span class="NoteHeading">Time Stamp:</span> 11/06/2008 02:10:17 p.m.<br />
+				</td>
+			</tr>
+
+			</table>
+		</div>
+		<div class="ItemBody" id="LinksTable">
+			<table align="center" border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="30%" class="TableHeading">Object</td>
+					<td width="15%" class="TableHeading">Type</td>
+					<td width="15%" class="TableHeading">Connection</td>
+					<td width="40%" class="TableHeading">Notes</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../../../EA3/EA638.htm">Cobranza Judicial</a></td>
+					<td width="15%" class="TableRow" valign="top">Actor</td>
+					<td width="15%" class="TableRow" valign="top">UseCase</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../../../EA3/EA648.htm">Procurador</a></td>
+					<td width="15%" class="TableRow" valign="top">Actor</td>
+					<td width="15%" class="TableRow" valign="top">UseCase</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="./EA1/EA227.htm">Habilitar Planillas de Envio y Constancias de Deuda</a></td>
+					<td width="15%" class="TableRow" valign="top">UseCase</td>
+					<td width="15%" class="TableRow" valign="top">Includes</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../../../../EA1/EA4/EA54.htm">«Functional» 56- Emitir constancias de deuda.</a></td>
+					<td width="15%" class="TableRow" valign="top">Requirement</td>
+					<td width="15%" class="TableRow" valign="top">Realisation</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../../../../EA1/EA4/EA54.htm">«Functional» 56- Emitir constancias de deuda.</a></td>
+					<td width="15%" class="TableRow" valign="top">Requirement</td>
+					<td width="15%" class="TableRow" valign="top">Realisation</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+
+			</table>
+		</div>
+	</div>
+<div class="pageFooter"></div>
+ 
+</body>
+</html>

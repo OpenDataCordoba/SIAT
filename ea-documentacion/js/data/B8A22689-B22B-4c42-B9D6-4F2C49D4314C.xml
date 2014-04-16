@@ -1,0 +1,4 @@
+tocTab[tocTab.length] = new Array("2.1.10.8:1", "", "Procesos", "EARoot/EA2/EA1/EA10/EA8/EA612.htm", "180.png", "618", "0", "", "Use Case diagram");
+tocTab[tocTab.length] = new Array("2.1.10.8:2", "", "Consulta de Procesos ADP", "EARoot/EA2/EA1/EA10/EA8/EA614.htm", "7.png", "4137", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.10.8:3", "", "Mantenedor de Procesos", "EARoot/EA2/EA1/EA10/EA8/EA615.htm", "7.png", "4172", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.10.8:4", "", "Procesar Acción Masiva Sobre Convenio", "EARoot/EA2/EA1/EA10/EA8/EA616.htm", "7.png", "5068", "0", "", "UseCase");

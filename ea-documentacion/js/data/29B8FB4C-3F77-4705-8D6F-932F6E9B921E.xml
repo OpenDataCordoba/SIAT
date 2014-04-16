@@ -1,0 +1,15 @@
+tocTab[tocTab.length] = new Array("3.4:1", "", "cyq", "EARoot/EA3/EA4/EA1075.htm", "175.png", "516", "0", "", "Logical diagram");
+tocTab[tocTab.length] = new Array("3.4:2", "", "«table» cyq_abogado", "EARoot/EA3/EA4/EA1077.htm", "28.png", "4293", "0", "", "Class");
+tocTab[tocTab.length] = new Array("3.4:3", "", "«table» cyq_deudaPrivilegio", "EARoot/EA3/EA4/EA1078.htm", "28.png", "4935", "0", "", "Class");
+tocTab[tocTab.length] = new Array("3.4:4", "", "«table» cyq_estadoproced", "EARoot/EA3/EA4/EA1079.htm", "28.png", "4495", "0", "", "Class");
+tocTab[tocTab.length] = new Array("3.4:5", "", "«table» cyq_hisestproced", "EARoot/EA3/EA4/EA1080.htm", "28.png", "4496", "0", "", "Class");
+tocTab[tocTab.length] = new Array("3.4:6", "", "«table» cyq_juzgado", "EARoot/EA3/EA4/EA1081.htm", "28.png", "4295", "0", "", "Class");
+tocTab[tocTab.length] = new Array("3.4:7", "", "«table» cyq_motivobaja", "EARoot/EA3/EA4/EA1082.htm", "28.png", "4584", "0", "", "Class");
+tocTab[tocTab.length] = new Array("3.4:8", "", "«table» cyq_motivoresinf", "EARoot/EA3/EA4/EA1083.htm", "28.png", "4585", "0", "", "Class");
+tocTab[tocTab.length] = new Array("3.4:9", "", "«table» cyq_pagoPriv", "EARoot/EA3/EA4/EA1084.htm", "28.png", "4940", "0", "", "Class");
+tocTab[tocTab.length] = new Array("3.4:10", "", "«table» cyq_pagoPrivDeu", "EARoot/EA3/EA4/EA1085.htm", "28.png", "4941", "0", "", "Class");
+tocTab[tocTab.length] = new Array("3.4:11", "", "«table» cyq_procedimiento", "EARoot/EA3/EA4/EA1086.htm", "28.png", "4367", "0", "", "Class");
+tocTab[tocTab.length] = new Array("3.4:12", "", "«table» cyq_proCueNoDeu", "EARoot/EA3/EA4/EA1087.htm", "28.png", "4600", "0", "", "Class");
+tocTab[tocTab.length] = new Array("3.4:13", "", "«table» cyq_prodet", "EARoot/EA3/EA4/EA1088.htm", "28.png", "4296", "0", "", "Class");
+tocTab[tocTab.length] = new Array("3.4:14", "", "«table» cyq_tipoPrivilegio", "EARoot/EA3/EA4/EA1089.htm", "28.png", "4934", "0", "", "Class");
+tocTab[tocTab.length] = new Array("3.4:15", "", "«table» cyq_tipoproceso", "EARoot/EA3/EA4/EA1090.htm", "28.png", "4297", "0", "", "Class");

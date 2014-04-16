@@ -1,0 +1,138 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Administrar Habilitación de Espectáculos Públicos</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="pageHeader"></div>
+<div class="PageBody">
+	<span class="ObjectTitle">Administrar Habilitación de Espectáculos Públicos  : public   usecase</span>
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">28/08/2007 14:17:54</td>
+		</tr>
+		<tr>
+			<td class="ObjectDetailsTopic">Modified:</td>
+			<td class="ObjectDetailsValue">27/02/2009 16:27:51</td>
+		</tr>
+		<tr style="height: 10px"><td colspan="2"></td></tr>
+		<tr>
+			<td class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td class="ObjectDetailsValue">1.0</td>
+		</tr>
+		<tr id="proj02" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Phase:</td>
+			<td class="ObjectDetailsValue">1.0</td>
+		</tr>
+		<tr id="proj03" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Status:</td>
+			<td class="ObjectDetailsValue">R42</td>
+		</tr>
+		<tr id="proj04" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Complexity:</td>
+			<td class="ObjectDetailsValue">Medium</td>
+		</tr>
+		<tr>
+			<td class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">UUID:</td>
+			<td class="ObjectDetailsValue">{8479BE18-BA5C-4a81-9B11-EA4789134D42}</td>
+		</tr>
+		<tr id="adv01" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
+			<td class="ObjectDetailsValue"><a href="EA336.htm">Recurso: Esp.Pub.</a></td>
+		</tr>
+	</table>
+	<div class="ObjectDetailsNotes">Este CU permite la administración de habilitaciones de las entradas de los distintos espectáculos públicos que se realizan en Rosario, incluyendo eventos de la MR y eventos externos a la MR. Por cada Habilitación, se deberá indicar: Tipo, Fecha, Fecha Evento, Descripción, Lugar, Observaciones, Precios por tipo de entrada y talonarios.<br /><br />Existen dos Tipos de Habilitaciones: Tipos interna: responderá a la habilitación de eventos organizados por la MR. Este tipo de eventos no producen la emisión de la tasa de derecho de acceso. Deberá seleccionarse un Rubro de Balance ejemplo 3902 Monumento a la Bandera. Tipo Externa: responderá a la habilitación de eventos no pertenecientes a la MR, los cuales generan deuda. Para la habilitación del espectáculo deberá indicarse una Cuenta.<br />Para este Tipo de Habilitación, puede darse el caso de que el espectáculo esté exento de algún concepto de emisión y debe indicarse la Exención.</div>
+
+	<div class="TableGroup" id="TableGroup">
+		<ul class="ItemTitle">
+			<li onClick="parent.toggleItem('AssociationsFrom');" id="AssociationsFromTitle">Associations From</li>
+			<li onClick="parent.toggleItem('Scenario');" id="ScenarioTitle">Scenarios</li>
+			<li onClick="parent.toggleItem('Links');" id="LinksTitle">Other Links</li>
+		</ul>
+		<div class="ItemBody" id="AssociationsFromTable">
+			<table border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="20%" class="TableHeading">Element</td>
+					<td width="25%" class="TableHeading">Source Role</td>
+					<td width="25%" class="TableHeading">Target Role</td>
+					<td width="30%" class="TableHeading">Details</td>
+				</tr>
+				<tr>
+					<td width="20%" class="TableRow" valign="top">
+						<a href="../../../EA3/EA655.htm">Usuario de Dirección de Acceso a Espectáculos Públicos</a><br />
+						Actor &nbsp;
+					</td>
+					<td width="20%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;
+					</td>
+					<td width="20%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;	
+					</td>
+					<td width="30%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+
+			</table>
+		</div>
+		<div class="ItemBody" id="ScenarioTable">
+			<table align="center" border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="24%" class="TableHeading">Scenario</td>
+					<td width="8%" class="TableHeading">Type</td>
+					<td width="68%" class="TableHeading">Detail</td>
+				</tr>
+				<tr>
+					<td width="24%" class="TableRow">Declarar entradas vendidas</td>
+					<td width="8%" class="TableRow">Alternate</td>
+					<td width="68%" class="TableRow"><div class="ObjectDetailsNotes">Este CU permite la administración de habilitaciones de las entradas de los distintos espectáculos públicos que se realizan en Rosario, incluyendo eventos de la MR y eventos externos a la MR. Por cada Habilitación, se deberá indicar: Tipo, Fecha, Fecha Evento, Descripción, Lugar, Observaciones, Precios por tipo de entrada y talonarios.<br /><br />Existen dos Tipos de Habilitaciones: Tipos interna: responderá a la habilitación de eventos organizados por la MR. Este tipo de eventos no producen la emisión de la tasa de derecho de acceso. Deberá seleccionarse un Rubro de Balance ejemplo 3902 Monumento a la Bandera. Tipo Externa: responderá a la habilitación de eventos no pertenecientes a la MR, los cuales generan deuda. Para la habilitación del espectáculo deberá indicarse una Cuenta.<br />Para este Tipo de Habilitación, puede darse el caso de que el espectáculo esté exento de algún concepto de emisión y debe indicarse la Exención.<br /><br />Cuando se crea la habilitación, el estado de  la misma es INGRESADA. Este estado indica que aún no se le han asociado tipos de entrada ni talonarios, no permitiendo la registración de entradas vendidas.<br /><br />Visualizar Habilitación:<br />Permite visualizar información relacionada con la habilitación.<br /><br />Anular Habilitación:<br />Permite dar de baja una habilitación. Pasa a estado &quot;ANULADA&quot;.<br /><br />Imprimir Habilitación:<br />Realiza la impresión de la habilitación del espectáculo público. <br /><br />Modificar Habilitación:<br />Permite modificar datos de la Habilitación seleccionada y asociar a la misma los Tipos de Entrada y sus correspondientes Talonarios.<br />Para asociar un nuevo Tipo de Entrada a la Habilitación se presenta la opción &quot;Agregar Tipo de Entrada&quot;.<br />Por cada Tipo de Entrada asociados a la Habilitación se presentan las opciones &quot;Visualizar Tipo de Entrada&quot;, &quot;Modificar Tipo de Entrada&quot;, &quot;Eliminar Tipo de Entrada&quot;.<br />Una vez cargada un Tipo de Entrada a la Habilitación, se podrán asociar los Talonarios correspondientes, para lo cual se presenta la opción &quot;Agregar Talonario&quot;.<br /><br />Agregar Tipo de Entrada:<br />Permite asociar un Tipo de Entrada a la Habilitación.<br />Debe realizarse la búsqueda de un Tipo de Entrada e ingresar un Precio Unitario para dicho Tipo de Entrada.<br /><br />Modificar Tipo de Entrada:<br />Permite modificar el Precio unitario del Tipo de Entrada seleccionado.<br /><br />Visualizar Tipo de Entrada:<br />Permite visualizar información relacionada con el Tipo de Entrada.<br /><br />Eliminar Tipo de Entrada:<br />Permite eliminar la asociación entre el Tipo de Entrada y la Habilitación.<br /><br />Agregar Talonario:<br />Para asociar Talonarios se deberá seleccionar un Tipo de Entrada previamente cargado en la Habilitación y luego ingresar el rango de entradas: numeración, color, serie.<br /><br />Una vez que se asocian los tipos de entrada con sus respectivos talonarios, el estado de la habilitación pasa a  PENDIENTE. <br />Este estado indica que la habilitación posee mayor cantidad de entradas habilitadas que entradas vendidas. Permite la registración de entradas vendidas y además admite el agregado nuevos talonarios de entradas, sean estos asociados a algún tipo de entrada cargada anteriormente como así también sobre un nuevo tipo de entrada asociada a la habilitación.<br /><br />Declaración de Entradas Vendidas:<br />Permite registrar las entradas vendidas de un espectáculo público.<br />La declaración de entradas vendidas puede suceder varias veces para una misma habilitación, en el caso que un evento dure varias semanas.<br />Por cada Tipo de Entrada de la Habilitación seleccionada se presentan las opciones &quot;Registrar Entradas Vendidas&quot;, &quot;Anular Declaración&quot;.<br /><br />Registrar Entradas Vendidas:<br />Para realizar la declaración de entradas vendidas deberá ingresarse la Fecha de Declaración  y por cada Tipo de Entrada/Talonario, ingresar la Cantidad de Entradas Vendidas. Se muestra la Cantidad de Entradas Pendientes.<br />En función de la cantidad de entradas vendidas se determina el importe  total de la deuda utilizando la fórmula de cálculo de importe del recurso.<br />Se emitirá deuda asociada a la Cuenta para la cual se realizó la Habilitación.<br /><br />Cuando la habilitación no tiene entradas pendientes de venta el estado pasa a CONSUMIDA, de lo contrario permanece en PENDIENTE.<br /><br />Existe una opción que permite agregar más entradas a una misma habilitación.<br />En caso de que se quiera agregar un nuevo talonario a una habilitación con estado CONSUMIDA, la habilitación pasará a estar nuevamente PENDIENTE.<br /><br />El estado final de una habilitación es FINALIZADA, lo debiese indicar el usuario cuando finalizó la registración de entradas vendidas.<br /><br />Anular Declaración:<br />En caso de error en la registración de entradas, pueden anularse. Se anula el recibo confeccionado en la registración de entradas.<br /><br /></div>
+</td>
+				</tr>
+
+			</table>
+		</div>
+		<div class="ItemBody" id="LinksTable">
+			<table align="center" border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="30%" class="TableHeading">Object</td>
+					<td width="15%" class="TableHeading">Type</td>
+					<td width="15%" class="TableHeading">Connection</td>
+					<td width="40%" class="TableHeading">Notes</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../../../../EA1/EA5/EA63.htm">«Functional» 1- El sistema deberá dar soporte a todos los procesos de la Administración Tributaria.</a></td>
+					<td width="15%" class="TableRow" valign="top">Requirement</td>
+					<td width="15%" class="TableRow" valign="top">Realisation</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+
+			</table>
+		</div>
+	</div>
+<div class="pageFooter"></div>
+ 
+</body>
+</html>

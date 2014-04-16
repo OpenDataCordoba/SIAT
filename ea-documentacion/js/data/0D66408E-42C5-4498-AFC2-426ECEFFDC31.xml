@@ -1,0 +1,12 @@
+tocTab[tocTab.length] = new Array("2.1:1", "", "Diagrama de Módulos", "EARoot/EA2/EA1/EA123.htm", "176.png", "494", "0", "", "Package diagram");
+tocTab[tocTab.length] = new Array("2.1.1", "1", "Gestión", "EARoot/EA2/EA1/EA125.htm", "4.png", "", "", "{DD4F6865-9865-465e-8005-F715B9F0A75C}", "Package");
+tocTab[tocTab.length] = new Array("2.1.2", "1", "Padrón", "EARoot/EA2/EA1/EA126.htm", "4.png", "", "", "{0B2DEAC2-FF0F-4a78-B75E-CB916107CA35}", "Package");
+tocTab[tocTab.length] = new Array("2.1.3", "1", "Exenciones", "EARoot/EA2/EA1/EA127.htm", "4.png", "", "", "{146DE630-2802-4d1a-A74E-21560B418FA6}", "Package");
+tocTab[tocTab.length] = new Array("2.1.4", "1", "Emisión", "EARoot/EA2/EA1/EA128.htm", "4.png", "", "", "{29432872-710C-4634-A7E7-A2CD19779C28}", "Package");
+tocTab[tocTab.length] = new Array("2.1.5", "1", "Balance", "EARoot/EA2/EA1/EA129.htm", "4.png", "", "", "{ED8D7D40-3DD7-4cfe-845A-0CDA135F6F2E}", "Package");
+tocTab[tocTab.length] = new Array("2.1.6", "1", "Estrategia Fiscal", "EARoot/EA2/EA1/EA130.htm", "4.png", "", "", "{D5A3B73E-D7AE-401b-BA0C-3D47DE9A864F}", "Package");
+tocTab[tocTab.length] = new Array("2.1.7", "1", "Solicitudes SIAT / Expedientes", "EARoot/EA2/EA1/EA131.htm", "4.png", "", "", "{88B63AC0-40F9-4edd-AD60-4370A3B17151}", "Package");
+tocTab[tocTab.length] = new Array("2.1.8", "1", "Formularios / Frases", "EARoot/EA2/EA1/EA132.htm", "4.png", "", "", "{D9F2E8F9-84F9-4ab3-88CC-09F42622F0FA}", "Package");
+tocTab[tocTab.length] = new Array("2.1.9", "1", "Definición", "EARoot/EA2/EA1/EA133.htm", "4.png", "", "", "{477571B3-EF88-46f4-A879-BF6FCD284D30}", "Package");
+tocTab[tocTab.length] = new Array("2.1.10", "1", "Administración del Sistema", "EARoot/EA2/EA1/EA134.htm", "4.png", "", "", "{BC5A3E79-282C-4b8f-BF8F-78DDF62F4B39}", "Package");
+tocTab[tocTab.length] = new Array("2.1.11", "1", "«subsystem» ADP", "EARoot/EA2/EA1/EA135.htm", "4.png", "", "", "{F16986CC-E8AC-4193-B187-D0E97B36F1B7}", "Package");

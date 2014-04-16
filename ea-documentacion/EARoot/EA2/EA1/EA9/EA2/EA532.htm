@@ -1,0 +1,189 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Mantenedor Descuento Especial</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="pageHeader"></div>
+<div class="PageBody">
+	<span class="ObjectTitle">Mantenedor Descuento Especial  : public   usecase</span>
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">16/07/2007 16:49:43</td>
+		</tr>
+		<tr>
+			<td class="ObjectDetailsTopic">Modified:</td>
+			<td class="ObjectDetailsValue">15/08/2008 15:29:17</td>
+		</tr>
+		<tr style="height: 10px"><td colspan="2"></td></tr>
+		<tr>
+			<td class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td class="ObjectDetailsValue">1.0</td>
+		</tr>
+		<tr id="proj02" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Phase:</td>
+			<td class="ObjectDetailsValue">1.0</td>
+		</tr>
+		<tr id="proj03" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Status:</td>
+			<td class="ObjectDetailsValue">R2</td>
+		</tr>
+		<tr id="proj04" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Complexity:</td>
+			<td class="ObjectDetailsValue">Easy</td>
+		</tr>
+		<tr>
+			<td class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">UUID:</td>
+			<td class="ObjectDetailsValue">{30EBB3BE-A55E-41a8-9B79-41F9E5F58D2F}</td>
+		</tr>
+		<tr id="adv01" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
+			<td class="ObjectDetailsValue"><a href="EA519.htm">Diagrama de Gestión Deuda/Convenios</a></td>
+		</tr>
+	</table>
+	<div class="ObjectDetailsNotes">Este CU tiene como objetivo la administración de Descuentos Especiales.<br />Descuento especiales son descuentos excepcionales que aplican sobre la actualización de deuda en el marco de una reconfección. Generalmente están en relación con el envío de boletas por descuento contado y, en principio, poseen mejores beneficios para el contribuyente.<br />La definición de un descuento especial implica establecer los entornos de fechas de vencimiento de deuda, el tipo de deuda a incluir (deuda pura o cuota de plan), la clasificación de deuda (deuda, retroactivos, multas, etc) y las Exenciones/Casos Sociales/Otros o Atributos para las que pueda estar definido el descuento. De esta forma, podrían existir descuentos especiales que solo apliquen a Casos Sociales.<br /></div>
+
+	<div class="TableGroup" id="TableGroup">
+		<ul class="ItemTitle">
+			<li onClick="parent.toggleItem('AssociationsFrom');" id="AssociationsFromTitle">Associations From</li>
+			<li onClick="parent.toggleItem('Scenario');" id="ScenarioTitle">Scenarios</li>
+			<li onClick="parent.toggleItem('Files');" id="FilesTitle">Files</li>
+			<li onClick="parent.toggleItem('Links');" id="LinksTitle">Other Links</li>
+		</ul>
+		<div class="ItemBody" id="AssociationsFromTable">
+			<table border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="20%" class="TableHeading">Element</td>
+					<td width="25%" class="TableHeading">Source Role</td>
+					<td width="25%" class="TableHeading">Target Role</td>
+					<td width="30%" class="TableHeading">Details</td>
+				</tr>
+				<tr>
+					<td width="20%" class="TableRow" valign="top">
+						<a href="../../../EA3/EA637.htm">Cobranza Administrativa</a><br />
+						Actor &nbsp;
+					</td>
+					<td width="20%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;
+					</td>
+					<td width="20%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;	
+					</td>
+					<td width="30%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+
+			</table>
+		</div>
+		<div class="ItemBody" id="ScenarioTable">
+			<table align="center" border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="24%" class="TableHeading">Scenario</td>
+					<td width="8%" class="TableHeading">Type</td>
+					<td width="68%" class="TableHeading">Detail</td>
+				</tr>
+				<tr>
+					<td width="24%" class="TableRow">Búsqueda de Descuentos Especiales</td>
+					<td width="8%" class="TableRow">Alternate</td>
+					<td width="68%" class="TableRow"><div class="ObjectDetailsNotes">Permite realizar la búsqueda de Descuentos Especiales por Descripción Descuento, Recurso,  Via Deuda, Tipo de deuda.<br />Por cada descuento encontrado en la consulta, se muestra Descripcion, Recurso, Via Deuda, Tipo deuda, Estado y se presentan las opciones &quot;Visualizar Descuento Especial&quot;, &quot;Modificar Descuento Especial&quot;, &quot;Eliminar Descuento Especial&quot; y &quot;Activar/Desactivar Descuento Especial&quot;.<br />Para agregar un nuevo Descuento Especial se dispone de la opción &quot;Agregar Descuento Especial&quot;.</div>
+</td>
+				</tr>
+				<tr>
+					<td width="24%" class="TableRow">Visualizar Descuento Especial</td>
+					<td width="8%" class="TableRow">Alternate</td>
+					<td width="68%" class="TableRow"><div class="ObjectDetailsNotes">Permite visualizar información del Descuento Especial seleccionado, la Clasificaciones de Deuda en las cuales se aplica el Descuento, la lista de atributos valorizados que determinarán la posibilidad del uso del descuento y las Exenciones sobre las cuales se podrá aplicar Descuento.</div>
+</td>
+				</tr>
+				<tr>
+					<td width="24%" class="TableRow">Agregar Descuento Especial</td>
+					<td width="8%" class="TableRow">Alternate</td>
+					<td width="68%" class="TableRow"><div class="ObjectDetailsNotes">Para crear un nuevo Descuento Especial se debe ingresar Descripción, Recurso, Vía Deuda, Tipo Deuda, rango de Fechas de Vencimiento de la Deuda, indicar si Aplica Total Impago, Porcentaje de descuento de capital, Porcentaje de Descuento de Actualizacion, Porcentaje de Descuento de Interés, Leyenda del Descuento y Caso.</div>
+</td>
+				</tr>
+				<tr>
+					<td width="24%" class="TableRow">Eliminar Descuento Especial</td>
+					<td width="8%" class="TableRow">Alternate</td>
+					<td width="68%" class="TableRow"><div class="ObjectDetailsNotes">Permite eliminar físicamente el Descuento Especial seleccionado.</div>
+</td>
+				</tr>
+				<tr>
+					<td width="24%" class="TableRow">Modificar Descuento Especial</td>
+					<td width="8%" class="TableRow">Alternate</td>
+					<td width="68%" class="TableRow"><div class="ObjectDetailsNotes">Permite actualizar datos del Descuento Especial seleccionado, asociar y administrar Clasificaciones de Deuda, Atributos Valorizados y Exenciones sobre los cuales se aplicará descuento especial en la Reconfección.</div>
+</td>
+				</tr>
+				<tr>
+					<td width="24%" class="TableRow">Activar/Desactivar Descuento Especial</td>
+					<td width="8%" class="TableRow">Alternate</td>
+					<td width="68%" class="TableRow"><div class="ObjectDetailsNotes"><br />Permite activar/desactivar el Descuento Especial seleccionado según el estado actual.<br /></div>
+</td>
+				</tr>
+
+			</table>
+		</div>
+		<div class="ItemBody" id="FilesTable">
+			<table border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="50%" class="TableHeading">File</td>
+					<td width="10%" class="TableHeading">Type</td>
+					<td width="40%" class="TableHeading">Details</td>
+				</tr>
+			<tr>
+				<td width="50%" class="TableRow"><a href="c:\siatdoc\docGenerada\capacitacion\gdeuda\definicion\MDU - Mantenedor Descuento Especial.doc">c:\siatdoc\docGenerada\capacitacion\gdeuda\definicion\MDU - Mantenedor Descuento Especial.doc</a></td>
+				<td width="10%" class="TableRow">Local File</td>
+				<td width="40%" class="TableRow">
+					<div class="ObjectDetailsNotes">Manual de usuario</div>
+<br />
+					<span class="NoteHeading">File Size:</span> 421 k<br />
+					<span class="NoteHeading">Time Stamp:</span> 08/09/2008 07:36:21 a.m.<br />
+				</td>
+			</tr>
+
+			</table>
+		</div>
+		<div class="ItemBody" id="LinksTable">
+			<table align="center" border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="30%" class="TableHeading">Object</td>
+					<td width="15%" class="TableHeading">Type</td>
+					<td width="15%" class="TableHeading">Connection</td>
+					<td width="40%" class="TableHeading">Notes</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../../../../EA1/EA4/EA48.htm">«Functional» 49-Emitir liquidaciones de deuda, estados de cuenta y certificados de "Libre Deuda" de la cuenta corriente del contribuyente en todos los posibles niveles de agregación (total, por tributo, por objeto imponible, por vía (administrativa/judicial), etc.). </a></td>
+					<td width="15%" class="TableRow" valign="top">Requirement</td>
+					<td width="15%" class="TableRow" valign="top">Realisation</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+
+			</table>
+		</div>
+	</div>
+<div class="pageFooter"></div>
+ 
+</body>
+</html>

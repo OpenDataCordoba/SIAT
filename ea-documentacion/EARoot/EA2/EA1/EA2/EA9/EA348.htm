@@ -1,0 +1,213 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Procesar Novedades Titulares Cuenta</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="pageHeader"></div>
+<div class="PageBody">
+	<span class="ObjectTitle">Procesar Novedades Titulares Cuenta  : public   usecase</span>
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">08/08/2007 10:39:32</td>
+		</tr>
+		<tr>
+			<td class="ObjectDetailsTopic">Modified:</td>
+			<td class="ObjectDetailsValue">21/01/2009 10:32:29</td>
+		</tr>
+		<tr style="height: 10px"><td colspan="2"></td></tr>
+		<tr>
+			<td class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td class="ObjectDetailsValue">1.0</td>
+		</tr>
+		<tr id="proj02" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Phase:</td>
+			<td class="ObjectDetailsValue">1.0</td>
+		</tr>
+		<tr id="proj03" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Status:</td>
+			<td class="ObjectDetailsValue">R1</td>
+		</tr>
+		<tr id="proj04" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Complexity:</td>
+			<td class="ObjectDetailsValue">Easy</td>
+		</tr>
+		<tr>
+			<td class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">UUID:</td>
+			<td class="ObjectDetailsValue">{01825D16-1EBC-4989-9DC1-3AE8B8A03734}</td>
+		</tr>
+		<tr id="adv01" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
+			<td class="ObjectDetailsValue"><a href="EA342.htm">Novedades sistemas origen</a></td>
+		</tr>
+	</table>
+	<div class="ObjectDetailsNotes">Este CU tiene como objetivo procesar novedades de Titulares de Cuentas provenientes desde otros Sistemas Externos a SIAT y actualizar los padrones correspondientes.<br /><br />El CU recibe novedades de &quot;Alta de Titular&quot; y  &quot;Baja de titular&quot; para una cuenta. Los sistemas externos considerados son Catastro, Habilitaciones, Cementerio, Serv. Públicos, Tribunal de Faltas y Rodados.</div>
+
+	<div class="TableGroup" id="TableGroup">
+		<ul class="ItemTitle">
+			<li onClick="parent.toggleItem('AssociationsFrom');" id="AssociationsFromTitle">Associations From</li>
+			<li onClick="parent.toggleItem('Scenario');" id="ScenarioTitle">Scenarios</li>
+			<li onClick="parent.toggleItem('Links');" id="LinksTitle">Other Links</li>
+		</ul>
+		<div class="ItemBody" id="AssociationsFromTable">
+			<table border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="20%" class="TableHeading">Element</td>
+					<td width="25%" class="TableHeading">Source Role</td>
+					<td width="25%" class="TableHeading">Target Role</td>
+					<td width="30%" class="TableHeading">Details</td>
+				</tr>
+				<tr>
+					<td width="20%" class="TableRow" valign="top">
+						<a href="../../../EA3/EA631.htm">Administrador Procesos SIAT</a><br />
+						Actor &nbsp;
+					</td>
+					<td width="20%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;
+					</td>
+					<td width="20%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;	
+					</td>
+					<td width="30%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="20%" class="TableRow" valign="top">
+						<a href="../../../EA3/EA651.htm">Sistemas Externos</a><br />
+						Actor &nbsp;
+					</td>
+					<td width="20%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;
+					</td>
+					<td width="20%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;	
+					</td>
+					<td width="30%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+
+			</table>
+		</div>
+		<div class="ItemBody" id="ScenarioTable">
+			<table align="center" border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="24%" class="TableHeading">Scenario</td>
+					<td width="8%" class="TableHeading">Type</td>
+					<td width="68%" class="TableHeading">Detail</td>
+				</tr>
+				<tr>
+					<td width="24%" class="TableRow">Procesar Novedades Titulares Cuenta</td>
+					<td width="8%" class="TableRow">Alternate</td>
+					<td width="68%" class="TableRow"><div class="ObjectDetailsNotes">Los registros recibidos desde los Sistemas Externos presenta el siguiente formato:<br /><br />  1. codTipoObjetoImponible<br />  2. codAreaOrigen<br />  3. fechaAccion<br />  4. accion<br />  5. clave<br />  6. fechaVigencia<br />  7. idPersona<br />  8. idTipoTitular<br />  9. esPrincipal<br /><br />  Descripción:<br /><br />  1. codTipoObjetoImponible=PARCELA<br />  2. codAreaOrigen=CATASTRO<br />  3. fechaAccion= fecha en que ocurrió la acción en el sistema de catastro<br />  4. accion=[ A | B | M  ]<br />  5. clave= es la clave con la que identificará unívocamente a cada registro de objeto imponible. En este caso, se piensa utilizar la CATASTRAL.<br />  6. fechaVigencia= es la fecha de vigencia de la novedad. <br />  7. idPersona= es id persona en la DB general.<br />  8. idTipoTitular= es el id de tipo de tenencia en catastro<br />  9. esPrincipal=indica si es titular principal (quien sale impreso en las boletas)<br /><br />  Notas:<br />   - El idPersona debe existir en la DB general, caso contrario no se procede la actualización<br /><br />   - En caso de no existir como Contribuyente se deberá dar de alta y valorizar los atributos del contribuyente al valor por defecto <br />a estos fines. Luego se deberá dar de alta sobre titulares indicando en el caso que corresponda si es titular ppal.<br /><br /><br /><br /></div>
+</td>
+				</tr>
+				<tr>
+					<td width="24%" class="TableRow">Alta de un Titular</td>
+					<td width="8%" class="TableRow">Alternate</td>
+					<td width="68%" class="TableRow"><div class="ObjectDetailsNotes">- Alta de un Titular (accion=A)<br /><br />  Ejemplo: | PARCELA | CATASTRO | 05/09/2007 | A | 0000001 | 05/08/2207 | 1354  | 1 | 1 |<br /><br />  Proceso:<br /><br />  - Obtener el Objeto Imponible a partir de la clave y Tipo de Objeto Imponible informados en la interface.<br />  - Obtiener la lista de recursos que están relacionados con el Tipo de Objeto Imponible.<br />  - Obtener el Recurso Principal<br />  - Si no hay principal, fin procesamiento<br />  - Si hay más de uno, informar error<br />  <br />  - Verificar si &quot;Modifica Titulares de Cuenta por Novedad de Objeto Imponible&quot; en el recurso principal. Si no, fin de proceso.<br />  - Obtener la Cuenta relacionada, en función del ID de Recurso principal.<br />  <br />  - Validar que la persona informada exista como contribuyente.<br />    - En caso que no exista realizar el alta<br />    - En caso que exista obtener el ID de contribuyente. (que es igual al ID de persona)<br />  <br />  - Generar el nuevo titular indicando: ID cuenta, ID contribuyente, fechaDesde=fechaActualización, tipoTitular y esPrincipal<br /><br />  // verificación de exenciones<br />  - Obtener exenciones vigentes relacionadas con la cuenta<br />       Si existe al menos una, generar una Solicitud de Verificar exencion de una cuenta por el alta de un nuevo titular.<br /><br />  // verificación de alta de sujeto exento<br />  - Verificar si existe Sujeto Exento informado para el ID contribuyente <br />  - Si existe, obtener ID exencion y ID broche<br />    Si existe ID exencion, generar alta de exencion para cuenta<br />    Si existe ID broche, asignar broche a cuenta (generando el histórico que corresponda0<br /><br />  - Para cada uno de los recursos secundarios, verifico si &quot;Modifica Titulares de Cuenta por modicación de Titulares del Principal&quot;.<br />    - Si modifica, obtengo la cuenta asociada al recurso secundario.<br />    - Generar el nuevo titular indicando: ID cuenta, ID contribuyente, fechaDesde=fechaActualización, tipoTitular y esPrincipal.<br />   <br />    - Verificar exencion<br />    - Verificar alta de sujeto exento<br /> <br /><br /></div>
+</td>
+				</tr>
+				<tr>
+					<td width="24%" class="TableRow">Baja de un Titular</td>
+					<td width="8%" class="TableRow">Alternate</td>
+					<td width="68%" class="TableRow"><div class="ObjectDetailsNotes">Baja de un Titular (accion=B)<br /><br />  Ejemplo: | PARCELA | CATASTRO | 05/09/2007 | B | 0000001 | 05/08/2207 | 1354  | 1 | 1 |<br /><br />  Proceso:<br /><br />  1. Obtener el Objeto Imponible a partir de la clave y Tipo de Objeto Imponible informados en la interface.<br />  2. Obtiene la lista de recursos que están relacionados con el Tipo de Objeto Imponible.<br />  3. Entre ellos, Busca el principal.<br />  4. Si no hay principal, fin procesamiento<br />  5. Si hay más de uno, informar error<br />  6. Verifico si &quot;Modifica Titulares de Cuenta por Novedad de Objeto Imponible&quot; en el recurso principal. Si no, fin de proceso.<br />  7. Obtener la Cuenta relacionada, en función del ID de Recurso principal.<br />  8. Obtener el titular de la cuenta por el ID persona informado en la interface<br />  9. Indicar fecha Hasta=fechaActualización<br />  10. Se debe generar una solicitud de Verificar exencion de una cuenta por la baja de un titular.<br />  11. Incluye el CU Validar Exención.</div>
+</td>
+				</tr>
+				<tr>
+					<td width="24%" class="TableRow">Modificación de un Titular</td>
+					<td width="8%" class="TableRow">Alternate</td>
+					<td width="68%" class="TableRow"><div class="ObjectDetailsNotes">Modificación de un Titular (accion=M)<br /><br />  Ejemplo: | PARCELA | CATASTRO | 05/09/2007 | M | 0000001 | 05/08/2207 | 1354  | 1 | 1 |<br />  Nota: Los cambios esperados son respecto del tipo de titularidad y esPrincipal<br /><br />  Proceso:<br /><br />  1. Obtener el Objeto Imponible a partir de la clave y Tipo de Objeto Imponible informados en la interface.<br />  2. Obtiene la lista de recursos que están relacionados con el Tipo de Objeto Imponible.<br />  3. Entre ellos, Busca el principal.<br />  4. Si no hay principal, fin procesamiento<br />  5. Si hay más de uno, informar error<br />  7. Obtener la Cuenta relacionada, en función del ID de Recurso principal.<br />  8. Obtener el titular de la cuenta por el ID persona informado en la interface. Si no encuentra, fin del proceso.<br />  9. Modificar los datos de la novedad de ese ID cuenta, ID titular.<br />  11. Para cada uno de los recursos secundarios, obtengo la cuenta asociada al recurso secundario.<br />  13. Modificar los datos de la novedad de ese ID cuenta, ID titular.</div>
+</td>
+				</tr>
+
+			</table>
+		</div>
+		<div class="ItemBody" id="LinksTable">
+			<table align="center" border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="30%" class="TableHeading">Object</td>
+					<td width="15%" class="TableHeading">Type</td>
+					<td width="15%" class="TableHeading">Connection</td>
+					<td width="40%" class="TableHeading">Notes</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../../../../EA1/EA6/EA86.htm">«Functional» 34- Homogeneizar las interfaces con los distintos sistemas que alimentan los padrones (por altas, bajas y modificaciones). </a></td>
+					<td width="15%" class="TableRow" valign="top">Requirement</td>
+					<td width="15%" class="TableRow" valign="top">Realisation</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../../../../EA1/EA6/EA88.htm">«Functional» 36- Mantener datos propios de Contribuyentes y sus objetos imponibles (domicilios de envío, etc.).</a></td>
+					<td width="15%" class="TableRow" valign="top">Requirement</td>
+					<td width="15%" class="TableRow" valign="top">Realisation</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../../../../EA1/EA5/EA63.htm">«Functional» 1- El sistema deberá dar soporte a todos los procesos de la Administración Tributaria.</a></td>
+					<td width="15%" class="TableRow" valign="top">Requirement</td>
+					<td width="15%" class="TableRow" valign="top">Realisation</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../../../../EA1/EA6/EA86.htm">«Functional» 34- Homogeneizar las interfaces con los distintos sistemas que alimentan los padrones (por altas, bajas y modificaciones). </a></td>
+					<td width="15%" class="TableRow" valign="top">Requirement</td>
+					<td width="15%" class="TableRow" valign="top">Realisation</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../../../../EA1/EA5/EA74.htm">«Functional» 4- Se deberá diseñar el sistema teniendo en cuenta que todos los tributos de esta Municipalidad se administran de la misma manera (administración por función y no por tributo).</a></td>
+					<td width="15%" class="TableRow" valign="top">Requirement</td>
+					<td width="15%" class="TableRow" valign="top">Realisation</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../../../../EA1/EA5/EA75.htm">«Functional» 5- El sistema deberá tener un alto grado de parametrización, a efectos de permitir su adecuación a cambios, sin necesidad de modificar las aplicaciones.</a></td>
+					<td width="15%" class="TableRow" valign="top">Requirement</td>
+					<td width="15%" class="TableRow" valign="top">Realisation</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../../../../EA1/EA5/EA76.htm">«Functional» 6- Cualquier actualización de datos sensibles a la administración tributaria (que afecten cálculos, titularidades, etc) debe quedar registrado con su correspondiente vigencia. </a></td>
+					<td width="15%" class="TableRow" valign="top">Requirement</td>
+					<td width="15%" class="TableRow" valign="top">Realisation</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="EA349.htm">Validar Exención</a></td>
+					<td width="15%" class="TableRow" valign="top">UseCase</td>
+					<td width="15%" class="TableRow" valign="top">Includes</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+
+			</table>
+		</div>
+	</div>
+<div class="pageFooter"></div>
+ 
+</body>
+</html>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC 
+"-//Apache Software Foundation//DTD Struts Configuration 1.2//EN"  
+"[WWW] http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+	<form-beans>
+	    <form-bean name="formularioSearchPage" type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="formularioAdapter"    type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="forCamAdapter"    type="org.apache.struts.action.DynaActionForm"/>
+		
+	</form-beans>
+
+	<action-mappings>
+		
+		<!-- Mantenedor de Formularios -->	    
+		<action
+     		path="/frm/AdministrarFormulario"
+	        type="ar.gov.rosario.siat.frm.view.struts.AdministrarFormularioDAction"
+		    scope="request"
+        	validate="false"
+	        name="formularioAdapter"
+            parameter="method"
+    	    input=".frm.formulario.view.formularioEditAdapter"
+	        attribute="formularioAdapter">
+            
+    	    <forward name="formularioViewAdapter"		path=".frm.formulario.view.formularioViewAdapter" />
+    	    <forward name="formularioEditAdapter"      	path=".frm.formulario.view.formularioEditAdapter" />
+       	    <forward name="formularioAdapter"        	path=".frm.formulario.view.formularioAdapter" />
+     	    <forward name="administrarEncFormulario" 	path="/frm/AdministrarEncFormulario.do?method=inicializar" />
+     	    <forward name="administrarForCam" 			path="/frm/AdministrarForCam.do?method=inicializar" />
+	    </action>
+	    <!-- Fin Mantenedor de Formularios -->
+	    
+	    
+	    <!-- Mantenedor de Formularios (Encabezado/Detalle) -->
+	    <action
+	    	path="/frm/BuscarFormulario"
+	        type="ar.gov.rosario.siat.frm.view.struts.BuscarFormularioDAction"
+		    scope="request"
+	       	validate="false"
+	        name="formularioSearchPage"
+	        parameter="method"
+	   	    input=".frm.formulario.view.formularioSearchPage"
+	        attribute="formularioSearchPage">
+	        
+	   	    <forward name="administrarEncFormulario" 	path="/frm/AdministrarEncFormulario.do?method=inicializar" />	        
+	   	    <forward name="formularioSearchPage"    	path=".frm.formulario.view.formularioSearchPage" />
+	   	    <forward name="administrarFormulario" 	    path="/frm/AdministrarFormulario.do?method=inicializar" />
+	    </action>
+			    
+		<action
+     		path="/frm/AdministrarEncFormulario"
+	        type="ar.gov.rosario.siat.frm.view.struts.AdministrarEncFormularioDAction"
+		    scope="request"
+        	validate="false"
+	        name="formularioAdapter"
+            parameter="method"
+    	    input=".frm.formulario.view.formularioEncEditAdapter"
+	        attribute="formularioAdapter">
+
+    	    <forward name="formularioEncEditAdapter"     path=".frm.formulario.view.formularioEncEditAdapter" />
+	    </action>
+	    
+	    <!-- Administrar ForCam -->
+	    <action
+     		path="/frm/AdministrarForCam"
+	        type="ar.gov.rosario.siat.frm.view.struts.AdministrarForCamDAction"
+		    scope="request"
+        	validate="false"
+	        name="forCamAdapter"
+            parameter="method"
+    	    input=".frm.formulario.view.forCamEditAdapter"
+	        attribute="forCamAdapter">
+            
+    	    <forward name="forCamViewAdapter"      path=".frm.formulario.view.forCamViewAdapter" />
+    	    <forward name="forCamEditAdapter"      path=".frm.formulario.view.forCamEditAdapter" />
+	    </action>
+	    <!-- Fin Mantenedor de Formularios (Encabezado/Detalle) -->
+	    
+	</action-mappings>
+
+</struts-config>

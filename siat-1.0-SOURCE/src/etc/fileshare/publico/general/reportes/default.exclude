@@ -1,0 +1,26 @@
+#lista de llamadas a VO a ser ignoradas durante la conversion de Object java en un xml
+#cada reglon es una expresion regular que tiene que coincidir con el 'callPath' actual.
+#El callPath es un string con la lista de nombre de metodos separados ':' llamados durante la conversion.
+#
+#Por ejemplo la linea:
+#
+#:LiqRecibos:ListLiqReciboVO:LiqReciboVO:Cuenta:ListTitular.*
+#Ignora todas las llamadas a getListTitular() de la cuenta dentro de un LiqReciboVO
+#
+#:LiqRecibos:ListLiqReciboVO:LiqReciboVO:.*:ListTitular.*
+#Ignora todas las llamadas a getListTitular() de la cuenta dentro de cualquier bean
+
+#.*:ListSistemaOrigen
+#.*:FechaUltMdf
+#.*:Estado
+#.*:FechaUltMdfView
+#.*:Usuario
+#.*:Vigencia
+#.*:ModoSeleccionar
+#.*:AgregarEnSeleccion
+#.*:ErrorType
+#.*:ListError
+#.*:ListMessage
+#.*:IdView
+#.*:StrId
+#.*:Class

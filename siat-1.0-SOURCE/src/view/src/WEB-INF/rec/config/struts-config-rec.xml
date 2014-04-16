@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC 
+"-//Apache Software Foundation//DTD Struts Configuration 1.2//EN"  
+"[WWW] http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+	<form-beans>
+	    <form-bean name="tipoObraSearchPage" 		type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="tipoObraAdapter"    		type="org.apache.struts.action.DynaActionForm"/>
+		
+	    <form-bean name="formaPagoSearchPage" 		type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="formaPagoAdapter"    		type="org.apache.struts.action.DynaActionForm"/>
+		
+	    <form-bean name="contratoSearchPage" 		type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="contratoAdapter"    		type="org.apache.struts.action.DynaActionForm"/>
+		
+	    <form-bean name="plaCuaDetSearchPage"       type="org.apache.struts.action.DynaActionForm"/>		
+	    <form-bean name="plaCuaDetAdapter"          type="org.apache.struts.action.DynaActionForm"/>
+	    <form-bean name="planillaCuadraSearchPage"  type="org.apache.struts.action.DynaActionForm"/>
+	    <form-bean name="planillaCuadraAdapter"     type="org.apache.struts.action.DynaActionForm"/>	    	    		
+
+		<form-bean name="obraSearchPage"        	type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="obraAdapter"           	type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="obraFormaPagoAdapter"  	type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="obrRepVenAdapter"  		type="org.apache.struts.action.DynaActionForm"/>
+		
+		<form-bean name="usoCdMSearchPage"  		type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="usoCdMAdapter" 	 		type="org.apache.struts.action.DynaActionForm"/>
+		
+		<form-bean name="anulacionObraSearchPage" 	  type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="anulacionObraAdapter"		  type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="procesoAnulacionObraAdapter" type="org.apache.struts.action.DynaActionForm"/>
+		
+		<form-bean name="novedadRSSearchPage"		  type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="novedadRSAdapter"			  type="org.apache.struts.action.DynaActionForm"/>
+		
+		<form-bean name="catRSDreiSearchPage"		  type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="catRSDreiAdapter"			  type="org.apache.struts.action.DynaActionForm"/>
+	
+	
+	</form-beans>	
+
+	<action-mappings>
+		
+		<!-- Mantenedor de Tipo de Obra -->	    
+	    <action
+	    	path="/rec/BuscarTipoObra"
+	        type="ar.gov.rosario.siat.rec.view.struts.BuscarTipoObraDAction"
+			scope="request"
+	       	validate="false"
+	        name="tipoObraSearchPage"
+	        parameter="method"
+	   		input=".rec.cdm.view.tipoObraSearchPage"
+	        attribute="tipoObraSearchPage">
+	           
+	   	    <forward name="tipoObraSearchPage"   	path=".rec.cdm.view.tipoObraSearchPage" />
+	   	    <forward name="administrarTipoObra" 	path="/rec/AdministrarTipoObra.do?method=inicializar" />
+	    </action>
+		
+		<action
+     		path="/rec/AdministrarTipoObra"
+	        type="ar.gov.rosario.siat.rec.view.struts.AdministrarTipoObraDAction"
+		    scope="request"
+        	validate="false"
+	        name="tipoObraAdapter"
+            parameter="method"
+    	    input=".rec.cdm.view.tipoObraEditAdapter"
+	        attribute="tipoObraAdapter">
+            
+    	    <forward name="tipoObraViewAdapter"		path=".rec.cdm.view.tipoObraViewAdapter" />
+    	    <forward name="tipoObraEditAdapter"     path=".rec.cdm.view.tipoObraEditAdapter" />
+    	</action>
+	    <!-- Fin Mantenedor de Tipo de Obra -->
+	    
+		<!-- Mantenedor Forma de Pago -->	    
+	    <action
+	    	path="/rec/BuscarFormaPago"
+	        type="ar.gov.rosario.siat.rec.view.struts.BuscarFormaPagoDAction"
+			scope="request"
+	       	validate="false"
+	        name="formaPagoSearchPage"
+	        parameter="method"
+	   		input=".rec.cdm.view.formaPagoSearchPage"
+	        attribute="formaPagoSearchPage">
+	           
+	   	    <forward name="formaPagoSearchPage"   	path=".rec.cdm.view.formaPagoSearchPage" />
+	   	    <forward name="administrarFormaPago" 	path="/rec/AdministrarFormaPago.do?method=inicializar" />
+	    </action>
+		
+		<action
+     		path="/rec/AdministrarFormaPago"
+	        type="ar.gov.rosario.siat.rec.view.struts.AdministrarFormaPagoDAction"
+		    scope="request"
+        	validate="false"
+	        name="formaPagoAdapter"
+            parameter="method"
+    	    input=".rec.cdm.view.formaPagoEditAdapter"
+	        attribute="formaPagoAdapter">
+            
+    	    <forward name="formaPagoViewAdapter"	  path=".rec.cdm.view.formaPagoViewAdapter" />
+    	    <forward name="formaPagoEditAdapter"      path=".rec.cdm.view.formaPagoEditAdapter" />
+	    </action>
+	    <!-- Fin Mantenedor Forma de Pago -->
+
+		<!-- Mantendor de Contrato -->	    
+	    <action
+	    	path="/rec/BuscarContrato"
+	        type="ar.gov.rosario.siat.rec.view.struts.BuscarContratoDAction"
+			scope="request"
+	       	validate="false"
+	        name="contratoSearchPage"
+	        parameter="method"
+	   		input=".rec.cdm.view.contratoSearchPage"
+	        attribute="contratoSearchPage">
+	           
+	   	    <forward name="contratoSearchPage"   	path=".rec.cdm.view.contratoSearchPage" />
+	   	    <forward name="administrarContrato" 	path="/rec/AdministrarContrato.do?method=inicializar" />
+	    </action>
+		
+		<action
+     		path="/rec/AdministrarContrato"
+	        type="ar.gov.rosario.siat.rec.view.struts.AdministrarContratoDAction"
+		    scope="request"
+        	validate="false"
+	        name="contratoAdapter"
+            parameter="method"
+    	    input=".rec.cdm.view.contratoEditAdapter"
+	        attribute="contratoAdapter">
+            
+    	    <forward name="contratoViewAdapter"		path=".rec.cdm.view.contratoViewAdapter" />
+    	    <forward name="contratoEditAdapter"     path=".rec.cdm.view.contratoEditAdapter" />
+	    </action>
+	    <!-- Fin Mantendor de Contrato -->
+	    
+	    <!-- Mantenedor Planilla Cuadra (Encabezado/Detalle) -->
+	    <action
+	    	path="/rec/BuscarPlanillaCuadra"
+	        type="ar.gov.rosario.siat.rec.view.struts.BuscarPlanillaCuadraDAction"
+		    scope="request"
+	       	validate="false"
+	        name="planillaCuadraSearchPage"
+	        parameter="method"
+	   	    input=".rec.cdm.view.planillaCuadraSearchPage"
+	        attribute="planillaCuadraSearchPage">
+	        
+	   	   	<forward name="planillaCuadraSearchPage"    	   path=".rec.cdm.view.planillaCuadraSearchPage" />
+	   	    <forward name="administrarPlanillaCuadra" 	       path="/rec/AdministrarPlanillaCuadra.do?method=inicializar" />
+	   	    <forward name="administrarEncPlanillaCuadra" 	   path="/rec/AdministrarEncPlanillaCuadra.do?method=inicializar" />
+	   	    <forward name="planillaCuadraForAsignarRepartidor" path=".rec.cdm.view.planillaCuadraForAsignarRepatidor" />
+    	    <forward name="buscarCalle" 	       	           path="/pad/BuscarCalle.do?method=inicializar" />	   	    
+	    </action>
+		
+		<action
+     		path="/rec/AdministrarPlanillaCuadra"
+	        type="ar.gov.rosario.siat.rec.view.struts.AdministrarPlanillaCuadraDAction"
+		    scope="request"
+        	validate="false"
+	        name="planillaCuadraAdapter"
+            parameter="method"
+    	    input=".rec.cdm.view.planillaCuadraAdapter"
+	        attribute="planillaCuadraAdapter">
+            
+    	    <forward name="planillaCuadraViewAdapter"     path=".rec.cdm.view.planillaCuadraViewAdapter" />
+    	    <forward name="planillaCuadraAdapter"         path=".rec.cdm.view.planillaCuadraAdapter" />
+     	    <forward name="administrarEncPlanillaCuadra"  path="/rec/AdministrarEncPlanillaCuadra.do?method=inicializar" />
+    	    <forward name="administrarPlaCuaDet"          path="/rec/AdministrarPlaCuaDet.do?method=inicializar" />
+    	    <forward name="buscarPlaCuaDet"               path="/rec/BuscarPlaCuaDet.do?method=inicializar" />
+   	    </action>
+	    
+		<action
+     		path="/rec/AdministrarEncPlanillaCuadra"
+	        type="ar.gov.rosario.siat.rec.view.struts.AdministrarEncPlanillaCuadraDAction"
+		    scope="request"
+        	validate="false"
+	        name="planillaCuadraAdapter"
+            parameter="method"
+    	    input=".rec.cdm.view.planillaCuadraEncEditAdapter"
+	        attribute="planillaCuadraAdapter">
+
+    	    <forward name="planillaCuadraEncEditAdapter"     path=".rec.cdm.view.planillaCuadraEncEditAdapter" />
+    	    <forward name="buscarCalle" 	       	         path="/pad/BuscarCalle.do?method=inicializar" />
+    	</action>
+    	<!-- FIN Mantenedor Planilla Cuadra (Encabezado/Detalle) -->
+	    
+	    <!-- Administrar PlaCuaDet (Detalle)-->
+	    <action
+     		path="/rec/AdministrarPlaCuaDet"
+	        type="ar.gov.rosario.siat.rec.view.struts.AdministrarPlaCuaDetDAction"
+		    scope="request"
+        	validate="false"
+	        name="plaCuaDetAdapter"
+            parameter="method"
+    	    input=".rec.cdm.view.plaCuaDetEditAdapter"
+	        attribute="plaCuaDetAdapter">
+            
+    	    <forward name="plaCuaDetViewAdapter"      path=".rec.cdm.view.plaCuaDetViewAdapter" />
+    	    <forward name="plaCuaDetEditAdapter"      path=".rec.cdm.view.plaCuaDetEditAdapter" />
+	    </action>
+	    
+	    <action
+	    	path="/rec/BuscarPlaCuaDet"
+	        type="ar.gov.rosario.siat.rec.view.struts.BuscarPlaCuaDetDAction"
+			scope="request"
+	       	validate="false"
+	        name="plaCuaDetSearchPage"
+	        parameter="method"
+	   		input=".rec.cdm.view.plaCuaDetSearchPage"
+	        attribute="plaCuaDetSearchPage">
+	           
+	   	    <forward name="plaCuaDetSearchPage"   	path=".rec.cdm.view.plaCuaDetSearchPage" />
+	   	    <forward name="administrarPlaCuaDet" 	path="/rec/AdministrarPlaCuaDet.do?method=inicializar" />
+	    </action>
+	    <!-- FIN Administrar PlaCuaDet (Detalle)-->
+
+
+	    <!-- Mantenedor de Obra (Encabezado/Detalle) -->
+	    <action
+	    	path="/rec/BuscarObra"
+	        type="ar.gov.rosario.siat.rec.view.struts.BuscarObraDAction"
+		    scope="request"
+	       	validate="false"
+	        name="obraSearchPage"
+	        parameter="method"
+	   	    input=".rec.cdm.view.obraSearchPage"
+	        attribute="obraSearchPage">
+	        
+	   	    <forward name="obraSearchPage"    	path=".rec.cdm.view.obraSearchPage" />
+	   	    <forward name="administrarEncObra" 	path="/rec/AdministrarEncObra.do?method=inicializar" />
+	   	    <forward name="administrarObra" 	path="/rec/AdministrarObra.do?method=inicializar" />
+
+	    </action>
+		
+		<action
+     		path="/rec/AdministrarObra"
+	        type="ar.gov.rosario.siat.rec.view.struts.AdministrarObraDAction"
+		    scope="request"
+        	validate="false"
+	        name="obraAdapter"
+            parameter="method"
+    	    input=".rec.cdm.view.obraAdapter"
+	        attribute="obraAdapter">
+            
+    	    <forward name="obraViewAdapter"    		             path=".rec.cdm.view.obraViewAdapter" />
+    	    <forward name="obraAdapter"        		             path=".rec.cdm.view.obraAdapter" />
+     	    <forward name="obraPlanillaObraAdapter"	             path=".rec.cdm.view.obraPlanillaObraAdapter" />    	    
+     	    <forward name="administrarEncObra" 		             path="/rec/AdministrarEncObra.do?method=inicializar" />
+    	    <forward name="administrarObraFormaPago"             path="/rec/AdministrarObraFormaPago.do?method=inicializar" />
+    	    <forward name="buscarPlanillaCuadra"                 path="/rec/BuscarPlanillaCuadra.do?method=inicializar" />
+    	    <forward name="administrarObraPlanillaCuadra"        path="/rec/AdministrarObraPlanillaCuadra.do?method=inicializar" />   
+    	    <forward name="administrarPlanillaCuadra"       	 path="/rec/AdministrarPlanillaCuadra.do?method=inicializar" />
+			<forward name="administrarEncPlanillaCuadra"       	 path="/rec/AdministrarEncPlanillaCuadra.do?method=inicializar" />
+    	    <forward name="buscarPlanillasForAsignarRepartidor"  path="/rec/BuscarPlanillaCuadra.do?method=inicializarForAsignarRepartidor" />    	    
+    	    <forward name="administrarObrRepVen"        	     path="/rec/AdministrarObrRepVen.do?method=inicializar" />    	     	    
+    	    
+    	    
+	    </action>
+	    
+		<action
+     		path="/rec/AdministrarEncObra"
+	        type="ar.gov.rosario.siat.rec.view.struts.AdministrarEncObraDAction"
+		    scope="request"
+        	validate="false"
+	        name="obraAdapter"
+            parameter="method"
+    	    input=".rec.cdm.view.obraEncEditAdapter"
+	        attribute="obraAdapter">
+
+    	    <forward name="obraEncEditAdapter"     path=".rec.cdm.view.obraEncEditAdapter" />
+	    </action>
+	    
+	    <!-- Administrar ObraFormaPago (Detalle)-->
+	    <action
+     		path="/rec/AdministrarObraFormaPago"
+	        type="ar.gov.rosario.siat.rec.view.struts.AdministrarObraFormaPagoDAction"
+		    scope="request"
+        	validate="false"
+	        name="obraFormaPagoAdapter"
+            parameter="method"
+    	    input=".rec.cdm.view.obraFormaPagoEditAdapter"
+	        attribute="obraFormaPagoAdapter">
+            
+    	    <forward name="obraFormaPagoViewAdapter"      path=".rec.cdm.view.obraFormaPagoViewAdapter" />
+    	    <forward name="obraFormaPagoEditAdapter"      path=".rec.cdm.view.obraFormaPagoEditAdapter" />
+	    </action>
+	    
+	    <!-- Administrar Obra Planilla Cuadra (Detalle)-->	    
+		<action
+     		path="/rec/AdministrarObraPlanillaCuadra"
+	        type="ar.gov.rosario.siat.rec.view.struts.AdministrarObraPlanillaCuadraDAction"
+		    scope="request"
+        	validate="false"
+	        name="planillaCuadraAdapter"
+            parameter="method"
+    	    input=".rec.cdm.view.planillaCuadraAdapter"
+	        attribute="planillaCuadraAdapter">
+            
+    	    <forward name="obraPlanillaCuadraViewAdapter"     path=".rec.cdm.view.obraPlanillaCuadraViewAdapter" />
+    	    <!-- En caso de error en el agregar voy a este forward -->
+	   	    <forward name="planillaCuadraSearchPage"    	  path=".rec.cdm.view.planillaCuadraSearchPage" />    	    
+	    </action>
+
+	    <!-- Administrar Obra Reprogramar Vencimientos (Detalle)-->	    
+		<action
+     		path="/rec/AdministrarObrRepVen"
+	        type="ar.gov.rosario.siat.rec.view.struts.AdministrarObrRepVenDAction"
+		    scope="request"
+        	validate="false"
+	        name="obrRepVenAdapter"
+            parameter="method"
+    	    input=".rec.cdm.view.obrRepVenEditAdapter"
+	        attribute="obrRepVenAdapter">
+            
+    	    <forward name="obrRepVenEditAdapter"     path=".rec.cdm.view.obrRepVenEditAdapter" />
+   	    </action>
+	    <!-- Fin Mantenedor de Obra (Encabezado/Detalle) -->
+	    
+	    <!-- Mantenedor Uso de CdM -->
+	    <action
+	    	path="/rec/BuscarUsoCdM"
+	        type="ar.gov.rosario.siat.rec.view.struts.BuscarUsoCdMDAction"
+			scope="request"
+	       	validate="false"
+	        name="usoCdMSearchPage"
+	        parameter="method"
+	   		input=".rec.cdm.view.usoCdMSearchPage"
+	        attribute="usoCdMSearchPage">
+	           
+	   	    <forward name="usoCdMSearchPage"   	path=".rec.cdm.view.usoCdMSearchPage" />
+	   	    <forward name="administrarUsoCdM" 	path="/rec/AdministrarUsoCdM.do?method=inicializar" />	
+	    </action>
+		
+		<action
+     		path="/rec/AdministrarUsoCdM"
+	        type="ar.gov.rosario.siat.rec.view.struts.AdministrarUsoCdMDAction"
+		    scope="request"
+        	validate="false"
+	        name="usoCdMAdapter"
+            parameter="method"
+    	    input=".rec.cdm.view.usoCdMEditAdapter"
+	        attribute="usoCdMAdapter">
+            
+    	    <forward name="usoCdMViewAdapter"		path=".rec.cdm.view.usoCdMViewAdapter" />
+    	    <forward name="usoCdMEditAdapter"       path=".rec.cdm.view.usoCdMEditAdapter" />
+		</action>
+	    <!-- Fin Mantenedor Uso de CdM -->
+	 	
+	 	<!-- Mantenedor Anulacion de Obra -->
+		<action
+	    	path="/rec/BuscarAnulacionObra"
+	        type="ar.gov.rosario.siat.rec.view.struts.BuscarAnulacionObraDAction"
+			scope="request"
+	       	validate="false"
+	        name="anulacionObraSearchPage"
+	        parameter="method"
+	   		input=".rec.cdm.view.anulacionObraSearchPage"
+	        attribute="usoCdMSearchPage">
+	           
+	   	    <forward name="anulacionObraSearchPage"   	path=".rec.cdm.view.anulacionObraSearchPage" />
+	   	    <forward name="administrarAnulacionObra" 	path="/rec/AdministrarAnulacionObra.do?method=inicializar" />
+	   	    <forward name="administrarProcesoAnulacionObra" path="/rec/AdministrarProcesoAnulacionObra.do?method=inicializar" />
+	    </action>
+	    
+		<action
+     		path="/rec/AdministrarAnulacionObra"
+	        type="ar.gov.rosario.siat.rec.view.struts.AdministrarAnulacionObraDAction"
+		    scope="request"
+        	validate="false"
+	        name="anulacionObraAdapter"
+            parameter="method"
+    	    input=".rec.cdm.view.anulacionObraEditAdapter"
+	        attribute="anulacionObraAdapter">
+            
+    	    <forward name="anulacionObraViewAdapter" path=".rec.cdm.view.anulacionObraViewAdapter" />
+    	    <forward name="anulacionObraEditAdapter" path=".rec.cdm.view.anulacionObraEditAdapter" />
+		</action>
+	    
+	    <action
+     		path="/rec/AdministrarProcesoAnulacionObra"
+	        type="ar.gov.rosario.siat.rec.view.struts.AdministrarProcesoAnulacionObraDAction"
+		    scope="request"
+        	validate="false"
+	        name="procesoAnulacionObraAdapter"
+            parameter="method"
+    	    input=".rec.cdm.view.procesoAnulacionObraAdapter"
+	        attribute="procesoAnulacionObraAdapter">
+            
+            <forward name="administrarAdpCorridaAnulacionObra" 	path="/pro/AdministrarAdpCorrida.do?method=inicializar" />
+			<forward name="procesoAnulacionObraAdapter"	    	path=".rec.cdm.view.procesoAnulacionObraAdapter" />
+	    </action>
+		<!-- Fin Mantenedor Anulacion de Obra -->
+		
+		<!-- Mantenedor Novedades de RS DReI -->
+		<action
+	    	path="/rec/BuscarNovedadRS"
+	        type="ar.gov.rosario.siat.rec.view.struts.BuscarNovedadRSDAction"
+			scope="request"
+	       	validate="false"
+	        name="novedadRSSearchPage"
+	        parameter="method"
+	   		input=".rec.drei.view.novedadRSSearchPage"
+	        attribute="novedadRSSearchPage">
+	           
+	   	    <forward name="novedadRSSearchPage"   		path=".rec.drei.view.novedadRSSearchPage" />
+	   	    <forward name="administrarNovedadRS" 	    path="/rec/AdministrarNovedadRS.do?method=inicializar" />	 			 		
+	    </action>
+	    
+	    <!-- Mantenedor Categorias de Novedades RS DReI -->
+	    
+	    <action
+	    	path="/rec/BuscarCatRSDrei"
+	        type="ar.gov.rosario.siat.rec.view.struts.BuscarCatRSDreiDAction"
+		    scope="request"
+	       	validate="false"
+	        name="catRSDreiSearchPage"
+	        parameter="method"
+	   	    input=".rec.drei.view.catRSDreiSearchPage"
+	        attribute="catRSDreiSearchPage">
+	        
+	        <forward name="catRSDreiSearchPage"   	 	path=".rec.drei.view.catRSDreiSearchPage" />
+	   	    <forward name="administrarEncCatRSDrei" 	path="/rec/AdministrarEncCatRSDrei.do?method=inicializar" />  
+	   	    <forward name="administrarCatRSDrei" 	    path="/rec/AdministrarCatRSDrei.do?method=inicializar" />
+	    </action>   
+	    
+		<action
+	    	path="/rec/AdministrarCatRSDrei"
+	        type="ar.gov.rosario.siat.rec.view.struts.AdministrarCatRSDreiDAction"
+			scope="request"
+	       	validate="false"
+	        name="catRSDreiAdapter"
+	        parameter="method"
+	   		input=".rec.drei.view.catRSDreiEditAdapter"
+	        attribute="catRSDreiAdapter">
+	           
+	   	    <forward name="catRSDreiViewAdapter"   	  path=".rec.drei.view.catRSDreiViewAdapter" />	 	
+    	    <forward name="catRSDreiEditAdapter"      path=".rec.drei.view.catRSDreiEditAdapter" />	 		
+    	      
+	    </action>
+	    
+	    <!-- Cliente WebService Novedades de RS DReI -->
+
+	    <action
+     		path="/rec/AdministrarNovedadRS"
+	        type="ar.gov.rosario.siat.rec.view.struts.AdministrarNovedadRSDAction"
+		    scope="request"
+        	validate="false"
+	        name="novedadRSAdapter"
+            parameter="method"
+    	    input=".rec.drei.view.novedadRSEditAdapter"
+	        attribute="novedadRSAdapter">
+            
+    	    <forward name="novedadRSViewAdapter"  	 path=".rec.drei.view.novedadRSViewAdapter" />
+    	    <forward name="novedadRSEditAdapter"     path=".rec.drei.view.novedadRSEditAdapter" />
+	   	</action>
+	    
+	 </action-mappings>
+</struts-config>

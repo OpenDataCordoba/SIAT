@@ -1,0 +1,159 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Mantenedor Sellado</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="pageHeader"></div>
+<div class="PageBody">
+	<span class="ObjectTitle">Mantenedor Sellado  : public   usecase</span>
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">16/07/2007 16:50:41</td>
+		</tr>
+		<tr>
+			<td class="ObjectDetailsTopic">Modified:</td>
+			<td class="ObjectDetailsValue">15/08/2008 15:32:18</td>
+		</tr>
+		<tr style="height: 10px"><td colspan="2"></td></tr>
+		<tr>
+			<td class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td class="ObjectDetailsValue">1.0</td>
+		</tr>
+		<tr id="proj02" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Phase:</td>
+			<td class="ObjectDetailsValue">1.0</td>
+		</tr>
+		<tr id="proj03" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Status:</td>
+			<td class="ObjectDetailsValue">R2</td>
+		</tr>
+		<tr id="proj04" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Complexity:</td>
+			<td class="ObjectDetailsValue">Medium</td>
+		</tr>
+		<tr>
+			<td class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">UUID:</td>
+			<td class="ObjectDetailsValue">{4ED55B50-2AF6-4970-B06E-82DE34760898}</td>
+		</tr>
+		<tr id="adv01" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
+			<td class="ObjectDetailsValue"><a href="EA535.htm">Diagrama de Balance</a></td>
+		</tr>
+	</table>
+	<div class="ObjectDetailsNotes">El CU tiene como objetivo la administración de Sellados.<br />Los sellados corresponden a las diferentes Tasas por actuación administrativa que se asocian a distintas acciones realizdas en SIAT.<br />Cada sellado cuenta con un código y una descripción. Además posee la siguiente información relacionada:<br />. Forma de calcular el importe: Puede ser un monto fijo o un porcentaje de algún otro valor.<br />. Acciones sobre SIAT que implicarían el uso del Sellado: Corresponde a la lista de acciones que cobran sellado. Por cada una, se establece un criterio para su selección que generalmente está dado en función de una cantidad de períodos. Por ejemplo, para el caso de una reconfección de deuda de TGI, la determinación de si se debe aplicar un sellado depende de la cantidad de de períodos vencidos en relación a la fecha de reconfección y los vencimientos de TGI.<br />. Distribución de partidas: Para cada sellado, se indica la forma en que se distribuye en partidas</div>
+
+	<div class="TableGroup" id="TableGroup">
+		<ul class="ItemTitle">
+			<li onClick="parent.toggleItem('Scenario');" id="ScenarioTitle">Scenarios</li>
+			<li onClick="parent.toggleItem('Links');" id="LinksTitle">Other Links</li>
+		</ul>
+		<div class="ItemBody" id="ScenarioTable">
+			<table align="center" border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="24%" class="TableHeading">Scenario</td>
+					<td width="8%" class="TableHeading">Type</td>
+					<td width="68%" class="TableHeading">Detail</td>
+				</tr>
+				<tr>
+					<td width="24%" class="TableRow">Agregar Sellado</td>
+					<td width="8%" class="TableRow">Alternate</td>
+					<td width="68%" class="TableRow"><div class="ObjectDetailsNotes"><br />Permite dar de alta un nuevo Sellado. Los datos a ingresar son código y descripción del sellado.</div>
+</td>
+				</tr>
+				<tr>
+					<td width="24%" class="TableRow">Buscar Sellados</td>
+					<td width="8%" class="TableRow">Alternate</td>
+					<td width="68%" class="TableRow"><div class="ObjectDetailsNotes">Permite realizar la búsqueda de Sellados definidos según distintos criterios de búsqueda a ingresar: Nro. Sellado, Descripción Sellado.<br />En caso de que la consulta tuvo exito, se muestra una lista de todos los Sellados encontrados, mostrando información descriptiva y las acciones &quot;Ver Sellado&quot;, &quot;Modificar Sellado&quot;, &quot;Eliminar Sellado&quot;.<br />Para agregar un nuevo Sellado se presenta la acción &quot;Agregar Sellado&quot;.</div>
+</td>
+				</tr>
+				<tr>
+					<td width="24%" class="TableRow">Eliminar Sellado</td>
+					<td width="8%" class="TableRow">Alternate</td>
+					<td width="68%" class="TableRow"><div class="ObjectDetailsNotes">Permite eliminar (lógicamente) un Sellado.<br /></div>
+</td>
+				</tr>
+				<tr>
+					<td width="24%" class="TableRow">Modificar Sellado</td>
+					<td width="8%" class="TableRow">Alternate</td>
+					<td width="68%" class="TableRow"><div class="ObjectDetailsNotes"><br />Permite actualizar información de un Sellado. <br /><br />Indicar el importe del sellado con vigencia.<br /><br />Asociar acciones por las que se debiese cobrar el importe del sellado, para cada acción asociada se debe indicar:<br />- canal<br />- recurso<br />- clasificación de deuda<br />- via deuda<br />- fecha de inicio de vigencia<br />para los cuales debe aplicarse el cobro del sellado<br /><br />Una vez definidas las acciones para el sellado, se debe indicar para cada una, en caso de que corresponda él o los criterios que determinan el cobro del sellado para la acción dependiendo de una cantidad considerada como parámetros del criterio.</div>
+</td>
+				</tr>
+				<tr>
+					<td width="24%" class="TableRow">Ver Sellado</td>
+					<td width="8%" class="TableRow">Alternate</td>
+					<td width="68%" class="TableRow"><div class="ObjectDetailsNotes">Proporciona información detallada del Sellado seleccionado.</div>
+</td>
+				</tr>
+
+			</table>
+		</div>
+		<div class="ItemBody" id="LinksTable">
+			<table align="center" border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="30%" class="TableHeading">Object</td>
+					<td width="15%" class="TableHeading">Type</td>
+					<td width="15%" class="TableHeading">Connection</td>
+					<td width="40%" class="TableHeading">Notes</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../../../../EA1/EA4/EA57.htm">«Functional» 59- En todos los casos que corresponda el pago de un sellado administrativo, si el trámite que está realizando el contribuyente genera un recibo de pago, el sellado debe salir incluido en el mismo recibo.</a></td>
+					<td width="15%" class="TableRow" valign="top">Requirement</td>
+					<td width="15%" class="TableRow" valign="top">Realisation</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../../../../EA1/EA4/EA57.htm">«Functional» 59- En todos los casos que corresponda el pago de un sellado administrativo, si el trámite que está realizando el contribuyente genera un recibo de pago, el sellado debe salir incluido en el mismo recibo.</a></td>
+					<td width="15%" class="TableRow" valign="top">Requirement</td>
+					<td width="15%" class="TableRow" valign="top">Realisation</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../../../../EA1/EA1/EA18.htm">«Functional» 70- Para la distribución en partidas presupuestarias de los conceptos tributarios que se recaudan, se deberán utilizar fórmulas que permitan aplicar cambios sin modificar el código de la aplicación.</a></td>
+					<td width="15%" class="TableRow" valign="top">Requirement</td>
+					<td width="15%" class="TableRow" valign="top">Realisation</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../../../EA3/EA629.htm">Administrador Definiciones SIAT</a></td>
+					<td width="15%" class="TableRow" valign="top">Actor</td>
+					<td width="15%" class="TableRow" valign="top">UseCase</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../../../EA3/EA635.htm">Balance y Asentamiento</a></td>
+					<td width="15%" class="TableRow" valign="top">Actor</td>
+					<td width="15%" class="TableRow" valign="top">UseCase</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+
+			</table>
+		</div>
+	</div>
+<div class="pageFooter"></div>
+ 
+</body>
+</html>

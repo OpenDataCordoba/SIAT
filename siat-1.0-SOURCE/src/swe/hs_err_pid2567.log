@@ -1,0 +1,463 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGBUS (0x7) at pc=0x00007f4ff05caf31, pid=2567, tid=139979617097472
+#
+# JRE version: 6.0_20-b02
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (16.3-b01 mixed mode linux-amd64 )
+# Problematic frame:
+# C  [libzip.so+0xaf31]
+#
+# If you would like to submit a bug report, please visit:
+#   http://java.sun.com/webapps/bugreport/crash.jsp
+# The crash happened outside the Java Virtual Machine in native code.
+# See problematic frame for where to report the bug.
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00007f4f840e0000):  JavaThread "Thread-12" daemon [_thread_in_native, id=3245, stack(0x00007f4f8b4a5000,0x00007f4f8b5a6000)]
+
+siginfo:si_signo=SIGBUS: si_errno=0, si_code=2 (BUS_ADRERR), si_addr=0x00007f4f9003a08e
+
+Registers:
+RAX=0x0000000000000000, RBX=0x00007f4f840c6c5c, RCX=0x00007f4f840000c8, RDX=0x00007f4f84000020
+RSP=0x00007f4f8b5a2fb0, RBP=0x00007f4f9003a071, RSI=0x0000000000000061, RDI=0x0000000000000000
+R8 =0x0000000000000000, R9 =0x0000000000000ffc, R10=0x00007f4ff22eaf18, R11=0x00007f4ff22eec38
+R12=0x00007f4f840b0720, R13=0x00007f4f840c6a00, R14=0x00007f4f8b5a3040, R15=0x0000000000000039
+RIP=0x00007f4ff05caf31, EFL=0x0000000000010206, CSGSFS=0x0000000000000033, ERR=0x0000000000000004
+  TRAPNO=0x000000000000000e
+
+Top of Stack: (sp=0x00007f4f8b5a2fb0)
+0x00007f4f8b5a2fb0:   00007f4f8b5a2fd0 00007f4f840c6c5c
+0x00007f4f8b5a2fc0:   00007f4f840c6a00 0000000000000000
+0x00007f4f8b5a2fd0:   000000000d92d615 00007f4f8b5a3040
+0x00007f4f8b5a2fe0:   0000000000000039 00007f4ff05cb2ad
+0x00007f4f8b5a2ff0:   00007f4f840e0000 00007f4f8b5a3040
+0x00007f4f8b5a3000:   00007f4f840e01b8 0000000000000039
+0x00007f4f8b5a3010:   00007f4f8b5a3498 0000000000000039
+0x00007f4f8b5a3020:   0000000000000001 00007f4ff05c3747
+0x00007f4f8b5a3030:   00007f4f8b5a3040 00007f4f840c6a00
+0x00007f4f8b5a3040:   722f766f672f7261 732f6f697261736f
+0x00007f4f8b5a3050:   657361622f746169 61642f737375622f
+0x00007f4f8b5a3060:   6948746169532f6f 556574616e726562
+0x00007f4f8b5a3070:   73616c632e6c6974 00007f4f8b000073
+0x00007f4f8b5a3080:   00007f4f8b5a3508 00007f4f8b5a350c
+0x00007f4f8b5a3090:   00007f4f8b5a3500 00007f4f8b5a3504
+0x00007f4f8b5a30a0:   00007f4fed97c9d0 00007f4f8b5a3100
+0x00007f4f8b5a30b0:   00007f4f8b5a3140 00007f4f840e0000
+0x00007f4f8b5a30c0:   00000000405d0990 00007f4f840e01b8
+0x00007f4f8b5a30d0:   00007f4f8b5a3290 00007f4fed5e6b05
+0x00007f4f8b5a30e0:   0000000000000001 00007f4f8b5a30f0
+0x00007f4f8b5a30f0:   00007f4ff2410120 00007f4ff2099ef2
+0x00007f4f8b5a3100:   00000000405766e0 00007f4ff2099fc1
+0x00007f4f8b5a3110:   00007f4f8b5a3150 00007f4ff1ba69a9
+0x00007f4f8b5a3120:   00007f4f8b5a33a0 00007f4f8b5a33a4
+0x00007f4f8b5a3130:   00007f4f8b5a33b0 00007f4f84000020
+0x00007f4f8b5a3140:   00007f4f8b5a3180 00007f4f840e0000
+0x00007f4f8b5a3150:   00007f4f8418f060 00007f4f840e0000
+0x00007f4f8b5a3160:   0000000000000000 00007f4ff24b530c
+0x00007f4f8b5a3170:   00007f4f841906e0 00007f4ff1f994c9
+0x00007f4f8b5a3180:   00007f4f8b5a3190 00007f4ff1ba6639
+0x00007f4f8b5a3190:   00007f4f8b5a31c0 00007f4ff1cb16c1
+0x00007f4f8b5a31a0:   000000000000000c 00007f4f845536a0 
+
+Instructions: (pc=0x00007f4ff05caf31)
+0x00007f4ff05caf21:   28 00 00 00 00 8b 6b 04 49 03 6d 18 49 2b 6d 28
+0x00007f4ff05caf31:   0f b6 45 1d 0f b6 5d 1c 44 0f b6 75 1e 44 0f b6 
+
+Stack: [0x00007f4f8b4a5000,0x00007f4f8b5a6000],  sp=0x00007f4f8b5a2fb0,  free space=3f70000000000000018k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [libzip.so+0xaf31]
+
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+J  java.util.zip.ZipFile.getEntry(JLjava/lang/String;Z)J
+J  java.util.jar.JarFile.getEntry(Ljava/lang/String;)Ljava/util/zip/ZipEntry;
+J  java.util.jar.JarFile.getJarEntry(Ljava/lang/String;)Ljava/util/jar/JarEntry;
+j  org.apache.catalina.loader.WebappClassLoader.findResourceInternal(Ljava/lang/String;Ljava/lang/String;)Lorg/apache/catalina/loader/ResourceEntry;+473
+j  org.apache.catalina.loader.WebappClassLoader.findClassInternal(Ljava/lang/String;)Ljava/lang/Class;+84
+j  org.apache.catalina.loader.WebappClassLoader.findClass(Ljava/lang/String;)Ljava/lang/Class;+301
+j  org.apache.catalina.loader.WebappClassLoader.loadClass(Ljava/lang/String;Z)Ljava/lang/Class;+451
+J  org.apache.catalina.loader.WebappClassLoader.loadClass(Ljava/lang/String;)Ljava/lang/Class;
+v  ~StubRoutines::call_stub
+j  ar.gov.rosario.siat.def.buss.service.DefConfiguracionServiceHbmImpl.updateSiatParam()V+40
+j  ar.gov.rosario.siat.def.buss.service.DefConfiguracionServiceHbmImpl.initializeSiat()V+66
+j  ar.gov.rosario.siat.base.view.util.SiatListener.contextInitialized(Ljavax/servlet/ServletContextEvent;)V+11
+j  org.apache.catalina.core.StandardContext.listenerStart()Z+523
+j  org.apache.catalina.core.StandardContext$1.call()Ljava/lang/Boolean;+12
+j  org.apache.catalina.core.StandardContext$1.call()Ljava/lang/Object;+1
+j  java.util.concurrent.FutureTask$Sync.innerRun()V+30
+j  java.util.concurrent.FutureTask.run()V+4
+j  java.util.concurrent.ThreadPoolExecutor$Worker.runTask(Ljava/lang/Runnable;)V+59
+j  java.util.concurrent.ThreadPoolExecutor$Worker.run()V+28
+j  java.lang.Thread.run()V+11
+v  ~StubRoutines::call_stub
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+=>0x00007f4f840e0000 JavaThread "Thread-12" daemon [_thread_in_native, id=3245, stack(0x00007f4f8b4a5000,0x00007f4f8b5a6000)]
+  0x0000000041f8e000 JavaThread ""http-bio-8080"-exec-10" daemon [_thread_blocked, id=2715, stack(0x00007f4f8b5f6000,0x00007f4f8b6f7000)]
+  0x00007f4f8d46a000 JavaThread ""http-bio-8080"-exec-9" daemon [_thread_blocked, id=2714, stack(0x00007f4f8b6f7000,0x00007f4f8b7f8000)]
+  0x00000000416c9800 JavaThread ""http-bio-8080"-exec-8" daemon [_thread_blocked, id=2625, stack(0x00007f4f8b7f8000,0x00007f4f8b8f9000)]
+  0x0000000041e7e000 JavaThread ""http-bio-8080"-exec-7" daemon [_thread_blocked, id=2624, stack(0x00007f4f8b8f9000,0x00007f4f8b9fa000)]
+  0x00007f4f8c5fc800 JavaThread ""http-bio-8080"-exec-6" daemon [_thread_blocked, id=2623, stack(0x00007f4f8b9fa000,0x00007f4f8bafb000)]
+  0x00007f4f8c5a9000 JavaThread ""http-bio-8080"-exec-5" daemon [_thread_blocked, id=2622, stack(0x00007f4f8bafb000,0x00007f4f8bbfc000)]
+  0x00007f4f84025800 JavaThread ""http-bio-8080"-exec-4" daemon [_thread_blocked, id=2612, stack(0x00007f4f8bbfc000,0x00007f4f8bcfd000)]
+  0x00007f4f8c70b800 JavaThread ""http-bio-8080"-exec-3" daemon [_thread_blocked, id=2611, stack(0x00007f4f8bcfd000,0x00007f4f8bdfe000)]
+  0x0000000040d2f800 JavaThread ""http-bio-8080"-exec-2" daemon [_thread_blocked, id=2610, stack(0x00007f4f8bdfe000,0x00007f4f8beff000)]
+  0x0000000040d2e800 JavaThread ""http-bio-8080"-exec-1" daemon [_thread_blocked, id=2609, stack(0x00007f4f8beff000,0x00007f4f8c000000)]
+  0x00007f4f8cea0800 JavaThread ""ajp-bio-8009"-AsyncTimeout" daemon [_thread_blocked, id=2606, stack(0x00007f4f900af000,0x00007f4f901b0000)]
+  0x00007f4f8c0ce000 JavaThread ""ajp-bio-8009"-Acceptor-0" daemon [_thread_in_native, id=2605, stack(0x00007f4f901b0000,0x00007f4f902b1000)]
+  0x00007f4f8cfd9000 JavaThread ""http-bio-8080"-AsyncTimeout" daemon [_thread_blocked, id=2604, stack(0x00007f4f902b1000,0x00007f4f903b2000)]
+  0x00007f4f8d187000 JavaThread ""http-bio-8080"-Acceptor-0" daemon [_thread_in_native, id=2603, stack(0x00007f4f9053a000,0x00007f4f9063b000)]
+  0x00007f4f8c2a1000 JavaThread "ContainerBackgroundProcessor[StandardEngine[Catalina]]" daemon [_thread_blocked, id=2602, stack(0x00007f4f9063b000,0x00007f4f9073c000)]
+  0x00007f4f8ce0d800 JavaThread "EngineProcessor[coop.tecso.adpcore.AdpEngine@12b16656]" daemon [_thread_blocked, id=2596, stack(0x00007f4f903b2000,0x00007f4f904b3000)]
+  0x00007f4f8c4cb800 JavaThread "GC Daemon" daemon [_thread_blocked, id=2583, stack(0x00007f4f90882000,0x00007f4f90983000)]
+  0x00007f4f8c036000 JavaThread "Low Memory Detector" daemon [_thread_blocked, id=2581, stack(0x00007f4f90bd0000,0x00007f4f90cd1000)]
+  0x00007f4f8c033800 JavaThread "CompilerThread1" daemon [_thread_blocked, id=2580, stack(0x00007f4f90cd1000,0x00007f4f90dd2000)]
+  0x00007f4f8c030800 JavaThread "CompilerThread0" daemon [_thread_blocked, id=2579, stack(0x00007f4f90dd2000,0x00007f4f90ed3000)]
+  0x00007f4f8c02e000 JavaThread "JDWP Event Helper Thread" daemon [_thread_blocked, id=2578, stack(0x00007f4f90ed3000,0x00007f4f90fd4000)]
+  0x00007f4f8c02a800 JavaThread "JDWP Transport Listener: dt_socket" daemon [_thread_in_native, id=2577, stack(0x00007f4f90fd4000,0x00007f4f910d5000)]
+  0x00007f4f8c01f000 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=2576, stack(0x00007f4f911d9000,0x00007f4f912da000)]
+  0x00007f4f8c001000 JavaThread "Finalizer" daemon [_thread_blocked, id=2575, stack(0x00007f4f912da000,0x00007f4f913db000)]
+  0x00000000405d8000 JavaThread "Reference Handler" daemon [_thread_blocked, id=2574, stack(0x00007f4f913db000,0x00007f4f914dc000)]
+  0x0000000040577800 JavaThread "main" [_thread_in_native, id=2568, stack(0x00007f4ff1643000,0x00007f4ff1744000)]
+
+Other Threads:
+  0x00000000405d3800 VMThread [stack: 0x00007f4f914dc000,0x00007f4f915dd000] [id=2573]
+  0x00007f4f8c038800 WatcherThread [stack: 0x00007f4f90acf000,0x00007f4f90bd0000] [id=2582]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap
+ PSYoungGen      total 379840K, used 166378K [0x00007f4fd45c0000, 0x00007f4fed5c0000, 0x00007f4fed5c0000)
+  eden space 351104K, 39% used [0x00007f4fd45c0000,0x00007f4fdcc344a0,0x00007f4fe9ca0000)
+  from space 28736K, 99% used [0x00007f4fe9ca0000,0x00007f4feb8a6440,0x00007f4feb8b0000)
+  to   space 29760K, 0% used [0x00007f4feb8b0000,0x00007f4feb8b0000,0x00007f4fed5c0000)
+ PSOldGen        total 160768K, used 94492K [0x00007f4fa25c0000, 0x00007f4fac2c0000, 0x00007f4fd45c0000)
+  object space 160768K, 58% used [0x00007f4fa25c0000,0x00007f4fa8207078,0x00007f4fac2c0000)
+ PSPermGen       total 174016K, used 127953K [0x00007f4f925c0000, 0x00007f4f9cfb0000, 0x00007f4fa25c0000)
+  object space 174016K, 73% used [0x00007f4f925c0000,0x00007f4f9a2b47f0,0x00007f4f9cfb0000)
+
+Dynamic libraries:
+40000000-40009000 r-xp 00000000 08:07 5642873                            /home/fedel/opt/jdk1.6.0_20/bin/java
+40108000-4010a000 rwxp 00008000 08:07 5642873                            /home/fedel/opt/jdk1.6.0_20/bin/java
+40537000-44070000 rwxp 00000000 00:00 0                                  [heap]
+7f4f84000000-7f4f84824000 rwxp 00000000 00:00 0 
+7f4f84824000-7f4f88000000 ---p 00000000 00:00 0 
+7f4f8b4a5000-7f4f8b4a8000 ---p 00000000 00:00 0 
+7f4f8b4a8000-7f4f8b5a6000 rwxp 00000000 00:00 0 
+7f4f8b5a6000-7f4f8b5ae000 r-xs 00028000 08:07 6296886                    /home/fedel/opt/apache-tomcat-7.0.14-8070/webapps/siat/WEB-INF/lib/xml-apis.jar
+7f4f8b5ae000-7f4f8b5d3000 r-xs 002e3000 08:07 6296517                    /home/fedel/opt/apache-tomcat-7.0.14-8070/webapps/siat/WEB-INF/lib/xalan.jar
+7f4f8b5d3000-7f4f8b5d5000 r-xs 0000a000 08:07 6297003                    /home/fedel/opt/apache-tomcat-7.0.14-8070/webapps/siat/WEB-INF/lib/sweiface.jar
+7f4f8b5d5000-7f4f8b5f6000 r-xs 001b7000 08:07 6296667                    /home/fedel/opt/apache-tomcat-7.0.14-8070/webapps/siat/WEB-INF/lib/siatiface.jar
+7f4f8b5f6000-7f4f8b5f9000 ---p 00000000 00:00 0 
+7f4f8b5f9000-7f4f8b6f7000 rwxp 00000000 00:00 0 
+7f4f8b6f7000-7f4f8b6fa000 ---p 00000000 00:00 0 
+7f4f8b6fa000-7f4f8b7f8000 rwxp 00000000 00:00 0 
+7f4f8b7f8000-7f4f8b7fb000 ---p 00000000 00:00 0 
+7f4f8b7fb000-7f4f8b8f9000 rwxp 00000000 00:00 0 
+7f4f8b8f9000-7f4f8b8fc000 ---p 00000000 00:00 0 
+7f4f8b8fc000-7f4f8b9fa000 rwxp 00000000 00:00 0 
+7f4f8b9fa000-7f4f8b9fd000 ---p 00000000 00:00 0 
+7f4f8b9fd000-7f4f8bafb000 rwxp 00000000 00:00 0 
+7f4f8bafb000-7f4f8bafe000 ---p 00000000 00:00 0 
+7f4f8bafe000-7f4f8bbfc000 rwxp 00000000 00:00 0 
+7f4f8bbfc000-7f4f8bbff000 ---p 00000000 00:00 0 
+7f4f8bbff000-7f4f8bcfd000 rwxp 00000000 00:00 0 
+7f4f8bcfd000-7f4f8bd00000 ---p 00000000 00:00 0 
+7f4f8bd00000-7f4f8bdfe000 rwxp 00000000 00:00 0 
+7f4f8bdfe000-7f4f8be01000 ---p 00000000 00:00 0 
+7f4f8be01000-7f4f8beff000 rwxp 00000000 00:00 0 
+7f4f8beff000-7f4f8bf02000 ---p 00000000 00:00 0 
+7f4f8bf02000-7f4f8c000000 rwxp 00000000 00:00 0 
+7f4f8c000000-7f4f8ef43000 rwxp 00000000 00:00 0 
+7f4f8ef43000-7f4f90000000 ---p 00000000 00:00 0 
+7f4f90000000-7f4f90002000 r-xs 00014000 08:07 6296888                    /home/fedel/opt/apache-tomcat-7.0.14-8070/webapps/siat/WEB-INF/lib/swebuss.jar
+7f4f90002000-7f4f9000c000 r-xs 0007d000 08:07 6296869                    /home/fedel/opt/apache-tomcat-7.0.14-8070/webapps/siat/WEB-INF/lib/struts.jar
+7f4f9000c000-7f4f9000d000 r-xs 00002000 08:07 6296756                    /home/fedel/opt/apache-tomcat-7.0.14-8070/webapps/siat/WEB-INF/lib/struts-legacy.jar
+7f4f9000d000-7f4f9000e000 r-xs 00005000 08:07 6296734                    /home/fedel/opt/apache-tomcat-7.0.14-8070/webapps/siat/WEB-INF/lib/siatseg.jar
+7f4f9000e000-7f4f90010000 r-xs 0000d000 08:07 6296726                    /home/fedel/opt/apache-tomcat-7.0.14-8070/webapps/siat/WEB-INF/lib/siatrod.jar
+7f4f90010000-7f4f90012000 r-xs 0002e000 08:07 6296688                    /home/fedel/opt/apache-tomcat-7.0.14-8070/webapps/siat/WEB-INF/lib/siatrec.jar
+7f4f90012000-7f4f90015000 r-xs 0005a000 08:07 6296820                    /home/fedel/opt/apache-tomcat-7.0.14-8070/webapps/siat/WEB-INF/lib/siatproceso.jar
+7f4f90015000-7f4f90017000 r-xs 0000a000 08:07 6297017                    /home/fedel/opt/apache-tomcat-7.0.14-8070/webapps/siat/WEB-INF/lib/siatpro.jar
+7f4f90017000-7f4f9001b000 r-xs 00058000 08:07 6296488                    /home/fedel/opt/apache-tomcat-7.0.14-8070/webapps/siat/WEB-INF/lib/siatpad.jar
+7f4f9001b000-7f4f90024000 r-xs 00145000 08:07 6297034                    /home/fedel/opt/apache-tomcat-7.0.14-8070/webapps/siat/WEB-INF/lib/siatgde.jar
+7f4f90024000-7f4f90025000 r-xs 00005000 08:07 6296673                    /home/fedel/opt/apache-tomcat-7.0.14-8070/webapps/siat/WEB-INF/lib/siatfrm.jar
+7f4f90025000-7f4f90027000 r-xs 00002000 08:07 6296433                    /home/fedel/opt/apache-tomcat-7.0.14-8070/webapps/siat/WEB-INF/lib/siatfra.jar
+7f4f90027000-7f4f90029000 r-xs 00018000 08:07 6296806                    /home/fedel/opt/apache-tomcat-7.0.14-8070/webapps/siat/WEB-INF/lib/siatexe.jar
+7f4f90029000-7f4f9002b000 r-xs 0002d000 08:07 6296675                    /home/fedel/opt/apache-tomcat-7.0.14-8070/webapps/siat/WEB-INF/lib/siatemi.jar
+7f4f9002b000-7f4f9002e000 r-xs 00054000 08:07 6296655                    /home/fedel/opt/apache-tomcat-7.0.14-8070/webapps/siat/WEB-INF/lib/siatef.jar
+7f4f9002e000-7f4f90031000 r-xs 0002f000 08:07 6296599                    /home/fedel/opt/apache-tomcat-7.0.14-8070/webapps/siat/WEB-INF/lib/siatdemoda.jar
+7f4f90031000-7f4f90035000 r-xs 00056000 08:07 6296788                    /home/fedel/opt/apache-tomcat-7.0.14-8070/webapps/siat/WEB-INF/lib/siatdef.jar
+7f4f90035000-7f4f90037000 r-xs 0001c000 08:07 6296630                    /home/fedel/opt/apache-tomcat-7.0.14-8070/webapps/siat/WEB-INF/lib/siatcyq.jar
+7f4f90037000-7f4f90039000 r-xs 00011000 08:07 6296970                    /home/fedel/opt/apache-tomcat-7.0.14-8070/webapps/siat/WEB-INF/lib/siatcas.jar
+7f4f90039000-7f4f9003b000 r-xs 00003000 08:07 6296728                    /home/fedel/opt/apache-tomcat-7.0.14-8070/webapps/siat/WEB-INF/lib/siatbase.jar
+7f4f9003b000-7f4f90043000 r-xs 000e6000 08:07 6296827                    /home/fedel/opt/apache-tomcat-7.0.14-8070/webapps/siat/WEB-INF/lib/siatbal.jar
+7f4f90043000-7f4f90045000 r-xs 0000e000 08:07 6296876                    /home/fedel/opt/apache-tomcat-7.0.14-8070/webapps/siat/WEB-INF/lib/siatafi.jar
+7f4f90045000-7f4f90047000 r-xs 00012000 08:07 6296627                    /home/fedel/opt/apache-tomcat-7.0.14-8070/webapps/siat/WEB-INF/lib/siatadpcore.jar
+7f4f90047000-7f4f9004a000 r-xs 00041000 08:07 6296850                    /home/fedel/opt/apache-tomcat-7.0.14-8070/webapps/siat/WEB-INF/lib/serializer.jar
+7f4f9004a000-7f4f9004c000 r-xs 00011000 08:07 6296721                    /home/fedel/opt/apache-tomcat-7.0.14-8070/webapps/siat/WEB-INF/lib/providerutil.jar
+7f4f9004c000-7f4f90058000 r-xs 000b8000 08:07 6296939                    /home/fedel/opt/apache-tomcat-7.0.14-8070/webapps/siat/WEB-INF/lib/poi.jar
+7f4f90058000-7f4f9005a000 r-xs 00002000 08:07 6297036                    /home/fedel/opt/apache-tomcat-7.0.14-8070/webapps/siat/WEB-INF/lib/odmg-3.0.jar
+7f4f9005a000-7f4f90060000 r-xs 00059000 08:07 6296574                    /home/fedel/opt/apache-tomcat-7.0.14-8070/webapps/siat/WEB-INF/lib/mail-1.4.jar
+7f4f90060000-7f4f90067000 r-xs 00051000 08:07 6296695                    /home/fedel/opt/apache-tomcat-7.0.14-8070/webapps/siat/WEB-INF/lib/log4j-1.2.13.jar
+7f4f90067000-7f4f9006a000 r-xs 0001b000 08:07 6296703                    /home/fedel/opt/apache-tomcat-7.0.14-8070/webapps/siat/WEB-INF/lib/junit.jar
+7f4f9006a000-7f4f9006c000 r-xs 00001000 08:07 6296854                    /home/fedel/opt/apache-tomcat-7.0.14-8070/webapps/siat/WEB-INF/lib/jta.jar
+7f4f9006c000-7f4f90078000 r-xs 000fd000 08:07 6296768                    /home/fedel/opt/apache-tomcat-7.0.14-8070/webapps/siat/WEB-INF/lib/js.jar
+7f4f90078000-7f4f9007b000 r-xs 00013000 08:07 6296902                    /home/fedel/opt/apache-tomcat-7.0.14-8070/webapps/siat/WEB-INF/lib/jdbm-1.0.jar
+7f4f9007b000-7f4f90087000 r-xs 0010a000 08:07 6296882                    /home/fedel/opt/apache-tomcat-7.0.14-8070/webapps/siat/WEB-INF/lib/iText-2.1.6.jar
+7f4f90087000-7f4f900a8000 r-xs 00203000 08:07 6297018                    /home/fedel/opt/apache-tomcat-7.0.14-8070/webapps/siat/WEB-INF/lib/hibernate3.jar
+7f4f900a8000-7f4f900ab000 r-xs 0000e000 08:07 6296560                    /home/fedel/opt/apache-tomcat-7.0.14-8070/webapps/siat/WEB-INF/lib/hibernate-commons-annotations.jar
+7f4f900ab000-7f4f900af000 r-xs 0003d000 08:07 6296585                    /home/fedel/opt/apache-tomcat-7.0.14-8070/webapps/siat/WEB-INF/lib/hibernate-annotations.jar
+7f4f900af000-7f4f900b2000 ---p 00000000 00:00 0 
+7f4f900b2000-7f4f901b0000 rwxp 00000000 00:00 0 
+7f4f901b0000-7f4f901b3000 ---p 00000000 00:00 0 
+7f4f901b3000-7f4f902b1000 rwxp 00000000 00:00 0 
+7f4f902b1000-7f4f902b4000 ---p 00000000 00:00 0 
+7f4f902b4000-7f4f903b2000 rwxp 00000000 00:00 0 
+7f4f903b2000-7f4f903b5000 ---p 00000000 00:00 0 
+7f4f903b5000-7f4f904b3000 rwxp 00000000 00:00 0 
+7f4f904b3000-7f4f904b4000 r-xs 00002000 08:07 6295549                    /home/fedel/opt/apache-tomcat-7.0.14-8070/webapps/siat/WEB-INF/lib/siatper.jar
+7f4f904b4000-7f4f904b6000 r-xs 00014000 08:07 6296635                    /home/fedel/opt/apache-tomcat-7.0.14-8070/webapps/siat/WEB-INF/lib/grs.jar
+7f4f904b6000-7f4f904b7000 r-xs 00005000 08:07 6296978                    /home/fedel/opt/apache-tomcat-7.0.14-8070/webapps/siat/WEB-INF/lib/fscontext.jar
+7f4f904b7000-7f4f904d0000 r-xs 0015b000 08:07 6296855                    /home/fedel/opt/apache-tomcat-7.0.14-8070/webapps/siat/WEB-INF/lib/fop.jar
+7f4f904d0000-7f4f904d3000 r-xs 0000a000 08:07 6296979                    /home/fedel/opt/apache-tomcat-7.0.14-8070/webapps/siat/WEB-INF/lib/ejb3-persistence.jar
+7f4f904d3000-7f4f904d8000 r-xs 00048000 08:07 6296554                    /home/fedel/opt/apache-tomcat-7.0.14-8070/webapps/siat/WEB-INF/lib/dom4j-1.6.1.jar
+7f4f904d8000-7f4f904da000 r-xs 00013000 08:07 6296796                    /home/fedel/opt/apache-tomcat-7.0.14-8070/webapps/siat/WEB-INF/lib/commons-validator.jar
+7f4f904da000-7f4f904dc000 r-xs 0000d000 08:07 6296926                    /home/fedel/opt/apache-tomcat-7.0.14-8070/webapps/siat/WEB-INF/lib/commons-logging-1.1.1.jar
+7f4f904dc000-7f4f904de000 r-xs 0000e000 08:07 6296878                    /home/fedel/opt/apache-tomcat-7.0.14-8070/webapps/siat/WEB-INF/lib/commons-lang.jar
+7f4f904de000-7f4f904e1000 r-xs 00018000 08:07 6296959                    /home/fedel/opt/apache-tomcat-7.0.14-8070/webapps/siat/WEB-INF/lib/commons-io-1.4.jar
+7f4f904e1000-7f4f904e7000 r-xs 00045000 08:07 6296960                    /home/fedel/opt/apache-tomcat-7.0.14-8070/webapps/siat/WEB-INF/lib/commons-httpclient-3.1.jar
+7f4f904e7000-7f4f904e9000 r-xs 0000b000 08:07 6296645                    /home/fedel/opt/apache-tomcat-7.0.14-8070/webapps/siat/WEB-INF/lib/commons-fileupload-1.2.jar
+7f4f904e9000-7f4f904ec000 r-xs 0000f000 08:07 6296990                    /home/fedel/opt/apache-tomcat-7.0.14-8070/webapps/siat/WEB-INF/lib/commons-discovery-0.2.jar
+7f4f904ec000-7f4f904f0000 r-xs 00026000 08:07 6296646                    /home/fedel/opt/apache-tomcat-7.0.14-8070/webapps/siat/WEB-INF/lib/commons-digester.jar
+7f4f904f0000-7f4f904f6000 r-xs 00025000 08:07 6296995                    /home/fedel/opt/apache-tomcat-7.0.14-8070/webapps/siat/WEB-INF/lib/commons-collections-2.1.1.jar
+7f4f904f6000-7f4f904f8000 r-xs 0000a000 08:07 6296908                    /home/fedel/opt/apache-tomcat-7.0.14-8070/webapps/siat/WEB-INF/lib/commons-codec-1.3.jar
+7f4f904f8000-7f4f904fd000 r-xs 0002a000 08:07 6296829                    /home/fedel/opt/apache-tomcat-7.0.14-8070/webapps/siat/WEB-INF/lib/commons-beanutils.jar
+7f4f904fd000-7f4f90503000 r-xs 0003f000 08:07 6296865                    /home/fedel/opt/apache-tomcat-7.0.14-8070/webapps/siat/WEB-INF/lib/cglib-2.1.3.jar
+7f4f90503000-7f4f9052c000 r-xs 001db000 08:07 6296772                    /home/fedel/opt/apache-tomcat-7.0.14-8070/webapps/siat/WEB-INF/lib/batik.jar
+7f4f9052c000-7f4f9052f000 r-xs 0000d000 08:07 6296948                    /home/fedel/opt/apache-tomcat-7.0.14-8070/webapps/siat/WEB-INF/lib/avalon-framework-cvs-20020806.jar
+7f4f9052f000-7f4f90530000 r-xs 00006000 08:07 6296831                    /home/fedel/opt/apache-tomcat-7.0.14-8070/webapps/siat/WEB-INF/lib/asm.jar
+7f4f90530000-7f4f90532000 r-xs 00003000 08:07 6296841                    /home/fedel/opt/apache-tomcat-7.0.14-8070/webapps/siat/WEB-INF/lib/asm-attrs.jar
+7f4f90532000-7f4f90538000 r-xs 00067000 08:07 6296936                    /home/fedel/opt/apache-tomcat-7.0.14-8070/webapps/siat/WEB-INF/lib/antlr-2.7.6.jar
+7f4f90538000-7f4f9053a000 r-xs 0000e000 08:07 6296578                    /home/fedel/opt/apache-tomcat-7.0.14-8070/webapps/siat/WEB-INF/lib/activation-1.1.jar
+7f4f9053a000-7f4f9053d000 ---p 00000000 00:00 0 
+7f4f9053d000-7f4f9063b000 rwxp 00000000 00:00 0 
+7f4f9063b000-7f4f9063e000 ---p 00000000 00:00 0 
+7f4f9063e000-7f4f9073c000 rwxp 00000000 00:00 0 
+7f4f9073c000-7f4f9075a000 r-xp 00000000 08:06 131351                     /usr/share/locale/es/LC_MESSAGES/libc.mo
+7f4f9075a000-7f4f90761000 r-xs 00111000 08:07 5643495                    /home/fedel/opt/jdk1.6.0_20/jre/lib/resources.jar
+7f4f90761000-7f4f90774000 r-xp 00000000 08:07 8126987                    /home/fedel/opt/jdk1.6.0_20/jre/lib/amd64/libnet.so
+7f4f90774000-7f4f90875000 ---p 00013000 08:07 8126987                    /home/fedel/opt/jdk1.6.0_20/jre/lib/amd64/libnet.so
+7f4f90875000-7f4f90878000 rwxp 00014000 08:07 8126987                    /home/fedel/opt/jdk1.6.0_20/jre/lib/amd64/libnet.so
+7f4f90878000-7f4f9087b000 r-xs 00027000 08:07 5643403                    /home/fedel/opt/jdk1.6.0_20/jre/lib/ext/sunjce_provider.jar
+7f4f9087b000-7f4f9087f000 r-xs 00035000 08:07 5643402                    /home/fedel/opt/jdk1.6.0_20/jre/lib/ext/sunpkcs11.jar
+7f4f9087f000-7f4f90882000 r-xs 00013000 08:07 5643511                    /home/fedel/opt/jdk1.6.0_20/jre/lib/jce.jar
+7f4f90882000-7f4f90885000 ---p 00000000 00:00 0 
+7f4f90885000-7f4f90983000 rwxp 00000000 00:00 0 
+7f4f90983000-7f4f90989000 r-xs 00092000 08:07 5643481                    /home/fedel/opt/jdk1.6.0_20/jre/lib/jsse.jar
+7f4f90989000-7f4f9098c000 r-xs 000cb000 08:07 5643494                    /home/fedel/opt/jdk1.6.0_20/jre/lib/ext/localedata.jar
+7f4f9098c000-7f4f9098e000 r-xs 00009000 08:07 5648998                    /home/fedel/opt/apache-tomcat-7.0.14-8070/lib/el-api.jar
+7f4f9098e000-7f4f90990000 r-xs 0000c000 08:07 5648993                    /home/fedel/opt/apache-tomcat-7.0.14-8070/lib/catalina-ant.jar
+7f4f90990000-7f4f90993000 r-xs 0000e000 08:07 5649006                    /home/fedel/opt/apache-tomcat-7.0.14-8070/lib/tomcat-i18n-es.jar
+7f4f90993000-7f4f90997000 r-xs 00036000 08:07 5649005                    /home/fedel/opt/apache-tomcat-7.0.14-8070/lib/tomcat-dbcp.jar
+7f4f90997000-7f4f9099a000 r-xs 00013000 08:07 5649001                    /home/fedel/opt/apache-tomcat-7.0.14-8070/lib/jsp-api.jar
+7f4f9099a000-7f4f909a9000 r-xs 00190000 08:07 5648997                    /home/fedel/opt/apache-tomcat-7.0.14-8070/lib/ecj-3.6.2.jar
+7f4f909a9000-7f4f909ac000 r-xs 0000a000 08:07 5649007                    /home/fedel/opt/apache-tomcat-7.0.14-8070/lib/tomcat-i18n-fr.jar
+7f4f909ac000-7f4f909ae000 r-xs 0001e000 08:07 5648994                    /home/fedel/opt/apache-tomcat-7.0.14-8070/lib/catalina-ha.jar
+7f4f909ae000-7f4f909ba000 r-xs 000ab000 08:07 5649004                    /home/fedel/opt/apache-tomcat-7.0.14-8070/lib/tomcat-coyote.jar
+7f4f909ba000-7f4f909be000 r-xs 00028000 08:07 5649002                    /home/fedel/opt/apache-tomcat-7.0.14-8070/lib/servlet-api.jar
+7f4f909be000-7f4f909c0000 r-xs 0001c000 08:07 5648999                    /home/fedel/opt/apache-tomcat-7.0.14-8070/lib/jasper-el.jar
+7f4f909c0000-7f4f909c8000 r-xs 00088000 08:07 5649000                    /home/fedel/opt/apache-tomcat-7.0.14-8070/lib/jasper.jar
+7f4f909c8000-7f4f909ce000 r-xp 00000000 08:07 8127034                    /home/fedel/opt/jdk1.6.0_20/jre/lib/amd64/libmanagement.so
+7f4f909ce000-7f4f90acd000 ---p 00006000 08:07 8127034                    /home/fedel/opt/jdk1.6.0_20/jre/lib/amd64/libmanagement.so
+7f4f90acd000-7f4f90acf000 rwxp 00005000 08:07 8127034                    /home/fedel/opt/jdk1.6.0_20/jre/lib/amd64/libmanagement.so
+7f4f90acf000-7f4f90ad0000 ---p 00000000 00:00 0 
+7f4f90ad0000-7f4f90bd0000 rwxp 00000000 00:00 0 
+7f4f90bd0000-7f4f90bd3000 ---p 00000000 00:00 0 
+7f4f90bd3000-7f4f90cd1000 rwxp 00000000 00:00 0 
+7f4f90cd1000-7f4f90cd4000 ---p 00000000 00:00 0 
+7f4f90cd4000-7f4f90dd2000 rwxp 00000000 00:00 0 
+7f4f90dd2000-7f4f90dd5000 ---p 00000000 00:00 0 
+7f4f90dd5000-7f4f90ed3000 rwxp 00000000 00:00 0 
+7f4f90ed3000-7f4f90ed6000 ---p 00000000 00:00 0 
+7f4f90ed6000-7f4f90fd4000 rwxp 00000000 00:00 0 
+7f4f90fd4000-7f4f90fd7000 ---p 00000000 00:00 0 
+7f4f90fd7000-7f4f910d5000 rwxp 00000000 00:00 0 
+7f4f910d5000-7f4f910d8000 r-xp 00000000 08:07 8127023                    /home/fedel/opt/jdk1.6.0_20/jre/lib/amd64/libdt_socket.so
+7f4f910d8000-7f4f911d7000 ---p 00003000 08:07 8127023                    /home/fedel/opt/jdk1.6.0_20/jre/lib/amd64/libdt_socket.so
+7f4f911d7000-7f4f911d9000 rwxp 00002000 08:07 8127023                    /home/fedel/opt/jdk1.6.0_20/jre/lib/amd64/libdt_socket.so
+7f4f911d9000-7f4f911dc000 ---p 00000000 00:00 0 
+7f4f911dc000-7f4f912da000 rwxp 00000000 00:00 0 
+7f4f912da000-7f4f912dd000 ---p 00000000 00:00 0 
+7f4f912dd000-7f4f913db000 rwxp 00000000 00:00 0 
+7f4f913db000-7f4f913de000 ---p 00000000 00:00 0 
+7f4f913de000-7f4f914dc000 rwxp 00000000 00:00 0 
+7f4f914dc000-7f4f914dd000 ---p 00000000 00:00 0 
+7f4f914dd000-7f4f91b15000 rwxp 00000000 00:00 0 
+7f4f91b15000-7f4f91cab000 r-xs 02fd0000 08:07 5637787                    /home/fedel/opt/jdk1.6.0_20/jre/lib/rt.jar
+7f4f91cab000-7f4f91cd3000 rwxp 00000000 00:00 0 
+7f4f91cd3000-7f4f91cd4000 ---p 00000000 00:00 0 
+7f4f91cd4000-7f4f91dd4000 rwxp 00000000 00:00 0 
+7f4f91dd4000-7f4f91dd5000 ---p 00000000 00:00 0 
+7f4f91dd5000-7f4f91ed5000 rwxp 00000000 00:00 0 
+7f4f91ed5000-7f4f91ed6000 ---p 00000000 00:00 0 
+7f4f91ed6000-7f4f91fd6000 rwxp 00000000 00:00 0 
+7f4f91fd6000-7f4f91fd7000 ---p 00000000 00:00 0 
+7f4f91fd7000-7f4f9212c000 rwxp 00000000 00:00 0 
+7f4f9212c000-7f4f92157000 rwxp 00000000 00:00 0 
+7f4f92157000-7f4f921a6000 rwxp 00000000 00:00 0 
+7f4f921a6000-7f4f922e7000 rwxp 00000000 00:00 0 
+7f4f922e7000-7f4f9233c000 rwxp 00000000 00:00 0 
+7f4f9233c000-7f4f92367000 rwxp 00000000 00:00 0 
+7f4f92367000-7f4f923b6000 rwxp 00000000 00:00 0 
+7f4f923b6000-7f4f924f7000 rwxp 00000000 00:00 0 
+7f4f924f7000-7f4f925bf000 rwxp 00000000 00:00 0 
+7f4f925bf000-7f4f9cfb0000 rwxp 00000000 00:00 0 
+7f4f9cfb0000-7f4fa25c0000 rwxp 00000000 00:00 0 
+7f4fa25c0000-7f4fac2c0000 rwxp 00000000 00:00 0 
+7f4fac2c0000-7f4fd45c0000 rwxp 00000000 00:00 0 
+7f4fd45c0000-7f4fed5c0000 rwxp 00000000 00:00 0 
+7f4fed5c0000-7f4fede20000 rwxp 00000000 00:00 0 
+7f4fede20000-7f4ff05c0000 rwxp 00000000 00:00 0 
+7f4ff05c0000-7f4ff05ce000 r-xp 00000000 08:07 8126998                    /home/fedel/opt/jdk1.6.0_20/jre/lib/amd64/libzip.so
+7f4ff05ce000-7f4ff06d0000 ---p 0000e000 08:07 8126998                    /home/fedel/opt/jdk1.6.0_20/jre/lib/amd64/libzip.so
+7f4ff06d0000-7f4ff06d3000 rwxp 00010000 08:07 8126998                    /home/fedel/opt/jdk1.6.0_20/jre/lib/amd64/libzip.so
+7f4ff06d3000-7f4ff06d4000 rwxp 00000000 00:00 0 
+7f4ff06d4000-7f4ff06df000 r-xp 00000000 08:06 1184031                    /lib/libnss_files-2.13.so
+7f4ff06df000-7f4ff08de000 ---p 0000b000 08:06 1184031                    /lib/libnss_files-2.13.so
+7f4ff08de000-7f4ff08df000 r-xp 0000a000 08:06 1184031                    /lib/libnss_files-2.13.so
+7f4ff08df000-7f4ff08e0000 rwxp 0000b000 08:06 1184031                    /lib/libnss_files-2.13.so
+7f4ff08e0000-7f4ff08e2000 r-xp 00000000 08:06 266328                     /usr/lib/gconv/ISO8859-1.so
+7f4ff08e2000-7f4ff0ae1000 ---p 00002000 08:06 266328                     /usr/lib/gconv/ISO8859-1.so
+7f4ff0ae1000-7f4ff0ae2000 r-xp 00001000 08:06 266328                     /usr/lib/gconv/ISO8859-1.so
+7f4ff0ae2000-7f4ff0ae3000 rwxp 00002000 08:06 266328                     /usr/lib/gconv/ISO8859-1.so
+7f4ff0ae3000-7f4ff0c98000 r-xp 00000000 08:06 163351                     /usr/lib/locale/locale-archive
+7f4ff0c98000-7f4ff0c9b000 r-xp 00000000 08:07 8126989                    /home/fedel/opt/jdk1.6.0_20/jre/lib/amd64/libnpt.so
+7f4ff0c9b000-7f4ff0d9a000 ---p 00003000 08:07 8126989                    /home/fedel/opt/jdk1.6.0_20/jre/lib/amd64/libnpt.so
+7f4ff0d9a000-7f4ff0d9b000 rwxp 00002000 08:07 8126989                    /home/fedel/opt/jdk1.6.0_20/jre/lib/amd64/libnpt.so
+7f4ff0d9b000-7f4ff0dd1000 r-xp 00000000 08:07 8127015                    /home/fedel/opt/jdk1.6.0_20/jre/lib/amd64/libjdwp.so
+7f4ff0dd1000-7f4ff0ed0000 ---p 00036000 08:07 8127015                    /home/fedel/opt/jdk1.6.0_20/jre/lib/amd64/libjdwp.so
+7f4ff0ed0000-7f4ff0eda000 rwxp 00035000 08:07 8127015                    /home/fedel/opt/jdk1.6.0_20/jre/lib/amd64/libjdwp.so
+7f4ff0eda000-7f4ff0ee1000 r-xp 00000000 08:07 8127000                    /home/fedel/opt/jdk1.6.0_20/jre/lib/amd64/native_threads/libhpi.so
+7f4ff0ee1000-7f4ff0fe2000 ---p 00007000 08:07 8127000                    /home/fedel/opt/jdk1.6.0_20/jre/lib/amd64/native_threads/libhpi.so
+7f4ff0fe2000-7f4ff0fe4000 rwxp 00008000 08:07 8127000                    /home/fedel/opt/jdk1.6.0_20/jre/lib/amd64/native_threads/libhpi.so
+7f4ff0fe4000-7f4ff0fe5000 rwxp 00000000 00:00 0 
+7f4ff0fe5000-7f4ff0ffa000 r-xp 00000000 08:06 1184024                    /lib/libnsl-2.13.so
+7f4ff0ffa000-7f4ff11f9000 ---p 00015000 08:06 1184024                    /lib/libnsl-2.13.so
+7f4ff11f9000-7f4ff11fa000 r-xp 00014000 08:06 1184024                    /lib/libnsl-2.13.so
+7f4ff11fa000-7f4ff11fb000 rwxp 00015000 08:06 1184024                    /lib/libnsl-2.13.so
+7f4ff11fb000-7f4ff11fd000 rwxp 00000000 00:00 0 
+7f4ff11fd000-7f4ff1226000 r-xp 00000000 08:07 8127011                    /home/fedel/opt/jdk1.6.0_20/jre/lib/amd64/libjava.so
+7f4ff1226000-7f4ff1325000 ---p 00029000 08:07 8127011                    /home/fedel/opt/jdk1.6.0_20/jre/lib/amd64/libjava.so
+7f4ff1325000-7f4ff132c000 rwxp 00028000 08:07 8127011                    /home/fedel/opt/jdk1.6.0_20/jre/lib/amd64/libjava.so
+7f4ff132c000-7f4ff1339000 r-xp 00000000 08:07 8126993                    /home/fedel/opt/jdk1.6.0_20/jre/lib/amd64/libverify.so
+7f4ff1339000-7f4ff1438000 ---p 0000d000 08:07 8126993                    /home/fedel/opt/jdk1.6.0_20/jre/lib/amd64/libverify.so
+7f4ff1438000-7f4ff143b000 rwxp 0000c000 08:07 8126993                    /home/fedel/opt/jdk1.6.0_20/jre/lib/amd64/libverify.so
+7f4ff143b000-7f4ff1442000 r-xp 00000000 08:06 1187301                    /lib/librt-2.13.so
+7f4ff1442000-7f4ff1641000 ---p 00007000 08:06 1187301                    /lib/librt-2.13.so
+7f4ff1641000-7f4ff1642000 r-xp 00006000 08:06 1187301                    /lib/librt-2.13.so
+7f4ff1642000-7f4ff1643000 rwxp 00007000 08:06 1187301                    /lib/librt-2.13.so
+7f4ff1643000-7f4ff1646000 ---p 00000000 00:00 0 
+7f4ff1646000-7f4ff1744000 rwxp 00000000 00:00 0 
+7f4ff1744000-7f4ff17c5000 r-xp 00000000 08:06 1183229                    /lib/libm-2.13.so
+7f4ff17c5000-7f4ff19c4000 ---p 00081000 08:06 1183229                    /lib/libm-2.13.so
+7f4ff19c4000-7f4ff19c5000 r-xp 00080000 08:06 1183229                    /lib/libm-2.13.so
+7f4ff19c5000-7f4ff19c6000 rwxp 00081000 08:06 1183229                    /lib/libm-2.13.so
+7f4ff19c6000-7f4ff217b000 r-xp 00000000 08:07 8127018                    /home/fedel/opt/jdk1.6.0_20/jre/lib/amd64/server/libjvm.so
+7f4ff217b000-7f4ff227a000 ---p 007b5000 08:07 8127018                    /home/fedel/opt/jdk1.6.0_20/jre/lib/amd64/server/libjvm.so
+7f4ff227a000-7f4ff2405000 rwxp 007b4000 08:07 8127018                    /home/fedel/opt/jdk1.6.0_20/jre/lib/amd64/server/libjvm.so
+7f4ff2405000-7f4ff243e000 rwxp 00000000 00:00 0 
+7f4ff243e000-7f4ff2592000 r-xp 00000000 08:06 1183270                    /lib/libc-2.13.so
+7f4ff2592000-7f4ff2792000 ---p 00154000 08:06 1183270                    /lib/libc-2.13.so
+7f4ff2792000-7f4ff2796000 r-xp 00154000 08:06 1183270                    /lib/libc-2.13.so
+7f4ff2796000-7f4ff2797000 rwxp 00158000 08:06 1183270                    /lib/libc-2.13.so
+7f4ff2797000-7f4ff279c000 rwxp 00000000 00:00 0 
+7f4ff279c000-7f4ff279e000 r-xp 00000000 08:06 1180125                    /lib/libdl-2.13.so
+7f4ff279e000-7f4ff299e000 ---p 00002000 08:06 1180125                    /lib/libdl-2.13.so
+7f4ff299e000-7f4ff299f000 r-xp 00002000 08:06 1180125                    /lib/libdl-2.13.so
+7f4ff299f000-7f4ff29a0000 rwxp 00003000 08:06 1180125                    /lib/libdl-2.13.so
+7f4ff29a0000-7f4ff29b7000 r-xp 00000000 08:06 1181194                    /lib/libpthread-2.13.so
+7f4ff29b7000-7f4ff2bb7000 ---p 00017000 08:06 1181194                    /lib/libpthread-2.13.so
+7f4ff2bb7000-7f4ff2bb8000 r-xp 00017000 08:06 1181194                    /lib/libpthread-2.13.so
+7f4ff2bb8000-7f4ff2bb9000 rwxp 00018000 08:06 1181194                    /lib/libpthread-2.13.so
+7f4ff2bb9000-7f4ff2bbd000 rwxp 00000000 00:00 0 
+7f4ff2bbd000-7f4ff2bdb000 r-xp 00000000 08:06 1184026                    /lib/ld-2.13.so
+7f4ff2bdb000-7f4ff2bdc000 r-xs 00015000 08:07 6296897                    /home/fedel/opt/apache-tomcat-7.0.14-8070/webapps/siat/WEB-INF/lib/siatesp.jar
+7f4ff2bdc000-7f4ff2bed000 r-xs 00152000 08:07 5648996                    /home/fedel/opt/apache-tomcat-7.0.14-8070/lib/catalina.jar
+7f4ff2bed000-7f4ff2c0f000 rwxp 00000000 00:00 0 
+7f4ff2c0f000-7f4ff2cad000 rwxp 00000000 00:00 0 
+7f4ff2cad000-7f4ff2cb0000 rwxp 00000000 00:00 0 
+7f4ff2cb0000-7f4ff2cb7000 r-xp 00000000 08:07 8126983                    /home/fedel/opt/jdk1.6.0_20/jre/lib/amd64/jli/libjli.so
+7f4ff2cb7000-7f4ff2db8000 ---p 00007000 08:07 8126983                    /home/fedel/opt/jdk1.6.0_20/jre/lib/amd64/jli/libjli.so
+7f4ff2db8000-7f4ff2dba000 rwxp 00008000 08:07 8126983                    /home/fedel/opt/jdk1.6.0_20/jre/lib/amd64/jli/libjli.so
+7f4ff2dba000-7f4ff2dbb000 rwxp 00000000 00:00 0 
+7f4ff2dbb000-7f4ff2dbc000 r-xs 00004000 08:07 5649009                    /home/fedel/opt/apache-tomcat-7.0.14-8070/lib/tomcat-util.jar
+7f4ff2dbc000-7f4ff2dbd000 r-xs 00001000 08:07 5649003                    /home/fedel/opt/apache-tomcat-7.0.14-8070/lib/tomcat-api.jar
+7f4ff2dbd000-7f4ff2dc2000 r-xs 0003a000 08:07 5648995                    /home/fedel/opt/apache-tomcat-7.0.14-8070/lib/catalina-tribes.jar
+7f4ff2dc2000-7f4ff2dc4000 r-xs 0000b000 08:07 5649008                    /home/fedel/opt/apache-tomcat-7.0.14-8070/lib/tomcat-i18n-ja.jar
+7f4ff2dc4000-7f4ff2dc9000 r-xs 00069000 08:07 5649329                    /home/fedel/opt/apache-tomcat-7.0.14-8070/lib/postgresql-8.3-604.jdbc3.jar
+7f4ff2dc9000-7f4ff2dca000 r-xs 00003000 08:07 5648992                    /home/fedel/opt/apache-tomcat-7.0.14-8070/lib/annotations-api.jar
+7f4ff2dca000-7f4ff2dcc000 r-xs 00007000 08:07 5648988                    /home/fedel/opt/apache-tomcat-7.0.14-8070/bin/tomcat-juli.jar
+7f4ff2dcc000-7f4ff2dcd000 r-xs 00005000 08:07 5648982                    /home/fedel/opt/apache-tomcat-7.0.14-8070/bin/commons-daemon.jar
+7f4ff2dcd000-7f4ff2dce000 r-xs 00006000 08:07 5648978                    /home/fedel/opt/apache-tomcat-7.0.14-8070/bin/bootstrap.jar
+7f4ff2dce000-7f4ff2dcf000 rwxp 00000000 00:00 0 
+7f4ff2dcf000-7f4ff2dd7000 rwxs 00000000 08:06 2098563                    /tmp/hsperfdata_fedel/2567
+7f4ff2dd7000-7f4ff2dd8000 rwxp 00000000 00:00 0 
+7f4ff2dd8000-7f4ff2dd9000 r-xp 00000000 00:00 0 
+7f4ff2dd9000-7f4ff2dda000 rwxp 00000000 00:00 0 
+7f4ff2dda000-7f4ff2ddb000 r-xp 0001d000 08:06 1184026                    /lib/ld-2.13.so
+7f4ff2ddb000-7f4ff2ddc000 rwxp 0001e000 08:06 1184026                    /lib/ld-2.13.so
+7f4ff2ddc000-7f4ff2ddd000 rwxp 00000000 00:00 0 
+7fff672b9000-7fff672da000 rwxp 00000000 00:00 0                          [stack]
+7fff673fa000-7fff673fb000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+VM Arguments:
+jvm_args: -Djava.util.logging.config.file=/home/fedel/opt/apache-tomcat-7.0.14-8070/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Xdebug -Xrunjdwp:transport=dt_socket,address=8000,server=y,suspend=n -Xmx1200m -XX:MaxPermSize=256m -Djava.endorsed.dirs=/home/fedel/opt/apache-tomcat-7.0.14-8070/endorsed -Dcatalina.base=/home/fedel/opt/apache-tomcat-7.0.14-8070 -Dcatalina.home=/home/fedel/opt/apache-tomcat-7.0.14-8070 -Djava.io.tmpdir=/home/fedel/opt/apache-tomcat-7.0.14-8070/temp 
+java_command: org.apache.catalina.startup.Bootstrap start
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=/home/fedel/opt/jdk1.6.0_20
+PATH=/home/fedel/opt/apache-ant-1.8.1/bin:/home/fedel/opt/apache-tomcat-7.0.14-8070/bin:/home/fedel/opt/jdk1.6.0_20/bin:/home/fedel/go/bin:/home/fedel/bin:/home/fedel/go/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/bin/core_perl:/opt/qt/bin
+LD_LIBRARY_PATH=/home/fedel/opt/jdk1.6.0_20/jre/lib/amd64/server:/home/fedel/opt/jdk1.6.0_20/jre/lib/amd64:/home/fedel/opt/jdk1.6.0_20/jre/../lib/amd64
+SHELL=/bin/bash
+DISPLAY=:0
+
+Signal Handlers:
+SIGSEGV: [libjvm.so+0x70ffd0], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGBUS: [libjvm.so+0x70ffd0], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGFPE: [libjvm.so+0x5d8cf0], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGPIPE: [libjvm.so+0x5d8cf0], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGXFSZ: [libjvm.so+0x5d8cf0], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGILL: [libjvm.so+0x5d8cf0], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGUSR1: SIG_DFL, sa_mask[0]=0x00000000, sa_flags=0x00000000
+SIGUSR2: [libjvm.so+0x5db510], sa_mask[0]=0x00000000, sa_flags=0x10000004
+SIGHUP: [libjvm.so+0x5db260], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGINT: SIG_IGN, sa_mask[0]=0x00000000, sa_flags=0x00000000
+SIGTERM: [libjvm.so+0x5db260], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGQUIT: [libjvm.so+0x5db260], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+
+
+---------------  S Y S T E M  ---------------
+
+OS:Linux
+uname:Linux 2.6.38-ARCH #1 SMP PREEMPT Fri May 13 09:24:47 CEST 2011 x86_64
+libc:glibc 2.13 NPTL 2.13 
+rlimit: STACK 8192k, CORE 0k, NPROC 47285, NOFILE 1024, AS infinity
+load average:0,39 0,13 0,12
+
+CPU:total 4 (8 cores per cpu, 2 threads per core) family 6 model 37 stepping 2, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, ht
+
+Memory: 4k page, physical 6055976k(1684496k free), swap 1951860k(1951860k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (16.3-b01) for linux-amd64 JRE (1.6.0_20-b02), built on Apr 12 2010 13:57:11 by "java_re" with gcc 3.2.2 (SuSE Linux)
+
+time: Thu Aug  4 13:23:12 2011
+elapsed time: 3317 seconds
+

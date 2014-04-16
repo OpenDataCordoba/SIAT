@@ -1,0 +1,1447 @@
+<?xml version = '1.0' encoding = 'ISO-8859-1'?>
+<siat>
+	<cabecera>
+		<FechaActual>09/05/2008</FechaActual>
+		<FileSharePath>/mnt/siat</FileSharePath>
+	</cabecera>
+	<formulario></formulario>
+	<data>
+		<ConstanciaDeuVO>
+			<Domicilio>
+				<Numero>1080</Numero>
+				<Localidad>
+					<DescripcionPostal>ROSARIO</DescripcionPostal>
+					<Provincia>
+						<Descripcion></Descripcion>
+					</Provincia>
+
+					<CodPostal>2000</CodPostal>
+					<CodSubPostal>8</CodSubPostal>
+					<Duplicate>
+						<DescripcionPostal>ROSARIO</DescripcionPostal>
+						<CodPostal>2000</CodPostal>
+						<CodSubPostal>8</CodSubPostal>
+						<EsRosario>true</EsRosario>
+						<DescripcionPostalView>
+							ROSARIO
+						</DescripcionPostalView>
+						<LocalidadPciaView>ROSARIO</LocalidadPciaView>
+					</Duplicate>
+
+					<EsRosario>true</EsRosario>
+					<DescripcionPostalView>
+						ROSARIO
+					</DescripcionPostalView>
+					<LocalidadPciaView>ROSARIO</LocalidadPciaView>
+					<Id>4623</Id>
+				</Localidad>
+
+				<Bis>0-No</Bis>
+				<Calle>
+					<CodCalle>43000</CodCalle>
+					<NombreCalle>CORDOBA</NombreCalle>
+					<Duplicate>
+						<NombreCalle>CORDOBA</NombreCalle>
+					</Duplicate>
+
+				</Calle>
+
+				<LetraCalle></LetraCalle>
+				<Monoblock></Monoblock>
+				<DeptoView></DeptoView>
+				<PisoView></PisoView>
+				<NumeroView>1080</NumeroView>
+				<Duplicate>
+					<Numero>1080</Numero>
+					<Localidad>
+						<DescripcionPostal>ROSARIO</DescripcionPostal>
+						<CodPostal>2000</CodPostal>
+						<CodSubPostal>8</CodSubPostal>
+						<EsRosario>true</EsRosario>
+						<DescripcionPostalView>
+							ROSARIO
+						</DescripcionPostalView>
+						<LocalidadPciaView>ROSARIO</LocalidadPciaView>
+					</Localidad>
+
+					<Bis>0-No</Bis>
+					<Calle>
+						<NombreCalle>CORDOBA</NombreCalle>
+					</Calle>
+
+					<LetraCalle></LetraCalle>
+					<Monoblock></Monoblock>
+					<DeptoView></DeptoView>
+					<PisoView></PisoView>
+					<NumeroView>1080</NumeroView>
+					<Duplicate>
+						<Numero>1080</Numero>
+						<Bis>0-No</Bis>
+						<LetraCalle></LetraCalle>
+						<Monoblock></Monoblock>
+						<DeptoView></DeptoView>
+						<PisoView></PisoView>
+						<NumeroView>1080</NumeroView>
+						<ValidoPorRequeridos>false</ValidoPorRequeridos>
+						<EsValidado>1-Si</EsValidado>
+						<BisView>false</BisView>
+						<View>CORDOBA 1080</View>
+						<ViewConOtraLocalidad>
+							CORDOBA 1080
+						</ViewConOtraLocalidad>
+						<Id>390994</Id>
+					</Duplicate>
+
+					<ValidoPorRequeridos>false</ValidoPorRequeridos>
+					<EsValidado>1-Si</EsValidado>
+					<TipoDomicilio></TipoDomicilio>
+
+					<BisView>false</BisView>
+					<View>CORDOBA 1080</View>
+					<ViewConOtraLocalidad>
+						CORDOBA 1080
+					</ViewConOtraLocalidad>
+					<Id>390994</Id>
+				</Duplicate>
+
+				<ValidoPorRequeridos>false</ValidoPorRequeridos>
+				<EsValidado>0-No</EsValidado>
+				<TipoDomicilio>
+					<DesTipoDomicilio>
+						Domicilio de Envio
+					</DesTipoDomicilio>
+					<Id>1</Id>
+				</TipoDomicilio>
+
+				<BisView>false</BisView>
+				<View>CORDOBA 1080</View>
+				<ViewConOtraLocalidad>
+					CORDOBA 1080
+				</ViewConOtraLocalidad>
+				<Id>390994</Id>
+			</Domicilio>
+
+			<Observacion></Observacion>
+			<Numero>84</Numero>
+			<TotalView>18,61</TotalView>
+			<NumeroView>84</NumeroView>
+			<Anio>2008</Anio>
+			<Cuenta>
+				<FechaAlta>1980-01-01 00:00:00.0</FechaAlta>
+				<FechaAltaView>01/01/1980</FechaAltaView>
+				<FechaBajaView></FechaBajaView>
+				<Recurso>
+					<FechaAlta>2008-01-01 00:00:00.0</FechaAlta>
+					<FechaAltaView>01/01/2008</FechaAltaView>
+					<FechaBajaView></FechaBajaView>
+					<Categoria></Categoria>
+
+					<CodRecurso>TGI</CodRecurso>
+					<DesRecurso>Tasa General de Inmuebles</DesRecurso>
+					<EsAutoliquidable>0-No</EsAutoliquidable>
+					<FecEsAutView></FecEsAutView>
+					<EsFiscalizable>0-No</EsFiscalizable>
+					<FecEsFisView></FecEsFisView>
+					<EsLibreDeuda>1-Si</EsLibreDeuda>
+					<FecDesIntDiaBan>
+						2008-01-01 00:00:00.0
+					</FecDesIntDiaBan>
+					<FecDesIntDiaBanView>
+						01/01/2008
+					</FecDesIntDiaBanView>
+					<GesDeuNoVen>0-No</GesDeuNoVen>
+					<DeuExiVen>1-Si</DeuExiVen>
+					<GesCobranza>1-Si</GesCobranza>
+					<PerEmiDeu>1-Si</PerEmiDeu>
+					<PerEmiDeuExt>1-Si</PerEmiDeuExt>
+					<EsDeudaTitular>0-No</EsDeudaTitular>
+					<TipObjImp>
+						<FechaAltaView></FechaAltaView>
+						<FechaBajaView></FechaBajaView>
+						<EsSiat>1-Si</EsSiat>
+					</TipObjImp>
+
+					<EsPrincipal>1-Si</EsPrincipal>
+					<AltaCtaPorIface>1-Si</AltaCtaPorIface>
+					<BajaCtaPorIface>1-Si</BajaCtaPorIface>
+					<ModiTitCtaPorIface>1-Si</ModiTitCtaPorIface>
+					<AltaCtaPorPri>null-No Posee</AltaCtaPorPri>
+					<BajaCtaPorPri>null-No Posee</BajaCtaPorPri>
+					<ModiTitCtaPorPri>null-No Posee</ModiTitCtaPorPri>
+					<AltaCtaManual>0-No</AltaCtaManual>
+					<BajaCtaManual>1-Si</BajaCtaManual>
+					<ModiTitCtaManual>1-Si</ModiTitCtaManual>
+					<EnviaJudicial>1-Si</EnviaJudicial>
+					<CriAsiPro></CriAsiPro>
+
+					<GenCue></GenCue>
+
+					<GenCodGes></GenCodGes>
+
+					<ListRecAtrVal></ListRecAtrVal>
+					<ListRecCon></ListRecCon>
+					<ListRecClaDeu></ListRecClaDeu>
+					<ListRecGenCueAtrVa></ListRecGenCueAtrVa>
+					<ListRecEmi></ListRecEmi>
+					<ListRecAtrCueEmi></ListRecAtrCueEmi>
+					<ListRecAtrCue></ListRecAtrCue>
+					<EsCategoriaCdM>false</EsCategoriaCdM>
+					<AtributoAse></AtributoAse>
+
+					<Id>14</Id>
+				</Recurso>
+
+				<Broche>
+					<Telefono>N/D</Telefono>
+					<Recurso>
+						<FechaAltaView></FechaAltaView>
+						<FechaBajaView></FechaBajaView>
+						<EsAutoliquidable>
+							-1-Seleccionar...
+						</EsAutoliquidable>
+						<FecEsAutView></FecEsAutView>
+						<EsFiscalizable>
+							-1-Seleccionar...
+						</EsFiscalizable>
+						<FecEsFisView></FecEsFisView>
+						<EsLibreDeuda>-1-Seleccionar...</EsLibreDeuda>
+						<FecDesIntDiaBanView></FecDesIntDiaBanView>
+						<GesDeuNoVen>-1-Seleccionar...</GesDeuNoVen>
+						<DeuExiVen>-1-Seleccionar...</DeuExiVen>
+						<GesCobranza>-1-Seleccionar...</GesCobranza>
+						<PerEmiDeu>-1-Seleccionar...</PerEmiDeu>
+						<PerEmiDeuExt>-1-Seleccionar...</PerEmiDeuExt>
+						<EsDeudaTitular>
+							-1-Seleccionar...
+						</EsDeudaTitular>
+						<EsPrincipal>-1-Seleccionar...</EsPrincipal>
+						<AltaCtaPorIface>
+							-1-Seleccionar...
+						</AltaCtaPorIface>
+						<BajaCtaPorIface>
+							-1-Seleccionar...
+						</BajaCtaPorIface>
+						<ModiTitCtaPorIface>
+							-1-Seleccionar...
+						</ModiTitCtaPorIface>
+						<AltaCtaPorPri>-1-Seleccionar...</AltaCtaPorPri>
+						<BajaCtaPorPri>-1-Seleccionar...</BajaCtaPorPri>
+						<ModiTitCtaPorPri>
+							-1-Seleccionar...
+						</ModiTitCtaPorPri>
+						<AltaCtaManual>-1-Seleccionar...</AltaCtaManual>
+						<BajaCtaManual>-1-Seleccionar...</BajaCtaManual>
+						<ModiTitCtaManual>
+							-1-Seleccionar...
+						</ModiTitCtaManual>
+						<EnviaJudicial>-1-Seleccionar...</EnviaJudicial>
+						<EsCategoriaCdM>false</EsCategoriaCdM>
+					</Recurso>
+
+					<DesBroche>N/D:19</DesBroche>
+					<StrDomicilioEnvio>N/D</StrDomicilioEnvio>
+					<TipoBroche></TipoBroche>
+
+					<ListBroCue></ListBroCue>
+					<Id>19</Id>
+				</Broche>
+
+				<ObjImp>
+					<FechaAlta>1980-01-01 00:00:00.0</FechaAlta>
+					<FechaAltaView>01/01/1980</FechaAltaView>
+					<FechaBajaView></FechaBajaView>
+					<TipObjImp>
+						<FechaAltaView></FechaAltaView>
+						<FechaBajaView></FechaBajaView>
+						<EsSiat>1-Si</EsSiat>
+					</TipObjImp>
+
+					<Clave>10148907</Clave>
+					<ListObjImpAtrVal></ListObjImpAtrVal>
+					<ClaveFuncional>01/027/014/022/000</ClaveFuncional>
+					<Id>10926</Id>
+				</ObjImp>
+
+				<CodGesCue>147710</CodGesCue>
+				<NumeroCuenta>10148907</NumeroCuenta>
+				<CatastralyNumeroCuenta>
+					10148907 - 10148907
+				</CatastralyNumeroCuenta>
+				<DomicilioEnvio>
+					<Numero>1080</Numero>
+					<Localidad>
+						<EsRosario>false</EsRosario>
+						<DescripcionPostalView></DescripcionPostalView>
+					</Localidad>
+
+					<Bis>0-No</Bis>
+					<Calle></Calle>
+
+					<LetraCalle></LetraCalle>
+					<Monoblock></Monoblock>
+					<DeptoView></DeptoView>
+					<PisoView></PisoView>
+					<NumeroView>1080</NumeroView>
+					<Duplicate>
+						<Numero>1080</Numero>
+						<Bis>0-No</Bis>
+						<LetraCalle></LetraCalle>
+						<Monoblock></Monoblock>
+						<DeptoView></DeptoView>
+						<PisoView></PisoView>
+						<NumeroView>1080</NumeroView>
+						<ValidoPorRequeridos>false</ValidoPorRequeridos>
+						<EsValidado>1-Si</EsValidado>
+						<BisView>false</BisView>
+						<View>Sin Calle 1080</View>
+						<ViewConOtraLocalidad>
+							Sin Calle 1080
+						</ViewConOtraLocalidad>
+						<Id>11256</Id>
+					</Duplicate>
+
+					<ValidoPorRequeridos>false</ValidoPorRequeridos>
+					<EsValidado>0-No</EsValidado>
+					<TipoDomicilio></TipoDomicilio>
+
+					<BisView>false</BisView>
+					<View>Sin Calle 1080</View>
+					<ViewConOtraLocalidad>
+						Sin Calle 1080
+					</ViewConOtraLocalidad>
+					<Id>11256</Id>
+				</DomicilioEnvio>
+
+				<ListCuentaTitular>
+					<CuentaTitularVO>
+						<FechaHastaView></FechaHastaView>
+						<FechaDesde>1980-01-01 00:00:00.0</FechaDesde>
+						<FechaDesdeView>01/01/1980</FechaDesdeView>
+						<Cuenta>
+							<FechaAltaView></FechaAltaView>
+							<FechaBajaView></FechaBajaView>
+							<CodGesCue></CodGesCue>
+							<NumeroCuenta></NumeroCuenta>
+							<CatastralyNumeroCuenta>
+								null -
+							</CatastralyNumeroCuenta>
+							<CambioObjImpIF>
+								null-No Posee
+							</CambioObjImpIF>
+							<CambioTitularIF>
+								null-No Posee
+							</CambioTitularIF>
+							<ActDomicilioEnvio>
+								agregar
+							</ActDomicilioEnvio>
+							<Marcada>false</Marcada>
+							<VigenciaForCamDomView>
+								Inactivo
+							</VigenciaForCamDomView>
+						</Cuenta>
+
+						<Contribuyente>
+							<FechaHastaView></FechaHastaView>
+							<FechaDesdeView></FechaDesdeView>
+						</Contribuyente>
+
+						<EsAltaManual>0-No</EsAltaManual>
+						<EsTitularPrincipal>0-No</EsTitularPrincipal>
+						<FechaNovedad>
+							1980-01-01 00:00:00.0
+						</FechaNovedad>
+						<FechaNovedadView>01/01/1980</FechaNovedadView>
+						<TipoTitular>
+							<DesTipoTitular></DesTipoTitular>
+						</TipoTitular>
+
+						<InformacionView>
+							Fisica / Secundario
+						</InformacionView>
+						<Id>9336</Id>
+					</CuentaTitularVO>
+
+					<CuentaTitularVO>
+						<FechaHastaView></FechaHastaView>
+						<FechaDesde>2008-04-17 00:00:00.0</FechaDesde>
+						<FechaDesdeView>17/04/2008</FechaDesdeView>
+						<Cuenta>
+							<FechaAltaView></FechaAltaView>
+							<FechaBajaView></FechaBajaView>
+							<CodGesCue></CodGesCue>
+							<NumeroCuenta></NumeroCuenta>
+							<CatastralyNumeroCuenta>
+								null -
+							</CatastralyNumeroCuenta>
+							<CambioObjImpIF>
+								null-No Posee
+							</CambioObjImpIF>
+							<CambioTitularIF>
+								null-No Posee
+							</CambioTitularIF>
+							<ActDomicilioEnvio>
+								agregar
+							</ActDomicilioEnvio>
+							<Marcada>false</Marcada>
+							<VigenciaForCamDomView>
+								Inactivo
+							</VigenciaForCamDomView>
+						</Cuenta>
+
+						<Contribuyente>
+							<FechaHastaView></FechaHastaView>
+							<FechaDesdeView></FechaDesdeView>
+						</Contribuyente>
+
+						<EsAltaManual>1-Si</EsAltaManual>
+						<EsTitularPrincipal>1-Si</EsTitularPrincipal>
+						<FechaNovedad>
+							2008-04-17 00:00:00.0
+						</FechaNovedad>
+						<FechaNovedadView>17/04/2008</FechaNovedadView>
+						<TipoTitular>
+							<DesTipoTitular></DesTipoTitular>
+						</TipoTitular>
+
+						<InformacionView>
+							Fisica / Principal
+						</InformacionView>
+						<Id>565490</Id>
+					</CuentaTitularVO>
+				</ListCuentaTitular>
+				<CambioObjImpIF>null-No Posee</CambioObjImpIF>
+				<CambioTitularIF>null-No Posee</CambioTitularIF>
+				<ActDomicilioEnvio>modificar</ActDomicilioEnvio>
+				<Marcada>false</Marcada>
+				<VigenciaForCamDomView>Activo</VigenciaForCamDomView>
+				<Id>10926</Id>
+			</Cuenta>
+
+			<EstConDeu>
+				<DesEstConDeu>Recompuesta</DesEstConDeu>
+				<Id>4</Id>
+			</EstConDeu>
+
+			<PlaEnvDeuPro>
+				<ProcesoMasivo>
+					<Recurso>
+						<FechaAltaView></FechaAltaView>
+						<FechaBajaView></FechaBajaView>
+						<EsAutoliquidable>
+							-1-Seleccionar...
+						</EsAutoliquidable>
+						<FecEsAutView></FecEsAutView>
+						<EsFiscalizable>
+							-1-Seleccionar...
+						</EsFiscalizable>
+						<FecEsFisView></FecEsFisView>
+						<EsLibreDeuda>-1-Seleccionar...</EsLibreDeuda>
+						<FecDesIntDiaBanView></FecDesIntDiaBanView>
+						<GesDeuNoVen>-1-Seleccionar...</GesDeuNoVen>
+						<DeuExiVen>-1-Seleccionar...</DeuExiVen>
+						<GesCobranza>-1-Seleccionar...</GesCobranza>
+						<PerEmiDeu>-1-Seleccionar...</PerEmiDeu>
+						<PerEmiDeuExt>-1-Seleccionar...</PerEmiDeuExt>
+						<EsDeudaTitular>
+							-1-Seleccionar...
+						</EsDeudaTitular>
+						<EsPrincipal>-1-Seleccionar...</EsPrincipal>
+						<AltaCtaPorIface>
+							-1-Seleccionar...
+						</AltaCtaPorIface>
+						<BajaCtaPorIface>
+							-1-Seleccionar...
+						</BajaCtaPorIface>
+						<ModiTitCtaPorIface>
+							-1-Seleccionar...
+						</ModiTitCtaPorIface>
+						<AltaCtaPorPri>-1-Seleccionar...</AltaCtaPorPri>
+						<BajaCtaPorPri>-1-Seleccionar...</BajaCtaPorPri>
+						<ModiTitCtaPorPri>
+							-1-Seleccionar...
+						</ModiTitCtaPorPri>
+						<AltaCtaManual>-1-Seleccionar...</AltaCtaManual>
+						<BajaCtaManual>-1-Seleccionar...</BajaCtaManual>
+						<ModiTitCtaManual>
+							-1-Seleccionar...
+						</ModiTitCtaManual>
+						<EnviaJudicial>-1-Seleccionar...</EnviaJudicial>
+						<EsCategoriaCdM>false</EsCategoriaCdM>
+					</Recurso>
+
+					<Procurador>
+						<Descripcion></Descripcion>
+						<Domicilio></Domicilio>
+						<Telefono></Telefono>
+						<Observacion></Observacion>
+						<HorarioAtencion></HorarioAtencion>
+					</Procurador>
+
+					<Caso></Caso>
+
+					<ConCuentaExcSel>null-No Posee</ConCuentaExcSel>
+					<Corrida>
+						<Observacion></Observacion>
+						<FechaInicioView></FechaInicioView>
+						<FechaFinView></FechaFinView>
+						<FechaUltResumeView></FechaUltResumeView>
+						<MensajeEstado></MensajeEstado>
+						<HoraInicioView></HoraInicioView>
+						<PasoActualView></PasoActualView>
+					</Corrida>
+
+					<EsVueltaAtras>null-No Posee</EsVueltaAtras>
+					<TipProMas></TipProMas>
+
+					<SelAlmExc>
+						<CtdTotalRegistrosView>0</CtdTotalRegistrosView>
+					</SelAlmExc>
+
+					<SelAlmInc>
+						<CtdTotalRegistrosView>0</CtdTotalRegistrosView>
+					</SelAlmInc>
+
+					<UtilizaCriterio>null-No Posee</UtilizaCriterio>
+					<FechaEnvioView></FechaEnvioView>
+					<ListProMasProExc></ListProMasProExc>
+					<ListReportesDeudaExcluida></ListReportesDeudaExcluida>
+					<ListReportesDeudaIncluida></ListReportesDeudaIncluida>
+					<ListPlaEnvDeuPro></ListPlaEnvDeuPro>
+					<ListFileCorridaRealizarEnvio></ListFileCorridaRealizarEnvio>
+					<CtdTotalRegistrosDeudaIncluidaView>
+						0
+					</CtdTotalRegistrosDeudaIncluidaView>
+					<CtdTotalRegistrosDeudaExcluidaView>
+						0
+					</CtdTotalRegistrosDeudaExcluidaView>
+				</ProcesoMasivo>
+
+				<Procurador>
+					<Descripcion></Descripcion>
+					<Domicilio></Domicilio>
+					<Telefono></Telefono>
+					<Observacion></Observacion>
+					<HorarioAtencion></HorarioAtencion>
+					<TipoProcurador></TipoProcurador>
+
+					<ListProRec></ListProRec>
+				</Procurador>
+
+				<FechaEnvioView></FechaEnvioView>
+				<EstPlaEnvDeuPr></EstPlaEnvDeuPr>
+
+				<ListHistEstPlaEnvDP></ListHistEstPlaEnvDP>
+				<ListConstanciaDeu></ListConstanciaDeu>
+				<NroPlanillaView></NroPlanillaView>
+				<AnioPlanillaView></AnioPlanillaView>
+				<NroBarraAnioPlanillaView></NroBarraAnioPlanillaView>
+				<TotalRegistrosView></TotalRegistrosView>
+				<ImporteTotalView></ImporteTotalView>
+				<CantidadCuentasView></CantidadCuentasView>
+				<FechaRecepcionView></FechaRecepcionView>
+				<FechaHabilitacionView></FechaHabilitacionView>
+			</PlaEnvDeuPro>
+
+			<Procurador>
+				<Descripcion>Dir.Cobranza Judicial</Descripcion>
+				<Domicilio>San Martin 714</Domicilio>
+				<Telefono>4802436/4802436</Telefono>
+				<Observacion></Observacion>
+				<HorarioAtencion>
+					Lunes a Viernes de 14:00 a 18:00
+				</HorarioAtencion>
+				<TipoProcurador></TipoProcurador>
+
+				<ListProRec></ListProRec>
+				<Id>1</Id>
+			</Procurador>
+
+			<ListConDeuDet>
+				<ConDeuDetVO>
+					<Observacion>
+						Inclusión manual de deuda a la Constancia de
+						Deuda
+					</Observacion>
+					<Deuda>
+						<ViaDeuda>
+							<DesViaDeuda>Judicial</DesViaDeuda>
+							<Id>2</Id>
+						</ViaDeuda>
+
+						<ServicioBanco>
+							<CodServicioBanco>81</CodServicioBanco>
+							<DesServicioBanco>
+								81 - TGI
+							</DesServicioBanco>
+							<Id>1</Id>
+						</ServicioBanco>
+
+						<EsValidaParaConstancia>
+							false
+						</EsValidaParaConstancia>
+						<ListDeuRecCon></ListDeuRecCon>
+						<NroBarraAnio>2007/12</NroBarraAnio>
+						<FechaVencimiento>
+							2007-12-07 00:00:00.0
+						</FechaVencimiento>
+						<FechaVencimientoView>
+							07/12/2007
+						</FechaVencimientoView>
+						<Anio>2007</Anio>
+						<Procurador>
+							<Descripcion>
+								Dir.Cobranza Judicial
+							</Descripcion>
+							<Domicilio>San Martin 714</Domicilio>
+							<Telefono>4802436/4802436</Telefono>
+							<Observacion></Observacion>
+							<HorarioAtencion>
+								Lunes a Viernes de 14:00 a 18:00
+							</HorarioAtencion>
+							<Id>1</Id>
+						</Procurador>
+
+						<AnioView>2007</AnioView>
+						<Importe>18.61</Importe>
+						<PeriodoView>12</PeriodoView>
+						<Periodo>12</Periodo>
+						<FechaEmision>
+							2007-12-01 00:00:00.0
+						</FechaEmision>
+						<Saldo>18.61</Saldo>
+						<RecClaDeu>
+							<FechaHastaView></FechaHastaView>
+							<FechaDesde>
+								2008-01-15 00:00:00.0
+							</FechaDesde>
+							<FechaDesdeView>15/01/2008</FechaDesdeView>
+							<DesClaDeu>Original</DesClaDeu>
+							<AbrClaDeu></AbrClaDeu>
+							<Id>1</Id>
+						</RecClaDeu>
+
+						<EstadoDeuda>
+							<DesEstadoDeuda>Judicial</DesEstadoDeuda>
+							<Id>5</Id>
+						</EstadoDeuda>
+
+						<ImporteView>18.61</ImporteView>
+						<FechaEmisionView>01/12/2007</FechaEmisionView>
+						<SaldoView>18.61</SaldoView>
+						<SaldoActualizadoView></SaldoActualizadoView>
+						<StringSolicitud>
+							Anio: 2007 Periodo: 12 Fecha Vto: 07-12-2007
+							Fecha Emision: 01-12-2007 Importe: 18.61
+							Saldo: 18.61
+						</StringSolicitud>
+						<AnioPeriodoView>2007/12</AnioPeriodoView>
+						<Id>545321</Id>
+					</Deuda>
+
+					<IdDeuda>545321</IdDeuda>
+					<Id>1306</Id>
+				</ConDeuDetVO>
+			</ListConDeuDet>
+			<ListConDeuTit>
+				<ConDeuTitVO>
+					<Persona>
+						<Apellido>LUNA</Apellido>
+						<Nombres>FEDERICO MIGUEL</Nombres>
+						<Domicilio>
+							<Numero>473</Numero>
+							<RefGeografica>
+								PRIMER PUERTA P
+							</RefGeografica>
+							<Bis>0-No</Bis>
+							<Depto>1</Depto>
+							<LetraCalle></LetraCalle>
+							<Piso>0</Piso>
+							<DeptoView>1</DeptoView>
+							<PisoView>0</PisoView>
+							<NumeroView>473</NumeroView>
+							<ValidoPorRequeridos>
+								false
+							</ValidoPorRequeridos>
+							<EsValidado>null-No Posee</EsValidado>
+							<BisView>false</BisView>
+							<View>SAN JUAN 473 Depto:1</View>
+							<ViewConOtraLocalidad>
+								SAN JUAN 473 Depto:1
+							</ViewConOtraLocalidad>
+						</Domicilio>
+
+						<Telefono>4494119</Telefono>
+						<ApellidoMaterno></ApellidoMaterno>
+						<Documento>
+							<Numero>24586843</Numero>
+							<NumeroView>24586843</NumeroView>
+							<TipoyNumeroView>
+								DNI - 24586843
+							</TipoyNumeroView>
+						</Documento>
+
+						<FechaNacimiento>
+							1975-11-16 00:00:00.0
+						</FechaNacimiento>
+						<Sexo>1-Masculino</Sexo>
+						<View>LUNA FEDERICO MIGUEL</View>
+						<TipoPersonaView>Fisica</TipoPersonaView>
+						<Cuit>20245868430</Cuit>
+						<TipoPersona>F</TipoPersona>
+						<RazonSocial></RazonSocial>
+						<EsPersonaFisica>true</EsPersonaFisica>
+						<EsPersonaJuridica>false</EsPersonaJuridica>
+						<EsContribuyente>true</EsContribuyente>
+						<LetraCuit>0-Creado</LetraCuit>
+						<FechaNacimientoView>
+							16/11/1975
+						</FechaNacimientoView>
+						<CaracTelefono>341</CaracTelefono>
+						<EsContribuyenteView>Si</EsContribuyenteView>
+						<Id>351687</Id>
+					</Persona>
+
+					<ConstanciaDeu>
+						<Domicilio>
+							<Numero>1080</Numero>
+							<Bis>0-No</Bis>
+							<LetraCalle></LetraCalle>
+							<Monoblock></Monoblock>
+							<DeptoView></DeptoView>
+							<PisoView></PisoView>
+							<NumeroView>1080</NumeroView>
+							<ValidoPorRequeridos>
+								false
+							</ValidoPorRequeridos>
+							<EsValidado>0-No</EsValidado>
+							<BisView>false</BisView>
+							<View>CORDOBA 1080</View>
+							<ViewConOtraLocalidad>
+								CORDOBA 1080
+							</ViewConOtraLocalidad>
+							<Id>390994</Id>
+						</Domicilio>
+
+						<Observacion></Observacion>
+						<Numero>84</Numero>
+						<TotalView>0</TotalView>
+						<NumeroView>84</NumeroView>
+						<Anio>2008</Anio>
+						<Cuenta>
+							<FechaAlta>1980-01-01 00:00:00.0</FechaAlta>
+							<FechaAltaView>01/01/1980</FechaAltaView>
+							<FechaBajaView></FechaBajaView>
+							<CodGesCue>147710</CodGesCue>
+							<NumeroCuenta>10148907</NumeroCuenta>
+							<CatastralyNumeroCuenta>
+								10148907 - 10148907
+							</CatastralyNumeroCuenta>
+							<CambioObjImpIF>
+								null-No Posee
+							</CambioObjImpIF>
+							<CambioTitularIF>
+								null-No Posee
+							</CambioTitularIF>
+							<ActDomicilioEnvio>
+								modificar
+							</ActDomicilioEnvio>
+							<Marcada>false</Marcada>
+							<VigenciaForCamDomView>
+								Activo
+							</VigenciaForCamDomView>
+							<Id>10926</Id>
+						</Cuenta>
+
+						<ProcesoMasivo>
+							<ConCuentaExcSel>
+								null-No Posee
+							</ConCuentaExcSel>
+							<EsVueltaAtras>null-No Posee</EsVueltaAtras>
+							<UtilizaCriterio>
+								null-No Posee
+							</UtilizaCriterio>
+							<FechaEnvioView></FechaEnvioView>
+							<CtdTotalRegistrosDeudaIncluidaView>
+								0
+							</CtdTotalRegistrosDeudaIncluidaView>
+							<CtdTotalRegistrosDeudaExcluidaView>
+								0
+							</CtdTotalRegistrosDeudaExcluidaView>
+						</ProcesoMasivo>
+
+						<EstConDeu>
+							<DesEstConDeu>Recompuesta</DesEstConDeu>
+							<Id>4</Id>
+						</EstConDeu>
+
+						<PlaEnvDeuPro>
+							<FechaEnvioView></FechaEnvioView>
+							<NroPlanillaView></NroPlanillaView>
+							<AnioPlanillaView></AnioPlanillaView>
+							<NroBarraAnioPlanillaView></NroBarraAnioPlanillaView>
+							<TotalRegistrosView></TotalRegistrosView>
+							<ImporteTotalView></ImporteTotalView>
+							<CantidadCuentasView></CantidadCuentasView>
+							<FechaRecepcionView></FechaRecepcionView>
+							<FechaHabilitacionView></FechaHabilitacionView>
+						</PlaEnvDeuPro>
+
+						<Procurador>
+							<Descripcion>
+								Dir.Cobranza Judicial
+							</Descripcion>
+							<Domicilio>San Martin 714</Domicilio>
+							<Telefono>4802436/4802436</Telefono>
+							<Observacion></Observacion>
+							<HorarioAtencion>
+								Lunes a Viernes de 14:00 a 18:00
+							</HorarioAtencion>
+							<Id>1</Id>
+						</Procurador>
+
+						<ListConDeuDet>
+							<ConDeuDet>
+								<Observacion>
+									Inclusión manual de deuda a la
+									Constancia de Deuda
+								</Observacion>
+								<IdDeuda>545321</IdDeuda>
+								<Id>1306</Id>
+								<ErrCode>0</ErrCode>
+								<UsuarioUltMdf>admin</UsuarioUltMdf>
+							</ConDeuDet>
+						</ListConDeuDet>
+						<ListConDeuTit>
+							<ConDeuTit>
+								<IdPersona>351687</IdPersona>
+								<Id>50</Id>
+								<ErrCode>0</ErrCode>
+								<UsuarioUltMdf>admin</UsuarioUltMdf>
+							</ConDeuTit>
+
+							<ConDeuTit>
+								<IdPersona>1085706</IdPersona>
+								<Id>51</Id>
+								<ErrCode>0</ErrCode>
+								<UsuarioUltMdf>admin</UsuarioUltMdf>
+							</ConDeuTit>
+
+							<ConDeuTit>
+								<IdPersona>90835</IdPersona>
+								<Id>54</Id>
+								<ErrCode>0</ErrCode>
+								<UsuarioUltMdf>admin</UsuarioUltMdf>
+							</ConDeuTit>
+						</ListConDeuTit>
+						<HabilitarConstancia>false</HabilitarConstancia>
+						<FechaHabilitacion>
+							2008-05-08 19:33:08.0
+						</FechaHabilitacion>
+						<ListHistEstConDeu>
+							<HistEstConDeu>
+								<FechaDesde>
+									2008-05-08 00:00:00.0
+								</FechaDesde>
+								<LogEstado>
+									Creación manual de Constancia
+								</LogEstado>
+								<Id>142</Id>
+								<ErrCode>0</ErrCode>
+								<UsuarioUltMdf>admin</UsuarioUltMdf>
+							</HistEstConDeu>
+
+							<HistEstConDeu>
+								<FechaDesde>
+									2008-05-08 00:00:00.0
+								</FechaDesde>
+								<LogEstado>
+									Modificación Quantum de la
+									Constancia
+								</LogEstado>
+								<Id>144</Id>
+								<ErrCode>0</ErrCode>
+								<UsuarioUltMdf>admin</UsuarioUltMdf>
+							</HistEstConDeu>
+
+							<HistEstConDeu>
+								<FechaDesde>
+									2008-05-08 00:00:00.0
+								</FechaDesde>
+								<LogEstado>
+									Habilitación de Constancia
+								</LogEstado>
+								<Id>145</Id>
+								<ErrCode>0</ErrCode>
+								<UsuarioUltMdf>admin</UsuarioUltMdf>
+							</HistEstConDeu>
+
+							<HistEstConDeu>
+								<FechaDesde>
+									2008-05-08 00:00:00.0
+								</FechaDesde>
+								<LogEstado>
+									Modificación Aspectos Formales de
+									Constancia
+								</LogEstado>
+								<Id>146</Id>
+								<ErrCode>0</ErrCode>
+								<UsuarioUltMdf>admin</UsuarioUltMdf>
+							</HistEstConDeu>
+
+							<HistEstConDeu>
+								<FechaDesde>
+									2008-05-08 00:00:00.0
+								</FechaDesde>
+								<LogEstado>
+									Reimpresión de Constancia
+								</LogEstado>
+								<Id>147</Id>
+								<ErrCode>0</ErrCode>
+								<UsuarioUltMdf>admin</UsuarioUltMdf>
+							</HistEstConDeu>
+						</ListHistEstConDeu>
+						<AnioView>2008</AnioView>
+						<NumeroBarraAnioConstanciaView>
+							84/2008
+						</NumeroBarraAnioConstanciaView>
+						<TotalEnPalabrasView></TotalEnPalabrasView>
+						<FechaEnLetras>
+							09 de mayo de 2008
+						</FechaEnLetras>
+						<NombreMes>MAYO</NombreMes>
+						<Id>237</Id>
+					</ConstanciaDeu>
+
+					<IdPersona>351687</IdPersona>
+					<Id>50</Id>
+				</ConDeuTitVO>
+
+				<ConDeuTitVO>
+					<Persona>
+						<Apellido>ZANI</Apellido>
+						<Nombres>JOSEFINA LEONILDA</Nombres>
+						<Domicilio>
+							<Bis>0-No</Bis>
+							<ValidoPorRequeridos>
+								false
+							</ValidoPorRequeridos>
+							<EsValidado>1-Si</EsValidado>
+							<BisView>false</BisView>
+							<View>Sin Calle</View>
+							<ViewConOtraLocalidad>
+								Sin Calle
+							</ViewConOtraLocalidad>
+						</Domicilio>
+
+						<Documento>
+							<NumeroView></NumeroView>
+							<TipoyNumeroView>-</TipoyNumeroView>
+						</Documento>
+
+						<Sexo>0-Femenino</Sexo>
+						<View>ZANI JOSEFINA LEONILDA</View>
+						<TipoPersonaView>Fisica</TipoPersonaView>
+						<Cuit>271683618</Cuit>
+						<TipoPersona>F</TipoPersona>
+						<RazonSocial></RazonSocial>
+						<EsPersonaFisica>true</EsPersonaFisica>
+						<EsPersonaJuridica>false</EsPersonaJuridica>
+						<EsContribuyente>true</EsContribuyente>
+						<LetraCuit>1-Ficticio</LetraCuit>
+						<FechaNacimientoView></FechaNacimientoView>
+						<CaracTelefono></CaracTelefono>
+						<EsContribuyenteView>Si</EsContribuyenteView>
+						<Id>1085706</Id>
+					</Persona>
+
+					<ConstanciaDeu>
+						<Domicilio>
+							<Numero>1080</Numero>
+							<Bis>0-No</Bis>
+							<LetraCalle></LetraCalle>
+							<Monoblock></Monoblock>
+							<DeptoView></DeptoView>
+							<PisoView></PisoView>
+							<NumeroView>1080</NumeroView>
+							<ValidoPorRequeridos>
+								false
+							</ValidoPorRequeridos>
+							<EsValidado>0-No</EsValidado>
+							<BisView>false</BisView>
+							<View>CORDOBA 1080</View>
+							<ViewConOtraLocalidad>
+								CORDOBA 1080
+							</ViewConOtraLocalidad>
+							<Id>390994</Id>
+						</Domicilio>
+
+						<Observacion></Observacion>
+						<Numero>84</Numero>
+						<TotalView>0</TotalView>
+						<NumeroView>84</NumeroView>
+						<Anio>2008</Anio>
+						<Cuenta>
+							<FechaAlta>1980-01-01 00:00:00.0</FechaAlta>
+							<FechaAltaView>01/01/1980</FechaAltaView>
+							<FechaBajaView></FechaBajaView>
+							<CodGesCue>147710</CodGesCue>
+							<NumeroCuenta>10148907</NumeroCuenta>
+							<CatastralyNumeroCuenta>
+								10148907 - 10148907
+							</CatastralyNumeroCuenta>
+							<CambioObjImpIF>
+								null-No Posee
+							</CambioObjImpIF>
+							<CambioTitularIF>
+								null-No Posee
+							</CambioTitularIF>
+							<ActDomicilioEnvio>
+								modificar
+							</ActDomicilioEnvio>
+							<Marcada>false</Marcada>
+							<VigenciaForCamDomView>
+								Activo
+							</VigenciaForCamDomView>
+							<Id>10926</Id>
+						</Cuenta>
+
+						<ProcesoMasivo>
+							<ConCuentaExcSel>
+								null-No Posee
+							</ConCuentaExcSel>
+							<EsVueltaAtras>null-No Posee</EsVueltaAtras>
+							<UtilizaCriterio>
+								null-No Posee
+							</UtilizaCriterio>
+							<FechaEnvioView></FechaEnvioView>
+							<CtdTotalRegistrosDeudaIncluidaView>
+								0
+							</CtdTotalRegistrosDeudaIncluidaView>
+							<CtdTotalRegistrosDeudaExcluidaView>
+								0
+							</CtdTotalRegistrosDeudaExcluidaView>
+						</ProcesoMasivo>
+
+						<EstConDeu>
+							<DesEstConDeu>Recompuesta</DesEstConDeu>
+							<Id>4</Id>
+						</EstConDeu>
+
+						<PlaEnvDeuPro>
+							<FechaEnvioView></FechaEnvioView>
+							<NroPlanillaView></NroPlanillaView>
+							<AnioPlanillaView></AnioPlanillaView>
+							<NroBarraAnioPlanillaView></NroBarraAnioPlanillaView>
+							<TotalRegistrosView></TotalRegistrosView>
+							<ImporteTotalView></ImporteTotalView>
+							<CantidadCuentasView></CantidadCuentasView>
+							<FechaRecepcionView></FechaRecepcionView>
+							<FechaHabilitacionView></FechaHabilitacionView>
+						</PlaEnvDeuPro>
+
+						<Procurador>
+							<Descripcion>
+								Dir.Cobranza Judicial
+							</Descripcion>
+							<Domicilio>San Martin 714</Domicilio>
+							<Telefono>4802436/4802436</Telefono>
+							<Observacion></Observacion>
+							<HorarioAtencion>
+								Lunes a Viernes de 14:00 a 18:00
+							</HorarioAtencion>
+							<Id>1</Id>
+						</Procurador>
+
+						<ListConDeuDet>
+							<ConDeuDet>
+								<Observacion>
+									Inclusión manual de deuda a la
+									Constancia de Deuda
+								</Observacion>
+								<IdDeuda>545321</IdDeuda>
+								<Id>1306</Id>
+								<ErrCode>0</ErrCode>
+								<UsuarioUltMdf>admin</UsuarioUltMdf>
+							</ConDeuDet>
+						</ListConDeuDet>
+						<ListConDeuTit>
+							<ConDeuTit>
+								<IdPersona>351687</IdPersona>
+								<Id>50</Id>
+								<ErrCode>0</ErrCode>
+								<UsuarioUltMdf>admin</UsuarioUltMdf>
+							</ConDeuTit>
+
+							<ConDeuTit>
+								<IdPersona>1085706</IdPersona>
+								<Id>51</Id>
+								<ErrCode>0</ErrCode>
+								<UsuarioUltMdf>admin</UsuarioUltMdf>
+							</ConDeuTit>
+
+							<ConDeuTit>
+								<IdPersona>90835</IdPersona>
+								<Id>54</Id>
+								<ErrCode>0</ErrCode>
+								<UsuarioUltMdf>admin</UsuarioUltMdf>
+							</ConDeuTit>
+						</ListConDeuTit>
+						<HabilitarConstancia>false</HabilitarConstancia>
+						<FechaHabilitacion>
+							2008-05-08 19:33:08.0
+						</FechaHabilitacion>
+						<ListHistEstConDeu>
+							<HistEstConDeu>
+								<FechaDesde>
+									2008-05-08 00:00:00.0
+								</FechaDesde>
+								<LogEstado>
+									Creación manual de Constancia
+								</LogEstado>
+								<Id>142</Id>
+								<ErrCode>0</ErrCode>
+								<UsuarioUltMdf>admin</UsuarioUltMdf>
+							</HistEstConDeu>
+
+							<HistEstConDeu>
+								<FechaDesde>
+									2008-05-08 00:00:00.0
+								</FechaDesde>
+								<LogEstado>
+									Modificación Quantum de la
+									Constancia
+								</LogEstado>
+								<Id>144</Id>
+								<ErrCode>0</ErrCode>
+								<UsuarioUltMdf>admin</UsuarioUltMdf>
+							</HistEstConDeu>
+
+							<HistEstConDeu>
+								<FechaDesde>
+									2008-05-08 00:00:00.0
+								</FechaDesde>
+								<LogEstado>
+									Habilitación de Constancia
+								</LogEstado>
+								<Id>145</Id>
+								<ErrCode>0</ErrCode>
+								<UsuarioUltMdf>admin</UsuarioUltMdf>
+							</HistEstConDeu>
+
+							<HistEstConDeu>
+								<FechaDesde>
+									2008-05-08 00:00:00.0
+								</FechaDesde>
+								<LogEstado>
+									Modificación Aspectos Formales de
+									Constancia
+								</LogEstado>
+								<Id>146</Id>
+								<ErrCode>0</ErrCode>
+								<UsuarioUltMdf>admin</UsuarioUltMdf>
+							</HistEstConDeu>
+
+							<HistEstConDeu>
+								<FechaDesde>
+									2008-05-08 00:00:00.0
+								</FechaDesde>
+								<LogEstado>
+									Reimpresión de Constancia
+								</LogEstado>
+								<Id>147</Id>
+								<ErrCode>0</ErrCode>
+								<UsuarioUltMdf>admin</UsuarioUltMdf>
+							</HistEstConDeu>
+						</ListHistEstConDeu>
+						<AnioView>2008</AnioView>
+						<NumeroBarraAnioConstanciaView>
+							84/2008
+						</NumeroBarraAnioConstanciaView>
+						<TotalEnPalabrasView></TotalEnPalabrasView>
+						<FechaEnLetras>
+							09 de mayo de 2008
+						</FechaEnLetras>
+						<NombreMes>MAYO</NombreMes>
+						<Id>237</Id>
+					</ConstanciaDeu>
+
+					<IdPersona>1085706</IdPersona>
+					<Id>51</Id>
+				</ConDeuTitVO>
+
+				<ConDeuTitVO>
+					<Persona>
+						<Apellido>BENZADON</Apellido>
+						<Nombres>CHOCRON MESSOD</Nombres>
+						<Domicilio>
+							<Numero>1336</Numero>
+							<Bis>0-No</Bis>
+							<DeptoView></DeptoView>
+							<PisoView></PisoView>
+							<NumeroView>1336</NumeroView>
+							<ValidoPorRequeridos>
+								false
+							</ValidoPorRequeridos>
+							<EsValidado>null-No Posee</EsValidado>
+							<BisView>false</BisView>
+							<View>CORDOBA 1336</View>
+							<ViewConOtraLocalidad>
+								CORDOBA 1336
+							</ViewConOtraLocalidad>
+						</Domicilio>
+
+						<Documento>
+							<Numero>6010347</Numero>
+							<NumeroView>6010347</NumeroView>
+							<TipoyNumeroView>
+								LE - 6010347
+							</TipoyNumeroView>
+						</Documento>
+
+						<Sexo>1-Masculino</Sexo>
+						<View>BENZADON CHOCRON MESSOD</View>
+						<TipoPersonaView>Fisica</TipoPersonaView>
+						<Cuit>2060103472</Cuit>
+						<TipoPersona>F</TipoPersona>
+						<RazonSocial></RazonSocial>
+						<EsPersonaFisica>true</EsPersonaFisica>
+						<EsPersonaJuridica>false</EsPersonaJuridica>
+						<EsContribuyente>false</EsContribuyente>
+						<LetraCuit>0-Creado</LetraCuit>
+						<FechaNacimientoView></FechaNacimientoView>
+						<CaracTelefono></CaracTelefono>
+						<EsContribuyenteView>No</EsContribuyenteView>
+						<Id>90835</Id>
+					</Persona>
+
+					<ConstanciaDeu>
+						<Domicilio>
+							<Numero>1080</Numero>
+							<Bis>0-No</Bis>
+							<LetraCalle></LetraCalle>
+							<Monoblock></Monoblock>
+							<DeptoView></DeptoView>
+							<PisoView></PisoView>
+							<NumeroView>1080</NumeroView>
+							<ValidoPorRequeridos>
+								false
+							</ValidoPorRequeridos>
+							<EsValidado>0-No</EsValidado>
+							<BisView>false</BisView>
+							<View>CORDOBA 1080</View>
+							<ViewConOtraLocalidad>
+								CORDOBA 1080
+							</ViewConOtraLocalidad>
+							<Id>390994</Id>
+						</Domicilio>
+
+						<Observacion></Observacion>
+						<Numero>84</Numero>
+						<TotalView>0</TotalView>
+						<NumeroView>84</NumeroView>
+						<Anio>2008</Anio>
+						<Cuenta>
+							<FechaAlta>1980-01-01 00:00:00.0</FechaAlta>
+							<FechaAltaView>01/01/1980</FechaAltaView>
+							<FechaBajaView></FechaBajaView>
+							<CodGesCue>147710</CodGesCue>
+							<NumeroCuenta>10148907</NumeroCuenta>
+							<CatastralyNumeroCuenta>
+								10148907 - 10148907
+							</CatastralyNumeroCuenta>
+							<CambioObjImpIF>
+								null-No Posee
+							</CambioObjImpIF>
+							<CambioTitularIF>
+								null-No Posee
+							</CambioTitularIF>
+							<ActDomicilioEnvio>
+								modificar
+							</ActDomicilioEnvio>
+							<Marcada>false</Marcada>
+							<VigenciaForCamDomView>
+								Activo
+							</VigenciaForCamDomView>
+							<Id>10926</Id>
+						</Cuenta>
+
+						<ProcesoMasivo>
+							<ConCuentaExcSel>
+								null-No Posee
+							</ConCuentaExcSel>
+							<EsVueltaAtras>null-No Posee</EsVueltaAtras>
+							<UtilizaCriterio>
+								null-No Posee
+							</UtilizaCriterio>
+							<FechaEnvioView></FechaEnvioView>
+							<CtdTotalRegistrosDeudaIncluidaView>
+								0
+							</CtdTotalRegistrosDeudaIncluidaView>
+							<CtdTotalRegistrosDeudaExcluidaView>
+								0
+							</CtdTotalRegistrosDeudaExcluidaView>
+						</ProcesoMasivo>
+
+						<EstConDeu>
+							<DesEstConDeu>Recompuesta</DesEstConDeu>
+							<Id>4</Id>
+						</EstConDeu>
+
+						<PlaEnvDeuPro>
+							<FechaEnvioView></FechaEnvioView>
+							<NroPlanillaView></NroPlanillaView>
+							<AnioPlanillaView></AnioPlanillaView>
+							<NroBarraAnioPlanillaView></NroBarraAnioPlanillaView>
+							<TotalRegistrosView></TotalRegistrosView>
+							<ImporteTotalView></ImporteTotalView>
+							<CantidadCuentasView></CantidadCuentasView>
+							<FechaRecepcionView></FechaRecepcionView>
+							<FechaHabilitacionView></FechaHabilitacionView>
+						</PlaEnvDeuPro>
+
+						<Procurador>
+							<Descripcion>
+								Dir.Cobranza Judicial
+							</Descripcion>
+							<Domicilio>San Martin 714</Domicilio>
+							<Telefono>4802436/4802436</Telefono>
+							<Observacion></Observacion>
+							<HorarioAtencion>
+								Lunes a Viernes de 14:00 a 18:00
+							</HorarioAtencion>
+							<Id>1</Id>
+						</Procurador>
+
+						<ListConDeuDet>
+							<ConDeuDet>
+								<Observacion>
+									Inclusión manual de deuda a la
+									Constancia de Deuda
+								</Observacion>
+								<IdDeuda>545321</IdDeuda>
+								<Id>1306</Id>
+								<ErrCode>0</ErrCode>
+								<UsuarioUltMdf>admin</UsuarioUltMdf>
+							</ConDeuDet>
+						</ListConDeuDet>
+						<ListConDeuTit>
+							<ConDeuTit>
+								<IdPersona>351687</IdPersona>
+								<Id>50</Id>
+								<ErrCode>0</ErrCode>
+								<UsuarioUltMdf>admin</UsuarioUltMdf>
+							</ConDeuTit>
+
+							<ConDeuTit>
+								<IdPersona>1085706</IdPersona>
+								<Id>51</Id>
+								<ErrCode>0</ErrCode>
+								<UsuarioUltMdf>admin</UsuarioUltMdf>
+							</ConDeuTit>
+
+							<ConDeuTit>
+								<IdPersona>90835</IdPersona>
+								<Id>54</Id>
+								<ErrCode>0</ErrCode>
+								<UsuarioUltMdf>admin</UsuarioUltMdf>
+							</ConDeuTit>
+						</ListConDeuTit>
+						<HabilitarConstancia>false</HabilitarConstancia>
+						<FechaHabilitacion>
+							2008-05-08 19:33:08.0
+						</FechaHabilitacion>
+						<ListHistEstConDeu>
+							<HistEstConDeu>
+								<FechaDesde>
+									2008-05-08 00:00:00.0
+								</FechaDesde>
+								<LogEstado>
+									Creación manual de Constancia
+								</LogEstado>
+								<Id>142</Id>
+								<ErrCode>0</ErrCode>
+								<UsuarioUltMdf>admin</UsuarioUltMdf>
+							</HistEstConDeu>
+
+							<HistEstConDeu>
+								<FechaDesde>
+									2008-05-08 00:00:00.0
+								</FechaDesde>
+								<LogEstado>
+									Modificación Quantum de la
+									Constancia
+								</LogEstado>
+								<Id>144</Id>
+								<ErrCode>0</ErrCode>
+								<UsuarioUltMdf>admin</UsuarioUltMdf>
+							</HistEstConDeu>
+
+							<HistEstConDeu>
+								<FechaDesde>
+									2008-05-08 00:00:00.0
+								</FechaDesde>
+								<LogEstado>
+									Habilitación de Constancia
+								</LogEstado>
+								<Id>145</Id>
+								<ErrCode>0</ErrCode>
+								<UsuarioUltMdf>admin</UsuarioUltMdf>
+							</HistEstConDeu>
+
+							<HistEstConDeu>
+								<FechaDesde>
+									2008-05-08 00:00:00.0
+								</FechaDesde>
+								<LogEstado>
+									Modificación Aspectos Formales de
+									Constancia
+								</LogEstado>
+								<Id>146</Id>
+								<ErrCode>0</ErrCode>
+								<UsuarioUltMdf>admin</UsuarioUltMdf>
+							</HistEstConDeu>
+
+							<HistEstConDeu>
+								<FechaDesde>
+									2008-05-08 00:00:00.0
+								</FechaDesde>
+								<LogEstado>
+									Reimpresión de Constancia
+								</LogEstado>
+								<Id>147</Id>
+								<ErrCode>0</ErrCode>
+								<UsuarioUltMdf>admin</UsuarioUltMdf>
+							</HistEstConDeu>
+						</ListHistEstConDeu>
+						<AnioView>2008</AnioView>
+						<NumeroBarraAnioConstanciaView>
+							84/2008
+						</NumeroBarraAnioConstanciaView>
+						<TotalEnPalabrasView></TotalEnPalabrasView>
+						<FechaEnLetras>
+							09 de mayo de 2008
+						</FechaEnLetras>
+						<NombreMes>MAYO</NombreMes>
+						<Id>237</Id>
+					</ConstanciaDeu>
+
+					<IdPersona>90835</IdPersona>
+					<Id>54</Id>
+				</ConDeuTitVO>
+			</ListConDeuTit>
+			<HabilitarConstancia>false</HabilitarConstancia>
+			<FechaHabilitacion>2008-05-08 19:33:08.0</FechaHabilitacion>
+			<ListHistEstConDeu></ListHistEstConDeu>
+			<AnioView>2008</AnioView>
+			<NumeroBarraAnioConstanciaView>
+				84/2008
+			</NumeroBarraAnioConstanciaView>
+			<TotalEnPalabrasView>
+				Dieciocho pesos con Sesenta y Uno centavos
+			</TotalEnPalabrasView>
+			<FechaEnLetras>09 de mayo de 2008</FechaEnLetras>
+			<NombreMes>MAYO</NombreMes>
+			<Id>237</Id>
+		</ConstanciaDeuVO>
+	</data>
+</siat>

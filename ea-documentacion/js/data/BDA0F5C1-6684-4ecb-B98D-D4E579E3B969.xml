@@ -1,0 +1,4 @@
+tocTab[tocTab.length] = new Array("3.10:1", "", "for", "EARoot/EA3/EA10/EA1253.htm", "175.png", "540", "0", "", "Logical diagram");
+tocTab[tocTab.length] = new Array("3.10:2", "", "«table» for_forcam", "EARoot/EA3/EA10/EA1255.htm", "28.png", "4486", "0", "", "Class");
+tocTab[tocTab.length] = new Array("3.10:3", "", "«table» for_formulario", "EARoot/EA3/EA10/EA1256.htm", "28.png", "4472", "0", "", "Class");
+tocTab[tocTab.length] = new Array("3.10:4", "", "«table» fra_frase", "EARoot/EA3/EA10/EA1257.htm", "28.png", "4455", "0", "", "Class");

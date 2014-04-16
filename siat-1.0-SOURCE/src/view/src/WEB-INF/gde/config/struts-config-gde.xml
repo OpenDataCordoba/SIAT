@@ -1,0 +1,2699 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts-config PUBLIC 
+"-//Apache Software Foundation//DTD Struts Configuration 1.2//EN"  
+"[WWW] http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+
+	<form-beans>
+	
+            <form-bean name="serBanDesGenAdapter"   type="org.apache.struts.action.DynaActionForm"/>
+
+            <form-bean name="ingresoEstadoCuenta" type="org.apache.struts.action.DynaActionForm"/>
+            
+            <form-bean name="deudaContribSearchPage" type="org.apache.struts.action.DynaActionForm"/>
+          	
+          	<form-bean name="liqDeudaAdapter" type="org.apache.struts.action.DynaActionForm"/>
+			
+          	<form-bean name="liqConvenioCuentaAdapter" type="org.apache.struts.action.DynaActionForm"/>
+
+			<form-bean name="liqReclamoAdapter" type="org.apache.struts.action.DynaActionForm"/>
+
+          	<form-bean name="liqReconfeccionAdapter" type="org.apache.struts.action.DynaActionForm"/>
+          	
+          	<form-bean name="liqFormConvenioAdapter" type="org.apache.struts.action.DynaActionForm"/>
+			
+            <form-bean name="procesoMasivoSearchPage" type="org.apache.struts.action.DynaActionForm"/>
+            
+            <form-bean name="procesoMasivoAdapter" type="org.apache.struts.action.DynaActionForm"/>
+            
+            <form-bean name="procesoMasivoAdmProcesoAdapter" type="org.apache.struts.action.DynaActionForm"/>
+            
+            <form-bean name="deudaIncProMasEliminarSearchPage" type="org.apache.struts.action.DynaActionForm"/>
+
+            <form-bean name="armadoSeleccionProMasAdapter" type="org.apache.struts.action.DynaActionForm"/>
+
+            <form-bean name="deudaProMasPlanillasDeudaAdapter" type="org.apache.struts.action.DynaActionForm"/>
+
+            <form-bean name="deudaProMasConsPorCtaSearchPage" type="org.apache.struts.action.DynaActionForm"/>
+            
+            <form-bean name="deudaExcProMasAgregarSearchPage" type="org.apache.struts.action.DynaActionForm"/>
+
+            <form-bean name="deudaExcProMasEliminarSearchPage" type="org.apache.struts.action.DynaActionForm"/>
+            
+            <form-bean name="proMasProExcAdapter" type="org.apache.struts.action.DynaActionForm"/>
+            
+            <form-bean name="procesoMasivoReportesDeudaAdapter" type="org.apache.struts.action.DynaActionForm"/>            
+            
+            <form-bean name="corridaProcesoMasivoAdapter" type="org.apache.struts.action.DynaActionForm"/>            
+            
+   			<form-bean name="selAlmAgregarParametrosSearchPage" type="org.apache.struts.action.DynaActionForm"/>
+            
+            <form-bean name="desGenSearchPage" type="org.apache.struts.action.DynaActionForm"/>
+            
+            <form-bean name="desGenAdapter" type="org.apache.struts.action.DynaActionForm"/>
+            
+            <form-bean name="desEspSearchPage" type="org.apache.struts.action.DynaActionForm"/>
+            
+            <form-bean name="desEspAdapter" type="org.apache.struts.action.DynaActionForm"/>
+            
+            <form-bean name="planSearchPage" type="org.apache.struts.action.DynaActionForm"/>
+            
+            <form-bean name="planAdapter" type="org.apache.struts.action.DynaActionForm"/>
+            
+            <form-bean name="planClaDeuAdapter" type="org.apache.struts.action.DynaActionForm"/>
+            
+            <form-bean name="planMotCadAdapter" type="org.apache.struts.action.DynaActionForm"/>
+            
+            <form-bean name="planForActDeuAdapter" type="org.apache.struts.action.DynaActionForm"/>
+            
+            <form-bean name="planDescuentoAdapter" type="org.apache.struts.action.DynaActionForm"/>
+            
+            <form-bean name="planIntFinAdapter" type="org.apache.struts.action.DynaActionForm"/>
+            
+            <form-bean name="planVenAdapter" type="org.apache.struts.action.DynaActionForm"/>
+            
+            <form-bean name="planExeAdapter" type="org.apache.struts.action.DynaActionForm"/>
+            
+            <form-bean name="planProrrogaAdapter" type="org.apache.struts.action.DynaActionForm"/>
+            
+            <form-bean name="planAtrValAdapter" type="org.apache.struts.action.DynaActionForm"/>
+            
+            <form-bean name="planImpMinAdapter" type="org.apache.struts.action.DynaActionForm"/>
+            
+            <form-bean name="desRecClaDeuAdapter" type="org.apache.struts.action.DynaActionForm"/>
+
+            <form-bean name="desAtrValAdapter" type="org.apache.struts.action.DynaActionForm"/>
+
+            <form-bean name="desEspExeAdapter" type="org.apache.struts.action.DynaActionForm"/>
+            
+            <form-bean name="procuradorSearchPage" type="org.apache.struts.action.DynaActionForm"/>
+            
+            <form-bean name="procuradorAdapter" type="org.apache.struts.action.DynaActionForm"/>
+			
+			<form-bean name="proRecAdapter" type="org.apache.struts.action.DynaActionForm"/>
+			
+			<form-bean name="proRecDesHasAdapter" type="org.apache.struts.action.DynaActionForm"/>
+			
+			<form-bean name="proRecComAdapter" type="org.apache.struts.action.DynaActionForm"/>
+			
+			<form-bean name="plaEnvDeuProSearchPage" type="org.apache.struts.action.DynaActionForm"/>
+			
+			<form-bean name="plaEnvDeuProAdapter" type="org.apache.struts.action.DynaActionForm"/>			
+			
+			<form-bean name="eventoSearchPage" type="org.apache.struts.action.DynaActionForm"/>
+			
+			<form-bean name="eventoAdapter" type="org.apache.struts.action.DynaActionForm"/>
+			
+			<form-bean name="constanciaDeuSearchPage" type="org.apache.struts.action.DynaActionForm"/>
+			
+			<form-bean name="constanciaDeuAdapter" type="org.apache.struts.action.DynaActionForm"/>			
+
+			<form-bean name="conDeuTitAdapter" type="org.apache.struts.action.DynaActionForm"/>
+
+			<form-bean name="conDeuDetAdapter" type="org.apache.struts.action.DynaActionForm"/>
+			
+			<form-bean name="deuJudSinConstanciaSearchPage" type="org.apache.struts.action.DynaActionForm"/>
+
+			<form-bean name="traspasoDevolucionDeudaSearchPage" type="org.apache.struts.action.DynaActionForm"/>
+
+			<form-bean name="traspasoDevolucionDeudaAdapter" type="org.apache.struts.action.DynaActionForm"/>			
+						
+			<form-bean name="deuJudSinConstanciaAdapter" type="org.apache.struts.action.DynaActionForm"/>
+			
+			<form-bean name="convenioSearchPage" type="org.apache.struts.action.DynaActionForm"/>
+			
+			<form-bean name="cuentaObjImpSearchPage" type="org.apache.struts.action.DynaActionForm"/>
+			
+			<form-bean name="cuentasProcuradorSearchPage" type="org.apache.struts.action.DynaActionForm"/>
+			
+			<form-bean name="gesJudSearchPage" type="org.apache.struts.action.DynaActionForm"/>
+			
+			<form-bean name="gesJudAdapter" type="org.apache.struts.action.DynaActionForm"/>
+			
+			<form-bean name="gesJudDeuAdapter" type="org.apache.struts.action.DynaActionForm"/>
+			
+			<form-bean name="gesJudEventoAdapter" type="org.apache.struts.action.DynaActionForm"/>
+
+            <form-bean name="rescateSearchPage" type="org.apache.struts.action.DynaActionForm"/>
+            
+            <form-bean name="rescateAdapter" type="org.apache.struts.action.DynaActionForm"/>            
+            
+            <form-bean name="estadoCuentaSearchPage" type="org.apache.struts.action.DynaActionForm"/>
+            
+            <form-bean name="estadoCuentaAdapter" type="org.apache.struts.action.DynaActionForm"/>
+            
+            <form-bean name="tramiteSearchPage" type="org.apache.struts.action.DynaActionForm"/>
+            
+            <form-bean name="tramiteAdapter" type="org.apache.struts.action.DynaActionForm"/>
+
+            <form-bean name="liqComSearchPage" type="org.apache.struts.action.DynaActionForm"/>
+            
+            <form-bean name="liqComAdapter" type="org.apache.struts.action.DynaActionForm"/>
+			
+			<form-bean name="procesoLiqComAdapter" type="org.apache.struts.action.DynaActionForm"/>
+			
+			<form-bean name="saldoPorCaducidadSearchPage" type="org.apache.struts.action.DynaActionForm"/>
+			
+			<form-bean name="salPorCadMasivoAdapter" type="org.apache.struts.action.DynaActionForm"/>
+			
+			<form-bean name="anularDeudaAdapter" type="org.apache.struts.action.DynaActionForm"/>
+			
+			<form-bean name="conRecNoLiqSearchPage" type="org.apache.struts.action.DynaActionForm"/>
+			
+			<form-bean name="conRecNoLiqAdapter" type="org.apache.struts.action.DynaActionForm"/>
+			
+			<form-bean name="reciboSearchPage" type="org.apache.struts.action.DynaActionForm"/>
+			
+			<form-bean name="reciboAdapter" type="org.apache.struts.action.DynaActionForm"/>
+						
+			<form-bean name="cambioPlanCDMAdapter" type="org.apache.struts.action.DynaActionForm"/>
+			
+			<form-bean name="planRecursoAdapter" type="org.apache.struts.action.DynaActionForm"/>
+
+
+			<!-- Reportes -->		
+            <form-bean name="recaudacionReport" type="org.apache.struts.action.DynaActionForm"/>            
+			
+			<form-bean name="importeRecaudarReport" type="org.apache.struts.action.DynaActionForm"/>
+			
+			<form-bean name="importeRecaudadoReport" type="org.apache.struts.action.DynaActionForm"/>
+			
+			<form-bean name="convenioFormReport" type="org.apache.struts.action.DynaActionForm"/>
+			
+            <form-bean name="convenioReport" type="org.apache.struts.action.DynaActionForm"/>
+
+   			<form-bean name="respuestaOperativosReport" type="org.apache.struts.action.DynaActionForm"/>
+
+   			<form-bean name="convenioACaducarReport" type="org.apache.struts.action.DynaActionForm"/>
+
+			<form-bean name="deudaAnuladaReport" type="org.apache.struts.action.DynaActionForm"/>
+			
+			<form-bean name="emisionReport" type="org.apache.struts.action.DynaActionForm"/>
+			
+			<form-bean name="recaudadoReport" type="org.apache.struts.action.DynaActionForm"/>
+            
+   			<form-bean name="distribucionReport" type="org.apache.struts.action.DynaActionForm"/>
+   			
+            <form-bean name="deudaProcuradorReport" type="org.apache.struts.action.DynaActionForm"/>
+            
+            <form-bean name="contribuyenteCerReport" type="org.apache.struts.action.DynaActionForm"/>
+            
+            <form-bean name="decJurPagAdapter" type="org.apache.struts.action.DynaActionForm"/>
+            
+            <!-- Fin Reportes -->
+            
+            <form-bean name="uploadEventoGesJudAdapter" type="org.apache.struts.action.DynaActionForm">            
+            	<form-property name="file" type="org.apache.struts.upload.FormFile"/>
+            </form-bean>
+           	
+           	<form-bean name="gesJudReport" type="org.apache.struts.action.DynaActionForm"/>
+           	
+           	<form-bean name="deuCueGesJudSearchPage" type="org.apache.struts.action.DynaActionForm"/>
+           	
+           	<form-bean name="codRefPagSearchPage" type="org.apache.struts.action.DynaActionForm"/>
+           	
+           	<form-bean name="proPreDeuSearchPage" type="org.apache.struts.action.DynaActionForm"/>
+           	
+           	<form-bean name="proPreDeuDetSearchPage" type="org.apache.struts.action.DynaActionForm"/>
+
+           	<form-bean name="proPreDeuAdapter"    type="org.apache.struts.action.DynaActionForm"/>
+           	
+           	<form-bean name="procesoPrescripcionDeudaAdapter" type="org.apache.struts.action.DynaActionForm"/>
+           	
+           	<form-bean name="accionConvenioAdapter" type="org.apache.struts.action.DynaActionForm"/>
+           	
+           	<form-bean name="decJurSearchPage" type="org.apache.struts.action.DynaActionForm"/>
+           	
+           	<form-bean name="decJurAdapter" type="org.apache.struts.action.DynaActionForm"/>
+           	
+           	<form-bean name="decJurDetAdapter" type="org.apache.struts.action.DynaActionForm"/>
+           	
+           	<form-bean name="desgloseAjusteAdapter" type="org.apache.struts.action.DynaActionForm"/>
+
+			<form-bean name="multaAdapter" type="org.apache.struts.action.DynaActionForm"/>
+			
+			<form-bean name="multaSearchPage" type="org.apache.struts.action.DynaActionForm"/>
+			
+			<form-bean name="cierreComercioAdapter" type="org.apache.struts.action.DynaActionForm"/>
+			
+			<form-bean name="mandatarioSearchPage" type="org.apache.struts.action.DynaActionForm"/>
+			
+			<form-bean name="mandatarioAdapter" type="org.apache.struts.action.DynaActionForm"/>
+			
+			<form-bean name="cobranzaSearchPage" type="org.apache.struts.action.DynaActionForm"/>
+			
+			<form-bean name="cobranzaAdapter" type="org.apache.struts.action.DynaActionForm"/>
+           	           	
+           	<form-bean name="perCobAdapter" type="org.apache.struts.action.DynaActionForm"/>
+           	
+           	<form-bean name="perCobSearchPage" type="org.apache.struts.action.DynaActionForm"/>
+
+           	<form-bean name="ageRetAdapter" type="org.apache.struts.action.DynaActionForm"/>
+           	
+           	<form-bean name="ageRetSearchPage" type="org.apache.struts.action.DynaActionForm"/>
+           	
+           	<form-bean name="tipoMultaSearchPage" type="org.apache.struts.action.DynaActionForm"/>
+           	
+           	<form-bean name="tipoMultaAdapter" type="org.apache.struts.action.DynaActionForm"/>
+           	
+           	<form-bean name="liqDecJurAdapter" type="org.apache.struts.action.DynaActionForm"/>
+           	
+           	<form-bean name="indiceCompensacionSearchPage" type="org.apache.struts.action.DynaActionForm"/>
+           	
+           	<form-bean name="indiceCompensacionAdapter" type="org.apache.struts.action.DynaActionForm"/>
+
+           	<form-bean name="ctrlInfDeuAdapter" type="org.apache.struts.action.DynaActionForm"/>           	
+           	
+           	<form-bean name="tipoPagoSearchPage" type="org.apache.struts.action.DynaActionForm"/>
+           	
+           	<form-bean name="tipoPagoAdapter" type="org.apache.struts.action.DynaActionForm"/>
+	</form-beans>
+
+	<action-mappings>
+    	
+	    <!--  Mantenedor Servicio Banco Descuentos Generales -->		
+        <action
+     		path="/gde/AdministrarSerBanDesGen"
+	        type="ar.gov.rosario.siat.gde.view.struts.AdministrarSerBanDesGenDAction"
+		    scope="request"
+        	validate="false"
+	        name="serBanDesGenAdapter"
+            parameter="method"
+    	    input=".gde.definicion.view.serBanDesGenEditAdapter"
+	        attribute="serBanDesGenAdapter">
+            
+    	    <forward name="serBanDesGenViewAdapter"      path=".gde.definicion.view.serBanDesGenViewAdapter" />
+    	    <forward name="serBanDesGenEditAdapter"      path=".gde.definicion.view.serBanDesGenEditAdapter" />
+	    </action>
+	    <!-- Fin Mantenedor Servicio Banco Descuentos Generales -->		
+	    
+		<action   
+	    	path="/gde/BuscarDeudaContrib"
+	        type="ar.gov.rosario.siat.gde.view.struts.BuscarDeudaContribDAction"
+		    scope="request"
+	       	validate="false"
+	        name="deudaContribSearchPage"
+	        parameter="method"
+	   	    input=".gde.gDeuda.view.deudaContribSearchPage"
+	        attribute="deudaContribSearchPage">
+	                       
+	   	    <forward name="deudaContribSearchPage"  path=".gde.gDeuda.view.deudaContribSearchPage" />
+	        <forward name="buscarPersona" 	       	path="/pad/BuscarPersona.do?method=inicializar" />
+	        <forward name="estadoCuenta"		  	path="/gde/AdministrarLiqEstadoCuenta.do?method=inicializar" />
+	        <forward name="administrarEncCuenta"	path="/pad/AdministrarEncCuenta.do?method=inicializar" />
+	    </action>
+		
+		<!-- Liquidacion de Deuda -->		
+		<action
+     		path="/gde/AdministrarLiqDeuda"
+	        type="ar.gov.rosario.siat.gde.view.struts.AdministrarLiqDeudaDAction"
+		    scope="request"
+        	validate="false"
+	        name="liqDeudaAdapter"
+            parameter="method"
+    	    input=".gde.gdeuda.view.liqDeudaIngresoGrAdapter"
+	        attribute="liqDeudaIngresoGrAdapter">
+            
+    	    <forward name="inicializarGr" 					path="/gde/AdministrarLiqDeuda.do?method=inicializarGr" />
+    	    <forward name="liqDeudaIngresoGrAdapter"		path=".gde.gdeuda.view.liqDeudaIngresoGrAdapter" />
+    	    <forward name="liqDeudaIngresoContrAdapter"		path=".gde.gdeuda.view.liqDeudaIngresoContrAdapter" />	
+    	    <forward name="liqDeudaAdapter"      			path=".gde.gdeuda.view.liqDeudaAdapter" />
+    	    <forward name="buscarCuenta" 					path="/pad/BuscarCuenta.do?method=inicializar" />
+    	    <forward name="inicializarDeudaContrib"        	path="/gde/BuscarDeudaContrib.do?method=inicializar" />
+    	    <forward name="verDetalleDeuda"					path="/gde/AdministrarLiqDetalleDeuda.do?method=verDetalleDeuda"/>
+    	    <forward name="verConvenio"					    path="/gde/AdministrarLiqConvenioCuenta.do?method=inicializar"/>
+    	    <forward name="reclamarAcent"					path="/gde/AdministrarLiqReclamo.do?method=reclamarAcent"/>
+    	    <forward name="verDetalleObjImp"                path="/pad/AdministrarObjImp.do?method=inicializar"/>
+    	    <forward name="verHistoricoContrib"             path="/pad/AdministrarCuenta.do?method=inicializar"/>
+    	    <forward name="reconfeccionar"             		path="/gde/AdministrarLiqReconfeccion.do?method=inicializar"/>
+    	    <forward name="formalizarConvenio"             	path="/gde/AdministrarLiqFormConvenio.do?method=inicializar"/>
+    	    <forward name="formalizarConvenioEsp"          	path="/gde/AdministrarLiqFormConvenioEsp.do?method=inicializar"/>
+    	    <forward name="liqDeudaImprimirInfDeuda"        path=".gde.gdeuda.view.liqImprimirInformeDeuda"/>
+    	    <forward name="cambioPlanCDM"					path="/gde/AdministrarCambioPlanCDM.do?method=cambioPlanCDM"/>
+    	    <forward name="cuotaSaldoCDM"					path="/gde/AdministrarCambioPlanCDM.do?method=cuotaSaldoCDM"/>
+    	    <forward name="buscarCueExe"					path="/exe/BuscarCueExe.do?method=inicializar"/>
+    	    <forward name="liqDeudaFilterCuentaAutoAdapter" path=".gde.gdeuda.view.liqDeudaFilterCuentaAutoAdapter" />
+    	    <forward name="desglosarAjuste" 				path="/gde/AdministrarDesgloseAjuste.do?method=inicializar" />
+    	    <forward name="cierreComercio" 					path="/gde/AdministrarCierreComercio.do?method=cierreComercio" />
+    	    <forward name="decJurMasiva"					path="/gde/AdministrarLiqDecJur.do?method=inicializar"/>
+    	    <forward name="verPlanilla"                		path="/gde/AdministrarPlaEnvDeuPro.do?method=inicializar"/>
+       	    <forward name="administrarDDJJEntVen"			path="/esp/AdministrarDDJJEntVen.do?method=inicializar"/>
+       	    <forward name="buscarNovedadRS"					path="/rec/BuscarNovedadRS.do?method=inicializar"/>
+       	    <forward name="volantePagoIntRS"           		path="/gde/AdministrarVolantePagoInteresesRS.do?method=inicializar"/>
+    	</action>
+	    
+	    <action
+     		path="/gde/AdministrarLiqDetalleDeuda"
+	        type="ar.gov.rosario.siat.gde.view.struts.AdministrarLiqDetalleDeudaDAction"
+		    scope="request"
+        	validate="false"
+	        name="liqDeudaAdapter"
+            parameter="method"
+    	    input=".gde.gdeuda.view.liqDetalleDeudaViewAdapter"
+	        attribute="liqDeudaAdapter">
+            
+    	    <forward name="liqDetalleDeudaViewAdapter"      path=".gde.gdeuda.view.liqDetalleDeudaViewAdapter" />
+    	    <forward name="liqDeudaAdapter"      			path=".gde.gdeuda.view.liqDeudaAdapter" />
+    	    <forward name="verCuentaDecJur"      			path="/gde/BuscarDecJur.do?method=inicializar" />
+	    </action>
+	    	
+	    	<!-- Visualizacion de Convenio -->
+	    <action
+     		path="/gde/AdministrarLiqConvenioCuenta"
+	        type="ar.gov.rosario.siat.gde.view.struts.AdministrarLiqConvenioCuentaDAction"
+		    scope="request"
+        	validate="false"
+	        name="liqConvenioCuentaAdapter"
+            parameter="method"
+    	    input=".gde.gdeuda.view.liqConvenioCuentaAdapter"
+	        attribute="liqConvenioCuentaAdapter">
+            
+            <forward name="liqConvenioCuentaAdapter"		path=".gde.gdeuda.view.liqConvenioCuentaAdapter"/>
+            <forward name="liqDeudaAdapter"      			path=".gde.gdeuda.view.liqDeudaAdapter" />
+            <forward name="liqConvenioSalPorCadAdapter"		path=".gde.gdeuda.view.liqConvenioSalPorCadAdapter"/>
+            <forward name="liqFormConvenioImpForm"			path=".gde.gdeuda.view.liqFormConvenioImpForm"/>
+       	    <forward name="liqFormConvenioImpRecibos"		path=".gde.gdeuda.view.liqFormConvenioImpRecibos"/>
+       	    <forward name="liqReconfeccionAdapter"          path=".gde.gdeuda.view.liqReconfeccionAdapter"/>  
+       	    <forward name="reconfeccionar"					path="/gde/AdministrarLiqReconfeccion.do?method=reconfeccionar"/>
+       	    <forward name="imprimir"						path="/gde/AdministrarLiqReconfeccion.do?method=impRecibos"/>
+       	    <forward name="cuotaSaldoInit"					path=".gde.gdeuda.view.liqConvenioCuotaSaldoAdapter"/> 
+       	    <forward name="pagoACuentaInit"					path=".gde.gdeuda.view.liqConvenioPagoCuentaAdapter"/>
+       	    <forward name="reclamarAcent"					path="/gde/AdministrarLiqReclamoCuota.do?method=reclamarAcent"/>
+       	    <forward name="verPagosConvenio"				path=".gde.gdeuda.view.verPagosConvenioAdapter"/>
+       	    <forward name="convenioEstadosAdapter"			path=".gde.gdeuda.view.convenioEstadosAdapter"/>
+       	    <forward name="verRescateInd"					path=".gde.gdeuda.view.rescateIndividualAdapter"/>
+       	    <forward name="verConvConsist"					path=".gde.gdeuda.view.convenioConsistenciaAdapter"/>
+	    </action>
+
+	    	<!-- Reclamar Asentamiento Deuda -->
+	    <action
+     		path="/gde/AdministrarLiqReclamo"
+	        type="ar.gov.rosario.siat.gde.view.struts.AdministrarLiqReclamoDAction"
+		    scope="request"
+        	validate="false"
+	        name="liqReclamoAdapter"
+            parameter="method"
+    	    input=".gde.gdeuda.view.liqReclamoEditAdapter"
+	        attribute="liqReclamoAdapter">
+            
+            <forward name="liqReclamoEditAdapter"			path=".gde.gdeuda.view.liqReclamoEditAdapter"/>
+            <forward name="liqDeudaAdapter"      			path=".gde.gdeuda.view.liqDeudaAdapter" />
+            <forward name="liqReclamoMsg"      				path=".gde.gdeuda.view.liqReclamoMsg" />
+            
+	    </action>
+	    
+	   		<!-- Reclamar Asentamiento Cuota -->
+	    <action
+     		path="/gde/AdministrarLiqReclamoCuota"
+	        type="ar.gov.rosario.siat.gde.view.struts.AdministrarLiqReclamoCuotaDAction"
+		    scope="request"
+        	validate="false"
+	        name="liqReclamoAdapter"
+            parameter="method"
+    	    input=".gde.gdeuda.view.liqReclamoCuotaEditAdapter"
+	        attribute="liqReclamoAdapter">
+            
+            <forward name="liqReclamoCuotaEditAdapter"		path=".gde.gdeuda.view.liqReclamoCuotaEditAdapter"/>
+            <forward name="liqReclamoCuotaMsg"      		path=".gde.gdeuda.view.liqReclamoCuotaMsg" />
+	    </action>
+	    
+	    	<!-- Reconfeccion -->
+	    <action
+     		path="/gde/AdministrarLiqReconfeccion"
+	        type="ar.gov.rosario.siat.gde.view.struts.AdministrarLiqReconfeccionDAction"
+		    scope="request"
+        	validate="false"
+	        name="liqReconfeccionAdapter"
+            parameter="method"
+    	    input=".gde.gdeuda.view.liqReconfeccionAdapter"
+	        attribute="liqReconfeccionAdapter">
+            
+       	    <forward name="liqReconfeccionAdapter"          path=".gde.gdeuda.view.liqReconfeccionAdapter"/>
+       	    <forward name="reconfeccionFinalizada"          path=".gde.gdeuda.view.liqReconfeccionFinalizada"/>
+       	    <forward name="imprimirRecibos"        			path=".gde.gdeuda.view.liqReconfeccionImprimirRecibos"/>       	    
+            <forward name="liqDeudaAdapter"      			path=".gde.gdeuda.view.liqDeudaAdapter" />
+            <forward name="cuotaSaldoInit"					path=".gde.gdeuda.view.liqConvenioCuotaSaldoAdapter"/>
+	    </action>
+	    	
+	    <!-- Volante de Pago de Intereses RS -->
+	    <action
+     		path="/gde/AdministrarVolantePagoInteresesRS"
+	        type="ar.gov.rosario.siat.gde.view.struts.AdministrarVolantePagoInteresesRSDAction"
+		    scope="request"
+        	validate="false"
+	        name="liqReconfeccionAdapter"
+            parameter="method"
+    	    input=".gde.gdeuda.view.liqVolantePagoIntRSAdapter"
+	        attribute="liqReconfeccionAdapter">
+            
+       	    <forward name="liqVolantePagoIntRSAdapter"      path=".gde.gdeuda.view.liqVolantePagoIntRSAdapter"/>
+       	    <forward name="liqVolantePagoIntRSFinalizada"   path=".gde.gdeuda.view.liqVolantePagoIntRSFinalizada"/>
+       	    <forward name="imprimirVolante"        			path=".gde.gdeuda.view.liqVolantePagoIntRSImprimirRecibos"/>       	    
+            <forward name="liqDeudaAdapter"      			path=".gde.gdeuda.view.liqDeudaAdapter" />
+	    </action>
+	    
+	    	<!-- Formalizacion de Convenios de Pago -->
+	    <action
+     		path="/gde/AdministrarLiqFormConvenio"
+	        type="ar.gov.rosario.siat.gde.view.struts.AdministrarLiqFormConvenioDAction"
+		    scope="request"
+        	validate="false"
+	        name="liqFormConvenioAdapter"
+            parameter="method"
+    	    input=".gde.gdeuda.view.liqFormConvenioAdapter"
+	        attribute="liqFormConvenioAdapter">
+            
+       	    <forward name="liqFormConvenioAdapter"          path=".gde.gdeuda.view.liqFormConvenioAdapter"/>
+       	    <forward name="liqFormConvenioPlanesAdapter"    path=".gde.gdeuda.view.liqFormConvenioPlanesAdapter"/>
+       	    <forward name="liqFormConvenioCuotasAdapter"    path=".gde.gdeuda.view.liqFormConvenioCuotasAdapter"/>
+       	    <forward name="liqFormConvenioSimulaCuotasAdapter"   path=".gde.gdeuda.view.liqFormConvenioSimulaCuotasAdapter"/>
+       	    <forward name="liqFormConvenioFormalAdapter"    path=".gde.gdeuda.view.liqFormConvenioFormalAdapter"/>
+	        
+	        <forward name="liqFormConvenioImpForm"			path=".gde.gdeuda.view.liqFormConvenioImpForm"/>
+       	    <forward name="liqFormConvenioImpRecibos"		path=".gde.gdeuda.view.liqFormConvenioImpRecibos"/>
+       	    <forward name="liqFormConvenioImpAltCuotas"		path=".gde.gdeuda.view.liqFormConvenioImpAltCuotas"/>
+       	    <forward name="liqFormConvenioImpFormAuto"      path=".gde.gdeuda.view.liqFormConvenioImpFormAuto"/>
+       	    
+       	    <forward name="liqFormConvenioPrintAdapter"		path=".gde.gdeuda.view.liqFormConvenioPrintAdapter"/>
+       	    <forward name="liqDeudaAdapter"      			path=".gde.gdeuda.view.liqDeudaAdapter" />
+       	    <forward name="verDetallePlan"					path="/gde/AdministrarPlan.do?method=inicializar"/>
+       	    <forward name="buscarPersona" 				    path="/pad/BuscarPersona.do?method=inicializar"/>
+       	    <forward name="verDetalleDeuda"					path="/gde/AdministrarLiqDetalleDeuda.do?method=inicializar"/>
+       	    <forward name="formalizarConvenioEsp"			path="/gde/AdministrarLiqFormConvenioEsp.do?method=refillInit"/>
+	    </action>
+	    
+	     <action
+     		path="/gde/AdministrarLiqFormConvenioEsp"
+	        type="ar.gov.rosario.siat.gde.view.struts.AdministrarLiqFormConvenioEspDAction"
+		    scope="request"
+        	validate="false"
+	        name="liqFormConvenioAdapter"
+            parameter="method"
+    	    input=".gde.gdeuda.view.liqDeudaAdapter"
+	        attribute="liqFormConvenioAdapter">
+	        <forward name="liqFormConvenioEspAdapter"					path=".gde.gdeuda.view.liqFormConvenioEspAdapter"/>
+       	    <forward name="liqFormConvenioSimulaCuotasAdapter"          path=".gde.gdeuda.view.liqFormConvenioSimulaCuotasAdapter"/>
+       	    <forward name="liqFormConvenioPlanesAdapter"                path=".gde.gdeuda.view.liqFormConvenioPlanesAdapter"/>
+       	    <forward name="liqDeudaAdapter"      						path=".gde.gdeuda.view.liqDeudaAdapter" />
+       	    <forward name="verDetalleDeuda"								path="/gde/AdministrarLiqDetalleDeuda.do?method=inicializar"/>
+	    </action>
+	    
+	    <action
+     		path="/gde/ImprimirConvenio"
+	        type="ar.gov.rosario.siat.gde.view.struts.ImprimirConvenioDAction"
+		    scope="request"
+        	validate="false"
+	        name="liqFormConvenioAdapter"
+            parameter="method"
+    	    input=".gde.gdeuda.view.liqFormConvenioAdapter"
+	        attribute="liqFormConvenioAdapter">
+       	    
+       	    <forward name="liqFormConvenioPrintAdapter"		path=".gde.gdeuda.view.liqFormConvenioPrintAdapter"/>
+       	    <forward name="verConvenioInit"					path="/gde/AdministrarLiqConvenioCuenta.do?method=inicializar"/>
+       	    <forward name="liqFormConvenioCyqPrintAdapter"	path=".cyq.concursoyQuiebra.view.liqFormConvenioCyqPrintAdapter"/>
+	    </action>
+	    
+	    <action
+     		path="/gde/AdministrarCambioPlanCDM"
+	        type="ar.gov.rosario.siat.gde.view.struts.AdministrarCambioPlanCDMDAction"
+		    scope="request"
+        	validate="false"
+	        name="cambioPlanCDMAdapter"
+            parameter="method"
+    	    input=".gde.cdm.view.cambioPlanCDMAdapter"
+	        attribute="cambioPlanCDMAdapter">
+                        
+            <forward name="deudaVencidaCDMAdapter"			path=".gde.cdm.view.deudaVencidaCDMAdapter"/>
+            <forward name="cambioPlanCDMAdapter"			path=".gde.cdm.view.cambioPlanCDMAdapter"/>
+            <forward name="cambioPlanCDMPrintAdapter"		path=".gde.cdm.view.cambioPlanCDMPrintAdapter"/>
+            <forward name="cambioPlanCDMImpForm"			path=".gde.cdm.view.cambioPlanCDMImpForm"/>
+            <forward name="cambioPlanCDMImpRecibo"			path=".gde.cdm.view.cambioPlanCDMImpRecibo"/>
+            <forward name="liqDeudaAdapter"      			path=".gde.gdeuda.view.liqDeudaAdapter" />
+            
+            <forward name="cuotaSaldoCDMAdapter"			path=".gde.cdm.view.cuotaSaldoCDMAdapter"/>
+            <forward name="cuotaSaldoCDMPrintAdapter"		path=".gde.cdm.view.cuotaSaldoCDMPrintAdapter"/>
+            <forward name="cuotaSaldoCDMImpRecibo"			path=".gde.cdm.view.cuotaSaldoCDMImpRecibo"/>
+	    </action>
+	    
+	    	<!-- Cierre Comercio -->
+	    <action
+     		path="/gde/AdministrarCierreComercio"
+	        type="ar.gov.rosario.siat.gde.view.struts.AdministrarCierreComercioDAction"
+		    scope="request"
+        	validate="false"
+	        name="cierreComercioAdapter"
+            parameter="method"
+    	    input=".gde.gdeudaauto.view.cierreComercioAdapter"
+	        attribute="cierreComercioAdapter">
+            
+            <forward name="cierreComercioAdapter"      			path=".gde.gdeudaauto.view.cierreComercioAdapter" />            
+            <forward name="administrarMulta"      			path="/gde/AdministrarMulta.do?method=inicializar" />
+            <forward name="cierreComercioEditAdapter"      path=".gde.cierreComercio.view.cierreComercioEditAdapter" />
+    	    <forward name="cierreComercioViewAdapter"  	   path=".gde.cierreComercio.view.cierreComercioViewAdapter" />
+	    </action>
+	    	<!-- Declaracion Jurada Masiva -->
+	    
+	    <action
+     		path="/gde/AdministrarLiqDecJur"
+	        type="ar.gov.rosario.siat.gde.view.struts.AdministrarLiqDecJurDAction"
+		    scope="request"
+        	validate="false"
+	        name="liqDecJurAdapter"
+            parameter="method"
+    	    input=".gde.gdeuda.view.liqDecJurAdapter"
+	        attribute="liqDecJurAdapter">
+	        
+	        <forward name="liqDecJurAdapterInit"			path=".gde.gdeudaauto.view.liqDecJurAdapterInit"/>
+	        <forward name="liqDecJurAdapterDetalle"			path=".gde.gdeudaauto.view.liqDecJurAdapterDetalle"/>
+	        <forward name="liqDecJurAdapterGeneral"			path=".gde.gdeudaauto.view.liqDecJurAdapterGeneral"/>
+	        <forward name="liqDecJurAdapterSimula"			path=".gde.gdeudaauto.view.liqDecJurAdapterSimula"/>
+	    </action>
+	    <!-- Fin  Liquidacion de Deuda -->
+	    
+	    <!--  Mantenedor Envio Judicial -->		
+        <action
+     		path="/gde/BuscarProcesoMasivo"
+	        type="ar.gov.rosario.siat.gde.view.struts.BuscarProcesoMasivoDAction"
+		    scope="request"
+        	validate="false"
+	        name="procesoMasivoSearchPage"
+            parameter="method"
+    	    input=".gde.gdeudaJudicial.view.procesoMasivoSearchPage"
+	        attribute="procesoMasivoSearchPage">
+            
+            <forward name="procesoMasivoSearchPage"         path=".gde.gdeudaJudicial.view.procesoMasivoSearchPage" />
+	   	    <forward name="administrarProcesoMasivo" 	    path="/gde/AdministrarProcesoMasivo.do?method=inicializar" />
+	   	    <forward name="administrarProcesoProcesoMasivo" path="/gde/AdministrarProcesoProcesoMasivo.do?method=inicializar" />
+	    </action>
+	    
+	    <action
+     		path="/gde/AdministrarProcesoMasivo"
+	        type="ar.gov.rosario.siat.gde.view.struts.AdministrarProcesoMasivoDAction"
+		    scope="request"
+        	validate="false"
+	        name="procesoMasivoAdapter"
+            parameter="method"
+    	    input=".gde.gdeudaJudicial.view.procesoMasivoEditAdapter"
+	        attribute="procesoMasivoAdapter">
+            
+    	    <forward name="procesoMasivoViewAdapter"	  path=".gde.gdeudaJudicial.view.procesoMasivoViewAdapter" />
+    	    <forward name="procesoMasivoEditAdapter"      path=".gde.gdeudaJudicial.view.procesoMasivoEditAdapter" />
+	    </action>
+	    <!-- Fin Mantenedor Envio Judicial -->		
+	    
+	    <!--  Administrar Proceso Envio Judicial -->		
+	    <action
+     		path="/gde/AdministrarProcesoProcesoMasivo"
+	        type="ar.gov.rosario.siat.gde.view.struts.AdministrarProcesoProcesoMasivoDAction"
+		    scope="request"
+        	validate="false"
+	        name="procesoMasivoAdmProcesoAdapter"
+            parameter="method"
+    	    input=".gde.gdeudaJudicial.view.procesoMasivoAdmProcesoAdapter"
+	        attribute="procesoMasivoAdmProcesoAdapter">
+            
+            <!-- forwards de la deuda incluida -->
+    	    <forward name="procesoMasivoAdmProcesoAdapter"      path=".gde.gdeudaJudicial.view.procesoMasivoAdmProcesoAdapter" />
+    	    <forward name="administrarProcesoMasivo" 	        path="/gde/AdministrarProcesoMasivo.do?method=inicializar" />
+    	    <!--  forward name="buscarDeudaIncProMasAgregar"         path="/gde/BuscarDeudaIncProMasAgregar.do?method=inicializar" / -->
+    	    <forward name="selAlmAgregarParametrosSearchPage"   path="/gde/AdministrarSelAlmAgregarParametros.do?method=inicializar" />    	    
+    	    <forward name="buscarDeudaIncProMasEliminar"        path="/gde/BuscarDeudaIncProMasEliminar.do?method=inicializar" />
+			<forward name="administrarDeudaIncProMasArmadoSeleccion"  path="/gde/AdministrarDeudaIncProMasArmadoSeleccion.do?method=inicializar" />
+			<forward name="administrarDeudaIncProMasPlanillasDeuda"   path="/gde/AdministrarDeudaIncProMasPlanillasDeuda.do?method=inicializar" />
+			<forward name="buscarDeudaIncProMasConsPorCta"      path="/gde/BuscarDeudaIncProMasConsPorCta.do?method=inicializar" />
+			<!-- forwards de la deuda excluida -->
+			<forward name="buscarDeudaExcProMasAgregar"         path="/gde/BuscarDeudaExcProMasAgregar.do?method=inicializar" />
+    	    <forward name="buscarDeudaExcProMasEliminar"        path="/gde/BuscarDeudaExcProMasEliminar.do?method=inicializar" />
+    	    <forward name="administrarDeudaExcProMasArmadoSeleccion"  path="/gde/AdministrarDeudaExcProMasArmadoSeleccion.do?method=inicializar" />
+			<forward name="administrarDeudaExcProMasPlanillasDeuda"   path="/gde/AdministrarDeudaExcProMasPlanillasDeuda.do?method=inicializar" />
+			<forward name="buscarDeudaExcProMasConsPorCta"      path="/gde/BuscarDeudaExcProMasConsPorCta.do?method=inicializar" />
+			<!-- forwards de los procuradores excluidos -->
+			<forward name="administrarProMasProExc"   path="/gde/AdministrarProMasProExc.do?method=inicializar" />
+			<!-- forwards de los reportes de deuda incluida y excluida -->
+			<forward name="administrarProMasRepDeudaInc"  path="/gde/AdministrarProMasRepDeudaInc.do?method=inicializar" />
+			<forward name="administrarProMasRepDeudaExc"  path="/gde/AdministrarProMasRepDeudaExc.do?method=inicializar" />
+			
+			<forward name="administrarAdpCorridaProcesoMasivo" path="/pro/AdministrarAdpCorrida.do?method=inicializar" />    
+			<forward name="administrarCorridaProcesoMasivo"    path="/gde/AdministrarCorridaProcesoMasivo.do?method=inicializar" />    			
+			<forward name="administrarPlaEnvDeuPro"      path="/gde/AdministrarPlaEnvDeuPro.do?method=inicializar" />
+			<forward name="imprimirConstancia"     path="/gde/AdministrarConstanciaDeu.do?method=imprimir" />
+			
+	    </action>
+
+	    <!-- Fin Buscar Deuda Incluir del Proceso Envio Judicial para Agregar -->		
+
+	    <!--  Buscar Deuda Incluir del Proceso Envio Judicial para Eliminar -->		
+	    <action
+     		path="/gde/BuscarDeudaIncProMasEliminar"
+	        type="ar.gov.rosario.siat.gde.view.struts.BuscarDeudaIncProMasEliminarDAction"
+		    scope="request"
+        	validate="false"
+	        name="deudaIncProMasEliminarSearchPage"
+            parameter="method"
+    	    input=".gde.gdeudaJudicial.view.deudaIncProMasEliminarSearchPage"
+	        attribute="deudaIncProMasEliminarSearchPage">
+            
+    	    <forward name="deudaIncProMasEliminarSearchPage"  path=".gde.gdeudaJudicial.view.deudaIncProMasEliminarSearchPage" />
+    	    <forward name="administrarDeudaIncProMasEliminar" path="/gde/AdministrarDeudaIncProMasEliminar.do?method=inicializar" />
+	    </action>
+	    <!-- Fin Buscar Deuda Incluir del Proceso Envio Judicial para Eliminar -->		
+
+		<action
+     		path="/gde/AdministrarDeudaIncProMasEliminar"
+	        type="ar.gov.rosario.siat.gde.view.struts.AdministrarDeudaIncProMasEliminarDAction"
+		    scope="request"
+        	validate="false"
+	        name="deudaIncProMasEliminarSearchPage"
+            parameter="method"
+    	    input=".gde.gdeudaJudicial.view.deudaIncProMasEliminarSelIndSearchPage"
+	        attribute="deudaIncProMasEliminarSearchPage">
+            
+    	    <forward name="deudaIncProMasEliminarSelecIndSearchPage" path=".gde.gdeudaJudicial.view.deudaIncProMasEliminarSelIndSearchPage" />
+       	    <forward name="buscarDeudaIncProMasEliminar"             path="/gde/BuscarDeudaIncProMasEliminar.do?method=buscar" /> <!--  utilizado para volver -->
+	    </action>
+
+	    <action          
+     		path="/gde/AdministrarDeudaIncProMasArmadoSeleccion"
+	        type="ar.gov.rosario.siat.gde.view.struts.AdministrarDeudaIncProMasArmadoSeleccionDAction"
+		    scope="request"
+        	validate="false"
+	        name="armadoSeleccionProMasAdapter"
+            parameter="method"
+    	    input=".gde.gdeudaJudicial.view.deudaIncProMasArmadoSeleccionAdapter"
+	        attribute="armadoSeleccionProMasAdapter">
+            
+    	    <forward name="deudaIncProMasArmadoSeleccionAdapter"       path=".gde.gdeudaJudicial.view.deudaIncProMasArmadoSeleccionAdapter" />
+	    </action>        
+
+	    <action          
+     		path="/gde/AdministrarDeudaIncProMasPlanillasDeuda"
+	        type="ar.gov.rosario.siat.gde.view.struts.AdministrarDeudaIncProMasPlanillasDeudaDAction"
+		    scope="request"
+        	validate="false"
+	        name="deudaProMasPlanillasDeudaAdapter"
+            parameter="method"
+    	    input=".gde.gdeudaJudicial.view.deudaIncProMasPlanillasDeudaAdapter"
+	        attribute="deudaProMasPlanillasDeudaAdapter">
+            
+    	    <forward name="deudaIncProMasPlanillasDeudaAdapter"       path=".gde.gdeudaJudicial.view.deudaIncProMasPlanillasDeudaAdapter" />
+	    </action>    
+	    
+	    <action
+     		path="/gde/BuscarDeudaIncProMasConsPorCta"
+	        type="ar.gov.rosario.siat.gde.view.struts.BuscarDeudaIncProMasConsPorCtaDAction"
+		    scope="request"
+        	validate="false"
+	        name="deudaProMasConsPorCtaSearchPage"
+            parameter="method"
+    	    input=".gde.gdeudaJudicial.view.deudaIncProMasConsPorCtaSearchPage"
+	        attribute="deudaProMasConsPorCtaSearchPage">
+            
+    	    <forward name="deudaIncProMasConsPorCtaSearchPage" path=".gde.gdeudaJudicial.view.deudaIncProMasConsPorCtaSearchPage" />
+       	    <forward name="buscarCuenta" 					   path="/pad/BuscarCuenta.do?method=inicializar" />
+    	    <!-- TODO  agregar forward a conceptos  -->
+	    </action>
+
+		<!-- Deuda excluida -->
+	    <!--  Buscar Deuda Excluida del Proceso Envio Judicial para Agregar -->		
+	    <action
+     		path="/gde/BuscarDeudaExcProMasAgregar"
+	        type="ar.gov.rosario.siat.gde.view.struts.BuscarDeudaExcProMasAgregarDAction"
+		    scope="request"
+        	validate="false"
+	        name="deudaExcProMasAgregarSearchPage"
+            parameter="method"
+    	    input=".gde.gdeudaJudicial.view.deudaExcProMasAgregarSearchPage"
+	        attribute="deudaExcProMasAgregarSearchPage">
+            
+    	    <forward name="deudaExcProMasAgregarSearchPage"   path=".gde.gdeudaJudicial.view.deudaExcProMasAgregarSearchPage" />
+    	    <forward name="administrarDeudaExcProMasAgregar"  path="/gde/AdministrarDeudaExcProMasAgregar.do?method=inicializar" />
+	    </action>
+	    <!-- Fin Buscar Deuda Excluida del Proceso Envio Judicial para Agregar -->		
+
+		<action
+     		path="/gde/AdministrarDeudaExcProMasAgregar"
+	        type="ar.gov.rosario.siat.gde.view.struts.AdministrarDeudaExcProMasAgregarDAction"
+		    scope="request"
+        	validate="false"
+	        name="deudaExcProMasAgregarSearchPage"
+            parameter="method"
+    	    input=".gde.gdeudaJudicial.view.deudaExcProMasAgregarSelIndSearchPage"
+	        attribute="deudaExcProMasAgregarSearchPage">
+            
+    	    <forward name="deudaExcProMasAgregarSelecIndSearchPage"  path=".gde.gdeudaJudicial.view.deudaExcProMasAgregarSelIndSearchPage" />
+    	    <forward name="buscarDeudaExcProMasAgregar"             path="/gde/BuscarDeudaExcProMasAgregar.do?method=buscar" /> <!-- utilizado para volver -->
+	    </action>
+		
+		<action
+     		path="/gde/BuscarDeudaExcProMasEliminar"
+	        type="ar.gov.rosario.siat.gde.view.struts.BuscarDeudaExcProMasEliminarDAction"
+		    scope="request"
+        	validate="false"
+	        name="deudaExcProMasEliminarSearchPage"
+            parameter="method"
+    	    input=".gde.gdeudaJudicial.view.deudaExcProMasEliminarSearchPage"
+	        attribute="deudaExcProMasEliminarSearchPage">
+            
+    	    <forward name="deudaExcProMasEliminarSearchPage"  path=".gde.gdeudaJudicial.view.deudaExcProMasEliminarSearchPage" />
+    	    <forward name="administrarDeudaExcProMasEliminar" path="/gde/AdministrarDeudaExcProMasEliminar.do?method=inicializar" />
+	    </action>
+	    
+	    <action
+     		path="/gde/AdministrarDeudaExcProMasEliminar"
+	        type="ar.gov.rosario.siat.gde.view.struts.AdministrarDeudaExcProMasEliminarDAction"
+		    scope="request"
+        	validate="false"
+	        name="deudaExcProMasEliminarSearchPage"
+            parameter="method"
+    	    input=".gde.gdeudaJudicial.view.deudaExcProMasEliminarSelIndSearchPage"
+	        attribute="deudaExcProMasEliminarSearchPage">
+            
+    	    <forward name="deudaExcProMasEliminarSelecIndSearchPage" path=".gde.gdeudaJudicial.view.deudaExcProMasEliminarSelIndSearchPage" />
+    	    <forward name="buscarDeudaExcProMasEliminar"             path="/gde/BuscarDeudaExcProMasEliminar.do?method=buscar" /> <!-- utilizado para volver -->
+	    </action>
+	    
+	    <action          
+     		path="/gde/AdministrarDeudaExcProMasArmadoSeleccion"
+	        type="ar.gov.rosario.siat.gde.view.struts.AdministrarDeudaExcProMasArmadoSeleccionDAction"
+		    scope="request"
+        	validate="false"
+	        name="armadoSeleccionProMasAdapter"
+            parameter="method"
+    	    input=".gde.gdeudaJudicial.view.deudaExcProMasArmadoSeleccionAdapter"
+	        attribute="armadoSeleccionProMasAdapter">
+            
+    	    <forward name="deudaExcProMasArmadoSeleccionAdapter"       path=".gde.gdeudaJudicial.view.deudaExcProMasArmadoSeleccionAdapter" />
+	    </action>        
+
+	    <action          
+     		path="/gde/AdministrarDeudaExcProMasPlanillasDeuda"
+	        type="ar.gov.rosario.siat.gde.view.struts.AdministrarDeudaExcProMasPlanillasDeudaDAction"
+		    scope="request"
+        	validate="false"
+	        name="deudaProMasPlanillasDeudaAdapter"
+            parameter="method"
+    	    input=".gde.gdeudaJudicial.view.deudaExcProMasPlanillasDeudaAdapter"
+	        attribute="deudaProMasPlanillasDeudaAdapter">
+            
+    	    <forward name="deudaExcProMasPlanillasDeudaAdapter"       path=".gde.gdeudaJudicial.view.deudaExcProMasPlanillasDeudaAdapter" />
+	    </action>    
+	    
+	    <action
+     		path="/gde/BuscarDeudaExcProMasConsPorCta"
+	        type="ar.gov.rosario.siat.gde.view.struts.BuscarDeudaExcProMasConsPorCtaDAction"
+		    scope="request"
+        	validate="false"
+	        name="deudaProMasConsPorCtaSearchPage"
+            parameter="method"
+    	    input=".gde.gdeudaJudicial.view.deudaExcProMasConsPorCtaSearchPage"
+	        attribute="deudaProMasConsPorCtaSearchPage">
+            
+    	    <forward name="deudaExcProMasConsPorCtaSearchPage" path=".gde.gdeudaJudicial.view.deudaExcProMasConsPorCtaSearchPage" />
+       	    <forward name="buscarCuenta" 					   path="/pad/BuscarCuenta.do?method=inicializar" />
+    	    <!-- TODO  agregar forward a conceptos  -->
+	    </action>
+	    
+		<action
+     		path="/gde/AdministrarProMasProExc"
+	        type="ar.gov.rosario.siat.gde.view.struts.AdministrarProMasProExcDAction"
+		    scope="request"
+        	validate="false"
+	        name="proMasProExcAdapter"
+            parameter="method"
+    	    input=".gde.gdeudaJudicial.view.proMasProExcEditAdapter"
+	        attribute="proMasProExcAdapter">
+            
+    	    <forward name="proMasProExcEditAdapter" path=".gde.gdeudaJudicial.view.proMasProExcEditAdapter" />
+			<forward name="proMasProExcViewAdapter" path=".gde.gdeudaJudicial.view.proMasProExcViewAdapter" />
+	    </action>
+
+	    <action          
+     		path="/gde/AdministrarProMasRepDeudaInc"
+	        type="ar.gov.rosario.siat.gde.view.struts.AdministrarProMasRepDeudaIncDAction"
+		    scope="request"
+        	validate="false"
+	        name="procesoMasivoReportesDeudaAdapter"
+            parameter="method"
+    	    input=".gde.gdeudaJudicial.view.procesoMasivoReportesDeudaIncluidaAdapter"
+	        attribute="procesoMasivoReportesDeudaAdapter">
+            
+    	    <forward name="procesoMasivoReportesDeudaIncluidaAdapter"       path=".gde.gdeudaJudicial.view.procesoMasivoReportesDeudaIncluidaAdapter" />
+	    </action>    
+
+	    <action          
+     		path="/gde/AdministrarProMasRepDeudaExc"
+	        type="ar.gov.rosario.siat.gde.view.struts.AdministrarProMasRepDeudaExcDAction"
+		    scope="request"
+        	validate="false"
+	        name="procesoMasivoReportesDeudaAdapter"
+            parameter="method"
+    	    input=".gde.gdeudaJudicial.view.procesoMasivoReportesDeudaExcluidaAdapter"
+	        attribute="procesoMasivoReportesDeudaAdapter">
+            
+    	    <forward name="procesoMasivoReportesDeudaExcluidaAdapter"       path=".gde.gdeudaJudicial.view.procesoMasivoReportesDeudaExcluidaAdapter" />
+	    </action>    
+	    
+      <action
+     		path="/gde/AdministrarCorridaProcesoMasivo"
+	        type="ar.gov.rosario.siat.gde.view.struts.AdministrarCorridaProcesoMasivoDAction"
+		    scope="request"
+        	validate="false"
+	        name="corridaProcesoMasivoAdapter"
+            parameter="method"
+    	    input=".gde.gdeudaJudicial.view.corridaProcesoMasivoViewAdapter"
+	        attribute="corridaProcesoMasivoAdapter">
+            
+    	    <forward name="corridaProcesoMasivoViewAdapter" 	path=".gde.gdeudaJudicial.view.corridaProcesoMasivoViewAdapter" />
+       </action>
+    	    
+	    <!-- Fin Administrar Proceso Envio Judicial -->			    
+	    
+	    <!-- Administrar parametros de la SelAlm cargados a traves del proceso -->
+	    <action
+     		path="/gde/AdministrarSelAlmAgregarParametros"
+	        type="ar.gov.rosario.siat.gde.view.struts.AdministrarSelAlmAgregarParametrosDAction"
+		    scope="request"
+        	validate="false"
+	        name="selAlmAgregarParametrosSearchPage"
+            parameter="method"
+    	    input=".gde.selAlm.view.selAlmAgregarParametrosSearchPage"
+	        attribute="selAlmAgregarParametrosSearchPage">
+            
+    	    <forward name="selAlmAgregarParametrosSearchPage"   path=".gde.selAlm.view.selAlmAgregarParametrosSearchPage" />
+    	    <forward name="administrarSelAlmAgregarParametros"  path="/gde/AdministrarSelAlmAgregarParametros.do?method=inicializar" />
+    	    <forward name="buscarPersona" 	       				path="/pad/BuscarPersona.do?method=inicializar" />
+	    </action>
+	    <!-- Fin Administrar parametros de la SelAlm cargados a traves del proceso -->		
+	    
+
+	    <!--  Mantenedor Descuentos Generales -->		
+        <action
+     		path="/gde/BuscarDesGen"
+	        type="ar.gov.rosario.siat.gde.view.struts.BuscarDesGenDAction"
+		    scope="request"
+        	validate="false"
+	        name="desGenSearchPage"
+            parameter="method"
+    	    input=".gde.definicion.view.desGenSearchPage"
+	        attribute="desGenSearchPage">
+            
+    	    <forward name="desGenSearchPage"      path=".gde.definicion.view.desGenSearhPage" />
+    	    <forward name="doSearch"      path="/gde/BuscarDesGen.do?method=buscar" />
+       	    <forward name="AdministrarDesGen"      path="/gde/AdministrarDesGen.do?method=inicializar" />
+	    </action>
+	    
+   	    <action
+     		path="/gde/AdministrarDesGen"
+	        type="ar.gov.rosario.siat.gde.view.struts.AdministrarDesGenDAction"
+		    scope="request"
+        	validate="false"
+	        name="desGenAdapter"
+            parameter="method"
+    	    input=".gde.definicion.view.desGenEditAdapter"
+	        attribute="desGenAdapter">
+            
+    	    <forward name="desGenEditAdapter" path=".gde.definicion.view.desGenEditAdapter" />
+    	    <forward name="desGenViewAdapter" path=".gde.definicion.view.desGenViewAdapter" />
+	    </action>
+	    <!-- Fin Mantenedor Descuentos Generales -->
+	    
+	    <!--  Mantenedor Descuentos Especiales -->		
+        <action
+     		path="/gde/BuscarDesEsp"
+	        type="ar.gov.rosario.siat.gde.view.struts.BuscarDesEspDAction"
+		    scope="request"
+        	validate="false"
+	        name="desEspSearchPage"
+            parameter="method"
+    	    input=".gde.definicion.view.desEspSearchPage"
+	        attribute="desEspSearchPage">
+            
+    	    <forward name="desEspSearchPage"      path=".gde.definicion.view.desEspSearhPage" />
+    	    <forward name="doSearch"      		  path="/gde/BuscarDesGen.do?method=buscar" />
+   	   	    <forward name="administrarEncDesEsp"  path="/gde/AdministrarEncDesEsp.do?method=inicializar" />
+   	   	    <forward name="AdministrarDesEsp"  path="/gde/AdministrarDesEsp.do?method=inicializar" />
+	    </action>
+	    
+		<action
+     		path="/gde/AdministrarEncDesEsp"
+	        type="ar.gov.rosario.siat.gde.view.struts.AdministrarEncDesEspDAction"
+		    scope="request"
+        	validate="false"
+	        name="desEspAdapter"
+            parameter="method"
+    	    input=".gde.definicion.view.desEspEncEditAdapter"
+	        attribute="desEspAdapter">
+
+    	    <forward name="DesEspEncEditAdapter"     path=".gde.definicion.view.desEspEncEditAdapter" />
+	    </action>
+	    	    
+   	    <action
+     		path="/gde/AdministrarDesEsp"
+	        type="ar.gov.rosario.siat.gde.view.struts.AdministrarDesEspDAction"
+		    scope="request"
+        	validate="false"
+	        name="desEspAdapter"
+            parameter="method"
+    	    input=".gde.definicion.view.desEspEditAdapter"
+	        attribute="desEspAdapter">
+            
+    	    <forward name="desEspAdapter" 		 	path=".gde.definicion.view.desEspAdapter" />
+    	    <forward name="desEspViewAdapter" 	 	path=".gde.definicion.view.desEspViewAdapter" />
+    	    <forward name="administrarEncDesEsp" 	path="/gde/AdministrarEncDesEsp.do?method=inicializar"/>
+			<forward name="administrarDesRecClaDeu" path="/gde/AdministrarDesRecClaDeu.do?method=inicializar"/>
+			<forward name="administrarDesAtrVal" path="/gde/AdministrarDesAtrVal.do?method=inicializar"/>
+			<forward name="administrarDesEspExe" path="/gde/AdministrarDesEspExe.do?method=inicializar"/>
+	    </action>
+	    
+   	    <action
+     		path="/gde/AdministrarDesRecClaDeu"
+	        type="ar.gov.rosario.siat.gde.view.struts.AdministrarDesRecClaDeuDAction"
+		    scope="request"
+        	validate="false"
+	        name="desRecClaDeuAdapter"
+            parameter="method"
+    	    input=".gde.definicion.view.desRecClaDeuEditAdapter"
+	        attribute="desRecClaDeuAdapter">
+            
+            <forward name="DesRecClaDeuEditAdapter"	path=".gde.definicion.view.desRecClaDeuEditAdapter"/>
+            <forward name="DesRecClaDeuViewAdapter"	path=".gde.definicion.view.desRecClaDeuViewAdapter"/>
+
+	    </action>
+	    
+   	    <action
+     		path="/gde/AdministrarDesAtrVal"
+	        type="ar.gov.rosario.siat.gde.view.struts.AdministrarDesAtrValDAction"
+		    scope="request"
+        	validate="false"
+	        name="desAtrValAdapter"
+            parameter="method"
+    	    input=".gde.definicion.view.desAtrValEditAdapter"
+	        attribute="desAtrValAdapter">
+            
+            <forward name="desAtrValEditAdapter"	path=".gde.definicion.view.desAtrValEditAdapter"/>
+            <forward name="desAtrValViewAdapter"	path=".gde.definicion.view.desAtrValViewAdapter"/>
+            <forward name="buscarAtributo"			path="/def/BuscarAtributo.do?method=inicializar"/>
+	    </action>
+	    
+   	    <action
+     		path="/gde/AdministrarDesEspExe"
+	        type="ar.gov.rosario.siat.gde.view.struts.AdministrarDesEspExeDAction"
+		    scope="request"
+        	validate="false"
+	        name="desEspExeAdapter"
+            parameter="method"
+    	    input=".gde.definicion.view.desEspExeEditAdapter"
+	        attribute="desEspExeAdapter">
+            
+            <forward name="desEspExeEditAdapter"	path=".gde.definicion.view.desEspExeEditAdapter"/>
+            <forward name="desEspExeViewAdapter"	path=".gde.definicion.view.desEspExeViewAdapter"/>
+	    </action>
+	    <!-- Fin Mantenedor Descuentos Especiales -->
+	    
+	    <!-- Mantenedor de Planes de Pago (Encabezado/Detalle) -->
+	    <action
+	    	path="/gde/BuscarPlan"
+	        type="ar.gov.rosario.siat.gde.view.struts.BuscarPlanDAction"
+		    scope="request"
+	       	validate="false"
+	        name="planSearchPage"
+	        parameter="method"
+	   	    input=".gde.definicion.view.planSearchPage"
+	        attribute="planSearchPage">
+	        
+	   	    <forward name="administrarEncPlan" 	path="/gde/AdministrarEncPlan.do?method=inicializar" />	        
+	   	    <forward name="planSearchPage"    	path=".gde.definicion.view.planSearchPage" />
+	   	    <forward name="administrarPlan" 	path="/gde/AdministrarPlan.do?method=inicializar" />
+	    </action>
+		
+		<action
+     		path="/gde/AdministrarPlan"
+	        type="ar.gov.rosario.siat.gde.view.struts.AdministrarPlanDAction"
+		    scope="request"
+        	validate="false"
+	        name="planAdapter"
+            parameter="method"
+    	    input=".gde.definicion.view.planAdapter"
+	        attribute="planAdapter">
+            
+    	    <forward name="planViewAdapter"    		 path=".gde.definicion.view.planViewAdapter" />
+    	    <forward name="planAdapter"        		 path=".gde.definicion.view.planAdapter" />
+    	    <forward name="planProrrogaAdapter"      path=".gde.definicion.view.planProrrogaAdapter" />
+     	    <forward name="administrarEncPlan" 		 path="/gde/AdministrarEncPlan.do?method=inicializar" />
+    	    <forward name="administrarPlanClaDeu" 	 path="/gde/AdministrarPlanClaDeu.do?method=inicializar" />
+    	    <forward name="administrarPlanMotCad" 	 path="/gde/AdministrarPlanMotCad.do?method=inicializar" />
+    	    <forward name="administrarPlanForActDeu" path="/gde/AdministrarPlanForActDeu.do?method=inicializar" />
+    	    <forward name="administrarPlanDescuento" path="/gde/AdministrarPlanDescuento.do?method=inicializar" />
+    	    <forward name="administrarPlanIntFin"    path="/gde/AdministrarPlanIntFin.do?method=inicializar" />
+    	    <forward name="administrarPlanVen"       path="/gde/AdministrarPlanVen.do?method=inicializar" />
+    	    <forward name="administrarPlanExe"       path="/gde/AdministrarPlanExe.do?method=inicializar" /> 
+    	    <forward name="administrarPlanProrroga"  path="/gde/AdministrarPlanProrroga.do?method=inicializar" />
+    	    <forward name="administrarPlanAtrVal"    path="/gde/AdministrarPlanAtrVal.do?method=inicializar" />
+    	    <forward name="administrarPlanImpMin"    path="/gde/AdministrarPlanImpMin.do?method=inicializar" /> 
+    	    <forward name="administrarPlanRecurso"	 path="/gde/AdministrarPlanRecurso.do?method=inicializar"/>   	    
+	    </action>
+	    
+		<action
+     		path="/gde/AdministrarEncPlan"
+	        type="ar.gov.rosario.siat.gde.view.struts.AdministrarEncPlanDAction"
+		    scope="request"
+        	validate="false"
+	        name="planAdapter"
+            parameter="method"
+    	    input=".gde.definicion.view.planEncEditAdapter"
+	        attribute="planAdapter">
+		
+    	    <forward name="planEncEditAdapter"     path=".gde.definicion.view.planEncEditAdapter" />
+    	    <forward name="buscarFormulario"       path="/frm/BuscarFormulario.do?method=inicializar"/>
+	    </action>
+	    
+	    <!-- Administrar PlanClaDeu -->
+	    <action
+     		path="/gde/AdministrarPlanClaDeu"
+	        type="ar.gov.rosario.siat.gde.view.struts.AdministrarPlanClaDeuDAction"
+		    scope="request"
+        	validate="false"
+	        name="planClaDeuAdapter"
+            parameter="method"
+    	    input=".gde.definicion.view.planClaDeuEditAdapter"
+	        attribute="planClaDeuAdapter">
+            
+    	    <forward name="planClaDeuViewAdapter"      path=".gde.definicion.view.planClaDeuViewAdapter" />
+    	    <forward name="planClaDeuEditAdapter"      path=".gde.definicion.view.planClaDeuEditAdapter" />
+	    </action>
+	    
+	    <!-- Administrar PlanMotCad -->
+	    <action
+     		path="/gde/AdministrarPlanMotCad"
+	        type="ar.gov.rosario.siat.gde.view.struts.AdministrarPlanMotCadDAction"
+		    scope="request"
+        	validate="false"
+	        name="planMotCadAdapter"
+            parameter="method"
+    	    input=".gde.definicion.view.planMotCadEditAdapter"
+	        attribute="planMotCadAdapter">
+            
+    	    <forward name="planMotCadViewAdapter"      path=".gde.definicion.view.planMotCadViewAdapter" />
+    	    <forward name="planMotCadEditAdapter"      path=".gde.definicion.view.planMotCadEditAdapter" />
+	    </action>
+	    
+	    	    
+	    <!-- Administrar PlanForActDeu -->
+	    <action
+     		path="/gde/AdministrarPlanForActDeu"
+	        type="ar.gov.rosario.siat.gde.view.struts.AdministrarPlanForActDeuDAction"
+		    scope="request"
+        	validate="false"
+	        name="planForActDeuAdapter"
+            parameter="method"
+    	    input=".gde.definicion.view.planForActDeuEditAdapter"
+	        attribute="planForActDeuAdapter">
+            
+    	    <forward name="planForActDeuViewAdapter"      path=".gde.definicion.view.planForActDeuViewAdapter" />
+    	    <forward name="planForActDeuEditAdapter"      path=".gde.definicion.view.planForActDeuEditAdapter" />
+	    </action>
+	
+	    <!-- Administrar PlanDescuento -->
+	    <action
+     		path="/gde/AdministrarPlanDescuento"
+	        type="ar.gov.rosario.siat.gde.view.struts.AdministrarPlanDescuentoDAction"
+		    scope="request"
+        	validate="false"
+	        name="planDescuentoAdapter"
+            parameter="method"
+    	    input=".gde.definicion.view.planDescuentoEditAdapter"
+	        attribute="planDescuentoAdapter">
+            
+    	    <forward name="planDescuentoViewAdapter"      path=".gde.definicion.view.planDescuentoViewAdapter" />
+    	    <forward name="planDescuentoEditAdapter"      path=".gde.definicion.view.planDescuentoEditAdapter" />
+	    </action>
+	    
+	    <!-- Administrar PlanIntFin -->
+	    <action
+     		path="/gde/AdministrarPlanIntFin"
+	        type="ar.gov.rosario.siat.gde.view.struts.AdministrarPlanIntFinDAction"
+		    scope="request"
+        	validate="false"
+	        name="planIntFinAdapter"
+            parameter="method"
+    	    input=".gde.definicion.view.planIntFinEditAdapter"
+	        attribute="planIntFinAdapter">
+            
+    	    <forward name="planIntFinViewAdapter"      path=".gde.definicion.view.planIntFinViewAdapter" />
+    	    <forward name="planIntFinEditAdapter"      path=".gde.definicion.view.planIntFinEditAdapter" />
+	    </action>
+	    
+	    <!-- Administrar PlanVen -->
+	    <action
+     		path="/gde/AdministrarPlanVen"
+	        type="ar.gov.rosario.siat.gde.view.struts.AdministrarPlanVenDAction"
+		    scope="request"
+        	validate="false"
+	        name="planVenAdapter"
+            parameter="method"
+    	    input=".gde.definicion.view.planVenEditAdapter"
+	        attribute="planVenAdapter">
+            
+    	    <forward name="planVenViewAdapter"      path=".gde.definicion.view.planVenViewAdapter" />
+    	    <forward name="planVenEditAdapter"      path=".gde.definicion.view.planVenEditAdapter" />
+	    </action>
+	    
+	    <!-- Administrar PlanExe -->
+	    <action
+     		path="/gde/AdministrarPlanExe"
+	        type="ar.gov.rosario.siat.gde.view.struts.AdministrarPlanExeDAction"
+		    scope="request"
+        	validate="false"
+	        name="planExeAdapter"
+            parameter="method"
+    	    input=".gde.definicion.view.planExeEditAdapter"
+	        attribute="planExeAdapter">
+            
+    	    <forward name="planExeViewAdapter"      path=".gde.definicion.view.planExeViewAdapter" />
+    	    <forward name="planExeEditAdapter"      path=".gde.definicion.view.planExeEditAdapter" />
+	    </action>
+	     
+	    <!-- Administrar PlanProrroga -->
+	    <action
+     		path="/gde/AdministrarPlanProrroga"
+	        type="ar.gov.rosario.siat.gde.view.struts.AdministrarPlanProrrogaDAction"
+		    scope="request"
+        	validate="false"
+	        name="planProrrogaAdapter"
+            parameter="method"
+    	    input=".gde.definicion.view.planProrrogaEditAdapter"
+	        attribute="planProrrogaAdapter">
+            
+            <forward name="planProrrogaAdapter"          path=".gde.definicion.view.planProrrogaAdapter" />
+    	    <forward name="planProrrogaViewAdapter"      path=".gde.definicion.view.planProrrogaViewAdapter" />
+    	    <forward name="planProrrogaEditAdapter"      path=".gde.definicion.view.planProrrogaEditAdapter" />
+	    </action>
+	    
+	    <!-- Administrar PlanAtrVal -->
+	    <action
+     		path="/gde/AdministrarPlanAtrVal"
+	        type="ar.gov.rosario.siat.gde.view.struts.AdministrarPlanAtrValDAction"
+		    scope="request"
+        	validate="false"
+	        name="planAtrValAdapter"
+            parameter="method"
+    	    input=".gde.definicion.view.planAtrValEditAdapter"
+	        attribute="planAtrValAdapter">
+            
+    	    <forward name="planAtrValViewAdapter"      path=".gde.definicion.view.planAtrValViewAdapter" />
+    	    <forward name="planAtrValEditAdapter"      path=".gde.definicion.view.planAtrValEditAdapter" />
+	    </action>
+	    
+	    <!-- Administrar PlanImpMin -->
+	    <action
+     		path="/gde/AdministrarPlanImpMin"
+	        type="ar.gov.rosario.siat.gde.view.struts.AdministrarPlanImpMinDAction"
+		    scope="request"
+        	validate="false"
+	        name="planImpMinAdapter"
+            parameter="method"
+    	    input=".gde.definicion.view.planImpMinEditAdapter"
+	        attribute="planImpMinAdapter">
+            
+    	    <forward name="planImpMinViewAdapter"      path=".gde.definicion.view.planImpMinViewAdapter" />
+    	    <forward name="planImpMinEditAdapter"      path=".gde.definicion.view.planImpMinEditAdapter" />
+	    </action>
+	    
+	     <!-- Administrar PlanRecurso -->
+	    <action
+     		path="/gde/AdministrarPlanRecurso"
+	        type="ar.gov.rosario.siat.gde.view.struts.AdministrarPlanRecursoDAction"
+		    scope="request"
+        	validate="false"
+	        name="planRecursoAdapter"
+            parameter="method"
+    	    input=".gde.definicion.view.planRecursoEditAdapter"
+	        attribute="planRecursoAdapter">
+            
+    	    <forward name="planRecursoViewAdapter"      path=".gde.definicion.view.planRecursoViewAdapter" />
+    	    <forward name="planRecursoEditAdapter"      path=".gde.definicion.view.planRecursoEditAdapter" />
+	    </action>
+	    
+	    <!-- Fin Mantenedor de Planes de Pago (Encabezado/Detalle) -->
+	    
+	    <!-- Mantenedor de Procurador -->
+	    <action
+     		path="/gde/BuscarProcurador"
+	        type="ar.gov.rosario.siat.gde.view.struts.BuscarProcuradorDAction"
+		    scope="request"
+        	validate="false"
+	        name="procuradorSearchPage"
+            parameter="method"
+    	    input=".gde.definicion.view.procuradorSearchPage"
+	        attribute="procuradorSearchPage">
+            
+    	    <forward name="procuradorSearchPage" 	 path=".gde.definicion.view.procuradorSearchPage" />
+	        <forward name="administrarProcurador"    path="/gde/AdministrarProcurador.do?method=inicializar" />
+     	   	<forward name="administrarEncProcurador" path="/gde/AdministrarEncProcurador.do?method=inicializar" />
+	    </action>
+	    
+	    <action
+     		path="/gde/AdministrarEncProcurador"
+	        type="ar.gov.rosario.siat.gde.view.struts.AdministrarEncProcuradorDAction"
+		    scope="request"
+        	validate="false"
+	        name="procuradorAdapter"
+            parameter="method"
+    	    input=".gde.definicion.view.procuradorEncEditAdapter"
+	        attribute="procuradorAdapter">
+
+    	    <forward name="procuradorEncEditAdapter"     path=".gde.definicion.view.procuradorEncEditAdapter" />
+	    </action>
+	   	
+	   	<action
+     		path="/gde/AdministrarProcurador"
+	        type="ar.gov.rosario.siat.gde.view.struts.AdministrarProcuradorDAction"
+		    scope="request"
+        	validate="false"
+	        name="procuradorAdapter"
+            parameter="method"
+    	    input=".gde.definicion.view.procuradorEditAdapter"
+	        attribute="procuradorAdapter">
+            
+    	    <forward name="procuradorViewAdapter"      path=".gde.definicion.view.procuradorViewAdapter" />
+    	    <forward name="procuradorEditAdapter"      path=".gde.definicion.view.procuradorEditAdapter" />
+			<forward name="procuradorAdapter"          path=".gde.definicion.view.procuradorAdapter" />
+       	    <forward name="administrarEncProcurador"   path="/gde/AdministrarEncProcurador.do?method=inicializar" />
+			<forward name="administrarProRec"  		   path="/gde/AdministrarProRec.do?method=inicializar" />
+			<forward name="administrarEncProRec"  	   path="/gde/AdministrarEncProRec.do?method=inicializar" />
+	    </action>
+	    
+	     <action
+     		path="/gde/AdministrarEncProRec"
+	        type="ar.gov.rosario.siat.gde.view.struts.AdministrarEncProRecDAction"
+		    scope="request"
+        	validate="false"
+	        name="proRecAdapter"
+            parameter="method"
+    	    input=".gde.definicion.view.proRecEncEditAdapter"
+	        attribute="proRecAdapter">
+
+    	    <forward name="proRecEncEditAdapter"     path=".gde.definicion.view.proRecEncEditAdapter" />
+	    </action>
+	    
+	    <action
+     		path="/gde/AdministrarProRec"
+	        type="ar.gov.rosario.siat.gde.view.struts.AdministrarProRecDAction"
+		    scope="request"
+        	validate="false"
+	        name="proRecAdapter"
+            parameter="method"
+    	    input=".gde.definicion.view.proRecAdapter"
+	        attribute="proRecAdapter">
+              
+    	    <forward name="proRecAdapter"   path=".gde.definicion.view.proRecAdapter" />
+    	    <forward name="proRecViewAdapter"   path=".gde.definicion.view.proRecViewAdapter" />
+    		<forward name="administrarEncProRec" path="/gde/AdministrarEncProRec.do?method=inicializar" />
+    		<forward name="administrarProRecDesHas" path="/gde/AdministrarProRecDesHas.do?method=inicializar" />
+ 			<forward name="administrarProRecCom" path="/gde/AdministrarProRecCom.do?method=inicializar" />
+	    </action>	   
+	    
+	    <action
+     		path="/gde/AdministrarProRecDesHas"
+	        type="ar.gov.rosario.siat.gde.view.struts.AdministrarProRecDesHasDAction"
+		    scope="request"
+        	validate="false"
+	        name="proRecDesHasAdapter"
+            parameter="method"
+    	    input=".gde.definicion.view.proRecDesHasEditAdapter"
+	        attribute="proRecDesHasAdapter">
+              
+    	    <forward name="proRecDesHasEditAdapter"   path=".gde.definicion.view.proRecDesHasEditAdapter" />
+    	    <forward name="proRecDesHasViewAdapter"   path=".gde.definicion.view.proRecDesHasViewAdapter" />
+	    </action>	   
+	    
+	   	<action
+     		path="/gde/AdministrarProRecCom"
+	        type="ar.gov.rosario.siat.gde.view.struts.AdministrarProRecComDAction"
+		    scope="request"
+        	validate="false"
+	        name="proRecComAdapter"
+            parameter="method"
+    	    input=".gde.definicion.view.proRecComEditAdapter"
+	        attribute="proRecComAdapter">
+              
+    	    <forward name="proRecComEditAdapter"   path=".gde.definicion.view.proRecComEditAdapter" />
+    	    <forward name="proRecComViewAdapter"   path=".gde.definicion.view.proRecComViewAdapter" />
+	    </action>	
+	    
+	    <!-- Fin Mantenedor Procurador -->
+	    
+	    <!-- Administrar Planillas Envio Deuda Judicial -->
+	    <action
+     		path="/gde/BuscarPlaEnvDeuPro"
+	        type="ar.gov.rosario.siat.gde.view.struts.BuscarPlaEnvDeuProDAction"
+		    scope="request"
+        	validate="false"
+	        name="plaEnvDeuProSearchPage"
+            parameter="method"
+    	    input=".gde.admDeuJud.view.plaEnvDeuProSearchPage"
+	        attribute="plaEnvDeuProSearchPage">
+            
+    	    <forward name="plaEnvDeuProSearchPage" 	 path=".gde.admDeuJud.view.plaEnvDeuProSearchPage" />
+	        <forward name="administrarPlaEnvDeuPro"     path="/gde/AdministrarPlaEnvDeuPro.do?method=inicializar" />
+    	    <forward name="verArchivosProcurador" 	 path=".gde.admDeuJud.view.verArchivosProcurador" />
+	    </action>	    
+	    
+	   	<action
+     		path="/gde/AdministrarPlaEnvDeuPro"
+	        type="ar.gov.rosario.siat.gde.view.struts.AdministrarPlaEnvDeuProDAction"
+		    scope="request"
+        	validate="false"
+	        name="plaEnvDeuProAdapter"
+            parameter="method"
+    	    input=".gde.admDeuJud.view.plaEnvDeuProEditAdapter"
+	        attribute="plaEnvDeuProAdapter">
+              
+    	    <forward name="plaEnvDeuProEditAdapter"   				path=".gde.admDeuJud.view.plaEnvDeuProEditAdapter" />
+    	    <forward name="plaEnvDeuProViewAdapter"   				path=".gde.admDeuJud.view.plaEnvDeuProViewAdapter" />
+    	    <forward name="administrarConstancia"   				path="/gde/AdministrarConstanciaDeu.do?method=inicializar" />
+    	    <forward name="administrarEncTraspasoDevolucionDeuda"   path="/gde/AdministrarEncTraspasoDevolucionDeuda.do?method=inicializar" />
+    	    <forward name="plaEnvDeuProRecomponer"   				path=".gde.admDeuJud.view.plaEnvDeuProRecomponer" />    	    
+	    </action>	
+	    
+	    <!-- FIN Administrar Planillas Envio Deuda Judicial -->
+	    
+   	    <!-- Mantenedor Evento -->
+	    <action   
+	    	path="/gde/BuscarEvento"
+	        type="ar.gov.rosario.siat.gde.view.struts.BuscarEventoDAction"
+		    scope="request"
+	       	validate="false"
+	        name="eventoSearchPage"
+	        parameter="method"
+	   	    input=".gde.definicion.view.eventoSearchPage"
+	        attribute="eventoSearchPage">
+	                       
+    	    <forward name="eventoSearchPage" 	  	 path=".gde.definicion.view.eventoSearchPage" />
+	        <forward name="administrarEvento"  	     path="/gde/AdministrarEvento.do?method=inicializar" />
+	    </action>
+	
+	    <action   
+	    	path="/gde/AdministrarEvento"
+	        type="ar.gov.rosario.siat.gde.view.struts.AdministrarEventoDAction"
+		    scope="request"
+	       	validate="false"
+	        name="eventoAdapter"
+	        parameter="method"
+	   	    input=".gde.definicion.view.eventoEditAdapter"
+	        attribute="eventoAdapter">
+	                       
+	        <forward name="eventoViewAdapter"  	    path=".gde.definicion.view.eventoViewAdapter" />
+	        <forward name="eventoEditAdapter"  	    path=".gde.definicion.view.eventoEditAdapter" />
+	    </action>
+		<!-- Fin Mantenedor Evento -->	    	    
+
+	    <!-- Administrar Constancias Deuda Judicial -->
+	    <action
+     		path="/gde/BuscarConstanciaDeu"
+	        type="ar.gov.rosario.siat.gde.view.struts.BuscarConstanciaDeuDAction"
+		    scope="request"
+        	validate="false"
+	        name="constanciaDeuSearchPage"
+            parameter="method"
+    	    input=".gde.admDeuJud.view.constanciaDeuSearchPage"
+	        attribute="constanciaDeuSearchPage">
+            
+    	    <forward name="constanciaDeuSearchPage" 	 path=".gde.admDeuJud.view.constanciaDeuSearchPage" />
+	        <forward name="administrarConstanciaDeu"     path="/gde/AdministrarConstanciaDeu.do?method=inicializar" />
+	        <forward name="buscarCuenta"	 			 path="/pad/BuscarCuenta.do?method=inicializar" />
+	        <forward name="administrarEncConstanciaDeu"     path="/gde/AdministrarEncConstanciaDeu.do?method=inicializar" />
+	    </action>	    
+	    
+	   	<action
+     		path="/gde/AdministrarConstanciaDeu"
+	        type="ar.gov.rosario.siat.gde.view.struts.AdministrarConstanciaDeuDAction"
+		    scope="request"
+        	validate="false"
+	        name="constanciaDeuAdapter"
+            parameter="method"
+    	    input=".gde.admDeuJud.view.constanciaDeuViewAdapter"
+	        attribute="constanciaDeuAdapter">
+              
+    	    <forward name="constanciaDeuAdapter"   		path=".gde.admDeuJud.view.constanciaDeuAdapter" />
+    	    <forward name="constanciaDeuViewAdapter"   	path=".gde.admDeuJud.view.constanciaDeuViewAdapter" />
+    	    <forward name="administrarEncConstanciaDeu" path="/gde/AdministrarEncConstanciaDeu.do?method=inicializar" />
+    	    <forward name="constanciaDeuViewAdapter"   	path=".gde.admDeuJud.view.constanciaDeuViewAdapter" />
+    	    <forward name="administrarConDeuTit"   		path="/gde/AdministrarConDeuTit.do?method=inicializar" />
+    	    <forward name="buscarPersona"   			path="/pad/BuscarPersona.do?method=inicializar" />
+    	    <forward name="administrarConDeuDet"   		path="/gde/AdministrarConDeuDet.do?method=inicializar" />
+    	    <forward name="impresionConstancia"			path=".gde.admDeuJud.view.imprimirConstanciaDeu" />
+    	    
+	    </action>	
+
+	     <action
+     		path="/gde/AdministrarEncConstanciaDeu"
+	        type="ar.gov.rosario.siat.gde.view.struts.AdministrarEncConstanciaDeuDAction"
+		    scope="request"
+        	validate="false"
+	        name="constanciaDeuAdapter"
+            parameter="method"
+    	    input=".gde.admDeuJud.view.constanciaDeuEncEditAdapter"
+	        attribute="constanciaDeuAdapter">
+
+    	    <forward name="constanciaDeuEncEditAdapter"     path=".gde.admDeuJud.view.constanciaDeuEncEditAdapter" />
+    	    <forward name="buscarCuenta"	 			 	path="/pad/BuscarCuenta.do?method=inicializar" />
+    	    <forward name="constanciaDeuDomEnvAdapter"     	path=".gde.admDeuJud.view.constanciaDeuDomEnvAdapter" />
+    	    <forward name="buscarLocalidad"	 			 	path="/pad/BuscarLocalidad.do?method=inicializar" />
+    	    <forward name="buscarCalle"		 			 	path="/pad/BuscarCalle.do?method=inicializar" />
+    	    <forward name="domicilioSearchPage"			 	path="/pad/BuscarDomicilio.do?method=inicializar" />    	    
+	    </action>
+
+	   	<action
+     		path="/gde/AdministrarConDeuTit"
+	        type="ar.gov.rosario.siat.gde.view.struts.AdministrarConDeuTitDAction"
+		    scope="request"
+        	validate="false"
+	        name="conDeuTitAdapter"
+            parameter="method"
+    	    input=".gde.admDeuJud.view.conDeuViewTitAdapter"
+	        attribute="conDeuTitAdapter">
+              
+    	    <forward name="conDeuTitViewAdapter"   path=".gde.admDeuJud.view.conDeuTitViewAdapter" />    	    
+	    </action>	    
+	    
+   	   	<action
+     		path="/gde/AdministrarConDeuDet"
+	        type="ar.gov.rosario.siat.gde.view.struts.AdministrarConDeuDetDAction"
+		    scope="request"
+        	validate="false"
+	        name="conDeuDetAdapter"
+            parameter="method"
+    	    input=".gde.admDeuJud.view.conDeuDetViewAdapter"
+	        attribute="conDeuDetAdapter">
+              
+    	    <forward name="conDeuDetViewAdapter"   path=".gde.admDeuJud.view.conDeuDetViewAdapter" />
+    	    <forward name="conDeuDetEditAdapter"   path=".gde.admDeuJud.view.conDeuDetEditAdapter" />    	    
+	    </action>
+	    <!-- FIN Administrar Constancias Deuda Judicial -->			 
+	    
+        <!-- Administrar Deuda Judicial sin Constancias-->			 
+
+	   <action
+     		path="/gde/BuscarDeuJudSinConstancia"
+	        type="ar.gov.rosario.siat.gde.view.struts.BuscarDeuJudSinConstanciaDAction"
+		    scope="request"
+        	validate="false"
+	        name="deuJudSinConstanciaSearchPage"
+            parameter="method"
+    	    input=".gde.admDeuJud.view.deuJudSinConstanciaSearchPage"
+	        attribute="deuJudSinConstanciaSearchPage">
+            
+    	    <forward name="deuJudSinConstanciaSearchPage" 	 path=".gde.admDeuJud.view.deuJudSinConstanciaSearchPage" />
+	        <forward name="buscarCuenta"	 			 	 path="/pad/BuscarCuenta.do?method=inicializar" />
+			<forward name="verDetalleDeuda"	 			 	 path="/gde/AdministrarLiqDetalleDeuda.do?method=inicializar"/>
+			<forward name="administrarDeuJudSinConstancia"	 path="/gde/AdministrarDeuJudSinConstancia.do?method=inicializar"/>
+	    </action>	  
+
+   	   	<action
+     		path="/gde/AdministrarDeuJudSinConstancia"
+	        type="ar.gov.rosario.siat.gde.view.struts.AdministrarDeuJudSinConstanciaDAction"
+		    scope="request"
+        	validate="false"
+	        name="deuJudSinConstanciaAdapter"
+            parameter="method"
+    	    input=".gde.admDeuJud.view.deuJudSinConstanciaAdapter"
+	        attribute="deuJudSinConstanciaAdapter">
+              
+    	    <forward name="deuJudSinConstanciaAdapter"   path=".gde.admDeuJud.view.deuJudSinConstanciaAdapter" />
+	        <forward name="buscarConstanciaDeu"	 		 path="/gde/BuscarConstanciaDeu.do?method=inicializar" />
+	    </action>
+
+        <!-- FIN Administrar Deuda Judicial sin Constancias-->			 
+		
+		<!-- Administrar Traspasos y Devoluciones de Deuda -->
+	    <action
+     		path="/gde/BuscarTraspasoDevolucionDeuda"
+	        type="ar.gov.rosario.siat.gde.view.struts.BuscarTraspasoDevolucionDeudaDAction"
+		    scope="request"
+        	validate="false"
+	        name="traspasoDevolucionDeudaSearchPage"
+            parameter="method"
+	        input=".gde.gdeudaJudicial.view.traspasoDevolucionDeudaSearchPage"
+	        attribute="traspasoDevolucionDeudaSearchPage">
+            
+            <forward name="traspasoDevolucionDeudaSearchPage"     path=".gde.gdeudaJudicial.view.traspasoDevolucionDeudaSearchPage" />
+    	    <forward name="administrarTraspasoDevolucionDeuda"    path="/gde/AdministrarTraspasoDevolucionDeuda.do?method=inicializar" />
+	        <forward name="administrarEncTraspasoDevolucionDeuda" path="/gde/AdministrarEncTraspasoDevolucionDeuda.do?method=inicializar" />
+	        <forward name="buscarCuenta"	 			          path="/pad/BuscarCuenta.do?method=inicializar" />
+	    </action>	    
+		<action
+     		path="/gde/AdministrarEncTraspasoDevolucionDeuda"
+	        type="ar.gov.rosario.siat.gde.view.struts.AdministrarEncTraspasoDevolucionDeudaDAction"
+		    scope="request"
+        	validate="false"
+	        name="traspasoDevolucionDeudaAdapter"
+            parameter="method"
+    	    input=".gde.gdeudaJudicial.view.traspasoDevolucionDeudaEncEditAdapter"
+	        attribute="traspasoDevolucionDeudaAdapter">
+
+    	    <forward name="traspasoDevolucionDeudaEncEditAdapter" path=".gde.gdeudaJudicial.view.traspasoDevolucionDeudaEncEditAdapter" />
+    	    <forward name="buscarCuenta"	 			          path="/pad/BuscarCuenta.do?method=inicializar" />
+	    </action>
+		<action
+     		path="/gde/AdministrarTraspasoDevolucionDeuda"
+	        type="ar.gov.rosario.siat.gde.view.struts.AdministrarTraspasoDevolucionDeudaDAction"
+		    scope="request"
+        	validate="false"
+	        name="traspasoDevolucionDeudaAdapter"
+            parameter="method"
+    	    input=".gde.gdeudaJudicial.view.traspasoDevolucionDeudaAdapter"
+	        attribute="traspasoDevolucionDeudaAdapter">
+            
+    	    <forward name="traspasoDevolucionDeudaAdapter"  path=".gde.gdeudaJudicial.view.traspasoDevolucionDeudaAdapter" />
+    	    <forward name="verDetalleDeuda"					path="/gde/AdministrarLiqDetalleDeuda.do?method=inicializar"/>
+    	    <forward name="administrarConDeuDet"   		    path="/gde/AdministrarConDeuDet.do?method=inicializar" />
+	    </action>
+	    
+	    <!-- Fin Administrar Traspasos y Devoluciones de Deuda -->		
+
+		<action
+	    	path="/gde/BuscarConvenio"
+	        type="ar.gov.rosario.siat.gde.view.struts.BuscarConvenioDAction"
+			scope="request"
+	       	validate="false"
+	        name="convenioSearchPage"
+	        parameter="method"
+	   		input=".gde.gdeuda.view.convenioSearchPage"
+	        attribute="convenioSearchPage">
+	           
+	   	    <forward name="convenioSearchPage"   	path=".gde.gdeuda.view.convenioSearchPage" />
+	   	    <forward name="verConvenio"				path="/gde/AdministrarLiqConvenioCuenta.do?method=inicializar"/>
+	    </action>
+		
+		<!-- Consultar Cuenta por Objeto Imponible -->
+		<action   
+	    	path="/gde/BuscarCuentaObjImp"
+	        type="ar.gov.rosario.siat.gde.view.struts.BuscarCuentaObjImpDAction"
+		    scope="request"
+	       	validate="false"
+	        name="cuentaObjImpSearchPage"
+	        parameter="method"
+	   	    input=".gde.gDeuda.view.cuentaObjImpSearchPage"
+	        attribute="cuentaObjImpSearchPage">
+	                       
+	   	    <forward name="cuentaObjImpSearchPage"  path=".gde.gDeuda.view.cuentaObjImpSearchPage" />
+			<forward name="buscarObjImp" 	       	path="/pad/BuscarObjImp.do?method=inicializar" />
+			<forward name="estadoCuenta"		  	path="/gde/AdministrarLiqEstadoCuenta.do?method=inicializar" />
+	    </action>
+		<!-- FIN Consultar Cuenta por Objeto Imponible -->
+
+		<!-- Consultar Cuenta por Procurador -->
+		<action   
+	    	path="/gde/BuscarCuentasProcurador"
+	        type="ar.gov.rosario.siat.gde.view.struts.BuscarCuentasProcuradorDAction"
+		    scope="request"
+	       	validate="false"
+	        name="cuentasProcuradorSearchPage"
+	        parameter="method"
+	   	    input=".gde.gDeuda.view.cuentasProcuradorSearchPage"
+	        attribute="cuentasProcuradorSearchPage">
+	                       
+	   	    <forward name="cuentasProcuradorSearchPage" path=".gde.gDeuda.view.cuentasProcuradorSearchPage" />			
+	   	    <forward name="estadoCuentaAdapter"  		path="/gde/AdministrarLiqEstadoCuenta.do?method=inicializar" />
+	   	    <forward name="buscarCuenta" 				path="/pad/BuscarCuenta.do?method=inicializar" />
+	    </action>
+		<!-- FIN Consultar Cuenta por Procurador -->
+
+		<!-- ADM Gestiones Judiciales -->
+		<action   
+	    	path="/gde/BuscarGesJud"
+	        type="ar.gov.rosario.siat.gde.view.struts.BuscarGesJudDAction"
+		    scope="request"
+	       	validate="false"
+	        name="gesJudSearchPage"
+	        parameter="method"
+	   	    input=".gde.gDeuda.view.gesJudSearchPage"
+	        attribute="gesJudSearchPage">
+	                       
+	   	    <forward name="gesJudSearchPage"  	  path=".gde.gDeuda.view.gesJudSearchPage" />
+	   	    <forward name="administrarEncGesJud"  path="/gde/AdministrarEncGesJud.do?method=inicializar" />
+	   	    <forward name="administrarGesJud"	  path="/gde/AdministrarGesJud.do?method=inicializar" />
+	   	    <forward name="buscarCuenta" 		  path="/pad/BuscarCuenta.do?method=inicializar" />
+	    </action>
+	    
+		<action
+     		path="/gde/AdministrarEncGesJud"
+	        type="ar.gov.rosario.siat.gde.view.struts.AdministrarEncGesJudDAction"
+		    scope="request"
+        	validate="false"
+	        name="gesJudAdapter"
+            parameter="method"
+    	    input=".gde.gdeudaJudicial.view.gesJudEncEditAdapter"
+	        attribute="gesJudAdapter">
+
+    	    <forward name="gesJudEncEditAdapter" path=".gde.gdeudaJudicial.view.gesJudEncEditAdapter" />    	    
+	    </action>
+	    
+   		<action
+     		path="/gde/AdministrarGesJud"
+	        type="ar.gov.rosario.siat.gde.view.struts.AdministrarGesJudDAction"
+		    scope="request"
+        	validate="false"
+	        name="gesJudAdapter"
+            parameter="method"
+    	    input=".gde.gdeudaJudicial.view.gesJudAdapter"
+	        attribute="gesJudAdapter">
+
+    	    <forward name="gesJudAdapter" 				path=".gde.gdeudaJudicial.view.gesJudAdapter" />
+    	    <forward name="gesJudViewAdapter"	 		path=".gde.gdeudaJudicial.view.gesJudViewAdapter" />
+    	    <forward name="administrarEncGesJud"		path="/gde/AdministrarEncGesJud.do?method=inicializar" />
+    	    <forward name="administrarGesJudDeu"		path="/gde/AdministrarGesJudDeu.do?method=inicializar" />
+    	    <forward name="administrarGesJudEvento"		path="/gde/AdministrarGesJudEvento.do?method=inicializar" />
+    	    <forward name="administrarEvento"			path="/gde/AdministrarEvento.do?method=inicializar" />
+    	    <forward name="buscarConstanciaDeu"	 		path="/gde/BuscarConstanciaDeu.do?method=inicializar" />
+    	    <forward name="gesJudViewHistoricosAdapter"	path=".gde.gdeudaJudicial.view.gesJudViewHistoricosAdapter" />
+    	    <forward name="gesJudRegCaducidadAdapter"	path=".gde.gdeudaJudicial.view.gesJudRegCaducidadAdapter" />    	    
+	    </action>
+	    
+   		<action
+     		path="/gde/AdministrarGesJudDeu"
+	        type="ar.gov.rosario.siat.gde.view.struts.AdministrarGesJudDeuDAction"
+		    scope="request"
+        	validate="false"
+	        name="gesJudDeuAdapter"
+            parameter="method"
+    	    input=".gde.gdeudaJudicial.view.gesJudDeuAdapter"
+	        attribute="gesJudDeuAdapter">
+
+    	    <forward name="gesJudDeuEditAdapter" 		path=".gde.gdeudaJudicial.view.gesJudDeuEditAdapter" />
+    	    <forward name="gesJudDeuViewAdapter" 		path=".gde.gdeudaJudicial.view.gesJudDeuViewAdapter" />    	    
+    	    <forward name="buscarCuenta" 				path="/pad/BuscarCuenta.do?method=inicializar" />    	        	        	   
+	    </action>
+	    
+    	<action
+     		path="/gde/AdministrarGesJudEvento"
+	        type="ar.gov.rosario.siat.gde.view.struts.AdministrarGesJudEventoDAction"
+		    scope="request"
+        	validate="false"
+	        name="gesJudEventoAdapter"
+            parameter="method"
+    	    input=".gde.gdeudaJudicial.view.gesJudEventoEditAdapter"
+	        attribute="gesJudEventoAdapter">
+
+    	    <forward name="gesJudEventoEditAdapter" 		path=".gde.gdeudaJudicial.view.gesJudEventoEditAdapter" />
+    	    <forward name="gesJudEventoViewAdapter" 		path=".gde.gdeudaJudicial.view.gesJudEventoViewAdapter" />    	        	        	  
+	    </action>
+	    
+		<!-- ADM FIN Gestiones Judiciales -->
+
+		<!-- Rescate -->
+		<action   
+	    	path="/gde/BuscarRescate"
+	        type="ar.gov.rosario.siat.gde.view.struts.BuscarRescateDAction"
+		    scope="request"
+	       	validate="false"
+	        name="rescateSearchPage"
+	        parameter="method"
+	   	    input=".gde.planPago.view.rescateSearchPage"
+	        attribute="rescateSearchPage">
+	                       
+	   	    <forward name="rescateSearchPage"  	  path=".gde.planPago.view.rescateSearchPage" />
+	   	    <forward name="administrarEncRescate" path="/gde/AdministrarEncRescate.do?method=inicializar" />
+	   	    <forward name="administrarRescate"	  path="/gde/AdministrarRescate.do?method=inicializar"/>
+	   	    <forward name="administrarAdpCorridaEmision" 	path="/pro/AdministrarAdpCorrida.do?method=inicializar" />
+	    </action>
+	    
+	    <action
+     		path="/gde/AdministrarEncRescate"
+	        type="ar.gov.rosario.siat.gde.view.struts.AdministrarEncRescateDAction"
+		    scope="request"
+        	validate="false"
+	        name="rescateAdapter"
+            parameter="method"
+    	    input=".gde.planPago.view.rescateEditAdapter"
+	        attribute="rescateAdapter">
+              
+    	    <forward name="rescateEditAdapter"   path=".gde.planPago.view.rescateEditAdapter" />    	    
+	    </action>
+	    
+	    <action
+     		path="/gde/AdministrarRescate"
+	        type="ar.gov.rosario.siat.gde.view.struts.AdministrarRescateDAction"
+		    scope="request"
+        	validate="false"
+	        name="rescateAdapter"
+            parameter="method"
+    	    input=".gde.planPago.view.rescateEditAdapter"
+	        attribute="rescateAdapter">
+              
+    	    <forward name="rescateEditAdapter"    		path=".gde.planPago.view.rescateEditAdapter" />    	    
+    	    <forward name="administrarEncRescate" 		path="/gde/AdministrarEncRescate.do?method=inicializar" />
+    	    <forward name="rescateMasivoSelAdapter" 	path=".gde.planPago.view.rescateMasivoSelAdapter"/>
+    	    <forward name="verConvenio"					path="/gde/AdministrarLiqConvenioCuenta.do?method=inicializar"/>
+    	        	    
+	    </action>
+	
+		<!-- Consultar EstadoCuenta  -->
+	    <action   	    		   
+     		path="/gde/AdministrarLiqEstadoCuenta"     			  
+	        type="ar.gov.rosario.siat.gde.view.struts.AdministrarLiqEstadoCuentaDAction"
+		    scope="request"
+        	validate="false"
+	        name="estadoCuentaSearchPage"
+            parameter="method"
+    	    input=".gde.gdeuda.view.estadoCuentaSearchPage"
+	        attribute="estadoCuentaSearchPage">
+              
+    	    <forward name="estadoCuentaAdapter"    path=".gde.gdeuda.view.estadoCuentaAdapter" />    	    
+    	    <forward name="estadoCuentaSearchPage" path=".gde.gdeuda.view.estadoCuentaSearchPage" />
+			<forward name="verDetalleDeuda"	  	   path="/gde/AdministrarLiqDetalleDeuda.do?method=inicializar"/>
+			<forward name="buscarCuenta" 		   path="/pad/BuscarCuenta.do?method=inicializar" />    	     
+			<forward name="estadoCuentaImprimir"   path=".gde.gdeuda.view.estadoCuentaImprimir"/> 
+			<forward name="verConvenio"			   path="/gde/AdministrarLiqConvenioCuenta.do?method=inicializar"/>
+			<forward name="verDeudaContribuyente"  path="/gde/BuscarDeudaContrib.do?method=inicializar"/>
+			<forward name="verHistoricoExencion"   path="/gde/AdministrarLiqDeuda.do?method=verHistoricoExe"/>  	    
+	    </action>
+		<!-- FIN Consultar EstadoCuenta  -->
+	
+		<action
+	    	path="/gde/BuscarTramite"
+	        type="ar.gov.rosario.siat.gde.view.struts.BuscarTramiteDAction"
+			scope="request"
+	       	validate="false"
+	        name="tramiteSearchPage"
+	        parameter="method"
+	   		input=".gde.gdeuda.view.tramiteSearchPage"
+	        attribute="tramiteSearchPage">
+	           
+	   	    <forward name="tramiteSearchPage"   	path=".gde.gdeuda.view.tramiteSearchPage" />
+	    </action>		
+	
+		<action
+	    	path="/gde/AdministrarTramite"
+	        type="ar.gov.rosario.siat.gde.view.struts.AdministrarTramiteDAction"
+			scope="request"
+	       	validate="false"
+	        name="tramiteAdapter"
+	        parameter="method"
+	   		input=".gde.gdeuda.view.tramiteAdapter"
+	        attribute="tramiteAdapter">
+	           
+	   	    <forward name="tramiteAdapter"   	path=".gde.gdeuda.view.tramiteAdapter" />
+	   	    <forward name="tramitePrint" 		path=".gde.gdeuda.view.tramitePrint"/>   	    	
+   	    	<forward name="verCuenta" 			path="/gde/AdministrarLiqDeuda.do?method=verCuenta"/>	   	    
+	    </action>
+	    
+		<!-- Reporte Convenio -->
+		<action   
+	    	path="/gde/ReporteConvenio"
+	        type="ar.gov.rosario.siat.gde.view.struts.ReporteConvenioDAction"
+		    scope="request"
+	       	validate="false"
+	        name="convenioReport"
+	        parameter="method"
+	   	    input=".gde.reporte.view.convenioReport"
+	        attribute="convenioReport">
+	                       
+	   	    <forward name="convenioReport"  	  path=".gde.reporte.view.convenioReport" />
+	    </action>
+	    
+		<!-- Reporte Recaudacion -->
+		<action   
+	    	path="/gde/ReporteRecaudacion"
+	        type="ar.gov.rosario.siat.gde.view.struts.ReporteRecaudacionDAction"
+		    scope="request"
+	       	validate="false"
+	        name="recaudacionReport"
+	        parameter="method"
+	   	    input=".gde.reporte.view.recaudacionReport"
+	        attribute="recaudacionReport">
+	                       
+	   	    <forward name="recaudacionReport"  	  path=".gde.reporte.view.recaudacionReport" />
+	    </action>
+	    
+	    <!-- Reporte Respuesta Operativos -->
+		<action   
+	    	path="/gde/ReporteRespuestaOperativos"
+	        type="ar.gov.rosario.siat.gde.view.struts.ReporteRespuestaOperativosDAction"
+		    scope="request"
+	       	validate="false"
+	        name="respuestaOperativosReport"
+	        parameter="method"
+	   	    input=".gde.reporte.view.respuestaOperativosReport"
+	        attribute="respuestaOperativosReport">
+	                       
+	   	    <forward name="respuestaOperativosReport"  	  path=".gde.reporte.view.respuestaOperativosReport" />
+	    </action>
+	    
+	    <!-- Reporte Convenios a Caducar -->
+		<action   
+	    	path="/gde/ReporteConvenioACaducar"
+	        type="ar.gov.rosario.siat.gde.view.struts.ReporteConvenioACaducarDAction"
+		    scope="request"
+	       	validate="false"
+	        name="convenioACaducarReport"
+	        parameter="method"
+	   	    input=".gde.reporte.view.convenioACaducarReport"
+	        attribute="convenioACaducarReport">
+	                       
+	   	    <forward name="convenioACaducarReport"  	  path=".gde.reporte.view.convenioACaducarReport" />
+	    </action>
+	    
+		<!-- ABM LiqCom -->
+		<action
+	    	path="/gde/BuscarLiqCom"
+	        type="ar.gov.rosario.siat.gde.view.struts.BuscarLiqComDAction"
+			scope="request"
+	       	validate="false"
+	        name="liqComSearchPage"
+	        parameter="method"
+	   		input=".gde.gdeuda.view.liqComSearchPage"
+	        attribute="liqComSearchPage">
+	           
+	   	    <forward name="liqComSearchPage"   	      path=".gde.gdeuda.view.liqComSearchPage" />
+	   	    <forward name="administrarLiqCom"   	  path="/gde/AdministrarLiqCom.do?method=inicializar" />
+	   	    <forward name="administrarProcesoLiqCom"  path="/gde/AdministrarProcesoLiqCom.do?method=inicializar" />
+	    </action>		
+	
+		<action
+	    	path="/gde/AdministrarLiqCom"
+	        type="ar.gov.rosario.siat.gde.view.struts.AdministrarLiqComDAction"
+			scope="request"
+	       	validate="false"
+	        name="liqComAdapter"
+	        parameter="method"
+	   		input=".gde.gdeuda.view.liqComEditAdapter"
+	        attribute="liqComAdapter">
+	           
+	   	    <forward name="liqComEditAdapter"   	path=".gde.gdeuda.view.liqComEditAdapter" />
+	   	    <forward name="liqComViewAdapter"   	path=".gde.gdeuda.view.liqComViewAdapter" />	   	    
+	    </action>		
+	    
+		<action
+     		path="/gde/AdministrarProcesoLiqCom"
+	        type="ar.gov.rosario.siat.gde.view.struts.AdministrarProcesoLiqComDAction"
+		    scope="request"
+        	validate="false"
+	        name="procesoLiqComAdapter"
+            parameter="method"
+    	    input=".gde.liqCom.view.procesoLiqComEditAdapter"
+	        attribute="procesoLiqComAdapter">
+            
+            <forward name="administrarAdpCorridaLiqCom" 	path="/pro/AdministrarAdpCorrida.do?method=inicializar" />
+			<forward name="procesoLiqComAdapter"	    path=".gde.liqCom.view.procesoLiqComAdapter" />
+	   	    <forward name="administrarLiqCom" 			    path="/gde/AdministrarLiqCom.do?method=inicializar" />	   	    
+	    </action>	    
+		<!-- Fin ABM LiqCom -->
+		
+		<!-- Saldo Por Caducidad Masivo -->
+		<action   
+	    	path="/gde/BuscarSalPorCad"
+	        type="ar.gov.rosario.siat.gde.view.struts.BuscarSaldoPorCaducidadDAction"
+		    scope="request"
+	       	validate="false"
+	        name="saldoPorCaducidadSearchPage"
+	        parameter="method"
+	   	    input=".gde.planPago.view.saldoPorCaducidadSearchPage"
+	        attribute="saldoPorCaducidadSearchPage">
+	                       
+	   	    <forward name="salPorCadSearchPage"  	  path=".gde.planPago.view.saldoPorCaducidadSearchPage" />
+	   	    <forward name="agregarSalPorCad"		  path="/gde/AdministrarSalPorCadMasivo.do?method=inicializar"/>
+	   	    <forward name="ver"						  path="/gde/AdministrarSalPorCadMasivo.do?method=ver"/>
+	   	    <forward name="modificar"				  path="/gde/AdministrarSalPorCadMasivo.do?method=modificarForView"/>
+	   	    <forward name="volver"					  path="/gde/BuscarSalPorCad.do?method=buscar"/>
+	   	    <forward name="administrar"				  path="/gde/AdministrarSalPorCadMasivo.do?method=administrarCorrida"/>
+	   	    <forward name="eliminar"				  path="/gde/AdministrarSalPorCadMasivo.do?method=eliminarForView"/>
+	   	    <forward name="seleccionar"				  path="/gde/AdministrarSalPorCadMasivo.do?method=seleccionar"/>
+	   	    
+	    </action>
+	    
+	    <action
+	    	path="/gde/AdministrarSalPorCadMasivo"
+	    	type="ar.gov.rosario.siat.gde.view.struts.AdministrarSalPorCadMasivoDAction"
+	    	scope="request"
+	    	validate="false"
+	    	name="salPorCadMasivoAdapter"
+	    	parameter="method"
+	    	input=".gde.planPago.view.salPorCadMasivoAdapter"
+	    	attribute="salPorCadMasivoAdapter">
+	    	
+	    	<forward name="salPorCadMasivoAdapter"			path=".gde.planPago.view.salPorCadMasivoAdapter"/>
+	    	<forward name="salPorCadAdminAdapter"			path=".gde.planPago.view.salPorCadMasivoAdministrarAdapter"/>
+	    	<forward name="administrarAdpCorridaEmision" 	path="/pro/AdministrarAdpCorrida.do?method=inicializar" />
+	    	<forward name="seleccionar"						path=".gde.planPago.view.salPorCadMasivoSelAdapter"/>
+	    	<forward name="verConvenio"						path="/gde/AdministrarLiqConvenioCuenta.do?method=inicializar"/>
+	    	
+	    </action>
+
+		<!-- Administrar Anular Deuda -->
+	    <action
+     		path="/gde/AdministrarAnularDeuda"
+	        type="ar.gov.rosario.siat.gde.view.struts.AdministrarAnularDeudaDAction"
+		    scope="request"
+        	validate="false"
+	        name="anularDeudaAdapter"
+            parameter="method"
+    	    input=".gde.gdeuda.view.anularDeudaIngresoAdapter"
+	        attribute="anularDeudaAdapter">
+            
+    	    <forward name="anularDeudaIngresoAdapter"		path=".gde.gdeuda.view.anularDeudaIngresoAdapter" />
+    	    <forward name="anularDeudaAdapter"       		path=".gde.gdeuda.view.anularDeudaAdapter" />
+    	    <forward name="anularDeudaAnularAdapter"       	path=".gde.gdeuda.view.anularDeudaAnularAdapter" />
+    	    <forward name="buscarCuenta" 					path="/pad/BuscarCuenta.do?method=inicializar" />
+	    </action>
+	    <!-- Fin Administrar Anular Deuda  -->
+	    
+	    <!-- consultar convenio/recibo no liquidables -->
+		<action   
+	    	path="/gde/BuscarConRecNoLiq"
+	        type="ar.gov.rosario.siat.gde.view.struts.BuscarConRecNoLiqDAction"
+		    scope="request"
+	       	validate="false"
+	        name="conRecNoLiqSearchPage"
+	        parameter="method"
+	   	    input=".gde.admDeuJud.view.conRecNoLiqSearchPage"
+	        attribute="conRecNoLiqSearchPage">
+	                       
+	   	    <forward name="conRecNoLiqSearchPage"  	  path=".gde.admDeuJud.view.conRecNoLiqSearchPage" />
+	   	    <forward name="admConRecNoLiq"			  path="/gde/AdministrarConRecNoLiq.do?method=inicializar"/>	   	    
+	    </action>
+	    
+	    <action
+     		path="/gde/AdministrarConRecNoLiq"
+	        type="ar.gov.rosario.siat.gde.view.struts.AdministrarConRecNoLiqDAction"
+		    scope="request"
+        	validate="false"
+	        name="conRecNoLiqAdapter"
+            parameter="method"
+    	    input=".gde.admDeuJud.view.conRecNoLiqViewAdapter"
+	        attribute="anularDeudaAdapter">
+            
+	    </action>	    
+		<!-- FIN consultar convenio/recibo no liquidables -->
+		
+		<!-- Consultar Recibo -->	    
+	    <action
+	    	path="/gde/BuscarRecibo"
+	        type="ar.gov.rosario.siat.gde.view.struts.BuscarReciboDAction"
+			scope="request"
+	       	validate="false"
+	        name="reciboSearchPage"
+	        parameter="method"
+	   		input=".gde.gdeuda.view.reciboSearchPage"
+	        attribute="reciboSearchPage">
+	           
+	   	    <forward name="reciboSearchPage"   	path=".gde.gdeuda.view.reciboSearchPage" />
+	   	    <forward name="administrarRecibo"	path="/gde/AdministrarRecibo.do?method=inicializar"/>
+	    </action>
+	    
+		<!-- FIN consultar convenio/recibo no liquidables -->
+		
+	    <action
+     		path="/gde/AdministrarRecibo"
+	        type="ar.gov.rosario.siat.gde.view.struts.AdministrarReciboDAction"
+		    scope="request"
+        	validate="false"
+	        name="reciboAdapter"
+            parameter="method"
+    	    input=".gde.gdeuda.view.reciboAdapter"
+	        attribute="reciboAdapter">
+            
+    	    <forward name="reciboAdapter"		path=".gde.gdeuda.view.reciboAdapter" />
+	    </action>
+	    <!-- Fin Consultar Recibo -->
+	    
+		<!-- Consultar Importe a Recaudar -->
+	    <action
+     		path="/gde/ReporteImporteRecaudar"
+	        type="ar.gov.rosario.siat.gde.view.struts.ReporteImporteRecaudarDAction"
+		    scope="request"
+        	validate="false"
+	        name="importeRecaudarReport"
+            parameter="method"
+    	    input=".gde.gdeuda.view.importeRecaudarReport"
+	        attribute="importeRecaudarReport">
+	        
+	        <forward name="importeRecaudarReport"  	  path=".gde.gdeuda.view.importeRecaudarReport" />
+   	    </action>		
+		<!-- FIN Consultar Importe a Recaudar -->	
+		
+		<!-- Consulta de importe Recaudado de planes -->
+	    <action
+     		path="/gde/ReporteImporteRecaudadoPlanes"
+	        type="ar.gov.rosario.siat.gde.view.struts.ReporteImporteRecaudadoDAction"
+		    scope="request"
+        	validate="false"
+	        name="importeRecaudadoReport"
+            parameter="method"
+    	    input=".gde.gdeuda.view.importeRecaudadoReport"
+	        attribute="importeRecaudadoReport">
+	        
+	        <forward name="importeRecaudadoReport"    path=".gde.gdeuda.view.importeRecaudadoReport" />
+   	    </action>		
+		<!-- FIN Consulta de importe Recaudado de planes -->
+		
+	<!-- Consulta de importe Total Contribuyente Cer -->
+	    <action
+     		path="/gde/ReporteContribuyenteCer"
+	        type="ar.gov.rosario.siat.gde.view.struts.ReporteContribuyenteCerDAction"
+		    scope="request"
+        	validate="false"
+	        name="contribuyenteCerReport"
+            parameter="method"
+    	    input=".gde.gdeuda.view.contribuyenteCerReport"
+	        attribute="contribuyenteCerReport">
+	        
+	        <forward name="contribuyenteCerReport"    path=".gde.gdeuda.view.contribuyenteCerReport" />
+   	    </action>		
+		<!-- FIN Consulta de importe Total Contribuyente Cer  -->
+	
+		<!-- Consulta de importe Total Contribuyente Cer x Recurso -->
+	    <action
+     		path="/gde/ReporteRecConCer"
+	        type="ar.gov.rosario.siat.gde.view.struts.ReporteRecConCerDAction"
+		    scope="request"
+        	validate="false"
+	        name="contribuyenteCerReport"
+            parameter="method"
+    	    input=".gde.gdeuda.view.recConCerReport"
+	        attribute="contribuyenteCerReport">
+	        
+	        <forward name="recConCerReport"    path=".gde.gdeuda.view.recConCerReport" />
+   	    </action>		
+		<!-- FIN Consulta de importe Total Contribuyente Cer  x Recurso -->
+		
+		<!-- Consulta de importe Total Recaudacion Cer x Sector -->
+	    <action
+     		path="/gde/ReporteRecaudacionCer"
+	        type="ar.gov.rosario.siat.gde.view.struts.ReporteRecaudacionCerDAction"
+		    scope="request"
+        	validate="false"
+	        name="contribuyenteCerReport"
+            parameter="method"
+    	    input=".gde.gdeuda.view.recaudacionCerReport"
+	        attribute="contribuyenteCerReport">
+	        
+	        <forward name="recaudacionCerReport"    path=".gde.gdeuda.view.recaudacionCerReport" />
+   	    </action>		
+   	    
+   	    <!-- Consulta de importe Total Detalle Recaudacion Cer x Sector -->
+	    <action
+     		path="/gde/ReporteDetRecaudacionCer"
+	        type="ar.gov.rosario.siat.gde.view.struts.ReporteDetRecaudacionCerDAction"
+		    scope="request"
+        	validate="false"
+	        name="contribuyenteCerReport"
+            parameter="method"
+    	    input=".gde.gdeuda.view.detRecaudacionCerReport"
+	        attribute="contribuyenteCerReport">
+	        
+	        <forward name="detRecaudacionCerReport"    path=".gde.gdeuda.view.detRecaudacionCerReport" />
+   	    </action>	
+   	    
+		<!-- FIN Consulta de importe Total Contribuyente Cer  x Recurso -->
+		<!-- Reporte Convenio -->
+		<action   
+	    	path="/gde/ReporteConvenioFormalizado"
+	        type="ar.gov.rosario.siat.gde.view.struts.ReporteConvenioFormDAction"
+		    scope="request"
+	       	validate="false"
+	        name="convenioFormReport"
+	        parameter="method"
+	   	    input=".gde.reporte.view.convenioFormReport"
+	        attribute="convenioFormReport">
+	                       
+	   	    <forward name="convenioFormReport"  	  path=".gde.reporte.view.convenioFormReport" />
+	    </action>
+		<!-- Fin Reporte Convenio -->
+		
+		
+		<!-- Upload Evento GesJud por archivo -->
+		<action    
+	    	path="/gde/UploadEventoGesJud"
+	        type="ar.gov.rosario.siat.gde.view.struts.UploadEventoGesJudDAction"
+		    scope="request"
+	       	validate="false"
+	        name="uploadEventoGesJudAdapter"
+	        parameter="method"
+	   	    input=".gde.gdeudaJudicial.view.uploadEventoGesJudAdapter"
+	        attribute="uploadEventoGesJudAdapter">
+	                       
+	   	    <forward name="uploadEventoAdapter"  	  path=".gde.gdeudaJudicial.view.uploadEventoGesJudAdapter" />
+	    </action>
+		<!-- FIN Upload Evento GesJud por archivo -->
+		
+		<!-- Reportes de Seguimiento de las Gestión Judicial -->
+		<action
+     		path="/gde/ReporteGesJud"
+	        type="ar.gov.rosario.siat.gde.view.struts.ReporteGesJudDAction"
+		    scope="request"
+        	validate="false"
+	        name="gesJudReport"
+            parameter="method"
+    	    input=".gde.gdeuda.view.gesJudReport"
+	        attribute="gesJudReport">
+	        
+	        <forward name="gesJudReport"    path=".gde.gdeuda.view.gesJudReport" />
+	        <forward name="buscarCuenta" 	path="/pad/BuscarCuenta.do?method=inicializar" />
+   	    </action>
+   	    <!--  FIN Reportes de Seguimiento de las Gestión Judicial -->
+   	    
+   	    <!-- Reporte de deudas de cuenta en gestion judicial -->
+		<action
+     		path="/gde/BuscarDeuCueGesJud"
+	        type="ar.gov.rosario.siat.gde.view.struts.BuscarDeuCueGesJudDAction"
+		    scope="request"
+        	validate="false"
+	        name="deuCueGesJudSearchPage"
+            parameter="method"
+    	    input=".gde.gdeudaJudicial.view.deuCueGesJudSearchPage"
+	        attribute="deuCueGesJudSearchPage">
+	        
+	        <forward name="deuCueGesJudSearchPage"  path=".gde.gdeudaJudicial.view.deuCueGesJudSearchPage" />
+	        <forward name="buscarCuenta" 			path="/pad/BuscarCuenta.do?method=inicializar" />
+   	    </action>   	    
+   	    <!-- FIn Reporte de deudas de cuenta en gestion judicial -->
+   	    
+   	    
+   	    <!-- Reporte de Anulacion de Deuda -->
+		<action
+     		path="/gde/ReporteDeudaAnulada"
+	        type="ar.gov.rosario.siat.gde.view.struts.ReporteDeudaAnuladaDAction"
+		    scope="request"
+        	validate="false"
+	        name="deudaAnuladaReport"
+            parameter="method"
+    	    input=".gde.reporte.view.deudaAnuladaReport"
+	        attribute="deudaAnuladaReport">
+	        
+	        <forward name="deudaAnuladaReport"    path=".gde.reporte.view.deudaAnuladaReport" />
+   	    </action>
+   	    <!--  FIN Reporte de Anulacion de Deuda -->
+   	    
+   	    <!-- FIn Reporte de deudas de cuenta en gestion judicial -->
+
+		<!-- Reporte de total de emision -->
+	    <action
+     		path="/gde/ReporteEmision"
+	        type="ar.gov.rosario.siat.gde.view.struts.ReporteEmisionDAction"
+		    scope="request"
+        	validate="false"
+	        name="emisionReport"
+            parameter="method"
+    	    input=".gde.reporte.view.emisionReport"
+	        attribute="emisionReport">
+	        
+	        <forward name="emisionReport"    path=".gde.reporte.view.emisionReport" />
+   	    </action>		
+		<!-- FIN Reporte de total de emision -->
+		
+		<!-- Reporte de recaudado NUEVO -->
+	    <action
+     		path="/gde/ReporteRecaudado"
+	        type="ar.gov.rosario.siat.gde.view.struts.ReporteRecaudadoDAction"
+		    scope="request"
+        	validate="false"
+	        name="recaudadoReport"
+            parameter="method"
+    	    input=".gde.reporte.view.recaudadoReport"
+	        attribute="recaudadoReport">
+	        
+	        <forward name="recaudadoReport"    path=".gde.reporte.view.recaudadoReport" />
+   	    </action>		
+		<!-- FIn Reporte de recaudado NUEVO -->
+		
+		<!-- Reporte de Distribucion de Totales Emitidos -->
+	    <action
+     		path="/gde/ReporteDistribucion"
+	        type="ar.gov.rosario.siat.gde.view.struts.ReporteDistribucionDAction"
+		    scope="request"
+        	validate="false"
+	        name="distribucionReport"
+            parameter="method"
+    	    input=".gde.reporte.view.distribucionReport"
+	        attribute="distribucionReport">
+	        
+	        <forward name="distribucionReport"    path=".gde.reporte.view.distribucionReport" />
+   	    </action>		
+		<!-- FIN Reporte de Distribucion de Totales Emitidos -->
+		
+		<!-- Reporte Deuda por Procurador -->
+		<action
+     		path="/gde/ReporteDeudaProcurador"
+	        type="ar.gov.rosario.siat.gde.view.struts.ReporteDeudaProcuradorDAction"
+		    scope="request"
+        	validate="false"
+	        name="deudaProcuradorReport"
+            parameter="method"
+    	    input=".gde.reporte.view.deudaProcuradorReport"
+	        attribute="deudaProcuradorReport">
+	        
+	        <forward name="deudaProcuradorReport"    path=".gde.reporte.view.deudaProcuradorReport" />
+   	    </action>
+		<!-- FIN Reporte Deuda por Procurador -->
+		
+		<!-- Consulta de Cod Ref Pago -->
+		<action
+			path="/gde/ConsultaCodRefPag"
+			type="ar.gov.rosario.siat.gde.view.struts.BuscarCodRefPagDAction"
+			scope="request"
+			validate="false"
+			name="codRefPagSearchPage"
+			parameter="method"
+			input=".gde.gdeuda.view.codRefPagSearchPage"
+			attribute="codRefPagSearchPage">
+			
+			<forward name="codRefPagSearchPage"	path=".gde.gdeuda.view.codRefPagSearchPage"/> 
+		</action>
+		
+	    <!-- ABM Proceso de Prescripcion de Deuda -->
+		<action
+	    	path="/gde/BuscarProPreDeu"
+	        type="ar.gov.rosario.siat.gde.view.struts.BuscarProPreDeuDAction"
+			scope="request"
+	       	validate="false"
+	        name="proPreDeuSearchPage"
+	        parameter="method"
+	   		input=".gde.admDeuCon.view.proPreDeuSearchPage"
+	        attribute="proPreDeuSearchPage">
+	           
+	   	    <forward name="proPreDeuSearchPage"       			path=".gde.admDeuCon.view.proPreDeuSearchPage"/>
+	   	    <forward name="administrarProPreDeu"   	  			path="/gde/AdministrarProPreDeu.do?method=inicializar" />
+			<forward name="administrarProcesoPrescripcionDeuda" path="/gde/AdministrarProcesoPrescripcionDeuda.do?method=inicializar" />
+	    </action>		
+	
+		<action
+	    	path="/gde/AdministrarProPreDeu"
+	        type="ar.gov.rosario.siat.gde.view.struts.AdministrarProPreDeuDAction"
+			scope="request"
+	       	validate="false"
+	        name="proPreDeuAdapter"
+	        parameter="method"
+	   		input=".gde.admDeuCon.view.proPreDeuEditAdapter"
+	        attribute="proPreDeuAdapter">
+
+			<forward name="proPreDeuViewAdapter"   	  path=".gde.admDeuCon.view.proPreDeuViewAdapter" />	           
+	   	    <forward name="proPreDeuEditAdapter"   	  path=".gde.admDeuCon.view.proPreDeuEditAdapter" />
+		</action>
+
+		<action
+	    	path="/gde/AdministrarProcesoPrescripcionDeuda"
+	        type="ar.gov.rosario.siat.gde.view.struts.AdministrarProcesoPrescripcionDeudaDAction"
+			scope="request"
+	       	validate="false"
+	        name="procesoPrescripcionDeudaAdapter"
+	        parameter="method"
+	   		input=".gde.admDeuCon.view.procesoPrescripcionDeudaAdapter"
+	        attribute="procesoPrescripcionDeudaAdapter">
+
+			<forward name="procesoPrescripcionDeudaAdapter"     path=".gde.admDeuCon.view.procesoPrescripcionDeudaAdapter" />
+			<forward name="administrarAdpCorridaPrescripcion" 	path="/pro/AdministrarAdpCorrida.do?method=inicializar" />
+			<forward name="buscarProPreDeuDet"					path="/gde/BuscarProPreDeuDet.do?method=inicializar" />	           
+		</action>
+		
+		<action
+	    	path="/gde/BuscarProPreDeuDet"
+	        type="ar.gov.rosario.siat.gde.view.struts.BuscarProPreDeuDetDAction"
+			scope="request"
+	       	validate="false"
+	        name="proPreDeuDetSearchPage"
+	        parameter="method"
+	   		input=".gde.admDeuCon.view.proPreDeuDetSearchPage"
+	        attribute="proPreDeuDetSearchPage">
+	           
+	   	    <forward name="proPreDeuDetSearchPage"  		   path=".gde.admDeuCon.view.proPreDeuDetSearchPage" />
+	    </action>
+	    <!-- Fin ABM Proceso de Prescripcion de Deuda -->
+		
+		<!-- Acciones masivas a convenios -->
+		<action
+     		path="/gde/AdministrarAccionConvenio"
+	        type="ar.gov.rosario.siat.gde.view.struts.AdministrarAccionConvenioDAction"
+		    scope="request"
+        	validate="false"
+	        name="accionConvenioAdapter"
+            parameter="method"
+    	    input=".gde.gdeuda.view.accionConvenioAdapter"
+	        attribute="accionConvenioAdapter">
+            
+    	    <forward name="accionConvenioAdapter"      path=".gde.gdeuda.view.accionConvenioAdapter" />
+	    </action>
+	    <!-- Fin Acciones masivas a convenios -->
+	    
+	    <!-- Search Page Declaraciones Juradas -->
+	     <action
+     		path="/gde/BuscarDecJur"
+	        type="ar.gov.rosario.siat.gde.view.struts.BuscarDecJurDAction"
+		    scope="request"
+        	validate="false"
+	        name="decJurSearchPage"
+            parameter="method"
+    	    input=".gde.gdeuda.view.decJurSearchPage"
+	        attribute="decJurSearchPage">
+            
+    	    <forward name="decJurSearchPage"      path=".gde.gdeuda.view.decJurSearchPage" />
+    	    <forward name="administrarDecJur"	  path="/gde/AdministrarDecJur.do?method=inicializar"/>
+	    </action>
+		<!-- Fin Search Page Declaraciones Juradas -->
+		
+		<!-- Declaraciones Juradas -->
+	     <action
+     		path="/gde/AdministrarDecJur"
+	        type="ar.gov.rosario.siat.gde.view.struts.AdministrarDecJurDAction"
+		    scope="request"
+        	validate="false"
+	        name="decJurAdapter"
+            parameter="method"
+    	    input=".gde.gdeuda.view.decJurEditAdapter"
+	        attribute="decJurAdapter">
+            
+    	    <forward name="decJurEditAdapter"       path=".gde.gdeuda.view.decJurEditAdapter" />
+    	    <forward name="decJurViewAdapter"		path=".gde.gdeuda.view.decJurViewAdapter" />
+    	    <forward name="administrarDecJurDet"	path="/gde/AdministrarDecJurDet.do?method=inicializar"/>
+    	    <forward name="administrarDecJurPag"	path="/gde/AdministrarDecJurPag.do?method=inicializar"/>
+       	    <forward name="administrarForDecJur"	path="/afi/AdministrarForDecJur.do?method=inicializar"/>
+	    </action>
+		<!-- Fin Declaraciones Juradas -->
+		
+		<!-- Detalle de Declaraciones Juradas -->
+	     <action
+     		path="/gde/AdministrarDecJurDet"
+	        type="ar.gov.rosario.siat.gde.view.struts.AdministrarDecJurDetDAction"
+		    scope="request"
+        	validate="false"
+	        name="decJurDetAdapter"
+            parameter="method"
+    	    input=".gde.gdeuda.view.decJurDetEditAdapter"
+	        attribute="decJurDetAdapter">
+            
+    	    <forward name="decJurDetEditAdapter"      path=".gde.gdeuda.view.decJurDetEditAdapter" />
+    	     <forward name="decJurDetViewAdapter"		path=".gde.gdeuda.view.decJurDetViewAdapter" />
+    	    <forward name="administrarDecJur"		  path="/gde/AdministrarDecJur.do?method=inicializar"/>
+	    </action>
+		<!-- Fin Detalle de Declaraciones Juradas -->
+		
+		<!-- Detalle de Pagos de Declaraciones Juradas -->
+	     <action
+     		path="/gde/AdministrarDecJurPag"
+	        type="ar.gov.rosario.siat.gde.view.struts.AdministrarDecJurPagDAction"
+		    scope="request"
+        	validate="false"
+	        name="decJurPagAdapter"
+            parameter="method"
+    	    input=".gde.gdeuda.view.decJurPagEditAdapter"
+	        attribute="decJurDetAdapter">
+            
+    	    <forward name="decJurPagEditAdapter"      path=".gde.gdeuda.view.decJurPagEditAdapter" />
+    	    <forward name="administrarDecJur"		  path="/gde/AdministrarDecJur.do?method=inicializar"/>
+    	    <forward name="decJurPagViewAdapter"	  path=".gde.gdeuda.view.decJurPagViewAdapter" />
+	    </action>
+		<!-- Fin Detalle de Pagos de Declaraciones Juradas -->
+		
+		<!-- Desglose Ajuste-->
+	     <action
+     		path="/gde/AdministrarDesgloseAjuste"
+	        type="ar.gov.rosario.siat.gde.view.struts.AdministrarDesgloseAjusteDAction"
+		    scope="request"
+        	validate="false"
+	        name="desgloseAjusteAdapter"
+            parameter="method"
+    	    input=".gde.gdeuda.view.desgloseAjusteAdapter"
+	        attribute="desgloseAjusteAdapter">
+            
+    	    <forward name="desgloseAjusteAdapter"       path=".gde.gdeuda.view.desgloseAjusteAdapter" />
+    	 
+	    </action>
+		<!-- Fin Desglose Ajuste-->
+		
+	    <!-- Multa -->	    
+	    <action
+	    	path="/gde/BuscarMulta"
+	        type="ar.gov.rosario.siat.gde.view.struts.BuscarMultaDAction"
+			scope="request"
+	       	validate="false"
+	        name="multaSearchPage"
+	        parameter="method"
+	   		input=".gde.gdeudaauto.view.multaSearchPage"
+	        attribute="multaSearchPage">
+	           
+	   	    <forward name="multaSearchPage"   	path=".gde.gdeudaauto.view.multaSearchPage" />
+	   	    <forward name="administrarMulta" 		path="/gde/AdministrarMulta.do?method=inicializar" />
+	    </action>
+		
+		<action
+     		path="/gde/AdministrarMulta"
+	        type="ar.gov.rosario.siat.gde.view.struts.AdministrarMultaDAction"
+		    scope="request"
+        	validate="false"
+	        name="multaAdapter"
+            parameter="method"
+    	    input=".gde.gdeudaauto.view.multaEditAdapter"
+	        attribute="multaAdapter">
+            
+    	    <forward name="multaViewAdapter"		path=".gde.gdeudaauto.view.multaViewAdapter"/>
+    	    <forward name="multaEditAdapter"        path=".gde.gdeudaauto.view.multaEditAdapter"/>
+    	    <forward name="multaHistoricoAdapter"   path=".gde.gdeudaauto.view.multaHistoricoAdapter"/>
+	    </action>
+	    <!-- Fin Multa -->
+	    
+	     <!-- Mantenedor de Mandatario -->
+	    <action
+     		path="/gde/BuscarMandatario"
+	        type="ar.gov.rosario.siat.gde.view.struts.BuscarMandatarioDAction"
+		    scope="request"
+        	validate="false"
+	        name="mandatarioSearchPage"
+            parameter="method"
+    	    input=".gde.definicion.view.mandatarioSearchPage"
+	        attribute="mandatarioSearchPage">
+            
+    	    <forward name="mandatarioSearchPage" 	 path=".gde.definicion.view.mandatarioSearchPage" />
+	        <forward name="administrarMandatario"    path="/gde/AdministrarMandatario.do?method=inicializar" />
+	    </action>
+	    	   	
+	   	<action
+     		path="/gde/AdministrarMandatario"
+	        type="ar.gov.rosario.siat.gde.view.struts.AdministrarMandatarioDAction"
+		    scope="request"
+        	validate="false"
+	        name="mandatarioAdapter"
+            parameter="method"
+    	    input=".gde.definicion.view.mandatarioEditAdapter"
+	        attribute="mandatarioAdapter">
+            
+    	    <forward name="mandatarioViewAdapter"      path=".gde.definicion.view.mandatarioViewAdapter" />
+    	    <forward name="mandatarioEditAdapter"      path=".gde.definicion.view.mandatarioEditAdapter" />
+			<forward name="mandatarioAdapter"          path=".gde.definicion.view.mandatarioAdapter" />
+	    </action>
+	    
+	      <!-- Mantenedor de Gestion de Cobranza -->
+	    <action
+     		path="/gde/BuscarCobranza"
+	        type="ar.gov.rosario.siat.gde.view.struts.BuscarCobranzaDAction"
+		    scope="request"
+        	validate="false"
+	        name="cobranzaSearchPage"
+            parameter="method"
+    	    input=".gde.gestionCobranza.view.cobranzaSearchPage"
+	        attribute="cobranzaSearchPage">
+            
+    	    <forward name="cobranzaSearchPage" 	 path=".gde.gestionCobranza.view.cobranzaSearchPage" />
+    	    <forward name="administrarCobranza"  path="/gde/AdministrarCobranza.do?method=inicializar"/>
+    	    <forward name="buscarPersona" 		 path="/pad/BuscarPersona.do?method=inicializar"/>
+	    </action>
+	    
+	     <action
+     		path="/gde/AdministrarCobranza"
+	        type="ar.gov.rosario.siat.gde.view.struts.AdministrarCobranzaDAction"
+		    scope="request"
+        	validate="false"
+	        name="cobranzaAdapter"
+            parameter="method"
+    	    input=".gde.gestionCobranza.view.cobranzaEditAdapter"
+	        attribute="cobranzaAdapter">
+            
+    	    <forward name="cobranzaEditAdapter" 	 path=".gde.gestionCobranza.view.cobranzaEditAdapter"/>
+    	    <forward name="cobranzaViewAdapter" 	 path=".gde.gestionCobranza.view.cobranzaViewAdapter"/>
+    	    <forward name="cobranzaAsignarAdapter" 	 path=".gde.gestionCobranza.view.cobranzaAsignarAdapter"/>
+	    </action>
+	    
+	      <!-- Mantenedor PerCob -->
+	    <action
+     		path="/gde/BuscarPerCob"
+	        type="ar.gov.rosario.siat.gde.view.struts.BuscarPerCobDAction"
+		    scope="request"
+        	validate="false"
+	        name="perCobSearchPage"
+            parameter="method"
+    	    input=".gde.definicion.view.perCobSearchPage"
+	        attribute="perCobSearchPage">
+            
+    	    <forward name="perCobSearchPage" 	 path=".gde.definicion.view.perCobSearchPage" />
+	        <forward name="administrarPerCob"    path="/gde/AdministrarPerCob.do?method=inicializar" />
+	    </action>
+	    	   	
+	   	<action
+     		path="/gde/AdministrarPerCob"
+	        type="ar.gov.rosario.siat.gde.view.struts.AdministrarPerCobDAction"
+		    scope="request"
+        	validate="false"
+	        name="perCobAdapter"
+            parameter="method"
+    	    input=".gde.definicion.view.perCobEditAdapter"
+	        attribute="perCobAdapter">
+            
+    	    <forward name="perCobViewAdapter"      path=".gde.definicion.view.perCobViewAdapter" />
+    	    <forward name="perCobEditAdapter"      path=".gde.definicion.view.perCobEditAdapter" />
+			<forward name="perCobAdapter"          path=".gde.definicion.view.perCobAdapter" />
+	    </action>
+	    
+	    <!-- Mantenedor Agente de Retención -->	    
+	    <action
+	    	path="/gde/BuscarAgeRet"
+	        type="ar.gov.rosario.siat.gde.view.struts.BuscarAgeRetDAction"
+			scope="request"
+	       	validate="false"
+	        name="ageRetSearchPage"
+	        parameter="method"
+	   		input=".gde.definicion.view.ageRetSearchPage"
+	        attribute="ageRetSearchPage">
+	           
+	   	    <forward name="ageRetSearchPage"   		path=".gde.definicion.view.ageRetSearchPage" />
+	   	    <forward name="administrarAgeRet" 		path="/gde/AdministrarAgeRet.do?method=inicializar" />
+	    </action>
+		
+		<action
+     		path="/gde/AdministrarAgeRet"
+	        type="ar.gov.rosario.siat.gde.view.struts.AdministrarAgeRetDAction"
+		    scope="request"
+        	validate="false"
+	        name="ageRetAdapter"
+            parameter="method"
+    	    input=".gde.definicion.view.ageRetEditAdapter"
+	        attribute="ageRetAdapter">
+            
+    	    <forward name="ageRetViewAdapter"		path=".gde.definicion.view.ageRetViewAdapter" />
+    	    <forward name="ageRetEditAdapter"      path=".gde.definicion.view.ageRetEditAdapter" />
+	    </action>
+	    <!-- Fin Mantenedor Agente de Retención -->
+	    
+	    <!-- Mantenedor Tipos de Multa -->	    
+	    <action
+	    	path="/gde/BuscarTipoMulta"
+	        type="ar.gov.rosario.siat.gde.view.struts.BuscarTipoMultaDAction"
+			scope="request"
+	       	validate="false"
+	        name="tipoMultaSearchPage"
+	        parameter="method"
+	   		input=".gde.definicion.view.tipoMultaSearchPage"
+	        attribute="tipoMultaSearchPage">
+	           
+	   	    <forward name="tipoMultaSearchPage"   		path=".gde.definicion.view.tipoMultaSearchPage" />
+	   	    <forward name="administrarTipoMulta" 		path="/gde/AdministrarTipoMulta.do?method=inicializar" />
+	    </action>
+		
+		<action
+     		path="/gde/AdministrarTipoMulta"
+	        type="ar.gov.rosario.siat.gde.view.struts.AdministrarTipoMultaDAction"
+		    scope="request"
+        	validate="false"
+	        name="tipoMultaAdapter"
+            parameter="method"
+    	    input=".gde.definicion.view.tipoMultaEditAdapter"
+	        attribute="tipoMultaAdapter">
+            
+    	    <forward name="tipoMultaViewAdapter"		path=".gde.definicion.view.tipoMultaViewAdapter" />
+    	    <forward name="tipoMultaEditAdapter"      	path=".gde.definicion.view.tipoMultaEditAdapter" />
+	    </action>
+	    <!-- Fin Mantenedor Tipos de Multa -->
+
+
+	    <!-- Mantenedor Indice de Compesacion -->	    
+	    <action
+	    	path="/gde/BuscarIndiceCompensacion"
+	        type="ar.gov.rosario.siat.gde.view.struts.BuscarIndiceCompensacionDAction"
+			scope="request"
+	       	validate="false"
+	        name="indiceCompensacionSearchPage"
+	        parameter="method"
+	   		input=".gde.definicion.view.indiceCompensacionSearchPage"
+	        attribute="indiceCompensacionSearchPage">
+	           
+	   	    <forward name="indiceCompensacionSearchPage"   				path=".gde.definicion.view.indiceCompensacionSearchPage" />
+	   	    <forward name="administrarIndiceCompensacion" 				path="/gde/AdministrarIndiceCompensacion.do?method=inicializar" />
+	    </action>
+
+		<action
+     		path="/gde/AdministrarIndiceCompensacion"
+	        type="ar.gov.rosario.siat.gde.view.struts.AdministrarIndiceCompensacionDAction"
+		    scope="request"
+        	validate="false"
+	        name="indiceCompensacionAdapter"
+            parameter="method"
+    	    input=".gde.definicion.view.indiceCompensacionEditAdapter"
+	        attribute="indiceCompensacionAdapter">
+            
+    	    <forward name="indiceCompensacionViewAdapter"		path=".gde.definicion.view.indiceCompensacionViewAdapter" />
+    	    <forward name="indiceCompensacionEditAdapter"      	path=".gde.definicion.view.indiceCompensacionEditAdapter" />
+	    </action>
+
+	    <!-- Sim Actualiza Deu -->
+		<action
+     		path="/gde/AdministrarSimActualizaDeu"
+	        type="ar.gov.rosario.siat.gde.view.struts.AdministrarSimActualizaDeuDAction"
+		    scope="request"
+        	validate="false"
+	        name=""
+            parameter="method"
+    	    input=".gde.gdeuda.view.simActualizaDeuViewAdapter"
+	        attribute="">
+            
+    	    <forward name="simActualizaDeuViewAdapter" path=".gde.gdeuda.view.simActualizaDeuViewAdapter" />
+	    </action>
+	    <!-- Fin Mantenedor Tipos de Multa -->
+	    
+	    <!-- Mantenedor TipoPago -->	    
+	    <action
+	    	path="/gde/BuscarTipoPago"
+	        type="ar.gov.rosario.siat.gde.view.struts.BuscarTipoPagoDAction"
+			scope="request"
+	       	validate="false"
+	        name="tipoPagoSearchPage"
+	        parameter="method"
+	   		input=".gde.definicion.view.tipoPagoSearchPage"
+	        attribute="tipoPagoSearchPage">
+	           
+	   	    <forward name="tipoPagoSearchPage"   	path=".gde.definicion.view.tipoPagoSearchPage" />
+	   	    <forward name="administrarTipoPago" 		path="/gde/AdministrarTipoPago.do?method=inicializar" />
+	    </action>
+		
+		<action
+     		path="/gde/AdministrarTipoPago"
+	        type="ar.gov.rosario.siat.gde.view.struts.AdministrarTipoPagoDAction"
+		    scope="request"
+        	validate="false"
+	        name="tipoPagoAdapter"
+            parameter="method"
+    	    input=".gde.definicion.view.tipoPagoEditAdapter"
+	        attribute="tipoPagoAdapter">
+            
+    	    <forward name="tipoPagoViewAdapter"		path=".gde.definicion.view.tipoPagoViewAdapter" />
+    	    <forward name="tipoPagoEditAdapter"      path=".gde.definicion.view.tipoPagoEditAdapter" />
+	    </action>
+	    <!-- Fin Mantenedor TipoPago -->
+	    
+	    <!-- Desbloquear CtrlInfDeu -->
+	    <action
+     		path="/gde/AdministrarCtrlInfDeu"
+	        type="ar.gov.rosario.siat.gde.view.struts.AdministrarCtrlInfDeuDAction"
+		    scope="request"
+        	validate="false"
+	        name="ctrlInfDeuAdapter"
+            parameter="method"
+    	    input=".gde.gdeuda.view.ctrlInfDeuViewAdapter"
+	        attribute="ctrlInfDeuViewAdapter">
+            
+    	    <forward name="ctrlInfDeuViewAdapter"		path=".gde.gdeuda.view.ctrlInfDeuViewAdapter" />
+	    </action>
+   	    <!-- Fin Desbloquear CtrlInfDeu -->
+	</action-mappings>
+
+</struts-config>

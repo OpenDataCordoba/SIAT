@@ -1,0 +1,4 @@
+tocTab[tocTab.length] = new Array("2.1.1.3.1:1", "", "Mantenedor Comisiones Procuradores", "EARoot/EA2/EA1/EA1/EA3/EA1/EA226.htm", "7.png", "4033", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.1.3.1:2", "", "Habilitar Planillas de Envio y Constancias de Deuda", "EARoot/EA2/EA1/EA1/EA3/EA1/EA227.htm", "7.png", "4003", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.1.3.1:3", "", "Registrar Caducidad Juicio", "EARoot/EA2/EA1/EA1/EA3/EA1/EA228.htm", "7.png", "2835", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.1.3.1:4", "", "Administrar Devolución Deuda por Cuenta", "EARoot/EA2/EA1/EA1/EA3/EA1/EA229.htm", "7.png", "4002", "0", "", "UseCase");

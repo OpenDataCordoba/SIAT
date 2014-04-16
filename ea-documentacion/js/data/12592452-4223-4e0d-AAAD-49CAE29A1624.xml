@@ -1,0 +1,5 @@
+tocTab[tocTab.length] = new Array("2.1.9.4:1", "", "Diagrama de Exenciones", "EARoot/EA2/EA1/EA9/EA4/EA548.htm", "180.png", "360", "0", "", "Use Case diagram");
+tocTab[tocTab.length] = new Array("2.1.9.4:2", "", "Mantenedor de Acción/Solicitud", "EARoot/EA2/EA1/EA9/EA4/EA550.htm", "7.png", "5060", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.9.4:3", "", "Mantenedor Tipo Sujeto", "EARoot/EA2/EA1/EA9/EA4/EA551.htm", "7.png", "4179", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.9.4:4", "", "Mantenedor Exención", "EARoot/EA2/EA1/EA9/EA4/EA552.htm", "7.png", "1727", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.9.4:5", "", "Mantenedor Sujeto Exento", "EARoot/EA2/EA1/EA9/EA4/EA553.htm", "7.png", "3761", "0", "", "UseCase");

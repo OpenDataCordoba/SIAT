@@ -1,0 +1,3 @@
+tocTab[tocTab.length] = new Array("2.1.7.2:1", "", "Diagrama de Expedientes", "EARoot/EA2/EA1/EA7/EA2/EA492.htm", "180.png", "323", "0", "", "Use Case diagram");
+tocTab[tocTab.length] = new Array("2.1.7.2:2", "", "Consultar uso expedientes", "EARoot/EA2/EA1/EA7/EA2/EA494.htm", "7.png", "4044", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.7.2.1", "1", "Secundarios", "EARoot/EA2/EA1/EA7/EA2/EA495.htm", "4.png", "", "", "{BF5F32ED-797E-47e6-9DF6-7EA63E4362DA}", "Package");

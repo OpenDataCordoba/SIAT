@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC 
+"-//Apache Software Foundation//DTD Struts Configuration 1.2//EN"  
+"[WWW] http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+	<form-beans>
+	<!--<#FormBeans#>-->
+		<#FormBeans.Adapters#>
+	   	<form-bean name="${bean}SearchPage" type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="${bean}Adapter"    type="org.apache.struts.action.DynaActionForm"/>
+		<#FormBeans.Adapters#>
+	<!--<#FormBeans#>-->		
+	</form-beans>
+
+	<action-mappings>
+	
+		<!--<#Mappings#> -->
+		<#Mappings.CusSimple#>
+		<!-- ${Caso_de_Uso} -->	    
+	    <action
+	    	path="/${modulo}/Buscar${Bean}"
+	        type="ar.gov.rosario.siat.${modulo}.view.struts.Buscar${Bean}DAction"
+			scope="request"
+	       	validate="false"
+	        name="${bean}SearchPage"
+	        parameter="method"
+	   		input=".${modulo}.${submodulo}.view.${bean}SearchPage"
+	        attribute="${bean}SearchPage">
+	           
+	   	    <forward name="${bean}SearchPage"   	path=".${modulo}.${submodulo}.view.${bean}SearchPage" />
+	   	    <forward name="administrar${Bean}" 		path="/${modulo}/Administrar${Bean}.do?method=inicializar" />
+	    </action>
+		
+		<action
+     		path="/${modulo}/Administrar${Bean}"
+	        type="ar.gov.rosario.siat.${modulo}.view.struts.Administrar${Bean}DAction"
+		    scope="request"
+        	validate="false"
+	        name="${bean}Adapter"
+            parameter="method"
+    	    input=".${modulo}.${submodulo}.view.${bean}EditAdapter"
+	        attribute="${bean}Adapter">
+            
+    	    <forward name="${bean}ViewAdapter"		path=".${modulo}.${submodulo}.view.${bean}ViewAdapter" />
+    	    <forward name="${bean}EditAdapter"      path=".${modulo}.${submodulo}.view.${bean}EditAdapter" />
+	    </action>
+	    <!-- Fin ${Caso_de_Uso} -->
+	    
+	    <#Mappings.CusSimple#>
+	    <#Mappings.CusEncDet#>
+	    <!-- ${Caso_de_Uso} (Encabezado/Detalle) -->
+	    <action
+	    	path="/${modulo}/Buscar${Bean}"
+	        type="ar.gov.rosario.siat.${modulo}.view.struts.Buscar${Bean}DAction"
+		    scope="request"
+	       	validate="false"
+	        name="${bean}SearchPage"
+	        parameter="method"
+	   	    input=".${modulo}.${submodulo}.view.${bean}SearchPage"
+	        attribute="${bean}SearchPage">
+	        
+	   	    <forward name="administrarEnc${Bean}" 	path="/${modulo}/AdministrarEnc${Bean}.do?method=inicializar" />	        
+	   	    <forward name="${bean}SearchPage"    	path=".${modulo}.${submodulo}.view.${bean}SearchPage" />
+	   	    <forward name="administrar${Bean}" 	    path="/${modulo}/Administrar${Bean}.do?method=inicializar" />
+	    </action>
+		
+		<action
+     		path="/${modulo}/Administrar${Bean}"
+	        type="ar.gov.rosario.siat.${modulo}.view.struts.Administrar${Bean}DAction"
+		    scope="request"
+        	validate="false"
+	        name="${bean}Adapter"
+            parameter="method"
+    	    input=".${modulo}.${submodulo}.view.${bean}Adapter"
+	        attribute="${bean}Adapter">
+            
+    	    <forward name="${bean}ViewAdapter"    path=".${modulo}.${submodulo}.view.${bean}ViewAdapter" />
+    	    <forward name="${bean}Adapter"        path=".${modulo}.${submodulo}.view.${bean}Adapter" />
+     	    <forward name="administrarEnc${Bean}" path="/${modulo}/AdministrarEnc${Bean}.do?method=inicializar" />
+    	    <forward name="administrar${Bean_Detalle}" path="/${modulo}/Administrar${Bean_Detalle}.do?method=inicializar" />
+	    </action>
+	    
+		<action
+     		path="/${modulo}/AdministrarEnc${Bean}"
+	        type="ar.gov.rosario.siat.${modulo}.view.struts.AdministrarEnc${Bean}DAction"
+		    scope="request"
+        	validate="false"
+	        name="${bean}Adapter"
+            parameter="method"
+    	    input=".${modulo}.${submodulo}.view.${bean}EncEditAdapter"
+	        attribute="${bean}Adapter">
+
+    	    <forward name="${bean}EncEditAdapter"     path=".${modulo}.${submodulo}.view.${bean}EncEditAdapter" />
+	    </action>
+	    
+	    <!-- Administrar ${Bean_Detalle} -->
+	    <action
+     		path="/${modulo}/Administrar${Bean_Detalle}"
+	        type="ar.gov.rosario.siat.${modulo}.view.struts.Administrar${Bean_Detalle}DAction"
+		    scope="request"
+        	validate="false"
+	        name="${bean_Detalle}Adapter"
+            parameter="method"
+    	    input=".${modulo}.${submodulo}.view.${bean_Detalle}EditAdapter"
+	        attribute="${bean_Detalle}Adapter">
+            
+    	    <forward name="${bean_Detalle}ViewAdapter"      path=".${modulo}.${submodulo}.view.${bean_Detalle}ViewAdapter" />
+    	    <forward name="${bean_Detalle}EditAdapter"      path=".${modulo}.${submodulo}.view.${bean_Detalle}EditAdapter" />
+	    </action>
+	    <!-- Fin ${Caso_de_Uso} (Encabezado/Detalle) -->
+	    
+	    <#Mappings.CusEncDet#>
+	    <!--<#Mappings#> -->
+
+	</action-mappings>
+
+</struts-config>
+<!-- <template> -->

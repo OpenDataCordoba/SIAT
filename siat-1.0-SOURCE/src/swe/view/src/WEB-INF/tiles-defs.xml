@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 1.1//EN"
+       "http://struts.apache.org/dtds/tiles-config_1_1.dtd">       
+<!--
+     This is a blank Tiles definition file with a commented example.
+-->
+
+<tiles-definitions>
+
+    <!-- sample tiles definitions
+    <definition name=".mainLayout" path="/common/layouts/classicLayout.jsp">
+        <put name="title"  value="Sample Page Title" />
+        <put name="header" value="/common/header.jsp" />
+        <put name="menu"   value=".mainMenu" />
+        <put name="footer" value="/common/footer.jsp" />
+        <put name="body"   value=".portal.body" />
+    </definition>
+
+    <definition name=".mainMenu" path="/common/layouts/vboxLayout.jsp" >
+        <putList name="list" >
+            <add value=".menu.links" />
+            <add value=".menu.taglib.references" />
+            <add value=".menu.printer.friendly" />
+            <add value=".menu.old.documents" />
+      </putList>
+    </definition>
+
+    <definition name="aPage" extends=".mainLayout">
+        <put name="title"  value="Another Title" />
+        <put name="body"   value=".aPage.body" />
+    </definition>
+
+    end samples -->
+
+	<definition name=".sweWelcomeLayout" path="/layouts/sweWelcomeLayout.jsp">
+		<put name="title"  value="SWE" />
+		<put name="header" value="/layouts/header.jsp" />
+		<put name="menutab" value="/seg/menutab.jsp" />
+		<put name="body"   value="" />
+		<put name="footer" value="/layouts/footer.jsp" />
+	</definition>
+
+	<definition name=".sweFirstLayout" path="/layouts/sweFirstLayout.jsp">
+		<put name="title"      value="SWE" />
+		<put name="header"     value="/layouts/header.jsp" />
+		<put name="loggedUser" value="/layouts/loggedUser.jsp" />
+		<put name="menu"       value="/layouts/sweMenu.jsp" />
+		<put name="body"       value="" />
+		<put name="footer"     value="/layouts/footer.jsp" />
+	</definition>
+
+	<definition name=".swe.view.sweMessage" extends=".sweWelcomeLayout">
+		<put name="body" value="/swe/sweMessage.jsp"/>
+	</definition>
+    
+	<definition name=".sweXlsLayout" path="/layouts/sweXlsLayout.jsp">
+		<put name="title"      value="SWE en Desarrollo" />
+		<put name="header"     value="/layouts/header.jsp" />
+		<put name="loggedUser" value="/layouts/loggedUser.jsp" />
+		<put name="body"       value="" />
+		<put name="footer"     value="/layouts/footer.jsp" />
+	</definition>
+
+</tiles-definitions>

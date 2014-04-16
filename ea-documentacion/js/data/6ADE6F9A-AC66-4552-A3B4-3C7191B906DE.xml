@@ -1,0 +1,7 @@
+tocTab[tocTab.length] = new Array("2.1.5.1:1", "", "Clasificación", "EARoot/EA2/EA1/EA5/EA1/EA396.htm", "180.png", "608", "0", "", "Use Case diagram");
+tocTab[tocTab.length] = new Array("2.1.5.1:2", "", "Consulta de Total por Nodo", "EARoot/EA2/EA1/EA5/EA1/EA398.htm", "7.png", "5046", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.5.1:3", "", "Consulta de Total por Partida", "EARoot/EA2/EA1/EA5/EA1/EA399.htm", "7.png", "5048", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.5.1:4", "", "Mantenedor de Arbol de Clasificación", "EARoot/EA2/EA1/EA5/EA1/EA400.htm", "7.png", "5043", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.5.1:5", "", "Reporte de Clasificador", "EARoot/EA2/EA1/EA5/EA1/EA401.htm", "7.png", "5044", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.5.1:6", "", "Reporte de Clasificador Comparativo", "EARoot/EA2/EA1/EA5/EA1/EA402.htm", "7.png", "5047", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.5.1:7", "", "Reporte de Rentas", "EARoot/EA2/EA1/EA5/EA1/EA403.htm", "7.png", "5045", "0", "", "UseCase");

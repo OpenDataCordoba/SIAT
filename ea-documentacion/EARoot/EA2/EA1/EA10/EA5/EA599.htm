@@ -1,0 +1,222 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Mantenedor Recurso Tributario</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="pageHeader"></div>
+<div class="PageBody">
+	<span class="ObjectTitle">Mantenedor Recurso Tributario  : public   usecase</span>
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">17/07/2007 17:29:14</td>
+		</tr>
+		<tr>
+			<td class="ObjectDetailsTopic">Modified:</td>
+			<td class="ObjectDetailsValue">15/05/2009 10:31:34</td>
+		</tr>
+		<tr style="height: 10px"><td colspan="2"></td></tr>
+		<tr>
+			<td class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td class="ObjectDetailsValue">1.0</td>
+		</tr>
+		<tr id="proj02" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Phase:</td>
+			<td class="ObjectDetailsValue">1.0</td>
+		</tr>
+		<tr id="proj03" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Status:</td>
+			<td class="ObjectDetailsValue">R1</td>
+		</tr>
+		<tr id="proj04" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Complexity:</td>
+			<td class="ObjectDetailsValue">Difficult</td>
+		</tr>
+		<tr>
+			<td class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">UUID:</td>
+			<td class="ObjectDetailsValue">{A9A730DA-8391-411e-BFA5-CB2F9F7D59AA}</td>
+		</tr>
+		<tr id="adv01" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
+			<td class="ObjectDetailsValue"><a href="EA595.htm">Recursos</a></td>
+		</tr>
+	</table>
+	<div class="ObjectDetailsNotes">Este CU tiene como objetivo la administración de los Recursos Tributarios.<br /><br />Un recurso representa conjuntamente a los tributos (tasas, derechos y/o contribuciones reconocidas en el Código Tributario Municipal) y a los ingresos no tributarios (recursos establecidos por la Ordenanza General Impositiva u Ordenanza específica).<br /><br />Mediante este CU se podrán definir las características propias del recurso,  respecto de la Deuda/Cobranza,  características de la emisión, la relación con Tipo Objetos Imponibles,  acciones disponibles respecto a la creación de la cuenta, acciones respecto a la actualización manual de las cuentas del recurso y características de la gestión Judicial. También podrán valorizarse los atributos del recurso, definir los conceptos asociados al recurso, indicar las clasificaciones de deuda asociadas, agregar los atributos que deben valorizarse al momento de crear una cuenta y los atributos que definen las  características de la emisión del recurso.<br /><br /><br /><br /></div>
+
+	<div class="TableGroup" id="TableGroup">
+		<ul class="ItemTitle">
+			<li onClick="parent.toggleItem('AssociationsFrom');" id="AssociationsFromTitle">Associations From</li>
+			<li onClick="parent.toggleItem('Scenario');" id="ScenarioTitle">Scenarios</li>
+			<li onClick="parent.toggleItem('Links');" id="LinksTitle">Other Links</li>
+		</ul>
+		<div class="ItemBody" id="AssociationsFromTable">
+			<table border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="20%" class="TableHeading">Element</td>
+					<td width="25%" class="TableHeading">Source Role</td>
+					<td width="25%" class="TableHeading">Target Role</td>
+					<td width="30%" class="TableHeading">Details</td>
+				</tr>
+				<tr>
+					<td width="20%" class="TableRow" valign="top">
+						<a href="../../../EA3/EA629.htm">Administrador Definiciones SIAT</a><br />
+						Actor &nbsp;
+					</td>
+					<td width="20%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;
+					</td>
+					<td width="20%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;	
+					</td>
+					<td width="30%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+
+			</table>
+		</div>
+		<div class="ItemBody" id="ScenarioTable">
+			<table align="center" border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="24%" class="TableHeading">Scenario</td>
+					<td width="8%" class="TableHeading">Type</td>
+					<td width="68%" class="TableHeading">Detail</td>
+				</tr>
+				<tr>
+					<td width="24%" class="TableRow">Buscar Recurso</td>
+					<td width="8%" class="TableRow">Alternate</td>
+					<td width="68%" class="TableRow"><div class="ObjectDetailsNotes">Permite consultar los recursos disponibles en el SIAT mediante diferentes criterios de búsqueda. Permite buscar por tipo de categoría (tributario o no tributario), categoría (capítulos de la ordenanza), código y descripción.<br />Si existen resultados se muestra de cada uno de los registros codigo, descripción, tipo categoría, categoría, fecha alta, fecha baja, estado y las acciones asociadas: &quot;Ver Recurso&quot;, &quot;Modificar Recurso&quot;, &quot;Eliminar Recurso&quot;, &quot;Activar/Desactivar Recurso&quot;.<br />Para agregar un nuevo recurso, existe la opción &quot;Agregar Recurso&quot;.</div>
+</td>
+				</tr>
+				<tr>
+					<td width="24%" class="TableRow">Ver Recurso</td>
+					<td width="8%" class="TableRow">Alternate</td>
+					<td width="68%" class="TableRow"><div class="ObjectDetailsNotes">Permite visualizar información del Recurso seleccionado.</div>
+</td>
+				</tr>
+				<tr>
+					<td width="24%" class="TableRow">Agregar Recurso</td>
+					<td width="8%" class="TableRow">Alternate</td>
+					<td width="68%" class="TableRow"><div class="ObjectDetailsNotes">Para crear un nuevo recurso, debemos ingresar:<br /> * Características propias del recurso como:<br />	- ingresar categoría<br />	- ingresar código<br />	- ingresar descripción<br />	- indicar si es autoliquidable<br />        - indicar la fecha desde cuando es autoliquidable<br />	- indicar si es fiscalizable<br />        - indicar la fecha desde cuando es fiscalizable<br />	- ingresar fecha de comienzo de cobro de interés diario<br />	- ingresar fecha de alta<br /><br /> * Características respecto de la Deuda/Cobranza<br />	- indicar si permite gestionar la deuda NO vencida. Esto significa si se puede incluir en un reconfección o plan la deuda no vencida.<br />	- indicar si la deuda es exigible una vez vencida. <br />	- indicar si permite realizar la gestión de cobranza. Esto significa si permite hacer la gestion de la cobranza de la deuda (reconfeccion, asentamiento, planes).<br /><br /> * Características de la emisión<br />	- indicar si permite emitir deuda.<br />	- indicar si permite emisiones extraordinarias. Esto significa si se permite la emisión de retroactivos y emisiones particulares sin cálculo.<br />	- indicar si la deuda generada sigue a los titulares al momento de lal emisión. Esto significa que la dedua generada sigue a una cuenta o a los titulares de dicha cuenta en el momento de la emisión.<br /><br /><br /> * Relación con Tipo Objetos Imponibles<br />	- ingresar Tipo Objeto Imponible.<br />	Si se ingresa un tipo objeto imponible<br />		- indicar si participa del libre deuda asociado con todos los recursos del objeto imponible.<br />		- indicar si es recurso principal<br />			si es recurso principal<br />				- indicar si se realiza el alta de la cuenta cuando se realiza el alta del tipo objeto imponible asociado.<br />				- indicar si se realiza la baja de la cuenta cuando se realiza la baja del tipo objeto imponible asociado.<br />				- indicar si modifica los titulares de la cuenta por novedades en el tipo objeto imponible asociado.<br />			si NO es recurso principal<br />				- ingresar el recurso principal asociado<br />				si se ingresa un recurso principal<br />					- indicar si se realiza el alta de la cuenta por el alta de la cuenta del recurso principal.<br />                                                                                     si se indica que se realiza el alta, se deberá indicar una lista de atributos valor (al momento del alta, se deberá validar que se cumpla al menos uno).<br />					- indicar si se realiza la baja de la cuenta por la baja de la cuenta del recurso principal.<br />					- indicar si se modifican los titulares por la modificación de titulares en la cuenta del recurso principal.<br /><br /> * Acciones respecto a la creación de la cuenta<br />	- ingresar la forma en que se generará el número de cuenta<br />	- ingresar la forma de generar el código de gestión personal<br /><br /> * Acciones respecto a la actualización manual de las cuentas del recurso<br />	- indicar si permite el alta manual de una cuenta.<br />	- indicar si permite la baja manual de una cuenta.<br />	- indicar si permite la modificación manual de titulares.<br /><br /> * Características de la gestión Judicial<br />	- indicar si envía deuda a gestión judicial<br />	- ingresar el criterio de asignación de procuradores</div>
+</td>
+				</tr>
+				<tr>
+					<td width="24%" class="TableRow">Eliminar Recurso</td>
+					<td width="8%" class="TableRow">Alternate</td>
+					<td width="68%" class="TableRow"><div class="ObjectDetailsNotes">Elimina en forma física el recurso seleccionado si no se encuentra referenciado.</div>
+</td>
+				</tr>
+				<tr>
+					<td width="24%" class="TableRow">Modificar Recurso</td>
+					<td width="8%" class="TableRow">Alternate</td>
+					<td width="68%" class="TableRow"><div class="ObjectDetailsNotes">Permite actualizar los datos del recurso (mencionados en el alta) y <br />* Los atributos del recurso, valorizando cada uno. Para cada uno indicar:<br />	- ingresar un atributo previamente definido (la opción de búsqueda, permite realizar el alta)<br />	- ingresar valor<br />	- ingresar vigencia<br /><br /> * Los conceptos asociados al recurso, para cada concepto:<br />	- ingresar el código del concepto<br />	- ingresar la descripcion del concepto<br />	- ingresar la abreviatura del concepto<br />	- indicar el porcentaje respecto del importe de la emisión<br />	- indicar si este concepto incrementa el importe de la emisión<br />	- indicar si es visible (en la consulta de deuda)<br />	- ingresar el orden de visualización (en la consulta de deuda)<br />	- ingresar la vigencia de los datos ingresados para el concepto<br /><br />  * La clasificación de deuda, para cada clasificación:<br />	- ingresar la descripción<br />	- ingresar abreviatura<br />	- ingresar vigencia de la clasificación<br /><br />Nota: la Clasificación de Deuda representa las diversas deudas que pueden generarse para un determinado recurso, ejemplo deuda, valores retroactivos, ajustes, multas, etc.<br /><br />  * Los atributos que deben valorizarse al momento de crear una cuenta, para cada uno:<br />	- ingresar atributo previamente definido<br />	- ingresar valor por defecto<br />	- ingresar vigencia<br /><br /> <br />  * Los atributos que definen las  características de la emisión del recurso, para cada uno:<br />	- ingresar tipo emision (individual/masiva)<br />	- ingresar periodo deuda (esporadica, mensual, bimestral, etc)<br />	- ingresar el Proceso de cálculo (programa de cálculo)<br />	- ingresar cantidad periodos a emitir<br />	- ingresar fórmula del primer vencimiento<br />	- ingresar fórmula del segundo vencimiento<br />	- ingresar atributo por el cual se realiza la emision (por ejemplo la zona en TGI)<br />	- ingresar formulario utilizado para emitir<br />                - ingresar el plazo de gracia en días. (en caso que se emita con plazo de gracia)<br />	- vigencia de la definición. <br /><br />  * Los atributos que deben valorizarse al momento de la emisión, para cada cuenta involucrada. Por ejemplo los kg de ropa en la tasa de desinfección de ropa.<br />	Para cada uno:<br />	- ingresar atributo previamente definido<br />	- ingresar vigencia</div>
+</td>
+				</tr>
+				<tr>
+					<td width="24%" class="TableRow">Activar/Desactivar Recurso</td>
+					<td width="8%" class="TableRow">Alternate</td>
+					<td width="68%" class="TableRow"><div class="ObjectDetailsNotes">Dependiendo del estado del Recurso, se habilitará una de las dos opciones.<br />	Si está en estado &quot;Activo&quot;, se procederá a la desactivación del Recurso, pasando a estado &quot;Inactivo&quot; y no pudiendo ser referenciado (por ejemplo para la creación de una nueva cuenta).<br />	Si está en estado &quot;Inactivo&quot;, se procederá a la activación del Recurso, pasando a estado &quot;Activo&quot;, pudiendo ser referenciado nuevamente.<br /></div>
+</td>
+				</tr>
+				<tr>
+					<td width="24%" class="TableRow">Prórrogas</td>
+					<td width="8%" class="TableRow">Alternate</td>
+					<td width="68%" class="TableRow"><div class="ObjectDetailsNotes">Permite definir prórrogas asociadas al Recurso. Para cada una se deberá indicar la descripción de la prórroga, fecha de vencimiento actual, la nueva fecha de vencimiento, el caso, y la vigencia de esta prórroga. Opcionalmente, se podrán definir atributos-valor para los cuales una prorroga es válida.<br /></div>
+</td>
+				</tr>
+
+			</table>
+		</div>
+		<div class="ItemBody" id="LinksTable">
+			<table align="center" border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="30%" class="TableHeading">Object</td>
+					<td width="15%" class="TableHeading">Type</td>
+					<td width="15%" class="TableHeading">Connection</td>
+					<td width="40%" class="TableHeading">Notes</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../../../../EA1/EA3/EA36.htm">«Functional» 40- Para el manejo de los conceptos tributarios que se emiten, se deberán utilizar fórmulas que permitan aplicar cambios en los cálculos de dichos conceptos sin modificar el código de la aplicación.</a></td>
+					<td width="15%" class="TableRow" valign="top">Requirement</td>
+					<td width="15%" class="TableRow" valign="top">Realisation</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../../../../EA1/EA3/EA37.htm">«Functional» 41- Para el manejo de las emisiones de todas las tasas y tributos se deberán utilizar parámetros que permitan configurar distintas cuestiones.</a></td>
+					<td width="15%" class="TableRow" valign="top">Requirement</td>
+					<td width="15%" class="TableRow" valign="top">Realisation</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../../../../EA1/EA6/EA86.htm">«Functional» 34- Homogeneizar las interfaces con los distintos sistemas que alimentan los padrones (por altas, bajas y modificaciones). </a></td>
+					<td width="15%" class="TableRow" valign="top">Requirement</td>
+					<td width="15%" class="TableRow" valign="top">Realisation</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../../../../EA1/EA5/EA74.htm">«Functional» 4- Se deberá diseñar el sistema teniendo en cuenta que todos los tributos de esta Municipalidad se administran de la misma manera (administración por función y no por tributo).</a></td>
+					<td width="15%" class="TableRow" valign="top">Requirement</td>
+					<td width="15%" class="TableRow" valign="top">Realisation</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../../../../EA1/EA5/EA75.htm">«Functional» 5- El sistema deberá tener un alto grado de parametrización, a efectos de permitir su adecuación a cambios, sin necesidad de modificar las aplicaciones.</a></td>
+					<td width="15%" class="TableRow" valign="top">Requirement</td>
+					<td width="15%" class="TableRow" valign="top">Realisation</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="./EA1/EA601.htm">Administrar Alicuotas del Recurso</a></td>
+					<td width="15%" class="TableRow" valign="top">UseCase</td>
+					<td width="15%" class="TableRow" valign="top">Includes</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="./EA1/EA602.htm">Administrar Atributos a Valorizar al crear Cuentas</a></td>
+					<td width="15%" class="TableRow" valign="top">UseCase</td>
+					<td width="15%" class="TableRow" valign="top">Includes</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="./EA1/EA603.htm">Administrar Conceptos a Declarar en DJ</a></td>
+					<td width="15%" class="TableRow" valign="top">UseCase</td>
+					<td width="15%" class="TableRow" valign="top">Includes</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="./EA1/EA604.htm">Administrar Mínimos a Declarar del Recurso</a></td>
+					<td width="15%" class="TableRow" valign="top">UseCase</td>
+					<td width="15%" class="TableRow" valign="top">Includes</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+
+			</table>
+		</div>
+	</div>
+<div class="pageFooter"></div>
+ 
+</body>
+</html>

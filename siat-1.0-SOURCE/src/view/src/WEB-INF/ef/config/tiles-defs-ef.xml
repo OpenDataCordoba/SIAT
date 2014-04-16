@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+ <!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 1.1//EN"
+       "http://jakarta.apache.org/struts/dtds/tiles-config_1_1.dtd">
+
+<tiles-definitions>
+	
+	<!-- Mantenedor de Inspector -->
+
+	<definition name=".ef.definicion.view.inspectorSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/ef/definicion/inspectorSearchPage.jsp"/>
+    </definition>
+    <definition name=".ef.definicion.view.inspectorEncEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/ef/definicion/inspectorEncEditAdapter.jsp"/>
+    </definition>
+    <definition name=".ef.definicion.view.inspectorViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/ef/definicion/inspectorViewAdapter.jsp"/>
+    </definition>    
+    
+    <definition name=".ef.definicion.view.inspectorAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/ef/definicion/inspectorAdapter.jsp"/>
+    </definition>
+    
+     <!-- Mantenedor de Inspector -->
+ 
+    <!-- Mantenedor de FuenteInfo -->
+
+	<definition name=".ef.definicion.view.fuenteInfoSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/ef/definicion/fuenteInfoSearchPage.jsp"/>
+    </definition>
+    <definition name=".ef.definicion.view.fuenteInfoEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/ef/definicion/fuenteInfoEditAdapter.jsp"/>
+    </definition>
+    <definition name=".ef.definicion.view.fuenteInfoViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/ef/definicion/fuenteInfoViewAdapter.jsp"/>
+    </definition>    
+    
+    <definition name=".ef.definicion.view.fuenteInfoAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/ef/definicion/fuenteInfoAdapter.jsp"/>
+    </definition>
+    
+     <!-- Mantenedor de fuenteInfo -->
+    
+    <!-- InsSup -->	
+    <definition name=".ef.definicion.view.insSupEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/ef/definicion/insSupEditAdapter.jsp"/>
+    </definition>
+    <definition name=".ef.definicion.view.insSupViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/ef/definicion/insSupViewAdapter.jsp"/>
+    </definition>
+    <!-- Fin InsSup -->
+	
+	<!-- Mantenedor de Supervisor -->
+    <definition name=".ef.definicion.view.supervisorSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/ef/definicion/supervisorSearchPage.jsp"/>
+    </definition>	
+    
+    <definition name=".ef.definicion.view.supervisorEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/ef/definicion/supervisorEditAdapter.jsp"/>
+    </definition>    
+    
+    <definition name=".ef.definicion.view.supervisorViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/ef/definicion/supervisorViewAdapter.jsp"/>
+    </definition>
+	<!-- Mantenedor de Supervisor -->
+	
+	<!-- Mantenedor de DocSop -->
+    <definition name=".ef.definicion.view.docSopSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/ef/definicion/docSopSearchPage.jsp"/>
+    </definition>	
+    
+    <definition name=".ef.definicion.view.docSopEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/ef/definicion/docSopEditAdapter.jsp"/>
+    </definition>    
+    
+    <definition name=".ef.definicion.view.docSopViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/ef/definicion/docSopViewAdapter.jsp"/>
+    </definition>
+	<!-- Mantenedor de DocSop -->
+
+	<!-- ADM Plan Fiscal -->
+    <definition name=".ef.planFiscal.view.planFiscalSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/ef/investigacion/planFiscalSearchPage.jsp"/>
+    </definition>	
+    
+    <definition name=".ef.planFiscal.view.planFiscalEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/ef/investigacion/planFiscalEditAdapter.jsp"/>
+    </definition>    
+    
+    <definition name=".ef.planFiscal.view.planFiscalViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/ef/investigacion/planFiscalViewAdapter.jsp"/>
+    </definition>	
+	<!-- FIN ADM Plan Fiscal -->
+
+	<!-- Mantenedor de Investigador -->
+   <definition name=".ef.investigador.view.investigadorSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/ef/definicion/investigadorSearchPage.jsp"/>
+    </definition>	
+    
+    <definition name=".ef.investigador.view.investigadorEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/ef/definicion/investigadorEditAdapter.jsp"/>
+    </definition>    
+    
+    <definition name=".ef.investigador.view.investigadorViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/ef/definicion/investigadorViewAdapter.jsp"/>
+    </definition>	
+	<!-- FIN Mantenedor de Investigador -->
+	
+	<!-- Mantenedor de OpeInv -->
+   <definition name=".ef.opeInv.view.opeInvSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/ef/investigacion/opeInvSearchPage.jsp"/>
+    </definition>	
+    
+    <definition name=".ef.opeInv.view.opeInvEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/ef/investigacion/opeInvEditAdapter.jsp"/>
+    </definition>    
+    
+    <definition name=".ef.opeInv.view.opeInvViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/ef/investigacion/opeInvViewAdapter.jsp"/>
+    </definition>	
+	<!-- FIN Mantenedor de OpeInv -->	
+	
+	<!-- ADM OpeInvCon -->
+   <definition name=".ef.opeInvCon.view.opeInvConSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/ef/investigacion/opeInvConSearchPage.jsp"/>
+    </definition>	
+    
+    <definition name=".ef.opeInvCon.view.opeInvConEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/ef/investigacion/opeInvConEditAdapter.jsp"/>
+    </definition>    
+    
+    <definition name=".ef.opeInvCon.view.opeInvConViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/ef/investigacion/opeInvConViewAdapter.jsp"/>
+    </definition>	
+	<!-- FIN ADM OpeInvCon -->
+	
+	<!-- ABM OpeInvConActas -->
+   <definition name=".ef.opeInvCon.view.opeInvConActaSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/ef/investigacion/opeInvConActaSearchPage.jsp"/>
+    </definition>
+    
+    <definition name=".ef.opeInvConActas.view.actasInicioInvestigadorAdapterVO" extends=".siatStdLayout">
+	    <put name="body" value="/ef/investigacion/actasInicioInvestigadorAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".ef.opeInvConActas.view.actasInicioHojaRutaAdapterVO" extends=".siatStdLayout">
+	    <put name="body" value="/ef/investigacion/actasInicioHojaRutaAdapter.jsp"/>
+    </definition>    
+    <definition name=".ef.opeInvConActas.view.verMapa" extends=".siatStdLayout">
+	    <put name="body" value="/ef/investigacion/verMapa.jsp"/>
+    </definition>    
+    
+   <!-- ADM OpeInvBus -->
+   <definition name=".ef.opeInvBus.view.opeInvBusSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/ef/investigacion/opeInvBusSearchPage.jsp"/>
+    </definition>	
+    
+    <definition name=".ef.opeInvBus.view.opeInvBusEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/ef/investigacion/opeInvBusEditAdapter.jsp"/>
+    </definition>    
+    
+    <definition name=".ef.opeInvBus.view.opeInvBusViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/ef/investigacion/opeInvBusViewAdapter.jsp"/>
+    </definition>
+
+    <definition name=".ef.opeInvBus.view.procesoOpeInvBusAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/ef/investigacion/procesoOpeInvBusAdapter.jsp"/>
+    </definition>
+
+    <definition name=".ef.opeInvBus.view.testMapa" extends=".siatStdLayout">
+	    <put name="body" value="/ef/investigacion/testMapa.jsp"/>
+    </definition>
+    	
+	<!-- FIN ADM OpeInvCon -->
+
+
+	<!-- ADM Actas -->
+    <definition name=".ef.ActaInv.view.ActaInvSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/ef/investigacion/actaInvSearchPage.jsp"/>
+    </definition>
+    
+    <definition name=".ef.actaInv.view.actasInvAdapterVO" extends=".siatStdLayout">
+	    <put name="body" value="/ef/investigacion/actaInvAdapter.jsp"/>
+    </definition>    
+	<!-- FIN ADM Actas -->
+	
+	<!-- ADM Aprobacion Actas -->
+    <definition name=".ef.ActaInv.view.aprobacionActaInvSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/ef/investigacion/aprobacionActaInvSearchPage.jsp"/>
+    </definition>	
+    <definition name=".ef.actaInv.view.aprobActaInvAdapterVO" extends=".siatStdLayout">
+	    <put name="body" value="/ef/investigacion/aprobacionActaInvAdapter.jsp"/>
+    </definition>    
+	<!-- FIN ADM Aprobacion Actas -->    
+	
+	<!-- ABM Orden Control -->
+    <definition name=".ef.ordenControl.view.ordenControlSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/ef/investigacion/ordenControlSearchPage.jsp"/>
+    </definition>	
+    <definition name=".ef.ordenControlContr.view.ordenControlContrSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/ef/investigacion/ordenControlContrSearchPage.jsp"/>
+    </definition>    
+    <definition name=".ef.ordenControlContr.view.ordenControlAdapter.imprimir" extends=".siatStdLayout">
+	    <put name="body" value="/ef/investigacion/imprimirOrdenControl.jsp"/>
+    </definition>
+    <definition name=".ef.ordenControl.view.ordenControlInvEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/ef/investigacion/ordenControlInvAdapter.jsp"/>
+    </definition>    
+	<!-- FIN ABM Orden Control -->
+	
+	<!--ADM OrdenControlFis -->
+    <definition name=".ef.ordenControl.view.ordenControlFisSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/ef/fiscalizacion/ordenControlFisSearchPage.jsp"/>
+    </definition>	
+    <definition name=".ef.ordenControlFis.view.ordenControlFisEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/ef/fiscalizacion/ordenControlFisEditAdapter.jsp"/>
+    </definition>	
+    <definition name=".ef.ordenControlFis.view.ordenControlFisViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/ef/fiscalizacion/ordenControlFisViewAdapter.jsp"/>
+    </definition>    
+    <definition name=".ef.ordenControlFis.view.ordenControlFisAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/ef/fiscalizacion/ordenControlFisAdapter.jsp"/>
+    </definition>    
+    	
+    <definition name=".ef.ordenControlFis.view.asignarOrdenControlFisAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/ef/fiscalizacion/asignarOrdenAdapter.jsp"/>
+    </definition>
+	<!--FIN ADM OrdenControlFis -->
+	
+	<!-- ABM periodoOrden -->
+    <definition name=".ef.periodoOrdenAdapter.view.ordenControlFisEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/ef/fiscalizacion/periodoOrdenEditAdapter.jsp"/>
+    </definition>    			
+    <definition name=".ef.periodoOrdenAdapter.view.ordenControlFisViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/ef/fiscalizacion/periodoOrdenViewAdapter.jsp"/>
+    </definition>    
+	<!-- FIn ABM periodoOrden -->
+	
+	<!-- ABM Acta -->
+	<definition name=".ef.actaEncEditAdapter.view.actaEncEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/ef/fiscalizacion/actaEncEditAdapter.jsp"/>
+    </definition>    
+    
+	<definition name=".ef.actaAdapter.view.actaAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/ef/fiscalizacion/actaAdapter.jsp"/>
+    </definition>    
+    
+	<definition name=".ef.actaViewAdapter.view.actaViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/ef/fiscalizacion/actaViewAdapter.jsp"/>
+    </definition>    
+	<!-- FIN ABM Acta -->
+	
+	<!-- ABM OrdConDoc -->
+	<definition name=".ef.ordConDocAdapter.edit.ordConDocAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/ef/fiscalizacion/ordConDocEditAdapter.jsp"/>
+    </definition>
+	<definition name=".ef.ordConDocAdapter.view.ordConDocAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/ef/fiscalizacion/ordConDocViewAdapter.jsp"/>
+    </definition>
+	<!-- FIN ABM OrdConDoc -->
+	
+	<!-- ABM InicioInv -->
+	<definition name=".ef.inicioInvAdapter.edit.inicioInvAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/ef/fiscalizacion/inicioInvEditAdapter.jsp"/>
+    </definition>
+    <!-- FIN ABM InicioInv -->
+    
+    <!-- ABM PlaFueDat -->
+	<definition name=".ef.plaFueDatEncEditAdapter.view.plaFueDatEncEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/ef/fiscalizacion/plaFueDatEncEditAdapter.jsp"/>
+    </definition>    
+    
+	<definition name=".ef.plaFueDatAdapter.view.plaFueDatAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/ef/fiscalizacion/plaFueDatAdapter.jsp"/>
+    </definition>    
+    
+	<definition name=".ef.plaFueDatViewAdapter.view.plaFueDatViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/ef/fiscalizacion/plaFueDatViewAdapter.jsp"/>
+    </definition>    
+    <!-- Fin ABM PlaFueDat -->
+    
+    <!-- ABM PlaFueDatCol -->
+	<definition name=".ef.plaFueDatColAdapter.view.plaFueDatColViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/ef/fiscalizacion/plaFueDatColViewAdapter.jsp"/>
+    </definition>    
+	<definition name=".ef.plaFueDatColAdapter.edit.plaFueDatColEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/ef/fiscalizacion/plaFueDatColEditAdapter.jsp"/>
+    </definition>    
+	<definition name=".ef.plaFueDatColAdapter.edit.plaFueDatPlanillaAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/ef/fiscalizacion/plaFueDatPlanillaAdapter.jsp"/>
+    </definition>    
+    <!-- Fin ABM PlaFueDatCol -->
+    
+    <!-- ABM PlaFueDatDet -->	
+	<definition name=".ef.plaFueDatDetAdapter.view.plaFueDatDetViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/ef/fiscalizacion/plaFueDatDetViewAdapter.jsp"/>
+    </definition>    
+    
+   	<definition name=".ef.plaFueDatDetAdapter.edit.plaFueDatDetEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/ef/fiscalizacion/plaFueDatDetEditAdapter.jsp"/>
+    </definition>
+    <!-- FIN ABM PlaFueDatDet -->
+
+    
+   <!-- ADM SolicitudEmiPerRetro-->
+	<definition name=".ef.fiscalizacion.view.solicitudEmiPerRetroEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/ef/fiscalizacion/solicitudEmiPerRetroEditAdapter.jsp"/>
+    </definition>
+   <!-- ADM SolicitudEmiPerRetro-->
+
+    
+    <!-- Comparacion (Encabezado) -->
+    <definition name=".ef.fiscalizacion.view.comparacionEncEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/ef/fiscalizacion/comparacionEncEditAdapter.jsp"/>
+    </definition>  	
+
+	<definition name=".ef.fiscalizacion.view.comparacionViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/ef/fiscalizacion/comparacionViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".ef.fiscalizacion.view.comparacionAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/ef/fiscalizacion/comparacionAdapter.jsp"/>
+    </definition>
+	<!-- Fin Comparacion -->
+    
+		<!-- CompFuente (Detalle)-->
+	<definition name=".ef.fiscalizacion.view.compFuenteViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/ef/fiscalizacion/compFuenteViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".ef.fiscalizacion.view.compFuenteEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/ef/fiscalizacion/compFuenteEditAdapter.jsp"/>
+    </definition>    
+		<!-- Fin CompFuente -->
+	<!-- Fin Comparacion -->
+	
+	<!-- OrdConBasImp -->
+	<definition name=".ef.fiscalizacion.view.ordConBasImpViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/ef/fiscalizacion/ordConBasImpViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".ef.fiscalizacion.view.ordConBasImpEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/ef/fiscalizacion/ordConBasImpEditAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".ef.fiscalizacion.view.ordConBasImpAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/ef/fiscalizacion/ordConBasImpAdapter.jsp"/>
+    </definition>
+
+    <definition name=".ef.fiscalizacion.view.ordConBasImpAjEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/ef/fiscalizacion/ordConBasImpAjEditAdapter.jsp"/>
+    </definition>    
+    
+    <definition name=".ef.fiscalizacion.view.ordConBasImpAjustarPeriodosAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/ef/fiscalizacion/ordConBasImpAjustarPeriodosAdapter.jsp"/>
+    </definition>    
+    
+    <definition name=".ef.fiscalizacion.view.ordConBasImpAlicuotasAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/ef/fiscalizacion/ordConBasImpAlicuotasAdapter.jsp"/>
+    </definition>    
+    <!-- fin OrdConBasImp -->
+
+
+    <definition name=".ef.fiscalizacion.view.detAjuEncEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/ef/fiscalizacion/detAjuEncEditAdapter.jsp"/>
+    </definition>  	
+
+	<definition name=".ef.fiscalizacion.view.detAjuViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/ef/fiscalizacion/detAjuViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".ef.fiscalizacion.view.detAjuAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/ef/fiscalizacion/detAjuAdapter.jsp"/>
+    </definition>
+	<!-- Fin DetAju -->
+    
+	<!-- DetAjuDet (Detalle)-->
+	<definition name=".ef.fiscalizacion.view.detAjuDetViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/ef/fiscalizacion/detAjuDetViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".ef.fiscalizacion.view.detAjuDetEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/ef/fiscalizacion/detAjuDetEditAdapter.jsp"/>
+    </definition>    
+	<!-- Fin DetAjuDet -->
+	<!-- Fin DetAju -->
+	
+	<!-- AliComFueCol -->
+	<definition name=".ef.fiscalizacion.view.aliComFueColViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/ef/fiscalizacion/aliComFueColViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".ef.fiscalizacion.view.aliComFueColAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/ef/fiscalizacion/aliComFueColAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".ef.fiscalizacion.view.aliComFueColInitAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/ef/fiscalizacion/aliComFueColInitAdapter.jsp"/>
+    </definition>    
+    
+    <definition name=".ef.fiscalizacion.view.aliComFueColHistAlicuotaAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/ef/fiscalizacion/aliComFueColHistAlicuotaAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".ef.fiscalizacion.view.detAjuAgregarMasivoAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/ef/fiscalizacion/detAjuAgregarMasivoAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".ef.fiscalizacion.view.detAjuModifRetAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/ef/fiscalizacion/detAjuModifRetAdapter.jsp"/>
+    </definition>    
+	<!-- Fin AliComFueCol -->
+	
+	<!-- MesaEntrada -->
+	<definition name=".ef.fiscalizacion.view.mesaEntradaViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/ef/fiscalizacion/mesaEntradaViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".ef.fiscalizacion.view.mesaEntradaEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/ef/fiscalizacion/mesaEntradaEditAdapter.jsp"/>
+    </definition>
+    <!-- fin MesaEntrada -->
+
+	<!-- AproOrdCon -->
+	<definition name=".ef.fiscalizacion.view.aproOrdConViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/ef/fiscalizacion/aproOrdConViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".ef.fiscalizacion.view.aproOrdConEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/ef/fiscalizacion/aproOrdConEditAdapter.jsp"/>
+    </definition>
+    <!-- fin AproOrdCon -->
+
+	<!-- DetAjuDocSop -->
+   	<definition name=".ef.fiscalizacion.view.detAjuDocSopViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/ef/fiscalizacion/detAjuDocSopViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".ef.fiscalizacion.view.detAjuDocSopEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/ef/fiscalizacion/detAjuDocSopEditAdapter.jsp"/>
+    </definition>
+    <!-- fin DetAjuDocSop -->
+
+	<!-- ComAju -->
+	
+	<definition name=".ef.fiscalizacion.view.comAjuViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/ef/fiscalizacion/comAjuViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".ef.fiscalizacion.view.comAjuEncEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/ef/fiscalizacion/comAjuEncEditAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".ef.fiscalizacion.view.comAjuAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/ef/fiscalizacion/comAjuAdapter.jsp"/>
+    </definition>
+    <!-- fin ComAju -->
+    
+					    
+</tiles-definitions>

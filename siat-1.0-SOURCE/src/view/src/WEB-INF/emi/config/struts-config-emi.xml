@@ -1,0 +1,567 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC 
+"-//Apache Software Foundation//DTD Struts Configuration 1.2//EN"  
+"[WWW] http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="resLiqDeuSearchPage"		   type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="resLiqDeuAdapter" 	  		   type="org.apache.struts.action.DynaActionForm"/>
+	    <form-bean name="procesoResLiqDeuAdapter" 	   type="org.apache.struts.action.DynaActionForm"/>
+	    <form-bean name="emiInfCueSearchPage"	 	   type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="valEmiMatSearchPage"		   type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="valEmiMatAdapter"			   type="org.apache.struts.action.DynaActionForm"/>
+	    <form-bean name="emisionMasSearchPage" 	  	   type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="emisionMasAdapter"    	 	   type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="procesoEmisionMasAdapter"     type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="auxDeudaSearchPage"  		   type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="auxDeudaAdapter"	  		   type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="emisionExtSearchPage" 	  	   type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="emisionExtAdapter"    	 	   type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="emisionPuntualSearchPage" 	   type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="emisionPuntualAdapter" 	   type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="emisionPuntualPreviewAdapter" type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="planoDetalleAdapter"		   type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="impMasDeuSearchPage" 	  	   type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="impMasDeuAdapter" 		  	   type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="procesoImpMasDeuAdapter" 	   type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="proPasDebSearchPage"		   type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="proPasDebAdapter" 	  		   type="org.apache.struts.action.DynaActionForm"/>
+	    <form-bean name="procesoProPasDebAdapter" 	   type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="emisionExternaSearchPage" 	   type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="emisionExternaAdapter" 	   type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="procesoEmisionExternaAdapter" type="org.apache.struts.action.DynaActionForm"/>
+		
+		<!-- A deprecar -->
+	    <form-bean name="emisionSearchPage" 	  	  type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="emisionAdapter"    	 	  type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="procesoEmisionCdMAdapter"    type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="procesoImpresionCdMAdapter"  type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="procesoEmisionCorCdMAdapter" type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="procesoResumenLiqDeuAdapter" type="org.apache.struts.action.DynaActionForm"/>
+	</form-beans>
+
+	<action-mappings>
+		<!-- Mantenedor de Resumen de Liquidacion de Deuda -->	    
+	    <action
+	    	path="/emi/BuscarResLiqDeu"
+	        type="ar.gov.rosario.siat.emi.view.struts.BuscarResLiqDeuDAction"
+			scope="request"
+	       	validate="false"
+	        name="resLiqDeuSearchPage"
+	        parameter="method"
+	   		input=".emi.general.view.resLiqDeuSearchPage"
+	        attribute="resLiqDeuSearchPage">
+	           
+	   	    <forward name="resLiqDeuSearchPage"   	  	path=".emi.general.view.resLiqDeuSearchPage" />
+	   	    <forward name="administrarResLiqDeu" 		path="/emi/AdministrarResLiqDeu.do?method=inicializar" />
+	   	    <forward name="administrarProcesoResLiqDeu" path="/emi/AdministrarProcesoResLiqDeu.do?method=inicializar"/>
+	    </action>
+
+	    <action
+     		path="/emi/AdministrarResLiqDeu"
+	        type="ar.gov.rosario.siat.emi.view.struts.AdministrarResLiqDeuDAction"
+		    scope="request"
+        	validate="false"
+	        name="resLiqDeuAdapter"
+            parameter="method"
+    	    input=".emi.general.view.resLiqDeuEditAdapter"
+	        attribute="resLiqDeuAdapter">
+            
+    	    <forward name="resLiqDeuViewAdapter"		path=".emi.general.view.resLiqDeuViewAdapter" />
+    	    <forward name="resLiqDeuEditAdapter"  	    path=".emi.general.view.resLiqDeuEditAdapter" />
+    	    <forward name="administrarProcesoResLiqDeu" path="/emi/AdministrarProcesoResLiqDeu.do?method=inicializar" />
+		</action>
+
+	    <action
+     		path="/emi/AdministrarProcesoResLiqDeu"
+	        type="ar.gov.rosario.siat.emi.view.struts.AdministrarProcesoResLiqDeuDAction"
+		    scope="request"
+        	validate="false"
+	        name="procesoResLiqDeuAdapter"
+            parameter="method"
+    	    input=".emi.general.view.procesoResLiqDeuAdapter"
+	        attribute="procesoResLiqDeuAdapter">
+	        
+	        <forward name="procesoResLiqDeuAdapter"	   	   path=".emi.general.view.procesoResLiqDeuAdapter" />
+	        <forward name="administrarAdpCorridaResLiqDeu" path="/pro/AdministrarAdpCorrida.do?method=inicializar" />
+	        <forward name="buscarEmiInfCue"			 	   path="/emi/BuscarEmiInfCue.do?method=inicializar" />
+         </action>
+		<!-- FIN Mantenedor de Resumen de Liquidacion de Deuda -->
+
+		<!-- Mantenedor EmiInfCue -->	    
+	    <action
+	    	path="/emi/BuscarEmiInfCue"
+	        type="ar.gov.rosario.siat.emi.view.struts.BuscarEmiInfCueDAction"
+			scope="request"
+	       	validate="false"
+	        name="emiInfCueSearchPage"
+	        parameter="method"
+	   		input=".emi.general.view.emiInfCueSearchPage"
+	        attribute="emiInfCueSearchPage">
+	           
+	   	    <forward name="emiInfCueSearchPage"  			path=".emi.general.view.emiInfCueSearchPage" />
+	    </action>
+	    <!-- Fin Mantenedor EmiInfCue -->
+
+		<!-- Generacion de archivos PAS y Debito -->	    
+	    <action
+	    	path="/emi/BuscarProPasDeb"
+	        type="ar.gov.rosario.siat.emi.view.struts.BuscarProPasDebDAction"
+			scope="request"
+	       	validate="false"
+	        name="proPasDebSearchPage"
+	        parameter="method"
+	   		input=".emi.general.view.proPasDebSearchPage"
+	        attribute="proPasDebSearchPage">
+	           
+	   	    <forward name="proPasDebSearchPage"   	  	path=".emi.general.view.proPasDebSearchPage" />
+	   	    <forward name="administrarProPasDeb" 		path="/emi/AdministrarProPasDeb.do?method=inicializar" />
+	   	    <forward name="administrarProcesoProPasDeb" path="/emi/AdministrarProcesoProPasDeb.do?method=inicializar"/>
+	    </action>
+
+	    <action
+     		path="/emi/AdministrarProPasDeb"
+	        type="ar.gov.rosario.siat.emi.view.struts.AdministrarProPasDebDAction"
+		    scope="request"
+        	validate="false"
+	        name="proPasDebAdapter"
+            parameter="method"
+    	    input=".emi.general.view.proPasDebEditAdapter"
+	        attribute="proPasDebAdapter">
+            
+    	    <forward name="proPasDebViewAdapter"		path=".emi.general.view.proPasDebViewAdapter" />
+    	    <forward name="proPasDebEditAdapter"  	    path=".emi.general.view.proPasDebEditAdapter" />
+    	    <forward name="administrarProcesoProPasDeb" path="/emi/AdministrarProcesoProPasDeb.do?method=inicializar" />
+		</action>
+
+	    <action
+     		path="/emi/AdministrarProcesoProPasDeb"
+	        type="ar.gov.rosario.siat.emi.view.struts.AdministrarProcesoProPasDebDAction"
+		    scope="request"
+        	validate="false"
+	        name="procesoProPasDebAdapter"
+            parameter="method"
+    	    input=".emi.general.view.procesoProPasDebAdapter"
+	        attribute="procesoProPasDebAdapter">
+	        
+	        <forward name="procesoProPasDebAdapter"	   	   path=".emi.general.view.procesoProPasDebAdapter" />
+	        <forward name="administrarAdpCorridaProPasDeb" path="/pro/AdministrarAdpCorrida.do?method=inicializar" />
+		</action>
+		<!-- FIN Generacion de archivos PAS y Debito -->
+
+		<!-- Mantenedor de Valorizacion de Tablas de Parametros-->	    
+	    <action
+	    	path="/emi/BuscarValEmiMat"
+	        type="ar.gov.rosario.siat.emi.view.struts.BuscarValEmiMatDAction"
+			scope="request"
+	       	validate="false"
+	        name="valEmiMatSearchPage"
+	        parameter="method"
+	   		input=".emi.definicion.view.valEmiMatSearchPage"
+	        attribute="valEmiMatSearchPage">
+	           
+	   	    <forward name="valEmiMatSearchPage"	 path=".emi.definicion.view.valEmiMatSearchPage" />
+	   	    <forward name="administrarValEmiMat" path="/emi/AdministrarValEmiMat.do?method=inicializar" />
+	    </action>
+	    
+		<action
+     		path="/emi/AdministrarValEmiMat"
+	        type="ar.gov.rosario.siat.emi.view.struts.AdministrarValEmiMatDAction"
+		    scope="request"
+        	validate="false"
+	        name="valEmiMatAdapter"
+            parameter="method"
+    	    input=".emi.definicion.view.valEmiMatEditAdapter"
+	        attribute="valEmiMatAdapter">
+            
+    	    <forward name="valEmiMatViewAdapter" path=".emi.definicion.view.valEmiMatViewAdapter" />
+    	    <forward name="valEmiMatEditAdapter" path=".emi.definicion.view.valEmiMatEditAdapter" />
+		</action>
+	    <!-- FIN Mantenedor de Valorizacion de Tablas de Parametros-->
+		
+		<!-- Mantenedor de Emisiones Masivas de Deuda-->	    
+	    <action
+	    	path="/emi/BuscarEmisionMas"
+	        type="ar.gov.rosario.siat.emi.view.struts.BuscarEmisionMasDAction"
+			scope="request"
+	       	validate="false"
+	        name="emisionMasSearchPage"
+	        parameter="method"
+	   		input=".emi.emision.view.emisionMasSearchPage"
+	        attribute="emisionMasSearchPage">
+	           
+	   	    <forward name="emisionMasSearchPage"   		 path=".emi.emision.view.emisionMasSearchPage" />
+	   	    <forward name="administrarEmisionMas"  		 path="/emi/AdministrarEmisionMas.do?method=inicializar" />
+	   	    <forward name="administrarProcesoEmisionMas" path="/emi/AdministrarProcesoEmisionMas.do?method=inicializar"/>	   	    
+	    </action>
+	    
+	    <action
+     		path="/emi/AdministrarEmisionMas"
+	        type="ar.gov.rosario.siat.emi.view.struts.AdministrarEmisionMasDAction"
+		    scope="request"
+        	validate="false"
+	        name="emisionMasAdapter"
+            parameter="method"
+    	    input=".emi.emision.view.emisionMasEditAdapter"
+	        attribute="emisionMasAdapter">
+            
+    	    <forward name="emisionMasViewAdapter"		 path=".emi.emision.view.emisionMasViewAdapter" />
+    	    <forward name="emisionMasEditAdapter"  	     path=".emi.emision.view.emisionMasEditAdapter" />
+    	    <forward name="administrarProcesoEmisionMas" path="/emi/AdministrarProcesoEmisionMas.do?method=inicializar" />
+		</action>
+
+	    <action
+     		path="/emi/AdministrarProcesoEmisionMas"
+	        type="ar.gov.rosario.siat.emi.view.struts.AdministrarProcesoEmisionMasDAction"
+		    scope="request"
+        	validate="false"
+	        name="procesoEmisionMasAdapter"
+            parameter="method"
+    	    input=".emi.emision.view.procesoEmisionMasAdapter"
+	        attribute="procesoEmisionMasAdapter">
+	        
+	        <forward name="procesoEmisionMasAdapter" path=".emi.emision.view.procesoEmisionMasAdapter" />
+	        <forward name="administrarCorrida"    	 path="/pro/AdministrarAdpCorrida.do?method=inicializar" />
+			<forward name="buscarAuxDeuda"			 path="/emi/BuscarAuxDeuda.do?method=inicializar" />
+         </action>
+	    <!-- Fin Mantenedor de Emisiones Masivas de Deuda-->
+
+		<!-- Mantenedor AuxDeuda -->	    
+	    <action
+	    	path="/emi/BuscarAuxDeuda"
+	        type="ar.gov.rosario.siat.emi.view.struts.BuscarAuxDeudaDAction"
+			scope="request"
+	       	validate="false"
+	        name="auxDeudaSearchPage"
+	        parameter="method"
+	   		input=".emi.emision.view.auxDeudaSearchPage"
+	        attribute="auxDeudaSearchPage">
+	           
+	   	    <forward name="auxDeudaSearchPage"  	path=".emi.emision.view.auxDeudaSearchPage" />
+	   	    <forward name="administrarAuxDeuda"	 	path="/emi/AdministrarAuxDeuda.do?method=inicializar" />
+	    </action>
+	    
+		<action
+     		path="/emi/AdministrarAuxDeuda"
+	        type="ar.gov.rosario.siat.emi.view.struts.AdministrarAuxDeudaDAction"
+		    scope="request"
+        	validate="false"
+	        name="auxDeudaAdapter"
+            parameter="method"
+    	    input=".emi.emision.view.auxDeudaEditAdapter"
+	        attribute="auxDeudaAdapter">
+            
+    	    <forward name="auxDeudaViewAdapter"		path=".emi.emision.view.auxDeudaViewAdapter" />
+		</action>
+	    <!-- Fin Mantenedor AuxDeuda -->
+	    
+	  	<!-- Mantenedor de Impresiones Masivas de Deuda -->	    
+	    <action
+	    	path="/emi/BuscarImpMasDeu"
+	        type="ar.gov.rosario.siat.emi.view.struts.BuscarImpMasDeuDAction"
+			scope="request"
+	       	validate="false"
+	        name="impMasDeuSearchPage"
+	        parameter="method"
+	   		input=".emi.impresion.view.impMasDeuSearchPage"
+	        attribute="impMasDeuSearchPage">
+	           
+	   	    <forward name="impMasDeuSearchPage"   	  	  	path=".emi.impresion.view.impMasDeuSearchPage" />
+	   	    <forward name="administrarImpMasDeu" 			path="/emi/AdministrarImpMasDeu.do?method=inicializar" />
+	   	    <forward name="administrarProcesoImpMasDeu"     path="/emi/AdministrarProcesoImpMasDeu.do?method=inicializar" />
+	    </action>
+
+	    <action
+     		path="/emi/AdministrarImpMasDeu"
+	        type="ar.gov.rosario.siat.emi.view.struts.AdministrarImpMasDeuDAction"
+		    scope="request"
+        	validate="false"
+	        name="impMasDeuAdapter"
+            parameter="method"
+    	    input=".emi.impresion.view.impMasDeuEditAdapter"
+	        attribute="impMasDeuAdapter">
+            
+    	    <forward name="impMasDeuViewAdapter"		path=".emi.impresion.view.impMasDeuViewAdapter" />
+    	    <forward name="impMasDeuEditAdapter"  	    path=".emi.impresion.view.impMasDeuEditAdapter" />
+    	    <forward name="administrarProcesoImpMasDeu" path="/emi/AdministrarProcesoImpMasDeu.do?method=inicializar" />
+		</action>
+
+	    <action
+     		path="/emi/AdministrarProcesoImpMasDeu"
+	        type="ar.gov.rosario.siat.emi.view.struts.AdministrarProcesoImpMasDeuDAction"
+		    scope="request"
+        	validate="false"
+	        name="procesoImpMasDeuAdapter"
+            parameter="method"
+    	    input=".emi.impresion.view.procesoImpMasDeuAdapter"
+	        attribute="procesoImpMasDeuAdapter">
+	        
+	        <forward name="procesoImpMasDeuAdapter"	   	    path=".emi.impresion.view.procesoImpMasDeuAdapter" />
+	        <forward name="administrarAdpCorridaImpMasDeu"  path="/pro/AdministrarAdpCorrida.do?method=inicializar" />
+            
+		</action>
+		<!-- FIN Mantenedor de Impresiones Masivas de Deuda -->
+
+		<!-- Mantenedor de Emisiones Extraordinarias -->	    
+	    <action
+	    	path="/emi/BuscarEmisionExt"
+	        type="ar.gov.rosario.siat.emi.view.struts.BuscarEmisionExtDAction"
+			scope="request"
+	       	validate="false"
+	        name="emisionExtSearchPage"
+	        parameter="method"
+	   		input=".emi.emision.view.emisionExtSearchPage"
+	        attribute="emisionExtSearchPage">
+	           
+	   	    <forward name="emisionExtSearchPage"  path=".emi.emision.view.emisionExtSearchPage" />
+	   	    <forward name="administrarEmisionExt" path="/emi/AdministrarEmisionExt.do?method=inicializar" />
+		</action>
+	    
+	    <action
+     		path="/emi/AdministrarEmisionExt"
+	        type="ar.gov.rosario.siat.emi.view.struts.AdministrarEmisionExtDAction"
+		    scope="request"
+        	validate="false"
+	        name="emisionExtAdapter"
+            parameter="method"
+    	    input=".emi.emision.view.emisionExtEditAdapter"
+	        attribute="emisionExtAdapter">
+            
+    	    <forward name="emisionExtViewAdapter" path=".emi.emision.view.emisionExtViewAdapter" />
+    	    <forward name="emisionExtEditAdapter" path=".emi.emision.view.emisionExtEditAdapter" />
+			<forward name="buscarCuenta"		  path="/pad/BuscarCuenta.do?method=inicializar" />
+		</action>
+		<!-- fin Mantenedor de Emisiones Extraordinarias -->
+
+		<!-- Mantenedor de Emisiones Puntuales -->	    
+	    <action
+	    	path="/emi/BuscarEmisionPuntual"
+	        type="ar.gov.rosario.siat.emi.view.struts.BuscarEmisionPuntualDAction"
+			scope="request"
+	       	validate="false"
+	        name="emisionPuntualSearchPage"
+	        parameter="method"
+	   		input=".emi.emision.view.emisionPuntualSearchPage"
+	        attribute="emisionPuntualSearchPage">
+	           
+	   	    <forward name="emisionPuntualSearchPage"   	 path=".emi.emision.view.emisionPuntualSearchPage" />
+	   	    <forward name="buscarCuenta"				 path="/pad/BuscarCuenta.do?method=inicializar" />
+	   	    <forward name="administrarEmisionPuntual"	 path="/emi/AdministrarEmisionPuntual.do?method=inicializar" />
+	   	    <forward name="administrarEncEmisionPuntual" path="/emi/AdministrarEncEmisionPuntual.do?method=inicializar" />
+	   	</action>
+	    
+		<action
+     		path="/emi/AdministrarEncEmisionPuntual"
+	        type="ar.gov.rosario.siat.emi.view.struts.AdministrarEncEmisionPuntualDAction"
+		    scope="request"
+        	validate="false"
+	        name="emisionPuntualAdapter"
+            parameter="method"
+    	    input=".emi.emision.view.emisionPuntualEncEditAdapter"
+	        attribute="emisionPuntualAdapter">
+            
+            <forward name="buscarCuenta"				  	 path="/pad/BuscarCuenta.do?method=inicializar" />
+            <forward name="emisionPuntualEncEditAdapter"  	 path=".emi.emision.view.emisionPuntualEncEditAdapter" />
+            <forward name="administrarEmisionPuntualPreview" path="/emi/AdministrarEmisionPuntualPreview.do?method=inicializar" />
+    	    <forward name="administrarEmisionTRP" 	 	  	 path="/emi/AdministrarEmisionTRP.do?method=inicializar" />
+		</action>
+
+	    <action
+     		path="/emi/AdministrarEmisionPuntualPreview"
+	        type="ar.gov.rosario.siat.emi.view.struts.AdministrarEmisionPuntualPreviewDAction"
+		    scope="request"
+        	validate="false"
+	        name="emisionPuntualPreviewAdapter"
+            parameter="method"
+    	    input=".emi.emision.view.emisionPuntualPreviewAdapter"
+	        attribute="emisionPuntualPreviewAdapter">
+            
+            <forward name="emisionPuntualPreviewAdapter" 	 path=".emi.emision.view.emisionPuntualPreviewAdapter" />
+            <forward name="emisionPuntualRecibosAdapter" 	 path=".emi.emision.view.emisionPuntualRecibosAdapter" />
+		</action>	
+
+	    <action
+     		path="/emi/AdministrarEmisionPuntual"
+	        type="ar.gov.rosario.siat.emi.view.struts.AdministrarEmisionPuntualDAction"
+		    scope="request"
+        	validate="false"
+	        name="emisionPuntualAdapter"
+            parameter="method"
+    	    input=".emi.emision.view.emisionPuntualEditAdapter"
+	        attribute="emisionPuntualAdapter">
+            
+            <forward name="emisionPuntualViewAdapter" 	 path=".emi.emision.view.emisionPuntualViewAdapter" />
+		</action>	
+		<!-- fin Mantenedor de Emisiones Puntuales -->
+
+		<!-- Emision de Tasa por Revision de Planos -->
+		<action
+     		path="/emi/AdministrarEmisionTRP"
+	        type="ar.gov.rosario.siat.emi.view.struts.AdministrarEmisionTRPDAction"
+		    scope="request"
+        	validate="false"
+	        name="emisionPuntualAdapter"
+            parameter="method"
+    	    input=".emi.emision.view.emisionTRPEditAdapter"
+	        attribute="emisionPuntualAdapter">
+            
+            <forward name="buscarCuenta"				  	  		 path="/pad/BuscarCuenta.do?method=inicializar" />
+    	    <forward name="emisionPuntualTRPEncEditAdapter"   		 path=".emi.emision.view.emisionTRPEditAdapter" />
+    	    <forward name="administrarEncEmisionPuntualParamRecurso" path="/emi/AdministrarEncEmisionPuntual.do?method=paramRecurso" />
+    	    <forward name="administrarPlanoDetalle"					 path="/emi/AdministrarPlanoDetalle.do?method=inicializar" />
+    	    <forward name="administrarEmisionPuntualPreview"		 path="/emi/AdministrarEmisionPuntualPreview.do?method=inicializar" />
+		</action>
+
+	    <action
+     		path="/emi/AdministrarPlanoDetalle"
+	        type="ar.gov.rosario.siat.emi.view.struts.AdministrarPlanoDetalleDAction"
+		    scope="request"
+        	validate="false"
+	        name="planoDetalleAdapter"
+            parameter="method"
+    	    input=".emi.emision.view.planoDetalleEditAdapter"
+	        attribute="planoDetalleAdapter">
+            
+    	    <forward name="planoDetalleEditAdapter"   path=".emi.emision.view.planoDetalleEditAdapter" />
+		</action>
+		<!-- fin Emision de Tasa por Revision de Planos -->
+		
+		<!--*****************************************************************************************-->
+		<!--******************************* A deprecar **********************************************-->
+		<!--*****************************************************************************************-->		
+		<!-- Mantenedor de Emisiones -->	    
+	    <action
+	    	path="/emi/BuscarEmision"
+	        type="ar.gov.rosario.siat.emi.view.struts.BuscarEmisionDAction"
+			scope="request"
+	       	validate="false"
+	        name="emisionSearchPage"
+	        parameter="method"
+	   		input=".emi.emision.view.emisionSearchPage"
+	        attribute="emisionSearchPage">
+	           
+	   	    <forward name="emisionSearchPage"   	  	  	path=".emi.emision.view.emisionSearchPage" />
+	   	    <forward name="administrarEmision" 			  	path="/emi/AdministrarEmision.do?method=inicializar" />
+	   	    <forward name="administrarProcesoEmisionCdM"    path="/emi/AdministrarProcesoEmisionCdM.do?method=inicializar" />
+	   	    <forward name="administrarProcesoImpresionCdM"  path="/emi/AdministrarProcesoImpresionCdM.do?method=inicializar" />
+	   		<forward name="administrarProcesoEmisionCorCdM" path="/emi/AdministrarProcesoEmisionCorCdM.do?method=inicializar" />
+	    </action>
+		
+		<action
+     		path="/emi/AdministrarEmision"
+	        type="ar.gov.rosario.siat.emi.view.struts.AdministrarEmisionDAction"
+		    scope="request"
+        	validate="false"
+	        name="emisionAdapter"
+            parameter="method"
+    	    input=".emi.emision.view.emisionEditAdapter"
+	        attribute="emisionAdapter">
+            
+    	    <forward name="emisionViewAdapter"		path=".emi.emision.view.emisionViewAdapter" />
+    	    <forward name="emisionEditAdapter"      path=".emi.emision.view.emisionEditAdapter" />
+		</action>
+	    <!-- Fin Mantenedor de Emisiones -->
+	    
+		<!-- Administrar Proceso de Emision de CdM -->
+		<action
+     		path="/emi/AdministrarProcesoEmisionCdM"
+	        type="ar.gov.rosario.siat.emi.view.struts.AdministrarProcesoEmisionCdMDAction"
+		    scope="request"
+        	validate="false"
+	        name="procesoEmisionCdMAdapter"
+            parameter="method"
+    	    input=".emi.emision.view.procesoEmisionEditAdapter"
+	        attribute="procesoEmisionCdMAdapter">
+            
+            <forward name="administrarAdpCorridaEmision" 	path="/pro/AdministrarAdpCorrida.do?method=inicializar" />
+			<forward name="procesoEmisionCdMAdapter"	    path=".emi.emision.view.procesoEmisionCdMAdapter" />
+	   	    <forward name="administrarEmision" 			    path="/emi/AdministrarEmision.do?method=inicializar" />
+	   	    <forward name="buscarAuxDeuda"					path="/emi/BuscarAuxDeuda.do?method=inicializar" />
+	    </action>
+		<!-- FIN Administrar Proceso de Emision de CdM -->
+	    
+		<!-- Administrar Proceso de Emision Corregida de CdM -->
+		<action
+     		path="/emi/AdministrarProcesoEmisionCorCdM"
+	        type="ar.gov.rosario.siat.emi.view.struts.AdministrarProcesoEmisionCorCdMDAction"
+		    scope="request"
+        	validate="false"
+	        name="procesoEmisionCorCdMAdapter"
+            parameter="method"
+    	    input=".emi.emision.view.procesoEmisionCorCdMAdapter"
+	        attribute="procesoEmisionCorCdMAdapter">
+            
+            <forward name="administrarAdpCorridaPrescripcion" 	path="/pro/AdministrarAdpCorrida.do?method=inicializar" />
+			<forward name="procesoEmisionCorCdMAdapter"	    	path=".emi.emision.view.procesoEmisionCorCdMAdapter" />
+	   	    <forward name="administrarEmision" 			    	path="/emi/AdministrarEmision.do?method=inicializar" />
+	   	    <forward name="buscarAuxDeuda"						path="/emi/BuscarAuxDeuda.do?method=inicializar" />
+	    </action>
+		<!-- FIN Administrar Proceso de Emision Corregida de CdM -->
+		
+		<!-- Administrar Proceso de Impresion de CdM -->
+		<action
+     		path="/emi/AdministrarProcesoImpresionCdM"
+	        type="ar.gov.rosario.siat.emi.view.struts.AdministrarProcesoImpresionCdMDAction"
+		    scope="request"
+        	validate="false"
+	        name="procesoImpresionCdMAdapter"
+            parameter="method"
+    	    input=".emi.emision.view.procesoImpresionEditAdapter"
+	        attribute="procesoImpresionCdMAdapter">
+            
+            <forward name="administrarAdpCorridaEmision" 	path="/pro/AdministrarAdpCorrida.do?method=inicializar" />
+			<forward name="procesoImpresionCdMAdapter"	    path=".emi.emision.view.procesoImpresionCdMAdapter" />
+	   	    <forward name="administrarEmision" 			    path="/emi/AdministrarEmision.do?method=inicializar" />
+	    </action>
+		<!-- FIN Administrar Proceso de Impresion de CdM -->
+	
+		<!-- Emision Externa -->
+		<action
+	    	path="/emi/BuscarEmisionExterna"
+	        type="ar.gov.rosario.siat.emi.view.struts.BuscarEmisionExternaDAction"
+			scope="request"
+	       	validate="false"
+	        name="emisionExternaSearchPage"
+	        parameter="method"
+	   		input=".emi.emision.view.emisionExternaSearchPage"
+	        attribute="emisionExternaSearchPage">
+	           
+	   	    <forward name="emisionExternaSearchPage"   	     path=".emi.emision.view.emisionExternaSearchPage" />
+	   	    <forward name="administrarEmisionExterna"  		 path="/emi/AdministrarEmisionExterna.do?method=inicializar" />
+	   	    <forward name="administrarProcesoEmisionExterna" path="/emi/AdministrarProcesoEmisionExterna.do?method=inicializar"/>	   	    
+	    </action>
+	    
+		<action    
+	    	path="/emi/AdministrarEmisionExterna"
+	        type="ar.gov.rosario.siat.emi.view.struts.AdministrarEmisionExternaDAction"
+		    scope="request"
+	       	validate="false"
+	        name="emisionExternaAdapter"
+	        parameter="method"
+	   	    input=".emi.emision.view.emisionExternaUploadAdapter"
+	        attribute="emisionExternaAdapter">
+			
+			<forward name="emisionExternaViewAdapter" 	      path=".emi.emision.view.emisionExternaViewAdapter" />	                       
+	   	    <forward name="emisionExternaUploadAdapter"  	  path=".emi.emision.view.emisionExternaUploadAdapter" />
+	    </action>
+	    
+	    <action
+     		path="/emi/AdministrarProcesoEmisionExterna"
+	        type="ar.gov.rosario.siat.emi.view.struts.AdministrarProcesoEmisionExternaDAction"
+		    scope="request"
+        	validate="false"
+	        name="procesoEmisionExternaAdapter"
+            parameter="method"
+    	    input=".emi.emision.view.procesoEmisionExternaAdapter"
+	        attribute="procesoEmisionExternaAdapter">
+	        
+	        <forward name="procesoEmisionExternaAdapter" path=".emi.emision.view.procesoEmisionExternaAdapter" />
+	        <forward name="administrarCorrida"    	 	 path="/pro/AdministrarAdpCorrida.do?method=inicializar" />
+			<forward name="buscarAuxDeuda"			 	 path="/emi/BuscarAuxDeuda.do?method=inicializar" />
+		</action>
+	    <!-- FIN Emision Externa -->
+  
+		</action-mappings>
+
+</struts-config>

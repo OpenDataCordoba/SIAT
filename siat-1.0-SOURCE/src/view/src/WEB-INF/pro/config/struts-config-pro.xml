@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts-config PUBLIC 
+	  "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN"  
+	  "[WWW] http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+
+<struts-config>
+  <form-beans>
+    <form-bean name="corridaSearchPage" 	type="org.apache.struts.action.DynaActionForm"/>
+    <form-bean name="corridaAdapter"  		type="org.apache.struts.action.DynaActionForm"/>
+    <form-bean name="adpCorridaAdapter"  	type="org.apache.struts.action.DynaActionForm"/>
+    <form-bean name="procesoSearchPage"  	type="org.apache.struts.action.DynaActionForm"/>
+    <form-bean name="procesoAdapter"  		type="org.apache.struts.action.DynaActionForm"/>
+    <form-bean name="envioArchivosAdapter"  type="org.apache.struts.action.DynaActionForm"/>
+  </form-beans>
+
+  <action-mappings>
+    <!-- Mantenedor de Corridas-->
+    <action
+       path="/pro/BuscarCorrida"
+       type="ar.gov.rosario.siat.pro.view.struts.BuscarCorridaDAction"
+       scope="request"
+       validate="false"
+       name="corridaSearchPage"
+       parameter="method"
+       input=".pro.consulta.view.corridaSearchPage"
+       attribute="corridaSearchPage">
+      
+      <forward name="corridaSearchPage"    	path=".pro.consulta.view.corridaSearchPage" />
+      <forward name="administrarCorrida"    	path="/pro/AdministrarCorrida.do?method=inicializar" />
+    </action>
+    
+    <action
+       path="/pro/AdministrarCorrida"
+       type="ar.gov.rosario.siat.pro.view.struts.AdministrarCorridaDAction"
+       scope="request"
+       validate="false"
+       name="corridaAdapter"
+       parameter="method"
+       input=".pro.consulta.view.corridaEditAdapter"
+       attribute="corridaAdapter">
+      
+      <forward name="corridaViewAdapter" 	path=".pro.consulta.view.corridaViewAdapter" />
+    </action>
+
+
+    <!-- Mantenedor de AdpCorrida-->
+    <action
+       path="/pro/AdministrarAdpCorrida"
+       type="ar.gov.rosario.siat.pro.view.struts.AdministrarAdpCorridaDAction"
+       scope="request"
+       validate="false"
+       name="adpCorridaAdapter"
+       parameter="method"
+       input=".pro.adpProceso.view.adpCorridaViewAdapter"
+       attribute="adpCorridaAdapter">
+      
+      <forward name="adpCorridaViewAdapter" 	path=".pro.adpProceso.view.adpCorridaViewAdapter" />
+      <forward name="adpCorridaEstadoPasoAdapter" 	path=".pro.adpProceso.view.adpCorridaEstadoPasoAdapter" />
+    </action>
+    <!-- Fin Mantenedor de AdpCorrida -->
+    
+    <!-- Mantenedor de Procesos -->
+        <action
+       path="/pro/BuscarProceso"
+       type="ar.gov.rosario.siat.pro.view.struts.BuscarProcesoDAction"
+       scope="request"
+       validate="false"
+       name="procesoSearchPage"
+       parameter="method"
+       input=".pro.proceso.view.procesoSearchPage"
+       attribute="procesoSearchPage">
+      
+      <forward name="procesoSearchPage"    	path=".pro.proceso.view.procesoSearchPage" />
+      <forward name="administrarProceso"    	path="/pro/AdministrarProceso.do?method=inicializar" />
+    </action>
+    
+        <action
+       path="/pro/AdministrarProceso"
+       type="ar.gov.rosario.siat.pro.view.struts.AdministrarProcesoDAction"
+       scope="request"
+       validate="false"
+       name="procesoAdapter"
+       parameter="method"
+       input=".pro.proceso.view.procesoEditAdapter"
+       attribute="procesoAdapter">
+      
+      <forward name="procesoViewAdapter" 	path=".pro.proceso.view.procesoViewAdapter" />
+      <forward name="procesoEditAdapter" 	path=".pro.proceso.view.procesoEditAdapter" />
+    </action>
+    <!-- FIN Mantenedor de Procesos -->
+
+    <!-- Envio de Archivos-->
+    <action
+       path="/pro/AdministrarEnvioArchivos"
+       type="ar.gov.rosario.siat.pro.view.struts.AdministrarEnvioArchivosDAction"
+       scope="request"
+       validate="false"
+       name="envioArchivosAdapter"
+       parameter="method"
+       input=".pro.adpProceso.view.envioArchivosEditAdapter"
+       attribute="envioArchivosAdapter">
+      
+      <forward name="envioArchivosEditAdapter" 			path=".pro.adpProceso.view.envioArchivosEditAdapter" />
+	  <forward name="envioArchivosPreviewAdapter" 		path=".pro.adpProceso.view.envioArchivosPreviewAdapter" />
+    </action>
+    <!-- FIN Envio de Archivos-->
+  </action-mappings>    
+  
+</struts-config>

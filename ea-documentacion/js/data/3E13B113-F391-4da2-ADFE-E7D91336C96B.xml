@@ -1,0 +1,3 @@
+tocTab[tocTab.length] = new Array("2.1.7.1:1", "", "Diagrama de  Solicitudes SIAT", "EARoot/EA2/EA1/EA7/EA1/EA486.htm", "180.png", "472", "0", "", "Use Case diagram");
+tocTab[tocTab.length] = new Array("2.1.7.1:2", "", "Administrar Solicitudes SIAT ", "EARoot/EA2/EA1/EA7/EA1/EA488.htm", "7.png", "3875", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.7.1.1", "1", "Secundarios", "EARoot/EA2/EA1/EA7/EA1/EA489.htm", "4.png", "", "", "{8F7DA2F5-27AB-417d-BF4B-75F3AFABE77B}", "Package");

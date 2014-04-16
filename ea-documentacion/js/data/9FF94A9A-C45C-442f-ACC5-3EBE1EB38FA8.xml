@@ -1,0 +1,5 @@
+tocTab[tocTab.length] = new Array("2.1", "1", "SIAT", "EARoot/EA2/EA118.htm", "4.png", "", "", "{0D66408E-42C5-4498-AFC2-426ECEFFDC31}", "Package");
+tocTab[tocTab.length] = new Array("2.2", "1", "CU-MIGRACION", "EARoot/EA2/EA119.htm", "4.png", "", "", "{0BDB04D6-A2C4-4858-86F9-C83BA3C99824}", "Package");
+tocTab[tocTab.length] = new Array("2.3", "1", "Actores", "EARoot/EA2/EA120.htm", "4.png", "", "", "{F4A01C72-AF08-41f2-A799-733FC7F9E577}", "Package");
+tocTab[tocTab.length] = new Array("2.4", "1", "Diagrama de Estados", "EARoot/EA2/EA121.htm", "4.png", "", "", "{19965A20-A3E6-4496-B459-4E2E9677F47D}", "Package");
+tocTab[tocTab.length] = new Array("2.5", "1", "Actividades", "EARoot/EA2/EA122.htm", "4.png", "", "", "{E0858E3A-C5E2-417b-A511-45B8EAA842B1}", "Package");

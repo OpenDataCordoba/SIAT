@@ -1,0 +1,222 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Administrar Gestión Judicial</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="pageHeader"></div>
+<div class="PageBody">
+	<span class="ObjectTitle">Administrar Gestión Judicial  : public   usecase</span>
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">16/07/2007 16:47:18</td>
+		</tr>
+		<tr>
+			<td class="ObjectDetailsTopic">Modified:</td>
+			<td class="ObjectDetailsValue">18/04/2008 12:34:47</td>
+		</tr>
+		<tr style="height: 10px"><td colspan="2"></td></tr>
+		<tr>
+			<td class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td class="ObjectDetailsValue">1.0</td>
+		</tr>
+		<tr id="proj02" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Phase:</td>
+			<td class="ObjectDetailsValue">1.0</td>
+		</tr>
+		<tr id="proj03" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Status:</td>
+			<td class="ObjectDetailsValue">R2</td>
+		</tr>
+		<tr id="proj04" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Complexity:</td>
+			<td class="ObjectDetailsValue">Medium</td>
+		</tr>
+		<tr>
+			<td class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">UUID:</td>
+			<td class="ObjectDetailsValue">{3FE50F46-D52F-4d3b-9488-5B85DF7F41DE}</td>
+		</tr>
+		<tr id="adv01" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
+			<td class="ObjectDetailsValue"><a href="EA209.htm">Diagrama Administración Proc. Judicial</a></td>
+		</tr>
+	</table>
+	<div class="ObjectDetailsNotes">Este CU tiene como objetivo la administración de la gestión judicial que realizan los procuradores.<br />Permite consultar gestiones judiciales iniciadas por un Procurador, incluir deuda o constancias de deuda a la gestión judicial y registrar los eventos realizados sobre el juicio.<br />También permite registrar la caducidad de un Juicio.<br /><br /></div>
+
+	<div class="TableGroup" id="TableGroup">
+		<ul class="ItemTitle">
+			<li onClick="parent.toggleItem('AssociationsFrom');" id="AssociationsFromTitle">Associations From</li>
+			<li onClick="parent.toggleItem('Scenario');" id="ScenarioTitle">Scenarios</li>
+			<li onClick="parent.toggleItem('Files');" id="FilesTitle">Files</li>
+			<li onClick="parent.toggleItem('Links');" id="LinksTitle">Other Links</li>
+		</ul>
+		<div class="ItemBody" id="AssociationsFromTable">
+			<table border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="20%" class="TableHeading">Element</td>
+					<td width="25%" class="TableHeading">Source Role</td>
+					<td width="25%" class="TableHeading">Target Role</td>
+					<td width="30%" class="TableHeading">Details</td>
+				</tr>
+				<tr>
+					<td width="20%" class="TableRow" valign="top">
+						<a href="../../../EA3/EA648.htm">Procurador</a><br />
+						Actor &nbsp;
+					</td>
+					<td width="20%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;
+					</td>
+					<td width="20%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;	
+					</td>
+					<td width="30%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="20%" class="TableRow" valign="top">
+						<a href="../../../EA3/EA638.htm">Cobranza Judicial</a><br />
+						Actor &nbsp;
+					</td>
+					<td width="20%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;
+					</td>
+					<td width="20%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;	
+					</td>
+					<td width="30%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+
+			</table>
+		</div>
+		<div class="ItemBody" id="ScenarioTable">
+			<table align="center" border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="24%" class="TableHeading">Scenario</td>
+					<td width="8%" class="TableHeading">Type</td>
+					<td width="68%" class="TableHeading">Detail</td>
+				</tr>
+				<tr>
+					<td width="24%" class="TableRow">Buscar Gestión Judicial</td>
+					<td width="8%" class="TableRow">Alternate</td>
+					<td width="68%" class="TableRow"><div class="ObjectDetailsNotes">Permite realizar la búsqueda de Gestiones Judiciales iniciadas según distintos criterios ingresados: Recurso, Procurador, Cuenta, Número Constancia, Año Constancia, Caso y Estado.<br />En el caso que el usuario sea un Procurador, sólo podrá visualizar las Gestiones Judiciales por él definidas y en caso contrario deberá elegir uno o todos los procuradores.<br />Por cada Gestión Judicial encontrada se muestra información asociada y las siguientes opciones: &quot;Ver Gestión Judicial&quot;, &quot;Modificar Gestión Judicial&quot;, &quot;Eliminar Gestión Judicial&quot;, &quot;Registrar Caducidad&quot;.<br />Si no existe la Gestión Judicial buscada, puede agregarse mediante una opción de &quot;Agregar Gestión Judicial&quot;, sólo en caso que el usuario sea Procurador.</div>
+</td>
+				</tr>
+				<tr>
+					<td width="24%" class="TableRow">Ver Gestión Judicial</td>
+					<td width="8%" class="TableRow">Alternate</td>
+					<td width="68%" class="TableRow"><div class="ObjectDetailsNotes">Proporciona información de la Gestión Judicial seleccionada, las Deudas/Constancias incluidas en la Gestión Judicial y los Eventos registrados.<br />También permite consultar el histórico de acciones realizadas sobre la Gestión Judicial.</div>
+</td>
+				</tr>
+				<tr>
+					<td width="24%" class="TableRow">Agregar Gestión Judicial</td>
+					<td width="8%" class="TableRow">Alternate</td>
+					<td width="68%" class="TableRow"><div class="ObjectDetailsNotes">Para crear una nueva Gestión Judicial se debe ingresar una Descripción, Juzgado, Caso, y Observaciones.<br />El Procurador de la nueva Gestión Judicial corresponde al Procurador logueado.<br />Se registra en el histórico la creación de la Gestión Judicial.<br /><br /><br /><br /><br /> </div>
+</td>
+				</tr>
+				<tr>
+					<td width="24%" class="TableRow">Eliminar Gestión Judicial</td>
+					<td width="8%" class="TableRow">Alternate</td>
+					<td width="68%" class="TableRow"><div class="ObjectDetailsNotes">Elimina en forma física la Gestión Judicial seleccionada.<br />Una Gestión Judicial solamente podrá eliminarse si no tiene Deudas ni Eventos asociados.<br />Solamente el Procurador que creó la Gestión Judicial podrá realizar la eliminación de la misma.<br /></div>
+</td>
+				</tr>
+				<tr>
+					<td width="24%" class="TableRow">Modificar Gestión Judicial</td>
+					<td width="8%" class="TableRow">Alternate</td>
+					<td width="68%" class="TableRow"><div class="ObjectDetailsNotes">Muestra datos de la Gestión Judicial permitiendo actualizar la Descripción, el Juzgado y las Observaciones de la misma.<br />También se muestra la lista de Deudas incluidas en la Gestión Judicial y la lista de Eventos registrados.<br />Podrá incluirse en la Gestión Judicial tanto deudas en vía judicial asociadas al Procurador y que no pertenecen a ninguna Constancia de Deuda como el detalle completo de una Constancia de Deuda asociada al Procurador.<br />En caso que la deuda incluida en la Gestión Judicial esté asociada a una Constancia de Deuda, se mostrará en el registro de la deuda el número y año de la Constancia.<br />Para incluir una nueva Constancia a la Gestión Judicial se debe seleccionar una Constancia de Deuda (estado &quot;Habilitada&quot; o &quot;Recompuesta&quot;) del mismo Procurador que inició la Gestión Judicial y que no se encuentre relacionada con ninguna otra Gestión Judicial.<br />Además se debe validar que la deuda a incluir cumpla las siguientes validaciones:<br />- no esté incluida en un convenio de pago<br />- no esté indeterminada<br />- no esté incluida en otra gestión judicial<br />- no esté cancelada<br /><br />Para registrar un nuevo Evento a la Gestión Judicial se deberá seleccionar un evento y registrar la fecha ocurrencia del mismo. <br />Se debe validar:<br />     . que ya fueron asociados a la Gestión Judicial los eventos predecesores al evento que quiere registrarse. <br /><br />Podrá eliminarse un Evento únicamente en caso de que sea el último registrado (no podrán eliminarse eventos predecesores a un evento registrado)<br /><br /> Se registrarán en el histórico las acciones realizadas sobre la Gestión Judicial. <br /><br /><br /><br /><br /><br /> </div>
+</td>
+				</tr>
+				<tr>
+					<td width="24%" class="TableRow">Registrar Caducidad </td>
+					<td width="8%" class="TableRow">Alternate</td>
+					<td width="68%" class="TableRow"><div class="ObjectDetailsNotes">Permite ingresar una Fecha de Caducidad para indicar la Caducidad de una Gestión Judicial.<br />Al seleccionar la opción &quot;Registrar Caducidad&quot; se incluye el CU Registrar Caducidad Juicio.</div>
+</td>
+				</tr>
+
+			</table>
+		</div>
+		<div class="ItemBody" id="FilesTable">
+			<table border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="50%" class="TableHeading">File</td>
+					<td width="10%" class="TableHeading">Type</td>
+					<td width="40%" class="TableHeading">Details</td>
+				</tr>
+			<tr>
+				<td width="50%" class="TableRow"><a href="c:\siatdoc\docGenerada\capacitacion\gdeuda\Administrar Proc. Judicial\MDU - Administrar Gestion Judicial.doc">c:\siatdoc\docGenerada\capacitacion\gdeuda\Administrar Proc. Judicial\MDU - Administrar Gestion Judicial.doc</a></td>
+				<td width="10%" class="TableRow">Local File</td>
+				<td width="40%" class="TableRow">
+					<div class="ObjectDetailsNotes">Manual de usuario</div>
+<br />
+					<span class="NoteHeading">File Size:</span> 494 k<br />
+					<span class="NoteHeading">Time Stamp:</span> 08/09/2008 07:36:20 a.m.<br />
+				</td>
+			</tr>
+
+			</table>
+		</div>
+		<div class="ItemBody" id="LinksTable">
+			<table align="center" border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="30%" class="TableHeading">Object</td>
+					<td width="15%" class="TableHeading">Type</td>
+					<td width="15%" class="TableHeading">Connection</td>
+					<td width="40%" class="TableHeading">Notes</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../../../../EA1/EA4/EA55.htm">«Functional» 57- Registrar la gestión judicial que realizan los procuradores (reclamos extrajudiciales, judiciales, juicios, sentencias, etc.).</a></td>
+					<td width="15%" class="TableRow" valign="top">Requirement</td>
+					<td width="15%" class="TableRow" valign="top">Realisation</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../../../../EA1/EA5/EA63.htm">«Functional» 1- El sistema deberá dar soporte a todos los procesos de la Administración Tributaria.</a></td>
+					<td width="15%" class="TableRow" valign="top">Requirement</td>
+					<td width="15%" class="TableRow" valign="top">Realisation</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../../../../EA1/EA4/EA55.htm">«Functional» 57- Registrar la gestión judicial que realizan los procuradores (reclamos extrajudiciales, judiciales, juicios, sentencias, etc.).</a></td>
+					<td width="15%" class="TableRow" valign="top">Requirement</td>
+					<td width="15%" class="TableRow" valign="top">Realisation</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="./EA1/EA228.htm">Registrar Caducidad Juicio</a></td>
+					<td width="15%" class="TableRow" valign="top">UseCase</td>
+					<td width="15%" class="TableRow" valign="top">Includes</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+
+			</table>
+		</div>
+	</div>
+<div class="pageFooter"></div>
+ 
+</body>
+</html>

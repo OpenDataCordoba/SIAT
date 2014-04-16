@@ -1,0 +1,1048 @@
+/* Estilos Tramites */ 
+/* Layout */
+
+html {
+	margin:0px; margin-left:auto; margin-right:auto;
+}
+
+
+
+body {
+	background-color:#7B7B7B;
+	color:#666666;
+	font-family:Tahoma,Arial,Verdana,Helvetica,sans-serif;
+	font-size:x-small;
+	text-align:center;
+}
+
+
+/* este div es para centrar todo el contenido */
+#container {
+	border: 10px solid #333333;
+	overflow: hidden;
+	width:760px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #FFF;
+	text-align: left;
+	padding: 0px;
+}
+
+/* Div para englobar el contenido */
+#contenido {
+	clear: both;
+	margin: 0px;
+	padding: 20px 30px 20px 30px;
+	height: auto;
+	min-height: auto;
+	display: block;
+}
+
+/* varios tamanoos de columna */
+
+.col150, .col200, .col250, .col300, .col350 {
+	padding: 0px;
+	float: left;
+	margin:0px 10px 0px 0px;
+}
+
+.col150 {
+    width:150px;
+}
+.col200 {
+    width:200px;
+}
+.col250 {
+    width:250px;
+}
+.col300 {
+    width:300px;
+}
+.col350 {
+    width:350px;
+}
+
+/*************  Fin layout ************/ 
+
+/*  Top */
+#top {
+	background-color: #ffab00;
+	background-image: url(../images/top-solo.png);
+	background-repeat: no-repeat;
+	height: 83px;
+	padding: 0px;
+	margin: 0px;
+}
+
+/* Link del top al www.santafeciudad.gov.ar */
+#santafeciudad {
+	display: block;
+	width: 100%;
+	height: 3px;
+}
+
+
+
+/* Iconos Top */
+#top #iconostop {
+	float: right;
+}
+
+#iconostop ul {
+	margin: 55px 20px 0px 0px;
+	padding: 0px;
+}
+
+#iconostop ul li {
+	float: left;
+	margin: 0px 0px 0px 3px;
+	padding: 0px;
+}
+
+#iconostop ul li a {
+	display: block;
+	width: 25px;
+	height: 25px;
+}
+
+/* id de los iconitos */
+#icohome {
+	background-image: url(../images/ico_home_out.png);
+}
+
+#icohome:hover {
+	background-image: url(../images/ico_home_over.png);
+}
+
+#icobuscar {
+	background-image: url(../images/ico_buscar_out.png);
+}
+
+#icobuscar:hover {
+	background-image: url(../images/ico_buscar_over.png);
+}
+
+#icoayuda {
+	background-image: url(../images/ico_ayuda_out.png);
+}
+
+#icoayuda:hover {
+	background-image: url(../images/ico_ayuda_over.png);
+}
+
+#icontacto {
+	background-image: url(../images/ico_contacto_out.png);
+}
+
+#icontacto:hover {
+	background-image: url(../images/ico_contacto_over.png);
+}
+
+#icologin {
+	background-image: url(../images/ico_login_out.png);
+}
+
+#icologin:hover {
+	background-image: url(../images/ico_login_over.png);
+}
+
+/*
+#icoaumentar {	
+	background-image:url(images/ico_aumentar_out.png);
+}
+
+#icoaumentar:hover {
+	background-image:url(images/ico_aumentar_over.png);
+}
+
+
+
+*/
+
+/* Log In */ 
+
+#panlogin {
+	background-color: #eeeeee;
+	position: absolute;
+	right: 140px; top:124px;
+	_top:130px;
+	height: auto;
+	padding: 5px 10px;
+	visibility: hidden;
+	border: 1px solid #006699;
+	color:#006699;
+	font-weight:bold;
+}
+
+#panlogin button {
+	margin:10px 15px 5px 20px;
+	padding:2px 3px;
+	font-weight:normal;
+	font-size:90%;
+	_font-size:92%;
+	
+}
+
+#panlogin a:hover{
+	background-color:#B9D2E1;
+	color:#006699;
+}
+
+#panlogin p {
+	margin:5px 10px 0px 10px;
+}
+
+#panlogin input{
+	display:inline;
+	margin:0px
+	padding:0px;
+	height:1em;
+}
+/* * * * Fin Top * * * * */ 
+
+/* Menu */
+#menu {
+	float: left;
+	width: 100%;
+	background-color: #B9D2E1;
+	background-image: url(../images/fondo_menu.png);
+	background-position: bottom;
+	font-size: 93%;
+	line-height: normal;
+}
+
+#menu ul {
+	margin: 5px 0px 0px 30px;
+	padding: 0px;
+	list-style: none;
+}
+
+#menu li {
+	display: inline;
+	margin: 0;
+	padding: 0;
+}
+
+#menu a {
+	float: left;
+	background: url("../images/solapa_izquierda.gif") no-repeat left top;
+	margin: 0px;
+	padding: 0px 0px 0px 9px;
+	border-bottom: 1px solid #003366;
+	text-decoration: none;
+}
+
+#menu a span {
+	float: left;
+	display: block;
+	background: url("../images/solapa_derecha.gif") no-repeat right top;
+	padding: 5px 15px 4px 6px;
+	font-weight: bold;
+	color: #003366;
+}
+
+/* Hack para esconder la regla para IE5-Mac \*/
+#menu a span {
+	float: none;
+}
+
+/* Fin hack IE5-Mac  */
+#menu a:hover span {
+	color: #333;
+}
+
+#menu #activo a {
+	background-position: 0 -150px;
+	border-width: 0;
+}
+
+#menu #activo a span {
+	background-position: 100% -150px;
+	padding-bottom: 5px;
+	color: #333;
+}
+
+#menu a:hover {
+	background-position: 0% -150px;
+}
+
+#menu a:hover span {
+	background-position: 100% -150px;
+}
+
+/* * * *  fin menu * * * * */
+#menu #tools {
+	float: right;
+	display: block;
+	margin: 0px 30px 0px 0px;
+	_margin: 0px 10px 0px 0px;
+}
+
+#tools ul {
+	list-style: none;
+	margin: 0px 0px 3px 0px;
+	padding: 0px;
+}
+
+#tools ul li {
+	float: left;
+	margin: 0px 0px 0px 3px;
+	padding: 0px;
+}
+
+#tools ul li a {
+	display: block;
+	background-color: #FFFFFF;
+	background-image: none;
+	padding: 4px;
+	font-weight: bold;
+}
+
+#tools ul li a:hover {
+	background-color: #006699;
+	color: #FFFFFF;
+}
+
+/* div logueado */ 
+#logueado {
+	clear:both; display:block;
+	background-color:#CCCCCC;
+	border:1px solid #999999;
+	color:#666666;
+	font-weight:bold;
+	text-align:right;
+	padding:2px 20px 4px 0px;
+	
+}
+
+
+/* Pie */
+#pie {
+	background-color:#333333;
+	clear:both;
+	color:#FFFFFF;
+	font-size:93%;
+	height:50px;
+	padding-top:5px;
+	text-align:center;
+}
+
+#pie a {
+	color: #FFFFFF;
+	font-weight: bold;
+}
+
+#pie a:hover {
+	color: #CCCCCC;
+}
+
+/* * * * * Fin pie * * * * * */ /* Generales */
+p {
+	margin: 10px 0px 10px 0px;
+}
+
+a {
+	text-decoration: none;
+	color: #fe7c02;
+	font-weight:bold;
+}
+
+a:hover {
+	color: #666666;
+}
+
+h1 {
+	clear: both;
+	margin: 0px 0px 10px 0px;
+	padding: 0px 0px 0px 0px;
+	font-size: 1.6em;
+	font-weight: bold;
+	color: #ff7d03	
+}
+
+h2 {
+	font-size: 130%;
+	background-color: #B9D2E1;
+	color: #006699;
+	margin: 0px 0px 10px 0px;
+	padding: 5px 0px 5px 20px;
+	clear: both;
+	border-bottom: 1px solid #12679B;
+}
+
+h3 {
+	font-size: 115%;
+	color: #336699;
+	margin: 10px 10px 10px 0px;
+}
+
+h3 a {
+	background-image: url(../images/vinieta_out.png);
+	background-repeat: no-repeat;
+	padding: 0px 0px 3px 15px;
+	background-position: 0px 2px;
+	_background-position: 0px 3px;
+	color:#666666;
+}
+
+h3 a:hover {
+	background-image: url(../images/vinieta_over.png);
+	color: #11669D;
+}
+
+h3.volver a{
+	background-image: url(../images/volver_out.png);
+}
+
+h3.volver a:hover {
+	background-image: url(../images/volver_over.png);
+
+}
+
+
+
+h4 {
+	font-size:110%;
+	color: #006699;
+	margin: 10px 10px 0px 0px;
+}
+
+/* Listas */
+ul {
+	list-style: none;
+	margin: 0px 30px 0px 0px;
+	padding:0px;
+}
+
+ul li {
+	margin: 4px 0px 10px 0px;
+}
+
+ol {
+	list-style-position: outside;
+	margin: 10px 0px 10px 20px;
+	padding:0px;
+
+}
+
+ol li {
+	margin: 4px 0px 10px 0px;
+	
+}
+
+/* Lista con vinietas */ 
+
+ul.vinieta {
+	margin:10px 0px 10px 20px;
+}
+	
+
+ul.vinieta li {
+	background-image: url(../images/vinieta_4x4.png);
+	background-repeat:no-repeat;
+	background-position: 0px 4px;
+	padding: 0px 0px 0px 10px;
+	margin: 0px 0px 4px 0px
+	
+}
+	
+	
+
+/* Clases espec�ficas */ /* Arribas */
+.arriba {
+	float: right;
+	clear: both;
+	margin: 10px 0px 10px 0px;
+	font-weight:normal;
+}
+
+.arriba a,td a.arriba {
+	background-image: url(../images/arriba_out.png);
+	background-position: right;
+	background-repeat: no-repeat;
+}
+
+.arriba a {
+	padding: 3px 15px 3px 3px;
+	display: block;
+}
+
+.arriba a:hover,td a.arriba:hover {
+	background-image: url(../images/arriba_over.png);
+	color: #006699;
+	background-color: #eeeeee;
+}
+
+td a.arriba {
+	padding: 3px 20px 3px 3px;
+	text-align: right;
+	margin: 0px;
+}
+
+/* * * *  Fin Arriba * * * * */ 
+
+/* menu horizontal */
+#menuhorizontal {
+	float: right;
+	margin: 0px 0px 10px 0px;
+	clear: both;
+}
+
+#menuhorizontal ul {
+	margin: 10px 10px 0px 20px;
+}
+
+#menuhorizontal ul li {
+	float: left;
+	margin: 0px 6px 10px 0px;
+}
+
+#menuhorizontal ul li a {
+	white-space: nowrap;
+	display: block;
+	background-color: #B9D2E1;
+	margin: 0px 2px 0px 0px;
+	padding: 5px 6px 3px 6px;
+	border: #006699 solid 1px;
+	color: #006699;
+	_width: .1em;
+	font-weight: bold;
+}
+
+#menuhorizontal ul li a:hover {
+	background-color: #ffffff;
+}
+
+/* * * * FIn Menu Horizontal * * * * */
+	/* Icono del h1 a la izquierda */
+.detalle {
+	background-image: url(../images/detalle_ico.png);
+	background-repeat: no-repeat;
+}
+
+#online, #formulario, #buscadores, #lugares, .solapa {
+	margin: 0px;
+	background-repeat: no-repeat;
+	padding: 0px 2px 0px 0px;
+	background-position: right top;
+}
+
+#buscadores {
+	background-image: url(../images/fondo_buscar.png);
+}
+
+.solapa {
+	background-image: url(../images/fondo_solo.png);
+}
+
+#online {
+	background-image: url(../images/fondo_online.png);
+	height: 370px;
+}
+
+#formulario {
+	background-image: url(../images/fondo_form.png);
+}
+
+#lugares {
+	background-image: url(../images/fondo_lugar.png);
+}
+
+#buscadores h2, #online h2, #formulario h2, #lugares, .solapa h2 {
+	background-color: transparent;
+	color: #FFFFFF;
+	clear: none;
+	margin: 0px 20px 0px 20px;
+	padding: 25px 0px 0px 0px;
+}
+
+/* Lista Scrolable */
+div.scrolable {
+	overflow: auto;
+	height: 345px;
+	border: 1px solid #12679B;
+	padding: 2px 0px 0px 0px;
+	_padding: 0px 0px 0px -5px;
+	margin: 4px 0px 0px 0px;
+	/* esto pinta la barra de scroll ... en IE */
+	scrollbar-3dlight-color: #CCCCCC;
+	scrollbar-arrow-color: #003366;
+	scrollbar-base-color: #eeeeee;
+	scrollbar-darkshadow-color: #003333;
+	scrollbar-face-color: #B9D2E1;
+	scrollbar-highlight-color: #ffffff;
+	scrollbar-shadow-color: #003366;
+	scrollbar-track-color: #eeeeeee;
+	/* solo ie */
+}
+
+/* lista blanca */
+ul.blanco {
+	margin: 0px 0px 0px 0px;
+	padding: 0px;
+	border: 1px solid #12679B;
+	clear: both;
+}
+
+div.scrolable ul.blanco { /* si va con scroll, le defino un ancho */
+	border: none;
+	margin: 1px 0px 0px 0px;
+}
+
+.col350 div.scrolable ul.blanco {
+	width:319px;
+	_width:330px;
+}
+
+.col300 div.scrolable ul.blanco {
+	width:269px;
+	_width:280px;
+}
+
+.col250 div.scrolable ul.blanco {
+	width:219px;
+	_width:230px;
+}
+
+.col200 div.scrolable ul.blanco {
+	width:169px;
+	_width:200px;
+}
+
+
+ul.blanco li {
+	border-bottom: 1px solid #dddddd;
+	margin: 0px;
+	font-size: 110%;
+}
+
+ul.blanco li.letra {
+	background-color:#B9D2E1;
+	color:#006699;
+	text-align:left;
+	padding:8px 20px 4px 15px;
+	border-bottom: 1px solid #006699;
+	font-weight: bold;
+	
+
+}
+
+ul.blanco li a {
+	text-decoration: none;
+	background-color: #ffffff;
+	display: block;
+	padding: 8px 10px 5px 15px;
+	line-height: 120%;
+	color: #006699;
+	font-weight:normal;
+}
+
+ul.blanco li a:hover {
+	background-color: #eeeeee;
+}
+
+/* para dejar marcado el seleccionado */
+ul.blanco li a.activo {
+	background-color: #B9D2E1;
+	font-weight: bold;
+}
+
+ul.blanco li p {
+	padding: 0px 20px 5px 40px;
+	margin: 0px;
+}
+
+
+.borde {
+	border: 1px solid #12679B;
+	padding: 10px 10px 10px 20px;
+	display: block;
+}
+
+.boton {
+	color:#333333;
+	font-weight: bold;
+	font-size: 100%;
+	padding: 2px;
+}
+
+input {
+	font-size: 100%;
+	color: #333333;
+	font-weight: bold;
+	padding: 2px 5px 2px 5px;
+	margin:0px 0px 1px 0px;
+}
+
+textarea {
+	height: 120px;
+	width: 300px;
+	color: #006699;
+	font-weight: bold;
+	overflow: auto;
+}
+
+select {
+		color: #333333;
+		font-weight: bold;
+		font-size: 90%;
+}
+
+button {
+	font-size: 90%;
+	_font-size: 95%;
+	margin: 4px 0px 0px 5px;
+	padding: 3px 5px 1px 5px;
+	color: #006699;
+	font-weight: bold;
+	cursor:pointer;
+}
+
+/*
+
+#iconitos {
+	float: left;
+	background-image: url(images/online.png);
+	background-repeat: no-repeat;
+	margin:0px 0px 0px 20px;
+	padding: 0px;
+	clear: both;
+	height: 30px;
+	display: block;
+}
+#iconitos a {
+	display: block;
+	margin: 0px;
+	padding: 5px 10px 5px 40px;
+	font-weight: bold;
+}
+
+*/ /******* tabla */
+table {
+	padding: 0px;
+	margin: 0px;
+}
+
+th {
+	background-color: #CCCCCC;
+	color: #4D4D4D;
+	text-align: left;
+	padding: 8px 20px 4px 20px;
+	/*border-bottom: 1px solid #006699;*/
+}
+
+tr {
+	margin: 0px;
+	padding: 0px;
+}
+
+td {
+	margin: 0px;
+	padding: 0px;
+	height: auto;
+}
+
+.tablaresultados {
+	clear: both;
+	margin: 0px;
+	border: 1px solid #006699;
+	width: 700px;
+}
+
+.tablaresultados td {
+	border-bottom:1px solid #dddddd;
+}
+
+.tabla300 {
+	width:270px;
+	_width:300px;
+}
+
+.tabla250 {
+	width:220px;
+	_width:250px;
+}
+
+.tablaresultados a, .tabla300 a, .tabla250 a {
+	padding:5px 10px 5px 15px;
+	display: block;
+	color: #666666;
+	font-weight:normal;
+}
+
+.tablaresultados a:hover, .tabla300 a:hover, .tabla250 a:hover{
+	background-color: #eeeeee;
+	color: #11669D;
+}
+
+a.colico {
+	background-image: url(../images/ico_online.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	white-space: nowrap;
+	height:auto; 
+	width: 30px;
+	padding: 5px 30px 5px 3px;
+	text-align: right;
+	float: right;
+}
+
+.tabla300 a.colico, .tabla250 a.colico {
+	width:20px;
+	padding: 5px 5px 5px 3px;
+}
+
+a.colico:hover {
+	background-image: url(../images/ico_online_over.png);
+}
+
+label {
+	font-weight: bold;
+	color: #666666;
+	margin: 0px 10px 0px 0px;
+}
+
+
+
+hr{
+	color:#006699;
+	height:1px;
+}
+
+
+
+.destacado {
+	color: #FF6600;
+	padding: 2px;
+}
+/*  Estilos para los on-line */
+
+table.tramonline {
+	text-align: left;
+	border: 1px solid #cacaca;
+	width: 100%;
+	margin: 0px 0px 10px 0px;
+}
+
+.tramonline caption {
+	font-weight:bold;
+	color:white;
+	background-color:#eb9600;
+	padding: 10px 15px 5px 30px;
+	text-align: center;
+	font-size:125%;
+}
+
+.tramonline th a{
+	color:#fff;
+	font-weight:normal;
+}
+
+.tramonline th a:hover{
+	color:#eee;
+}
+
+.tramonline td {
+	padding: 3px 5px;
+	border-bottom: 1px solid #999999;
+	border-right: 1px solid #999999;
+	vertical-align:top;
+
+}
+
+.tramonline td.celdatotales {
+	background-color:#dddddd;
+}
+
+.tramonline .subencabezado, .tramonline th {
+	background-color:#CACACA;
+	border:1px solid #999999;
+	color:#333333 !important;
+	font-size:110%;
+	font-weight:bold;
+	padding:5px 15px 5px 10px;
+	vertical-align:middle;	
+}
+
+.tramonline .linea {
+	border-bottom:1px solid #CCCCCC;
+	background-color: #eeeeee;
+	text-align:left;
+}
+
+.tramonline .etiqueta {
+	font-weight: bold;
+}
+
+.tramonline .datos {
+	padding:2px 3px;
+}
+
+title {
+	background-color:#00FF66;
+}
+
+th a {
+    display: inline !important;
+    width: 0px; 
+    height: 0px; 
+    margin: 0px; 
+    padding: 0px !important;
+}
+
+dl {
+	padding:0px;
+	margin:10px 0px 10px 0px;
+}
+
+dt {
+	font-weight:bold;
+	margin: 10px 0px 0px 0px;
+	padding: 0px;
+	
+}
+
+dd {
+	display: block;
+	padding: 0px;
+	margin: 0px 0px 10px 0px;
+	
+}
+
+.tramonline .listahorizontal {
+	margin: 4px 0px 4px 0px;
+	font-size: 110%;
+}
+
+.listahorizontal {
+	margin: 0px 0px 4px 0px;
+	font-size: 110%;
+}
+
+.listahorizontal dt {
+	font-weight:bold;
+	margin: 10px 0px 0px 0px;
+	padding: 0px;
+	display: inline;
+	
+}
+
+.listahorizontal dd {
+	padding: 0px;
+	margin: 0px 10px 10px 6px;
+	display: inline;
+	font-weight: normal;
+	
+}
+
+
+/* zonas de incumbencia */ 
+
+.zona {
+	width:250px;
+	height:auto;
+	border:1px solid #006699;
+	padding:10px;
+	margin: 0px 0px 10px 10px;
+	display:none;
+	float: right;
+	background-color: #eeeeee;
+}
+
+.zonaactiva {
+	display:block;
+}
+
+/* */ 
+
+.messages {	
+    background-color: #ffffcc;
+    border: 1px solid #FF0000;
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin: 10px auto;
+    padding: 3px;
+    text-align: center;
+    vertical-align: bottom;
+}
+
+.error {	
+	color:#FF0000;
+	padding:10px;
+	border:1px solid #FF0000;
+	font-weight:bold;
+	margin: 8px 10px 10px 0px;
+}
+
+.nuevo {
+	color: #FF6600;
+	font-weight: bold;
+}
+
+.nuevoico {
+	background-image: url(../images/login_ico.gif) !important;
+	background-repeat:no-repeat;
+	background-position:right;
+	padding-right: 20px;
+}
+legend {
+	font-size:130%;
+	color:#4D4D4D;
+	padding:5px 20px;
+	background-color:#CCCCCC;
+	font-weight: bold;
+}
+
+fieldset {
+	margin:0px 0px 10px 0px;
+	border:1px solid #cacaca;
+	padding:10px 20px;
+}
+
+ul.checkbox input {
+	margin:0px;
+}
+	
+
+h3.volver a{
+ background-image: url(../images/volver_out.png);
+}
+ 
+h3.volver a:hover {
+ background-image: url(../images/volver_over.png);
+}
+
+/* para mostrar el codigo en el manual */ 
+code {
+	border:1px solid #0033FF;
+	padding:10px;
+	margin:10px;
+	display:block;
+	font-family:"Courier New", Courier, mono;
+	font-size:12px;
+
+}
+button.verfoto {
+	font-size: 90%;
+	padding: 0px;
+	margin: 0px 3px 0px 8px;
+}
+fieldset div {
+	margin-bottom: 6px;
+}
+.fleft {
+	float: left;
+}
+
+.fright {
+	float: right;
+	margin: 0 5px;
+}
+
+.tabladatos 
+  { width: 100%; }
+.tabladatos td
+  { height: 18px; white-space: nowrap; text-align:right; width:20%; }
+.tabladatos td.normal
+  { height: 18px; white-space: nowrap; text-align:left; width:30%; }

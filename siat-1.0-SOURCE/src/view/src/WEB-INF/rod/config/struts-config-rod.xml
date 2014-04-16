@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC 
+"-//Apache Software Foundation//DTD Struts Configuration 1.2//EN"  
+"[WWW] http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+	<form-beans>
+	    <form-bean name="tramiteRASearchPage" 		type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="tramiteRAAdapter"    		type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="modeloSearchPage" 	  		type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="propietarioAdapter"	 	type="org.apache.struts.action.DynaActionForm"/>
+		
+	</form-beans>
+
+	<action-mappings>
+		
+		<!-- Tramite -->	    
+	    <action
+	    	path="/rod/BuscarTramiteRA"
+	        type="ar.gov.rosario.siat.rod.view.struts.BuscarTramiteRADAction"
+			scope="request"
+	       	validate="false"
+	        name="tramiteRASearchPage"
+	        parameter="method"
+	   		input=".rod.tramite.view.tramiteRASearchPage"
+	        attribute="tramiteRASearchPage">
+	           
+	   	    <forward name="tramiteRASearchPage"   	path=".rod.tramite.view.tramiteRASearchPage" />
+	   	    <forward name="administrarTramiteRA" 		path="/rod/AdministrarTramiteRA.do?method=inicializar" />
+	   	    
+	    </action>
+		
+		<action
+     		path="/rod/AdministrarTramiteRA"
+	        type="ar.gov.rosario.siat.rod.view.struts.AdministrarTramiteRADAction"
+		    scope="request"
+        	validate="false"
+	        name="tramiteRAAdapter"
+            parameter="method"
+    	    input=".rod.tramite.view.tramiteRAEditAdapter"
+	        attribute="tramiteRAAdapter">
+            
+    	    <forward name="tramiteRAViewAdapter"		path=".rod.tramite.view.tramiteRAViewAdapter" />
+    	    <forward name="tramiteRAEditAdapter"    	path=".rod.tramite.view.tramiteRAEditAdapter" />
+    	    <forward name="buscarModelo" 				path="/rod/BuscarModelo.do?method=inicializar" />
+    	    <forward name="administrarPropietario"		path="/rod/AdministrarPropietario.do?method=inicializar" />
+    	    <forward name="buscarCalle" 				path="/pad/BuscarCalle.do?method=inicializar" />
+    	    <forward name="buscarLocalidad" 			path="/pad/BuscarLocalidad.do?method=inicializar" />
+    	    <forward name="tramiteRAAdapter"    		path=".rod.tramite.view.tramiteRAAdapter" />
+    	    
+	    </action>
+	    <!-- Fin Tramite -->
+
+		<!-- Modelo -->	    
+	    <action
+	    	path="/rod/BuscarModelo"
+	        type="ar.gov.rosario.siat.rod.view.struts.BuscarModeloDAction"
+			scope="request"
+	       	validate="false"
+	        name="modeloSearchPage"
+	        parameter="method"
+	   		input=".rod.tramite.view.modeloSearchPage"
+	        attribute="modeloSearchPage">
+	           
+	   	    <forward name="modeloSearchPage"   	path=".rod.tramite.view.modeloSearchPage" />
+	   	    
+	    </action>
+	   <!-- Fin Modelo -->
+	   
+	   <!-- Propietairo -->	    
+	    <action
+	    	path="/rod/AdministrarPropietario"
+	        type="ar.gov.rosario.siat.rod.view.struts.AdministrarPropietarioDAction"
+			scope="request"
+	       	validate="false"
+	        name="propietarioAdapter"
+	        parameter="method"
+	   		input=".rod.tramite.view.propietarioEditAdapter"
+	        attribute="propietarioAdapter">
+	           
+	   	    <forward name="propietarioEditAdapter"   	path=".rod.tramite.view.propietarioEditAdapter" />
+	   	    <forward name="propietarioViewAdapter"   	path=".rod.tramite.view.propietarioViewAdapter" />
+	   	    
+	    </action>
+	   <!-- Fin Propietario -->
+	</action-mappings>
+
+</struts-config>

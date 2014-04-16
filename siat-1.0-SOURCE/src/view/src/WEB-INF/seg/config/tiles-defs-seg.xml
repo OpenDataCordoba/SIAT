@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+ <!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 1.1//EN"
+       "http://jakarta.apache.org/struts/dtds/tiles-config_1_1.dtd">
+
+<tiles-definitions>
+
+    <definition name=".seg.view.webLoginForm" extends=".siatStdLayout">
+		<put name="body" value="/seg/webLoginForm.jsp"/>
+	</definition>
+
+    <definition name=".seg.view.intranetLoginForm" extends=".siatStdLayout">
+	    <put name="body" value="/seg/intranetLoginForm.jsp"/>
+	</definition>
+
+    <definition name=".seg.view.menuForm" extends=".siatStdLayout">
+		<put name="body" value="/seg/menuForm.jsp"/>
+	</definition>
+
+    <definition name=".seg.view.sessionAnonimoError" extends=".siatStdLayout">
+		<put name="body" value="/seg/errorAnonimo.jsp"/>
+	</definition>
+
+    <definition name=".seg.view.loginSelecOficina" extends=".siatStdLayout">
+	    <put name="body" value="/seg/loginSelecOficina.jsp"/>
+    </definition>
+    
+    <definition name=".seg.view.changePassForm" extends=".siatStdLayout">
+		<put name="body" value="/seg/changePassForm.jsp"/>
+	</definition>
+	
+	<!-- UsuarioSiat -->
+    <definition name=".seg.seguridad.view.usuarioSiatSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/seg/seguridad/usuarioSiatSearchPage.jsp"/>
+    </definition>
+	
+	<definition name=".seg.seguridad.view.usuarioSiatViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/seg/seguridad/usuarioSiatViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".seg.seguridad.view.usuarioSiatEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/seg/seguridad/usuarioSiatEditAdapter.jsp"/>
+    </definition>
+    <!-- fin UsuarioSiat -->
+
+	<!-- Oficina -->
+    <definition name=".seg.seguridad.view.oficinaSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/seg/seguridad/oficinaSearchPage.jsp"/>
+    </definition>
+	
+	<definition name=".seg.seguridad.view.oficinaViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/seg/seguridad/oficinaViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".seg.seguridad.view.oficinaEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/seg/seguridad/oficinaEditAdapter.jsp"/>
+    </definition>
+    <!-- fin Oficina -->
+</tiles-definitions>

@@ -1,0 +1,5 @@
+tocTab[tocTab.length] = new Array("2.1.2.3:1", "", "Objetos Imponibles", "EARoot/EA2/EA1/EA2/EA3/EA287.htm", "180.png", "367", "0", "", "Use Case diagram");
+tocTab[tocTab.length] = new Array("2.1.2.3:2", "", "Administrar Altas de Oficio de Comercio", "EARoot/EA2/EA1/EA2/EA3/EA289.htm", "7.png", "4768", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.2.3:3", "", "Registrar Cierre definitivo de Comercio", "EARoot/EA2/EA1/EA2/EA3/EA290.htm", "7.png", "4844", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.2.3:4", "", "Mantenedor Objeto Imponible ", "EARoot/EA2/EA1/EA2/EA3/EA292.htm", "7.png", "1733", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.2.3.1", "1", "Secundarios", "EARoot/EA2/EA1/EA2/EA3/EA291.htm", "4.png", "", "", "{D8124A39-C108-4d01-BCEA-F99F4A357E83}", "Package");

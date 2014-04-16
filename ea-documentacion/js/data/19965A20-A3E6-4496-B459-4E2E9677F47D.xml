@@ -1,0 +1,8 @@
+tocTab[tocTab.length] = new Array("2.4.1", "1", "Administrar Reclamos", "EARoot/EA2/EA4/EA662.htm", "4.png", "", "", "{FCC03B97-06BF-4812-95A9-C6E56F9A6825}", "Package");
+tocTab[tocTab.length] = new Array("2.4.2", "1", "Constancia de Deuda", "EARoot/EA2/EA4/EA663.htm", "4.png", "", "", "{7A0941D4-14EA-4564-AFEF-43D48F751418}", "Package");
+tocTab[tocTab.length] = new Array("2.4.3", "1", "Contribuyentes Operativos de Investigación", "EARoot/EA2/EA4/EA664.htm", "4.png", "", "", "{25BC2F65-5563-4440-9C75-C149BD8567F7}", "Package");
+tocTab[tocTab.length] = new Array("2.4.4", "1", "Deuda", "EARoot/EA2/EA4/EA665.htm", "4.png", "", "", "{ED72A3AF-2C55-496e-9DE6-187020EBE588}", "Package");
+tocTab[tocTab.length] = new Array("2.4.5", "1", "Envio Osiris", "EARoot/EA2/EA4/EA666.htm", "4.png", "", "", "{46005D51-87DA-4133-B579-11E464B796C3}", "Package");
+tocTab[tocTab.length] = new Array("2.4.6", "1", "Planes Formalizados", "EARoot/EA2/EA4/EA667.htm", "4.png", "", "", "{708305BD-B99E-46ab-A311-D09A6A2907F2}", "Package");
+tocTab[tocTab.length] = new Array("2.4.7", "1", "Planillas de Envio de Deuda por Procurador", "EARoot/EA2/EA4/EA668.htm", "4.png", "", "", "{60E203E3-8502-4fdc-AEE3-C67458655B5C}", "Package");
+tocTab[tocTab.length] = new Array("2.4.8", "1", "Solicitudes Exenciones (tmp)", "EARoot/EA2/EA4/EA669.htm", "4.png", "", "", "{C819CCCA-718D-44d9-9530-A9F8C278C214}", "Package");

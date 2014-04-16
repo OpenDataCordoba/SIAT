@@ -1,0 +1,2 @@
+tocTab[tocTab.length] = new Array("2.1.10.2:1", "", "Parámetros", "EARoot/EA2/EA1/EA10/EA2/EA583.htm", "180.png", "612", "0", "", "Use Case diagram");
+tocTab[tocTab.length] = new Array("2.1.10.2:2", "", "Mantenedor de Parámetros", "EARoot/EA2/EA1/EA10/EA2/EA585.htm", "7.png", "4089", "0", "", "UseCase");

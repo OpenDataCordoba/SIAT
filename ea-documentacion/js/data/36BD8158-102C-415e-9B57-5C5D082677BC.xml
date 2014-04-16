@@ -1,0 +1,11 @@
+tocTab[tocTab.length] = new Array("1.1:1", "", "balance", "EARoot/EA1/EA1/EA16.htm", "188.png", "251", "0", "", "Custom diagram");
+tocTab[tocTab.length] = new Array("1.1:2", "", "«Functional» 70- Para la distribución en partidas presupuestarias de los conceptos tributarios que se recaudan, se deberán utilizar fórmulas que permitan aplicar cambios sin modificar el código de la aplicación.", "EARoot/EA1/EA1/EA18.htm", "19.png", "1323", "0", "", "Requirement");
+tocTab[tocTab.length] = new Array("1.1:3", "", "«Functional» 71- Asentar pagos rendidos por entidad recaudadora.", "EARoot/EA1/EA1/EA19.htm", "19.png", "1324", "0", "", "Requirement");
+tocTab[tocTab.length] = new Array("1.1:4", "", "«Functional» 72- Gestionar pagos indeterminados (modificar, desglosar, reingresar, etc.) para lograr su asentamiento.", "EARoot/EA1/EA1/EA20.htm", "19.png", "1325", "0", "", "Requirement");
+tocTab[tocTab.length] = new Array("1.1:5", "", "«Functional» 73- Realizar compensaciones de deudas en la cuenta corriente del contribuyente.", "EARoot/EA1/EA1/EA21.htm", "19.png", "1326", "0", "", "Requirement");
+tocTab[tocTab.length] = new Array("1.1:6", "", "«Functional» 74- Registrar ingresos de Tesorería General.", "EARoot/EA1/EA1/EA22.htm", "19.png", "1327", "0", "", "Requirement");
+tocTab[tocTab.length] = new Array("1.1:7", "", "«Functional» 75- Registrar ingresos provenientes de procedimientos de Concursos y Quiebras. ", "EARoot/EA1/EA1/EA23.htm", "19.png", "1328", "0", "", "Requirement");
+tocTab[tocTab.length] = new Array("1.1:8", "", "«Functional» 76- Emitir balances de recaudación (diario, mensual, anual, etc.).", "EARoot/EA1/EA1/EA24.htm", "19.png", "1329", "0", "", "Requirement");
+tocTab[tocTab.length] = new Array("1.1:9", "", "«Functional» 77- Reprocesar asentamientos en forma masiva o puntual por rescates de sistemas de planes de pago (para &quot;dar vuelta&quot; pagos a cuenta).", "EARoot/EA1/EA1/EA25.htm", "19.png", "1330", "0", "", "Requirement");
+tocTab[tocTab.length] = new Array("1.1:10", "", "«Functional» 78- Realizar seguimiento y gestión de los reclamos de pago de los contribuyentes.", "EARoot/EA1/EA1/EA26.htm", "19.png", "1331", "0", "", "Requirement");
+tocTab[tocTab.length] = new Array("1.1:11", "", "«Functional» 79- Emitir valores no tributarios.", "EARoot/EA1/EA1/EA27.htm", "19.png", "1332", "0", "", "Requirement");

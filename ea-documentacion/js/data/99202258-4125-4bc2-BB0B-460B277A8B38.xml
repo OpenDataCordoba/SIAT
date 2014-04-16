@@ -1,0 +1,11 @@
+tocTab[tocTab.length] = new Array("2.5.3:1", "", "Emision-TGI", "EARoot/EA2/EA5/EA3/EA853.htm", "175.png", "589", "0", "", "Logical diagram");
+tocTab[tocTab.length] = new Array("2.5.3:2", "", "1) Generación de Leyendas de estado de Cuenta", "EARoot/EA2/EA5/EA3/EA855.htm", "21.png", "4883", "0", "", "Activity");
+tocTab[tocTab.length] = new Array("2.5.3:3", "", "2) Emisión", "EARoot/EA2/EA5/EA3/EA856.htm", "21.png", "4884", "0", "", "Activity");
+tocTab[tocTab.length] = new Array("2.5.3:4", "", "3/ Generación de Archivos PAS/Debito", "EARoot/EA2/EA5/EA3/EA857.htm", "21.png", "4885", "0", "", "Activity");
+tocTab[tocTab.length] = new Array("2.5.3:5", "", "4/ Impresion", "EARoot/EA2/EA5/EA3/EA858.htm", "21.png", "4887", "0", "", "Activity");
+tocTab[tocTab.length] = new Array("2.5.3:6", "", "Archivo Débito", "EARoot/EA2/EA5/EA3/EA859.htm", "82.png", "4890", "0", "", "Artifact");
+tocTab[tocTab.length] = new Array("2.5.3:7", "", "Archivo Impripost", "EARoot/EA2/EA5/EA3/EA860.htm", "82.png", "4892", "0", "", "Artifact");
+tocTab[tocTab.length] = new Array("2.5.3:8", "", "Archivo Impripost", "EARoot/EA2/EA5/EA3/EA861.htm", "82.png", "4891", "0", "", "Artifact");
+tocTab[tocTab.length] = new Array("2.5.3:9", "", "«document» Archivo PAS", "EARoot/EA2/EA5/EA3/EA862.htm", "82.png", "4889", "0", "", "Artifact");
+tocTab[tocTab.length] = new Array("2.5.3:10", "", "«datastore» Deuda", "EARoot/EA2/EA5/EA3/EA863.htm", "25.png", "4888", "0", "", "Object");
+tocTab[tocTab.length] = new Array("2.5.3:11", "", "«datastore» Leyendas Cuenta/Período", "EARoot/EA2/EA5/EA3/EA864.htm", "25.png", "4886", "0", "", "Object");

@@ -1,0 +1,5 @@
+tocTab[tocTab.length] = new Array("2.1.1.4:1", "", "Diagrama Administración Proc. CyQ", "EARoot/EA2/EA1/EA1/EA4/EA230.htm", "180.png", "492", "0", "", "Use Case diagram");
+tocTab[tocTab.length] = new Array("2.1.1.4:2", "", "Administrar Procedimientos CyQ", "EARoot/EA2/EA1/EA1/EA4/EA232.htm", "7.png", "4199", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.1.4:3", "", "Formalizar Convenios CyQ", "EARoot/EA2/EA1/EA1/EA4/EA233.htm", "7.png", "4942", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.1.4:4", "", "Mantenedor Procedimientos CyQ (SINC)", "EARoot/EA2/EA1/EA1/EA4/EA234.htm", "7.png", "3820", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.1.4:5", "", "Administrar deuda en CyQ (SINC)", "EARoot/EA2/EA1/EA1/EA4/EA235.htm", "7.png", "3819", "0", "", "UseCase");

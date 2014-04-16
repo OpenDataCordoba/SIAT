@@ -1,0 +1,13 @@
+tocTab[tocTab.length] = new Array("6:1", "", "RODADOS", "EARoot/EA6/EA1532.htm", "175.png", "593", "0", "", "Logical diagram");
+tocTab[tocTab.length] = new Array("6:2", "", "«table» rod_estadoCivil", "EARoot/EA6/EA1534.htm", "28.png", "4933", "0", "", "Class");
+tocTab[tocTab.length] = new Array("6:3", "", "«table» rod_marca", "EARoot/EA6/EA1535.htm", "28.png", "4919", "0", "", "Class");
+tocTab[tocTab.length] = new Array("6:4", "", "«table» rod_modelo", "EARoot/EA6/EA1536.htm", "28.png", "4918", "0", "", "Class");
+tocTab[tocTab.length] = new Array("6:5", "", "«table» rod_tipoCarga", "EARoot/EA6/EA1537.htm", "28.png", "4925", "0", "", "Class");
+tocTab[tocTab.length] = new Array("6:6", "", "«table» rod_tipoDoc", "EARoot/EA6/EA1538.htm", "28.png", "4926", "0", "", "Class");
+tocTab[tocTab.length] = new Array("6:7", "", "«table» rod_tipoFabricacion", "EARoot/EA6/EA1539.htm", "28.png", "4916", "0", "", "Class");
+tocTab[tocTab.length] = new Array("6:8", "", "«table» rod_tipoMotor", "EARoot/EA6/EA1540.htm", "28.png", "4917", "0", "", "Class");
+tocTab[tocTab.length] = new Array("6:9", "", "«table» rod_tipoPago", "EARoot/EA6/EA1541.htm", "28.png", "4929", "0", "", "Class");
+tocTab[tocTab.length] = new Array("6:10", "", "«table» rod_tipoPropietario", "EARoot/EA6/EA1542.htm", "28.png", "4946", "0", "", "Class");
+tocTab[tocTab.length] = new Array("6:11", "", "«table» rod_tipoTramite", "EARoot/EA6/EA1543.htm", "28.png", "4930", "0", "", "Class");
+tocTab[tocTab.length] = new Array("6:12", "", "«table» rod_tipoUso", "EARoot/EA6/EA1544.htm", "28.png", "4922", "0", "", "Class");
+tocTab[tocTab.length] = new Array("6:13", "", "«table» rod_tipoVehiculo", "EARoot/EA6/EA1545.htm", "28.png", "4913", "0", "", "Class");

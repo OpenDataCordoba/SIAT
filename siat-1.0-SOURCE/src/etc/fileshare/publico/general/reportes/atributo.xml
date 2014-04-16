@@ -1,0 +1,104 @@
+<?xml version = '1.0' encoding = 'ISO-8859-1'?><siat>
+<cabecera>
+    <Logo>logo.jpg</Logo>
+    <FileSharePath>/mnt/siat</FileSharePath>
+</cabecera>
+<formulario>
+</formulario>
+<data>
+<AtributoVO>
+ <TipoAtributo>
+  <CodTipoAtributo>Long</CodTipoAtributo>
+  <DesTipoAtributo>Long</DesTipoAtributo>
+  <Id>1</Id>
+ </TipoAtributo>
+
+ <CodAtributo>Radio</CodAtributo>
+ <DesAtributo>Radio</DesAtributo>
+ <MascaraVisual></MascaraVisual>
+ <DomAtr>
+  <TipoAtributo>
+   <CodTipoAtributo>Long</CodTipoAtributo>
+   <DesTipoAtributo>Long</DesTipoAtributo>
+   <Id>1</Id>
+  </TipoAtributo>
+
+  <CodDomAtr>Radio</CodDomAtr>
+  <DesDomAtr>Radio</DesDomAtr>
+   <ListDomAtrVal>
+  <DomAtrValVO>
+   <DomAtr>
+    <TipoAtributo>
+    </TipoAtributo>
+
+     <ListDomAtrVal></ListDomAtrVal>
+    <DesDomAtrView>No Posee</DesDomAtrView>
+   </DomAtr>
+
+   <DesValor>Radio 1</DesValor>
+   <Valor>1</Valor>
+   <FechaDesde>2008-01-01 00:00:00.0</FechaDesde>
+   <FechaDesdeView>01/01/2008</FechaDesdeView>
+   <FechaHastaView></FechaHastaView>
+   <Id>41</Id>
+  </DomAtrValVO>
+
+  <DomAtrValVO>
+   <DomAtr>
+    <TipoAtributo>
+    </TipoAtributo>
+
+     <ListDomAtrVal></ListDomAtrVal>
+    <DesDomAtrView>No Posee</DesDomAtrView>
+   </DomAtr>
+
+   <DesValor>Radio 2</DesValor>
+   <Valor>2</Valor>
+   <FechaDesde>2008-01-01 00:00:00.0</FechaDesde>
+   <FechaDesdeView>01/01/2008</FechaDesdeView>
+   <FechaHastaView></FechaHastaView>
+   <Id>69</Id>
+  </DomAtrValVO>
+
+  <DomAtrValVO>
+   <DomAtr>
+    <TipoAtributo>
+    </TipoAtributo>
+
+     <ListDomAtrVal></ListDomAtrVal>
+    <DesDomAtrView>No Posee</DesDomAtrView>
+   </DomAtr>
+
+   <DesValor>Radio 3</DesValor>
+   <Valor>3</Valor>
+   <FechaDesde>2008-01-01 00:00:00.0</FechaDesde>
+   <FechaDesdeView>01/01/2008</FechaDesdeView>
+   <FechaHastaView></FechaHastaView>
+   <Id>43</Id>
+  </DomAtrValVO>
+
+  <DomAtrValVO>
+   <DomAtr>
+    <TipoAtributo>
+    </TipoAtributo>
+
+     <ListDomAtrVal></ListDomAtrVal>
+    <DesDomAtrView>No Posee</DesDomAtrView>
+   </DomAtr>
+
+   <DesValor>Radio 9</DesValor>
+   <Valor>9</Valor>
+   <FechaDesde>2008-01-01 00:00:00.0</FechaDesde>
+   <FechaHasta>2008-01-01 00:00:00.0</FechaHasta>
+   <FechaDesdeView>01/01/2008</FechaDesdeView>
+   <FechaHastaView>01/01/2008</FechaHastaView>
+   <Id>62</Id>
+  </DomAtrValVO>
+</ListDomAtrVal>
+  <DesDomAtrView>Radio</DesDomAtrView>
+  <Id>26</Id>
+ </DomAtr>
+
+ <Id>38</Id>
+</AtributoVO>
+</data></siat>

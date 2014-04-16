@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+ <!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 1.1//EN"
+       "http://jakarta.apache.org/struts/dtds/tiles-config_1_1.dtd">
+
+<tiles-definitions>
+	<!-- Resumen de Liquidacion de Deuda -->
+	<definition name=".emi.general.view.resLiqDeuSearchPage" extends=".siatStdLayout">
+        <put name="body" value="/emi/general/resLiqDeuSearchPage.jsp"/>
+    </definition>
+
+	<definition name=".emi.general.view.resLiqDeuEditAdapter" extends=".siatStdLayout">
+        <put name="body" value="/emi/general/resLiqDeuEditAdapter.jsp"/>
+    </definition>
+
+	<definition name=".emi.general.view.resLiqDeuViewAdapter" extends=".siatStdLayout">
+        <put name="body" value="/emi/general/resLiqDeuViewAdapter.jsp"/>
+    </definition>
+
+	<definition name=".emi.general.view.procesoResLiqDeuAdapter" extends=".siatStdLayout">
+        <put name="body" value="/emi/general/procesoResLiqDeuAdapter.jsp"/>
+    </definition>
+    
+	<definition name=".emi.general.view.emiInfCueSearchPage" extends=".siatStdLayout">
+		<put name="body" value="/emi/general/emiInfCueSearchPage.jsp"/>
+    </definition>
+    <!-- fin Resumen de Liquidacion de Deuda -->
+
+	<!-- Generacion de Archivos PAS y Debito -->
+	<definition name=".emi.general.view.proPasDebSearchPage" extends=".siatStdLayout">
+        <put name="body" value="/emi/general/proPasDebSearchPage.jsp"/>
+    </definition>
+
+	<definition name=".emi.general.view.proPasDebEditAdapter" extends=".siatStdLayout">
+        <put name="body" value="/emi/general/proPasDebEditAdapter.jsp"/>
+    </definition>
+
+	<definition name=".emi.general.view.proPasDebViewAdapter" extends=".siatStdLayout">
+        <put name="body" value="/emi/general/proPasDebViewAdapter.jsp"/>
+    </definition>
+
+	<definition name=".emi.general.view.procesoProPasDebAdapter" extends=".siatStdLayout">
+        <put name="body" value="/emi/general/procesoProPasDebAdapter.jsp"/>
+    </definition>
+	<!-- fin Generacion de Archivos PAS y Debito -->
+
+	<!-- Emision Masiva de Deuda -->
+    <definition name=".emi.emision.view.emisionMasSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/emi/emision/emisionMasSearchPage.jsp"/>
+    </definition>
+	
+	<definition name=".emi.emision.view.emisionMasEditAdapter" extends=".siatStdLayout">
+        <put name="body" value="/emi/emision/emisionMasEditAdapter.jsp"/>
+    </definition>
+
+	<definition name=".emi.emision.view.emisionMasViewAdapter" extends=".siatStdLayout">
+        <put name="body" value="/emi/emision/emisionMasViewAdapter.jsp"/>
+    </definition>
+
+	<definition name=".emi.emision.view.procesoEmisionMasAdapter" extends=".siatStdLayout">
+        <put name="body" value="/emi/emision/procesoEmisionMasAdapter.jsp"/>
+    </definition>
+    <!-- fin Emision Masiva de Deuda --> 
+
+	<!-- Valorizacion de Tablas de Parametros de Emision-->
+	<definition name=".emi.definicion.view.valEmiMatSearchPage" extends=".siatStdLayout">
+		<put name="body" value="/emi/definicion/valEmiMatSearchPage.jsp"/>
+    </definition>
+
+	<definition name=".emi.definicion.view.valEmiMatViewAdapter" extends=".siatStdLayout">
+		<put name="body" value="/emi/definicion/valEmiMatViewAdapter.jsp"/>
+    </definition>
+
+	<definition name=".emi.definicion.view.valEmiMatEditAdapter" extends=".siatStdLayout">
+		<put name="body" value="/emi/definicion/valEmiMatEditAdapter.jsp"/>
+    </definition>
+	<!-- fin Valorizacion de Tablas de Parametros de Emision-->
+	
+	<!-- Impresion Masiva de Deuda -->
+	<definition name=".emi.impresion.view.impMasDeuSearchPage" extends=".siatStdLayout">
+        <put name="body" value="/emi/impresion/impMasDeuSearchPage.jsp"/>
+    </definition>
+
+	<definition name=".emi.impresion.view.impMasDeuEditAdapter" extends=".siatStdLayout">
+        <put name="body" value="/emi/impresion/impMasDeuEditAdapter.jsp"/>
+    </definition>
+
+	<definition name=".emi.impresion.view.impMasDeuViewAdapter" extends=".siatStdLayout">
+        <put name="body" value="/emi/impresion/impMasDeuViewAdapter.jsp"/>
+    </definition>
+
+	<definition name=".emi.impresion.view.procesoImpMasDeuAdapter" extends=".siatStdLayout">
+        <put name="body" value="/emi/impresion/procesoImpMasDeuAdapter.jsp"/>
+    </definition>
+    <!-- fin Impresion Masiva de Deuda -->
+
+	<!-- Emision Extraordinaria -->
+    <definition name=".emi.emision.view.emisionExtSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/emi/emision/emisionExtSearchPage.jsp"/>
+    </definition>
+	
+	<definition name=".emi.emision.view.emisionExtEditAdapter" extends=".siatStdLayout">
+        <put name="body" value="/emi/emision/emisionExtEditAdapter.jsp"/>
+    </definition>
+
+	<definition name=".emi.emision.view.emisionExtViewAdapter" extends=".siatStdLayout">
+        <put name="body" value="/emi/emision/emisionExtViewAdapter.jsp"/>
+    </definition>
+    <!-- fin Emision Extraordinaria -->
+
+	<!-- Emision Puntual -->
+    <definition name=".emi.emision.view.emisionPuntualSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/emi/emision/emisionPuntualSearchPage.jsp"/>
+    </definition>
+	
+	<definition name=".emi.emision.view.emisionPuntualEncEditAdapter" extends=".siatStdLayout">
+        <put name="body" value="/emi/emision/emisionPuntualEncEditAdapter.jsp"/>
+    </definition>
+
+	<definition name=".emi.emision.view.emisionPuntualAdapter" extends=".siatStdLayout">
+        <put name="body" value="/emi/emision/emisionPuntualAdapter.jsp"/>
+    </definition>
+
+	<definition name=".emi.emision.view.emisionPuntualViewAdapter" extends=".siatStdLayout">
+        <put name="body" value="/emi/emision/emisionPuntualViewAdapter.jsp"/>
+    </definition>
+
+	<definition name=".emi.emision.view.emisionPuntualPreviewAdapter" extends=".siatStdLayout">
+        <put name="body" value="/emi/emision/emisionPuntualPreviewAdapter.jsp"/>
+    </definition>
+
+	<definition name=".emi.emision.view.emisionPuntualRecibosAdapter" extends=".siatStdLayout">
+        <put name="body" value="/emi/emision/emisionPuntualRecibosAdapter.jsp"/>
+    </definition>
+
+	<definition name=".emi.emision.view.emisionTRPEditAdapter" extends=".siatStdLayout">
+        <put name="body" value="/emi/emision/emisionTRPEditAdapter.jsp"/>
+    </definition>
+
+	<definition name=".emi.emision.view.planoDetalleEditAdapter" extends=".siatStdLayout">
+        <put name="body" value="/emi/emision/planoDetalleEditAdapter.jsp"/>
+    </definition>
+    <!-- fin Emision Puntual -->
+    
+	<!-- AuxDeuda -->
+   	<definition name=".emi.emision.view.auxDeudaSearchPage" extends=".siatStdLayout">
+		<put name="body" value="/emi/emision/auxDeudaSearchPage.jsp"/>
+    </definition>
+
+   	<definition name=".emi.emision.view.auxDeudaViewAdapter" extends=".siatStdLayout">
+		<put name="body" value="/emi/emision/auxDeudaViewAdapter.jsp"/>
+    </definition>
+	<!-- fin AuxDeuda -->
+        
+	<!-- *************** A deprecar ********************* -->
+	<!-- Emision -->
+    <definition name=".emi.emision.view.emisionSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/emi/emision/emisionSearchPage.jsp"/>
+    </definition>
+	
+	<definition name=".emi.emision.view.emisionViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/emi/emision/emisionViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".emi.emision.view.emisionEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/emi/emision/emisionEditAdapter.jsp"/>
+    </definition>
+     <!-- fin Emision --> 
+	
+	<!-- Emision CdM -->
+    <definition name=".emi.emision.view.procesoEmisionCdMAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/emi/emision/procesoEmisionCdMAdapter.jsp"/>
+    </definition>
+ 	<!-- fin Emision CdM -->
+    
+	<!-- Impresion CdM -->
+    <definition name=".emi.emision.view.procesoImpresionCdMAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/emi/emision/procesoImpresionCdMAdapter.jsp"/>
+    </definition>
+	<!-- fin Impresion CdM -->
+
+	<!-- Emision Cor CdM -->
+    <definition name=".emi.emision.view.procesoEmisionCorCdMAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/emi/emision/procesoEmisionCorCdMAdapter.jsp"/>
+    </definition>
+    <!-- fin Emision Cor CdM -->
+    
+    <!-- Emision Externa -->    
+    <definition name=".emi.emision.view.emisionExternaSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/emi/emision/emisionExternaSearchPage.jsp"/>
+    </definition>
+    
+    <definition name=".emi.emision.view.emisionExternaViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/emi/emision/emisionExternaViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".emi.emision.view.emisionExternaUploadAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/emi/emision/emisionExternaUploadAdapter.jsp"/>
+    </definition>
+        
+    <definition name=".emi.emision.view.procesoEmisionExternaAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/emi/emision/procesoEmisionExternaAdapter.jsp"/>
+    </definition>
+    <!-- Fin Emision Externa -->
+    
+</tiles-definitions>

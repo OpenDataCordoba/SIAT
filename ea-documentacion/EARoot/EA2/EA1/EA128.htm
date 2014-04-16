@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Emisión</title>
+<link href="../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="pageHeader"></div>
+<div class="PageBody">
+	<span class="ObjectTitle">Emisión  : public   package</span>
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">07/08/2007 09:29:52</td>
+		</tr>
+		<tr>
+			<td class="ObjectDetailsTopic">Modified:</td>
+			<td class="ObjectDetailsValue">10/11/2007 09:21:46</td>
+		</tr>
+		<tr style="height: 10px"><td colspan="2"></td></tr>
+		<tr>
+			<td class="ObjectDetailsTopic"><img src="../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td class="ObjectDetailsValue">1.0</td>
+		</tr>
+		<tr id="proj02" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Phase:</td>
+			<td class="ObjectDetailsValue">1.0</td>
+		</tr>
+		<tr id="proj03" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Status:</td>
+			<td class="ObjectDetailsValue">Proposed</td>
+		</tr>
+		<tr id="proj04" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Complexity:</td>
+			<td class="ObjectDetailsValue">Easy</td>
+		</tr>
+		<tr>
+			<td class="ObjectDetailsTopic"><img src="../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">UUID:</td>
+			<td class="ObjectDetailsValue">{29432872-710C-4634-A7E7-A2CD19779C28}</td>
+		</tr>
+		<tr id="adv01" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
+			<td class="ObjectDetailsValue"><a href="EA123.htm">Diagrama de Módulos</a></td>
+		</tr>
+	</table>
+	<div class="ObjectDetailsNotes"><br />El módulo administra todas las emisiones de Deuda de SIAT.<br /><br />Es el que sigue en criticidad. Existen emisiones Masivas, Puntuales y Extraordinarias.<br /><br />Las emisiones Masivas son las que se ejecutan periódicamente para cada tributo. Poseen una serie de pasos predefinidos que se deben ejecutar para todos los tributos. Ellos son: <br /><br />1. Ingreso de parámetros del proceso: Hecho imponible a emitir, Periodo Deuda, Cantidad Períodos a emitir, Fórmula Vencimiento, Atributo Emisión, Formulario Emisión, Genera Notificación<br />2. Bloqueo de entidades afectadas: Bloquea las entidades que intervienen el los proceso de cálculo para evitar la modificación de las mismas mientras dure el proceso.<br />3. Cálculo: Se realiza el cálculo de la emisión. Se obtiene como resultado una distribución de Rubros de Balance (cargos de emisión) para su verificación, Adicionalmente se informan errores que pudieran haber ocurrido.<br />4. Estadísticas: Se genera información estadísticas de totales emitidos por zona, etc.<br />5. Muestreo: Se permite realizar consultas específicas sobre el cálculo realizado en el punto 3.<br />6. Emisión de recibos: Se emiten los recibos de deuda<br />7. Incorporación deuda: Se incorpora la deuda a los padrones<br />8. Generación de archivos para entidades de cobro: Se generan los archivos de PAS/Débito cuando corresponda.<br /> 9. Liberación de entidades bloqueadas: Se liberan las entidades previamente bloqueadas.<br />Las emisiones Individuales, permiten realizar una emisión particular de un Recurso para una Cuenta.<br /><br />La emisión Extraordinaria, está asociada a los valores retroactivos. <br /><br />La forma de implementación es en base a procesos. Por tal motivo existirá información específica e información del proceso.<br /><br />En términos de implementación, existirán emisiones para: TGI, CdM, DReI/Etur, Cementerios, Terminar de Ómnibus, Espectáculos Públicos y Otros Tributos. Dentro de los últimos se incluyen los antiguos Gravámenes Especiales.<br /></div>
+
+<div class="pageFooter"></div>
+ 
+</body>
+</html>

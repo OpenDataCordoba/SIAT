@@ -1,0 +1,5 @@
+tocTab[tocTab.length] = new Array("2.1.4.5:1", "", "Emisión CDM", "EARoot/EA2/EA1/EA4/EA5/EA380.htm", "180.png", "420", "0", "", "Use Case diagram");
+tocTab[tocTab.length] = new Array("2.1.4.5:2", "", "Administrar Anular Obra CdM", "EARoot/EA2/EA1/EA4/EA5/EA382.htm", "7.png", "3500", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.4.5:3", "", "Administrar Emisión CdM", "EARoot/EA2/EA1/EA4/EA5/EA383.htm", "7.png", "2644", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.4.5:4", "", "Administrar Emisión Corregida CdM", "EARoot/EA2/EA1/EA4/EA5/EA384.htm", "7.png", "3498", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.4.5:5", "", "Administrar Impresión CdM", "EARoot/EA2/EA1/EA4/EA5/EA385.htm", "7.png", "3499", "0", "", "UseCase");

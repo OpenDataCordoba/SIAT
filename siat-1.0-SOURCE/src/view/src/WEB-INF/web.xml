@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE web-app
+  PUBLIC "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+  "http://java.sun.com/j2ee/dtds/web-app_2_3.dtd">
+  
+<web-app>
+  <display-name>SIAT</display-name>
+  
+  <listener>	
+    <listener-class>ar.gov.rosario.siat.base.view.util.SiatListener</listener-class>
+  </listener>
+    
+  <error-page>
+    <error-code>404</error-code>
+    <location>/SiatError.do</location>
+  </error-page>
+
+  <error-page>
+    <error-code>500</error-code>
+    <location>/SiatError.do</location>
+  </error-page>
+
+  <!-- Standard Action Servlet Configuration (with debugging) -->
+  <servlet>
+    <servlet-name>action</servlet-name>
+    <servlet-class>
+      org.apache.struts.action.ActionServlet
+    </servlet-class>
+    <init-param>
+      <param-name>config</param-name>
+      <param-value>
+        /WEB-INF/struts-config.xml,
+        /WEB-INF/base/config/struts-config-base.xml,
+        /WEB-INF/seg/config/struts-config-seg.xml,
+        /WEB-INF/def/config/struts-config-def.xml,
+        /WEB-INF/gde/config/struts-config-gde.xml,
+        /WEB-INF/rec/config/struts-config-rec.xml,
+        /WEB-INF/pad/config/struts-config-pad.xml,
+        /WEB-INF/cas/config/struts-config-cas.xml,        
+        /WEB-INF/exe/config/struts-config-exe.xml,
+        /WEB-INF/bal/config/struts-config-bal.xml,
+        /WEB-INF/cyq/config/struts-config-cyq.xml,
+        /WEB-INF/pro/config/struts-config-pro.xml,
+        /WEB-INF/frm/config/struts-config-frm.xml,
+        /WEB-INF/fra/config/struts-config-fra.xml,
+        /WEB-INF/emi/config/struts-config-emi.xml,
+        /WEB-INF/ef/config/struts-config-ef.xml,
+        /WEB-INF/esp/config/struts-config-esp.xml,
+        /WEB-INF/rod/config/struts-config-rod.xml,
+        /WEB-INF/afi/config/struts-config-afi.xml         
+      </param-value>
+    </init-param>
+    <init-param>
+      <param-name>debug</param-name>
+      <param-value>2</param-value>
+    </init-param>
+    <init-param>
+      <param-name>detail</param-name>
+      <param-value>2</param-value>
+    </init-param>
+    <load-on-startup>10</load-on-startup>
+  </servlet>
+
+    
+  <!-- Grs Servlet -->
+  <servlet>
+    <servlet-name>Grs</servlet-name>
+    <servlet-class>
+      coop.tecso.adpcore.grs.GrsServlet
+    </servlet-class>
+    <init-param>
+      <param-name>foo</param-name>
+      <param-value>var</param-value>
+    </init-param>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+
+  <!-- Grs Mapping -->
+  <servlet-mapping>
+    <servlet-name>Grs</servlet-name>
+    <url-pattern>/grs/*</url-pattern>
+  </servlet-mapping>
+  
+  <!-- Standard Action Servlet Mapping -->
+  <servlet-mapping>
+    <servlet-name>action</servlet-name>
+    <url-pattern>*.do</url-pattern>
+  </servlet-mapping>
+  <!-- The Usual Welcome File List -->
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  <!-- Struts Tag Library Descriptors -->
+  <taglib>
+    <taglib-uri>/tags/struts-bean</taglib-uri>
+    <taglib-location>/WEB-INF/tlds/struts-bean.tld</taglib-location>
+  </taglib>
+  <taglib>
+    <taglib-uri>/tags/struts-html</taglib-uri>
+    <taglib-location>/WEB-INF/tlds/struts-html.tld</taglib-location>
+  </taglib>
+  <taglib>
+    <taglib-uri>/tags/struts-logic</taglib-uri>
+    <taglib-location>/WEB-INF/tlds/struts-logic.tld</taglib-location>
+  </taglib>
+  <taglib>
+    <taglib-uri>/tags/struts-nested</taglib-uri>
+    <taglib-location>/WEB-INF/tlds/struts-nested.tld</taglib-location>
+  </taglib>
+  <taglib>
+    <taglib-uri>/tags/struts-tiles</taglib-uri>
+    <taglib-location>/WEB-INF/tlds/struts-tiles.tld</taglib-location>
+  </taglib>
+
+</web-app>

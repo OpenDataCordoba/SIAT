@@ -1,0 +1,8 @@
+tocTab[tocTab.length] = new Array("2.4.4:1", "", "Deuda", "EARoot/EA2/EA4/EA4/EA708.htm", "183.png", "628", "0", "", "Statechart diagram");
+tocTab[tocTab.length] = new Array("2.4.4:2", "", "Anulada (incluye Prescripción y Condonación)", "EARoot/EA2/EA4/EA4/EA710.htm", "20.png", "5173", "0", "", "State");
+tocTab[tocTab.length] = new Array("2.4.4:3", "", "Cancelada", "EARoot/EA2/EA4/EA4/EA711.htm", "20.png", "5171", "0", "", "State");
+tocTab[tocTab.length] = new Array("2.4.4:4", "", "Final", "EARoot/EA2/EA4/EA4/EA712.htm", "69.png", "5172", "0", "", "StateNode");
+tocTab[tocTab.length] = new Array("2.4.4:5", "", "Impaga Administrativa", "EARoot/EA2/EA4/EA4/EA713.htm", "20.png", "5168", "0", "", "State");
+tocTab[tocTab.length] = new Array("2.4.4:6", "", "Impaga Judicial", "EARoot/EA2/EA4/EA4/EA714.htm", "20.png", "5169", "0", "", "State");
+tocTab[tocTab.length] = new Array("2.4.4:7", "", "Inicio", "EARoot/EA2/EA4/EA4/EA715.htm", "68.png", "5167", "0", "", "StateNode");
+tocTab[tocTab.length] = new Array("2.4.4:8", "", "State1", "EARoot/EA2/EA4/EA4/EA716.htm", "20.png", "5174", "0", "", "State");

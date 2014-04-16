@@ -1,0 +1,38 @@
+<Context path="/adpsiat">
+
+  <!-- configuracion -->
+  
+  <!-- nombre del nodo de adp, con este nombre se puede indicar a cada
+  proceso donde correr, si no se define o es vacio, toma el hostname -->
+  <Environment name="/adpcore/engine.node" value="" type="java.lang.String" override="false"/>
+ 
+  <!-- delay en milisegundos que se toma el engine para ejecutar cada 'paso' -->
+  <Environment name="/adpcore/engine.delay" value="1000" type="java.lang.String" override="false"/>
+
+  <!-- frecuencia en pasos de operacion de procesador de directorios pej: si hay un valor de 30, esto siginifica
+  que este procesador se ejecuta cada 30 pasos del engine -->
+  <Environment name="/adpcore/queueProcessor.frecuency" value="30" type="java.lang.String" override="false"/>
+
+  <!-- frecuencia en pasos de operacion de procesador de colas de archivos para ejecucion pej: si hay un valor de 1, esto siginifica
+  que este procesador se ejecuta cada 1 paso del engine -->
+  <Environment name="/adpcore/directoryProcessor.frecuency" value="5" type="java.lang.String" override="false"/>
+
+  <!-- frecuencia en pasos de operacion de procesador de procesos periodicos para ejecucion pej: si hay un valor de 1, esto siginifica
+  que este procesador se ejecuta cada 1 paso del engine -->
+  <Environment name="/adpcore/cronProcessor.frecuency" value="60" type="java.lang.String" override="false"/>
+ 
+  <!-- datasoruces -->
+  <ResourceLink global="jdbc/siat" name="ds/siat"  type="javax.sql.DataSource"/>
+  <ResourceLink global="jdbc/seguridadweb10"  name="ds/seguridadwebdb"  type="javax.sql.DataSource"/>
+  <ResourceLink global="jdbc/swe"  name="ds/swe"  type="javax.sql.DataSource"/>
+  <ResourceLink global="jdbc/gis10"  name="ds/gisdb"  type="javax.sql.DataSource"/>
+  <ResourceLink global="jdbc/genglobal"  name="ds/generaldb" type="javax.sql.DataSource"/>
+  <ResourceLink global="jdbc/indeterminados"  name="ds/indet" type="javax.sql.DataSource"/>
+  <ResourceLink global="jdbc/variosweb"  name="ds/variosweb" type="javax.sql.DataSource"/>  
+  <ResourceLink global="jdbc/gravamenes"  name="ds/gravamenes" type="javax.sql.DataSource"/>
+  <ResourceLink global="jdbc/debitoaut"  name="ds/debitoaut" type="javax.sql.DataSource"/>  
+  <ResourceLink global="jdbc/catastro"   name="ds/catastro" type="javax.sql.DataSource"/>
+  <ResourceLink global="jdbc/rodados"   name="ds/rodados" type="javax.sql.DataSource"/>
+  <ResourceLink global="jdbc/osirisEnvio" name="ds/osirisEnvio" type="javax.sql.DataSource"/>
+
+</Context>

@@ -1,0 +1,2 @@
+tocTab[tocTab.length] = new Array("2.1.2.1:1", "", "Recurso: DReI", "EARoot/EA2/EA1/EA2/EA1/EA280.htm", "180.png", "619", "0", "", "Use Case diagram");
+tocTab[tocTab.length] = new Array("2.1.2.1:2", "", "Administrar Novedades de Régimen Simplificado", "EARoot/EA2/EA1/EA2/EA1/EA282.htm", "7.png", "4863", "0", "", "UseCase");

@@ -1,0 +1,3 @@
+tocTab[tocTab.length] = new Array("3.16:1", "", "seg", "EARoot/EA3/EA16/EA1508.htm", "175.png", "556", "0", "", "Logical diagram");
+tocTab[tocTab.length] = new Array("3.16:2", "", "«table» seg_oficina", "EARoot/EA3/EA16/EA1510.htm", "28.png", "4424", "0", "", "Class");
+tocTab[tocTab.length] = new Array("3.16:3", "", "«table» seg_usuariosiat", "EARoot/EA3/EA16/EA1511.htm", "28.png", "4288", "0", "", "Class");

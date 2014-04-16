@@ -1,0 +1,4 @@
+<Context path="/swe">
+  <ResourceLink global="jdbc/seguridadweb10"  name="ds/seguridadwebdb"  type="javax.sql.DataSource"/>
+  <ResourceLink global="jdbc/swe"  name="ds/swe"  type="javax.sql.DataSource"/>
+</Context>

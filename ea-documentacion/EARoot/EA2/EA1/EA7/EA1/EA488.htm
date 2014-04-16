@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Administrar Solicitudes SIAT </title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="pageHeader"></div>
+<div class="PageBody">
+	<span class="ObjectTitle">Administrar Solicitudes SIAT   : public   usecase</span>
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">04/02/2008 16:19:04</td>
+		</tr>
+		<tr>
+			<td class="ObjectDetailsTopic">Modified:</td>
+			<td class="ObjectDetailsValue">11/02/2008 12:42:46</td>
+		</tr>
+		<tr style="height: 10px"><td colspan="2"></td></tr>
+		<tr>
+			<td class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td class="ObjectDetailsValue">tecso</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td class="ObjectDetailsValue">1.0</td>
+		</tr>
+		<tr id="proj02" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Phase:</td>
+			<td class="ObjectDetailsValue">1.0</td>
+		</tr>
+		<tr id="proj03" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Status:</td>
+			<td class="ObjectDetailsValue">R1</td>
+		</tr>
+		<tr id="proj04" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Complexity:</td>
+			<td class="ObjectDetailsValue">Easy</td>
+		</tr>
+		<tr>
+			<td class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">UUID:</td>
+			<td class="ObjectDetailsValue">{E2994EA2-3B19-4462-A593-BB08A21532F3}</td>
+		</tr>
+		<tr id="adv01" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
+			<td class="ObjectDetailsValue"><a href="EA486.htm">Diagrama de  Solicitudes SIAT</a></td>
+		</tr>
+	</table>
+	<div class="ObjectDetailsNotes">Este CU tiene como objetivo la administración de Solicitudes de acciones entre áreas. Estas solicitudes pueden ser:<br /> 1. Anulaciones de períodos de deuda  (Destino: Dpto. Emisión)<br /> 2. Retroactivos de períodos de deuda (Destino: Dpto. Emisión)<br /> 3. Condonaciones de períodos de deuda (Destino: Dpto. Emisión)<br /> 4. Liberaciones de períodos de deuda (Destino: Dpto. Emisión)<br /> 5. Verificar exencion de una cuenta (Destino: Dpto. Exención)<br /> 6. Asignación de broche a una cuenta (Destino: Dpto. Emisión)<br /> 7. Verificar cuenta para caso social  (Destino: Dpto. Judiciales)<br /> 8. Modificación de datos (Destino: Dpto. Emisión)<br />Nota: En todos los casos, cada tipo de solicitud tiene asociada un área  destino.<br />Las solicitudes podrán generarse de forma automática (caso: recepción de novedades de catastro) o con la intervención de un usuario.</div>
+
+	<div class="TableGroup" id="TableGroup">
+		<ul class="ItemTitle">
+			<li onClick="parent.toggleItem('AssociationsFrom');" id="AssociationsFromTitle">Associations From</li>
+			<li onClick="parent.toggleItem('Scenario');" id="ScenarioTitle">Scenarios</li>
+			<li onClick="parent.toggleItem('Links');" id="LinksTitle">Other Links</li>
+		</ul>
+		<div class="ItemBody" id="AssociationsFromTable">
+			<table border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="20%" class="TableHeading">Element</td>
+					<td width="25%" class="TableHeading">Source Role</td>
+					<td width="25%" class="TableHeading">Target Role</td>
+					<td width="30%" class="TableHeading">Details</td>
+				</tr>
+				<tr>
+					<td width="20%" class="TableRow" valign="top">
+						<a href="../../../EA3/EA661.htm">Usuario SIAT</a><br />
+						Actor &nbsp;
+					</td>
+					<td width="20%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;
+					</td>
+					<td width="20%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;	
+					</td>
+					<td width="30%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+
+			</table>
+		</div>
+		<div class="ItemBody" id="ScenarioTable">
+			<table align="center" border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="24%" class="TableHeading">Scenario</td>
+					<td width="8%" class="TableHeading">Type</td>
+					<td width="68%" class="TableHeading">Detail</td>
+				</tr>
+				<tr>
+					<td width="24%" class="TableRow">Buscar Solicitud </td>
+					<td width="8%" class="TableRow">Alternate</td>
+					<td width="68%" class="TableRow"><div class="ObjectDetailsNotes">Permite consultar las Solicitudes disponibles en el SIAT por:<br /> . Area Origen<br /> . Area Destino<br /> . Fecha Desde<br /> . Fecha Hasta<br /> . Número<br /> . Estado<br /><br />Si existen resultados se muestra de cada uno de los registros: Fecha, Area Origen, Area Destino,  Asunto, Estado y las acciones asociadas: &quot;Ver Solicitud&quot;, &quot;Modificar Solicitud&quot;, &quot;Cambiar Estado&quot;, &quot;Eliminar Solicitud&quot;<br /><br />Para agregar una nueva Solicitud, existe la opción &quot;Agregar Solicitud&quot;.<br /><br />Independientemente de los controles de seguridad habitualmente imlementados por SIAT, para este caso, existen las siguientes restricciones:<br /><br />. Para Modificar una Solicitud: el usuario logueado deberá ser el mismo usuario que realizó el alta de la solicitud y además la solicitud deberá estar en estado Pendiente.<br /><br />. Para Eliminar una Solicitud: Idem.<br /><br />. Para Cambiar el estado de una solicitud: el área del usuario logueado coincida con el área destino de la solicitud.<br /><br /><br /></div>
+</td>
+				</tr>
+				<tr>
+					<td width="24%" class="TableRow">Agregar Solicitud</td>
+					<td width="8%" class="TableRow">Alternate</td>
+					<td width="68%" class="TableRow"><div class="ObjectDetailsNotes">Para crear una nueva solicitud, el sistema presentará un formulario como se detalla a continuación:<br /><br />- Area Origen: Descripción (solo lectura) del área correspondiente al usuario logueado<br />- Usuario Alta: Descripción (solo lectura) del usuario logueado<br /><br />- Fecha Solicitud<br />- Tipo Solicitud: El sistema presenta una lista de los Tipos de Solicitud existentes junto con la descripción del área destino correspondiente al Tipo. (concatenado en el combo)<br />- Asunto<br />- Descripción<br /><br />- Cuenta: El sistema permite realizar una búsqueda de cuentas.<br /><br /><br />Cuando al usuario completa el formulario, el sistema recupera los datos ingresados e invoca al CU del siguiente modo:<br /><br /> . ID: lo genera automáticamente<br /> . fecha Alta: fecha ingresada por el usuario<br /> . Area Origen: área correspondiente al usuario logueado<br /> . Usuario Alta: usuario logueado<br /> . Tipo Solicitud: tipo ingresado por el usuario<br /> . Area Destino: area correspondiente al Tipo Solicitud ingresado por el usuario.<br /> . asunto: ingresado por el usuario<br /> . descripción: ingresada por el usuario<br /> . Cuenta: ingresada por el usuario (no requerido)<br /> . Estado: Pendiente<br /><br /> . logSolicitud:  &quot;Creada - Pendiente - Fecha - Usuario&quot;<br />   Nota: logSolicitud es una observación donde se concatenan las acciones logueadas.<br /><br /><br />Luego invoca al CU: Alta Solicitud.<br /></div>
+</td>
+				</tr>
+				<tr>
+					<td width="24%" class="TableRow">Eliminar Solicitud</td>
+					<td width="8%" class="TableRow">Alternate</td>
+					<td width="68%" class="TableRow"><div class="ObjectDetailsNotes">El sistema visualiza un formulario con los datos de la solicitud y permite eliminarla.<br /><br />Nota: Esta opción solo estará disponible siempre y cuando el usuario logueado sea el mismo usuario que realizaó el alta de la solicitud y la solicitud se encuetre en estado Pendiente.<br /></div>
+</td>
+				</tr>
+				<tr>
+					<td width="24%" class="TableRow">Modificar Solicitud</td>
+					<td width="8%" class="TableRow">Alternate</td>
+					<td width="68%" class="TableRow"><div class="ObjectDetailsNotes">El sistema visualiza el mismo formulario que en el caso del alta y permite modificarlo.<br /><br />Nota: Esta opción solo estará disponible siempre y cuando el usuario logueado sea el mismo usuario que realizaó el alta de la solicitud y la solicitud se encuetre en estado Pendiente.<br /></div>
+</td>
+				</tr>
+				<tr>
+					<td width="24%" class="TableRow">Cambiar estado Solicitud</td>
+					<td width="8%" class="TableRow">Alternate</td>
+					<td width="68%" class="TableRow"><div class="ObjectDetailsNotes">El sistema presenta un formulario con los datos de la solicitud. (incluido el campo de log)<br /><br />El sistema permite ingresar:<br /><br /> - Estado (Aceptado/Rechazado)<br /> - Observaciones<br /><br />El usuario debe seleccionar el estado e indicar las observaciones que crea convenientes.<br /><br />El sistema actualiza le cambio de estado y agrega el registro de los a logSolicitud:<br />   . logSolicitud:  &quot;Cambio Estado - Nuevo Estado - Fecha - Usuario&quot;<br /><br /><br />Nota: Para poder realizarse un cambio de estado, el área destino de la solicitud debe coincidir con el área del usuario logueado.<br /> <br /><br /><br /></div>
+</td>
+				</tr>
+
+			</table>
+		</div>
+		<div class="ItemBody" id="LinksTable">
+			<table align="center" border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="30%" class="TableHeading">Object</td>
+					<td width="15%" class="TableHeading">Type</td>
+					<td width="15%" class="TableHeading">Connection</td>
+					<td width="40%" class="TableHeading">Notes</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="./EA1/EA490.htm">Alta Solicitud</a></td>
+					<td width="15%" class="TableRow" valign="top">UseCase</td>
+					<td width="15%" class="TableRow" valign="top">Includes</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+
+			</table>
+		</div>
+	</div>
+<div class="pageFooter"></div>
+ 
+</body>
+</html>

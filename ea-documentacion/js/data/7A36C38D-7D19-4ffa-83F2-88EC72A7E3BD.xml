@@ -1,0 +1,4 @@
+tocTab[tocTab.length] = new Array("1.2:1", "", "efiscal", "EARoot/EA1/EA2/EA28.htm", "188.png", "252", "0", "", "Custom diagram");
+tocTab[tocTab.length] = new Array("1.2:2", "", "«Functional» 80- Planificar y gestionar operativos de fiscalización.", "EARoot/EA1/EA2/EA30.htm", "19.png", "1333", "0", "", "Requirement");
+tocTab[tocTab.length] = new Array("1.2:3", "", "«Functional» 81- Generar y gestionar órdenes de control fiscal.", "EARoot/EA1/EA2/EA31.htm", "19.png", "1334", "0", "", "Requirement");
+tocTab[tocTab.length] = new Array("1.2:4", "", "«Functional» 82- Registrar determinaciones de ajustes en las cuentas corrientes de los contribuyentes.", "EARoot/EA1/EA2/EA32.htm", "19.png", "1335", "0", "", "Requirement");

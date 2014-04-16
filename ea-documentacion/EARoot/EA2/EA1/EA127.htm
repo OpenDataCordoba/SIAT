@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Exenciones</title>
+<link href="../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="pageHeader"></div>
+<div class="PageBody">
+	<span class="ObjectTitle">Exenciones  : public   package</span>
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">07/08/2007 09:28:05</td>
+		</tr>
+		<tr>
+			<td class="ObjectDetailsTopic">Modified:</td>
+			<td class="ObjectDetailsValue">30/04/2013 15:27:55</td>
+		</tr>
+		<tr style="height: 10px"><td colspan="2"></td></tr>
+		<tr>
+			<td class="ObjectDetailsTopic"><img src="../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td class="ObjectDetailsValue">1.0</td>
+		</tr>
+		<tr id="proj02" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Phase:</td>
+			<td class="ObjectDetailsValue">1.0</td>
+		</tr>
+		<tr id="proj03" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Status:</td>
+			<td class="ObjectDetailsValue">Proposed</td>
+		</tr>
+		<tr id="proj04" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Complexity:</td>
+			<td class="ObjectDetailsValue">Easy</td>
+		</tr>
+		<tr>
+			<td class="ObjectDetailsTopic"><img src="../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">UUID:</td>
+			<td class="ObjectDetailsValue">{146DE630-2802-4d1a-A74E-21560B418FA6}</td>
+		</tr>
+		<tr id="adv01" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
+			<td class="ObjectDetailsValue"><a href="EA123.htm">Diagrama de Módulos</a></td>
+		</tr>
+	</table>
+	<div class="ObjectDetailsNotes"><br />El objetivo del módulo es administrar las exenciones que rigen en el ámbito de SIAT. <br /><br />Conceptualmente, una Exención podría tener un efecto sobre la emisión, sobre la actualización de deuda ya generada o sobre el envío de deuda a gestión judicial.<br /><br /><br />Desde el punto de vista de la emisión, puede representar una reducción total o parcial, expresada en términos de un porcentaje o un monto fijo sobre uno o varios concepto de emisión.<br /><br />Desde el punto de vista de la gestión de la deuda, podríamos nombrar el ejemplo del Caso Social. Una cuenta que posea una excepción por Caso Social no podrá ser enviada a gestión judicial ni se actualizarán valores vencidos. Como otro ejemplo, podríamos considerar las cuentas de DPVyU y SPV. En dichos casos, las cuentas no deben ser enviadas a gestión judicial.<br /><br />Una Exención, en su definición, posee asociados los Conceptos sobre los cuales aplica, las Resoluciones que admite y, opcionalmente, algún atributo valorizado que  restringe la aplicación de la Exención. Un ejemplo de su uso sería el caso de alguna exención que solo sea válida para las cuentas de DReI que poseen algún o algunos rubros particulares.<br /><br />Cuando un Contribuyente realiza una Solicitud de Exención, o cuando algún organismo Municipal actúa de oficio en este sentido, se inicia un expediente a través del cual se reflejarán distintas actuaciones. En los casos que sea necesario, se podrán ir registrando las distintas resoluciones. <br /><br />Cuando una Solicitud de Exención recibe una Resolución que habilita la Exención, se registra en el SIAT junto con la vigencia correspondiente. <br /><br /></div>
+
+<div class="pageFooter"></div>
+ 
+</body>
+</html>

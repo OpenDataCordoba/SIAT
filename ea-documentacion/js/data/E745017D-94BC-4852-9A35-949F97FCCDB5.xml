@@ -1,0 +1,4 @@
+tocTab[tocTab.length] = new Array("2.1.2.5.1:1", "", "Obtener Broche Repartidor Fuera de Zona", "EARoot/EA2/EA1/EA2/EA5/EA1/EA310.htm", "7.png", "3888", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.2.5.1:2", "", "Asignar Broche a Cuenta", "EARoot/EA2/EA1/EA2/EA5/EA1/EA311.htm", "7.png", "3890", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.2.5.1:3", "", "Asignar Broche/Repartidor (emision)", "EARoot/EA2/EA1/EA2/EA5/EA1/EA312.htm", "7.png", "3845", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.2.5.1:4", "", "Cambiar Broche a Cuenta", "EARoot/EA2/EA1/EA2/EA5/EA1/EA313.htm", "7.png", "3892", "0", "", "UseCase");

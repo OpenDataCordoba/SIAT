@@ -1,0 +1,1805 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC 
+"-//Apache Software Foundation//DTD Struts Configuration 1.2//EN"  
+"[WWW] http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+	<form-beans>
+	    <form-bean name="sistemaSearchPage" type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="sistemaAdapter"    type="org.apache.struts.action.DynaActionForm"/>
+
+	    <form-bean name="tipoIndetSearchPage" type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="tipoIndetAdapter"    type="org.apache.struts.action.DynaActionForm"/>
+		
+		<form-bean name="deudaReclamadaAdapter"    type="org.apache.struts.action.DynaActionForm"/>
+		
+		<form-bean name="disParSearchPage"    type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="disParAdapter"    	  type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="disParDetAdapter"    type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="disParRecSearchPage" type="org.apache.struts.action.DynaActionForm"/>		
+		<form-bean name="disParRecAdapter"    type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="disParPlaSearchPage" type="org.apache.struts.action.DynaActionForm"/>		
+		<form-bean name="disParPlaAdapter"    type="org.apache.struts.action.DynaActionForm"/>
+		
+		<form-bean name="selladoSearchPage" type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="selladoAdapter"    type="org.apache.struts.action.DynaActionForm"/>
+		
+		<form-bean name="impSelAdapter"        type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="accionSelladoAdapter" type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="parSelAdapter"        type="org.apache.struts.action.DynaActionForm"/>
+		
+		<form-bean name="asentamientoSearchPage"    	type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="asentamientoAdapter"    		type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="procesoAsentamientoAdapter"    type="org.apache.struts.action.DynaActionForm"/>
+	    <form-bean name="corridaProcesoAsentamientoAdapter" type="org.apache.struts.action.DynaActionForm"/>            
+
+		<form-bean name="aseDelSearchPage"    	type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="aseDelAdapter"    		type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="procesoAseDelAdapter"    type="org.apache.struts.action.DynaActionForm"/>
+	    <form-bean name="corridaProcesoAseDelAdapter" type="org.apache.struts.action.DynaActionForm"/>            
+		    
+		<form-bean name="ejercicioAdapter"    	 type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="ejercicioSearchPage"    type="org.apache.struts.action.DynaActionForm"/>
+		
+		<form-bean name="partidaAdapter"    	 type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="partidaSearchPage"      type="org.apache.struts.action.DynaActionForm"/>			
+		
+		<form-bean name="reclamoAdapter"    	 type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="reclamoSearchPage"      type="org.apache.struts.action.DynaActionForm"/>					
+		
+		<form-bean name="nodoAdapter"    	  	type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="nodoSearchPage"    	type="org.apache.struts.action.DynaActionForm"/>			
+		<form-bean name="relPartidaAdapter"  	type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="relClaAdapter"   	 	type="org.apache.struts.action.DynaActionForm"/>
+		
+		<form-bean name="saldoAFavorAdapter"    	 type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="saldoAFavorSearchPage"      type="org.apache.struts.action.DynaActionForm"/>
+								
+		<form-bean name="cuentaBancoAdapter"    	 type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="cuentaBancoSearchPage"      type="org.apache.struts.action.DynaActionForm"/>	
+		<form-bean name="parCueBanAdapter"           type="org.apache.struts.action.DynaActionForm"/>			
+		
+		<form-bean name="tipCueBanAdapter"    	   type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="tipCueBanSearchPage"      type="org.apache.struts.action.DynaActionForm"/>		
+		
+		
+		<form-bean name="otrIngTesSearchPage"    type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="otrIngTesAdapter"    	type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="otrIngTesParAdapter"    type="org.apache.struts.action.DynaActionForm"/>
+		
+		<form-bean name="balanceSearchPage"    	type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="balanceAdapter"    		type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="procesoBalanceAdapter"    type="org.apache.struts.action.DynaActionForm"/>
+	    <form-bean name="corridaProcesoBalanceAdapter" type="org.apache.struts.action.DynaActionForm"/>            
+		<form-bean name="caja7Adapter"    	   type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="caja69Adapter"    	   type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="tranBalAdapter"       type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="tranBalSearchPage" type="org.apache.struts.action.DynaActionForm"/>		
+				
+		<form-bean name="clasificadorReport" type="org.apache.struts.action.DynaActionForm"/>
+		
+		<form-bean name="claComReport" type="org.apache.struts.action.DynaActionForm"/>
+		
+		<form-bean name="rentasReport" type="org.apache.struts.action.DynaActionForm"/>
+		
+		<form-bean name="indetSearchPage"      type="org.apache.struts.action.DynaActionForm"/>					
+		<form-bean name="indetAdapter"     	   type="org.apache.struts.action.DynaActionForm"/>					
+		
+		<form-bean name="archivoAdapter"    	 type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="archivoSearchPage"    type="org.apache.struts.action.DynaActionForm"/>
+		
+		<form-bean name="folioSearchPage"    type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="folioAdapter"    	  type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="folComAdapter"    type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="folDiaCobAdapter"    type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="folDiaCobSearchPage"    type="org.apache.struts.action.DynaActionForm"/>
+				
+		<form-bean name="tipoComAdapter"    	 type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="tipoComSearchPage"      type="org.apache.struts.action.DynaActionForm"/>	
+		
+		<form-bean name="clasificadorAdapter"    	 type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="clasificadorSearchPage"      type="org.apache.struts.action.DynaActionForm"/>	
+		
+		<form-bean name="compensacionSearchPage"    type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="compensacionAdapter"       type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="comDeuAdapter"  		    type="org.apache.struts.action.DynaActionForm"/>
+
+		<form-bean name="dupliceSearchPage"      type="org.apache.struts.action.DynaActionForm"/>					
+		<form-bean name="dupliceAdapter"     	 type="org.apache.struts.action.DynaActionForm"/>					
+		
+		<form-bean name="reingresoAdapter"     	 type="org.apache.struts.action.DynaActionForm"/>					
+		
+		<form-bean name="tipoCobAdapter"    	 type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="tipoCobSearchPage"      type="org.apache.struts.action.DynaActionForm"/>	
+		
+		<form-bean name="auxCaja7SearchPage"      type="org.apache.struts.action.DynaActionForm"/>	
+		<form-bean name="auxCaja7Adapter"    	  type="org.apache.struts.action.DynaActionForm"/>
+		
+		<form-bean name="indetReingSearchPage"      type="org.apache.struts.action.DynaActionForm"/>					
+		<form-bean name="indetReingAdapter"    	   type="org.apache.struts.action.DynaActionForm"/>					
+		
+		<form-bean name="leyParAcuAdapter"    	 type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="leyParAcuSearchPage"    type="org.apache.struts.action.DynaActionForm"/>
+		
+		<form-bean name="consultaNodoSearchPage" type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="controlConciliacionSearchPage" type="org.apache.struts.action.DynaActionForm"/>
+		
+		<form-bean name="totalParReport" type="org.apache.struts.action.DynaActionForm"/>
+		
+		<form-bean name="envioOsirisAdapter"    type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="envioOsirisSearchPage" type="org.apache.struts.action.DynaActionForm"/>
+		
+		<form-bean name="cierreBancoAdapter"    type="org.apache.struts.action.DynaActionForm"/>		
+		<form-bean name="tranAfipAdapter"    	type="org.apache.struts.action.DynaActionForm"/>
+		
+		<form-bean name="detalleDJAdapter"    type="org.apache.struts.action.DynaActionForm"/>		
+		<form-bean name="detallePagoAdapter"  type="org.apache.struts.action.DynaActionForm"/>
+		
+		<form-bean name="conciliacionAdapter"    type="org.apache.struts.action.DynaActionForm"/>		
+		
+		<form-bean name="movBanAdapter"    		 type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="movBanSearchPage"       type="org.apache.struts.action.DynaActionForm"/>	
+		<form-bean name="movBanDetAdapter"       type="org.apache.struts.action.DynaActionForm"/>							
+
+		<form-bean name="cierreBancoSearchPage" type="org.apache.struts.action.DynaActionForm"/>
+	</form-beans>
+
+	<action-mappings>
+
+		<!-- Mantenedor de Indet -->	    
+	    <action
+	    	path="/bal/BuscarIndet"
+	        type="ar.gov.rosario.siat.bal.view.struts.BuscarIndetDAction"
+			scope="request"
+	       	validate="false"
+	        name="indetSearchPage"
+	        parameter="method"
+	   		input=".bal.view.indetSearchPage"
+	        attribute="indetSearchPage">
+	           
+	   	    <forward name="indetSearchPage"   	path=".bal.view.indetSearchPage" />
+	   	    <forward name="administrarIndet" 	path="/bal/AdministrarIndet.do?method=inicializar" />
+	    </action>
+		
+		<action
+     		path="/bal/AdministrarIndet"
+	        type="ar.gov.rosario.siat.bal.view.struts.AdministrarIndetDAction"
+		    scope="request"
+        	validate="false"
+	        name="indetAdapter"
+            parameter="method"
+    	    input=".bal.view.indetEditAdapter"
+	        attribute="indetAdapter">
+              
+    	    <forward name="indetViewAdapter"		path=".bal.view.indetViewAdapter" />
+    	    <forward name="indetEditAdapter"      path=".bal.view.indetEditAdapter" />
+  	   	    <forward name="administrarReclamo"   path="/bal/AdministrarReclamo.do?method=inicializar"/>	  
+       	    <forward name="indetGenSaldoAFavorAdapter"    path=".bal.view.indetGenSaldoAFavorAdapter" />      
+       	    <forward name="buscarCuenta" 		   path="/pad/BuscarCuenta.do?method=inicializar" />
+	    </action>
+
+	    <action
+	    	path="/bal/BuscarIndetMasivo"
+	        type="ar.gov.rosario.siat.bal.view.struts.BuscarIndetMasivoDAction"
+			scope="request"
+	       	validate="false"
+	        name="indetSearchPage"
+	        parameter="method"
+	   		input=".bal.view.indetMasivoSearchPage"
+	        attribute="indetSearchPage">
+	           
+	   	    <forward name="indetMasivoSearchPage"   	path=".bal.view.indetMasivoSearchPage" />
+   	   	    <forward name="indetMasivoReingreso"   		path=".bal.view.indetMasivoReingreso" />
+	    </action>
+	    <!-- Fin Mantenedor de Indet -->
+		
+		<!-- Mantenedor de Sistema -->	    
+	    <action
+	    	path="/bal/BuscarSistema"
+	        type="ar.gov.rosario.siat.bal.view.struts.BuscarSistemaDAction"
+			scope="request"
+	       	validate="false"
+	        name="sistemaSearchPage"
+	        parameter="method"
+	   		input=".bal.view.sistemaSearchPage"
+	        attribute="sistemaSearchPage">
+	           
+	   	    <forward name="sistemaSearchPage"   	path=".bal.view.sistemaSearchPage" />
+	   	    <forward name="administrarSistema" 		path="/bal/AdministrarSistema.do?method=inicializar" />
+	    </action>
+		
+		<action
+     		path="/bal/AdministrarSistema"
+	        type="ar.gov.rosario.siat.bal.view.struts.AdministrarSistemaDAction"
+		    scope="request"
+        	validate="false"
+	        name="sistemaAdapter"
+            parameter="method"
+    	    input=".bal.view.sistemaEditAdapter"
+	        attribute="sistemaAdapter">
+              
+    	    <forward name="sistemaViewAdapter"		path=".bal.view.sistemaViewAdapter" />
+    	    <forward name="sistemaEditAdapter"      path=".bal.view.sistemaEditAdapter" />
+	    </action>
+	    <!-- Fin Mantenedor de Sistema -->
+	    
+	    <!-- Administrar Deuda Reclamada (SINC) -->
+	    <action
+     		path="/bal/AdministrarDeudaReclamada"
+	        type="ar.gov.rosario.siat.bal.view.struts.AdministrarDeudaReclamadaDAction"
+		    scope="request"
+        	validate="false"
+	        name="deudaReclamadaAdapter"
+            parameter="method"
+    	    input=".bal.reclamo.view.deudaReclamadaIngresoAdapter"
+	        attribute="deudaReclamadaAdapter">
+            
+    	    <forward name="deudaReclamadaIngresoAdapter"		path=".bal.reclamo.view.deudaReclamadaIngresoAdapter" />
+    	    <forward name="deudaReclamadaAdapter"       		path=".bal.reclamo.view.deudaReclamadaAdapter" />
+    	    <forward name="buscarCuenta" 						path="/pad/BuscarCuenta.do?method=inicializar" />
+	    </action>
+	    <!-- Fin Administrar Deuda Reclamada (SINC) -->
+	    
+	   	<!-- Mantenedor DisPar-->
+	    <action
+	    	path="/bal/BuscarDisPar"
+	        type="ar.gov.rosario.siat.bal.view.struts.BuscarDisParDAction"
+		    scope="request"
+	       	validate="false"
+	        name="disParSearchPage"
+	        parameter="method"
+	   	    input=".bal.distribucion.view.disParSearchPage"
+	        attribute="disParSearchPage">
+	        
+	   	    <forward name="administrarEncDisPar" 	path="/bal/AdministrarEncDisPar.do?method=inicializar" />	        
+	   	    <forward name="disParSearchPage"    	path=".bal.distribucion.view.disParSearchPage" />
+	   	    <forward name="administrarDisPar" 	    path="/bal/AdministrarDisPar.do?method=inicializar" />
+   	    	<forward name="disParRecSearchPage"    	path="/bal/BuscarDisParRec.do?method=inicializar" />
+   	    	<forward name="disParPlaSearchPage"    	path="/bal/BuscarDisParPla.do?method=inicializar" />
+	    </action>
+		
+		<action
+     		path="/bal/AdministrarDisPar"
+	        type="ar.gov.rosario.siat.bal.view.struts.AdministrarDisParDAction"
+		    scope="request"
+        	validate="false"
+	        name="disParAdapter"
+            parameter="method"
+    	    input=".bal.distribucion.view.disParAdapter"
+	        attribute="disParAdapter">
+
+    	    <forward name="disParViewAdapter"  	  path=".bal.distribucion.view.disParViewAdapter" />
+    	    <forward name="disParAdapter"         path=".bal.distribucion.view.disParAdapter" />
+     	    <forward name="administrarEncDisPar"  path="/bal/AdministrarEncDisPar.do?method=inicializar" />
+    	    <forward name="administrarDisParDet"  path="/bal/AdministrarDisParDet.do?method=inicializar" />
+	   	</action>
+	    
+		<action
+     		path="/bal/AdministrarEncDisPar"
+	        type="ar.gov.rosario.siat.bal.view.struts.AdministrarEncDisParDAction"
+		    scope="request"
+        	validate="false"
+	        name="disParAdapter"
+            parameter="method"
+    	    input=".bal.distribucion.view.disParEncEditAdapter"
+	        attribute="disParAdapter">
+
+    	    <forward name="disParEncEditAdapter"     path=".bal.distribucion.view.disParEncEditAdapter" />
+	    </action>
+	    
+	    <action
+     		path="/bal/AdministrarDisParDet"
+	        type="ar.gov.rosario.siat.bal.view.struts.AdministrarDisParDetDAction"
+		    scope="request"
+        	validate="false"
+	        name="disParDetAdapter"
+            parameter="method"
+    	    input=".bal.distribucion.view.disParDetEditAdapter"
+	        attribute="disParDetAdapter">
+            
+    	    <forward name="disParDetViewAdapter"      path=".bal.distribucion.view.disParDetViewAdapter" />
+    	    <forward name="disParDetEditAdapter"      path=".bal.distribucion.view.disParDetEditAdapter" />
+	    </action>
+
+        <action
+	    	path="/bal/BuscarDisParRec"
+	        type="ar.gov.rosario.siat.bal.view.struts.BuscarDisParRecDAction"
+		    scope="request"
+	       	validate="false"
+	        name="disParRecSearchPage"
+	        parameter="method"
+	   	    input=".bal.distribucion.view.disParRecSearchPage"
+	        attribute="disParRecSearchPage">
+	        
+	   	    <forward name="disParRecSearchPage"    	path=".bal.distribucion.view.disParRecSearchPage" />
+	   	    <forward name="administrarDisParRec" 	path="/bal/AdministrarDisParRec.do?method=inicializar" />
+	    </action>
+	    
+	    <action
+     		path="/bal/AdministrarDisParRec"
+	        type="ar.gov.rosario.siat.bal.view.struts.AdministrarDisParRecDAction"
+		    scope="request"
+        	validate="false"
+	        name="disParRecAdapter"
+            parameter="method"
+    	    input=".bal.distribucion.view.disParRecEditAdapter"
+	        attribute="disParRecAdapter">
+            
+    	    <forward name="disParRecViewAdapter"      path=".bal.distribucion.view.disParRecViewAdapter" />
+    	    <forward name="disParRecEditAdapter"      path=".bal.distribucion.view.disParRecEditAdapter" />
+			<forward name="buscarDisParRec" 	      path="/bal/BuscarDisParRec.do?method=buscar" /> 
+	    </action>
+	    
+        <action
+	    	path="/bal/BuscarDisParPla"
+	        type="ar.gov.rosario.siat.bal.view.struts.BuscarDisParPlaDAction"
+		    scope="request"
+	       	validate="false"
+	        name="disParPlaSearchPage"
+	        parameter="method"
+	   	    input=".bal.distribucion.view.disParPlaSearchPage"
+	        attribute="disParPlaSearchPage">
+	        
+	   	    <forward name="disParPlaSearchPage"    	path=".bal.distribucion.view.disParPlaSearchPage" />
+	   	    <forward name="administrarDisParPla" 	path="/bal/AdministrarDisParPla.do?method=inicializar" />
+	    </action>
+	    
+	    <action
+     		path="/bal/AdministrarDisParPla"
+	        type="ar.gov.rosario.siat.bal.view.struts.AdministrarDisParPlaDAction"
+		    scope="request"
+        	validate="false"
+	        name="disParPlaAdapter"
+            parameter="method"
+    	    input=".bal.distribucion.view.disParPlaEditAdapter"
+	        attribute="disParPlaAdapter">
+            
+    	    <forward name="disParPlaViewAdapter"      path=".bal.distribucion.view.disParPlaViewAdapter" />
+    	    <forward name="disParPlaEditAdapter"      path=".bal.distribucion.view.disParPlaEditAdapter" />
+			<forward name="buscarDisParPla" 	      path="/bal/BuscarDisParPla.do?method=buscar" /> 
+	    </action>	    
+		<!-- Fin Mantenedor DisPar-->
+	    
+ 
+		<!-- Mantenedor de Sellado -->
+	    <action
+	    	path="/bal/BuscarSellado"
+	        type="ar.gov.rosario.siat.bal.view.struts.BuscarSelladoDAction"
+			scope="request"
+	       	validate="false"
+	        name="selladoSearchPage"
+	        parameter="method"
+	   		input=".bal.view.selladoSearchPage"
+	        attribute="selladoSearchPage">
+	           
+	   	    <forward name="selladoSearchPage"   	path=".bal.view.selladoSearchPage" />
+	   	    <forward name="administrarSellado" 		path="/bal/AdministrarSellado.do?method=inicializar" />
+  	   	    <forward name="administrarEncSellado" 	path="/bal/AdministrarEncSellado.do?method=inicializar" />
+	    </action>
+		
+		<action
+     		path="/bal/AdministrarEncSellado"
+	        type="ar.gov.rosario.siat.bal.view.struts.AdministrarEncSelladoDAction"
+		    scope="request"
+        	validate="false"
+	        name="selladoAdapter"
+            parameter="method"
+    	    input=".bal.view.selladoEncEditAdapter"
+	        attribute="selladoAdapter">
+
+    	    <forward name="selladoEncEditAdapter"     path=".bal.view.selladoEncEditAdapter" />
+	    </action>
+	    
+		<action
+     		path="/bal/AdministrarSellado"
+	        type="ar.gov.rosario.siat.bal.view.struts.AdministrarSelladoDAction"
+		    scope="request"
+        	validate="false"
+	        name="selladoAdapter"
+            parameter="method"
+    	    input=".bal.view.selladoEditAdapter"
+	        attribute="SelladoAdapter">
+              
+       	    <forward name="selladoViewAdapter"         path=".bal.view.selladoViewAdapter" />
+    	    <forward name="selladoEditAdapter"         path=".bal.view.selladoEditAdapter" />
+    	    <forward name="selladoAdapter"             path=".bal.view.selladoAdapter" />
+       	    <forward name="administrarEncSellado"      path="/bal/AdministrarEncSellado.do?method=inicializar" />
+       	    <forward name="administrarImpSel"  		   path="/bal/AdministrarImpSel.do?method=inicializar" />
+		    <forward name="administrarAccionSellado"   path="/bal/AdministrarAccionSellado.do?method=inicializar" />
+   		    <forward name="administrarParSel"  		   path="/bal/AdministrarParSel.do?method=inicializar" />
+	    </action>
+	    
+		<action
+     		path="/bal/AdministrarImpSel"
+	        type="ar.gov.rosario.siat.bal.view.struts.AdministrarImpSelDAction"
+		    scope="request"
+        	validate="false"
+	        name="impSelAdapter"
+            parameter="method"
+    	    input=".bal.view.impSelEditAdapter"
+	        attribute="impSelAdapter">
+              
+    	    <forward name="impSelEditAdapter"   path=".bal.view.impSelEditAdapter" />
+    	    <forward name="impSelViewAdapter"   path=".bal.view.impSelViewAdapter" />
+	    </action>	   
+	    
+	 	<action
+     		path="/bal/AdministrarAccionSellado"
+	        type="ar.gov.rosario.siat.bal.view.struts.AdministrarAccionSelladoDAction"
+		    scope="request"
+        	validate="false"
+	        name="accionSelladoAdapter"
+            parameter="method"
+    	    input=".bal.view.accionSelladoEditAdapter"
+	        attribute="accionSelladoAdapter">
+              
+    	    <forward name="accionSelladoEditAdapter"   path=".bal.view.accionSelladoEditAdapter" />
+    	    <forward name="accionSelladoViewAdapter"   path=".bal.view.accionSelladoViewAdapter" />
+	    </action>
+	    
+	    <action
+     		path="/bal/AdministrarParSel"
+	        type="ar.gov.rosario.siat.bal.view.struts.AdministrarParSelDAction"
+		    scope="request"
+        	validate="false"
+	        name="parSelAdapter"
+            parameter="method"
+    	    input=".bal.view.parSelEditAdapter"
+	        attribute="parSelAdapter">
+        
+            <forward name="parSelEditAdapter"          path=".bal.view.parSelEditAdapter" />      
+    	    <forward name="parSelViewAdapter"		   path=".bal.view.parSelViewAdapter" />
+    	 </action>	     
+	    	     
+		<!-- Fin Mantenedor de Sellado -->	    
+
+	   	<!-- Mantenedor Asentamiento-->
+	    <action
+	    	path="/bal/BuscarAsentamiento"
+	        type="ar.gov.rosario.siat.bal.view.struts.BuscarAsentamientoDAction"
+		    scope="request"
+	       	validate="false"
+	        name="asentamientoSearchPage"
+	        parameter="method"
+	   	    input=".bal.asentamiento.view.asentamientoSearchPage"
+	        attribute="asentamientoSearchPage">
+	        
+	   	    <forward name="administrarProcesoAsentamiento" 	path="/bal/AdministrarProcesoAsentamiento.do?method=inicializar" />	        
+	   	    <forward name="asentamientoSearchPage"    		path=".bal.asentamiento.view.asentamientoSearchPage" />
+	   	    <forward name="administrarAsentamiento" 	    path="/bal/AdministrarAsentamiento.do?method=inicializar" />
+	    </action>
+		
+		<action
+     		path="/bal/AdministrarAsentamiento"
+	        type="ar.gov.rosario.siat.bal.view.struts.AdministrarAsentamientoDAction"
+		    scope="request"
+        	validate="false"
+	        name="asentamientoAdapter"
+            parameter="method"
+    	    input=".bal.asentamiento.view.asentamientoEditAdapter"
+	        attribute="asentamientoAdapter">
+            
+    	    <forward name="asentamientoViewAdapter"  	  path=".bal.asentamiento.view.asentamientoViewAdapter" />
+    	    <forward name="asentamientoEditAdapter"       path=".bal.asentamiento.view.asentamientoEditAdapter" />
+	   	</action>
+	    	    
+	    <action
+     		path="/bal/AdministrarProcesoAsentamiento"
+	        type="ar.gov.rosario.siat.bal.view.struts.AdministrarProcesoAsentamientoDAction"
+		    scope="request"
+        	validate="false"
+	        name="procesoAsentamientoAdapter"
+            parameter="method"
+    	    input=".bal.asentamiento.view.procesoAsentamientoEditAdapter"
+	        attribute="procesoAsentamientoAdapter">
+            
+    	    <forward name="administrarAdpCorridaAsentamiento" path="/pro/AdministrarAdpCorrida.do?method=inicializar" />    
+		 	<forward name="procesoAsentamientoAdapter"  path=".bal.asentamiento.view.procesoAsentamientoAdapter" />
+   	   	    <forward name="administrarAsentamiento" 	 path="/bal/AdministrarAsentamiento.do?method=inicializar" />
+   			<forward name="administrarCorridaProcesoAsentamiento"  path="/bal/AdministrarCorridaProcesoAsentamiento.do?method=inicializar" />    			
+	    </action>
+
+     	<action
+     		path="/bal/AdministrarCorridaProcesoAsentamiento"
+	        type="ar.gov.rosario.siat.bal.view.struts.AdministrarCorridaProcesoAsentamientoDAction"
+		    scope="request"
+        	validate="false"
+	        name="corridaProcesoAsentamientoAdapter"
+            parameter="method"
+    	    input=".bal.asentamiento.view.corridaProcesoAsentamientoViewAdapter"
+	        attribute="corridaProcesoAsentamientoAdapter">
+            
+    	    <forward name="corridaProcesoAsentamientoViewAdapter" 	path=".bal.asentamiento.view.corridaProcesoAsentamientoViewAdapter" />
+      	</action>
+
+	   	<!-- Mantenedor AseDel-->
+	    <action
+	    	path="/bal/BuscarAseDel"
+	        type="ar.gov.rosario.siat.bal.view.struts.BuscarAseDelDAction"
+		    scope="request"
+	       	validate="false"
+	        name="aseDelSearchPage"
+	        parameter="method"
+	   	    input=".bal.delegador.view.aseDelSearchPage"
+	        attribute="aseDelSearchPage">
+	        
+	   	    <forward name="administrarProcesoAseDel" 	path="/bal/AdministrarProcesoAseDel.do?method=inicializar" />	        
+	   	    <forward name="aseDelSearchPage"    		path=".bal.delegador.view.aseDelSearchPage" />
+	   	    <forward name="administrarAseDel" 	    	path="/bal/AdministrarAseDel.do?method=inicializar" />
+	    </action>
+		
+		<action
+     		path="/bal/AdministrarAseDel"
+	        type="ar.gov.rosario.siat.bal.view.struts.AdministrarAseDelDAction"
+		    scope="request"
+        	validate="false"
+	        name="aseDelAdapter"
+            parameter="method"
+    	    input=".bal.delegador.view.aseDelEditAdapter"
+	        attribute="aseDelAdapter">
+            
+    	    <forward name="aseDelViewAdapter"  	  path=".bal.delegador.view.aseDelViewAdapter" />
+    	    <forward name="aseDelEditAdapter"     path=".bal.delegador.view.aseDelEditAdapter" />
+	   	</action>
+	    	    
+	    <action
+     		path="/bal/AdministrarProcesoAseDel"
+	        type="ar.gov.rosario.siat.bal.view.struts.AdministrarProcesoAseDelDAction"
+		    scope="request"
+        	validate="false"
+	        name="procesoAseDelAdapter"
+            parameter="method"
+    	    input=".bal.delegador.view.procesoAseDelEditAdapter"
+	        attribute="procesoAseDelAdapter">
+
+    	    <forward name="administrarAdpCorridaAseDel"  	 path="/pro/AdministrarAdpCorrida.do?method=inicializar" />    
+		 	<forward name="procesoAseDelAdapter"	    	 path=".bal.delegador.view.procesoAseDelAdapter" />
+   	   	    <forward name="administrarAseDel" 				 path="/bal/AdministrarAseDel.do?method=inicializar" />
+   			<forward name="administrarCorridaProcesoAseDel"  path="/bal/AdministrarCorridaProcesoAseDel.do?method=inicializar" />    			
+	    </action>
+
+     	<action
+     		path="/bal/AdministrarCorridaProcesoAseDel"
+	        type="ar.gov.rosario.siat.bal.view.struts.AdministrarCorridaProcesoAseDelDAction"
+		    scope="request"
+        	validate="false"
+	        name="corridaProcesoAseDelAdapter"
+            parameter="method"
+    	    input=".bal.delegador.view.corridaProcesoAseDelViewAdapter"
+	        attribute="corridaProcesoAseDelAdapter">
+            
+    	    <forward name="corridaProcesoAseDelViewAdapter" 	path=".bal.delegador.view.corridaProcesoAseDelViewAdapter" />
+      	</action>
+
+		<!-- ABM Ejercicio -->
+	    <action
+	    	path="/bal/BuscarEjercicio"
+	        type="ar.gov.rosario.siat.bal.view.struts.BuscarEjercicioDAction"
+		    scope="request"
+	       	validate="false"
+	        name="ejercicioSearchPage"
+	        parameter="method"
+	   	    input=".bal.ejercicio.view.ejercicioSearchPage"
+	        attribute="ejercicioSearchPage">
+	        
+	   	    <forward name="ejercicioSearchPage"    path=".bal.ejercicio.view.ejercicioSearchPage" />	   	    
+	   	    <forward name="administrarEjercicio"   path="/bal/AdministrarEjercicio.do?method=inicializar" />	        
+	    </action>
+		
+		<action
+     		path="/bal/AdministrarEjercicio"
+	        type="ar.gov.rosario.siat.bal.view.struts.AdministrarEjercicioDAction"
+		    scope="request"
+        	validate="false"
+	        name="ejercicioAdapter"
+            parameter="method"
+    	    input=".bal.ejercicio.view.ejercicioEditAdapter"
+	        attribute="ejercicioAdapter">
+            
+    	    <forward name="ejercicioViewAdapter"  	  path=".bal.ejercicio.view.ejercicioViewAdapter" />
+    	    <forward name="ejercicioEditAdapter"      path=".bal.ejercicio.view.ejercicioEditAdapter" />
+	   	</action>
+		
+		<!-- FIN ABM Ejercicio -->
+		
+		<!-- ABM Partida -->
+	    	
+        <action
+     		path="/bal/BuscarPartida"
+	        type="ar.gov.rosario.siat.bal.view.struts.BuscarPartidaDAction"
+		    scope="request"
+        	validate="false"
+	        name="partidaSearchPage"
+            parameter="method"
+    	    input=".bal.definicion.view.partidaSearchPage"
+	        attribute="partidaSearchPage">
+            
+    	    <forward name="partidaSearchPage"      path=".bal.definicion.view.partidaSearchPage" />
+    	    <forward name="doSearch"      		  path="/bal/BuscarPartida.do?method=buscar" />
+   	   	    <forward name="administrarEncPartida"  path="/bal/AdministrarEncPartida.do?method=inicializar" />
+   	   	    <forward name="AdministrarPartida"  path="/bal/AdministrarPartida.do?method=inicializar" />
+	    </action>
+	    
+		<action
+     		path="/bal/AdministrarEncPartida"
+	        type="ar.gov.rosario.siat.bal.view.struts.AdministrarEncPartidaDAction"
+		    scope="request"
+        	validate="false"
+	        name="partidaAdapter"
+            parameter="method"
+    	    input=".bal.definicion.view.partidaEncEditAdapter"
+	        attribute="partidaAdapter">
+
+    	    <forward name="PartidaEncEditAdapter"     path=".bal.definicion.view.partidaEncEditAdapter" />
+	    </action>
+	    	    
+   	    <action
+     		path="/bal/AdministrarPartida"
+	        type="ar.gov.rosario.siat.bal.view.struts.AdministrarPartidaDAction"
+		    scope="request"
+        	validate="false"
+	        name="partidaAdapter"
+            parameter="method"
+    	    input=".bal.definicion.view.partidaEditAdapter"
+	        attribute="partidaAdapter">
+            
+    	    <forward name="partidaAdapter" 		 	path=".bal.definicion.view.partidaAdapter" />
+    	    <forward name="partidaViewAdapter" 	 	path=".bal.definicion.view.partidaViewAdapter" />
+    	    <forward name="administrarEncPartida" 	path="/bal/AdministrarEncPartida.do?method=inicializar"/>
+			<forward name="administrarParCueBan" path="/bal/AdministrarParCueBan.do?method=inicializar"/>
+		</action>
+	    
+   	    <action
+     		path="/bal/AdministrarParCueBan"
+	        type="ar.gov.rosario.siat.bal.view.struts.AdministrarParCueBanDAction"
+		    scope="request"
+        	validate="false"
+	        name="parCueBanAdapter"
+            parameter="method"
+    	    input=".bal.definicion.view.parCueBanEditAdapter"
+	        attribute="parCueBanAdapter">
+            
+            <forward name="ParCueBanEditAdapter"	path=".bal.definicion.view.parCueBanEditAdapter"/>
+            <forward name="ParCueBanViewAdapter"	path=".bal.definicion.view.parCueBanViewAdapter"/>
+
+	    </action>
+	    
+   	<!-- FIN ABM Partida -->
+	<!-- ABM Reclamo -->
+	    <action
+	    	path="/bal/BuscarReclamo"
+	        type="ar.gov.rosario.siat.bal.view.struts.BuscarReclamoDAction"
+		    scope="request"
+	       	validate="false"
+	        name="reclamoSearchPage"
+	        parameter="method"
+	   	    input=".bal.reclamo.view.reclamoSearchPage"
+	        attribute="reclamoSearchPage">
+	        
+	   	    <forward name="reclamoSearchPage"    path=".bal.reclamo.view.reclamoSearchPage"/>	   	    
+	   	    <forward name="administrarReclamo"   path="/bal/AdministrarReclamo.do?method=inicializar"/>	        
+	    </action>
+		
+		<action
+     		path="/bal/AdministrarReclamo"
+	        type="ar.gov.rosario.siat.bal.view.struts.AdministrarReclamoDAction"
+		    scope="request"
+        	validate="false"
+	        name="reclamoAdapter"
+            parameter="method"
+    	    input=".bal.reclamo.view.reclamoEditAdapter"
+	        attribute="reclamoAdapter">
+            
+    	    <forward name="reclamoViewAdapter"  	path=".bal.reclamo.view.reclamoViewAdapter" />
+    	    <forward name="reclamoEditAdapter"      path=".bal.reclamo.view.reclamoEditAdapter" />
+	   	    <forward name="administrarIndet" 		path="/bal/AdministrarIndet.do?method=inicializar"/>	        
+  	   	    <forward name="buscarIndet"   			path="/bal/BuscarIndet.do?method=inicializar"/>	        
+	   	</action>
+		
+		<!-- FIN ABM Reclamo -->
+		
+		<!-- Mantenedor Nodo -->
+	    <action
+	    	path="/bal/BuscarNodo"
+	        type="ar.gov.rosario.siat.bal.view.struts.BuscarNodoDAction"
+		    scope="request"
+	       	validate="false"
+	        name="nodoSearchPage"
+	        parameter="method"
+	   	    input=".bal.clasificacion.view.nodoSearchPage"
+	        attribute="nodoSearchPage">
+	        
+	   	    <forward name="nodoSearchPage"      path=".bal.clasificacion.view.nodoSearchPage"/>	   	    
+	   	    <forward name="administrarNodo"     path="/bal/AdministrarNodo.do?method=inicializar"/>	
+   	   	    <forward name="administrarEncNodo" 	path="/bal/AdministrarEncNodo.do?method=inicializar" />	                
+	    </action>
+		
+		<action
+     		path="/bal/AdministrarNodo"
+	        type="ar.gov.rosario.siat.bal.view.struts.AdministrarNodoDAction"
+		    scope="request"
+        	validate="false"
+	        name="nodoAdapter"
+            parameter="method"
+    	    input=".bal.clasificacion.view.nodoAdapter"
+	        attribute="nodoAdapter">
+            
+    	    <forward name="nodoViewAdapter"  	   path=".bal.clasificacion.view.nodoViewAdapter" />
+    	    <forward name="nodoAdapter"      	   path=".bal.clasificacion.view.nodoAdapter" />
+     	    <forward name="administrarEncNodo"     path="/bal/AdministrarEncNodo.do?method=inicializar" />
+    	    <forward name="administrarRelPartida"  path="/bal/AdministrarRelPartida.do?method=inicializar" />
+       	    <forward name="administrarRelCla"  	   path="/bal/AdministrarRelCla.do?method=inicializar" />
+	   	</action>
+		
+		<action
+     		path="/bal/AdministrarEncNodo"
+	        type="ar.gov.rosario.siat.bal.view.struts.AdministrarEncNodoDAction"
+		    scope="request"
+        	validate="false"
+	        name="nodoAdapter"
+            parameter="method"
+    	    input=".bal.clasificacion.view.nodoEncEditAdapter"
+	        attribute="nodoAdapter">
+
+    	    <forward name="nodoEncEditAdapter"     path=".bal.clasificacion.view.nodoEncEditAdapter" />
+	    </action>
+
+	    <action
+     		path="/bal/AdministrarRelPartida"
+	        type="ar.gov.rosario.siat.bal.view.struts.AdministrarRelPartidaDAction"
+		    scope="request"
+        	validate="false"
+	        name="relPartidaAdapter"
+            parameter="method"
+    	    input=".bal.clasificacion.view.relPartidaEditAdapter"
+	        attribute="relPartidaAdapter">
+            
+    	    <forward name="relPartidaViewAdapter"      path=".bal.clasificacion.view.relPartidaViewAdapter" />
+    	    <forward name="relPartidaEditAdapter"      path=".bal.clasificacion.view.relPartidaEditAdapter" />
+	    </action>
+
+	    <action
+     		path="/bal/AdministrarRelCla"
+	        type="ar.gov.rosario.siat.bal.view.struts.AdministrarRelClaDAction"
+		    scope="request"
+        	validate="false"
+	        name="relClaAdapter"
+            parameter="method"
+    	    input=".bal.clasificacion.view.relClaEditAdapter"
+	        attribute="relClaAdapter">
+            
+    	    <forward name="relClaViewAdapter"      path=".bal.clasificacion.view.relClaViewAdapter" />
+    	    <forward name="relClaEditAdapter"      path=".bal.clasificacion.view.relClaEditAdapter" />
+	    </action>		
+		<!-- Fin Mantenedor Nodo -->
+	
+		<!-- ABM Saldo A Favor -->
+	    <action
+	    	path="/bal/BuscarSaldoAFavor"
+	        type="ar.gov.rosario.siat.bal.view.struts.BuscarSaldoAFavorDAction"
+		    scope="request"
+	       	validate="false"
+	        name="saldoAFavorSearchPage"
+	        parameter="method"
+	   	    input=".bal.saldoafavor.view.saldoAFavorSearchPage"
+	        attribute="saldoAFavorSearchPage">
+	        
+	   	    <forward name="saldoAFavorSearchPage"    path=".bal.saldoafavor.view.saldoAFavorSearchPage"/>	   	    
+	   	    <forward name="administrarSaldoAFavor"   path="/bal/AdministrarSaldoAFavor.do?method=inicializar"/>	        
+	    </action>
+		
+		<action
+     		path="/bal/AdministrarSaldoAFavor"
+	        type="ar.gov.rosario.siat.bal.view.struts.AdministrarSaldoAFavorDAction"
+		    scope="request"
+        	validate="false"
+	        name="saldoAFavorAdapter"
+            parameter="method"
+    	    input=".bal.saldoafavor.view.saldoAFavorEditAdapter"
+	        attribute="saldoAFavorAdapter">
+            
+    	    <forward name="saldoAFavorViewAdapter"  	path=".bal.saldoafavor.view.saldoAFavorViewAdapter" />
+    	    <forward name="saldoAFavorEditAdapter"      path=".bal.saldoafavor.view.saldoAFavorEditAdapter" />
+	   	</action>
+		
+		<!-- FIN ABM Saldo A Favor -->
+		<!-- ABM Cuenta Banco -->
+	    <action
+	    	path="/bal/BuscarCuentaBanco"
+	        type="ar.gov.rosario.siat.bal.view.struts.BuscarCuentaBancoDAction"
+		    scope="request"
+	       	validate="false"
+	        name="cuentaBancoSearchPage"
+	        parameter="method"
+	   	    input=".bal.definicion.view.cuentaBancoSearchPage"
+	        attribute="cuentaBancoSearchPage">
+	        
+	   	    <forward name="cuentaBancoSearchPage"    path=".bal.definicion.view.cuentaBancoSearchPage"/>	   	    
+	   	    <forward name="administrarCuentaBanco"   path="/bal/AdministrarCuentaBanco.do?method=inicializar"/>	        
+	    </action>
+		
+		<action
+     		path="/bal/AdministrarCuentaBanco"
+	        type="ar.gov.rosario.siat.bal.view.struts.AdministrarCuentaBancoDAction"
+		    scope="request"
+        	validate="false"
+	        name="cuentaBancoAdapter"
+            parameter="method"
+    	    input=".bal.definicion.view.cuentaBancoEditAdapter"
+	        attribute="cuentaBancoAdapter">
+            
+    	    <forward name="cuentaBancoViewAdapter"  	path=".bal.definicion.view.cuentaBancoViewAdapter" />
+    	    <forward name="cuentaBancoEditAdapter"      path=".bal.definicion.view.cuentaBancoEditAdapter" />
+	   	</action>
+		
+		<!-- FIN ABM Cuenta Banco -->
+		
+		<!-- ABM Tipo de Cuenta Banco -->
+	    <action
+	    	path="/bal/BuscarTipCueBan"
+	        type="ar.gov.rosario.siat.bal.view.struts.BuscarTipCueBanDAction"
+		    scope="request"
+	       	validate="false"
+	        name="tipCueBanSearchPage"
+	        parameter="method"
+	   	    input=".bal.definicion.view.tipCueBanSearchPage"
+	        attribute="tipCueBanSearchPage">
+	        
+	   	    <forward name="tipCueBanSearchPage"    path=".bal.definicion.view.tipCueBanSearchPage"/>	   	    
+	   	    <forward name="administrarTipCueBan"   path="/bal/AdministrarTipCueBan.do?method=inicializar"/>	        
+	    </action>
+		
+		<action
+     		path="/bal/AdministrarTipCueBan"
+	        type="ar.gov.rosario.siat.bal.view.struts.AdministrarTipCueBanDAction"
+		    scope="request"
+        	validate="false"
+	        name="tipCueBanAdapter"
+            parameter="method"
+    	    input=".bal.definicion.view.tipCueBanEditAdapter"
+	        attribute="tipCueBanAdapter">
+            
+    	    <forward name="tipCueBanViewAdapter"  	  path=".bal.definicion.view.tipCueBanViewAdapter" />
+    	    <forward name="tipCueBanEditAdapter"      path=".bal.definicion.view.tipCueBanEditAdapter" />
+	   	</action>
+		
+		<!-- FIN ABM Tipo Cuenta Banco -->
+	
+	
+		
+		<!-- Mantenedor Otros Ingresos de Tesoreria-->
+	    <action
+	    	path="/bal/BuscarOtrIngTes"
+	        type="ar.gov.rosario.siat.bal.view.struts.BuscarOtrIngTesDAction"
+		    scope="request"
+	       	validate="false"
+	        name="otrIngTesSearchPage"
+	        parameter="method"
+	   	    input=".bal.otroIngresoTesoreria.view.otrIngTesSearchPage"
+	        attribute="otrIngTesSearchPage">
+	        
+	   	    <forward name="otrIngTesAdmAdapter" 	path="/bal/DistribuirOtrIngTes.do?method=inicializar" />	        
+	   	    <forward name="otrIngTesSearchPage"    	path=".bal.otroIngresoTesoreria.view.otrIngTesSearchPage" />
+	   	    <forward name="administrarOtrIngTes" 	path="/bal/AdministrarOtrIngTes.do?method=inicializar" />
+			<forward name="otrIngTesReciboPrint" 	path="/bal/AdministrarOtrIngTes.do?method=inicializar" />
+	    </action>
+		
+		<action
+     		path="/bal/AdministrarOtrIngTes"
+	        type="ar.gov.rosario.siat.bal.view.struts.AdministrarOtrIngTesDAction"
+		    scope="request"
+        	validate="false"
+	        name="otrIngTesAdapter"
+            parameter="method"
+    	    input=".bal.otroIngresoTesoreria.view.otrIngTesEditAdapter"
+	        attribute="otrIngTesAdapter">
+            
+    	    <forward name="otrIngTesViewAdapter"  	 path=".bal.otroIngresoTesoreria.view.otrIngTesViewAdapter" />
+    	    <forward name="otrIngTesEditAdapter"      path=".bal.otroIngresoTesoreria.view.otrIngTesEditAdapter" />
+    	    <forward name="otrIngTesReciboPrint"  	 path=".bal.otroIngresoTesoreria.view.otrIngTesReciboPrint" />
+    	    <forward name="administrarOtrIngTesPar"   path="/bal/AdministrarOtrIngTesPar.do?method=inicializar" />
+    	    <forward name="otrIngTesSearchPage"    	path=".bal.otroIngresoTesoreria.view.otrIngTesSearchPage" />    
+	   	</action>
+	    
+		<action
+     		path="/bal/DistribuirOtrIngTes"
+	        type="ar.gov.rosario.siat.bal.view.struts.DistribuirOtrIngTesDAction"
+		    scope="request"
+        	validate="false"
+	        name="otrIngTesAdapter"
+            parameter="method"
+    	    input=".bal.otroIngresoTesoreria.view.otrIngTesAdmAdapter"
+	        attribute="otrIngTesAdapter">
+
+    	    <forward name="otrIngTesAdmAdapter" path=".bal.otroIngresoTesoreria.view.otrIngTesAdmAdapter" />
+    	    <forward name="administrarOtrIngTesPar"    path="/bal/AdministrarOtrIngTesPar.do?method=inicializar" />   
+    	    <forward name="otrIngTesReciboPrint" 	path="/bal/AdministrarOtrIngTes.do?method=inicializar" />    
+    	    <forward name="otrIngTesSearchPage"    	path=".bal.otroIngresoTesoreria.view.otrIngTesSearchPage" />         	    
+	    </action>
+	    
+	    <action
+     		path="/bal/AdministrarOtrIngTesPar"
+	        type="ar.gov.rosario.siat.bal.view.struts.AdministrarOtrIngTesParDAction"
+		    scope="request"
+        	validate="false"
+	        name="otrIngTesParAdapter"
+            parameter="method"
+    	    input=".bal.otroIngresoTesoreria.view.otrIngTesParEditAdapter"
+	        attribute="otrIngTesParAdapter">
+            
+    	    <forward name="otrIngTesParViewAdapter"      path=".bal.otroIngresoTesoreria.view.otrIngTesParViewAdapter" />
+    	    <forward name="otrIngTesParEditAdapter"      path=".bal.otroIngresoTesoreria.view.otrIngTesParEditAdapter" />
+	    </action>
+		<!-- Fin Mantenedor OtrIngTes-->
+				
+		<!-- Reporte Clasificador -->
+		<action   
+	    	path="/bal/ReporteClasificador"
+	        type="ar.gov.rosario.siat.bal.view.struts.ReporteClasificadorDAction"
+		    scope="request"
+	       	validate="false"
+	        name="clasificadorReport"
+	        parameter="method"
+	   	    input=".bal.clasificacion.view.clasificadorReport"
+	        attribute="clasificadorReport">
+	                       
+	   	    <forward name="clasificadorReport"  	  path=".bal.clasificacion.view.clasificadorReport" />
+	    </action>
+
+		<!-- Reporte Rentas -->
+		<action   
+	    	path="/bal/ReporteRentas"
+	        type="ar.gov.rosario.siat.bal.view.struts.ReporteRentasDAction"
+		    scope="request"
+	       	validate="false"
+	        name="rentasReport"
+	        parameter="method"
+	   	    input=".bal.clasificacion.view.rentasReport"
+	        attribute="rentasReport">
+	                       
+	   	    <forward name="rentasReport"  	 path=".bal.clasificacion.view.rentasReport" />
+	    </action>
+	    
+	    <!-- Reporte Clasificador Comparativo -->
+		<action   
+	    	path="/bal/ReporteClaCom"
+	        type="ar.gov.rosario.siat.bal.view.struts.ReporteClaComDAction"
+		    scope="request"
+	       	validate="false"
+	        name="claComReport"
+	        parameter="method"
+	   	    input=".bal.clasificacion.view.claComReport"
+	        attribute="claComReport">
+	                       
+	   	    <forward name="claComReport"  	  path=".bal.clasificacion.view.claComReport" />
+	    </action>
+	    
+		<!-- Mantenedor Balance-->
+	    <action
+	    	path="/bal/BuscarBalance"
+	        type="ar.gov.rosario.siat.bal.view.struts.BuscarBalanceDAction"
+		    scope="request"
+	       	validate="false"
+	        name="balanceSearchPage"
+	        parameter="method"
+	   	    input=".bal.balance.view.balanceSearchPage"
+	        attribute="balanceSearchPage">
+	        
+	   	    <forward name="administrarProcesoBalance" 	path="/bal/AdministrarProcesoBalance.do?method=inicializar" />	        
+	   	    <forward name="balanceSearchPage"    		path=".bal.balance.view.balanceSearchPage" />
+	   	    <forward name="administrarBalance" 	    path="/bal/AdministrarBalance.do?method=inicializar" />
+	    </action>
+		
+		<action
+     		path="/bal/AdministrarBalance"
+	        type="ar.gov.rosario.siat.bal.view.struts.AdministrarBalanceDAction"
+		    scope="request"
+        	validate="false"
+	        name="balanceAdapter"
+            parameter="method"
+    	    input=".bal.balance.view.balanceEditAdapter"
+	        attribute="balanceAdapter">
+            
+    	    <forward name="balanceViewAdapter"  	 path=".bal.balance.view.balanceViewAdapter" />
+    	    <forward name="balanceEditAdapter"       path=".bal.balance.view.balanceEditAdapter" />
+	   	</action>
+	    	    
+	    <action
+     		path="/bal/AdministrarProcesoBalance"
+	        type="ar.gov.rosario.siat.bal.view.struts.AdministrarProcesoBalanceDAction"
+		    scope="request"
+        	validate="false"
+	        name="procesoBalanceAdapter"
+            parameter="method"
+    	    input=".bal.balance.view.procesoBalanceEditAdapter"
+	        attribute="procesoBalanceAdapter">
+            
+    	    <forward name="administrarAdpCorridaBalance" path="/pro/AdministrarAdpCorrida.do?method=inicializar" />    
+		 	<forward name="procesoBalanceAdapter"  path=".bal.balance.view.procesoBalanceAdapter" />
+   	   	    <forward name="administrarBalance" 	 path="/bal/AdministrarBalance.do?method=inicializar" />
+   			<forward name="administrarCorridaProcesoBalance"  path="/bal/AdministrarCorridaProcesoBalance.do?method=inicializar" />    			
+    	    <forward name="buscarFolio"      		 path="/bal/BuscarFolio.do?method=inicializar" />
+ 	  	    <forward name="administrarFolio" 		 path="/bal/AdministrarFolio.do?method=inicializar" />    	    
+    	    <forward name="buscarArchivo"      		 path="/bal/BuscarArchivo.do?method=inicializar" />
+ 	  	    <forward name="administrarArchivo" 		 path="/bal/AdministrarArchivo.do?method=inicializar" />
+    	    <forward name="buscarCompensacion"       path="/bal/BuscarCompensacion.do?method=inicializar" />
+ 	  	    <forward name="administrarCompensacion"  path="/bal/AdministrarCompensacion.do?method=inicializar" />
+ 	  	    <forward name="administrarCaja7" 		 path="/bal/AdministrarCaja7.do?method=inicializar" />
+     	    <forward name="administrarCaja69" 		 path="/bal/AdministrarCaja69.do?method=inicializar" />
+     	    <forward name="buscarTranBal"      		 path="/bal/BuscarTranBal.do?method=inicializar" />
+		    <forward name="administrarReingreso"     path="/bal/AdministrarReingreso.do?method=inicializar" />
+   		    <forward name="administrarAsentamiento"  path="/bal/AdministrarAsentamiento.do?method=inicializar" />
+  		    <forward name="administrarProcesoAsentamiento"  path="/bal/AdministrarProcesoAsentamiento.do?method=inicializar" />
+   		    <forward name="administrarAseDel"  path="/bal/AdministrarAseDel.do?method=inicializar" />
+  		    <forward name="administrarProcesoAseDel"  path="/bal/AdministrarProcesoAseDel.do?method=inicializar" />
+  		    <forward name="buscarAuxCaja7"      	 path="/bal/BuscarAuxCaja7.do?method=inicializar" />
+	    </action>
+
+     	<action
+     		path="/bal/AdministrarCorridaProcesoBalance"
+	        type="ar.gov.rosario.siat.bal.view.struts.AdministrarCorridaProcesoBalanceDAction"
+		    scope="request"
+        	validate="false"
+	        name="corridaProcesoBalanceAdapter"
+            parameter="method"
+    	    input=".bal.balance.view.corridaProcesoBalanceViewAdapter"
+	        attribute="corridaProcesoBalanceAdapter">
+            
+    	    <forward name="corridaProcesoBalanceViewAdapter" 	path=".bal.balance.view.corridaProcesoBalanceViewAdapter" />
+      	</action>
+      	
+      	<!-- Detalle Caja7 -->		
+		<action
+     		path="/bal/AdministrarCaja7"
+	        type="ar.gov.rosario.siat.bal.view.struts.AdministrarCaja7DAction"
+		    scope="request"
+        	validate="false"
+	        name="caja7Adapter"
+            parameter="method"
+    	    input=".bal.balance.view.caja7EditAdapter"
+	        attribute="caja7Adapter">
+            
+    	    <forward name="caja7ViewAdapter"  	  path=".bal.balance.view.caja7ViewAdapter" />
+    	    <forward name="caja7EditAdapter"      path=".bal.balance.view.caja7EditAdapter" />
+	   	</action>
+
+     	<!-- Detalle Caja69 -->		
+		<action
+     		path="/bal/AdministrarCaja69"
+	        type="ar.gov.rosario.siat.bal.view.struts.AdministrarCaja69DAction"
+		    scope="request"
+        	validate="false"
+	        name="caja69Adapter"
+            parameter="method"
+    	    input=".bal.balance.view.caja69EditAdapter"
+	        attribute="caja69Adapter">
+            
+    	    <forward name="caja69ViewAdapter"  	  path=".bal.balance.view.caja69ViewAdapter" />
+    	    <forward name="caja69EditAdapter"      path=".bal.balance.view.caja69EditAdapter" />
+	   	</action>
+	   	
+	   	 <!-- Detalle TranBal -->		
+	   	  <action
+	    	path="/bal/BuscarTranBal"
+	        type="ar.gov.rosario.siat.bal.view.struts.BuscarTranBalDAction"
+		    scope="request"
+	       	validate="false"
+	        name="tranBalSearchPage"
+	        parameter="method"
+	   	    input=".bal.balance.view.tranBalSearchPage"
+	        attribute="tranBalSearchPage">
+	        
+	   	    <forward name="tranBalSearchPage"    	path=".bal.balance.view.tranBalSearchPage" />
+	   	    <forward name="administrarTranBal" 	    path="/bal/AdministrarTranBal.do?method=inicializar" />
+	    </action>
+	    
+		<action
+     		path="/bal/AdministrarTranBal"
+	        type="ar.gov.rosario.siat.bal.view.struts.AdministrarTranBalDAction"
+		    scope="request"
+        	validate="false"
+	        name="tranBalAdapter"
+            parameter="method"
+    	    input=".bal.balance.view.tranBalEditAdapter"
+	        attribute="tranBalAdapter">
+            
+    	    <forward name="tranBalViewAdapter"  	  path=".bal.balance.view.tranBalViewAdapter" />
+    	    <forward name="tranBalEditAdapter"      path=".bal.balance.view.tranBalEditAdapter" />
+	   	</action>
+	   	
+		<!-- Detalle Reingresos -->		
+		<action
+     		path="/bal/AdministrarReingreso"
+	        type="ar.gov.rosario.siat.bal.view.struts.AdministrarReingresoDAction"
+		    scope="request"
+        	validate="false"
+	        name="reingresoAdapter"
+            parameter="method"
+    	    input=".bal.balance.view.reingresoEditAdapter"
+	        attribute="reingresoAdapter">
+              
+    	    <forward name="reingresoViewAdapter"	  path=".bal.balance.view.reingresoViewAdapter" />
+    	    <forward name="reingresoEditAdapter"      path=".bal.balance.view.reingresoEditAdapter" />
+	    </action>
+	    
+      	<!-- ABM Archivo -->
+	    <action
+	    	path="/bal/BuscarArchivo"
+	        type="ar.gov.rosario.siat.bal.view.struts.BuscarArchivoDAction"
+		    scope="request"
+	       	validate="false"
+	        name="archivoSearchPage"
+	        parameter="method"
+	   	    input=".bal.archivosBanco.view.archivoSearchPage"
+	        attribute="archivoSearchPage">
+	        
+	   	    <forward name="archivoSearchPage"    path=".bal.archivosBanco.view.archivoSearchPage" />	   	    
+	   	    <forward name="administrarArchivo"   path="/bal/AdministrarArchivo.do?method=inicializar" />	        
+	    </action>
+		
+		<action
+     		path="/bal/AdministrarArchivo"
+	        type="ar.gov.rosario.siat.bal.view.struts.AdministrarArchivoDAction"
+		    scope="request"
+        	validate="false"
+	        name="archivoAdapter"
+            parameter="method"
+    	    input=".bal.archivosBanco.view.archivoEditAdapter"
+	        attribute="archivoAdapter">
+            
+    	    <forward name="archivoViewAdapter"  	  path=".bal.archivosBanco.view.archivoViewAdapter" />
+    	    <forward name="archivoEditAdapter"      path=".bal.archivosBanco.view.archivoEditAdapter" />
+	   	</action>
+		
+		<!-- FIN ABM Archivo -->
+		
+	
+	 	<!-- Mantenedor Folio-->
+	    <action
+	    	path="/bal/BuscarFolio"
+	        type="ar.gov.rosario.siat.bal.view.struts.BuscarFolioDAction"
+		    scope="request"
+	       	validate="false"
+	        name="folioSearchPage"
+	        parameter="method"
+	   	    input=".bal.folioTesoreria.view.folioSearchPage"
+	        attribute="folioSearchPage">
+	        
+	   	    <forward name="administrarEncFolio" 	path="/bal/AdministrarEncFolio.do?method=inicializar" />	        
+	   	    <forward name="folioSearchPage"    	path=".bal.folioTesoreria.view.folioSearchPage" />
+	   	    <forward name="administrarFolio" 	    path="/bal/AdministrarFolio.do?method=inicializar" />
+	    </action>
+		
+		<action
+     		path="/bal/AdministrarFolio"
+	        type="ar.gov.rosario.siat.bal.view.struts.AdministrarFolioDAction"
+		    scope="request"
+        	validate="false"
+	        name="folioAdapter"
+            parameter="method"
+    	    input=".bal.folioTesoreria.view.folioAdapter"
+	        attribute="folioAdapter">
+
+    	    <forward name="folioViewAdapter"  	 path=".bal.folioTesoreria.view.folioViewAdapter" />
+    	    <forward name="folioAdapter"         path=".bal.folioTesoreria.view.folioAdapter" />
+     	    <forward name="administrarEncFolio"  path="/bal/AdministrarEncFolio.do?method=inicializar" />
+    	    <forward name="administrarFolCom"    path="/bal/AdministrarFolCom.do?method=inicializar" />
+       	    <forward name="administrarFolDiaCob" path="/bal/AdministrarFolDiaCob.do?method=inicializar" />
+       	    <forward name="buscarOtrIngTes"      path="/bal/BuscarOtrIngTes.do?method=inicializar" />
+ 	  	    <forward name="administrarOtrIngTes" path="/bal/AdministrarOtrIngTes.do?method=inicializar" />
+	   	</action>
+	    
+		<action
+     		path="/bal/AdministrarEncFolio"
+	        type="ar.gov.rosario.siat.bal.view.struts.AdministrarEncFolioDAction"
+		    scope="request"
+        	validate="false"
+	        name="folioAdapter"
+            parameter="method"
+    	    input=".bal.folioTesoreria.view.folioEncEditAdapter"
+	        attribute="folioAdapter">
+
+    	    <forward name="folioEncEditAdapter"     path=".bal.folioTesoreria.view.folioEncEditAdapter" />
+	    </action>
+	    
+	    <action
+     		path="/bal/AdministrarFolCom"
+	        type="ar.gov.rosario.siat.bal.view.struts.AdministrarFolComDAction"
+		    scope="request"
+        	validate="false"
+	        name="folComAdapter"
+            parameter="method"
+    	    input=".bal.folioTesoreria.view.folComEditAdapter"
+	        attribute="folComAdapter">
+            
+    	    <forward name="folComViewAdapter"      path=".bal.folioTesoreria.view.folComViewAdapter" />
+    	    <forward name="folComEditAdapter"      path=".bal.folioTesoreria.view.folComEditAdapter" />
+   	        <forward name="buscarCompensacion"	   path="/bal/BuscarCompensacion.do?method=inicializar" />
+	    </action>
+
+	    <action
+     		path="/bal/AdministrarFolDiaCob"
+	        type="ar.gov.rosario.siat.bal.view.struts.AdministrarFolDiaCobDAction"
+		    scope="request"
+        	validate="false"
+	        name="folDiaCobAdapter"
+            parameter="method"
+    	    input=".bal.folioTesoreria.view.folDiaCobEditAdapter"
+	        attribute="folDiaCobAdapter">
+            
+    	    <forward name="folDiaCobViewAdapter"      path=".bal.folioTesoreria.view.folDiaCobViewAdapter" />
+    	    <forward name="folDiaCobEditAdapter"      path=".bal.folioTesoreria.view.folDiaCobEditAdapter" />
+	    </action>
+		
+		<!-- Consulta de Dias de Cobranza (FolDiaCob) -->	
+    	<action
+	    	path="/bal/BuscarFolDiaCob"
+	        type="ar.gov.rosario.siat.bal.view.struts.BuscarFolDiaCobDAction"
+		    scope="request"
+	       	validate="false"
+	        name="folDiaCobSearchPage"
+	        parameter="method"
+	   	    input=".bal.folioTesoreria.view.folDiaCobSearchPage"
+	        attribute="folDiaCobSearchPage">
+	        
+	   	    <forward name="folDiaCobSearchPage"    	path=".bal.folioTesoreria.view.folDiaCobSearchPage" />
+	    </action>
+	    
+		<!-- Mantenedor TipoCom -->	    
+	    <action
+	    	path="/bal/BuscarTipoCom"
+	        type="ar.gov.rosario.siat.bal.view.struts.BuscarTipoComDAction"
+			scope="request"
+	       	validate="false"
+	        name="tipoComSearchPage"
+	        parameter="method"
+	   		input=".bal.compensacion.view.tipoComSearchPage"
+	        attribute="tipoComSearchPage">
+	           
+	   	    <forward name="tipoComSearchPage"   	path=".bal.compensacion.view.tipoComSearchPage" />
+	   	    <forward name="administrarTipoCom" 		path="/bal/AdministrarTipoCom.do?method=inicializar" />
+	    </action>
+		
+		<action
+     		path="/bal/AdministrarTipoCom"
+	        type="ar.gov.rosario.siat.bal.view.struts.AdministrarTipoComDAction"
+		    scope="request"
+        	validate="false"
+	        name="tipoComAdapter"
+            parameter="method"
+    	    input=".bal.compensacion.view.tipoComEditAdapter"
+	        attribute="tipoComAdapter">
+            
+    	    <forward name="tipoComViewAdapter"		path=".bal.compensacion.view.tipoComViewAdapter" />
+    	    <forward name="tipoComEditAdapter"      path=".bal.compensacion.view.tipoComEditAdapter" />
+	    </action>
+	    <!-- Fin Mantenedor TipoCom -->
+	    
+	    <!-- Mantenedor Clasificador -->	    
+	    <action
+	    	path="/bal/BuscarClasificador"
+	        type="ar.gov.rosario.siat.bal.view.struts.BuscarClasificadorDAction"
+			scope="request"
+	       	validate="false"
+	        name="clasificadorSearchPage"
+	        parameter="method"
+	   		input=".bal.clasificacion.view.clasificadorSearchPage"
+	        attribute="clasificadorSearchPage">
+	           
+	   	    <forward name="clasificadorSearchPage"   	path=".bal.clasificacion.view.clasificadorSearchPage" />
+	   	    <forward name="administrarClasificador" 		path="/bal/AdministrarClasificador.do?method=inicializar" />
+	    </action>
+		
+		<action
+     		path="/bal/AdministrarClasificador"
+	        type="ar.gov.rosario.siat.bal.view.struts.AdministrarClasificadorDAction"
+		    scope="request"
+        	validate="false"
+	        name="clasificadorAdapter"
+            parameter="method"
+    	    input=".bal.clasificacion.view.clasificadorEditAdapter"
+	        attribute="clasificadorAdapter">
+            
+    	    <forward name="clasificadorViewAdapter"		path=".bal.clasificacion.view.clasificadorViewAdapter" />
+    	    <forward name="clasificadorEditAdapter"      path=".bal.clasificacion.view.clasificadorEditAdapter" />
+	    </action>
+	    <!-- Fin Mantenedor Clasificador -->
+	    
+	    <!-- Mantenedor Compensacion-->
+	    <action
+	    	path="/bal/BuscarCompensacion"
+	        type="ar.gov.rosario.siat.bal.view.struts.BuscarCompensacionDAction"
+		    scope="request"
+	       	validate="false"
+	        name="compensacionSearchPage"
+	        parameter="method"
+	   	    input=".bal.compensacion.view.compensacionSearchPage"
+	        attribute="compensacionSearchPage">
+	        
+	   	    <forward name="administrarEncCompensacion" 	path="/bal/AdministrarEncCompensacion.do?method=inicializar" />	        
+	   	    <forward name="compensacionSearchPage"    	path=".bal.compensacion.view.compensacionSearchPage" />
+	   	    <forward name="administrarCompensacion" 	path="/bal/AdministrarCompensacion.do?method=inicializar" />
+       	    <forward name="buscarCuenta" 		        path="/pad/BuscarCuenta.do?method=inicializar" />
+	    </action>
+		
+		<action
+     		path="/bal/AdministrarCompensacion"
+	        type="ar.gov.rosario.siat.bal.view.struts.AdministrarCompensacionDAction"
+		    scope="request"
+        	validate="false"
+	        name="compensacionAdapter"
+            parameter="method"
+    	    input=".bal.compensacion.view.compensacionAdapter"
+	        attribute="compensacionAdapter">
+
+    	    <forward name="compensacionViewAdapter"  	path=".bal.compensacion.view.compensacionViewAdapter" />
+    	    <forward name="compensacionAdapter"         path=".bal.compensacion.view.compensacionAdapter" />
+     	    <forward name="administrarEncCompensacion"  path="/bal/AdministrarEncCompensacion.do?method=inicializar" />
+    	    <forward name="administrarComDeu"    		path="/bal/AdministrarComDeu.do?method=inicializar" />
+ 	  	    <forward name="administrarSaldoAFavor"		path="/bal/AdministrarSaldoAFavor.do?method=inicializar" />
+            <forward name="administrarSaldoEnCompensacion" 	path="/bal/AdministrarSaldoEnCompensacion.do?method=inicializar" />
+	   	</action>
+	    
+		<action
+     		path="/bal/AdministrarEncCompensacion"
+	        type="ar.gov.rosario.siat.bal.view.struts.AdministrarEncCompensacionDAction"
+		    scope="request"
+        	validate="false"
+	        name="compensacionAdapter"
+            parameter="method"
+    	    input=".bal.compensacion.view.compensacionEncEditAdapter"
+	        attribute="compensacionAdapter">
+
+    	    <forward name="compensacionEncEditAdapter"     path=".bal.compensacion.view.compensacionEncEditAdapter" />
+      	    <forward name="buscarCuenta" 			        path="/pad/BuscarCuenta.do?method=inicializar" />
+	    </action>
+	    
+	    <action
+     		path="/bal/AdministrarSaldoEnCompensacion"
+	        type="ar.gov.rosario.siat.bal.view.struts.AdministrarSaldoEnCompensacionDAction"
+		    scope="request"
+        	validate="false"
+	        name="compensacionAdapter"
+            parameter="method"
+    	    input=".bal.compensacion.view.incluirSaldoAdapter"
+	        attribute="compensacionAdapter">
+
+      	    <forward name="compensacionIncluirSaldoAdapter"  path=".bal.compensacion.view.incluirSaldoAdapter" />
+      	    <forward name="compensacionExcluirSaldoAdapter"  path=".bal.compensacion.view.excluirSaldoAdapter" />
+   	  
+   	  	    <forward name="administrarSaldoAFavor"		path="/bal/AdministrarSaldoAFavor.do?method=inicializar" />
+	    </action>
+	    
+	    <action
+     		path="/bal/AdministrarComDeu"
+	        type="ar.gov.rosario.siat.bal.view.struts.AdministrarComDeuDAction"
+		    scope="request"
+        	validate="false"
+	        name="comDeuAdapter"
+            parameter="method"
+    	    input=".bal.compensacion.view.comDeuEditAdapter"
+	        attribute="comDeuAdapter">
+            
+    	    <forward name="comDeuViewAdapter"      path=".bal.compensacion.view.comDeuViewAdapter" />
+    	    <forward name="comDeuEditAdapter"      path=".bal.compensacion.view.comDeuEditAdapter" />
+      	    <forward name="buscarCuenta" 		   path="/pad/BuscarCuenta.do?method=inicializar" />
+	    </action>
+
+		<!-- Mantenedor de Duplice -->	    
+	    <action
+	    	path="/bal/BuscarDuplice"
+	        type="ar.gov.rosario.siat.bal.view.struts.BuscarDupliceDAction"
+			scope="request"
+	       	validate="false"
+	        name="dupliceSearchPage"
+	        parameter="method"
+	   		input=".bal.view.dupliceSearchPage"
+	        attribute="dupliceSearchPage">
+	           
+	   	    <forward name="dupliceSearchPage"   	path=".bal.view.dupliceSearchPage" />
+	   	    <forward name="administrarDuplice" 	path="/bal/AdministrarDuplice.do?method=inicializar" />
+	    </action>
+		
+		<action
+     		path="/bal/AdministrarDuplice"
+	        type="ar.gov.rosario.siat.bal.view.struts.AdministrarDupliceDAction"
+		    scope="request"
+        	validate="false"
+	        name="dupliceAdapter"
+            parameter="method"
+    	    input=".bal.view.dupliceImputarAdapter"
+	        attribute="dupliceAdapter">
+              
+    	    <forward name="dupliceViewAdapter"		path=".bal.view.dupliceViewAdapter" />
+       	    <forward name="dupliceEditAdapter"		path=".bal.view.dupliceEditAdapter" />
+    	    <forward name="dupliceImputarAdapter"      path=".bal.view.dupliceImputarAdapter" />
+       	    <forward name="dupliceGenSaldoAFavorAdapter"    path=".bal.view.dupliceGenSaldoAFavorAdapter" />
+       	    <forward name="buscarCuenta" 		   path="/pad/BuscarCuenta.do?method=inicializar" />
+	    </action>
+	    <!-- Fin Mantenedor de Duplice -->
+
+		<!-- Mantenedor TipoCob -->	    
+	    <action
+	    	path="/bal/BuscarTipoCob"
+	        type="ar.gov.rosario.siat.bal.view.struts.BuscarTipoCobDAction"
+			scope="request"
+	       	validate="false"
+	        name="tipoCobSearchPage"
+	        parameter="method"
+	   		input=".bal.folioTesoreria.view.tipoCobSearchPage"
+	        attribute="tipoCobSearchPage">
+	           
+	   	    <forward name="tipoCobSearchPage"   	path=".bal.folioTesoreria.view.tipoCobSearchPage" />
+	   	    <forward name="administrarTipoCob" 		path="/bal/AdministrarTipoCob.do?method=inicializar" />
+	    </action>
+		
+		<action
+     		path="/bal/AdministrarTipoCob"
+	        type="ar.gov.rosario.siat.bal.view.struts.AdministrarTipoCobDAction"
+		    scope="request"
+        	validate="false"
+	        name="tipoCobAdapter"
+            parameter="method"
+    	    input=".bal.folioTesoreria.view.tipoCobEditAdapter"
+	        attribute="tipoCobAdapter">
+            
+    	    <forward name="tipoCobViewAdapter"		path=".bal.folioTesoreria.view.tipoCobViewAdapter" />
+    	    <forward name="tipoCobEditAdapter"      path=".bal.folioTesoreria.view.tipoCobEditAdapter" />
+	    </action>
+	    <!-- Fin Mantenedor TipoCob -->
+
+		<!-- Mantenedor AuxCaja7 -->	    
+	    <action
+	    	path="/bal/BuscarAuxCaja7"
+	        type="ar.gov.rosario.siat.bal.view.struts.BuscarAuxCaja7DAction"
+			scope="request"
+	       	validate="false"
+	        name="auxCaja7SearchPage"
+	        parameter="method"
+	   		input=".bal.balance.view.auxCaja7SearchPage"
+	        attribute="auxCaja7SearchPage">
+	           
+	   	    <forward name="auxCaja7SearchPage"   		path=".bal.balance.view.auxCaja7SearchPage" />
+	   	    <forward name="administrarAuxCaja7" 		path="/bal/AdministrarAuxCaja7.do?method=inicializar" />
+	    </action>
+		
+		<action
+     		path="/bal/AdministrarAuxCaja7"
+	        type="ar.gov.rosario.siat.bal.view.struts.AdministrarAuxCaja7DAction"
+		    scope="request"
+        	validate="false"
+	        name="auxCaja7Adapter"
+            parameter="method"
+    	    input=".bal.balance.view.auxCaja7EditAdapter"
+	        attribute="auxCaja7Adapter">
+            
+    	    <forward name="auxCaja7ViewAdapter"		path=".bal.balance.view.auxCaja7ViewAdapter" />
+    	    <forward name="auxCaja7EditAdapter"     path=".bal.balance.view.auxCaja7EditAdapter" />
+	    </action>
+	    <!-- Fin Mantenedor AuxCaja7 -->
+	    
+	   	<!-- Mantenedor de Reingresos de Indeterminados -->	    
+	    <action
+	    	path="/bal/BuscarIndetReing"
+	        type="ar.gov.rosario.siat.bal.view.struts.BuscarIndetReingDAction"
+			scope="request"
+	       	validate="false"
+	        name="indetReingSearchPage"
+	        parameter="method"
+	   		input=".bal.view.indetReingSearchPage"
+	        attribute="indetReingSearchPage">
+	           
+	   	    <forward name="indetReingSearchPage"   	path=".bal.view.indetReingSearchPage" />
+	   	    <forward name="administrarIndetReing" 	path="/bal/AdministrarIndetReing.do?method=inicializar" />
+	    </action>
+		
+		<action
+     		path="/bal/AdministrarIndetReing"
+	        type="ar.gov.rosario.siat.bal.view.struts.AdministrarIndetReingDAction"
+		    scope="request"
+        	validate="false"
+	        name="indetReingAdapter"
+            parameter="method"
+    	    input=".bal.view.indetReingViewAdapter"
+	        attribute="indetReingAdapter">
+              
+    	    <forward name="indetReingViewAdapter"	  path=".bal.view.indetReingViewAdapter" />     
+	    </action>
+	    <!-- Fin Mantenedor de Reingresos de Indeterminados -->	    
+	    
+	    <!-- Mantenedor LeyParAcu -->	    
+	    <action
+	    	path="/bal/BuscarLeyParAcu"
+	        type="ar.gov.rosario.siat.bal.view.struts.BuscarLeyParAcuDAction"
+			scope="request"
+	       	validate="false"
+	        name="leyParAcuSearchPage"
+	        parameter="method"
+	   		input=".bal.definicion.view.leyParAcuSearchPage"
+	        attribute="leyParAcuSearchPage">
+	           
+	   	    <forward name="leyParAcuSearchPage"   	path=".bal.definicion.view.leyParAcuSearchPage" />
+	   	    <forward name="administrarLeyParAcu" 	path="/bal/AdministrarLeyParAcu.do?method=inicializar" />
+	    </action>
+		
+		<action
+     		path="/bal/AdministrarLeyParAcu"
+	        type="ar.gov.rosario.siat.bal.view.struts.AdministrarLeyParAcuDAction"
+		    scope="request"
+        	validate="false"
+	        name="leyParAcuAdapter"
+            parameter="method"
+    	    input=".bal.definicion.view.leyParAcuEditAdapter"
+	        attribute="leyParAcuAdapter">
+            
+    	    <forward name="leyParAcuViewAdapter"		path=".bal.definicion.view.leyParAcuViewAdapter" />
+    	    <forward name="leyParAcuEditAdapter"      path=".bal.definicion.view.leyParAcuEditAdapter" />
+	    </action>
+	    <!-- Fin Mantenedor LeyParAcu -->
+	    
+	    <!-- Consulta de Total por Nodo -->	    
+	    <action
+	    	path="/bal/ConsultaNodo"
+	        type="ar.gov.rosario.siat.bal.view.struts.ConsultaNodoDAction"
+			scope="request"
+	       	validate="false"
+	        name="consultaNodoSearchPage"
+	        parameter="method"
+	   		input=".bal.clasificacion.view.consultaNodoSearchPage"
+	        attribute="consultaNodoSearchPage">
+	           
+	   	    <forward name="consultaNodoSearchPage"   	path=".bal.clasificacion.view.consultaNodoSearchPage" />
+	    </action>
+	    <!-- Fin Consulta de Total por Nodo -->	   
+	     
+	    <!-- Control de Conciliacion -->	    
+	    <action
+	    	path="/bal/ControlConciliacion"
+	        type="ar.gov.rosario.siat.bal.view.struts.ControlConciliacionDAction"
+			scope="request"
+	       	validate="false"
+	        name="controlConciliacionSearchPage"
+	        parameter="method"
+	   		input=".bal.balance.view.controlConciliacionSearchPage"
+	        attribute="controlConciliacionSearchPage">
+	           
+	   	    <forward name="controlConciliacionSearchPage"   	path=".bal.balance.view.controlConciliacionSearchPage" />
+	    </action>
+	    <!-- Fin Control de Conciliacion -->	 
+	    
+	    <!-- Reporte de Total por Partida -->	    
+	    <action
+	    	path="/bal/ReporteTotalPar"
+	        type="ar.gov.rosario.siat.bal.view.struts.ReporteTotalParDAction"
+			scope="request"
+	       	validate="false"
+	        name="totalParReport"
+	        parameter="method"
+	   		input=".bal.clasificacion.view.totalParReport"
+	        attribute="totalParReport">
+	           
+	   	    <forward name="totalParReport"   	path=".bal.clasificacion.view.totalParReport" />
+	    </action>
+	    <!-- Fin Reporte de Total por Partida -->	   
+	    
+        <!-- Consultar Envios Osiris -->	 
+	    <action
+	    	path="/bal/BuscarEnvioOsiris"
+	        type="ar.gov.rosario.siat.bal.view.struts.BuscarEnvioOsirisDAction"
+			scope="request"
+	       	validate="false"
+	        name="envioOsirisSearchPage"
+	        parameter="method"
+	   		input=".bal.envioOsiris.view.envioOsirisSearchPage"
+	        attribute="envioOsirisSearchPage">
+	           
+	   	    <forward name="envioOsirisSearchPage"   	path=".bal.envioOsiris.view.envioOsirisSearchPage" />
+	   	    <forward name="administrarEnvioOsiris" 	    path="/bal/AdministrarEnvioOsiris.do?method=inicializar" />	
+	    </action>
+	    
+	     <action
+     		path="/bal/AdministrarEnvioOsiris"
+	        type="ar.gov.rosario.siat.bal.view.struts.AdministrarEnvioOsirisDAction"
+		    scope="request"
+        	validate="false"
+	        name="envioOsirisAdapter"
+            parameter="method"
+    	    input=".bal.envioOsiris.view.envioOsirisViewAdapter"
+	        attribute="envioOsirisAdapter">
+            
+    	    <forward name="envioOsirisViewAdapter"  	 path=".bal.envioOsiris.view.envioOsirisViewAdapter" />  
+    	    <forward name="administrarCierreBanco" 	   	 path="/bal/AdministrarCierreBanco.do?method=inicializar" />  	        	    
+       	    <forward name="administrarConciliacion" 	 path="/bal/AdministrarConciliacion.do?method=inicializar" />  	        	    
+	   	</action>
+        <!-- Fin Consultar Envios Osiris -->	 
+	    
+	    <!-- Consultar Cierres Bancos -->	
+	    <action
+     		path="/bal/AdministrarCierreBanco"
+	        type="ar.gov.rosario.siat.bal.view.struts.AdministrarCierreBancoDAction"
+		    scope="request"
+        	validate="false"
+	        name="cierreBancoAdapter"
+            parameter="method"
+    	    input=".bal.envioOsiris.view.cierreBancoViewAdapter"
+	        attribute="cierreBancoAdapter">            
+    	   
+    	    <forward name="cierreBancoViewAdapter"  	 path=".bal.envioOsiris.view.cierreBancoViewAdapter" />
+    	    <forward name="cierreBancoEditAdapter"  	 path=".bal.conciliacionOsiris.view.cierreBancoEditAdapter" />
+    	    <forward name="administrarTranAfip" 	   	 path="/bal/AdministrarTranAfip.do?method=inicializar" />
+	   	</action>
+	    <!-- Fin Consultar Cierres Bancos -->	
+	    
+	    <!-- Conciliar CierreBanco -->	 
+	    <action
+	    	path="/bal/BuscarCierreBanco"
+	        type="ar.gov.rosario.siat.bal.view.struts.BuscarCierreBancoDAction"
+			scope="request"
+	       	validate="false"
+	        name="cierreBancoSearchPage"
+	        parameter="method"
+	   		input=".bal.cierreBanco.view.cierreBancoSearchPage"
+	        attribute="cierreBancoSearchPage">
+	           
+	   	    <forward name="cierreBancoSearchPage"   	path=".bal.conciliacionOsiris.view.cierreBancoSearchPage" />
+	   	    <forward name="administrarCierreBanco" 	    path="/bal/AdministrarCierreBanco.do?method=inicializar" />	
+	    </action>
+	    <!-- Fin Conciliar CierreBanco -->	
+	    
+	    <!-- Consultar Tran Afip -->	
+	    <action
+     		path="/bal/AdministrarTranAfip"
+	        type="ar.gov.rosario.siat.bal.view.struts.AdministrarTranAfipDAction"
+		    scope="request"
+        	validate="false"
+	        name="tranAfipAdapter"
+            parameter="method"
+    	    input=".bal.envioOsiris.view.tranAfipViewAdapter"
+	        attribute="tranAfipAdapter">            
+    	   
+    	    <forward name="tranAfipViewAdapter"  	 path=".bal.envioOsiris.view.tranAfipViewAdapter" />
+    	    <forward name="administrarDetalleDJ" 	 path="/bal/AdministrarDetalleDJ.do?method=inicializar" />
+    	    <forward name="administrarDetallePago" 	 path="/bal/AdministrarDetallePago.do?method=inicializar" />
+	   	</action>
+	    <!-- Fin Consultar Tran Afip -->
+	    
+	    <!-- Consultar DetalleDJ -->	
+	    <action
+     		path="/bal/AdministrarDetalleDJ"
+	        type="ar.gov.rosario.siat.bal.view.struts.AdministrarDetalleDJDAction"
+		    scope="request"
+        	validate="false"
+	        name="detalleDJAdapter"
+            parameter="method"
+    	    input=".bal.envioOsiris.view.detalleDJViewAdapter"
+	        attribute="detalleDJAdapter">            
+    	   
+    	    <forward name="detalleDJViewAdapter"  	 path=".bal.envioOsiris.view.detalleDJViewAdapter" />
+    	    
+    	</action>
+	    <!-- Fin Consultar DetalleDJ -->	
+	    
+	    <!-- Consultar Detalle Pago -->	
+	    <action
+     		path="/bal/AdministrarDetallePago"
+	        type="ar.gov.rosario.siat.bal.view.struts.AdministrarDetallePagoDAction"
+		    scope="request"
+        	validate="false"
+	        name="detallePagoAdapter"
+            parameter="method"
+    	    input=".bal.envioOsiris.view.detallePagoViewAdapter"
+	        attribute="detallePagoAdapter">            
+    	   
+    	    <forward name="detallePagoViewAdapter"  	 path=".bal.envioOsiris.view.detallePagoViewAdapter" />
+    	    
+    	</action>
+	    <!-- Fin Consultar Detalle Pago -->		 
+
+	    <!-- Consultar Conciliacion -->	
+	    <action
+     		path="/bal/AdministrarConciliacion"
+	        type="ar.gov.rosario.siat.bal.view.struts.AdministrarConciliacionDAction"
+		    scope="request"
+        	validate="false"
+	        name="conciliacionAdapter"
+            parameter="method"
+    	    input=".bal.envioOsiris.view.conciliacionViewAdapter"
+	        attribute="conciliacionAdapter">            
+    	   
+    	    <forward name="conciliacionViewAdapter"  	 path=".bal.envioOsiris.view.conciliacionViewAdapter" />
+	   	</action>
+	    <!-- Fin Consultar Conciliacion -->	
+	    
+		<!-- ABM MovBan -->
+        <action
+     		path="/bal/BuscarMovBan"
+	        type="ar.gov.rosario.siat.bal.view.struts.BuscarMovBanDAction"
+		    scope="request"
+        	validate="false"
+	        name="movBanSearchPage"
+            parameter="method"
+    	    input=".bal.conciliacionOsiris.view.movBanSearchPage"
+	        attribute="movBanSearchPage">
+            
+    	    <forward name="movBanSearchPage"      path=".bal.conciliacionOsiris.view.movBanSearchPage" />
+   	   	    <forward name="administrarEncMovBan"  path="/bal/AdministrarEncMovBan.do?method=inicializar" />
+   	   	    <forward name="administrarMovBan" 	  path="/bal/AdministrarMovBan.do?method=inicializar" />
+	    </action>
+	    
+		<action
+     		path="/bal/AdministrarEncMovBan"
+	        type="ar.gov.rosario.siat.bal.view.struts.AdministrarEncMovBanDAction"
+		    scope="request"
+        	validate="false"
+	        name="movBanAdapter"
+            parameter="method"
+    	    input=".bal.conciliacionOsiris.view.movBanEncEditAdapter"
+	        attribute="movBanAdapter">
+
+    	    <forward name="movBanEncEditAdapter"     path=".bal.conciliacionOsiris.view.movBanEncEditAdapter" />
+	    </action>
+	    	    
+   	    <action
+     		path="/bal/AdministrarMovBan"
+	        type="ar.gov.rosario.siat.bal.view.struts.AdministrarMovBanDAction"
+		    scope="request"
+        	validate="false"
+	        name="movBanAdapter"
+            parameter="method"
+    	    input=".bal.conciliacionOsiris.view.movBanEditAdapter"
+	        attribute="movBanAdapter">
+            
+    	    <forward name="movBanAdapter" 		 	path=".bal.conciliacionOsiris.view.movBanAdapter" />
+    	    <forward name="movBanViewAdapter" 	 	path=".bal.conciliacionOsiris.view.movBanViewAdapter" />
+    	    <forward name="administrarEncMovBan" 	path="/bal/AdministrarEncMovBan.do?method=inicializar"/>
+			<forward name="administrarMovBanDet" 	path="/bal/AdministrarMovBanDet.do?method=inicializar"/>
+		</action>
+	    
+   	    <action
+     		path="/bal/AdministrarMovBanDet"
+	        type="ar.gov.rosario.siat.bal.view.struts.AdministrarMovBanDetDAction"
+		    scope="request"
+        	validate="false"
+	        name="movBanDetAdapter"
+            parameter="method"
+    	    input=".bal.conciliacionOsiris.view.movBanDetEditAdapter"
+	        attribute="movBanDetAdapter">
+            
+            <forward name="movBanDetEditAdapter"	path=".bal.conciliacionOsiris.view.movBanDetEditAdapter"/>
+            <forward name="movBanDetViewAdapter"	path=".bal.conciliacionOsiris.view.movBanDetViewAdapter"/>
+
+	    </action>
+   		<!-- Fin ABM MovBan -->
+	    
+	    <!-- Mantenedor de TipoIndet -->	    
+	    <action
+	    	path="/bal/BuscarTipoIndet"
+	        type="ar.gov.rosario.siat.bal.view.struts.BuscarTipoIndetDAction"
+			scope="request"
+	       	validate="false"
+	        name="tipoIndetSearchPage"
+	        parameter="method"
+	   		input=".bal.definicion.view.tipoIndetSearchPage"
+	        attribute="tipoIndetSearchPage">
+	           
+	   	    <forward name="tipoIndetSearchPage"			path=".bal.definicion.view.tipoIndetSearchPage" />
+	   	    <forward name="administrarTipoIndet"		path="/bal/AdministrarTipoIndet.do?method=inicializar" />
+	    </action>
+		
+		<action
+     		path="/bal/AdministrarTipoIndet"
+	        type="ar.gov.rosario.siat.bal.view.struts.AdministrarTipoIndetDAction"
+		    scope="request"
+        	validate="false"
+	        name="tipoIndetAdapter"
+            parameter="method"
+    	    input=".bal.definicion.view.tipoIndetEditAdapter"
+	        attribute="tipoIndetAdapter">
+              
+    	    <forward name="tipoIndetViewAdapter"		path=".bal.definicion.view.tipoIndetViewAdapter" />
+    	    <forward name="tipoIndetEditAdapter"    	path=".bal.definicion.view.tipoIndetEditAdapter" />
+	    </action>
+	    <!-- Fin Mantenedor de TipoIndet -->
+	    
+	</action-mappings>
+</struts-config>

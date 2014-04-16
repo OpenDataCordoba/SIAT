@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<html>
+    <head>
+        <title>Reporte - Siat Online</title>
+        <style type="text/css">
+    		/*tablas de fieldset y de datos */
+    		body {
+		 		font-family: sans;    		
+    		}
+        
+    		/*tablas de fieldset y de datos */
+    		table {
+		 		-fs-table-paginate: paginate; /*importante para paginar*/
+		 		border: 1px solid #000000; 
+		 		table-layout: fixed;
+		 		border-spacing: 0px;	
+		 		margin-top: 30px; /* margen que separa cada tabla*/
+		 		margin-bottom: 10px; /* margen que separa cada tabla*/
+		 	}
+
+			/* titulo de la tabla */
+    		table caption {
+		 		font-family: sans;
+		 		font-size: 14pt;
+		 		font-weight: bold;
+    		}
+		 	
+		 	/* celda en gral */
+		 	td { 
+				border-bottom: 1px solid #000000; 
+				margin: 0px; 
+				padding: 5px; 
+		 		font-family: mono;
+		 		font-size: 10pt;
+		 		font-weight: normal;
+			} 
+
+    		/* encabezado de tablas */
+			th {
+				border-bottom: 1px solid #000000; 
+				margin: 0px; 
+				padding: 5px; 
+		 		font-family: sans;
+		 		font-size: 10pt;
+		 		font-weight: bold;
+			} 
+
+			label{
+				text-align: right;
+				font-weight: bold; 
+			}
+			
+			fieldset {
+		 		margin: 0px; 
+		 		border: 1px solid #000000; 
+			}
+			
+			/* tabla de los fieldset */
+			fieldset table {
+		 		margin: 0px; 
+				border: 0px;
+			}
+			
+			/* celda de los fieldset */
+			fieldset table td {
+				white-space: nowrap;
+				border: 0px;
+			}
+			
+			@page :first {
+			  color: green;
+			  @top-left {
+			    content: "-";
+			    color: blue;
+			  }
+			  @top-right {
+			    content: "Usuario: -";
+			  }
+			}
+			
+			@page { 
+				margin-top: 4cm;
+				@top-center { content: element(header); }
+				@bottom-right { content: "Página " counter(page) " de " counter(pages); } 
+			}
+			
+			header { position: running(header) }
+	</style>
+    </head>
+<body>
+
+<div class="header">
+<!--
+  <img src="http://siat.rosario.gov.ar/siat/images/grslogo.jpg" alt="tecso" title="tecso" width="80" height="80"></img>
+-->
+</div>

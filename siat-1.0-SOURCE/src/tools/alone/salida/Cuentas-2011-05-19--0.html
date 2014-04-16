@@ -1,0 +1,2994 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<html>
+    <head>
+        <title>Reporte - Siat Online</title>
+        <style type="text/css">
+    		/*tablas de fieldset y de datos */
+    		body {
+		 		font-family: sans;    		
+    		}
+        
+    		/*tablas de fieldset y de datos */
+    		table {
+		 		-fs-table-paginate: paginate; /*importante para paginar*/
+		 		border: 1px solid #000000; 
+		 		table-layout: fixed;
+		 		border-spacing: 0px;	
+		 		margin-top: 30px; /* margen que separa cada tabla*/
+		 		margin-bottom: 10px; /* margen que separa cada tabla*/
+		 	}
+
+			/* titulo de la tabla */
+    		table caption {
+		 		font-family: sans;
+		 		font-size: 14pt;
+		 		font-weight: bold;
+    		}
+		 	
+		 	/* celda en gral */
+		 	td { 
+				border-bottom: 1px solid #000000; 
+				margin: 0px; 
+				padding: 5px; 
+		 		font-family: mono;
+		 		font-size: 10pt;
+		 		font-weight: normal;
+			} 
+
+    		/* encabezado de tablas */
+			th {
+				border-bottom: 1px solid #000000; 
+				margin: 0px; 
+				padding: 5px; 
+		 		font-family: sans;
+		 		font-size: 10pt;
+		 		font-weight: bold;
+			} 
+
+			label{
+				text-align: right;
+				font-weight: bold; 
+			}
+			
+			fieldset {
+		 		margin: 0px; 
+		 		border: 1px solid #000000; 
+			}
+			
+			/* tabla de los fieldset */
+			fieldset table {
+		 		margin: 0px; 
+				border: 0px;
+			}
+			
+			/* celda de los fieldset */
+			fieldset table td {
+				white-space: nowrap;
+				border: 0px;
+			}
+			
+			@page :first {
+			  color: green;
+			  @top-left {
+			    content: "-";
+			    color: blue;
+			  }
+			  @top-right {
+			    content: "Usuario: -";
+			  }
+			}
+			
+			@page { 
+				margin-top: 4cm;
+				@top-center { content: element(header); }
+				@bottom-right { content: "P?gina " counter(page) " de " counter(pages); } 
+			}
+			
+			header { position: running(header) }
+	</style>
+    </head>
+<body>
+
+<div class="header">
+<!--
+  <img src="http://siat.rosario.gov.ar/siat/images/grslogo.jpg" alt="tecso" title="tecso" width="80" height="80"></img>
+-->
+</div>
+<h1>Reporte Demo Grs</h1>
+<p>Reporte Demo Grs para usar como plantilla al empezar otros reportes</p>
+<fieldset>
+<legend><h2>Parametror</h2></legend>
+<table class='tablefilters'>
+<tr>
+<td style='text-align:right;'><label>Recurso</label></td>
+<td style='text-align:left;'>163.00</td>
+</tr>
+</table>
+</fieldset>
+<table>
+<caption>Resultados</caption>
+<thead>
+<tr>
+<th>Id</th>
+<th>Numero Cuenta</th>
+<th>Titular Principal</th>
+<th>CUIT Titular Principal</th>
+<th>Domicilio Envio</th>
+</tr>
+</thead>
+<tr>
+<td style='text-align:left;'>565847</td>
+<td style='text-align:left;'>LR 0292</td>
+<td style='text-align:left;'>PEREZ CRISTIAN</td>
+<td style='text-align:left;'>F-20-720233-9</td>
+<td style='text-align:left;'>LR.292 - DCTOS.20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>565897</td>
+<td style='text-align:left;'>LR 0292A</td>
+<td style='text-align:left;'>MINUCHI JOSE ALBERTO</td>
+<td style='text-align:left;'>C-20-12282635-0</td>
+<td style='text-align:left;'>ITALIA 1519  P.1</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>565898</td>
+<td style='text-align:left;'>LR 0304</td>
+<td style='text-align:left;'>D'AGOSTINO ROSA SUSANA</td>
+<td style='text-align:left;'>C-27-5436394-3</td>
+<td style='text-align:left;'></td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>565919</td>
+<td style='text-align:left;'>LR 0183</td>
+<td style='text-align:left;'>CURADO LUIS</td>
+<td style='text-align:left;'>C-20-6014383-9</td>
+<td style='text-align:left;'>CENTRAL 7641</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>565994</td>
+<td style='text-align:left;'>LR 0442</td>
+<td style='text-align:left;'>OJEDA MIGUEL ANGEL</td>
+<td style='text-align:left;'>C-20-16103312-0</td>
+<td style='text-align:left;'></td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>565995</td>
+<td style='text-align:left;'>LR 0487</td>
+<td style='text-align:left;'>MI#O CARLOS MARIO</td>
+<td style='text-align:left;'>C-20-10793754-5</td>
+<td style='text-align:left;'>LR.487 - DCTOS.20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>565996</td>
+<td style='text-align:left;'>LR 0337</td>
+<td style='text-align:left;'>ROVETTO EBE TERESA</td>
+<td style='text-align:left;'>C-27-12125412-9</td>
+<td style='text-align:left;'>LR.337 - DCTOS.20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>565997</td>
+<td style='text-align:left;'>LR 0452</td>
+<td style='text-align:left;'>MONTERO AMADO MATIAS</td>
+<td style='text-align:left;'>C-20-6019775-2</td>
+<td style='text-align:left;'>LR.452-DCTO.20471-2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>566040</td>
+<td style='text-align:left;'>LR 0430</td>
+<td style='text-align:left;'>RODRIGUEZ MANUEL HECTOR</td>
+<td style='text-align:left;'>C-20-6050151-4</td>
+<td style='text-align:left;'>LR.430 - DCTOS.20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>566068</td>
+<td style='text-align:left;'>LR 0162</td>
+<td style='text-align:left;'>GONZALEZ MARIA DEL CARMEN</td>
+<td style='text-align:left;'>C-27-10557790-2</td>
+<td style='text-align:left;'>AVDA. CENTRAL 7641</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>566069</td>
+<td style='text-align:left;'>LR 0403</td>
+<td style='text-align:left;'>GOMEZ JOSE SERGIO</td>
+<td style='text-align:left;'>C-20-14704248-6</td>
+<td style='text-align:left;'>VEINTICINCO DE MAYO 1410 P.1 D.1721 MB.85</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>566085</td>
+<td style='text-align:left;'>LR 0106</td>
+<td style='text-align:left;'>RICKERT NORBERTO JOSE</td>
+<td style='text-align:left;'>C-20-11308835-5</td>
+<td style='text-align:left;'>CALLAO 956  P.1 D.1</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>566086</td>
+<td style='text-align:left;'>LR 0031</td>
+<td style='text-align:left;'>BENITEZ LIDIA E</td>
+<td style='text-align:left;'>C-27-16572981-7</td>
+<td style='text-align:left;'>PASAJE ASUNCION 6117</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>566718</td>
+<td style='text-align:left;'>LR 0450</td>
+<td style='text-align:left;'>HADDAD LUIS CARLOS</td>
+<td style='text-align:left;'>C-20-8344802-5</td>
+<td style='text-align:left;'>FRAGA 135</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>566720</td>
+<td style='text-align:left;'>LR 0345</td>
+<td style='text-align:left;'>ORTS HORACIO ALEJANDRO-D</td>
+<td style='text-align:left;'>F-20-725908-0</td>
+<td style='text-align:left;'>LR. 345 - DCTOS.20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>566752</td>
+<td style='text-align:left;'>LR 0036</td>
+<td style='text-align:left;'>SIGUENZA RICARDO JOSE</td>
+<td style='text-align:left;'>C-20-17324566-2</td>
+<td style='text-align:left;'>LR.036 - DCTOS.20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>566810</td>
+<td style='text-align:left;'>LR 0261</td>
+<td style='text-align:left;'>DE LA TORRE GUILLERMO JUAN</td>
+<td style='text-align:left;'>C-20-10865368-0</td>
+<td style='text-align:left;'>BERNHEIM J. 8354</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>566812</td>
+<td style='text-align:left;'>LR 0277</td>
+<td style='text-align:left;'>FERREYRA CLAUDIO ROBERTO</td>
+<td style='text-align:left;'>C-20-20175000-9</td>
+<td style='text-align:left;'>BV. AVELLANEDA 2732</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>566814</td>
+<td style='text-align:left;'>LR 0163</td>
+<td style='text-align:left;'>PROFETA JOSE MIGUEL RAMON</td>
+<td style='text-align:left;'>C-20-6050714-0</td>
+<td style='text-align:left;'>VEINTICINCO DE MAYO 866 P.1 D. 713</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>567099</td>
+<td style='text-align:left;'>LR 0421</td>
+<td style='text-align:left;'>GASPARICH HUGO A</td>
+<td style='text-align:left;'>C-20-11448812-8</td>
+<td style='text-align:left;'>LR 421-GEL 760-R. MEGANE /07</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>567103</td>
+<td style='text-align:left;'>LR 0507</td>
+<td style='text-align:left;'>TRACHCEL MARCELO</td>
+<td style='text-align:left;'>C-20-10778607-5</td>
+<td style='text-align:left;'>LR.507 - DCTOS.20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>567288</td>
+<td style='text-align:left;'>LR 0281</td>
+<td style='text-align:left;'>SOUVIRAA GABRIEL CAYETANO</td>
+<td style='text-align:left;'>C-20-12520069-0</td>
+<td style='text-align:left;'>LR.281  - DCTOS.20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>567350</td>
+<td style='text-align:left;'>LR 0349</td>
+<td style='text-align:left;'>GARCIA GUSTAVO LUIS</td>
+<td style='text-align:left;'>C-20-21962363-2</td>
+<td style='text-align:left;'>INGENIEROS JOSE 854</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>567352</td>
+<td style='text-align:left;'>LR 0149</td>
+<td style='text-align:left;'>SEDITA MARTIN DANIEL</td>
+<td style='text-align:left;'>C-20-14016515-9</td>
+<td style='text-align:left;'>LAMADRID 2306</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>567356</td>
+<td style='text-align:left;'>LR 0252</td>
+<td style='text-align:left;'>MEDINA ADOLFO</td>
+<td style='text-align:left;'>C-20-6039528-5</td>
+<td style='text-align:left;'>OLGUIN F. 2255</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>567358</td>
+<td style='text-align:left;'>LR 0078</td>
+<td style='text-align:left;'>PALILLO CAYETANO RUBEN</td>
+<td style='text-align:left;'>C-20-6026990-7</td>
+<td style='text-align:left;'>SAAVEDRA C. 1433</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>567361</td>
+<td style='text-align:left;'>LR 0282</td>
+<td style='text-align:left;'>TABORDA HERNAN ESTEBAN L</td>
+<td style='text-align:left;'>C-20-24282701-6</td>
+<td style='text-align:left;'>PJE. INDEPENDENCIA 37</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>567363</td>
+<td style='text-align:left;'>LR 0087</td>
+<td style='text-align:left;'>RIVERO LILIANA CARMEN</td>
+<td style='text-align:left;'>C-27-13502148-8</td>
+<td style='text-align:left;'>ROSAS JUAN M. DE 881 D.2</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>567365</td>
+<td style='text-align:left;'>LR 0324</td>
+<td style='text-align:left;'>GIGANTI MARIA ELENA</td>
+<td style='text-align:left;'>C-27-5588973-6</td>
+<td style='text-align:left;'>SANCHEZ DE THOMPSON M. -2</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>567367</td>
+<td style='text-align:left;'>LR 0176</td>
+<td style='text-align:left;'>MONNA RUBEN ALBERTO</td>
+<td style='text-align:left;'>C-20-12694544-3</td>
+<td style='text-align:left;'>DEL CAMPO 4362</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>567369</td>
+<td style='text-align:left;'>LR 0337A</td>
+<td style='text-align:left;'>CAMBIASO DANIEL ALBERTO</td>
+<td style='text-align:left;'>C-20-24350728-7</td>
+<td style='text-align:left;'>GOSWEILER -66</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>567371</td>
+<td style='text-align:left;'>LR 0097</td>
+<td style='text-align:left;'>FERRETTI MARCELO MIGUEL</td>
+<td style='text-align:left;'>C-20-21810028-8</td>
+<td style='text-align:left;'>VIRASORO B. 5244</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>567373</td>
+<td style='text-align:left;'>LR 0310</td>
+<td style='text-align:left;'>PAGLIA CARMEN MARIA</td>
+<td style='text-align:left;'>C-27-5401835-9</td>
+<td style='text-align:left;'>CANGALLO 20</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>567375</td>
+<td style='text-align:left;'>LR 0238</td>
+<td style='text-align:left;'>MOLINA CLAUDIO LUIS</td>
+<td style='text-align:left;'>C-20-17637725-0</td>
+<td style='text-align:left;'>CORTADA ORDEN 1144</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>567379</td>
+<td style='text-align:left;'>LR 0286</td>
+<td style='text-align:left;'>DAVOLIO MIGUEL ANGEL</td>
+<td style='text-align:left;'>C-20-18296687-9</td>
+<td style='text-align:left;'>GOMEZ V.  3486</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>567382</td>
+<td style='text-align:left;'>LR 0425</td>
+<td style='text-align:left;'>CURBELO JOSE MARIA</td>
+<td style='text-align:left;'>C-20-13795407-0</td>
+<td style='text-align:left;'>PJE. INDEPENDENCIA 3448</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>567384</td>
+<td style='text-align:left;'>LR 0119</td>
+<td style='text-align:left;'>AMAYA PEDRO NORBERTO</td>
+<td style='text-align:left;'>C-20-6052744-0</td>
+<td style='text-align:left;'>TRAVELLA 840</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>567387</td>
+<td style='text-align:left;'>LR 0250</td>
+<td style='text-align:left;'>MARTINEZ GRACIELA SUSANA</td>
+<td style='text-align:left;'>C-27-12568650-3</td>
+<td style='text-align:left;'>SARMIENTO 1821</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>567389</td>
+<td style='text-align:left;'>LR 0039</td>
+<td style='text-align:left;'>ROZAS JOSE ANTONIO</td>
+<td style='text-align:left;'>C-20-12110718-0</td>
+<td style='text-align:left;'>FONTANARROSA D.644</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>567391</td>
+<td style='text-align:left;'>LR 0136</td>
+<td style='text-align:left;'>VASCO RAMON FERNANDO</td>
+<td style='text-align:left;'>C-20-24720740-7</td>
+<td style='text-align:left;'>SANCHO PANZA 2374</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>567393</td>
+<td style='text-align:left;'>LR 0273</td>
+<td style='text-align:left;'>ALEGRE EDUARDO RICARDO</td>
+<td style='text-align:left;'>C-20-6031733-2</td>
+<td style='text-align:left;'>SALTA 2933 P.2 D.1</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>567397</td>
+<td style='text-align:left;'>LR 0313</td>
+<td style='text-align:left;'>HALCOVICH CLAUDIO ROBERTO</td>
+<td style='text-align:left;'>C-20-23281838-8</td>
+<td style='text-align:left;'>SALTA 5102</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>567401</td>
+<td style='text-align:left;'>LR 0218</td>
+<td style='text-align:left;'>ZINNA JUAN CARLOS</td>
+<td style='text-align:left;'>C-20-8617395-7</td>
+<td style='text-align:left;'>SAN JUAN 3790</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>567403</td>
+<td style='text-align:left;'>LR 0157</td>
+<td style='text-align:left;'>GONZALEZ JUAN CARLOS</td>
+<td style='text-align:left;'>C-20-8412302-4</td>
+<td style='text-align:left;'>NAVARRO J. 5814 P.0 D.8</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>567407</td>
+<td style='text-align:left;'>LR 0489</td>
+<td style='text-align:left;'>DAVOLIO FABIO DANIEL GUILLER</td>
+<td style='text-align:left;'>C-20-17637569-9</td>
+<td style='text-align:left;'>NEWBERY JORGE 1470</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>567408</td>
+<td style='text-align:left;'>LR 0498</td>
+<td style='text-align:left;'>SANCHEZ EDGARDO LEOPOLDO</td>
+<td style='text-align:left;'>C-20-12524276-7</td>
+<td style='text-align:left;'>VIAMONTE J. 5775</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>567411</td>
+<td style='text-align:left;'>LR 0155</td>
+<td style='text-align:left;'>CURADO LUIS</td>
+<td style='text-align:left;'>C-20-6014383-9</td>
+<td style='text-align:left;'>CENTRAL 7641</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>567413</td>
+<td style='text-align:left;'>LR 0279</td>
+<td style='text-align:left;'>AGUIRRE ALDO M</td>
+<td style='text-align:left;'>C-20-17021389-1</td>
+<td style='text-align:left;'>CASTELLANOS A. 3476</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>567415</td>
+<td style='text-align:left;'>LR 0264</td>
+<td style='text-align:left;'>SANFILIPPO JOSE CARLOS</td>
+<td style='text-align:left;'>C-20-16382241-6</td>
+<td style='text-align:left;'>ALEM L. 3391 P.4 D.3</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>567417</td>
+<td style='text-align:left;'>LR 0166</td>
+<td style='text-align:left;'>CURADO LUIS</td>
+<td style='text-align:left;'>C-20-6014383-9</td>
+<td style='text-align:left;'>CENTRAL 7641</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>567579</td>
+<td style='text-align:left;'>LR 0441</td>
+<td style='text-align:left;'>AVILA HUMBERTO</td>
+<td style='text-align:left;'>F-20-725140-2</td>
+<td style='text-align:left;'>LR.441 - DCTOS.20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>567907</td>
+<td style='text-align:left;'>LR 0047</td>
+<td style='text-align:left;'>ASCUA MIRTA HAYDEE</td>
+<td style='text-align:left;'>C-27-10410673-6</td>
+<td style='text-align:left;'>PASAJE URDINARRAIN 8461</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>567908</td>
+<td style='text-align:left;'>LR 0291</td>
+<td style='text-align:left;'>POSELLA JUAN JOSE</td>
+<td style='text-align:left;'>C-20-6561826-6</td>
+<td style='text-align:left;'>TUCUMAN 1807 P.5 D.2</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>567910</td>
+<td style='text-align:left;'>LR 0068</td>
+<td style='text-align:left;'>POY ALDO</td>
+<td style='text-align:left;'>C-20-6062287-7</td>
+<td style='text-align:left;'>AGRELO 1060</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>567915</td>
+<td style='text-align:left;'>LR 0048</td>
+<td style='text-align:left;'>CORREA MARIA DE LAS MERCEDE</td>
+<td style='text-align:left;'>C-27-1766725-0</td>
+<td style='text-align:left;'>LINIERS S. 1659</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>567917</td>
+<td style='text-align:left;'>LR 0219</td>
+<td style='text-align:left;'>MURGIA PAULO</td>
+<td style='text-align:left;'>C-20-5988059-5</td>
+<td style='text-align:left;'>PJE. CILVETI 763</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>567919</td>
+<td style='text-align:left;'>LR 0213</td>
+<td style='text-align:left;'>MARTINEZ AMADEO</td>
+<td style='text-align:left;'>C-20-13093071-0</td>
+<td style='text-align:left;'>DE LA SALLE 6941</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>567921</td>
+<td style='text-align:left;'>LR 0283</td>
+<td style='text-align:left;'>GOMEZ JOSE LUIS</td>
+<td style='text-align:left;'>C-20-13077783-0</td>
+<td style='text-align:left;'>CALLE 1345 N? 2436 P.3 D.7 MB 66</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>567926</td>
+<td style='text-align:left;'>LR 0043</td>
+<td style='text-align:left;'>DIAZ EDGARDO ADRIAN</td>
+<td style='text-align:left;'>C-20-10078214-7</td>
+<td style='text-align:left;'>HACIENDA DE ESPEJO 219</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>567928</td>
+<td style='text-align:left;'>LR 0159</td>
+<td style='text-align:left;'>GONZALEZ MARIA DEL CARMEN</td>
+<td style='text-align:left;'>C-27-10557790-2</td>
+<td style='text-align:left;'>CENTRAL 7641</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>567930</td>
+<td style='text-align:left;'>LR 0228</td>
+<td style='text-align:left;'>ZINGARETTI HERNAN ANDRES</td>
+<td style='text-align:left;'>C-20-20704404-1</td>
+<td style='text-align:left;'>LIMA 1531</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>568248</td>
+<td style='text-align:left;'>LR 0015</td>
+<td style='text-align:left;'>ROMERO MARTA ISABEL</td>
+<td style='text-align:left;'>C-27-13287429-3</td>
+<td style='text-align:left;'>PJE. CERES 3216</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>568251</td>
+<td style='text-align:left;'>LR 0046</td>
+<td style='text-align:left;'>GUERRINI GABRIEL GUSTAVO</td>
+<td style='text-align:left;'>C-20-17819243-5</td>
+<td style='text-align:left;'>ZELAYA C. 2243</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>568256</td>
+<td style='text-align:left;'>LR 0247</td>
+<td style='text-align:left;'>FIORENZA NORA ALICIA</td>
+<td style='text-align:left;'>C-27-17152146-2</td>
+<td style='text-align:left;'>LR 247-GDO 384-R. MEGANE /07</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>568261</td>
+<td style='text-align:left;'>LR 0446</td>
+<td style='text-align:left;'>MAGIN MARIA JUANA CARLOTA</td>
+<td style='text-align:left;'>C-27-3787839-7</td>
+<td style='text-align:left;'>CULLEN D. 977</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>568262</td>
+<td style='text-align:left;'>LR 0510</td>
+<td style='text-align:left;'>DE SETA ROBERTO JUAN</td>
+<td style='text-align:left;'>C-20-6024635-4</td>
+<td style='text-align:left;'>ANCHORIS  1920</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>568269</td>
+<td style='text-align:left;'>LR 0338</td>
+<td style='text-align:left;'>ARIAS OSCAR SERGIO</td>
+<td style='text-align:left;'>C-20-13795626-9</td>
+<td style='text-align:left;'>LR 338-EYK 362-CORSA 2005</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>568270</td>
+<td style='text-align:left;'>LR 0416</td>
+<td style='text-align:left;'>TRAPANI GLORIA MATILDE</td>
+<td style='text-align:left;'>C-27-4946342-5</td>
+<td style='text-align:left;'>EVELYN H. 3779</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>568273</td>
+<td style='text-align:left;'>LR 0448</td>
+<td style='text-align:left;'>BERNAL SERGIO GUSTAVO</td>
+<td style='text-align:left;'>C-20-23402648-9</td>
+<td style='text-align:left;'>LR 448-FGA 011- CORSA/05</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>568274</td>
+<td style='text-align:left;'>LR 0296</td>
+<td style='text-align:left;'>AMAYA ANGEL DANIEL</td>
+<td style='text-align:left;'>C-20-13752337-0</td>
+<td style='text-align:left;'>GENOVA  1645</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>568279</td>
+<td style='text-align:left;'>LR 0484</td>
+<td style='text-align:left;'>MARTIN FABIAN HERNAN</td>
+<td style='text-align:left;'>C-20-22296331-2</td>
+<td style='text-align:left;'>LR 484-FLQ 150- R. MEGANE /06</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>568284</td>
+<td style='text-align:left;'>LR 0456</td>
+<td style='text-align:left;'>TABORDA JUAN ANTONIO</td>
+<td style='text-align:left;'>C-20-4108903-5</td>
+<td style='text-align:left;'>INDEPENDENCIA -37</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>568285</td>
+<td style='text-align:left;'>LR 0486</td>
+<td style='text-align:left;'>MARIANELLI MIGUEL HORACIO</td>
+<td style='text-align:left;'>C-20-6064182-2</td>
+<td style='text-align:left;'>RIO DE JANEIRO 2180</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>568288</td>
+<td style='text-align:left;'>LR 0347</td>
+<td style='text-align:left;'>GUARNERI RAQUEL SUSANA</td>
+<td style='text-align:left;'>C-27-11446538-6</td>
+<td style='text-align:left;'>MAESTRO MASSA 584</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>568293</td>
+<td style='text-align:left;'>LR 0332</td>
+<td style='text-align:left;'>BALDEBENITEZ EDGARDO ROBERTO</td>
+<td style='text-align:left;'>C-20-12520020-7</td>
+<td style='text-align:left;'>AYACUCHO BATALLA DE 2053</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>568306</td>
+<td style='text-align:left;'>LR 0497</td>
+<td style='text-align:left;'>BARRETO GLORIA VALENTINA</td>
+<td style='text-align:left;'>C-27-10864004-4</td>
+<td style='text-align:left;'>LR.497-DCTO. 20471- 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>568308</td>
+<td style='text-align:left;'>LR 0452A</td>
+<td style='text-align:left;'>ARANCIBIA ALEJANDRA ANDREA</td>
+<td style='text-align:left;'>C-27-22951220-5</td>
+<td style='text-align:left;'>PASAJE EVELYN 3779</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>568309</td>
+<td style='text-align:left;'>LR 0253</td>
+<td style='text-align:left;'>CARUSO ROBERTO MANUEL</td>
+<td style='text-align:left;'>C-20-6062227-5</td>
+<td style='text-align:left;'>LR.253 - DCTOS.20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>568310</td>
+<td style='text-align:left;'>LR 0436</td>
+<td style='text-align:left;'>CENTURION ADRIANA ANDREA</td>
+<td style='text-align:left;'>C-27-26015805-3</td>
+<td style='text-align:left;'>LR.436-PAT.AVY521-DC.20471/2335-01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>568311</td>
+<td style='text-align:left;'>LR 0469</td>
+<td style='text-align:left;'>ACOSTA MIGUEL ANGEL</td>
+<td style='text-align:left;'>C-20-6186108-7</td>
+<td style='text-align:left;'>LR.469 - DCTOS.20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>568317</td>
+<td style='text-align:left;'>LR 0460</td>
+<td style='text-align:left;'>CRISCENTI JOSE ALBERTO</td>
+<td style='text-align:left;'>C-20-24151359-0</td>
+<td style='text-align:left;'></td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>568325</td>
+<td style='text-align:left;'>LR 0507A</td>
+<td style='text-align:left;'>DIFILIPPO ANTONIO</td>
+<td style='text-align:left;'>C-20-10067487-5</td>
+<td style='text-align:left;'>SAN MARTIN J. 2385 P.2 D.1</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>568328</td>
+<td style='text-align:left;'>LR 0415</td>
+<td style='text-align:left;'>BETTI LUIS ATILIO</td>
+<td style='text-align:left;'>C-20-4989279-0</td>
+<td style='text-align:left;'>LR.415 -DCTOS.20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>568335</td>
+<td style='text-align:left;'>LR 0290</td>
+<td style='text-align:left;'>ALFONSO RICARDO LEONARDO</td>
+<td style='text-align:left;'>C-20-6064658-1</td>
+<td style='text-align:left;'>LR.290 - DCTOS.20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>568338</td>
+<td style='text-align:left;'>LR 0306</td>
+<td style='text-align:left;'>ANANIA CARMEN</td>
+<td style='text-align:left;'>C-27-12111614-1</td>
+<td style='text-align:left;'>LR.306 - DCTOS.20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>568339</td>
+<td style='text-align:left;'>LR 0401</td>
+<td style='text-align:left;'>BARUFALDI CLARA</td>
+<td style='text-align:left;'>C-27-6651824-3</td>
+<td style='text-align:left;'>LR. 401 - DCTOS.20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>568340</td>
+<td style='text-align:left;'>LR 0420</td>
+<td style='text-align:left;'>BENEGAS MARIO ANGEL</td>
+<td style='text-align:left;'>C-20-13795633-1</td>
+<td style='text-align:left;'>LR. 420 - DCTOS.20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>568341</td>
+<td style='text-align:left;'>LR 0174</td>
+<td style='text-align:left;'>BOSSI JORGE RAUL</td>
+<td style='text-align:left;'>C-20-8284078-0</td>
+<td style='text-align:left;'>LR.174 - DCTOS.20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>568342</td>
+<td style='text-align:left;'>LR 0278</td>
+<td style='text-align:left;'>CARBONE JUAN ALBERTO</td>
+<td style='text-align:left;'>C-20-12944952-8</td>
+<td style='text-align:left;'>LR.278  -  DCTOS.20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>568343</td>
+<td style='text-align:left;'>LR 0311</td>
+<td style='text-align:left;'>FORESTO DANIEL RICARDO</td>
+<td style='text-align:left;'>C-20-8291635-1</td>
+<td style='text-align:left;'>LR.311 - DCTOS.20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>568344</td>
+<td style='text-align:left;'>LR 0437</td>
+<td style='text-align:left;'>GALEANO ROBERTO HUGO</td>
+<td style='text-align:left;'>C-20-13692150-0</td>
+<td style='text-align:left;'>LR.437 - DCTOS.20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>568345</td>
+<td style='text-align:left;'>LR 0437A</td>
+<td style='text-align:left;'>GARCIA GUILLERMO FABIAN</td>
+<td style='text-align:left;'>C-20-17079148-8</td>
+<td style='text-align:left;'>SANCHEZ DE BUSTAMANTE 2653</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>568347</td>
+<td style='text-align:left;'>LR 0426</td>
+<td style='text-align:left;'>GARNICA MIRTA</td>
+<td style='text-align:left;'>C-27-13169049-0</td>
+<td style='text-align:left;'>LR.426-DCTO.20471-2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>568348</td>
+<td style='text-align:left;'>LR 0426A</td>
+<td style='text-align:left;'>PERRONE DANIEL ALBERTO</td>
+<td style='text-align:left;'>C-20-10865618-3</td>
+<td style='text-align:left;'>OWEN RICARDO 4982</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>568351</td>
+<td style='text-align:left;'>LR 0407</td>
+<td style='text-align:left;'>GIORGI MIRIAN MERCEDES</td>
+<td style='text-align:left;'>C-27-17148666-7</td>
+<td style='text-align:left;'>LR.407 - DCTOS.20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>568352</td>
+<td style='text-align:left;'>LR 0314</td>
+<td style='text-align:left;'>GOICOECHEA GUSTAVO FABIAN</td>
+<td style='text-align:left;'>C-20-17148765-0</td>
+<td style='text-align:left;'>LR.314 - DCTOS.20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>568353</td>
+<td style='text-align:left;'>LR 0477</td>
+<td style='text-align:left;'>GRADASSI DINO OMAR</td>
+<td style='text-align:left;'>C-20-14143340-8</td>
+<td style='text-align:left;'>LR.477-DCTO.20471-2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>568354</td>
+<td style='text-align:left;'>LR 0477A</td>
+<td style='text-align:left;'>VIGHETTI CLAUDIO FABIAN</td>
+<td style='text-align:left;'>C-20-18068065-0</td>
+<td style='text-align:left;'>COCHET GUSTAVO 7713 P.0 D.1</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>568356</td>
+<td style='text-align:left;'>LR 0341</td>
+<td style='text-align:left;'>HANLON ALICIA LAURA</td>
+<td style='text-align:left;'>C-27-6651345-4</td>
+<td style='text-align:left;'>LR.341 - DCTOS.20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>568357</td>
+<td style='text-align:left;'>LR 0352</td>
+<td style='text-align:left;'>MARAGLIANO CRISTIAN LUIS</td>
+<td style='text-align:left;'>C-20-23513704-7</td>
+<td style='text-align:left;'>LR.352 - DCTOS.20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>568359</td>
+<td style='text-align:left;'>LR 0412</td>
+<td style='text-align:left;'>MARINELLI JORGE ALBERTO</td>
+<td style='text-align:left;'>C-20-10594755-1</td>
+<td style='text-align:left;'>LAPRIDA F. 4023</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>568360</td>
+<td style='text-align:left;'>LR 0440</td>
+<td style='text-align:left;'>MARINO CLAUDIA MARCELA</td>
+<td style='text-align:left;'>C-27-14938407-9</td>
+<td style='text-align:left;'>LR.440-DCTO.20471-2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>568361</td>
+<td style='text-align:left;'>LR 0505</td>
+<td style='text-align:left;'>MOLDA EDUARDO</td>
+<td style='text-align:left;'>C-20-5077211-0</td>
+<td style='text-align:left;'></td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>568366</td>
+<td style='text-align:left;'>LR 0339</td>
+<td style='text-align:left;'>MUSSI FELIPE</td>
+<td style='text-align:left;'>C-20-6071507-7</td>
+<td style='text-align:left;'>LR.339 - DCTOS.20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>568367</td>
+<td style='text-align:left;'>LR 0342</td>
+<td style='text-align:left;'>PEREZ HUGO ALEJANDRO</td>
+<td style='text-align:left;'>C-20-23250395-6</td>
+<td style='text-align:left;'>LR.342 - DCTOS.20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>568368</td>
+<td style='text-align:left;'>LR 0492</td>
+<td style='text-align:left;'>PERFUMO ROSANA ESTER</td>
+<td style='text-align:left;'>C-27-17113022-6</td>
+<td style='text-align:left;'>LR.492-DCTO.20471-2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>568369</td>
+<td style='text-align:left;'>LR 0283A</td>
+<td style='text-align:left;'>PIATTI CRISTIAN OMAR</td>
+<td style='text-align:left;'>C-20-23233310-4</td>
+<td style='text-align:left;'>LR.283  -  DCTOS.20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>568370</td>
+<td style='text-align:left;'>417010</td>
+<td style='text-align:left;'>RAMIREZ LUIS ALBERTO</td>
+<td style='text-align:left;'>C-20-16492583-9</td>
+<td style='text-align:left;'>LR.-445  -  DCTOS.20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>568371</td>
+<td style='text-align:left;'>LR 0490</td>
+<td style='text-align:left;'>RODRIGUEZ ALEJANDRO MARCELO</td>
+<td style='text-align:left;'>C-20-21545983-8</td>
+<td style='text-align:left;'>LR.490-DCTO. 20471-2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>568372</td>
+<td style='text-align:left;'>LR 0309</td>
+<td style='text-align:left;'>ROJAS RAUL REINALDO</td>
+<td style='text-align:left;'>C-20-16251144-1</td>
+<td style='text-align:left;'>LR.309 - DCTOS.20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>568373</td>
+<td style='text-align:left;'>LR 0351</td>
+<td style='text-align:left;'>WEBER ERNESTO HUGO</td>
+<td style='text-align:left;'>C-20-4439071-0</td>
+<td style='text-align:left;'>LR.351 - DCTOS.20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>568374</td>
+<td style='text-align:left;'>LR 0443</td>
+<td style='text-align:left;'>ZARANTONELLO JUAN CARLOS SANTOS</td>
+<td style='text-align:left;'>C-20-6073625-2</td>
+<td style='text-align:left;'>LR.443 - DCTOS.20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>568384</td>
+<td style='text-align:left;'>LR 0185</td>
+<td style='text-align:left;'>CASTELLARIN HECTOR OMAR RAMON</td>
+<td style='text-align:left;'>C-20-13077132-8</td>
+<td style='text-align:left;'>RODRIGUEZ M.1275 IC: 9/141</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>568386</td>
+<td style='text-align:left;'>LR 0081</td>
+<td style='text-align:left;'>CACERES CLARA MERCEDES</td>
+<td style='text-align:left;'>C-27-11270151-1</td>
+<td style='text-align:left;'>WASHINGTON J. 1061</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>568388</td>
+<td style='text-align:left;'>LR 0495</td>
+<td style='text-align:left;'>MIGUEL NORBERTO FAGA</td>
+<td style='text-align:left;'>C-20-6182430-0</td>
+<td style='text-align:left;'>FUNES P. 829</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>568931</td>
+<td style='text-align:left;'>LR 0483</td>
+<td style='text-align:left;'>VEGA JOSE ANIBAL</td>
+<td style='text-align:left;'>C-20-5077456-5</td>
+<td style='text-align:left;'>LR.483 - DCTOS.20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>568936</td>
+<td style='text-align:left;'>LR 0447</td>
+<td style='text-align:left;'>JAUREGUI JUAN EDUARDO</td>
+<td style='text-align:left;'>C-20-23894967-0</td>
+<td style='text-align:left;'>LR.447-DCTO.20471-2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>568938</td>
+<td style='text-align:left;'>LR 0511</td>
+<td style='text-align:left;'>PRESENTADO LUIS MARIANO</td>
+<td style='text-align:left;'>C-20-14746680-4</td>
+<td style='text-align:left;'>LR.511-DCTO. 20471-2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>568939</td>
+<td style='text-align:left;'>LR 0503</td>
+<td style='text-align:left;'>VILLANUEVA ORLANDO CASIANO</td>
+<td style='text-align:left;'>C-20-93885776-9</td>
+<td style='text-align:left;'>LR. 503 - DCTOS.20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>568951</td>
+<td style='text-align:left;'>LR 0478</td>
+<td style='text-align:left;'>SANCHEZ HUGO ALBERTO</td>
+<td style='text-align:left;'>C-20-26380181-5</td>
+<td style='text-align:left;'>LR.478  -  DCTOS.20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>568953</td>
+<td style='text-align:left;'>LR 0286A</td>
+<td style='text-align:left;'>SERAFINI LELIO OMAR</td>
+<td style='text-align:left;'>C-20-12525482-0</td>
+<td style='text-align:left;'>LR.286 - DCTOS.20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>568956</td>
+<td style='text-align:left;'>LR 0082</td>
+<td style='text-align:left;'>MAZZIERI HILDA LAURINA</td>
+<td style='text-align:left;'>C-27-3242786-9</td>
+<td style='text-align:left;'>LR.082 - DCTOS.20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>568958</td>
+<td style='text-align:left;'>LR 0449</td>
+<td style='text-align:left;'>NIETO OSVALDO RAUL</td>
+<td style='text-align:left;'>C-20-8524367-6</td>
+<td style='text-align:left;'>LR.449-DCTO.20471-2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>568959</td>
+<td style='text-align:left;'>LR 0465</td>
+<td style='text-align:left;'>UBERTI NORBERTO JOSE</td>
+<td style='text-align:left;'>C-20-22091248-6</td>
+<td style='text-align:left;'>LR.465 - DCTOS.20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>569024</td>
+<td style='text-align:left;'>LR 0344</td>
+<td style='text-align:left;'>PERALTA HERALDO JORGE</td>
+<td style='text-align:left;'>C-20-5990855-6</td>
+<td style='text-align:left;'>LR.344 - DCTOS.20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>569193</td>
+<td style='text-align:left;'>LR 0177</td>
+<td style='text-align:left;'>SOUZA CRISTINA BEATRIZ</td>
+<td style='text-align:left;'>C-27-17079548-8</td>
+<td style='text-align:left;'>CASTELLANOS 635 P.0 D.4</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>569195</td>
+<td style='text-align:left;'>LR 237</td>
+<td style='text-align:left;'>BUSTAMANTE FABIO ALEJANDRO</td>
+<td style='text-align:left;'>C-20-18242818-4</td>
+<td style='text-align:left;'>LR 0237-FDZ 652-R. MEGANE /05</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>569198</td>
+<td style='text-align:left;'>LR 0401A</td>
+<td style='text-align:left;'>ORIFICI MARCELO MIGUEL</td>
+<td style='text-align:left;'>C-20-22172115-3</td>
+<td style='text-align:left;'>SAN LORENZO 5507</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>569225</td>
+<td style='text-align:left;'>LR 0321</td>
+<td style='text-align:left;'>MARTINEZ CRISTINA RAMONA</td>
+<td style='text-align:left;'>C-27-14353570-9</td>
+<td style='text-align:left;'>FRIAS F. 573</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>569241</td>
+<td style='text-align:left;'>LR 0441A</td>
+<td style='text-align:left;'>SUIGO OSCAR RAMON</td>
+<td style='text-align:left;'>C-20-6066447-2</td>
+<td style='text-align:left;'>MONTEVIDEO 7093</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>569251</td>
+<td style='text-align:left;'>LR 0143</td>
+<td style='text-align:left;'>LEO MARCELO FABIAN</td>
+<td style='text-align:left;'>C-20-21415339-5</td>
+<td style='text-align:left;'>CHASSAING J. 7761</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>569403</td>
+<td style='text-align:left;'>LR 0511A</td>
+<td style='text-align:left;'>COBE SERGIO GUSTAVO</td>
+<td style='text-align:left;'>C-20-13509038-8</td>
+<td style='text-align:left;'>JUAN JOSE PASO 7675</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>569876</td>
+<td style='text-align:left;'>LR 0512</td>
+<td style='text-align:left;'>LEGARRETA ALBERTO</td>
+<td style='text-align:left;'>C-20-16852772-2</td>
+<td style='text-align:left;'>LR. 512  -  DCTOS.20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>569880</td>
+<td style='text-align:left;'>LR 0308</td>
+<td style='text-align:left;'>FERREYRA FERNANDO</td>
+<td style='text-align:left;'>C-20-12700848-6</td>
+<td style='text-align:left;'>LR.308 - DCTOS.20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>569881</td>
+<td style='text-align:left;'>LR 0312</td>
+<td style='text-align:left;'>SEGUI MARIA ALICIA</td>
+<td style='text-align:left;'>C-27-4888524-5</td>
+<td style='text-align:left;'>LR.312 - DCTOS.20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>569882</td>
+<td style='text-align:left;'>LR 0329</td>
+<td style='text-align:left;'>CARBALLO HILDA MERCEDES</td>
+<td style='text-align:left;'>C-27-11126235-2</td>
+<td style='text-align:left;'>LR.329 - DCTOS.20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>600228</td>
+<td style='text-align:left;'>LR 083</td>
+<td style='text-align:left;'>HERNANDEZ SANTOS</td>
+<td style='text-align:left;'>C-20-11672658-1</td>
+<td style='text-align:left;'>LR 83-PAT. DYU 351-R. CLIO/02</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>600241</td>
+<td style='text-align:left;'>LR 0309A</td>
+<td style='text-align:left;'>MOSCATTI NESTOR OSVALDO</td>
+<td style='text-align:left;'>C-20-11126580-2</td>
+<td style='text-align:left;'>PJE BARILOCHE 3093</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>600693</td>
+<td style='text-align:left;'>LR 0540</td>
+<td style='text-align:left;'>GONZALEZ JULIO TOMAS</td>
+<td style='text-align:left;'>C-20-6254618-5</td>
+<td style='text-align:left;'>SALTA 1969-CHEVROLET CORSA CLASSIC 4P SUPER 1.6</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>600695</td>
+<td style='text-align:left;'>LR 0539</td>
+<td style='text-align:left;'>BAUZAS ANA MARIA</td>
+<td style='text-align:left;'>C-27-5988626-0</td>
+<td style='text-align:left;'>GALVEZ 1035</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>600699</td>
+<td style='text-align:left;'>LR 0076</td>
+<td style='text-align:left;'>GALLINA GUILLERMO LUIS</td>
+<td style='text-align:left;'>C-20-20660585-6</td>
+<td style='text-align:left;'>BROWN G. 1748 P.8 D.1 IC: 01/09</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>600704</td>
+<td style='text-align:left;'>LR 0086</td>
+<td style='text-align:left;'>ZALAZAR RAMON ANTONIO</td>
+<td style='text-align:left;'>C-20-14644993-0</td>
+<td style='text-align:left;'>GUTEMBERG 568</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>600705</td>
+<td style='text-align:left;'>LR 0114</td>
+<td style='text-align:left;'>DEGIORGI JUAN CARLOS</td>
+<td style='text-align:left;'>C-20-6076701-8</td>
+<td style='text-align:left;'>FORMOSA  465</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>600708</td>
+<td style='text-align:left;'>LR 0127</td>
+<td style='text-align:left;'>AMAYA PEDRO NORBERTO</td>
+<td style='text-align:left;'>C-20-6052744-0</td>
+<td style='text-align:left;'>TRAVELLA 840</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>600710</td>
+<td style='text-align:left;'>LR 0208</td>
+<td style='text-align:left;'>PEREIRA ARNALDO ARMANDO</td>
+<td style='text-align:left;'>C-20-7580828-6</td>
+<td style='text-align:left;'>GALVEZ J. 5946</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>600712</td>
+<td style='text-align:left;'>LR 0186</td>
+<td style='text-align:left;'>VAZQUEZ JORGE ALBERTO</td>
+<td style='text-align:left;'>C-20-10594933-3</td>
+<td style='text-align:left;'>ECHESORTU A. 848</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>600715</td>
+<td style='text-align:left;'>LR 330</td>
+<td style='text-align:left;'>ALVAREZ ROSA AMALIA</td>
+<td style='text-align:left;'>C-27-2035443-0</td>
+<td style='text-align:left;'></td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>600716</td>
+<td style='text-align:left;'>LR 192</td>
+<td style='text-align:left;'>ABEL ORTOLANI</td>
+<td style='text-align:left;'>C-20-14899982-2</td>
+<td style='text-align:left;'>BALCARCE 740 P.7 D.3 IC.01/101</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>600723</td>
+<td style='text-align:left;'>LR 0022</td>
+<td style='text-align:left;'>MARTINOTTI ANTONIO</td>
+<td style='text-align:left;'>C-20-12527186-4</td>
+<td style='text-align:left;'>TARRAGONA J.1490 IC.:14/107</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>600735</td>
+<td style='text-align:left;'>LR 0268</td>
+<td style='text-align:left;'>CACERES JUAN CARLOS</td>
+<td style='text-align:left;'>C-20-16777834-9</td>
+<td style='text-align:left;'>WASHINGTON J. 1061</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>600737</td>
+<td style='text-align:left;'>LR 0227</td>
+<td style='text-align:left;'>VIDOSEVICH NORA MARIA EMILIA</td>
+<td style='text-align:left;'>C-27-12907950-4</td>
+<td style='text-align:left;'>MACHAING  2227</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>600746</td>
+<td style='text-align:left;'>LR 0011</td>
+<td style='text-align:left;'>SANCHEZ DANTE ALFREDO</td>
+<td style='text-align:left;'>C-20-12823137-5</td>
+<td style='text-align:left;'>PJE.RIVERA 1180 IC: 06/80</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>600753</td>
+<td style='text-align:left;'>LR 0019</td>
+<td style='text-align:left;'>MELERO HUMBERTO</td>
+<td style='text-align:left;'>C-20-6055677-9</td>
+<td style='text-align:left;'>MITRE B. 3255</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>600759</td>
+<td style='text-align:left;'>LR 0037</td>
+<td style='text-align:left;'>FEITO MIGUEL ANGEL</td>
+<td style='text-align:left;'>C-20-5077827-7</td>
+<td style='text-align:left;'>MACIEL C. 846</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>600762</td>
+<td style='text-align:left;'>LR 0038</td>
+<td style='text-align:left;'>FIGUEROA EDUARDO RAUL</td>
+<td style='text-align:left;'>C-20-21523906-4</td>
+<td style='text-align:left;'>SERBANDO BAYO 1804 IC: 10/24</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>600770</td>
+<td style='text-align:left;'>LR 0053</td>
+<td style='text-align:left;'>GIRALDI ADRIANA NOEMI</td>
+<td style='text-align:left;'>C-27-14494737-7</td>
+<td style='text-align:left;'>MAIZTEGUI 437 P.0 D.2</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>600776</td>
+<td style='text-align:left;'>LR 0063</td>
+<td style='text-align:left;'>BUSETTI SERGIO ERNESTO</td>
+<td style='text-align:left;'>C-20-14803243-3</td>
+<td style='text-align:left;'>DARRAGUEIRA 3036 IC.06/312</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>600778</td>
+<td style='text-align:left;'>LR 0065</td>
+<td style='text-align:left;'>BRESSI PEDRO J</td>
+<td style='text-align:left;'>C-20-6072922-1</td>
+<td style='text-align:left;'>PJE. PRUSIA 6993</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>600780</td>
+<td style='text-align:left;'>LR 0067</td>
+<td style='text-align:left;'>PATZY LORENA CARLA</td>
+<td style='text-align:left;'>C-27-22172761-0</td>
+<td style='text-align:left;'>MONTEVIDEO 5219 IC:16/348</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>600786</td>
+<td style='text-align:left;'>LR 0074</td>
+<td style='text-align:left;'>BACHET NORMA ELENA</td>
+<td style='text-align:left;'>C-27-14803512-7</td>
+<td style='text-align:left;'>ORDEN 1144 IC:13/250</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>600795</td>
+<td style='text-align:left;'>LR 0098</td>
+<td style='text-align:left;'>DALINGER ALEJANDRA ISABEL</td>
+<td style='text-align:left;'>C-27-16537549-7</td>
+<td style='text-align:left;'>O. LAGOS 2811  P.6 D.2 MB.2</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>600797</td>
+<td style='text-align:left;'>LR 0101</td>
+<td style='text-align:left;'>BOASSO HUGO OSCAR</td>
+<td style='text-align:left;'>C-20-6559764-3</td>
+<td style='text-align:left;'>PJE. PERITO MORENO 1344</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>600802</td>
+<td style='text-align:left;'>LR 0110</td>
+<td style='text-align:left;'>FERNANDEZ VICTORIO</td>
+<td style='text-align:left;'>C-20-18094166-6</td>
+<td style='text-align:left;'>PASAJE JEAN JAURES 5761</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>600806</td>
+<td style='text-align:left;'>LR 0115</td>
+<td style='text-align:left;'>CURADO LUIS</td>
+<td style='text-align:left;'>C-20-6014383-9</td>
+<td style='text-align:left;'>AVENIDA CENTRAL 7641</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>600810</td>
+<td style='text-align:left;'>LR 0118</td>
+<td style='text-align:left;'>MENENDEZ CARLOS RAMIRO</td>
+<td style='text-align:left;'>C-20-11272518-1</td>
+<td style='text-align:left;'>DORREGO M. 5427</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>600819</td>
+<td style='text-align:left;'>LR 0132</td>
+<td style='text-align:left;'>PAITUBI JUAN JOSE</td>
+<td style='text-align:left;'>C-20-6069143-9</td>
+<td style='text-align:left;'>PJE DELLA VALLE  952</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>600827</td>
+<td style='text-align:left;'>LR 0146</td>
+<td style='text-align:left;'>ARANCIBIA HECTOR AMERICO</td>
+<td style='text-align:left;'>C-20-6055561-4</td>
+<td style='text-align:left;'>EVELYN 3779</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>600834</td>
+<td style='text-align:left;'>LR 0161</td>
+<td style='text-align:left;'>LUNA MARIO RAMON</td>
+<td style='text-align:left;'>C-20-12700246-1</td>
+<td style='text-align:left;'>ALDAO C. 3859</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>600843</td>
+<td style='text-align:left;'>LR 0178</td>
+<td style='text-align:left;'>SAVINO CARLOS GABRIEL</td>
+<td style='text-align:left;'>C-20-16218256-1</td>
+<td style='text-align:left;'>COCHABAMBA 3750</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>600846</td>
+<td style='text-align:left;'>LR 0179</td>
+<td style='text-align:left;'>ROITBERG MARCELO IGNACIO</td>
+<td style='text-align:left;'>C-20-5068423-0</td>
+<td style='text-align:left;'>HERRERA 969</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>600859</td>
+<td style='text-align:left;'>LR 0203</td>
+<td style='text-align:left;'>VALLONE DANIEL RICARDO</td>
+<td style='text-align:left;'>C-20-13077333-9</td>
+<td style='text-align:left;'>O LAGOS 2811  6? 2? MB 2</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>600873</td>
+<td style='text-align:left;'>LR 0248</td>
+<td style='text-align:left;'>GRAPATTI ROSA</td>
+<td style='text-align:left;'>C-27-8584181-0</td>
+<td style='text-align:left;'>SEGUI J. 2260</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>600880</td>
+<td style='text-align:left;'>LR 0224</td>
+<td style='text-align:left;'>GODOY ANTONIO SEBASTIAN</td>
+<td style='text-align:left;'>C-20-14139209-4</td>
+<td style='text-align:left;'>PASAJE SAVIO 2255</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>600881</td>
+<td style='text-align:left;'>LR 0226</td>
+<td style='text-align:left;'>KOHANOFF ESTELA NOEMI</td>
+<td style='text-align:left;'>C-27-13965810-3</td>
+<td style='text-align:left;'>MACHAIN 2499</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>600885</td>
+<td style='text-align:left;'>LR 0245</td>
+<td style='text-align:left;'>VAQUERO MARCELO IGNACIO</td>
+<td style='text-align:left;'>C-20-18093785-5</td>
+<td style='text-align:left;'>VIRASORO B. 5960</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>600889</td>
+<td style='text-align:left;'>LR 0235</td>
+<td style='text-align:left;'>SORIA LILIANA GRACIELA</td>
+<td style='text-align:left;'>C-27-13077665-0</td>
+<td style='text-align:left;'>ISOLA D. 636 BIS P.2 D.9</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>600906</td>
+<td style='text-align:left;'>LR 0257</td>
+<td style='text-align:left;'>LANDI EDGARDO IVO</td>
+<td style='text-align:left;'>C-20-10594803-5</td>
+<td style='text-align:left;'>PJE CACHEUTA 1467</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>600910</td>
+<td style='text-align:left;'>LR 0280A</td>
+<td style='text-align:left;'>RASSOL ADRIAN DIEGO</td>
+<td style='text-align:left;'>C-20-20812554-1</td>
+<td style='text-align:left;'>VERTIZ Y SALCEDO V. 259 P.0 D.0</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>600916</td>
+<td style='text-align:left;'>LR 0298</td>
+<td style='text-align:left;'>ACCIARRI RODOLFO ARMANDO</td>
+<td style='text-align:left;'>C-20-11446562-4</td>
+<td style='text-align:left;'>VIAMONTE 3242 IC: 10/135</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>600920</td>
+<td style='text-align:left;'>LR 0036A</td>
+<td style='text-align:left;'>GOMEZ HORACIO MARTIN</td>
+<td style='text-align:left;'>C-20-11271217-9</td>
+<td style='text-align:left;'>HERRERA N. 517</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>600936</td>
+<td style='text-align:left;'>LR 0319</td>
+<td style='text-align:left;'>NISTAL GONZALEZ PABLO</td>
+<td style='text-align:left;'>C-20-92344860-9</td>
+<td style='text-align:left;'>RUEDA M. 1986</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>600945</td>
+<td style='text-align:left;'>LR 0111</td>
+<td style='text-align:left;'>NU?EZ JAVIER ALEJANDRO</td>
+<td style='text-align:left;'>C-20-21422350-4</td>
+<td style='text-align:left;'>AV.SORRENTO 1245 IC. 7/002</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>600948</td>
+<td style='text-align:left;'>LR 0253A</td>
+<td style='text-align:left;'>BALZARETTI TOMAS EDGARDO</td>
+<td style='text-align:left;'>C-20-12326702-9</td>
+<td style='text-align:left;'>MACHAIN G. 2227  P.0 D.1</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>600956</td>
+<td style='text-align:left;'>LR 0404</td>
+<td style='text-align:left;'>PRIETO JOSE DAVID</td>
+<td style='text-align:left;'>C-20-22300335-5</td>
+<td style='text-align:left;'>HUERTA GRANDE 1830 IC.13/472</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>600977</td>
+<td style='text-align:left;'>LR 0436A</td>
+<td style='text-align:left;'>FERNANDEZ JORDAN ANTONIO</td>
+<td style='text-align:left;'>C-20-93877111-2</td>
+<td style='text-align:left;'>ECUADOR 1082</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>600980</td>
+<td style='text-align:left;'>LR 0430A</td>
+<td style='text-align:left;'>MONTECHIARINI EDGARDO Y O</td>
+<td style='text-align:left;'>C-20-6067654-5</td>
+<td style='text-align:left;'>SUPERI J. 570</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>600984</td>
+<td style='text-align:left;'>LR 0442A</td>
+<td style='text-align:left;'>RETA ANTONIO DOMINGO</td>
+<td style='text-align:left;'>C-20-6066946-8</td>
+<td style='text-align:left;'>LAGOS O. 2897 P.3 D.183 MB.6</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>600992</td>
+<td style='text-align:left;'>LR 0444</td>
+<td style='text-align:left;'>MANSILLA ALBINA GLADYS</td>
+<td style='text-align:left;'>C-27-11267318-6</td>
+<td style='text-align:left;'>LR 444-EWF-462-CORSA/05</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>600999</td>
+<td style='text-align:left;'>LR 0443A</td>
+<td style='text-align:left;'>RABITTI CARLOS ALBERTO</td>
+<td style='text-align:left;'>C-20-6068429-5</td>
+<td style='text-align:left;'>NICARAGUA 693-IC.16/40</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601006</td>
+<td style='text-align:left;'>LR 0469A</td>
+<td style='text-align:left;'>MIONNET ROBERTO RAUL</td>
+<td style='text-align:left;'>C-20-13544551-8</td>
+<td style='text-align:left;'>AGNETTA TTE. A. 2126</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601022</td>
+<td style='text-align:left;'>LR 0493</td>
+<td style='text-align:left;'>GALIFI JOSE LUIS</td>
+<td style='text-align:left;'>C-20-6055552-7</td>
+<td style='text-align:left;'>LR 493-GEN 688-R. MEGANE /07</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601030</td>
+<td style='text-align:left;'>LR 0483A</td>
+<td style='text-align:left;'>FIZZANI GERMAN DARIO</td>
+<td style='text-align:left;'>C-20-22889060-0</td>
+<td style='text-align:left;'>BAIGORRIA J. 354</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601034</td>
+<td style='text-align:left;'>LR 0496A</td>
+<td style='text-align:left;'>DIAZ ANGEL JULIO</td>
+<td style='text-align:left;'>C-20-12111186-2</td>
+<td style='text-align:left;'>GOMEZ V. 940</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601038</td>
+<td style='text-align:left;'>LR 0501</td>
+<td style='text-align:left;'>JAIME EDA ALBINA</td>
+<td style='text-align:left;'>C-27-6377097-7</td>
+<td style='text-align:left;'>COLOMBRES 1291 BIS</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601041</td>
+<td style='text-align:left;'>LR 0497A</td>
+<td style='text-align:left;'>ROSA MARTA SUSANA</td>
+<td style='text-align:left;'>C-27-5812572-9</td>
+<td style='text-align:left;'>OCAMPO 3917</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601048</td>
+<td style='text-align:left;'>LR 0512A</td>
+<td style='text-align:left;'>PAREDES ANTONIO VICENTE</td>
+<td style='text-align:left;'>C-20-8524310-2</td>
+<td style='text-align:left;'>LEIVA J. 4550 P.0 D.1</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601056</td>
+<td style='text-align:left;'>LR 0194</td>
+<td style='text-align:left;'>MASSIMINO ROSA FANNY</td>
+<td style='text-align:left;'>C-27-4253722-9</td>
+<td style='text-align:left;'>REGIMIENTO 11 -272</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601063</td>
+<td style='text-align:left;'>LR 0215</td>
+<td style='text-align:left;'>RUSCICA JOSE LUIS</td>
+<td style='text-align:left;'>C-20-22510170-2</td>
+<td style='text-align:left;'>PELLEGRINI C. 5517</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601066</td>
+<td style='text-align:left;'>LR 0153</td>
+<td style='text-align:left;'>SANCHEZ EGUILDO ALBERTO</td>
+<td style='text-align:left;'>C-20-6324962-1</td>
+<td style='text-align:left;'>RDOMINICANA 40 BIS IC.8/03</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601069</td>
+<td style='text-align:left;'>LR 0200</td>
+<td style='text-align:left;'>BRACONI REINALDO</td>
+<td style='text-align:left;'>C-20-13169642-7</td>
+<td style='text-align:left;'>SARMIENTO D. 1821</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601076</td>
+<td style='text-align:left;'>LR 0354</td>
+<td style='text-align:left;'>ARRASTIA RUBEN ANGEL</td>
+<td style='text-align:left;'>C-20-20812407-3</td>
+<td style='text-align:left;'>GORRITI 2448</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601078</td>
+<td style='text-align:left;'>LR 0056</td>
+<td style='text-align:left;'>NARDELLI MARCELO ANTONIO</td>
+<td style='text-align:left;'>C-20-10216865-9</td>
+<td style='text-align:left;'>WHEELWRIGHT  G. 1787 P.10 D.3</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601081</td>
+<td style='text-align:left;'>LR 0004</td>
+<td style='text-align:left;'>SALCEDO GUILLERMO LUIS</td>
+<td style='text-align:left;'>C-20-12523830-1</td>
+<td style='text-align:left;'>PJE. MARCOS PAZ 3524</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601083</td>
+<td style='text-align:left;'>LR 0059</td>
+<td style='text-align:left;'>PORTALUPPI LUIS DANIEL</td>
+<td style='text-align:left;'>C-20-21011645-2</td>
+<td style='text-align:left;'>ROCA PTE. J. 4528  B</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601085</td>
+<td style='text-align:left;'>LR 0060</td>
+<td style='text-align:left;'>PRETTO HECTOR LUIS</td>
+<td style='text-align:left;'>C-20-13544647-6</td>
+<td style='text-align:left;'>ITUZAINGO 5740</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601090</td>
+<td style='text-align:left;'>LR 0240</td>
+<td style='text-align:left;'>VEGA BERNARDINA</td>
+<td style='text-align:left;'>C-27-4732814-8</td>
+<td style='text-align:left;'>REGIMIENTO 11 2135</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601092</td>
+<td style='text-align:left;'>LR 0258</td>
+<td style='text-align:left;'>NOVILLO MANUEL ALFREDO</td>
+<td style='text-align:left;'>C-20-7634870-0</td>
+<td style='text-align:left;'>SANCHO PANZA 2157</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601098</td>
+<td style='text-align:left;'>LR 0457</td>
+<td style='text-align:left;'>CASTELARI CARLOS DANTE</td>
+<td style='text-align:left;'>C-20-22300358-4</td>
+<td style='text-align:left;'>GODOY CRUZ T. 657</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601102</td>
+<td style='text-align:left;'>LR 0353</td>
+<td style='text-align:left;'>FINO MARIO ALFREDO S</td>
+<td style='text-align:left;'>C-20-8284991-5</td>
+<td style='text-align:left;'>LR 353 -FOO 336- FIAT SIENA 2006</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601103</td>
+<td style='text-align:left;'>LR 0462</td>
+<td style='text-align:left;'>BALDONCINI RAFAEL VICTOR</td>
+<td style='text-align:left;'>C-20-22391071-9</td>
+<td style='text-align:left;'>BALCARCE 770</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601109</td>
+<td style='text-align:left;'>LR 007</td>
+<td style='text-align:left;'>IADANZA GERMAN PABLO</td>
+<td style='text-align:left;'>C-20-22698109-9</td>
+<td style='text-align:left;'>LR 007-PAT. EMV -050- POLO 2004</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601111</td>
+<td style='text-align:left;'>LR 079</td>
+<td style='text-align:left;'>GARCIA ALBERTO JORGE</td>
+<td style='text-align:left;'>C-20-6180588-8</td>
+<td style='text-align:left;'>LR 79-PAT. DWU 999-S. CORDOBA/02</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601112</td>
+<td style='text-align:left;'>LR 120</td>
+<td style='text-align:left;'>CALZADO GUILLERMO ALFREDO</td>
+<td style='text-align:left;'>C-20-17849053-3</td>
+<td style='text-align:left;'>LR 120-FCF 375-FIESTA /05</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601117</td>
+<td style='text-align:left;'>LR 0080</td>
+<td style='text-align:left;'>CORNEJO GREGORIO LEONIDAS</td>
+<td style='text-align:left;'>C-20-6024788-1</td>
+<td style='text-align:left;'>DERQUI S.7728  P. 13 D. 223 MB. 14</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601123</td>
+<td style='text-align:left;'>LR 0517</td>
+<td style='text-align:left;'>RODRIGUEZ ADRIANA ISABEL</td>
+<td style='text-align:left;'>C-27-13923383-8</td>
+<td style='text-align:left;'>VIEYTES  2783</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601126</td>
+<td style='text-align:left;'>LR 0334</td>
+<td style='text-align:left;'>CICCARELLI RAFAEL</td>
+<td style='text-align:left;'>C-20-6021062-7</td>
+<td style='text-align:left;'>MUNIAGURRIA C. 164</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601127</td>
+<td style='text-align:left;'>LR0268</td>
+<td style='text-align:left;'>CACERES JUAN CARLOS</td>
+<td style='text-align:left;'>C-20-16777834-9</td>
+<td style='text-align:left;'>LR.268-FLZ 915-R. MEGANE /06</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601129</td>
+<td style='text-align:left;'>LR 057</td>
+<td style='text-align:left;'>VALLADO ANALIA SUSANA</td>
+<td style='text-align:left;'>C-27-14520003-8</td>
+<td style='text-align:left;'>LR 057-PAT. FIF 543-R. KANGOO 2006</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601132</td>
+<td style='text-align:left;'>LR 281</td>
+<td style='text-align:left;'>SOUVIRAA GABRIEL CAYETANO</td>
+<td style='text-align:left;'>C-20-12520069-0</td>
+<td style='text-align:left;'>LR 281-EHV 606-VOLKS. POLO /04</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601133</td>
+<td style='text-align:left;'>LR 233</td>
+<td style='text-align:left;'>ALONSO ALBERTO HUGO</td>
+<td style='text-align:left;'>C-20-11446819-4</td>
+<td style='text-align:left;'>LR 233-FUO 784-R. MEGANE 2006</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601135</td>
+<td style='text-align:left;'>LR 333</td>
+<td style='text-align:left;'>BARBICH JUAN MARTIN</td>
+<td style='text-align:left;'>C-20-22779600-7</td>
+<td style='text-align:left;'>NUEVE DE JULIO 1096 P.1 D.4</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601139</td>
+<td style='text-align:left;'>LR 505</td>
+<td style='text-align:left;'>RUIZ ENRIQUE GUILLERMO</td>
+<td style='text-align:left;'>C-20-5078423-4</td>
+<td style='text-align:left;'>LR. 505-EYY 422-R. MEGANE  /05</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601141</td>
+<td style='text-align:left;'>LR 327</td>
+<td style='text-align:left;'>RIGHI ANA  KARINA</td>
+<td style='text-align:left;'>C-27-27092714-4</td>
+<td style='text-align:left;'>GALVEZ 1035 IC. 03/031</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601143</td>
+<td style='text-align:left;'>LR 212</td>
+<td style='text-align:left;'>DOSSENA TERESA TRINIDAD</td>
+<td style='text-align:left;'>C-27-11445684-0</td>
+<td style='text-align:left;'>LR 212-GBJ 316-CITROEN PICASO /07</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601151</td>
+<td style='text-align:left;'>LR 0521</td>
+<td style='text-align:left;'>ALVAREZ DAMIAN RICARDO</td>
+<td style='text-align:left;'>C-20-13032094-6</td>
+<td style='text-align:left;'>24 DE SEPTIEMBRE 1315 DPTO.2</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601152</td>
+<td style='text-align:left;'>LR 0519</td>
+<td style='text-align:left;'>DIAZ JORGE ALBERTO</td>
+<td style='text-align:left;'>C-20-13544351-5</td>
+<td style='text-align:left;'>GARZON 1364</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601154</td>
+<td style='text-align:left;'>LR 0520</td>
+<td style='text-align:left;'>LAMAS MARIA CRISTINA</td>
+<td style='text-align:left;'>C-27-5988652-9</td>
+<td style='text-align:left;'>BV 27 DE FEBRERO 5417</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601156</td>
+<td style='text-align:left;'>LR 0522</td>
+<td style='text-align:left;'>ESTEVE OSVALDO HERNAN</td>
+<td style='text-align:left;'>C-20-23227915-0</td>
+<td style='text-align:left;'>SAN LORENZO 5465</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601158</td>
+<td style='text-align:left;'>LR 0516</td>
+<td style='text-align:left;'>DI PANGRAZIO MARCELO FABIAN</td>
+<td style='text-align:left;'>C-20-16778070-0</td>
+<td style='text-align:left;'>IRIARTE  3877</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601160</td>
+<td style='text-align:left;'>LR0523</td>
+<td style='text-align:left;'>SANTA CRUZ HUGO ALBERTO</td>
+<td style='text-align:left;'>C-20-11295285-4</td>
+<td style='text-align:left;'>MENDOZA 1650 IC. 1/179</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601162</td>
+<td style='text-align:left;'>LR 0518</td>
+<td style='text-align:left;'>FASCENDINI CLAUDIO EDGARDO</td>
+<td style='text-align:left;'>C-20-22300557-9</td>
+<td style='text-align:left;'>L.  BRAILLE  1928</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601164</td>
+<td style='text-align:left;'>LR 0524</td>
+<td style='text-align:left;'>MULLER MARCELO FABIAN</td>
+<td style='text-align:left;'>C-20-16812617-5</td>
+<td style='text-align:left;'>SUIPACHA 2233 IC: 10/118</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601167</td>
+<td style='text-align:left;'>LR 0527</td>
+<td style='text-align:left;'>LORIA HUGO</td>
+<td style='text-align:left;'>C-20-8048890-7</td>
+<td style='text-align:left;'>REGIMIENTO 11 1326</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601168</td>
+<td style='text-align:left;'>LR 0528</td>
+<td style='text-align:left;'>FOGLIATO MARIA ROSA CLARA</td>
+<td style='text-align:left;'>C-27-14988581-7</td>
+<td style='text-align:left;'>AVDA.GENOVA 1689 IC:07/081</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601171</td>
+<td style='text-align:left;'>LR 0526</td>
+<td style='text-align:left;'>PAHL ANTONIO JESUS</td>
+<td style='text-align:left;'>C-20-8344604-0</td>
+<td style='text-align:left;'>CORRIENTES 4276</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601173</td>
+<td style='text-align:left;'>LR 0537</td>
+<td style='text-align:left;'>PONZO ROBERTO JOSE</td>
+<td style='text-align:left;'>C-20-6056116-0</td>
+<td style='text-align:left;'>SAAVEDRA 2573</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601175</td>
+<td style='text-align:left;'>LR 0529</td>
+<td style='text-align:left;'>RENA SERGIO DAVID</td>
+<td style='text-align:left;'>C-20-14440690-8</td>
+<td style='text-align:left;'>AYALA GAUNA 7781 PB DTO. E IC:14/114</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601178</td>
+<td style='text-align:left;'>LR 0530</td>
+<td style='text-align:left;'>CORONEL OVIDIO ANIBAL</td>
+<td style='text-align:left;'>C-20-6006122-2</td>
+<td style='text-align:left;'>LAGOS R. 3081</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601179</td>
+<td style='text-align:left;'>LR 0531</td>
+<td style='text-align:left;'>PORTILLO WALTER OSVALDO</td>
+<td style='text-align:left;'>C-20-17337471-3</td>
+<td style='text-align:left;'>AREVALO D. 7272 IC: 15/144</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601181</td>
+<td style='text-align:left;'>LR 0532</td>
+<td style='text-align:left;'>PASERO NORMA AMALIA</td>
+<td style='text-align:left;'>C-27-11206994-7</td>
+<td style='text-align:left;'>COLOMBIA 235</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601183</td>
+<td style='text-align:left;'>LR 0533</td>
+<td style='text-align:left;'>BAUZAS ANA MARIA</td>
+<td style='text-align:left;'>C-27-5988626-0</td>
+<td style='text-align:left;'>GALVEZ 1035 IC.3/31</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601186</td>
+<td style='text-align:left;'>LR 0536</td>
+<td style='text-align:left;'>RADONICH RUBEN FRANCISCO</td>
+<td style='text-align:left;'>C-20-6179631-3</td>
+<td style='text-align:left;'>PJE.BLANQUE 1160</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601187</td>
+<td style='text-align:left;'>LR 0535</td>
+<td style='text-align:left;'>CACERES JUAN CARLOS</td>
+<td style='text-align:left;'>C-20-16777834-9</td>
+<td style='text-align:left;'>WASHINGTON  1061</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601190</td>
+<td style='text-align:left;'>LR 0534</td>
+<td style='text-align:left;'>CACERES JUAN CARLOS</td>
+<td style='text-align:left;'>C-20-16777834-9</td>
+<td style='text-align:left;'>WASHINGTON  1061</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601193</td>
+<td style='text-align:left;'>LR 0538</td>
+<td style='text-align:left;'>CACERES JORGE A</td>
+<td style='text-align:left;'>C-20-22300178-6</td>
+<td style='text-align:left;'>WASHINGTON  1061</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601195</td>
+<td style='text-align:left;'>LR 0294</td>
+<td style='text-align:left;'>TORNAMBE MARIANO</td>
+<td style='text-align:left;'>C-20-6014348-0</td>
+<td style='text-align:left;'>LR.294 - DCTOS.20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601196</td>
+<td style='text-align:left;'>LR 0411</td>
+<td style='text-align:left;'>MAIDANA JOSE LUIS</td>
+<td style='text-align:left;'>C-20-16653429-2</td>
+<td style='text-align:left;'>LR.411 - DCTOS.20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601197</td>
+<td style='text-align:left;'>LR 0323</td>
+<td style='text-align:left;'>GONZALEZ MARCELO SERGIO</td>
+<td style='text-align:left;'>C-20-16536586-1</td>
+<td style='text-align:left;'>LR.323 - DCTOS.20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601198</td>
+<td style='text-align:left;'>LR 0050</td>
+<td style='text-align:left;'>PERRONE SALVADOR OSCAR</td>
+<td style='text-align:left;'>C-20-8412075-0</td>
+<td style='text-align:left;'>LR.050-DCTO.20471-2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601199</td>
+<td style='text-align:left;'>LR 0402</td>
+<td style='text-align:left;'>MONGIOVI GERONIMO</td>
+<td style='text-align:left;'>C-20-13795388-0</td>
+<td style='text-align:left;'>LR.402-DCTO. 20471-2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601200</td>
+<td style='text-align:left;'>LR 0299</td>
+<td style='text-align:left;'>MARTINEZ VICENTE OSCAR</td>
+<td style='text-align:left;'>C-20-11751667-0</td>
+<td style='text-align:left;'>LR.299  -  DCTOS.20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601201</td>
+<td style='text-align:left;'>LR 0214</td>
+<td style='text-align:left;'>FURNARI ALBERTO F</td>
+<td style='text-align:left;'>C-20-8344439-9</td>
+<td style='text-align:left;'>LR.214-DCTO.20471-2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601202</td>
+<td style='text-align:left;'>LR 0467</td>
+<td style='text-align:left;'>SANCHEZ JUAN CARLOS</td>
+<td style='text-align:left;'>C-20-11445835-0</td>
+<td style='text-align:left;'>LR. 467 -DCTOS.20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601203</td>
+<td style='text-align:left;'>LR 0333</td>
+<td style='text-align:left;'>TORSEVIA ANGEL NATALIO</td>
+<td style='text-align:left;'>C-20-13795338-3</td>
+<td style='text-align:left;'>LR.333   - DTOS.20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601204</td>
+<td style='text-align:left;'>LR 0054</td>
+<td style='text-align:left;'>REY JORGE ALBERTO</td>
+<td style='text-align:left;'>C-20-10864289-1</td>
+<td style='text-align:left;'>LR.054  - DCTOS.20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601205</td>
+<td style='text-align:left;'>LR 0289</td>
+<td style='text-align:left;'>EMMI ARNOLDO ALBERTO</td>
+<td style='text-align:left;'>C-20-10069008-0</td>
+<td style='text-align:left;'>LR.289   -  DCTOS.20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601206</td>
+<td style='text-align:left;'>LR 0284</td>
+<td style='text-align:left;'>ROMERO CESAR</td>
+<td style='text-align:left;'>C-20-10496558-0</td>
+<td style='text-align:left;'>LR.284  -  DCTOS.20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601207</td>
+<td style='text-align:left;'>LR 0285</td>
+<td style='text-align:left;'>PIATTI CARLOS OMAR</td>
+<td style='text-align:left;'>C-20-5395953-0</td>
+<td style='text-align:left;'>LR.285 - DCTOS.20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601208</td>
+<td style='text-align:left;'>LR 0463</td>
+<td style='text-align:left;'>CONTRERA MARIA ELVA</td>
+<td style='text-align:left;'>C-27-11270409-0</td>
+<td style='text-align:left;'>LR.463 - DCTOS.20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601209</td>
+<td style='text-align:left;'>LR 0293</td>
+<td style='text-align:left;'>LETTO JUAN CARLOS</td>
+<td style='text-align:left;'>C-20-6184240-6</td>
+<td style='text-align:left;'>LR.293 - DCTOS.20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601210</td>
+<td style='text-align:left;'>LR 0298A</td>
+<td style='text-align:left;'>MEDINA HUGO MARIO</td>
+<td style='text-align:left;'>C-20-8048594-0</td>
+<td style='text-align:left;'>LR.298 - DCTOS.20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601211</td>
+<td style='text-align:left;'>LR 0302</td>
+<td style='text-align:left;'>TARRAGO NESTOR O</td>
+<td style='text-align:left;'>C-20-11751742-0</td>
+<td style='text-align:left;'>LR.302 - DCTOS.20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601212</td>
+<td style='text-align:left;'>LR 0326</td>
+<td style='text-align:left;'>GROSSO CARLOS HORACIO</td>
+<td style='text-align:left;'>C-20-24292182-9</td>
+<td style='text-align:left;'>LR.326 - DCTOS.20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601213</td>
+<td style='text-align:left;'>LR 0303</td>
+<td style='text-align:left;'>LUCARELLI HELIO FELIPE</td>
+<td style='text-align:left;'>C-20-5988536-8</td>
+<td style='text-align:left;'>LR.303 - DCTOS.20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601214</td>
+<td style='text-align:left;'>LR 0305</td>
+<td style='text-align:left;'>DELFRATTE CARMEN TOMASA</td>
+<td style='text-align:left;'>C-27-12381564-0</td>
+<td style='text-align:left;'>LR.305 - DCTOS.20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601215</td>
+<td style='text-align:left;'>LR 0307</td>
+<td style='text-align:left;'>SANSONE ARIEL DARIO</td>
+<td style='text-align:left;'>C-20-22040584-3</td>
+<td style='text-align:left;'>LR.307 - DCTOS.20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601216</td>
+<td style='text-align:left;'>LR 0343</td>
+<td style='text-align:left;'>BINI OSVALDO ALBINO</td>
+<td style='text-align:left;'>C-20-6110686-6</td>
+<td style='text-align:left;'>LR.343 - DCTOS.20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601217</td>
+<td style='text-align:left;'>LR 0316</td>
+<td style='text-align:left;'>MAGRINI ALICIA B</td>
+<td style='text-align:left;'>C-27-12113551-0</td>
+<td style='text-align:left;'>LR.316 - DCTOS.20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601218</td>
+<td style='text-align:left;'>LR 0315</td>
+<td style='text-align:left;'>MUSTAFA LUIS F</td>
+<td style='text-align:left;'>C-20-12944366-0</td>
+<td style='text-align:left;'>LR.315 - DCTOS.20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601219</td>
+<td style='text-align:left;'>LR 0320</td>
+<td style='text-align:left;'>MEDINA MARIO R</td>
+<td style='text-align:left;'>C-20-13167049-5</td>
+<td style='text-align:left;'>LR.320 - DCTO.20471/01-2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601220</td>
+<td style='text-align:left;'>LR 0124</td>
+<td style='text-align:left;'>BECK ENRIQUE AMOR</td>
+<td style='text-align:left;'>C-20-5960803-8</td>
+<td style='text-align:left;'>LR.124 - DCTOS.20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601221</td>
+<td style='text-align:left;'>LR 0318</td>
+<td style='text-align:left;'>RUSCICA HECTOR DANIEL</td>
+<td style='text-align:left;'>C-20-16728495-8</td>
+<td style='text-align:left;'>LR.318 - DCTOS.20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601222</td>
+<td style='text-align:left;'>LR 0317</td>
+<td style='text-align:left;'>RIPACANDIDA MARIA ELENA</td>
+<td style='text-align:left;'>C-27-10189685-0</td>
+<td style='text-align:left;'>LR.317 - DCTOS.20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601223</td>
+<td style='text-align:left;'>LR 0319A</td>
+<td style='text-align:left;'>NISTAL GONZALEZ PABLO</td>
+<td style='text-align:left;'>C-20-92344860-9</td>
+<td style='text-align:left;'>LR.319 - DCTOS.20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601224</td>
+<td style='text-align:left;'>LR 0325</td>
+<td style='text-align:left;'>RECIO JOSE LUIS RAMON</td>
+<td style='text-align:left;'>C-20-13544729-4</td>
+<td style='text-align:left;'>LR.325 - DCTOS.20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601225</td>
+<td style='text-align:left;'>LR 0328</td>
+<td style='text-align:left;'>SALDUTTI SERGIO RICARDO</td>
+<td style='text-align:left;'>C-27-13972819-5</td>
+<td style='text-align:left;'>LR.328 - DCTOS.20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601226</td>
+<td style='text-align:left;'>LR 0335</td>
+<td style='text-align:left;'>GONZALEZ LEONARDO H</td>
+<td style='text-align:left;'>C-20-14631409-1</td>
+<td style='text-align:left;'>LR.335 - DCTOS.20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601227</td>
+<td style='text-align:left;'>LR 0336</td>
+<td style='text-align:left;'>BRUNELLI HERMAN</td>
+<td style='text-align:left;'>C-20-15227799-8</td>
+<td style='text-align:left;'>LR.336 - DCTOS.20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601228</td>
+<td style='text-align:left;'>LR 0111A</td>
+<td style='text-align:left;'>DE DONATIS MABEL</td>
+<td style='text-align:left;'>C-27-4771637-9</td>
+<td style='text-align:left;'>LR.111 - DCTOS.20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601229</td>
+<td style='text-align:left;'>LR 0340</td>
+<td style='text-align:left;'>CORTIZO RICARDO RAUL</td>
+<td style='text-align:left;'>C-20-10630278-3</td>
+<td style='text-align:left;'>LR.340 - DCTOS.20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601230</td>
+<td style='text-align:left;'>LR 0287</td>
+<td style='text-align:left;'>MARCHESE CARLOS</td>
+<td style='text-align:left;'>F-20-721575-9</td>
+<td style='text-align:left;'>LR.287 - DCTOS.20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601231</td>
+<td style='text-align:left;'>LR 0346</td>
+<td style='text-align:left;'>GONZALEZ RENE DANIEL</td>
+<td style='text-align:left;'>C-20-11752444-3</td>
+<td style='text-align:left;'>LR.346 - DCTOS.20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601232</td>
+<td style='text-align:left;'>LR 0404A</td>
+<td style='text-align:left;'>PEREZ MARIANO HUGO</td>
+<td style='text-align:left;'>C-20-25979298-4</td>
+<td style='text-align:left;'>LR.404-DCTO. 20471/2335-01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601233</td>
+<td style='text-align:left;'>LR 0405</td>
+<td style='text-align:left;'>JONES OSVALDO DANIEL</td>
+<td style='text-align:left;'>C-20-10865180-7</td>
+<td style='text-align:left;'>LR.405-DCTO. 20471-2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601234</td>
+<td style='text-align:left;'>LR 0410A</td>
+<td style='text-align:left;'>DILIBERTO STELLA MARIS</td>
+<td style='text-align:left;'>F-27-719549-6</td>
+<td style='text-align:left;'>LR.410-DCTO.20471-2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601235</td>
+<td style='text-align:left;'>LR 0406</td>
+<td style='text-align:left;'>BESTEIRO ARIEL DAMIAN</td>
+<td style='text-align:left;'>C-20-22510869-3</td>
+<td style='text-align:left;'>LR.406-DCTO.20471-2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601236</td>
+<td style='text-align:left;'>LR 0409</td>
+<td style='text-align:left;'>CODINA DIEGO RENE</td>
+<td style='text-align:left;'>C-20-23964903-4</td>
+<td style='text-align:left;'>LR.409 - DCTOS.20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601237</td>
+<td style='text-align:left;'>LR 0408</td>
+<td style='text-align:left;'>SCHEIDER RAUL</td>
+<td style='text-align:left;'>C-20-16091924-9</td>
+<td style='text-align:left;'>LR.408 - DCTOS.20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601238</td>
+<td style='text-align:left;'>LR 0413</td>
+<td style='text-align:left;'>FERNANDEZ JUAN CARLOS</td>
+<td style='text-align:left;'>C-20-13240383-0</td>
+<td style='text-align:left;'>LR.413-DCTO. 20471-2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601239</td>
+<td style='text-align:left;'>LR 0422A</td>
+<td style='text-align:left;'>SANCHEZ JULIO CESAR</td>
+<td style='text-align:left;'>C-20-10630743-2</td>
+<td style='text-align:left;'>LR.422-DCTO. 20471-2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601240</td>
+<td style='text-align:left;'>LR 0417</td>
+<td style='text-align:left;'>BARRACO JESUS ISIDORO</td>
+<td style='text-align:left;'>C-20-6076265-4</td>
+<td style='text-align:left;'>LR.417 - DCTOS.20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601241</td>
+<td style='text-align:left;'>LR 0414</td>
+<td style='text-align:left;'>JOURDON MIRTA G</td>
+<td style='text-align:left;'>C-27-4935163-7</td>
+<td style='text-align:left;'>LR.414 - DCTOS.20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601242</td>
+<td style='text-align:left;'>LR 0424</td>
+<td style='text-align:left;'>CORDERO MARCELO JAVIER</td>
+<td style='text-align:left;'>C-20-17849231-5</td>
+<td style='text-align:left;'>LR.424-DCTO.20471-2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601243</td>
+<td style='text-align:left;'>LR 0419</td>
+<td style='text-align:left;'>CASAGRANDE JULIO CESAR</td>
+<td style='text-align:left;'>C-20-16852591-6</td>
+<td style='text-align:left;'>LR.419 - DCTOS.20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601244</td>
+<td style='text-align:left;'>LR 0423</td>
+<td style='text-align:left;'>PELOURSON RICARDO LUIS</td>
+<td style='text-align:left;'>C-20-24945994-2</td>
+<td style='text-align:left;'>LR.423 - DCTOS.20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601245</td>
+<td style='text-align:left;'>LR 0348</td>
+<td style='text-align:left;'>SAN JORGE ALBERTO</td>
+<td style='text-align:left;'>C-20-5395261-8</td>
+<td style='text-align:left;'>LR.348-DCTO. 20471-2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601246</td>
+<td style='text-align:left;'>LR 0429</td>
+<td style='text-align:left;'>BADARIOTTI PATRICIA EVA</td>
+<td style='text-align:left;'>C-27-16169659-0</td>
+<td style='text-align:left;'>LR. 429 - DTO.20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601247</td>
+<td style='text-align:left;'>LR 0428</td>
+<td style='text-align:left;'>SAENZ ERNESTO LEANDRO</td>
+<td style='text-align:left;'>C-20-6058009-0</td>
+<td style='text-align:left;'>LR.428-DCTO. 20471-2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601248</td>
+<td style='text-align:left;'>LR 0434</td>
+<td style='text-align:left;'>MARCON SILVIA NOEMI</td>
+<td style='text-align:left;'>C-27-12944347-8</td>
+<td style='text-align:left;'>LR.434 - DCTOS.20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601249</td>
+<td style='text-align:left;'>LR 0432</td>
+<td style='text-align:left;'>FLORES FRANCISCO RAUL D.</td>
+<td style='text-align:left;'>C-20-22889786-9</td>
+<td style='text-align:left;'>LR.432-DCTO.20471-2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601250</td>
+<td style='text-align:left;'>LR 0431</td>
+<td style='text-align:left;'>TASSARA JAVIER  IVAN</td>
+<td style='text-align:left;'>C-20-23242322-7</td>
+<td style='text-align:left;'>LR.431 - DCTOS.20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601251</td>
+<td style='text-align:left;'>LR 0427</td>
+<td style='text-align:left;'>OLIVA EDUARDO FRANCISCO</td>
+<td style='text-align:left;'>C-20-11873633-9</td>
+<td style='text-align:left;'>LR.427-DCTO.20471-2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601252</td>
+<td style='text-align:left;'>LR 0439</td>
+<td style='text-align:left;'>GETTE PABLO ORLANDO</td>
+<td style='text-align:left;'>C-20-21810512-3</td>
+<td style='text-align:left;'>LR.439 - DCTOS.20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601253</td>
+<td style='text-align:left;'>LR 0438</td>
+<td style='text-align:left;'>ROMERO MARTA ANGELICA</td>
+<td style='text-align:left;'>C-27-4750453-3</td>
+<td style='text-align:left;'>LR.438-DCTO.20471-2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601254</td>
+<td style='text-align:left;'>LR 0454A</td>
+<td style='text-align:left;'>QUIRICONI HORACIO RAUL</td>
+<td style='text-align:left;'>C-20-8344814-0</td>
+<td style='text-align:left;'>LR.454 - DCTOS.20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601255</td>
+<td style='text-align:left;'>LR 0455</td>
+<td style='text-align:left;'>ZACCONE RITA BEATRIZ</td>
+<td style='text-align:left;'>C-27-5711164-3</td>
+<td style='text-align:left;'>LR.455 - DCTOS.20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601256</td>
+<td style='text-align:left;'>LR 0459</td>
+<td style='text-align:left;'>BROIN ANGELA SUSANA</td>
+<td style='text-align:left;'>C-27-16943335-1</td>
+<td style='text-align:left;'>LR.459-DCTO.20471-2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601257</td>
+<td style='text-align:left;'>LR 0458</td>
+<td style='text-align:left;'>ROJAS LORENZO LUIS</td>
+<td style='text-align:left;'>C-20-5077835-8</td>
+<td style='text-align:left;'>LR.458-DCTO.20471-2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601258</td>
+<td style='text-align:left;'>LR 0453</td>
+<td style='text-align:left;'>ARRABAL ORLANDO ERNESTO</td>
+<td style='text-align:left;'>C-20-6068490-4</td>
+<td style='text-align:left;'>LR.453-DCTO. 20471-2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601259</td>
+<td style='text-align:left;'>LR 0464</td>
+<td style='text-align:left;'>POSODENTE PATRICIA AMELIA</td>
+<td style='text-align:left;'>C-27-13504778-9</td>
+<td style='text-align:left;'>LR.464-DCTO. 20471-2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601260</td>
+<td style='text-align:left;'>LR 0461</td>
+<td style='text-align:left;'>PACE OSCAR ANIBAL</td>
+<td style='text-align:left;'>C-20-12480517-2</td>
+<td style='text-align:left;'>LR. 461 - DTOS.20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601261</td>
+<td style='text-align:left;'>LR 0466</td>
+<td style='text-align:left;'>TOMASINI NORMA MATILDE</td>
+<td style='text-align:left;'>C-27-6684413-0</td>
+<td style='text-align:left;'>LR.466-DCTO. 20471-2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601262</td>
+<td style='text-align:left;'>LR 0468</td>
+<td style='text-align:left;'>RODRIGUEZ MARIA CRISTINA</td>
+<td style='text-align:left;'>C-27-6423618-4</td>
+<td style='text-align:left;'>LR.468-DCTO.20471-2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601263</td>
+<td style='text-align:left;'>LR 0435</td>
+<td style='text-align:left;'>ABACA ROBERTO PASCUAL</td>
+<td style='text-align:left;'>C-20-5395494-7</td>
+<td style='text-align:left;'>LR.435-DCTO. 20471-2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601264</td>
+<td style='text-align:left;'>LR 0470</td>
+<td style='text-align:left;'>GOY LUIS JOSE</td>
+<td style='text-align:left;'>C-20-7676896-0</td>
+<td style='text-align:left;'>LR.470 - DCTOS.20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601265</td>
+<td style='text-align:left;'>LR 0433</td>
+<td style='text-align:left;'>REGLERO DELORENZI ARIADNA VERONICA</td>
+<td style='text-align:left;'>C-27-24987572-0</td>
+<td style='text-align:left;'>LR.433-DCTO.20471-2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601266</td>
+<td style='text-align:left;'>LR 0479</td>
+<td style='text-align:left;'>RAMOS NATIVIDAD NORMA</td>
+<td style='text-align:left;'>C-27-5310575-6</td>
+<td style='text-align:left;'>LR.479-DCTO. 20471-2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601267</td>
+<td style='text-align:left;'>LR 0480</td>
+<td style='text-align:left;'>TOMASSINI JULIO C</td>
+<td style='text-align:left;'>C-20-12527693-9</td>
+<td style='text-align:left;'>LR.480-DCTO.20471-2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601268</td>
+<td style='text-align:left;'>LR 0485</td>
+<td style='text-align:left;'>TURINI RINALDO</td>
+<td style='text-align:left;'>C-20-93277127-7</td>
+<td style='text-align:left;'>LR.485-DCTO.20471-2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601269</td>
+<td style='text-align:left;'>LR 0488</td>
+<td style='text-align:left;'>BUSTOS FRANCISCO ALBERTO</td>
+<td style='text-align:left;'>C-20-12700479-0</td>
+<td style='text-align:left;'>LR.488-DTOS.20471/01-2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601270</td>
+<td style='text-align:left;'>LR 0472</td>
+<td style='text-align:left;'>GONZALEZ JULIO</td>
+<td style='text-align:left;'>C-20-6254618-3</td>
+<td style='text-align:left;'>LR.472 - DCTOS.20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601271</td>
+<td style='text-align:left;'>LR 0481</td>
+<td style='text-align:left;'>DEMARRE OSCAR FEDERICO</td>
+<td style='text-align:left;'>C-20-12404615-8</td>
+<td style='text-align:left;'>LR.481 - DCTOS.20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601272</td>
+<td style='text-align:left;'>LR 0471</td>
+<td style='text-align:left;'>ALVAREZ LUCIANO RAUL</td>
+<td style='text-align:left;'>C-20-22391412-9</td>
+<td style='text-align:left;'>LR.471-DCTOS.20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601273</td>
+<td style='text-align:left;'>LR 0475</td>
+<td style='text-align:left;'>ALONGI JUSTO</td>
+<td style='text-align:left;'>C-20-93335715-6</td>
+<td style='text-align:left;'>LR.475 - DCTOS.20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601274</td>
+<td style='text-align:left;'>LR 0474</td>
+<td style='text-align:left;'>MELLANO GASTON MIGUEL</td>
+<td style='text-align:left;'>C-20-23242922-5</td>
+<td style='text-align:left;'>LR.474-Dcto. 20471-2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601275</td>
+<td style='text-align:left;'>LR 0482</td>
+<td style='text-align:left;'>PRESTIFILIPPI ROSA RAQUEL</td>
+<td style='text-align:left;'>C-27-11125588-7</td>
+<td style='text-align:left;'>LR. 482-DCTOS. 20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601276</td>
+<td style='text-align:left;'>LR 0476</td>
+<td style='text-align:left;'>GIMENEZ LUIS ALBERTO</td>
+<td style='text-align:left;'>C-20-14059907-8</td>
+<td style='text-align:left;'>LR.476-DCTO. 20471-2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601277</td>
+<td style='text-align:left;'>LR 0494</td>
+<td style='text-align:left;'>SCASSA JORGE IGNACIO</td>
+<td style='text-align:left;'>C-20-6054808-1</td>
+<td style='text-align:left;'>LR.494-DCTO.20471-2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601278</td>
+<td style='text-align:left;'>LR 0491</td>
+<td style='text-align:left;'>CLEMENTE ANDRES LEANDRO</td>
+<td style='text-align:left;'>C-20-22300430-0</td>
+<td style='text-align:left;'>LR.491 - DCTO.20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601279</td>
+<td style='text-align:left;'>LR 0473</td>
+<td style='text-align:left;'>IANNACE MARCELO</td>
+<td style='text-align:left;'>C-20-17803238-1</td>
+<td style='text-align:left;'>LR.473 - DCTOS.20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601280</td>
+<td style='text-align:left;'>LR 0500</td>
+<td style='text-align:left;'>MAURO GRACIELA NORMA</td>
+<td style='text-align:left;'>C-27-12527826-0</td>
+<td style='text-align:left;'>LR.500 - DCTOS.20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601281</td>
+<td style='text-align:left;'>LR 0499</td>
+<td style='text-align:left;'>ESCODA LAURA SUSANA</td>
+<td style='text-align:left;'>C-27-14143582-0</td>
+<td style='text-align:left;'>LR.499-DCTO.20471-2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601282</td>
+<td style='text-align:left;'>LR 0501A</td>
+<td style='text-align:left;'>MASCIARELLI OSVALDO TOMAS</td>
+<td style='text-align:left;'>C-20-6559527-6</td>
+<td style='text-align:left;'>LR.501 -DCTOS. 20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601283</td>
+<td style='text-align:left;'>LR 0350</td>
+<td style='text-align:left;'>GIAQUINTA JUAN F</td>
+<td style='text-align:left;'>C-20-14287266-9</td>
+<td style='text-align:left;'>LR.350 - DTOS.20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601284</td>
+<td style='text-align:left;'>LR 0502</td>
+<td style='text-align:left;'>LIRUSSO LISANDRO</td>
+<td style='text-align:left;'>C-20-26603102-6</td>
+<td style='text-align:left;'>LR.502 - DTOS.20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601285</td>
+<td style='text-align:left;'>LR 0504</td>
+<td style='text-align:left;'>ROMERO JOSE ALBERTO</td>
+<td style='text-align:left;'>C-20-6039774-1</td>
+<td style='text-align:left;'>LR.504-DCTO.20471-2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601286</td>
+<td style='text-align:left;'>LR 0506</td>
+<td style='text-align:left;'>VERA JESUS RICARDO H.</td>
+<td style='text-align:left;'>C-20-13169089-5</td>
+<td style='text-align:left;'>LR.506 - DCTOS.20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601287</td>
+<td style='text-align:left;'>LR 0509</td>
+<td style='text-align:left;'>MEDINA LORETO</td>
+<td style='text-align:left;'>C-20-5272020-9</td>
+<td style='text-align:left;'>LR.509 - DCTOS.20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601288</td>
+<td style='text-align:left;'>LR 0513</td>
+<td style='text-align:left;'>OSUNA SEBASTIAN MIGUEL</td>
+<td style='text-align:left;'>C-20-25505214-5</td>
+<td style='text-align:left;'>LR.513-PAT.BEG 309-DCTO.20471-2335/</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601289</td>
+<td style='text-align:left;'>LR 0026</td>
+<td style='text-align:left;'>PERRONE SALVADOR OSCAR</td>
+<td style='text-align:left;'>C-20-8412075-0</td>
+<td style='text-align:left;'>LR.026-DCTO.20471-2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>601290</td>
+<td style='text-align:left;'>LR 0316A</td>
+<td style='text-align:left;'>MAGRINI ALICIA B</td>
+<td style='text-align:left;'>C-27-12113551-0</td>
+<td style='text-align:left;'>LR.316-DCTO.20471-2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>612989</td>
+<td style='text-align:left;'>LR 0324A</td>
+<td style='text-align:left;'>AHUMADA GUILLERMO BAUTISTA</td>
+<td style='text-align:left;'>F-20-721112-5</td>
+<td style='text-align:left;'>LR.324  - DCTOS.20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>612990</td>
+<td style='text-align:left;'>LR 0313A</td>
+<td style='text-align:left;'>PIAZZA RODOLFO SANTIAGO</td>
+<td style='text-align:left;'>F-20-724264-0</td>
+<td style='text-align:left;'>LR.313  -  DCTOS.20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>612991</td>
+<td style='text-align:left;'>LR 0322A</td>
+<td style='text-align:left;'>AGUIRRE ANGEL ALBERTO</td>
+<td style='text-align:left;'>F-20-721755-7</td>
+<td style='text-align:left;'>LR.322  - DCTOS.20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>612992</td>
+<td style='text-align:left;'>LR 0247A</td>
+<td style='text-align:left;'>FIORENZA NORA ALICIA</td>
+<td style='text-align:left;'>C-27-17152146-2</td>
+<td style='text-align:left;'>LR.247  -  DCTOS.20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>612993</td>
+<td style='text-align:left;'>LR 0279A</td>
+<td style='text-align:left;'>BRAVO CARLOS LEONARDO</td>
+<td style='text-align:left;'>F-20-720270-3</td>
+<td style='text-align:left;'>LR. 279  - DCTOS.20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>612994</td>
+<td style='text-align:left;'>LR 0282A</td>
+<td style='text-align:left;'>VIBAS DIEGO EDUARDO</td>
+<td style='text-align:left;'>C-20-25381222-3</td>
+<td style='text-align:left;'>LR.282  -  DCTOS.20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>612995</td>
+<td style='text-align:left;'>LR 0288A</td>
+<td style='text-align:left;'>CHIAPELLA ORLANDO J</td>
+<td style='text-align:left;'>C-20-5971134-3</td>
+<td style='text-align:left;'>LR.288  -  DCTOS.20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>612996</td>
+<td style='text-align:left;'>LR 0291A</td>
+<td style='text-align:left;'>TRUTALLI AMELIA</td>
+<td style='text-align:left;'>F-27-726444-7</td>
+<td style='text-align:left;'>LR.291 - DCTOS.20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>612997</td>
+<td style='text-align:left;'>LR 0295A</td>
+<td style='text-align:left;'>STEFANO WALTER RENE</td>
+<td style='text-align:left;'>F-20-723569-5</td>
+<td style='text-align:left;'>LR.295 - DCTOS.20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>612998</td>
+<td style='text-align:left;'>LR 0296A</td>
+<td style='text-align:left;'>BRAUN OMAR FABIAN</td>
+<td style='text-align:left;'>F-20-723411-7</td>
+<td style='text-align:left;'>LR.296 - DCTOS.20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>612999</td>
+<td style='text-align:left;'>LR 0297A</td>
+<td style='text-align:left;'>OLIVA LYDIA BEATRIZ</td>
+<td style='text-align:left;'>C-27-3790584-8</td>
+<td style='text-align:left;'>LR.297 - DCTOS.20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>613000</td>
+<td style='text-align:left;'>LR 0300A</td>
+<td style='text-align:left;'>VILLARRUEL MIRTA ADRIANA</td>
+<td style='text-align:left;'>F-27-726609-1</td>
+<td style='text-align:left;'>LR.300 - DCTOS.20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>613001</td>
+<td style='text-align:left;'>LR 0301A</td>
+<td style='text-align:left;'>MORA JUAN CARLOS</td>
+<td style='text-align:left;'>F-20-721220-2</td>
+<td style='text-align:left;'>LR.301 - DCTOS.20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>613002</td>
+<td style='text-align:left;'>LR 0310A</td>
+<td style='text-align:left;'>MARCHETTI ATILIO</td>
+<td style='text-align:left;'>F-20-725219-0</td>
+<td style='text-align:left;'>LR.310 - DCTOS.20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>613003</td>
+<td style='text-align:left;'>LR 0321A</td>
+<td style='text-align:left;'>HERRERO JULIO</td>
+<td style='text-align:left;'>F-20-720271-1</td>
+<td style='text-align:left;'>LR.321 - DCTOS.20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>613004</td>
+<td style='text-align:left;'>LR 0193</td>
+<td style='text-align:left;'>SERRAT FRANCISCO</td>
+<td style='text-align:left;'>C-20-6065129-0</td>
+<td style='text-align:left;'>LR.193 - DCTOS.20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>613006</td>
+<td style='text-align:left;'>LR 0332A</td>
+<td style='text-align:left;'>TABINI GERMAN</td>
+<td style='text-align:left;'>F-20-725576-9</td>
+<td style='text-align:left;'>LR.332 - DCTOS.20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+<tr>
+<td style='text-align:left;'>613008</td>
+<td style='text-align:left;'>LR 0338A</td>
+<td style='text-align:left;'>ARIAS OSCAR SERGIO</td>
+<td style='text-align:left;'>C-20-13795626-9</td>
+<td style='text-align:left;'>LR.338 - DCTOS.20471 Y 2335/01</td>
+<td style='text-align:left;'>12.34</td>
+</tr>
+</table>
+
+</body>
+</html>

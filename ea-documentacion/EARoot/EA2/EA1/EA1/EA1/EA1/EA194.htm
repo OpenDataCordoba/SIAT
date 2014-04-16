@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Reimprimir/ Reconfeccionar Deuda</title>
+<link href="../../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="pageHeader"></div>
+<div class="PageBody">
+	<span class="ObjectTitle">Reimprimir/ Reconfeccionar Deuda  : public   usecase</span>
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">16/07/2007 16:10:10</td>
+		</tr>
+		<tr>
+			<td class="ObjectDetailsTopic">Modified:</td>
+			<td class="ObjectDetailsValue">23/09/2008 10:24:18</td>
+		</tr>
+		<tr style="height: 10px"><td colspan="2"></td></tr>
+		<tr>
+			<td class="ObjectDetailsTopic"><img src="../../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td class="ObjectDetailsValue">1.0</td>
+		</tr>
+		<tr id="proj02" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Phase:</td>
+			<td class="ObjectDetailsValue">1.0</td>
+		</tr>
+		<tr id="proj03" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Status:</td>
+			<td class="ObjectDetailsValue">R2</td>
+		</tr>
+		<tr id="proj04" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Complexity:</td>
+			<td class="ObjectDetailsValue">Difficult</td>
+		</tr>
+		<tr>
+			<td class="ObjectDetailsTopic"><img src="../../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">UUID:</td>
+			<td class="ObjectDetailsValue">{5946D5ED-B96D-4bf1-AA54-A001EB1736AC}</td>
+		</tr>
+		<tr id="adv01" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
+			<td class="ObjectDetailsValue"><a href="../EA149.htm">Diagrama Gestión de Deuda / Convenios</a></td>
+		</tr>
+	</table>
+	<div class="ObjectDetailsNotes">Este CU permite reconfeccionar uno o varios registros de deuda. El resultado pueden ser la generación de uno o varios Recibos de Reconfección de Deuda y/o la Reimpresión de una o varias Boletas ya emitidas.<br /><br />En el caso de los Recibos de Reconfección se agrupan los períodos vencidos según sea el mejor descuento obtenido por el sistema indicando como fecha de vencimiento la sugerida por el contribuyente.<br /><br />En el caso de reimpresión se efectúa la reimpresión de las Boletas ya emitidas para cada uno de los períodos de deuda no vencidos.</div>
+
+	<div class="TableGroup" id="TableGroup">
+		<ul class="ItemTitle">
+			<li onClick="parent.toggleItem('Scenario');" id="ScenarioTitle">Scenarios</li>
+			<li onClick="parent.toggleItem('Files');" id="FilesTitle">Files</li>
+			<li onClick="parent.toggleItem('Links');" id="LinksTitle">Other Links</li>
+		</ul>
+		<div class="ItemBody" id="ScenarioTable">
+			<table align="center" border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="24%" class="TableHeading">Scenario</td>
+					<td width="8%" class="TableHeading">Type</td>
+					<td width="68%" class="TableHeading">Detail</td>
+				</tr>
+				<tr>
+					<td width="24%" class="TableRow">Reimprimir/Reconfeccionar Deuda</td>
+					<td width="8%" class="TableRow">Alternate</td>
+					<td width="68%" class="TableRow"><div class="ObjectDetailsNotes">Sobre la deuda seleccionada se deberá validar que cada uno de los registros de deuda pertenezcan a un mismo recurso y que  ninguno se encuentre pago, ni incluida en un Plan de Pago Vigente, ni se encuentre Indeterminada, Reclamada, Condonada, en Cobro Judicial ni en Concurso y Quiebra.<br /><br />Hacemos la aclaración de que para los recurso que son autoliquidables (xej. DrEI), el importe de la deuda será 0 (cero). <br /><br />Luego, se deberá verificar si entre los registros de deuda, existen casos en que la deuda esté vencida y casos en que no lo esté.<br /><br />En caso que exista deuda vencida:<br />  <br />   . Se deberá seleccionar una fecha de vencimiento de una lista de posibles. La lista se arma considerando que la fecha deberá estar dentro de los XX dias, según se definió en los parámetros de configuración del sistema y ser un dia hábil.<br /><br />   . Se obtienen los descuentos activos que se pueden aplicar al total de los Registros de Deuda vencida recibidos como parámetros, de acuerdo a la configuracion de los descuentos.  La configuración de un descuento implica determinar la Clasificación de la deuda, Períodos y Atributos para los cuales un descuento es válido. (ver: Mantenedor de Descuento) <br />   <br /><br />    . Para cada Registro de Deuda:<br /><br />       . Se invoca al CU &quot;Actualizar Deuda&quot;, con la fecha de vencimiento ingresada por el usuario, para obtener la actualizacion del Registro de Deuda correspondiente.<br /><br />       . Se aplican los descuentos sobre cada Tipo Importe (Capital o Actualización) según esté definido en el descuento a aplicar, obteniendose el nuevo importe total de cada Registro.<br /><br />   . Con estos Registros de Deuda actualizados y aplicados los descuentos, se genera/n el/los Recibo/s de Reconfección (uno por cada grupo de descuento que ocurra)<br /><br />   . Adicionalmente, se verifica si la acción de reconfección posee asociado un sellado, y en caso afirmativo, si se cumplen todas las condiciones del mismo para su aplicación.<br /><br />   . Finalmente, se imprime el/los formulario/s correspondiente/s, indicando entre otros datos los descuentos aplicados.<br /><br /><br />Para todos los registros de deuda que no estuviesen vencidos:<br /><br />    . Se debe realizar la reimpresión individual de cada uno.<br /><br /><br />3. Observaciones<br />Cuando este CU es invocado desde la Generación de Reconfecciones Masivas, además de recibir un bloque de deuda y una Fecha de Vencimiento, por lo que no deben ser solicitados al usuario.<br /><br /><br /><br /></div>
+</td>
+				</tr>
+
+			</table>
+		</div>
+		<div class="ItemBody" id="FilesTable">
+			<table border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="50%" class="TableHeading">File</td>
+					<td width="10%" class="TableHeading">Type</td>
+					<td width="40%" class="TableHeading">Details</td>
+				</tr>
+			<tr>
+				<td width="50%" class="TableRow"><a href="C:\siatdoc\docGenerada\analisisDisenio\especificacion\GDEUDA - Reimprimir.doc">C:\siatdoc\docGenerada\analisisDisenio\especificacion\GDEUDA - Reimprimir.doc</a></td>
+				<td width="10%" class="TableRow">Local File</td>
+				<td width="40%" class="TableRow">
+					<br />
+					<span class="NoteHeading">File Size:</span> 67 k<br />
+					<span class="NoteHeading">Time Stamp:</span> 8/14/2008 1:43:29 PM<br />
+				</td>
+			</tr>
+
+			</table>
+		</div>
+		<div class="ItemBody" id="LinksTable">
+			<table align="center" border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="30%" class="TableHeading">Object</td>
+					<td width="15%" class="TableHeading">Type</td>
+					<td width="15%" class="TableHeading">Connection</td>
+					<td width="40%" class="TableHeading">Notes</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../../../../../EA1/EA4/EA48.htm">«Functional» 49-Emitir liquidaciones de deuda, estados de cuenta y certificados de "Libre Deuda" de la cuenta corriente del contribuyente en todos los posibles niveles de agregación (total, por tributo, por objeto imponible, por vía (administrativa/judicial), etc.). </a></td>
+					<td width="15%" class="TableRow" valign="top">Requirement</td>
+					<td width="15%" class="TableRow" valign="top">Realisation</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../../../../../EA1/EA4/EA51.htm">«Functional» 53- Emitir notificaciones a contribuyentes (reclamos administrativos, prejudiciales, judiciales, por algún régimen con beneficios especiales, etc.).</a></td>
+					<td width="15%" class="TableRow" valign="top">Requirement</td>
+					<td width="15%" class="TableRow" valign="top">Realisation</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../../../../../EA1/EA5/EA63.htm">«Functional» 1- El sistema deberá dar soporte a todos los procesos de la Administración Tributaria.</a></td>
+					<td width="15%" class="TableRow" valign="top">Requirement</td>
+					<td width="15%" class="TableRow" valign="top">Realisation</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../../../../../EA1/EA4/EA48.htm">«Functional» 49-Emitir liquidaciones de deuda, estados de cuenta y certificados de "Libre Deuda" de la cuenta corriente del contribuyente en todos los posibles niveles de agregación (total, por tributo, por objeto imponible, por vía (administrativa/judicial), etc.). </a></td>
+					<td width="15%" class="TableRow" valign="top">Requirement</td>
+					<td width="15%" class="TableRow" valign="top">Realisation</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA159.htm">Gestión de Deuda por Recurso/Cuenta</a></td>
+					<td width="15%" class="TableRow" valign="top">UseCase</td>
+					<td width="15%" class="TableRow" valign="top">Extends</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+
+			</table>
+		</div>
+	</div>
+<div class="pageFooter"></div>
+ 
+</body>
+</html>

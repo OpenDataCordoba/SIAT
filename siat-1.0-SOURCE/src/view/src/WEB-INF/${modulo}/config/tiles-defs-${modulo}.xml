@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+ <!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 1.1//EN"
+       "http://jakarta.apache.org/struts/dtds/tiles-config_1_1.dtd">
+
+<tiles-definitions>
+	
+	<!-- ${Bean} -->
+    <definition name=".${modulo}.${submodulo}.view.${bean}SearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/${modulo}/${submodulo}/${bean}SearchPage.jsp"/>
+    </definition>
+	
+	<definition name=".${modulo}.${submodulo}.view.${bean}ViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/${modulo}/${submodulo}/${bean}ViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".${modulo}.${submodulo}.view.${bean}EditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/${modulo}/${submodulo}/${bean}EditAdapter.jsp"/>
+    </definition>
+    <!-- fin ${Bean} -->
+    
+    <!--  Es es el caso de un Encabezado/Detalle -->
+    <!-- ${Bean} (Encabezado) -->
+	<definition name=".${modulo}.${submodulo}.view.${bean}SearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/${modulo}/${submodulo}/${bean}SearchPage.jsp"/>
+    </definition>
+
+    <definition name=".${modulo}.${submodulo}.view.${bean}EncEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/${modulo}/${submodulo}/${bean}EncEditAdapter.jsp"/>
+    </definition>  	
+
+	<definition name=".${modulo}.${submodulo}.view.${bean}ViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/${modulo}/${submodulo}/${bean}ViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".${modulo}.${submodulo}.view.${bean}Adapter" extends=".siatStdLayout">
+	    <put name="body" value="/${modulo}/${submodulo}/${bean}Adapter.jsp"/>
+    </definition>
+	<!-- Fin ${Bean} -->
+    
+	<!-- ${Bean_Detalle} (Detalle)-->
+	<definition name=".${modulo}.${submodulo}.view.${bean_detalle}ViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/${modulo}/${submodulo}/${bean_detalle}ViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".${modulo}.${submodulo}.view.${bean_detalle}EditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/${modulo}/${submodulo}/${bean_detalle}EditAdapter.jsp"/>
+    </definition>    
+	<!-- Fin ${Bean_Detalle} -->
+	
+	<!-- Fin ${Bean} -->
+	
+    <!-- Fin caso de un Encabezado/Detalle -->	
+	
+</tiles-definitions>

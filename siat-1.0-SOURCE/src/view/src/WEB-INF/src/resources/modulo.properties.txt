@@ -1,0 +1,160 @@
+error.generic = {0}
+
+#a - "\u00E1"
+#e - "\u00E9");
+#i - "\u00ED");
+#o - "\u00F3");			
+#u - "\u00FA");
+
+#\U0020  " " 
+#\U0021  "!" 
+#\U0022  """ 
+#\U0023  "#" 
+#\U0027  "'" 
+#\U0028  "(" 
+#\U0029  ")" 
+#\U002b  "+" 
+#\U002c  "," 
+#\U002d  "-" 
+#\U002e  "." 
+#\U002f  "/" 
+#\U0030  "0" 
+#\U0031  "1" 
+#\U0032  "2" 
+#\U0033  "3" 
+#\U0034  "4" 
+#\U0035  "5" 
+#\U0036  "6" 
+#\U0037  "7" 
+#\U0038  "8" 
+#\U0039  "9" 
+#\U003a  ":" 
+#\U003b  ";" 
+#\U003c  "\" 
+#\U003d  "=" 
+#\U003e  "" 
+#\U003f  "?" 
+#\U0040  "@" 
+#\U0041  "A" 
+#\U0042  "B" 
+#\U0043  "C" 
+#\U0044  "D" 
+#\U0045  "E" 
+#\U0046  "F" 
+#\U0047  "G" 
+#\U0048  "H" 
+#\U0049  "I" 
+#\U004a  "J" 
+#\U004b  "K" 
+#\U004c  "L" 
+#\U004d  "M" 
+#\U004e  "N" 
+#\U004f  "O" 
+#\U0050  "P" 
+#\U0051  "Q" 
+#\U0052  "R" 
+#\U0053  "S" 
+#\U0054  "T" 
+#\U0055  "U" 
+#\U0056  "V" 
+#\U0057  "W" 
+#\U0058  "X" 
+#\U0059  "Y" 
+#\U005a  "Z" 
+#\U005b  "[" 
+#\U005c  "\" 
+#\U005d  "]" 
+#\U005f  "_" 
+#\U0061  "a" 
+#\U0062  "b" 
+#\U0063  "c" 
+#\U0064  "d" 
+#\U0065  "e" 
+#\U0066  "f" 
+#\U0067  "g" 
+#\U0068  "h" 
+#\U0069  "i" 
+#\U006a  "j" 
+#\U006b  "k" 
+#\U006c  "l" 
+#\U006d  "m" 
+#\U006e  "n" 
+#\U006f  "o" 
+#\U0070  "p" 
+#\U0071  "q" 
+#\U0072  "r" 
+#\U0073  "s" 
+#\U0074  "t" 
+#\U0075  "u" 
+#\U0076  "v" 
+#\U0077  "w" 
+#\U0078  "x" 
+#\U0079  "y" 
+#\U007a  "z" 
+#\U00c9  "É" 
+#\U00ce  "Î" 
+#\U00d1  "Ñ" 
+#\U00d3  "Ó" 
+#\U00e0  "à" 
+#\U00e1  "á" 
+#\U00e2  "â" 
+#\U00e3  "ã" 
+#\U00e7  "ç" 
+#\U00e8  "è" 
+#\U00e9  "é" 
+#\U00ea  "ê" 
+#\U00eb  "ë" 
+#\U00ee  "î" 
+#\U00ef  "ï" 
+#\U00f1  "ñ" 
+#\U00f3  "ó" 
+#\U00f4  "ô" 
+#\U014b  "" 
+
+										
+#----------------------------------------------------#
+#					Entidad 						 #
+#----------------------------------------------------#
+
+#Tipo Atributo --------------------------------------
+def.tipoAtributo.label=Tipo Atributo
+def.tipoAtributo.ref=Tipo Atr.
+def.tipoAtributo.desTipoAtributo.label=Descripcion
+def.tipoAtributo.desTipoAtributo.ref=Desc. Tipo Atributo
+
+# Atributo -----------------------------------------
+def.atributo.label=Atributo
+def.atributo.title=Datos del Atributo
+def.atributo.codAtributo.label=C\u00F3digo
+def.atributo.codAtributo.ref=C\u00F3digo Atributo 
+def.atributo.desAtributo.label=Descripci\u00F3n
+def.atributo.desAtributo.ref=Desc. Atributo
+def.atributo.mascaraVisual.label=Mscara Visualizacin
+
+
+#----------------------------------------------------#
+#					GUI    						     #
+#----------------------------------------------------#
+# ${Bean}SearchPage --------------------------------------------------------------------------- 
+ ${modulo}.${bean}SearchPage.title=B\u00FAsqueda de ${Bean en Plural}
+ ${modulo}.${bean}SearchPage.legend=Permite buscar y administrar ${Bean en Plural}
+
+# ${Bean}ViewAdapter ---------------------------------------------------------------------------
+ ${modulo}.${bean}ViewAdapter.title=Administraci\u00F3n de ${Bean en Plural}
+	
+# ${Bean}EditAdapter ---------------------------------------------------------------------------
+ ${modulo}.${bean}EditAdapter.title=Administraci\u00F3n de ${Bean en Plural}
+
+
+# FeriadoSearchPage --------------------------------------------------------------------------- 
+def.feriadoSearchPage.title=B\u00FAsqueda de Feriados
+def.feriadoSearchPage.legend=Permite buscar y administrar Feriados
+def.feriadoSearchPage.fechaDesde.label=Fecha Desde
+def.feriadoSearchPage.fechaHasta.label=Fecha Hasta
+
+
+# FeriadoViewAdapter ---------------------------------------------------------------------------
+def.feriadoViewAdapter.title=Administraci\u00F3n de Feriados
+
+# FeriadoViewAdapter ---------------------------------------------------------------------------
+def.feriadoEditAdapter.title=Administraci\u00F3n de Feriados

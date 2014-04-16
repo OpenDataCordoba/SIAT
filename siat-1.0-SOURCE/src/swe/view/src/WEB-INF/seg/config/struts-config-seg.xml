@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://struts.apache.org/dtds/struts-config_1_1.dtd">
+
+<struts-config>	
+	<form-beans>
+		<form-bean name="loginForm" type="org.apache.struts.validator.DynaValidatorForm">
+	    	<form-property name="username" type="java.lang.String"/>
+    	  	<form-property name="password" type="java.lang.String"/>
+	    </form-bean>
+	    
+		<form-bean name="aplicacionSearchPage" type="org.apache.struts.validator.DynaValidatorForm">
+ 		    <form-property name="codigo" 		type="java.lang.String"/>
+ 		    <form-property name="descripcion" 	type="java.lang.String"/>
+	    </form-bean>
+	    
+	    <form-bean name="aplicacionAdapter" type="org.apache.struts.validator.DynaValidatorForm">
+		 <!--    <form-property name="aplicacion" type="StringUtil.isInteger.iface.model.AplicacionVO"/> -->
+	    </form-bean>
+	    
+		<form-bean name="modAplSearchPage" type="org.apache.struts.validator.DynaValidatorForm"/>
+		
+		<!--
+ 		    <form-property name="nombreModulo" 	type="java.lang.String"/>
+	    </form-bean> -->
+	    
+	    <form-bean name="modAplAdapter" type="org.apache.struts.validator.DynaValidatorForm"/>
+	    <!--
+		    
+		    <form-property name="modApl" type="StringUtil.isInteger.iface.model.ModAplVO"/>
+	    </form-bean>	    
+	    
+	    -->
+	    <form-bean name="usrAplSearchPage" type="org.apache.struts.validator.DynaValidatorForm"/>
+	    <!--
+ 		    <form-property name="username" 		type="java.lang.String"/>
+	    </form-bean>
+	    
+	    -->
+	    <form-bean name="usrAplAdapter" type="org.apache.struts.validator.DynaValidatorForm"/>
+<!--
+		    <form-property name="aplicacion" type="StringUtil.isInteger.iface.model.AplicacionVO"/> 
+		    <form-property name="usrApl"     type="StringUtil.isInteger.iface.model.UsrAplVO"/>
+
+			<form-property name="listIdsAppSelected" 	    type="java.lang.Long[]"/>
+	    </form-bean>-->
+	    
+	    <form-bean name="cloneUsrAplAdapter" type="org.apache.struts.validator.DynaValidatorForm"/>
+<!--
+		    <form-property name="aplicacion" type="StringUtil.isInteger.iface.model.AplicacionVO"/> 
+		    <form-property name="usrApl"     type="StringUtil.isInteger.iface.model.UsrAplVO"/>
+
+			<form-property name="listIdsAppSelected" 	    type="java.lang.Long[]"/>
+	    </form-bean>-->
+
+	    <form-bean name="usrRolAplSearchPage" type="org.apache.struts.validator.DynaValidatorForm"/>
+	    <!--
+	    
+		    <form-property name="usrApl"     type="StringUtil.isInteger.iface.model.UsrAplVO"/>
+	    </form-bean>
+	    
+	    -->
+	    <form-bean name="usrRolAplAdapter" type="org.apache.struts.validator.DynaValidatorForm"/>
+	    <!--
+	    
+		    <form-property name="usrRolApl"     type="StringUtil.isInteger.iface.model.UsrRolAplVO"/>
+	    </form-bean>
+	    
+	    
+	    -->
+	    <form-bean name="rolAplSearchPage" type="org.apache.struts.validator.DynaValidatorForm"/>
+ 		    <!--<form-property name="codigo" 		type="java.lang.String"/>
+ 		    <form-property name="descripcion" 	type="java.lang.String"/>
+	    </form-bean>
+	    
+	    -->
+	    <form-bean name="rolAplAdapter" type="org.apache.struts.validator.DynaValidatorForm"/>
+<!--
+		    <form-property name="rolApl"     type="StringUtil.isInteger.iface.model.RolAplVO"/>
+
+	    </form-bean>
+	    -->
+		<form-bean name="accModAplSearchPage" type="org.apache.struts.validator.DynaValidatorForm"/>
+		<!--
+		
+ 		    <form-property name="nombreAccion" 	type="java.lang.String"/>
+ 		    <form-property name="nombreMetodo" 	type="java.lang.String"/> 
+ 		    <form-property name="listId" 	    type="java.lang.Long[]"/>
+ 		    <form-property name="modApl"        type="StringUtil.isInteger.iface.model.ModAplVO"/>
+	    </form-bean>
+	    
+	    -->
+	    <form-bean name="accModAplAdapter" type="org.apache.struts.validator.DynaValidatorForm"/>
+	    <!--
+	    
+		    <form-property name="accModApl" type="StringUtil.isInteger.iface.model.AccModAplVO"/>
+	    </form-bean>	    
+	    
+	    -->
+	    <form-bean name="rolAccModAplSearchPage" type="org.apache.struts.validator.DynaValidatorForm"/>
+	    <!--
+	    
+ 		    <form-property name="nombreAccion" 	type="java.lang.String"/>
+ 		    <form-property name="nombreMetodo" 	type="java.lang.String"/>
+ 		    <form-property name="modApl"		type="StringUtil.isInteger.iface.model.ModAplVO"/>
+	    </form-bean>
+	    
+	    -->
+	    <form-bean name="rolAccModAplAdapter" type="org.apache.struts.validator.DynaValidatorForm">
+	   
+			<form-property name="rolAccModApl"	type="StringUtil.isInteger.iface.model.RolAccModAplVO"/>
+			<form-property name="listId" 	    type="java.lang.Long[]"/>
+	    </form-bean>
+	    
+	    
+	    <form-bean name="itemMenuSearchPage" type="org.apache.struts.validator.DynaValidatorForm"/>
+	    <!--
+		    <form-property name="itemMenu"     type="StringUtil.isInteger.iface.model.ItemMenuVO"/>
+	    </form-bean>
+	    
+	    -->
+	    <form-bean name="itemMenuAdapter" type="org.apache.struts.validator.DynaValidatorForm"/>
+	    <!--
+		    <form-property name="itemMenu"     type="StringUtil.isInteger.iface.model.ItemMenuVO"/>
+	    </form-bean>
+	    
+	-->
+	</form-beans>
+
+
+	<action-mappings>
+
+    	<action
+     		path="/seg/Login"
+	        type="StringUtil.isInteger.seg.view.struts.LoginAction"
+		scope="request"
+        	validate="false"
+	        name="loginForm"
+		input=".seg.view.loginForm"
+        	parameter="method"
+	        attribute="loginForm">
+            
+    	    <forward name="loginForm" 			  path=".seg.view.loginForm" />
+    	    <forward name="aplicacionSearchPage"  path="/seg/BuscarAplicacion.do?method=inicializar"/>
+	    </action>
+	    
+	    <action
+     		path="/seg/BuscarAplicacion"
+	        type="StringUtil.isInteger.seg.view.struts.BuscarAplicacionDAction"
+		    scope="request"
+        	validate="false"
+	        name="aplicacionSearchPage"
+            parameter="method"
+    	    input=".seg.view.aplicacionSearchPage"
+	        attribute="aplicacionSearchPage">
+            
+    	    <forward name="aplicacionSearchPage"    path=".seg.view.aplicacionSearchPage" />
+    	    <forward name="administrarAplicacion" 	path="/seg/AdministrarAplicacion.do?method=inicializar" />
+	 	    <forward name="buscarUsrApl" 	        path="/seg/BuscarUsrApl.do?method=inicializar" />
+	 	    <!-- 
+	 	    <forward name="clonarUsrApl"            path=".seg.view.cloneUsrAplAdapter" />
+	 	     -->
+	 	    <forward name="administrarCloneUsrApl"  path="/seg/AdministrarCloneUsrApl.do?method=inicializar" />
+    	    <forward name="buscarModApl" 	        path="/seg/BuscarModApl.do?method=inicializar" />
+    	    <forward name="buscarRolApl" 	        path="/seg/BuscarRolApl.do?method=inicializar" />
+    	    <forward name="buscarItemMenuRoot"      path="/seg/BuscarItemMenu.do?method=inicializar" />
+	    </action>
+	    
+	    <action
+     		path="/seg/AdministrarAplicacion"
+	        type="StringUtil.isInteger.seg.view.struts.AdministrarAplicacionDAction"
+		    scope="request"
+        	validate="false"
+	        name="aplicacionAdapter"
+            parameter="method"
+    	    input=".seg.view.aplicacionAdapter"
+	        attribute="aplicacionAdapter">
+            
+    	    <forward name="aplicacionAdapterView"    path=".seg.view.aplicacionAdapterView" />
+    	    <forward name="aplicacionAdapter"        path=".seg.view.aplicacionAdapter" />
+    	    <forward name="buscarAplicacion" 	     path="/seg/BuscarAplicacion.do?method=buscar" />    	    
+	    </action>
+
+	    <action
+     		path="/seg/BuscarUsrApl"
+	        type="StringUtil.isInteger.seg.view.struts.BuscarUsrAplDAction"
+		    scope="request"
+        	validate="false"
+	        name="usrAplSearchPage"
+            parameter="method"
+    	    input=".seg.view.usrAplSearchPage"
+	        attribute="usrAplSearchPage">
+            
+    	    <forward name="usrAplSearchPage"       path=".seg.view.usrAplSearchPage" />
+    	    <forward name="administrarUsrApl"      path="/seg/AdministrarUsrApl.do?method=inicializar" />
+    	    <forward name="volverBuscarAplicacion" path="/seg/BuscarAplicacion.do?method=buscar" />
+    	    <!-- 
+	 	    <forward name="clonarUsrApl"            path=".seg.view.cloneUsrAplAdapter" />
+	 	     -->
+	 	    <forward name="administrarCloneUsrApl"  path="/seg/AdministrarCloneUsrApl.do?method=inicializar" />
+			<forward name="buscarUsrRolApl" 	   path="/seg/BuscarUsrRolApl.do?method=inicializar" />    	       	 	        	       	 	    
+	    </action>
+	    
+	    <action
+     		path="/seg/AdministrarUsrApl"
+	        type="StringUtil.isInteger.seg.view.struts.AdministrarUsrAplDAction"
+		    scope="request"
+        	validate="false"
+	        name="usrAplAdapter"
+            parameter="method"
+    	    input=".seg.view.usrAplAdapter"
+	        attribute="usrAplAdapter">
+            
+    	    <forward name="usrAplAdapterView"    path=".seg.view.usrAplAdapterView" />
+    	    <forward name="usrAplAdapter"        path=".seg.view.usrAplAdapter" />
+    	    <forward name="buscarUsrApl" 	     path="/seg/BuscarUsrApl.do?method=buscar" />    	    
+	    </action>
+
+	    <action
+     		path="/seg/BuscarUsrRolApl"
+	        type="StringUtil.isInteger.seg.view.struts.BuscarUsrRolAplDAction"
+		    scope="request"
+        	validate="false"
+	        name="usrRolAplSearchPage"
+            parameter="method"
+    	    input=".seg.view.usrRolAplSearchPage"
+	        attribute="usrRolAplSearchPage">
+            
+    	    <forward name="usrRolAplSearchPage"  path=".seg.view.usrRolAplSearchPage" />
+    	    <forward name="administrarUsrRolApl" path="/seg/AdministrarUsrRolApl.do?method=inicializar" />
+   	 	    <forward name="volverBuscarUsrApl"   path="/seg/BuscarUsrApl.do?method=buscar" />
+	    </action>
+	    
+	    <action
+     		path="/seg/AdministrarUsrRolApl"
+	        type="StringUtil.isInteger.seg.view.struts.AdministrarUsrRolAplDAction"
+		    scope="request"
+        	validate="false"
+	        name="usrRolAplAdapter"
+            parameter="method"
+    	    input=".seg.view.usrRolAplAdapter"
+	        attribute="usrRolAplAdapter">
+            
+    	    <forward name="usrRolAplAdapterView" path=".seg.view.usrRolAplAdapterView" />
+    	    
+    	    <forward name="usrRolAplAdapter"                  path=".seg.view.usrRolAplAdapter" />
+    	    <forward name="buscarUsrRolAplForCreateUsrRolApl" path="/seg/BuscarRolApl.do?method=inicializarForCreateUsrRolApl" />    	    
+    	    <forward name="volverBuscarUsrRolApl" 	          path="/seg/BuscarUsrRolApl.do?method=buscar" />
+    	    <forward name="buscarUsrApl" 	                  path="/seg/BuscarUsrApl.do?method=buscar" /> 
+	    </action>
+
+		<action
+     		path="/seg/AdministrarCloneUsrApl"
+	        type="StringUtil.isInteger.seg.view.struts.AdministrarCloneUsrAplDAction"
+		    scope="request"
+        	validate="false"
+	        name="cloneUsrAplAdapter"
+            parameter="method"
+    	    input=".seg.view.cloneUsrAplAdapter"
+	        attribute="cloneUsrAplAdapter">
+            
+    	    <forward name="usrRolAplAdapterView" path=".seg.view.usrRolAplAdapterView" />
+    	    
+    	    <forward name="cloneUsrAplAdapter"                  path=".seg.view.cloneUsrAplAdapter" />
+    	    <forward name="buscarcloneUsrAplForCreateUsrApl" path="/seg/BuscarRolApl.do?method=inicializarForCreateUsrApl" />    	    
+    	    <forward name="volverBuscarUsrApl" 	          path="/seg/BuscarUsrApl.do?method=buscar" />
+	    </action>
+	    
+	    <action
+     		path="/seg/BuscarModApl"
+	        type="StringUtil.isInteger.seg.view.struts.BuscarModAplDAction"
+		    scope="request"
+        	validate="false"
+	        name="modAplSearchPage"
+            parameter="method"
+    	    input=".seg.view.modAplSearchPage"
+	        attribute="modAplSearchPage">
+
+    	    <forward name="modAplSearchPage"    path=".seg.view.modAplSearchPage" />
+    	    <forward name="administrarModApl" 	path="/seg/AdministrarModApl.do?method=inicializar" />
+    	    <forward name="buscarAplicacion" 	path="/seg/BuscarAplicacion.do?method=buscar" />
+    	    <forward name="buscarAccModApl" 	path="/seg/BuscarAccModApl.do?method=inicializar" />
+	    </action>
+	    
+	    <action
+     		path="/seg/AdministrarModApl"
+	        type="StringUtil.isInteger.seg.view.struts.AdministrarModAplDAction"
+		    scope="request"
+        	validate="false"
+	        name="modAplAdapter"
+            parameter="method"
+    	    input=".seg.view.modAplAdapter"
+	        attribute="modAplAdapter">
+            
+    	    <forward name="modAplAdapterView"    path=".seg.view.modAplAdapterView" />
+    	    <forward name="modAplAdapter"        path=".seg.view.modAplAdapter" />
+    	    <forward name="buscarModApl" 	     path="/seg/BuscarModApl.do?method=buscar" />    	    
+	    </action>
+	    
+	    <action
+     		path="/seg/BuscarRolApl"
+	        type="StringUtil.isInteger.seg.view.struts.BuscarRolAplDAction"
+		    scope="request"
+        	validate="false"
+	        name="rolAplSearchPage"
+            parameter="method"
+    	    input=".seg.view.rolAplSearchPage"
+	        attribute="rolAplSearchPage">
+
+    	    <forward name="rolAplSearchPage"    path=".seg.view.rolAplSearchPage" />
+    	    <forward name="administrarRolApl" 	path="/seg/AdministrarRolApl.do?method=inicializar" />
+    	    <forward name="buscarAplicacion" 	path="/seg/BuscarAplicacion.do?method=buscar" />    	    
+    	    <forward name="buscarRolAccModApl" 	path="/seg/BuscarRolAccModApl.do?method=inicializar" />
+    	    <forward name="buscarAplicacion" 	path="/seg/BuscarAplicacion.do?method=buscar" />
+    	    <forward name="agregarUsrRolApl" 	path="/seg/AdministrarUsrRolApl.do?method=agregar" />
+    	    
+	    </action>
+	    
+	    <action
+     		path="/seg/AdministrarRolApl"
+	        type="StringUtil.isInteger.seg.view.struts.AdministrarRolAplDAction"
+		    scope="request"
+        	validate="false"
+	        name="rolAplAdapter"
+            parameter="method"
+    	    input=".seg.view.rolAplAdapter"
+	        attribute="rolAplAdapter">
+            
+    	    <forward name="rolAplAdapterView"    path=".seg.view.rolAplAdapterView" />
+    	    <forward name="rolAplAdapter"        path=".seg.view.rolAplAdapter" />
+    	    <forward name="buscarRolApl" 	     path="/seg/BuscarRolApl.do?method=buscar" />
+	    </action>
+		
+		<!-- Busqueda de Rol Accion Modulo -->
+   	    <action
+     		path="/seg/BuscarRolAccModApl"
+	        type="StringUtil.isInteger.seg.view.struts.BuscarRolAccModAplDAction"
+		    scope="request"
+        	validate="false"
+	        name="rolAccModAplSearchPage"
+            parameter="method"
+    	    input=".seg.view.rolAccModAplSearchPage"
+	        attribute="rolAccModAplSearchPage">
+
+    	    <forward name="rolAccModAplSearchPage"    path=".seg.view.rolAccModAplSearchPage" />
+    	    <forward name="buscarAccModApl" 	      path="/seg/BuscarAccModApl.do?method=inicializarForMultiSelect" />
+    	    <forward name="administrarRolAccModApl"   path="/seg/AdministrarRolAccModApl.do?method=inicializar" />
+    	    <forward name="volver" 	  				  path="/seg/BuscarRolApl.do?method=buscar" />
+	    </action>
+	
+		<action
+     		path="/seg/AdministrarRolAccModApl"
+	        type="StringUtil.isInteger.seg.view.struts.AdministrarRolAccModAplDAction"
+		    scope="request"
+        	validate="false"
+	        name="rolAccModAplAdapter"
+            parameter="method"
+    	    input=".seg.view.rolAccModAplSearchPage"
+	        attribute="rolAccModAplAdapter">
+            
+            <forward name="rolAccModAplSearchPage"    path=".seg.view.rolAccModAplSearchPage" />
+            <forward name="rolAccModAplAdapterView"   path=".seg.view.rolAccModAplAdapterView" />
+    	    <forward name="buscarRolAccModApl" 	      path="/seg/BuscarRolAccModApl.do?method=buscar" />      	      	    
+	    </action>
+	    
+	    <action
+     		path="/seg/BuscarAccModApl"
+	        type="StringUtil.isInteger.seg.view.struts.BuscarAccModAplDAction"
+		    scope="request"
+        	validate="false"
+	        name="accModAplSearchPage"
+            parameter="method"
+    	    input=".seg.view.accModAplSearchPage"
+	        attribute="accModAplSearchPage">
+
+    	    <forward name="accModAplSearchPage"   		path=".seg.view.accModAplSearchPage" />
+    	    <forward name="administrarAccModApl"  		path="/seg/AdministrarAccModApl.do?method=inicializar" />
+    	    <forward name="buscarModApl" 	      		path="/seg/BuscarModApl.do?method=buscar" />
+    	    <forward name="administrarRolAccModApl" 	path="/seg/AdministrarRolAccModApl.do?method=inicializar" />
+    	    <forward name="buscarRolApl" 	        	path="/seg/BuscarRolApl.do?method=buscar" />
+    	    <forward name="volverAbuscarRolAccModApl"	path="/seg/BuscarRolAccModApl.do?method=buscar"/>
+    	    <forward name="volverParamActualizarAccModApl"	path="/seg/AdministrarItemMenu.do?method=paramActualizarAccModApl"/>
+
+	    </action>
+	    
+	    <action
+     		path="/seg/AdministrarAccModApl"
+	        type="StringUtil.isInteger.seg.view.struts.AdministrarAccModAplDAction"
+		    scope="request"
+        	validate="false"
+	        name="accModAplAdapter"
+            parameter="method"
+    	    input=".seg.view.accModAplAdapter"
+	        attribute="accModAplAdapter">
+            
+    	    <forward name="accModAplAdapterView"    path=".seg.view.accModAplAdapterView" />
+    	    <forward name="accModAplAdapter"        path=".seg.view.accModAplAdapter" />
+    	    <forward name="buscarAccModApl" 	    path="/seg/BuscarAccModApl.do?method=buscar" />    	    
+	    </action>
+	    
+	    <action
+     		path="/seg/BuscarItemMenu"
+	        type="StringUtil.isInteger.seg.view.struts.BuscarItemMenuDAction"
+		    scope="request"
+        	validate="false"
+	        name="itemMenuSearchPage"
+            parameter="method"
+    	    input=".seg.view.itemMenuSearchPage"
+	        attribute="itemMenuSearchPage">
+            
+    	    <forward name="itemMenuSearchPage"       path=".seg.view.itemMenuSearchPage" />
+    	    <forward name="administrarItemMenu"      path="/seg/AdministrarItemMenu.do?method=inicializar" />
+   	 	    <forward name="volverBuscarAplicacion"   path="/seg/BuscarAplicacion.do?method=buscar" />
+	    </action>
+	    
+	    <action
+     		path="/seg/AdministrarItemMenu"
+	        type="StringUtil.isInteger.seg.view.struts.AdministrarItemMenuDAction"
+		    scope="request"
+        	validate="false"
+	        name="itemMenuAdapter"
+            parameter="method"
+    	    input=".seg.view.itemMenuAdapter"
+	        attribute="itemMenuAdapter">
+            
+    	    <forward name="itemMenuAdapterView"   path=".seg.view.itemMenuAdapterView" />
+    	    <forward name="itemMenuAdapter"       path=".seg.view.itemMenuAdapter" />
+    	    <forward name="itemMenuAccModAdapter" path=".seg.view.itemMenuAccModAdapter" />
+    	    <forward name="buscarItemMenu" 	      path="/seg/BuscarItemMenu.do?method=buscar" />    	    
+    	    <forward name="buscarAccModApl" 	  path="/seg/BuscarAccModApl.do?method=inicializarConAplicacion" />
+    	    <forward name="itemMenuHijosAdapter"  path=".seg.view.itemMenuHijosAdapter" />
+    	    <!--  forward name="buscarAplicacion" 	  path="/seg/BuscarAplicacion.do?method=buscar" / -->    	    
+	    </action>
+
+  </action-mappings>
+  
+</struts-config>

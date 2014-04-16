@@ -1,0 +1,5 @@
+tocTab[tocTab.length] = new Array("2.2:1", "", "CU-MIGRACION", "EARoot/EA2/EA2/EA620.htm", "175.png", "597", "0", "", "Logical diagram");
+tocTab[tocTab.length] = new Array("2.2:2", "", "MIgración deuda CdM (*)", "EARoot/EA2/EA2/EA622.htm", "7.png", "4062", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.2:3", "", "Migración DReI", "EARoot/EA2/EA2/EA623.htm", "7.png", "4964", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.2:4", "", "Migración GRE", "EARoot/EA2/EA2/EA624.htm", "7.png", "4965", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.2:5", "", "Migración deuda TGI", "EARoot/EA2/EA2/EA625.htm", "7.png", "3826", "0", "", "UseCase");

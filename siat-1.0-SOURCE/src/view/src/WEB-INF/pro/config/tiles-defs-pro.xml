@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+ <!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 1.1//EN"
+       "http://jakarta.apache.org/struts/dtds/tiles-config_1_1.dtd">
+
+<tiles-definitions>
+    <!-- Corrida -->
+    <definition name=".pro.consulta.view.corridaSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/pro/consulta/corridaSearchPage.jsp"/>
+    </definition>
+    <definition name=".pro.consulta.view.corridaViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/pro/consulta/corridaViewAdapter.jsp"/>
+    </definition>    
+    <!-- fin Corrida -->
+    
+    <!-- AdpCorrida -->
+	    <definition name=".pro.adpProceso.view.adpCorridaViewAdapter" extends=".siatStdLayout">
+		    <put name="body" value="/pro/adpProceso/adpCorridaViewAdapter.jsp"/>
+	    </definition>
+	    <definition name=".pro.adpProceso.view.adpCorridaEstadoPasoAdapter" extends=".siatNoLayout">
+		    <put name="body" value="/pro/adpProceso/adpCorridaEstadoPasoAdapter.jsp"/>
+	    </definition>
+    <!-- Fin AdpCorrida -->
+    
+    <!-- ABM Proceso -->
+    <definition name=".pro.proceso.view.procesoSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/pro/proceso/procesoSearchPage.jsp"/>
+    </definition>
+    
+    <definition name=".pro.proceso.view.procesoEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/pro/proceso/procesoEditAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".pro.proceso.view.procesoViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/pro/proceso/procesoViewAdapter.jsp"/>
+    </definition>
+    <!-- FIN ABM Proceso -->
+    
+	<!-- ABM Envio de Archivos -->
+    <definition name=".pro.adpProceso.view.envioArchivosEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/pro/adpProceso/envioArchivosEditAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".pro.adpProceso.view.envioArchivosPreviewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/pro/adpProceso/envioArchivosPreviewAdapter.jsp"/>
+    </definition>
+     <!-- FIN ABM Envio de Archivos -->
+     
+</tiles-definitions>

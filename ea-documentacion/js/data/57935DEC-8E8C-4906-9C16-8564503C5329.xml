@@ -1,0 +1,4 @@
+tocTab[tocTab.length] = new Array("2.1.5.2:1", "", "Indeterminados", "EARoot/EA2/EA1/EA5/EA2/EA404.htm", "180.png", "609", "0", "", "Use Case diagram");
+tocTab[tocTab.length] = new Array("2.1.5.2:2", "", "Consulta de Reingresos de Indeterminados", "EARoot/EA2/EA1/EA5/EA2/EA406.htm", "7.png", "5052", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.5.2:3", "", "Mantenedor de Indeterminados", "EARoot/EA2/EA1/EA5/EA2/EA407.htm", "7.png", "5050", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.5.2:4", "", "Reingreso Masivo de Indeterminados", "EARoot/EA2/EA1/EA5/EA2/EA408.htm", "7.png", "5051", "0", "", "UseCase");

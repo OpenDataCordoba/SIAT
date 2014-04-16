@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC 
+"-//Apache Software Foundation//DTD Struts Configuration 1.2//EN"  
+"[WWW] http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+	<form-beans>	
+		<form-bean name="habilitacionSearchPage"     type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="habilitacionAdapter"    	 type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="precioEventoAdapter"   	 type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="entHabAdapter"			   	 type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="entVenAdapter"			   	 type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="habExeAdapter"			   	 type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="valoresCargadosSearchPage"  type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="valoresCargadosAdapter"     type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="tipoEntradaSearchPage"  	 type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="tipoEntradaAdapter"     	 type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="entVenOtrIngTesAdapter"	 type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="lugarEventoSearchPage"  	 type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="lugarEventoAdapter"     	 type="org.apache.struts.action.DynaActionForm"/>
+	</form-beans>
+
+	<action-mappings>
+	    
+	   	<!-- Mantenedor Habilitacion-->
+	    <action
+	    	path="/esp/BuscarHabilitacion"
+	        type="ar.gov.rosario.siat.esp.view.struts.BuscarHabilitacionDAction"
+		    scope="request"
+	       	validate="false"
+	        name="habilitacionSearchPage"
+	        parameter="method"
+	   	    input=".esp.habilitacion.view.habilitacionSearchPage"
+	        attribute="habilitacionSearchPage">
+	        
+	   	    <forward name="administrarEncHabilitacion" 		path="/esp/AdministrarEncHabilitacion.do?method=inicializar" />	        
+	   	    <forward name="habilitacionSearchPage"    		path=".esp.habilitacion.view.habilitacionSearchPage" />
+	   	    <forward name="administrarHabilitacion" 	    path="/esp/AdministrarHabilitacion.do?method=inicializar" />
+    	    <forward name="buscarCuenta" 			        path="/pad/BuscarCuenta.do?method=inicializar" />
+       	    <forward name="buscarPersona" 				    path="/pad/BuscarPersona.do?method=inicializar"/>
+       	    <!-- forward name="administrarEntVen" 				path="/esp/AdministrarEntVen.do?method=inicializar" /-->
+	    </action>
+		
+		<action
+     		path="/esp/AdministrarHabilitacion"
+	        type="ar.gov.rosario.siat.esp.view.struts.AdministrarHabilitacionDAction"
+		    scope="request"
+        	validate="false"
+	        name="habilitacionAdapter"
+            parameter="method"
+    	    input=".esp.habilitacion.view.habilitacionAdapter"
+	        attribute="habilitacionAdapter">
+
+    	    <forward name="habilitacionViewAdapter"  	path=".esp.habilitacion.view.habilitacionViewAdapter" />
+    	    <forward name="habilitacionAdapter"         path=".esp.habilitacion.view.habilitacionAdapter" />
+     	    <forward name="administrarEncHabilitacion"  path="/esp/AdministrarEncHabilitacion.do?method=inicializar" />
+    	    <forward name="administrarPrecioEvento" 	path="/esp/AdministrarPrecioEvento.do?method=inicializar" />
+       	    <forward name="administrarEntHab"  			path="/esp/AdministrarEntHab.do?method=inicializar" />
+       	    <forward name="administrarEntVen"  			path="/esp/AdministrarEntVen.do?method=inicializar"/>
+       	    <forward name="administrarHabExe"  			path="/esp/AdministrarHabExe.do?method=inicializar" />
+       	    <forward name="entVenAdapter"			    path=".esp.habilitacion.view.entVenAdapter" />       
+   	   	    <forward name="administrarHabilitacion" 	    path="/esp/AdministrarHabilitacion.do?method=inicializar" />	    
+       	    <forward name="administrarEmiHabilitacion"  path="/esp/AdministrarEmiHabilitacion.do?method=inicializar" />
+	   	</action>
+	    
+		<action
+     		path="/esp/AdministrarEncHabilitacion"
+	        type="ar.gov.rosario.siat.esp.view.struts.AdministrarEncHabilitacionDAction"
+		    scope="request"
+        	validate="false"
+	        name="habilitacionAdapter"
+            parameter="method"
+    	    input=".esp.habilitacion.view.habilitacionEncEditAdapter"
+	        attribute="habilitacionAdapter">
+
+    	    <forward name="habilitacionEncEditAdapter"     path=".esp.habilitacion.view.habilitacionEncEditAdapter" />
+    	    <forward name="buscarCuenta" 			        path="/pad/BuscarCuenta.do?method=inicializar" />
+       	    <forward name="buscarPersona" 				    path="/pad/BuscarPersona.do?method=inicializar"/>
+	    </action>
+	    
+	    <action
+     		path="/esp/AdministrarEmiHabilitacion"
+	        type="ar.gov.rosario.siat.esp.view.struts.AdministrarEmiHabilitacionDAction"
+		    scope="request"
+        	validate="false"
+	        name="habilitacionAdapter"
+            parameter="method"
+    	    input=".esp.habilitacion.view.habilitacionEmiViewAdapter"
+	        attribute="habilitacionAdapter">
+
+    	    <forward name="habilitacionEmiViewAdapter"     path=".esp.habilitacion.view.habilitacionEmiViewAdapter" />
+	    </action>
+	    
+	   	<action
+     		path="/esp/AdministrarDDJJEntVen"
+	        type="ar.gov.rosario.siat.esp.view.struts.AdministrarDDJJEntVenDAction"
+		    scope="request"
+        	validate="false"
+	        name="habilitacionAdapter"
+            parameter="method"
+    	    input=".esp.habilitacion.view.ddjjEntVenAdapter"
+	        attribute="habilitacionAdapter">
+
+    	    <forward name="ddjjEntVenAdapter"  			path=".esp.habilitacion.view.ddjjEntVenAdapter" />
+       	    <forward name="administrarEntVen"  			path="/esp/AdministrarEntVen.do?method=inicializar"/>
+	   	</action>
+	   	
+   	    <action
+     		path="/esp/AdministrarPrecioEvento"
+	        type="ar.gov.rosario.siat.esp.view.struts.AdministrarPrecioEventoDAction"
+		    scope="request"
+        	validate="false"
+	        name="precioEventoAdapter"
+            parameter="method"
+    	    input=".esp.habilitacion.view.precioEventoEditAdapter"
+	        attribute="precioEventoAdapter">
+            
+    	    <forward name="precioEventoViewAdapter"      path=".esp.habilitacion.view.precioEventoViewAdapter" />
+    	    <forward name="precioEventoEditAdapter"      path=".esp.habilitacion.view.precioEventoEditAdapter" />
+	    </action>
+	    
+   	    <action
+     		path="/esp/AdministrarEntHab"
+	        type="ar.gov.rosario.siat.esp.view.struts.AdministrarEntHabDAction"
+		    scope="request"
+        	validate="false"
+	        name="entHabAdapter"
+            parameter="method"
+    	    input=".esp.habilitacion.view.entHabEditAdapter"
+	        attribute="entHabAdapter">
+            
+    	    <forward name="entHabViewAdapter"      path=".esp.habilitacion.view.entHabViewAdapter" />
+    	    <forward name="entHabEditAdapter"      path=".esp.habilitacion.view.entHabEditAdapter" />
+	    </action>
+	    
+	     <action
+     		path="/esp/AdministrarEntVen"
+	        type="ar.gov.rosario.siat.esp.view.struts.AdministrarEntVenDAction"
+		    scope="request"
+        	validate="false"
+	        name="entVenAdapter"
+            parameter="method"
+    	    input=".esp.habilitacion.view.entVenEditAdapter"
+	        attribute="entVenAdapter">
+            
+    	    <forward name="entVenViewAdapter"      			 path=".esp.habilitacion.view.entVenViewAdapter" />
+    	    <forward name="entVenEditAdapter"      		   	 path=".esp.habilitacion.view.entVenEditAdapter" />
+    	    <forward name="entradasVendidasAdapter"     	 path=".esp.habilitacion.view.entradasVendidasAdapter" />
+    	    <forward name="administrarEmisionPuntualPreview" path="/emi/AdministrarEmisionPuntualPreview.do?method=inicializar" />
+    	    <forward name="entVenOtrIngTesAdapter"			 path=".esp.habilitacion.view.entVenOtrIngTesAdapter" />
+    	   
+	    </action>
+
+		<action
+     		path="/esp/AdministrarHabExe"
+	        type="ar.gov.rosario.siat.esp.view.struts.AdministrarHabExeDAction"
+		    scope="request"
+        	validate="false"
+	        name="habExeAdapter"
+            parameter="method"
+    	    input=".esp.habilitacion.view.habExeEditAdapter"
+	        attribute="habExeAdapter">
+            
+    	    <forward name="habExeViewAdapter"      path=".esp.habilitacion.view.habExeViewAdapter" />
+    	    <forward name="habExeEditAdapter"      path=".esp.habilitacion.view.habExeEditAdapter" />
+	    </action>
+	    
+	     <action
+	    	path="/esp/ReporteHabilitacion"
+	        type="ar.gov.rosario.siat.esp.view.struts.ReporteHabilitacionDAction"
+		    scope="request"
+	       	validate="false"
+	        name="habilitacionSearchPage"
+	        parameter="method"
+	   	    input=".esp.habilitacion.view.habilitacionReport"
+	        attribute="habilitacionSearchPage">
+	        
+	   	    <forward name="habilitacionReport"    		path=".esp.habilitacion.view.habilitacionReport" />
+    	    <forward name="buscarCuenta" 			        path="/pad/BuscarCuenta.do?method=inicializar" />
+	    </action>
+	    <!-- Fin Mantenedor Habilitacion-->
+	    
+	    <!-- ValoresCargados -->	    
+	    <action
+	    	path="/esp/BuscarValoresCargados"
+	        type="ar.gov.rosario.siat.esp.view.struts.BuscarValoresCargadosDAction"
+			scope="request"
+	       	validate="false"
+	        name="valoresCargadosSearchPage"
+	        parameter="method"
+	   		input=".esp.habilitacion.view.valoresCargadosSearchPage"
+	        attribute="valoresCargadosSearchPage">
+	           
+	   	    <forward name="valoresCargadosSearchPage"   	path=".esp.habilitacion.view.valoresCargadosSearchPage" />
+	   	    <forward name="administrarValoresCargados" 		path="/esp/AdministrarValoresCargados.do?method=inicializar" />
+	    </action>
+		
+		<action
+     		path="/esp/AdministrarValoresCargados"
+	        type="ar.gov.rosario.siat.esp.view.struts.AdministrarValoresCargadosDAction"
+		    scope="request"
+        	validate="false"
+	        name="valoresCargadosAdapter"
+            parameter="method"
+    	    input=".esp.habilitacion.view.valoresCargadosEditAdapter"
+	        attribute="valoresCargadosAdapter">
+            
+    	    <forward name="valoresCargadosViewAdapter"		path=".esp.habilitacion.view.valoresCargadosViewAdapter" />
+    	    <forward name="valoresCargadosEditAdapter"      path=".esp.habilitacion.view.valoresCargadosEditAdapter" />
+	    </action>
+	    <!-- Fin ValoresCargados -->
+
+		<!-- TipoEntrada -->	    
+	    <action
+	    	path="/esp/BuscarTipoEntrada"
+	        type="ar.gov.rosario.siat.esp.view.struts.BuscarTipoEntradaDAction"
+			scope="request"
+	       	validate="false"
+	        name="tipoEntradaSearchPage"
+	        parameter="method"
+	   		input=".esp.habilitacion.view.tipoEntradaSearchPage"
+	        attribute="tipoEntradaSearchPage">
+	           
+	   	    <forward name="tipoEntradaSearchPage"   	path=".esp.habilitacion.view.tipoEntradaSearchPage" />
+	   	    <forward name="administrarTipoEntrada" 		path="/esp/AdministrarTipoEntrada.do?method=inicializar" />
+	    </action>
+		
+		<action
+     		path="/esp/AdministrarTipoEntrada"
+	        type="ar.gov.rosario.siat.esp.view.struts.AdministrarTipoEntradaDAction"
+		    scope="request"
+        	validate="false"
+	        name="tipoEntradaAdapter"
+            parameter="method"
+    	    input=".esp.habilitacion.view.tipoEntradaEditAdapter"
+	        attribute="tipoEntradaAdapter">
+            
+    	    <forward name="tipoEntradaViewAdapter"		path=".esp.habilitacion.view.tipoEntradaViewAdapter" />
+    	    <forward name="tipoEntradaEditAdapter"      path=".esp.habilitacion.view.tipoEntradaEditAdapter" />
+	    </action>
+	    <!-- Fin TipoEntrada -->
+	    
+	    <!-- LugarEvento -->	    
+	    <action
+	    	path="/esp/BuscarLugarEvento"
+	        type="ar.gov.rosario.siat.esp.view.struts.BuscarLugarEventoDAction"
+			scope="request"
+	       	validate="false"
+	        name="lugarEventoSearchPage"
+	        parameter="method"
+	   		input=".esp.habilitacion.view.lugarEventoSearchPage"
+	        attribute="lugarEventoSearchPage">
+	           
+	   	    <forward name="lugarEventoSearchPage"   	path=".esp.habilitacion.view.lugarEventoSearchPage" />
+	   	    <forward name="administrarLugarEvento" 		path="/esp/AdministrarLugarEvento.do?method=inicializar" />
+	    </action>
+		
+		<action
+     		path="/esp/AdministrarLugarEvento"
+	        type="ar.gov.rosario.siat.esp.view.struts.AdministrarLugarEventoDAction"
+		    scope="request"
+        	validate="false"
+	        name="lugarEventoAdapter"
+            parameter="method"
+    	    input=".esp.habilitacion.view.lugarEventoEditAdapter"
+	        attribute="lugarEventoAdapter">
+            
+    	    <forward name="lugarEventoViewAdapter"		path=".esp.habilitacion.view.lugarEventoViewAdapter" />
+    	    <forward name="lugarEventoEditAdapter"      path=".esp.habilitacion.view.lugarEventoEditAdapter" />
+	    </action>
+	    <!-- Fin LugarEvento -->
+	</action-mappings>
+</struts-config>

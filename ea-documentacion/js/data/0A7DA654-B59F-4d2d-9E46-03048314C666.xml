@@ -1,0 +1,9 @@
+tocTab[tocTab.length] = new Array("2.1.1.8:1", "", "Novedades Osiris", "EARoot/EA2/EA1/EA1/EA8/EA261.htm", "180.png", "564", "0", "", "Use Case diagram");
+tocTab[tocTab.length] = new Array("2.1.1.8:2", "", "Anular Deuda", "EARoot/EA2/EA1/EA1/EA8/EA263.htm", "7.png", "5079", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.1.8:3", "", "Emisión DREI/ETUR para Ctas y Periodos", "EARoot/EA2/EA1/EA1/EA8/EA264.htm", "7.png", "5080", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.1.8:4", "", "Generación de Multas", "EARoot/EA2/EA1/EA1/EA8/EA265.htm", "7.png", "5078", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.1.8:5", "", "Generar DDJJ", "EARoot/EA2/EA1/EA1/EA8/EA266.htm", "7.png", "4770", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.1.8:6", "", "Generar Transacciones de Pago", "EARoot/EA2/EA1/EA1/EA8/EA267.htm", "7.png", "4771", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.1.8:7", "", "Procesar Envíos Osiris", "EARoot/EA2/EA1/EA1/EA8/EA268.htm", "7.png", "5190", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.1.8:8", "", "Reacomodar Deuda", "EARoot/EA2/EA1/EA1/EA8/EA269.htm", "7.png", "5077", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.1.8:9", "", "Procesar Novedades de Osiris", "EARoot/EA2/EA1/EA1/EA8/EA270.htm", "7.png", "2330", "0", "", "UseCase");

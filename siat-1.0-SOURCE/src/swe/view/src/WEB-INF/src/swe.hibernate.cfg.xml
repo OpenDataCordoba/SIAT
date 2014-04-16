@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+
+<session-factory>
+	<property name="dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+	<property name="connection.datasource">java:comp/env/ds/swe</property>	
+
+    <!-- JDBC connection pool (use the built-in) -->
+    <!--property name="connection.pool_size">1</property-->
+
+    <!-- Enable Hibernate's automatic session context management -->
+    <!--property name="current_session_context_class">thread</property-->
+
+    <!-- Disable the second-level cache  -->
+    <property name="cache.provider_class">org.hibernate.cache.NoCacheProvider</property>
+
+    <!-- Dirty read / read uncommited -->
+    <property name="hibernate.connection.isolation">1</property>	
+	
+	<mapping class="ar.gov.rosario.swe.buss.bean.Aplicacion" />
+	<mapping class="ar.gov.rosario.swe.buss.bean.ModApl" />	
+	<mapping class="ar.gov.rosario.swe.buss.bean.UsrApl" />
+	<mapping class="ar.gov.rosario.swe.buss.bean.UsrRolApl" />	
+	<mapping class="ar.gov.rosario.swe.buss.bean.RolApl" />
+	<mapping class="ar.gov.rosario.swe.buss.bean.AccModApl" />
+	<mapping class="ar.gov.rosario.swe.buss.bean.RolAccModApl" />
+	<mapping class="ar.gov.rosario.swe.buss.bean.ItemMenu" />
+	<mapping class="ar.gov.rosario.swe.buss.bean.UsrAplAdmSwe" />
+	<mapping class="ar.gov.rosario.swe.buss.bean.UsrAuth" />
+	<mapping class="ar.gov.rosario.swe.buss.bean.TipoAuth" />	
+	
+</session-factory> 
+
+</hibernate-configuration>

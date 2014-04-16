@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC 
+"-//Apache Software Foundation//DTD Struts Configuration 1.2//EN"  
+"[WWW] http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+	<form-beans>
+	    
+		<form-bean name="deudaCyqAdapter"    		type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="procedimientoSearchPage"   type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="procedimientoAdapter"    	type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="juzgadoSearchPage"    		type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="juzgadoAdapter"       		type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="abogadoSearchPage"    		type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="abogadoAdapter"       		type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="proCueNoDeuAdapter"        type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="deudaPrivilegioAdapter"    type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="pagoPrivAdapter"       	type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="liqFormConvenioAdapter" type="org.apache.struts.action.DynaActionForm"/>
+		
+	</form-beans>
+
+	<action-mappings>
+	    
+	    <!-- Mantenedor de Procedimientos -->
+	    <action
+	    	path="/cyq/BuscarProcedimiento"
+	        type="ar.gov.rosario.siat.cyq.view.struts.BuscarProcedimientoDAction"
+		    scope="request"
+	       	validate="false"
+	        name="procedimientoSearchPage"
+	        parameter="method"
+	   	    input=".cyq.concursoyQuiebra.view.procedimientoSearchPage"
+	        attribute="procedimientoSearchPage">
+	        
+	   	    <forward name="administrarEncProcedimiento" 	path="/cyq/AdministrarEncProcedimiento.do?method=inicializar" />	        
+	   	    <forward name="procedimientoSearchPage"    		path=".cyq.concursoyQuiebra.view.procedimientoSearchPage" />
+	   	    <forward name="administrarProcedimiento" 	    path="/cyq/AdministrarProcedimiento.do?method=inicializar" />
+	   	    <forward name="administrarCambioEstadoProcedimiento" path="/cyq/AdministrarCambioEstadoProcedimiento.do?method=inicializar" />
+	    </action>
+		
+		 <action
+	    	path="/cyq/BuscarProcedimientoAva"
+	        type="ar.gov.rosario.siat.cyq.view.struts.BuscarProcedimientoAvaDAction"
+		    scope="request"
+	       	validate="false"
+	        name="procedimientoSearchPage"
+	        parameter="method"
+	   	    input=".cyq.concursoyQuiebra.view.procedimientoAvaSearchPage"
+	        attribute="procedimientoSearchPage">
+	        
+	   	    <forward name="administrarEncProcedimiento" 	path="/cyq/AdministrarEncProcedimiento.do?method=inicializar" />	        
+	   	    <forward name="procedimientoAvaSearchPage"    	path=".cyq.concursoyQuiebra.view.procedimientoAvaSearchPage" />
+	   	    <forward name="administrarProcedimiento" 	    path="/cyq/AdministrarProcedimiento.do?method=inicializar" />
+	   	    <forward name="administrarCambioEstadoProcedimiento" path="/cyq/AdministrarCambioEstadoProcedimiento.do?method=inicializar" />
+	   	    <forward name="administrarLiqDeudaCyq" 			path="/cyq/AdministrarLiqDeudaCyq.do?method=inicializar" />
+	   	    <forward name="buscarPersona"           		path="/pad/BuscarPersona.do?method=inicializar" />	   	    
+	    </action>
+	    
+		<action
+     		path="/cyq/AdministrarProcedimiento"
+	        type="ar.gov.rosario.siat.cyq.view.struts.AdministrarProcedimientoDAction"
+		    scope="request"
+        	validate="false"
+	        name="procedimientoAdapter"
+            parameter="method"
+    	    input=".cyq.concursoyQuiebra.view.procedimientoAdapter"
+	        attribute="procedimientoAdapter">
+            
+    	    <forward name="procedimientoViewAdapter"    path=".cyq.concursoyQuiebra.view.procedimientoViewAdapter" />
+    	    <forward name="procedimientoAdapter"        path=".cyq.concursoyQuiebra.view.procedimientoAdapter" />
+     	    <forward name="administrarEncProcedimiento" path="/cyq/AdministrarEncProcedimiento.do?method=inicializar" />
+     	    <forward name="administrarBajaProcedimiento" path="/cyq/AdministrarBajaProcedimiento.do?method=inicializar" />
+     	    <forward name="administrarConversionProcedimiento" path="/cyq/AdministrarConversionProcedimiento.do?method=inicializar" />
+     	    <forward name="administrarInformeProcedimiento" path="/cyq/AdministrarInformeProcedimiento.do?method=inicializar" />
+    	    <forward name="administrarDeuAdm" 			path="/cyq/AdministrarDeuAdm.do?method=inicializar" />
+    	    <forward name="buscarDeuda"					path="/cyq/AdministrarDeudaCyq.do?method=inicializar" />
+    	    <forward name="administrarProCueNoDeu" 		path="/cyq/AdministrarProCueNoDeu.do?method=inicializar" />
+	    </action>
+	    
+		<action
+     		path="/cyq/AdministrarEncProcedimiento"
+	        type="ar.gov.rosario.siat.cyq.view.struts.AdministrarEncProcedimientoDAction"
+		    scope="request"
+        	validate="false"
+	        name="procedimientoAdapter"
+            parameter="method"
+    	    input=".cyq.concursoyQuiebra.view.procedimientoEncEditAdapter"
+	        attribute="procedimientoAdapter">
+
+    	    <forward name="procedimientoEncEditAdapter"     path=".cyq.concursoyQuiebra.view.procedimientoEncEditAdapter" />
+    	    <forward name="buscarPersona"           		path="/pad/BuscarPersona.do?method=inicializar" />
+	    </action>
+	    
+	    <action
+     		path="/cyq/AdministrarBajaProcedimiento"
+	        type="ar.gov.rosario.siat.cyq.view.struts.AdministrarBajaProcedimientoDAction"
+		    scope="request"
+        	validate="false"
+	        name="procedimientoAdapter"
+            parameter="method"
+    	    input=".cyq.concursoyQuiebra.view.procedimientoBajaAdapter"
+	        attribute="procedimientoAdapter">
+
+    	    <forward name="procedimientoBajaAdapter"     	path=".cyq.concursoyQuiebra.view.procedimientoBajaAdapter" />
+	    </action>
+	    
+	    <action
+     		path="/cyq/AdministrarConversionProcedimiento"
+	        type="ar.gov.rosario.siat.cyq.view.struts.AdministrarConversionProcedimientoDAction"
+		    scope="request"
+        	validate="false"
+	        name="procedimientoAdapter"
+            parameter="method"
+    	    input=".cyq.concursoyQuiebra.view.procedimientoConversionAdapter"
+	        attribute="procedimientoAdapter">
+
+    	    <forward name="procedimientoConversionAdapter"  path=".cyq.concursoyQuiebra.view.procedimientoConversionAdapter" />
+    	    <forward name="buscarPersona"           		path="/pad/BuscarPersona.do?method=inicializar" />
+	    </action>
+	    
+	    <action
+     		path="/cyq/AdministrarInformeProcedimiento"
+	        type="ar.gov.rosario.siat.cyq.view.struts.AdministrarInformeProcedimientoDAction"
+		    scope="request"
+        	validate="false"
+	        name="procedimientoAdapter"
+            parameter="method"
+    	    input=".cyq.concursoyQuiebra.view.procedimientoInformeAdapter"
+	        attribute="procedimientoAdapter">
+
+    	    <forward name="procedimientoInformeAdapter"     	path=".cyq.concursoyQuiebra.view.procedimientoInformeAdapter" />
+	    </action>
+	    
+	    <action
+     		path="/cyq/AdministrarCambioEstadoProcedimiento"
+	        type="ar.gov.rosario.siat.cyq.view.struts.AdministrarCambioEstadoProcedimientoDAction"
+		    scope="request"
+        	validate="false"
+	        name="procedimientoAdapter"
+            parameter="method"
+    	    input=".cyq.concursoyQuiebra.view.cambioEstadoProcedimientoAdapter"
+	        attribute="procedimientoAdapter">
+            			   
+    	    <forward name="cambioEstadoProcedimientoAdapter"  path=".cyq.concursoyQuiebra.view.cambioEstadoProcedimientoAdapter" />
+	    </action>
+	    
+	    <action
+     		path="/cyq/AdministrarDeudaCyq"
+	        type="ar.gov.rosario.siat.cyq.view.struts.AdministrarDeudaCyqDAction"
+		    scope="request"
+        	validate="false"
+	        name="deudaCyqAdapter"
+            parameter="method"
+    	    input=".cyq.concursoyQuiebra.view.deudaCyqCuentaSearch"
+	        attribute="deudaCyqAdapter">
+            
+    	    <forward name="deudaCyqCuentaSearch"		path=".cyq.concursoyQuiebra.view.deudaCyqCuentaSearch" />
+    	    <forward name="deudaCyqAdapter"       		path=".cyq.concursoyQuiebra.view.deudaCyqAdapter" />
+    	    <forward name="messageDeudaCyqAdapter"      path=".cyq.concursoyQuiebra.view.messageDeudaCyqAdapter" />    	    
+    	    <forward name="administrarProcedimiento"	path="/cyq/AdministrarProcedimiento.do?method=refill" />
+	    </action>
+	    
+	    <action
+     		path="/cyq/AdministrarProCueNoDeu"
+	        type="ar.gov.rosario.siat.cyq.view.struts.AdministrarProCueNoDeuDAction"
+		    scope="request"
+        	validate="false"
+	        name="proCueNoDeuAdapter"
+            parameter="method"
+    	    input=".cyq.concursoyQuiebra.view.proCueNoDeuAdapter"
+	        attribute="proCueNoDeuAdapter">
+	                    
+    	    <forward name="proCueNoDeuEditAdapter"		path=".cyq.concursoyQuiebra.view.proCueNoDeuEditAdapter" />
+    	    <forward name="proCueNoDeuViewAdapter"		path=".cyq.concursoyQuiebra.view.proCueNoDeuViewAdapter" />
+	    </action>
+	    
+	    <action
+     		path="/cyq/AdministrarLiqDeudaCyq"
+	        type="ar.gov.rosario.siat.cyq.view.struts.AdministrarLiqDeudaCyqDAction"
+		    scope="request"
+        	validate="false"
+	        name="deudaCyqAdapter"
+            parameter="method"
+    	    input=".cyq.concursoyQuiebra.view.liqDeudaCyqAdapter"
+	        attribute="deudaCyqAdapter">
+            
+    	    <forward name="liqDeudaCyqAdapter"       		path=".cyq.concursoyQuiebra.view.liqDeudaCyqAdapter" />
+    	    <forward name="administrarDeudaPrivilegio"      path="/cyq/AdministrarDeudaPrivilegio.do?method=inicializar" />
+    	    <forward name="administrarPagoPriv"      		path="/cyq/AdministrarPagoPriv.do?method=inicializar" />
+    	    <forward name="administrarFormConvenio"      	path="/cyq/AdministrarLiqFormConvenio.do?method=inicializar" />
+    	    <forward name="administrarFormConvenioEsp"      path="/cyq/AdministrarLiqFormConvenioEsp.do?method=inicializar" />
+    	    <forward name="verConvenio"						path="/gde/AdministrarLiqConvenioCuenta.do?method=inicializar"/>    	    
+	    </action>
+	    
+	    <action
+     		path="/cyq/AdministrarDeudaPrivilegio"
+	        type="ar.gov.rosario.siat.cyq.view.struts.AdministrarDeudaPrivilegioDAction"
+		    scope="request"
+        	validate="false"
+	        name="deudaPrivilegioAdapter"
+            parameter="method"
+    	    input=".cyq.concursoyQuiebra.view.deudaPrivilegioEditAdapter"
+	        attribute="deudaPrivilegioAdapter">
+            
+    	    <forward name="deudaPrivilegioEditAdapter"       		path=".cyq.concursoyQuiebra.view.deudaPrivilegioEditAdapter" />
+    	    <forward name="deudaPrivilegioViewAdapter"       		path=".cyq.concursoyQuiebra.view.deudaPrivilegioViewAdapter" />
+	    </action>
+	    
+	    <action
+     		path="/cyq/AdministrarPagoPriv"
+	        type="ar.gov.rosario.siat.cyq.view.struts.AdministrarPagoPrivDAction"
+		    scope="request"
+        	validate="false"
+	        name="pagoPrivAdapter"
+            parameter="method"
+    	    input=".cyq.concursoyQuiebra.view.pagoPrivEditAdapter"
+	        attribute="pagoPrivAdapter">
+            
+    	    <forward name="pagoPrivEditAdapter"       		path=".cyq.concursoyQuiebra.view.pagoPrivEditAdapter" />
+    	    <forward name="pagoPrivViewAdapter"       		path=".cyq.concursoyQuiebra.view.pagoPrivViewAdapter" />
+    	    <forward name="buscarCuentaBanco"				path="/bal/BuscarCuentaBanco.do?method=inicializar"/>
+	    </action>
+	    
+	    <action
+     		path="/cyq/AdministrarLiqFormConvenio"
+	        type="ar.gov.rosario.siat.cyq.view.struts.AdministrarLiqFormConvenioDAction"
+		    scope="request"
+        	validate="false"
+	        name="liqFormConvenioAdapter"
+            parameter="method"
+    	    input=".cyq.concursoyQuiebra.view.liqFormConvenioAdapter"
+	        attribute="liqFormConvenioAdapter">
+            
+    	    <forward name="liqFormConvenioAdapter"      	path=".cyq.concursoyQuiebra.view.liqFormConvenioAdapter" />
+    	    <forward name="liqFormConvenioPlanesAdapter"    path=".cyq.concursoyQuiebra.view.liqFormConvenioPlanesAdapter" />
+    	    
+       	    <forward name="liqFormConvenioCuotasAdapter"    path=".cyq.concursoyQuiebra.view.liqFormConvenioCuotasAdapter"/>
+       	    <forward name="liqFormConvenioSimulaCuotasAdapter"   path=".cyq.concursoyQuiebra.view.liqFormConvenioSimulaCuotasAdapter"/>
+       	    <forward name="liqFormConvenioFormalAdapter"    path=".cyq.concursoyQuiebra.view.liqFormConvenioFormalAdapter"/>
+       	    <forward name="verDetallePlan"					path="/gde/AdministrarPlan.do?method=inicializar"/>
+	        
+	        <forward name="liqFormConvenioImpForm"			path=".cyq.concursoyQuiebra.view.liqFormConvenioImpForm"/>
+       	    <forward name="liqFormConvenioImpRecibos"		path=".cyq.concursoyQuiebra.view.liqFormConvenioImpRecibos"/>
+       	    <forward name="liqFormConvenioImpAltCuotas"		path=".cyq.concursoyQuiebra.view.liqFormConvenioImpAltCuotas"/>
+       	    
+       	    <forward name="liqFormConvenioPrintAdapter"		path=".cyq.concursoyQuiebra.view.liqFormConvenioPrintAdapter"/>
+       	    <forward name="buscarPersona" 				    path="/pad/BuscarPersona.do?method=inicializar"/>
+       	    <forward name="formalizarConvenioEsp"			path="/gde/AdministrarLiqFormConvenioEsp.do?method=refillInit"/>
+    	    
+	    </action>
+	    
+	    <action
+     		path="/cyq/AdministrarLiqFormConvenioEsp"
+	        type="ar.gov.rosario.siat.cyq.view.struts.AdministrarLiqFormConvenioEspDAction"
+		    scope="request"
+        	validate="false"
+	        name="liqFormConvenioAdapter"
+            parameter="method"
+    	    input=".cyq.concursoyQuiebra.view.liqFormConvenioEspAdapter"
+	        attribute="liqFormConvenioAdapter">
+	        <forward name="liqFormConvenioEspAdapter"					path=".cyq.concursoyQuiebra.view.liqFormConvenioEspAdapter"/>
+       	    <forward name="liqFormConvenioPlanesEspAdapter"             path=".cyq.concursoyQuiebra.view.liqFormConvenioPlanesEspAdapter"/>
+       	    <forward name="liqFormConvenioCuotasEspAdapter"             path=".cyq.concursoyQuiebra.view.liqFormConvenioCuotasEspAdapter"/>
+			<forward name="liqFormConvenioCuotasEspEditAdapter"         path=".cyq.concursoyQuiebra.view.liqFormConvenioCuotasEspEditAdapter"/>
+			<forward name="liqFormConvenioFormalAdapter"    			path=".cyq.concursoyQuiebra.view.liqFormConvenioFormalAdapter"/>
+	    </action>
+	    <!-- Fin Mantenedor de Procedimientos -->
+	    
+	    
+	    <!-- Mantenedor de Juzgado -->
+	    <action
+     		path="/cyq/BuscarJuzgado"
+	        type="ar.gov.rosario.siat.cyq.view.struts.BuscarJuzgadoDAction"
+		    scope="request"
+        	validate="false"
+	        name="juzgadoSearchPage"
+            parameter="method"
+    	    input=".cyq.definicion.view.juzgadoSearchPage"
+	        attribute="juzgadoSearchPage">
+            
+    	    <forward name="juzgadoSearchPage"		path=".cyq.definicion.view.juzgadoSearchPage" />
+    	    <forward name="administrarJuzgado"		path="/cyq/AdministrarJuzgado.do?method=inicializar" />
+	    </action>
+	    
+	    <action
+     		path="/cyq/AdministrarJuzgado"
+	        type="ar.gov.rosario.siat.cyq.view.struts.AdministrarJuzgadoDAction"
+		    scope="request"
+        	validate="false"
+	        name="juzgadoAdapter"
+            parameter="method"
+    	    input=".cyq.definicion.view.juzgadoEditAdapter"
+	        attribute="juzgadoAdapter">
+	                    
+    	    <forward name="juzgadoEditAdapter"		path=".cyq.definicion.view.juzgadoEditAdapter" />
+    	    <forward name="juzgadoViewAdapter"		path=".cyq.definicion.view.juzgadoViewAdapter" />
+	    </action>	    
+	    <!-- Fin Mantenedor de Juzgado -->
+	    
+	    <!-- Mantenedor de Abogado -->
+	    <action
+     		path="/cyq/BuscarAbogado"
+	        type="ar.gov.rosario.siat.cyq.view.struts.BuscarAbogadoDAction"
+		    scope="request"
+        	validate="false"
+	        name="abogadoSearchPage"
+            parameter="method"
+    	    input=".cyq.definicion.view.abogadoSearchPage"
+	        attribute="abogadoSearchPage">
+            
+    	    <forward name="abogadoSearchPage"		path=".cyq.definicion.view.abogadoSearchPage" />
+    	    <forward name="administrarAbogado"		path="/cyq/AdministrarAbogado.do?method=inicializar" />
+	    </action>
+	    
+	    <action
+     		path="/cyq/AdministrarAbogado"
+	        type="ar.gov.rosario.siat.cyq.view.struts.AdministrarAbogadoDAction"
+		    scope="request"
+        	validate="false"
+	        name="abogadoAdapter"
+            parameter="method"
+    	    input=".cyq.definicion.view.abogadoEditAdapter"
+	        attribute="abogadoAdapter">
+	                    
+    	    <forward name="abogadoEditAdapter"		path=".cyq.definicion.view.abogadoEditAdapter" />
+    	    <forward name="abogadoViewAdapter"		path=".cyq.definicion.view.abogadoViewAdapter" />
+	    </action>	    
+	    <!-- Fin Mantenedor de Abogado -->
+	    
+	</action-mappings>
+
+</struts-config>

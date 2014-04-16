@@ -1,0 +1,4 @@
+tocTab[tocTab.length] = new Array("2.1.10.5.1:1", "", "Administrar Alicuotas del Recurso", "EARoot/EA2/EA1/EA10/EA5/EA1/EA601.htm", "7.png", "4775", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.10.5.1:2", "", "Administrar Atributos a Valorizar al crear Cuentas", "EARoot/EA2/EA1/EA10/EA5/EA1/EA602.htm", "7.png", "4774", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.10.5.1:3", "", "Administrar Conceptos a Declarar en DJ", "EARoot/EA2/EA1/EA10/EA5/EA1/EA603.htm", "7.png", "4773", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.10.5.1:4", "", "Administrar Mínimos a Declarar del Recurso", "EARoot/EA2/EA1/EA10/EA5/EA1/EA604.htm", "7.png", "4843", "0", "", "UseCase");

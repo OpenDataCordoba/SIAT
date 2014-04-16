@@ -1,0 +1,6 @@
+tocTab[tocTab.length] = new Array("2.1.2.4:1", "", "Cuentas Contributivas", "EARoot/EA2/EA1/EA2/EA4/EA295.htm", "180.png", "368", "0", "", "Use Case diagram");
+tocTab[tocTab.length] = new Array("2.1.2.4:2", "", "Cambiar Domicilio de Envío Web", "EARoot/EA2/EA1/EA2/EA4/EA297.htm", "7.png", "3893", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.2.4:3", "", "Relacionar Cuentas", "EARoot/EA2/EA1/EA2/EA4/EA298.htm", "7.png", "5069", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.2.4:4", "", "Mantenedor Cuenta", "EARoot/EA2/EA1/EA2/EA4/EA300.htm", "7.png", "1731", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.2.4:5", "", "Mantenedor Cuenta Excluida Envios", "EARoot/EA2/EA1/EA2/EA4/EA301.htm", "7.png", "2801", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.2.4.1", "1", "Secundarios", "EARoot/EA2/EA1/EA2/EA4/EA299.htm", "4.png", "", "", "{969F7FCB-E513-422a-BE10-AEC204BCED3B}", "Package");

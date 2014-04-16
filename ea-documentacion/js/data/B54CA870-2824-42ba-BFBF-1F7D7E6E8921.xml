@@ -1,0 +1,17 @@
+tocTab[tocTab.length] = new Array("2.1.1.1:1", "", "Diagrama Gestión de Deuda / Convenios", "EARoot/EA2/EA1/EA1/EA1/EA149.htm", "180.png", "361", "0", "", "Use Case diagram");
+tocTab[tocTab.length] = new Array("2.1.1.1:2", "", "Administrar Incorporación de Ajustes", "EARoot/EA2/EA1/EA1/EA1/EA151.htm", "7.png", "4895", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.1.1:3", "", "Administrar Multas", "EARoot/EA2/EA1/EA1/EA1/EA152.htm", "7.png", "3025", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.1.1:4", "", "Calculo Actualización", "EARoot/EA2/EA1/EA1/EA1/EA153.htm", "7.png", "5073", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.1.1:5", "", "Consultar Declaraciones Juradas", "EARoot/EA2/EA1/EA1/EA1/EA154.htm", "7.png", "4881", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.1.1:6", "", "Desbloquear Recibo de Tramite", "EARoot/EA2/EA1/EA1/EA1/EA155.htm", "7.png", "5074", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.1.1:7", "", "Diagrama Gestión de Deuda / Convenios", "EARoot/EA2/EA1/EA1/EA1/EA156.htm", "7.png", "4614", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.1.1:8", "", "Formulario de Declaración Jurada AFIP", "EARoot/EA2/EA1/EA1/EA1/EA157.htm", "7.png", "5183", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.1.1:9", "", "Gestión de Deuda por Recurso/Cuenta", "EARoot/EA2/EA1/EA1/EA1/EA159.htm", "7.png", "1629", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.1.1:10", "", "Obtener Cuentas por Contribuyente", "EARoot/EA2/EA1/EA1/EA1/EA160.htm", "7.png", "1627", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.1.1:11", "", "Obtener Cuentas por Objeto Imponible", "EARoot/EA2/EA1/EA1/EA1/EA161.htm", "7.png", "3598", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.1.1:12", "", "Consultar recibos", "EARoot/EA2/EA1/EA1/EA1/EA162.htm", "7.png", "4101", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.1.1:13", "", "Obtener Estado de Cuenta", "EARoot/EA2/EA1/EA1/EA1/EA163.htm", "7.png", "1628", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.1.1:14", "", "Consultar convenio", "EARoot/EA2/EA1/EA1/EA1/EA164.htm", "7.png", "3821", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.1.1:15", "", "Consultar boletas por Cod. Ref. Pago", "EARoot/EA2/EA1/EA1/EA1/EA165.htm", "7.png", "4212", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.1.1:16", "", "Consulta de deuda por Código de referencia de pago", "EARoot/EA2/EA1/EA1/EA1/EA166.htm", "7.png", "4543", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.1.1.1", "1", "Secundarios", "EARoot/EA2/EA1/EA1/EA1/EA158.htm", "4.png", "", "", "{BD8559A1-72D0-41c8-A4C4-0629DCDB1DC5}", "Package");

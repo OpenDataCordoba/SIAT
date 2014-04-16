@@ -1,0 +1,91 @@
+<project name="test" default="compile" basedir=".">
+  <description> Test Siat </description>
+  <!-- set global properties for this build -->
+  <property name="src" location="src"/>
+  <property name="build" location="build"/>
+  <property name="classes" location="${build}/classes"/>
+  <property name="data"  location="data"/>
+  <property name="dist"  location="${build}"/>
+  <property name="externalJars"  location="../externalJars"/>
+
+  <path id="externalJars_path">
+  	<fileset dir="${externalJars}">
+  		<include name="common/**/*.jar"/>
+  		<include name="shared/**/*.jar"/>
+  		<include name="lib/**/*.jar"/>
+  		<include name="extra/**/*.jar"/>
+  	</fileset>
+  </path>
+  
+  <path id="siatJars_path">
+  	<fileset dir="../../dist">
+  		<include name="lib/**/*.jar"/>
+  	</fileset>
+  </path>
+
+  <path id="test_Classpath">
+     <pathelement location="${classes}" />
+  </path>
+
+  <target name="init">
+    <!-- Create the build directory structure used by compile -->
+    <mkdir dir="${build}"/>
+    <mkdir dir="${classes}"/>
+    <mkdir dir="${dist}/lib"/>
+  </target>
+  
+  <target name="prepare">
+    <gunzip dest="${data}">
+	<fileset dir="${data}">
+		<include name="**/*.gz"/>
+	</fileset>
+    </gunzip>
+  </target>
+
+  <target name="compile" depends="init"
+        description="compile the source " >
+    <!-- Compile the java code from ${src} into ${build} -->
+        <javac srcdir="${src}" destdir="${classes}" encoding="iso8859-1" debug="on" deprecation="false" includeantruntime="last">
+           <classpath>
+              <path refid="externalJars_path"/>
+              <path refid="siatJars_path"/>
+           </classpath>
+        </javac>
+  	
+  	<copy todir="${classes}">
+	  <fileset dir="../view/src/WEB-INF/src" includes="mcr-general.cfg.xml" />
+    	  <fileset dir="../view/src/WEB-INF/src/" includes="siat.hibernate.cfg.xml" />
+    	  <fileset dir="../view/src/WEB-INF/src/" includes="swe.hibernate.cfg.xml" />
+  	</copy>
+
+    <copy todir="${classes}">
+    	<fileset dir="${src}" includes="**/*.xml" />
+    	<fileset dir="${src}" includes="**/*.properties" />
+    </copy>
+
+  </target>
+
+  <target name="test" depends="prepare, compile" description="run test" >
+    <junit printsummary="no" haltonfailure="no" fork="yes" forkmode="perBatch">
+      <classpath>
+          <path refid="externalJars_path"/>
+          <path refid="siatJars_path"/>
+          <path refid="test_Classpath" />
+      </classpath>
+      <batchtest>
+        <formatter type="plain" usefile="false" />
+        <fileset dir="${src}">
+           <include name="**/*Test.java" />
+        </fileset>
+      </batchtest>
+    </junit> 
+  </target>
+
+  <target name="clean"
+        description="clean up" >
+    <!-- Delete the ${build} and ${dist} directory trees -->
+    <delete dir="${build}"/>
+    <delete dir="${dist}"/>
+  </target>
+	
+</project>

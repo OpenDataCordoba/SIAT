@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+ <!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 1.1//EN"
+       "http://jakarta.apache.org/struts/dtds/tiles-config_1_1.dtd">
+
+<tiles-definitions>
+	
+	<!-- Frase -->
+    <definition name=".fra.frase.view.fraseSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/fra/frase/fraseSearchPage.jsp"/>
+    </definition>
+	
+	<definition name=".fra.frase.view.fraseViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/fra/frase/fraseViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".fra.frase.view.fraseEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/fra/frase/fraseEditAdapter.jsp"/>
+    </definition>
+    <!-- fin Frase -->
+        	
+</tiles-definitions>

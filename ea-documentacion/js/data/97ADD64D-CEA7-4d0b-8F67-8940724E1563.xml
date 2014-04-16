@@ -1,0 +1,10 @@
+tocTab[tocTab.length] = new Array("2.1.1.2:1", "", "Diagrama Administración Deuda/Convenios", "EARoot/EA2/EA1/EA1/EA2/EA198.htm", "180.png", "352", "0", "", "Use Case diagram");
+tocTab[tocTab.length] = new Array("2.1.1.2:2", "", "Administrar devolución masiva de deuda a via adm.", "EARoot/EA2/EA1/EA1/EA2/EA200.htm", "7.png", "4833", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.1.2:3", "", "Administrar Reconfecciones Masivas", "EARoot/EA2/EA1/EA1/EA2/EA202.htm", "7.png", "3072", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.1.2:4", "", "Administrar Notificaciones Pre-Envio", "EARoot/EA2/EA1/EA1/EA2/EA203.htm", "7.png", "4034", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.1.2:5", "", "Administrar Envio de Deuda a Judiciales", "EARoot/EA2/EA1/EA1/EA2/EA204.htm", "7.png", "3067", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.1.2:6", "", "Administrar Rescates de Convenios Masivo", "EARoot/EA2/EA1/EA1/EA2/EA205.htm", "7.png", "3691", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.1.2:7", "", "Administrar Saldos por Caducidad Masivos", "EARoot/EA2/EA1/EA1/EA2/EA206.htm", "7.png", "3547", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.1.2:8", "", "Administrar Prescripción Deuda", "EARoot/EA2/EA1/EA1/EA2/EA207.htm", "7.png", "3594", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.1.2:9", "", "Anular/Desanular Deuda", "EARoot/EA2/EA1/EA1/EA2/EA208.htm", "7.png", "3095", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.1.2.1", "", "Secundarios", "EARoot/EA2/EA1/EA1/EA2/EA201.htm", "4.png", "", "", "{8FE34F0B-D1AC-46ed-82E7-CD24A2687505}", "Package");

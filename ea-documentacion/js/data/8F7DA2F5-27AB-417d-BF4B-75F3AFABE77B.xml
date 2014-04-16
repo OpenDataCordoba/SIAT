@@ -1,0 +1,2 @@
+tocTab[tocTab.length] = new Array("2.1.7.1.1:1", "", "Alta Solicitud", "EARoot/EA2/EA1/EA7/EA1/EA1/EA490.htm", "7.png", "3876", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.7.1.1:2", "", "Obtener Períodos a Incluir", "EARoot/EA2/EA1/EA7/EA1/EA1/EA491.htm", "7.png", "3874", "0", "", "UseCase");

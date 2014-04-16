@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC 
+"-//Apache Software Foundation//DTD Struts Configuration 1.2//EN"  
+"[WWW] http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+	<form-beans>
+	    <form-bean name="solicitudSearchPage" type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="solicitudAdapter"    type="org.apache.struts.action.DynaActionForm"/>
+		
+		<form-bean name="usoExpedienteSearchPage" type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="usoExpedienteAdapter"    type="org.apache.struts.action.DynaActionForm"/>
+		
+		<form-bean name="tipoSolicitudSearchPage" type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="tipoSolicitudAdapter"    type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="areaSolicitudAdapter"    type="org.apache.struts.action.DynaActionForm"/>			
+		
+		<form-bean name="solPendReport" type="org.apache.struts.action.DynaActionForm"/>
+		
+	</form-beans>
+
+	<action-mappings>
+		
+		<!-- Mantenedor de Solicitud -->	    
+	    <action
+	    	path="/cas/BuscarSolicitud"
+	        type="ar.gov.rosario.siat.cas.view.struts.BuscarSolicitudDAction"
+			scope="request"
+	       	validate="false"
+	        name="solicitudSearchPage"
+	        parameter="method"
+	   		input=".cas.solicitud.view.solicitudSearchPage"
+	        attribute="solicitudSearchPage">
+	           
+	   	    <forward name="solicitudSearchPage"   	path=".cas.solicitud.view.solicitudSearchPage" />
+	   	    <forward name="administrarSolicitud" 	path="/cas/AdministrarSolicitud.do?method=inicializar" />
+	   	    <forward name="solicitudPendArea"		path=".cas.solicitud.view.solicitudPendAreaSearchPage"/>
+	   	    <forward name="solicitudEmitidasArea"	path=".cas.solicitud.view.solicitudEmitidasAreaSearchPage"/>
+	   	    <forward name="buscarCuenta" 			path="/pad/BuscarCuenta.do?method=inicializar" />
+	    </action>
+		
+		<action
+     		path="/cas/AdministrarSolicitud"
+	        type="ar.gov.rosario.siat.cas.view.struts.AdministrarSolicitudDAction"
+		    scope="request"
+        	validate="false"
+	        name="solicitudAdapter"
+            parameter="method"
+    	    input=".cas.solicitud.view.solicitudEditAdapter"
+	        attribute="solicitudAdapter">
+            
+    	    <forward name="solicitudViewAdapter"		path=".cas.solicitud.view.solicitudViewAdapter" />
+    	    <forward name="solicitudEditAdapter"        path=".cas.solicitud.view.solicitudEditAdapter" />
+   	   	    <forward name="buscarCuenta" 				path="/pad/BuscarCuenta.do?method=inicializar" />
+	    </action>
+	    <!-- Fin Mantenedor de Solicitud -->
+	    
+	    <!-- Consultar Uso Expediente -->	    
+	    <action
+	    	path="/cas/BuscarUsoExpediente"
+	        type="ar.gov.rosario.siat.cas.view.struts.BuscarUsoExpedienteDAction"
+			scope="request"
+	       	validate="false"
+	        name="usoExpedienteSearchPage"
+	        parameter="method"
+	   		input=".cas.caso.view.usoExpedienteSearchPage"
+	        attribute="usoExpedienteSearchPage">
+	           
+	   	    <forward name="usoExpedienteSearchPage"   	path=".cas.caso.view.usoExpedienteSearchPage" />
+	   	    <forward name="administrarUsoExpediente" 	path="/cas/AdministrarUsoExpediente.do?method=inicializar" />
+	    </action>
+		
+		<action
+     		path="/cas/AdministrarUsoExpediente"
+	        type="ar.gov.rosario.siat.cas.view.struts.AdministrarUsoExpedienteDAction"
+		    scope="request"
+        	validate="false"
+	        name="usoExpedienteAdapter"
+            parameter="method"
+    	    input=".cas.caso.view.usoExpedienteEditAdapter"
+	        attribute="usoExpedienteAdapter">
+            
+    	    <forward name="usoExpedienteViewAdapter"		path=".cas.caso.view.usoExpedienteViewAdapter" />
+	    </action>
+	    <!-- Fin Consultar Uso Expediente -->
+	    
+	    <!-- Mantenedor de Tipo de Solicitud -->	    
+	    <action
+	    	path="/cas/BuscarTipoSolicitud"
+	        type="ar.gov.rosario.siat.cas.view.struts.BuscarTipoSolicitudDAction"
+			scope="request"
+	       	validate="false"
+	        name="tipoSolicitudSearchPage"
+	        parameter="method"
+	   		input=".cas.solicitud.view.tipoSolicitudSearchPage"
+	        attribute="tipoSolicitudSearchPage">
+	           
+	   	    <forward name="tipoSolicitudSearchPage"   	path=".cas.solicitud.view.tipoSolicitudSearchPage" />
+	   	    <forward name="administrarTipoSolicitud" 	path="/cas/AdministrarTipoSolicitud.do?method=inicializar" />
+	   	    <forward name="administrarEncTipoSolicitud" path="/cas/AdministrarEncTipoSolicitud.do?method=inicializar" />
+	   	  
+	    </action>
+		
+		<action
+     		path="/cas/AdministrarTipoSolicitud"
+	        type="ar.gov.rosario.siat.cas.view.struts.AdministrarTipoSolicitudDAction"
+		    scope="request"
+        	validate="false"
+	        name="tipoSolicitudAdapter"
+            parameter="method"
+    	    input=".cas.solicitud.view.tipoSolicitudEditAdapter"
+	        attribute="tipoSolicitudAdapter">   
+
+    	    <forward name="tipoSolicitudViewAdapter"		path=".cas.solicitud.view.tipoSolicitudViewAdapter" />
+    	    <forward name="tipoSolicitudEditAdapter"        path=".cas.solicitud.view.tipoSolicitudEditAdapter" />  	   	    
+   	   	    <forward name="administrarAreaSolicitud" 		path="/cas/AdministrarAreaSolicitud.do?method=inicializar" />  	   	    
+   	   	    <forward name="administrarEncTipoSolicitud" 	path="/cas/AdministrarEncTipoSolicitud.do?method=inicializar" /> 	   	    
+
+	    </action>
+	    
+	    <action
+     		path="/cas/AdministrarEncTipoSolicitud"
+	        type="ar.gov.rosario.siat.cas.view.struts.AdministrarEncTipoSolicitudDAction"
+		    scope="request"
+        	validate="false"
+	        name="tipoSolicitudAdapter"
+            parameter="method"
+    	    input=".cas.solicitud.view.tipoSolicitudEncEditAdapter"
+	        attribute="tipoSolicitudAdapter">              	    
+		            	    
+    	    <forward name="tipoSolicitudEncEditAdapter"        path=".cas.solicitud.view.tipoSolicitudEncEditAdapter" />    	    
+
+	    </action>
+	    	    
+	    <!--Fin Mantenedor de Tipo de Solicitud -->    
+	    
+	    <!-- Mantenedor de Area Solicitud -->    
+	    
+	    <action
+     		path="/cas/AdministrarAreaSolicitud"
+	        type="ar.gov.rosario.siat.cas.view.struts.AdministrarAreaSolicitudDAction"
+		    scope="request"
+        	validate="false"
+	        name="areaSolicitudAdapter"
+            parameter="method"
+    	    input=".cas.solicitud.view.areaSolicitudEditAdapter"
+	        attribute="areaSolicitudAdapter">            
+               	   
+            <forward name="areaSolicitudViewAdapter"        path=".cas.solicitud.view.areaSolicitudViewAdapter" />
+    	    <forward name="areaSolicitudEditAdapter"        path=".cas.solicitud.view.areaSolicitudEditAdapter" />   
+    	    <forward name="tipoSolicitudEncEditAdapter"     path=".cas.solicitud.view.tipoSolicitudEncEditAdapter" />    	     	    
+   	   	    <forward name="tipoSolicitudAdapter"  		    path=".cas.solicitud.view.tipoSolicitudAdapter" />   	   	   
+   	   	   
+	    </action>
+	    
+	    <!-- Fin Mantenedor de Area Solicitud -->   
+	    
+	    
+		<!-- Reporte de Solicitudes Pendientes -->
+		
+		<action 
+			path="/cas/ReporteSolPend"
+			type="ar.gov.rosario.siat.cas.view.struts.ReporteSolPendDAction"
+			scope="request" 
+			validate="false" 
+			name="solPendReport" 
+			parameter="method"
+			input=".cas.reporte.view.solPendReport"
+			attribute="solPendReport">
+
+			<forward name="solPendReport" path=".cas.reporte.view.solPendReport" />
+		</action>
+		
+		<!-- FIN Reporte de Solicitudes Pendientes -->
+	    
+	</action-mappings>
+
+</struts-config>

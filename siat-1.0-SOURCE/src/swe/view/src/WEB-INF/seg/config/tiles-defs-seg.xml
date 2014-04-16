@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 1.1//EN"
+         "http://struts.apache.org/dtds/tiles-config_1_1.dtd">
+
+<tiles-definitions>
+    <definition name=".swe.view.welcome" extends=".sweWelcomeLayout">
+	    <put name="body" value="/seg/welcome.jsp"/>
+    </definition>
+
+    <definition name=".seg.view.loginForm" extends=".sweWelcomeLayout">
+	    <put name="body" value="/seg/loginForm.jsp"/>
+    </definition>
+
+    <definition name=".swe.view.sweLoginMessage" extends=".sweWelcomeLayout">
+	    <put name="body" value="/swe/sweMessage.jsp"/>
+    </definition>
+    
+    
+	<definition name=".seg.view.aplicacionSearchPage" extends=".sweWelcomeLayout">
+	    <put name="body" value="/seg/aplicacionSearchPage.jsp"/>
+    </definition>
+    
+    <definition name=".seg.view.aplicacionAdapterView" extends=".sweWelcomeLayout">
+	    <put name="body" value="/seg/aplicacionAdapterView.jsp"/>
+    </definition>    
+	
+	<definition name=".seg.view.aplicacionAdapter" extends=".sweWelcomeLayout">
+	    <put name="body" value="/seg/aplicacionAdapter.jsp"/>
+    </definition>
+    
+	<definition name=".seg.view.modAplSearchPage" extends=".sweWelcomeLayout">
+	    <put name="body" value="/seg/modAplSearchPage.jsp"/>
+    </definition>
+    
+    <definition name=".seg.view.modAplAdapterView" extends=".sweWelcomeLayout">
+	    <put name="body" value="/seg/modAplAdapterView.jsp"/>
+    </definition>    
+	
+	<definition name=".seg.view.modAplAdapter" extends=".sweWelcomeLayout">
+	    <put name="body" value="/seg/modAplAdapter.jsp"/>
+    </definition>
+
+
+	<definition name=".seg.view.usrAplSearchPage" extends=".sweWelcomeLayout">
+	    <put name="body" value="/seg/usrAplSearchPage.jsp"/>
+    </definition>
+    
+    <definition name=".seg.view.usrAplAdapterView" extends=".sweWelcomeLayout">
+	    <put name="body" value="/seg/usrAplAdapterView.jsp"/>
+    </definition>    
+	
+	<definition name=".seg.view.usrAplAdapter" extends=".sweWelcomeLayout">
+	    <put name="body" value="/seg/usrAplAdapter.jsp"/>
+    </definition>
+
+	<definition name=".seg.view.cloneUsrAplAdapter" extends=".sweWelcomeLayout">
+	    <put name="body" value="/seg/cloneUsrAplAdapter.jsp"/>
+    </definition>
+
+<!-- UsrRolApl -->
+	<definition name=".seg.view.usrRolAplSearchPage" extends=".sweWelcomeLayout">
+	    <put name="body" value="/seg/usrRolAplSearchPage.jsp"/>
+    </definition>
+    
+    <definition name=".seg.view.usrRolAplAdapterView" extends=".sweWelcomeLayout">
+	    <put name="body" value="/seg/usrRolAplAdapterView.jsp"/>
+    </definition>    
+	
+	<definition name=".seg.view.usrRolAplAdapter" extends=".sweWelcomeLayout"> <!--  no hace falta  dca -->
+	    <put name="body" value="/seg/usrRolAplAdapter.jsp"/>
+    </definition>
+<!-- UsrRolApl -->
+
+
+	<definition name=".seg.view.rolAplSearchPage" extends=".sweWelcomeLayout">
+	    <put name="body" value="/seg/rolAplSearchPage.jsp"/>
+    </definition>
+    
+    <definition name=".seg.view.rolAplAdapterView" extends=".sweWelcomeLayout">
+	    <put name="body" value="/seg/rolAplAdapterView.jsp"/>
+    </definition>    
+	
+	<definition name=".seg.view.rolAplAdapter" extends=".sweWelcomeLayout">
+	    <put name="body" value="/seg/rolAplAdapter.jsp"/>
+    </definition>
+    
+	<definition name=".seg.view.accModAplSearchPage" extends=".sweWelcomeLayout">
+	    <put name="body" value="/seg/accModAplSearchPage.jsp"/>
+    </definition>
+    
+    <definition name=".seg.view.accModAplAdapterView" extends=".sweWelcomeLayout">
+	    <put name="body" value="/seg/accModAplAdapterView.jsp"/>
+    </definition>    
+	
+	<definition name=".seg.view.accModAplAdapter" extends=".sweWelcomeLayout">
+	    <put name="body" value="/seg/accModAplAdapter.jsp"/>
+    </definition>    
+
+<!-- ItemMenu -->
+	<definition name=".seg.view.itemMenuSearchPage" extends=".sweWelcomeLayout">
+	    <put name="body" value="/seg/itemMenuSearchPage.jsp"/>
+    </definition>
+    
+    <definition name=".seg.view.itemMenuAdapterView" extends=".sweWelcomeLayout">
+	    <put name="body" value="/seg/itemMenuAdapterView.jsp"/>
+    </definition>    
+	
+	<definition name=".seg.view.itemMenuAdapter" extends=".sweWelcomeLayout">
+	    <put name="body" value="/seg/itemMenuAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".seg.view.itemMenuAccModAdapter" extends=".sweWelcomeLayout">
+	    <put name="body" value="/seg/itemMenuAccModAdapter.jsp"/>
+    </definition>
+    <definition name=".seg.view.itemMenuHijosAdapter" extends=".sweWelcomeLayout">
+	    <put name="body" value="/seg/itemMenuHijosAdapter.jsp"/>
+    </definition>
+    
+<!-- ItemMenu -->
+
+
+	<!-- Rol Accion Modulo de Aplicacion -->
+	<definition name=".seg.view.rolAccModAplSearchPage" extends=".sweWelcomeLayout">
+	    <put name="body" value="/seg/rolAccModAplSearchPage.jsp"/>
+    </definition> 
+    
+    <definition name=".seg.view.rolAccModAplAdapterView" extends=".sweWelcomeLayout">
+	    <put name="body" value="/seg/rolAccModAplAdapterView.jsp"/>
+    </definition> 
+
+</tiles-definitions>

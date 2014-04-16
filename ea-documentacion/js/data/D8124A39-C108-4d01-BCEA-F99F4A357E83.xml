@@ -1,0 +1,2 @@
+tocTab[tocTab.length] = new Array("2.1.2.3.1:1", "", "Activar/Desactivar Objeto Imponible", "EARoot/EA2/EA1/EA2/EA3/EA1/EA293.htm", "7.png", "3438", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.2.3.1:2", "", "Alta Objeto Imponible", "EARoot/EA2/EA1/EA2/EA3/EA1/EA294.htm", "7.png", "3437", "0", "", "UseCase");

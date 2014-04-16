@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Procesar Novedades Catastro</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="pageHeader"></div>
+<div class="PageBody">
+	<span class="ObjectTitle">Procesar Novedades Catastro  : public   usecase</span>
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">28/03/2008 13:04:44</td>
+		</tr>
+		<tr>
+			<td class="ObjectDetailsTopic">Modified:</td>
+			<td class="ObjectDetailsValue">21/01/2009 10:32:29</td>
+		</tr>
+		<tr style="height: 10px"><td colspan="2"></td></tr>
+		<tr>
+			<td class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td class="ObjectDetailsValue">guille</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td class="ObjectDetailsValue">1.0</td>
+		</tr>
+		<tr id="proj02" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Phase:</td>
+			<td class="ObjectDetailsValue">1.0</td>
+		</tr>
+		<tr id="proj03" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Status:</td>
+			<td class="ObjectDetailsValue">R1</td>
+		</tr>
+		<tr id="proj04" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Complexity:</td>
+			<td class="ObjectDetailsValue">Medium</td>
+		</tr>
+		<tr>
+			<td class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">UUID:</td>
+			<td class="ObjectDetailsValue">{ACA057F5-355D-4c34-BE61-9A302A4CA44B}</td>
+		</tr>
+		<tr id="adv01" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
+			<td class="ObjectDetailsValue"><a href="EA342.htm">Novedades sistemas origen</a></td>
+		</tr>
+	</table>
+	<div class="ObjectDetailsNotes">Procesa archivos provenientes de Catastro.</div>
+
+	<div class="TableGroup" id="TableGroup">
+		<ul class="ItemTitle">
+			<li onClick="parent.toggleItem('Scenario');" id="ScenarioTitle">Scenarios</li>
+			<li onClick="parent.toggleItem('Links');" id="LinksTitle">Other Links</li>
+		</ul>
+		<div class="ItemBody" id="ScenarioTable">
+			<table align="center" border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="24%" class="TableHeading">Scenario</td>
+					<td width="8%" class="TableHeading">Type</td>
+					<td width="68%" class="TableHeading">Detail</td>
+				</tr>
+				<tr>
+					<td width="24%" class="TableRow">Alta Objeto Imponible</td>
+					<td width="8%" class="TableRow">Alternate</td>
+					<td width="68%" class="TableRow"><div class="ObjectDetailsNotes"> Parámetros:<br />    . Estructura de Novedad donde se informan los datos recibidos en el archivo.<br /><br />  Proceso:<br /><br />     El Sistema:<br />       // ya se consideran realizadas las validaciones respecto de la coherecia entre la novedad y el área.<br />      . Valida que el Objeto Imponible no exista en SIAT, para lo cual consulta por Tipo Objeto Imponible y Clave en Objeto Imponible.<br />      . Obtiene el Tipo de Objeto Imponible y sus atributos<br />      . Valida que cada uno de los atributos informados para el Objeto Imponible sea correctos<br /><br />         // valida tipos de datos de los atributos<br />         . Para cada Atributo Informado<br />           . Verifica que el valor informado posea el tipo de datos correcto<br />           . En caso de ser un dominio, verifica que el valor informado esté activo. (ya sea consultando los valores del domino o invocando la clase que corresponda)<br /><br />       //<br />       . Si las validaciones son correctas, inserta el Objeto Imponible<br />          . Para cada uno de los atributos del Tipo Objeto Imponible<br />            . Inserta el valor referenciando al Objeto Imponible que se acaba de insertar y el Atributo del Tipo de Objeto Imponible.<br /><br />       // Análisis del comportamiento sobre cuentas en función de la configuración del recurso<br />       . Obtiene la lista de recursos que están relacionados con el Tipo de Objeto Imponible<br />       . Entre ellos, Busca el principal.<br />   <br />       . Si no hay principal, fin procesamiento<br />       . Si hay más de uno, informar error.<br /><br />       . Si hay un principal<br />  <br />          // Primer pasada del algoritmo: Recursos Principal<br />         . Verifica si &quot;realiza alta de cuenta por alta de objeto Imponible&quot;<br />            . Si realiza,<br /><br />               . Verifica que entre los datos de la Estructura de Novedad esté informado el Domicilio de Envío. Para ello debe revisar los atributos del Tipo de objeto imponible y obtener el que esté marcado como: Domicilio de Envío.<br />               . Si no existe Domicilio de Envío, abortar el proceso.<br />               . Si existe, valida que sea un Domicilio Válido (vía JarPersonas) En caso de no serlo, aborta el proceso.<br /><br />               . Obtiene los algoritmos para la generación de número de cuenta y código de gestión personal.<br />                 . General el número de cuenta (generalmente se utilizará el que venga informado en la interface)<br />                 . Genera el código de gestión personal. (generalmente será un número aleatorio)<br /><br />               . Inserta la Cuenta haciendo referencia al Objeto Imponible previamente creado<br />               . Inserta el Domicilio de Envío previamente validado en Domicilios, haciendo referencia a la cuenta recien creada.<br />               . Si es un tipo de oi parcela y el oi es un baldio, se debe buscar el repartidor fuera de zona que le corresponda. Una vez encontrado, guardarse en la cuenta. Si no se encuentra levantar solicitud de pendiente broche.<br />                 . Si es un tipo de oi parcela y el oi es una finca, se debe colocar 0 en el broche de la cuenta para que posteriormente el proceso de emision asigne un repartidor.<br />               // fin de insertar cuenta<br /><br />               // Segunda pasada del algiritmo: Análisis de las acciones sobre los recursos secundarios.<br />               . De la lista de recursos obtenidos anteriormente, analiza si existen algunos que están marcados como Recursos Secundarios.<br />               . Si no existen, fin del proceso<br /><br />               . Si existen,<br /><br />                  . Para cada uno de ellos:<br />                    . Verifica la configuración: alta de cuenta por alta de cuenta del Recurso principal asociado<br />                    . Si está habilitada,<br />                      . Verifica si hay restricciones en cuanto a Atributos Valorizados requeridos para la creación.<br />                        . Si hay<br />                            . Para cada uno de ellos verifica si el Atributo existe entre los Atributos informados para el Objeto Imponible anteriormente creado,<br />                             . Si no existe, o si existe pero no posee el valor requerido<br />                                  . Se da por finalizado el proceso. (no es un error, simplemente no se cumplen las condiciones para la creación de la segunda cuenta) <br /><br />                    // aquí, o no existen condiciones o si existen se cumplen satisfactoramente<br />                    // inserta la segunda cuenta<br /><br />                   . Obtiene los algoritmos para la generación de número de cuenta y código de gestión personal.<br />                     . General el número de cuenta (generalmente se utilizará el que venga informado en la interface)<br />                     . Genera el código de gestión personal. (generalmente será un número aleatorio)<br />                  <br />                   . Inserta la Cuenta haciendo referencia al Objeto Imponible previamente creado<br />                   . Inserta el Domicilio de Envío previamente validado en Domicilios, haciendo referencia a la cuenta recien creada.<br />                   . Se deben realizar las mismas validaciones antes descriptas respecto a broche.<br />                    // fin de insertar la segunda cuenta</div>
+</td>
+				</tr>
+				<tr>
+					<td width="24%" class="TableRow">Baja Objeto Imponible</td>
+					<td width="8%" class="TableRow">Alternate</td>
+					<td width="68%" class="TableRow"><div class="ObjectDetailsNotes">Parámetros:<br />    . Estructura de Novedad donde se informan los datos recibidos en el archivo.<br /><br />  Proceso:<br /><br />     El Sistema:<br />      // Ya se consideran realizadas las validaciones respecto de la coherecia entre la novedad y el área.<br /><br />      // obtiene el objeto imponible a dar de baja<br />      . Busca el Objeto Imponible por: Tipo Objeto Imponible y Clave <br />      . Si no existe, informa error <br />      . Si existe, setea la baja.<br /><br />       // Análisis del impacto sobre las cuentas...<br />           . Obtiene la lista de recursos que están relacionados con el Tipo de Objeto Imponible<br />             . Entre ellos, Busca el principal.<br />   <br />             . Si no hay principal, fin procesamiento<br />             . Si hay más de uno, informar error.<br /><br />             . Si hay un principal<br />   <br />               // Primer pasada del algoritmo: Recursos Principal<br />               . Verifica si &quot;realiza baja de cuenta por baja de Objeto Imponible&quot;<br />                  . Si realiza,<br />                    . Setea la baja de cuenta.<br /><br /><br />               // Segunda pasada del algiritmo: Análisis de las acciones sobre los recursos secundarios.<br />               . De la lista de recursos obtenidos anteriormente, analiza si existen algunos que están marcados como Recursos Secundarios.<br />               . Si no existen, fin del proceso<br /><br />               . Si existen,<br />                  . Para cada uno de ellos:<br />                    . Verifica la configuración: baja de cuenta por baja de cuenta del Recurso principal asociado<br />                    . Si está habilitada,<br />                      . Setea la baja de cuenta<br /><br />. Generar una solicitud de revision de exencion para cada una de las cuentas que se den de baja</div>
+</td>
+				</tr>
+				<tr>
+					<td width="24%" class="TableRow">Modificar Objeto Imponible</td>
+					<td width="8%" class="TableRow">Alternate</td>
+					<td width="68%" class="TableRow"><div class="ObjectDetailsNotes">Parámetros:<br />    . Estructura de Novedad donde se informan los datos recibidos en el archivo.<br /><br />  Proceso:<br /><br />     El Sistema:<br />      // ya se consideran realizadas las validaciones respecto de la coherecia entre la novedad y el área.<br /><br />      // obtiene el objeto imponible a modificar <br />      . Busca el Objeto Imponible por: Tipo Objeto Imponible y Clave <br />      . Si no existe, informa error y <br /><br />      // obtiene el tipo de objeto imponible y us atributos<br />      . Obtiene el Tipo de Objeto Imponible y sus atributos<br />      . Valida que cada uno de los atributos informados para el Objeto Imponible sea correctos<br /><br />         // valida tipos de datos de los atributos<br />         . Para cada Atributo Informado<br />           . Verifica que el valor informado posea el tipo de datos correcto<br />           . En caso de ser un dominio, verifica que el valor informado esté activo. (ya sea consultando los valores del domino o invocando la clase que corresponda)<br />           . En caso de tratarse de un atributo marcado como: esUbicación, valida vía el Jar de Personas<br />           . En caso de tratarse de un atributo marcado como: esDomicilioEnvio, valida vía Jar de Personas. <br /><br />        //<br />        . Si las validaciones son correctas, modifica el objeto imponible<br />           . Para cada uno de los atributos a modificar<br />            . Verifica en la definición del atributo si esta marcado como que: poseeVigencia<br /><br />            . Si poseeVigencia<br />              . Obtiene el registro correspondiente al valor actual del atributo<br />              . Setear la fechaBaja = Fecha Novedad. <br /><br />              . Insertar un nuevo registro de valor, con el valor recibido de la novedad. Con Fecha Desde = Fecha Desde informada en la novedad.<br /><br /><br />              // Determinar si el cambio tienen un efecto retroactivo que produzca la necesidad de marcar las cuenta.<br />              // Obtiene la fecha de la última emisión del Recurso<br /><br />              . Si Fecha Vigencia &lt; Fecha Ultima Emisión considerando los recursos que están asociados al Tipo Objeto Imponible.<br />                . Obtener la lista de cuentas que están asociadas al objeto imponible.<br />                . Para cada una<br />                  . generar una solicitud de emisión de retroactivo.<br /><br />            . Si no poseeVigencia<br />              . Obtener el registro correspondiente al valor actual del atributo<br />              . Sobreescribir el valor del atributo en el registro existente. <br /><br /><br />           // Análisis de modificación sobre Domicilio de Envio<br />           // Este caso no debería ocurrir ya que la modificación de domicilios de envío se realizará mediante un CU de SIAT, pero queda abierta la posibilidad por las dudas.<br /><br />           // A nivel de implementación, esta parte del código debe quedar aislada, de manera de no agregar complejidad al proceso en general que será quien se ejecute la inmensa mayoría de las veces.<br />           // Aquí se determina el impacto sobre la cuenta principal y la propagación a cuentas secundarias en función de las marcas respecto del alta de la cuenta princial (&quot;realiza alta de cuenta por alta de objeto Imponible&quot;)  <br />           // También se analiza el caso que alguna de las cuentas (principal o secundarias) esté incluida en un Broche. En este caso, no se permite la modificación.<br /><br />           // Lo que vamos a hacer es frenar el proceso si alguna de las cuentas están asociadas a un broche.<br /><br />           // Entonces...<br />           . Obtiene la lista de recursos que están relacionados con el Tipo de Objeto Imponible<br />             . Entre ellos, Busca el principal.<br />   <br />             . Si no hay principal, fin procesamiento<br />             . Si hay más de uno, informar error.<br /><br />             . Si hay un principal<br />   <br />               // Primer pasada del algoritmo: Recursos Principal<br />               . Verifica si &quot;realiza alta de cuenta por alta de objeto Imponible&quot;<br />                 . Si realiza,<br />                   . Verifica si la cuenta está asociada a un Broche.<br />                     . Si está, aborta el proceso. Informa error.<br /><br />                     . Si no está,<br />                       . Cambia Domicilio de Envio.<br /><br />               // Segunda pasada del algiritmo: Análisis de las acciones sobre los recursos secundarios.<br />               . De la lista de recursos obtenidos anteriormente, analiza si existen algunos que están marcados como Recursos Secundarios.<br />               . Si no existen, fin del proceso<br /><br />               . Si existen,<br />                  . Para cada uno de ellos:<br />                    . Verifica la configuración: alta de cuenta por alta de cuenta del Recurso principal asociado<br />                    . Si está habilitada,<br />                      . Verifica si la cuenta está asociada a un Broche. <br />                        . Si está, aborta el proceso. Informa error.<br /><br />                        . Si no está,<br />                          . Cambia Domicilio de Envio.</div>
+</td>
+				</tr>
+				<tr>
+					<td width="24%" class="TableRow">Procesar Novedades Objeto Imponible</td>
+					<td width="8%" class="TableRow">Alternate</td>
+					<td width="68%" class="TableRow"><div class="ObjectDetailsNotes"> Paramétros <br />   - Archivo de texto con Novedades.<br /><br /><br /> Estructura de la Novedad<br /><br />   1. codTransaccion: [1-Novedad parcela|2-Novedad titulares|3-novedad cuentas relacionadas]<br />   2. codTipoObjetoImponible: &quot;PARCELA&quot;<br />   3. codAreaOrigen: &quot;CATASTRO&quot;<br />   4. fechaAccion: Es la fecha del momento: aaaammdd <br />   5. accion = [A|B|M]<br />   6. clave: NRO_CUENTA_SIAT<br />   7. nro_cuenta_SIAT: NRO_CUENTA_SIAT<br />   8. fechaVigencia: Es la fecha de la vigencia de todos los atributos que se informen a continuación <br /><br />   9. Valuacion Terreno - double (6 decimales, grabamos 3)<br />   10. Valuacion Edificada<br />   11. Valuacion Libre<br />   12. Valuacion Terreno_ref<br />   13. Valuacion Edificada_ref<br />   14. Valuacion Libre_ref<br />   15. Tipo Parcela: 1-Finca, 2-Baldío<br />   16. Uso Parcela: 0-nada, 8-Cochera, 9-Baulera. <br />   17. Radio: 1,2,3<br />   18. Radio Ref. Trib.: 1 al 5: [1,2,3,4,5] <br />   19. Zona: 1,2,3,4<br />   20. Sup. Terreno: hoy es un integer (6) - se debe modificar a double (6 decimales, grabamos 3)<br />   21. Sup. Edificada: idem.<br />   22. Ubicación del Terreno <br />   23. Dom. Finca <br />   24. Dom. Envio<br />   25. Catastral<br />   26. catastral-seccion<br />   27. catastral-manzana<br />   28. catastral-grafico<br />   29. catastral-sub-division<br />   30. catastral-sub-parcela<br />   31. Codigo Resp.Trib.: smallint <br />   32. crtFechaDesde: aaaammdd<br />   33. crtFechaHasta: aaaammdd<br />   34. agrupador: char(14)<br />   35. porc. PH/sub-parcela - numeric (8,2) <br />   36. cuenta TGI CHAR(10) - 0123456789<br /><br /><br /><br /> Proceso<br /><br />   El Sistema:<br /><br />   1. Obtiene el archivo pasado como parámetro<br />   2. Para cada línea del archivo<br />      . Obtiene Codigo de Transacción. Verifica que se trata de una Novedad de Objeto Imponible<br />      . Obtiene codTipoObjetoImponible y codAreaOrigen. Verifica en def_tipObjImpAreO que el área informada se encuentre habilitada para envíar novedades del Tipo de Objeto imponible informado.<br />      . Si no hay errores<br />        . Conforma una Estructura de Modificación e invoca el sub-proceso (aquí representado por escenarios) que corresponda, según la acción.<br /><br />        . En caso que accion=A<br />            . Invoca escenario: Alta de Objeto Imponible<br /><br />        . En caso que accion=B<br />            . Invoca escenario: Baja de Objeto Imponible<br />  <br />        . En caso que accion=M<br />            . Invoca escenario: Modificación de Objeto Imponible<br /></div>
+</td>
+				</tr>
+
+			</table>
+		</div>
+		<div class="ItemBody" id="LinksTable">
+			<table align="center" border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="30%" class="TableHeading">Object</td>
+					<td width="15%" class="TableHeading">Type</td>
+					<td width="15%" class="TableHeading">Connection</td>
+					<td width="40%" class="TableHeading">Notes</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="EA346.htm">Procesar Novedades Objeto Imponible</a></td>
+					<td width="15%" class="TableRow" valign="top">UseCase</td>
+					<td width="15%" class="TableRow" valign="top">Generalization</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../../../../EA1/EA5/EA63.htm">«Functional» 1- El sistema deberá dar soporte a todos los procesos de la Administración Tributaria.</a></td>
+					<td width="15%" class="TableRow" valign="top">Requirement</td>
+					<td width="15%" class="TableRow" valign="top">Realisation</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+
+			</table>
+		</div>
+	</div>
+<div class="pageFooter"></div>
+ 
+</body>
+</html>

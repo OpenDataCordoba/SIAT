@@ -1,0 +1,2 @@
+tocTab[tocTab.length] = new Array("2.1.11.1:1", "", "Administrar Corrida de Proceso", "EARoot/EA2/EA1/EA11/EA1/EA618.htm", "7.png", "3592", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.11.1:2", "", "Consultar Corridas de Procesos", "EARoot/EA2/EA1/EA11/EA1/EA619.htm", "7.png", "3181", "0", "", "UseCase");

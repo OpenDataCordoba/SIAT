@@ -1,0 +1,2 @@
+tocTab[tocTab.length] = new Array("2.1.9.8:1", "", "Emision", "EARoot/EA2/EA1/EA9/EA8/EA568.htm", "180.png", "568", "0", "", "Use Case diagram");
+tocTab[tocTab.length] = new Array("2.1.9.8:2", "", "Administrar Tabla de Parametros de Emision", "EARoot/EA2/EA1/EA9/EA8/EA570.htm", "7.png", "4607", "0", "", "UseCase");

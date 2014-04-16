@@ -1,0 +1,198 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Mantenedor Tipo Objeto Imponible</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="pageHeader"></div>
+<div class="PageBody">
+	<span class="ObjectTitle">Mantenedor Tipo Objeto Imponible  : public   usecase</span>
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">17/07/2007 17:29:30</td>
+		</tr>
+		<tr>
+			<td class="ObjectDetailsTopic">Modified:</td>
+			<td class="ObjectDetailsValue">25/09/2008 18:26:39</td>
+		</tr>
+		<tr style="height: 10px"><td colspan="2"></td></tr>
+		<tr>
+			<td class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td class="ObjectDetailsValue">1.0</td>
+		</tr>
+		<tr id="proj02" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Phase:</td>
+			<td class="ObjectDetailsValue">1.0</td>
+		</tr>
+		<tr id="proj03" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Status:</td>
+			<td class="ObjectDetailsValue">R1</td>
+		</tr>
+		<tr id="proj04" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Complexity:</td>
+			<td class="ObjectDetailsValue">Difficult</td>
+		</tr>
+		<tr>
+			<td class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">UUID:</td>
+			<td class="ObjectDetailsValue">{49429C4F-292D-4f3c-AF13-7460ADC0522D}</td>
+		</tr>
+		<tr id="adv01" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
+			<td class="ObjectDetailsValue"><a href="EA586.htm">Atributos</a></td>
+		</tr>
+	</table>
+	<div class="ObjectDetailsNotes">Este CU tiene como objetivo la administración de los Tipos de Objetos Imponibles.<br /><br />Representa el Maestro de Tipo de Objetos Imponibles con sus respectivos atributos. Además incluye la asociación del Tipo de Objeto Imponible con las distintas Áreas que pudiesen informar novedades del Tipo de Objeto Imponible. Entre los tipos de objetos imponibles incluimos: Parcelas, Comercios, Sepulturas, Licencias.<br /><br />La definición de los atributos de un objeto imponible, es un aspecto fundamental para SIAT. Para cada atributo, se indica si son informados vía interfaces de actualización automática, si admiten múltiples valores, si son atributos de búsqueda, etc.</div>
+
+	<div class="TableGroup" id="TableGroup">
+		<ul class="ItemTitle">
+			<li onClick="parent.toggleItem('AssociationsFrom');" id="AssociationsFromTitle">Associations From</li>
+			<li onClick="parent.toggleItem('Scenario');" id="ScenarioTitle">Scenarios</li>
+			<li onClick="parent.toggleItem('Links');" id="LinksTitle">Other Links</li>
+		</ul>
+		<div class="ItemBody" id="AssociationsFromTable">
+			<table border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="20%" class="TableHeading">Element</td>
+					<td width="25%" class="TableHeading">Source Role</td>
+					<td width="25%" class="TableHeading">Target Role</td>
+					<td width="30%" class="TableHeading">Details</td>
+				</tr>
+				<tr>
+					<td width="20%" class="TableRow" valign="top">
+						<a href="../../../EA3/EA629.htm">Administrador Definiciones SIAT</a><br />
+						Actor &nbsp;
+					</td>
+					<td width="20%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;
+					</td>
+					<td width="20%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;	
+					</td>
+					<td width="30%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+
+			</table>
+		</div>
+		<div class="ItemBody" id="ScenarioTable">
+			<table align="center" border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="24%" class="TableHeading">Scenario</td>
+					<td width="8%" class="TableHeading">Type</td>
+					<td width="68%" class="TableHeading">Detail</td>
+				</tr>
+				<tr>
+					<td width="24%" class="TableRow">Buscar Tipo Objeto Imponible: </td>
+					<td width="8%" class="TableRow">Alternate</td>
+					<td width="68%" class="TableRow"><div class="ObjectDetailsNotes">Permite consultar los Tipos de Objetos Imponibles disponibles en el SIAT mediante diferentes criterios de búsqueda. Permite buscar por Código, Descripción y la marca de Es SIAT.<br />Si existen resultados se muestra de cada uno de los registros el Codigo, la Descripción, Es SIAT, el Estado, las fechas de vigencia desde-hasta y las acciones asociadas: &quot;Ver Tipo Objeto Imponible&quot;, &quot;Modificar Tipo Objeto Imponible&quot;,&quot;Eliminar Tipo Objeto Imponible&quot;, &quot;Activar/Desactivar Tipo Objeto Imponible&quot; y &quot;Asociación de Áreas&quot;.<br /><br />Para agregar un nuevo tipo de objeto imponible, existe la opción &quot;Agregar Tipo Objeto Imponible&quot;.</div>
+</td>
+				</tr>
+				<tr>
+					<td width="24%" class="TableRow">Ver Tipo Objeto Imponible</td>
+					<td width="8%" class="TableRow">Alternate</td>
+					<td width="68%" class="TableRow"><div class="ObjectDetailsNotes">Permite visualizar información del Tipo Objeto Imponible seleccionado y la lista de los atributos asociados.<br /></div>
+</td>
+				</tr>
+				<tr>
+					<td width="24%" class="TableRow">Agregar Tipo Objeto Imponible</td>
+					<td width="8%" class="TableRow">Alternate</td>
+					<td width="68%" class="TableRow"><div class="ObjectDetailsNotes">Para crear un nuevo Tipo Objeto Imponible se debe ingresar:<br /> - Código<br /> - Descripción<br /> - Indicar si es un Tipo de Objeto Imponible de SIAT.<br />-  Fecha alta</div>
+</td>
+				</tr>
+				<tr>
+					<td width="24%" class="TableRow">Modificar Tipo Objeto Imponible</td>
+					<td width="8%" class="TableRow">Alternate</td>
+					<td width="68%" class="TableRow"><div class="ObjectDetailsNotes">Presenta los valores del Tipo Objeto Imponible y permite actualizar descripción,  si es un atributo Siat y la fecha alta. Así mismo muestra la lista de Atributos asociados al Tipo Objeto Imponible. <br /><br />Para asociar un nuevo Atributo a un Tipo Objeto Imponible, se debe ingresar:<br /><br /> Datos de Atributo del Tipo Objeto Imponible<br />     . Atributo<br /><br />  Características Generales<br />    . Es Multivalor (Indica si el adminte múltiples valores por objeto imponible)<br />    . Es Requerido (Indica si el el atributo es Requerido en el alta y la modificacion)<br />    . Posee Vigencia (Indica si ante cada novedad se deberá almacenar el valor actual manteniendo el registro histórico. Adicionalmente, permitiría identificar los casos en que las novedades provocan efectos retroactivos sobre la emisión)<br />   . Es Clave (Indica si el atributo es clave del Objeto Imponible.)<br />   . Es Clave Funcional (Indica si el atributo es clave funcional del Objeto Imponible.)<br />   . Es Domicilio de Envio (Indica si es un domicilio de envío.)<br />   . Es Ubicación (Indica si es una ubicación del Objeto Imponible) <br />   . Valor por Defecto (Valor que asume el atributo en el momento de la creación.)<br /> <br />  Características respecto de la visualización y las búsquedas<br />    . Es Visible en Consulta Deuda (Indica si el atributo es visible en la consulta de deuda.)<br />    . Es Atributo Búsqueda (Indica si el atributo se utilizará para las búsquedas avanzadas.)<br />    . Admite Búsqueda por Rango (Indica si permite búsqueda por rango.)<br /><br />  Características respecto de la actualización de los Objetos Imponibles<br />    . Es Atributo Siat (Se el atributo no es Siat, los Objetos Imponibles se deberán actualizar por medio de una interface.)<br />    . Posicion Col. Interfaz Desde (En caso de actualizarce por interface, indica el número de columna de la interface en la que vendrá informada.)<br />    . Posicion Col. Interfaz Hasta (En caso de actualizarce por interface, y de ser un atributo multivalor, indica la columna hasta en que vendrá.)<br /><br />  Vigencias<br />    . Fecha desde<br />    . Fecha hasta  </div>
+</td>
+				</tr>
+				<tr>
+					<td width="24%" class="TableRow">Activar/Desactivar Tipo Objeto Imponible</td>
+					<td width="8%" class="TableRow">Alternate</td>
+					<td width="68%" class="TableRow"><div class="ObjectDetailsNotes">Dependiendo del estado del Tipo Objeto Imponible, se habilitará una de las dos opciones.<br />Si está en estado &quot;Activo&quot;, se procederá a la desactivación del Tipo Objeto Imponible, pasando a estado Inactivo y no pudiendo ser referenciada nuevamente.<br />Si está en estado &quot;Inactivo&quot;, se procederá a la activación del Tipo Objeto Imponible, pasando a estado Activo, pudiendo ser referenciado nuevamente.<br />Para poder activar un Tipo Objeto Imponible, éste debe poseer atributos asociados.</div>
+</td>
+				</tr>
+				<tr>
+					<td width="24%" class="TableRow">Eliminar Tipo Objeto Imponible</td>
+					<td width="8%" class="TableRow">Alternate</td>
+					<td width="68%" class="TableRow"><div class="ObjectDetailsNotes">Elimina en forma física el Tipo Objeto Imponible seleccionado siempre y cuando no posea atributos asociados.</div>
+</td>
+				</tr>
+				<tr>
+					<td width="24%" class="TableRow">Asociación de Áreas</td>
+					<td width="8%" class="TableRow">Alternate</td>
+					<td width="68%" class="TableRow"><div class="ObjectDetailsNotes">Presenta la descripción del Tipo Objeto Imponible seleccionado con la lista de Áreas asociadas.</div>
+</td>
+				</tr>
+
+			</table>
+		</div>
+		<div class="ItemBody" id="LinksTable">
+			<table align="center" border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="30%" class="TableHeading">Object</td>
+					<td width="15%" class="TableHeading">Type</td>
+					<td width="15%" class="TableHeading">Connection</td>
+					<td width="40%" class="TableHeading">Notes</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../../../../EA1/EA6/EA88.htm">«Functional» 36- Mantener datos propios de Contribuyentes y sus objetos imponibles (domicilios de envío, etc.).</a></td>
+					<td width="15%" class="TableRow" valign="top">Requirement</td>
+					<td width="15%" class="TableRow" valign="top">Realisation</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../../../../EA1/EA6/EA86.htm">«Functional» 34- Homogeneizar las interfaces con los distintos sistemas que alimentan los padrones (por altas, bajas y modificaciones). </a></td>
+					<td width="15%" class="TableRow" valign="top">Requirement</td>
+					<td width="15%" class="TableRow" valign="top">Realisation</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../../../../EA1/EA5/EA74.htm">«Functional» 4- Se deberá diseñar el sistema teniendo en cuenta que todos los tributos de esta Municipalidad se administran de la misma manera (administración por función y no por tributo).</a></td>
+					<td width="15%" class="TableRow" valign="top">Requirement</td>
+					<td width="15%" class="TableRow" valign="top">Realisation</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../../../../EA1/EA5/EA75.htm">«Functional» 5- El sistema deberá tener un alto grado de parametrización, a efectos de permitir su adecuación a cambios, sin necesidad de modificar las aplicaciones.</a></td>
+					<td width="15%" class="TableRow" valign="top">Requirement</td>
+					<td width="15%" class="TableRow" valign="top">Realisation</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../../../../EA1/EA5/EA75.htm">«Functional» 5- El sistema deberá tener un alto grado de parametrización, a efectos de permitir su adecuación a cambios, sin necesidad de modificar las aplicaciones.</a></td>
+					<td width="15%" class="TableRow" valign="top">Requirement</td>
+					<td width="15%" class="TableRow" valign="top">Realisation</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+
+			</table>
+		</div>
+	</div>
+<div class="pageFooter"></div>
+ 
+</body>
+</html>

@@ -1,0 +1,4 @@
+tocTab[tocTab.length] = new Array("2.5.1", "1", "Balance-Completo", "EARoot/EA2/EA5/EA765.htm", "4.png", "", "", "{F3862482-5B77-44bb-A432-6BA72E71A1F3}", "Package");
+tocTab[tocTab.length] = new Array("2.5.2", "1", "Balance-Procesos", "EARoot/EA2/EA5/EA766.htm", "4.png", "", "", "{600BE44E-8E59-4600-90BF-29041B0E21C1}", "Package");
+tocTab[tocTab.length] = new Array("2.5.3", "1", "Emision-TGI", "EARoot/EA2/EA5/EA767.htm", "4.png", "", "", "{99202258-4125-4bc2-BB0B-460B277A8B38}", "Package");
+tocTab[tocTab.length] = new Array("2.5.4", "1", "Procesos AFIP", "EARoot/EA2/EA5/EA768.htm", "4.png", "", "", "{E435032B-1544-4976-9E57-70E23D7FEF14}", "Package");

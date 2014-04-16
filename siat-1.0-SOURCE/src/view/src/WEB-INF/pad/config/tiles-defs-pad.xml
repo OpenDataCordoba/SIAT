@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+ <!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 1.1//EN"
+       "http://jakarta.apache.org/struts/dtds/tiles-config_1_1.dtd">
+
+<tiles-definitions>
+
+	<!-- Persona -->
+	<definition name=".pad.persona.view.personaFisicaSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/pad/persona/personaFisicaSearchPage.jsp"/>
+    </definition>
+	<definition name=".pad.persona.view.personaJuridicaSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/pad/persona/personaJuridicaSearchPage.jsp"/>
+    </definition>
+    <definition name=".pad.persona.view.personaEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/pad/persona/personaEditAdapter.jsp"/>
+    </definition>
+    <definition name=".pad.persona.view.personaViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/pad/persona/personaViewAdapter.jsp"/>
+    </definition>
+    <!-- Fin Persona -->
+    
+	<!-- Contribuyente -->
+	<definition name=".pad.contribuyente.view.contribuyenteAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/pad/contribuyente/contribuyenteAdapter.jsp"/>
+    </definition>
+	<definition name=".pad.contribuyente.view.contribuyenteViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/pad/contribuyente/contribuyenteViewAdapter.jsp"/>
+    </definition>
+	<definition name=".pad.contribuyente.view.contribuyenteEncEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/pad/contribuyente/contribuyenteEncEditAdapter.jsp"/>
+    </definition>
+    <!-- Fin Contribuyente -->
+    
+    <!-- ConAtrVal -->    
+    <definition name=".pad.contribuyente.view.conAtrValViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/pad/contribuyente/conAtrValViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".pad.contribuyente.view.conAtrValEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/pad/contribuyente/conAtrValEditAdapter.jsp"/>
+    </definition>
+    <!-- Fin ConAtrVal -->    
+    
+        
+    <!-- Calle -->
+	<definition name=".pad.calle.view.calleSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/pad/ubicacion/calleSearchPage.jsp"/>
+    </definition>
+    <!-- Fin Calle -->
+    
+    <!-- Localidad -->
+	<definition name=".pad.localidad.view.localidadSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/pad/ubicacion/localidadSearchPage.jsp"/>
+    </definition>
+    <!-- Fin Localidad -->
+    
+    
+    <!-- Domicilio -->
+    <definition name=".pad.ubicacion.view.domicilioSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/pad/ubicacion/domicilioSearchPage.jsp"/>
+    </definition>
+	
+	<definition name=".pad.ubicacion.view.domicilioViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/pad/ubicacion/domicilioViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".pad.ubicacion.view.domicilioEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/pad/ubicacion/domicilioEditAdapter.jsp"/>
+    </definition>
+    <!-- fin Domicilio -->
+    
+    <!-- ObjImp -->
+    <definition name=".pad.objetoImponible.view.objImpSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/pad/objetoImponible/objImpSearchPage.jsp"/>
+    </definition>
+	
+	<definition name=".pad.objetoImponible.view.objImpSearchPageAva" extends=".siatStdLayout">
+	    <put name="body" value="/pad/objetoImponible/objImpSearchPageAva.jsp"/>
+    </definition>
+    
+	<definition name=".pad.objetoImponible.view.objImpViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/pad/objetoImponible/objImpViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".pad.objetoImponible.view.objImpEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/pad/objetoImponible/objImpEditAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".pad.objetoImponible.view.objImpAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/pad/objetoImponible/objImpAdapter.jsp"/>
+    </definition>
+    
+	<definition name=".pad.objImp.view.objImpEncEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/pad/objetoImponible/objImpEncEditAdapter.jsp"/>
+    </definition>    
+    <!-- fin ObjImp -->
+    
+    <!-- ObjImpAtrVal -->
+	<definition name=".pad.objetoImponible.view.objImpAtrValViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/pad/objetoImponible/objImpAtrValViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".pad.objetoImponible.view.objImpAtrValEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/pad/objetoImponible/objImpAtrValEditAdapter.jsp"/>
+    </definition>
+    <!-- fin ObjImpAtrVal -->
+    
+    <!-- CuentaTitular -->
+	<definition name=".pad.cuenta.view.cuentaTitularViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/pad/cuenta/cuentaTitularViewAdapter.jsp"/>
+    </definition>
+	<definition name=".pad.cuenta.view.cuentaTitularEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/pad/cuenta/cuentaTitularEditAdapter.jsp"/>
+    </definition>    
+    <!-- Fin CuentaTitular -->
+    
+    <!-- Cuenta -->
+	<definition name=".pad.cuenta.view.cuentaSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/pad/cuenta/cuentaSearchPage.jsp"/>
+    </definition>
+
+	<definition name=".pad.cuenta.view.cuentaCMDSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/pad/cuenta/cuentaCMDSearchPage.jsp"/>
+    </definition>
+
+	<definition name=".pad.cuenta.view.cuentaViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/pad/cuenta/cuentaViewAdapter.jsp"/>
+    </definition>
+
+	<definition name=".pad.cuenta.view.cuentaEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/pad/cuenta/cuentaEditAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".pad.cuenta.view.cuentaAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/pad/cuenta/cuentaAdapter.jsp"/>
+    </definition>
+    
+	<definition name=".pad.cuenta.view.cuentaEncEditAdapter" extends=".siatStdLayout">
+		    <put name="body" value="/pad/cuenta/cuentaEncEditAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".pad.cuenta.view.cuentaEncEditAgregarAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/pad/cuenta/cuentaEncEditAgregarAdapter.jsp"/>
+    </definition>
+        
+    <definition name=".pad.cuenta.view.cuentaDomicilioEnvioAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/pad/cuenta/cuentaDomicilioEnvioAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".pad.cuenta.view.recAtrCueVEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/pad/cuenta/recAtrCueVEditAdapter.jsp"/>
+    </definition>    
+    
+    <definition name=".pad.cuenta.view.relacionarCuentaAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/pad/cuenta/relacionarCuentaAdapter.jsp"/>
+    </definition>
+
+    <definition name=".pad.cuenta.view.cuentaRelEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/pad/cuenta/cuentaRelEditAdapter.jsp"/>
+    </definition>
+
+    <definition name=".pad.cuenta.view.cuentaRelViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/pad/cuenta/cuentaRelViewAdapter.jsp"/>
+    </definition>
+    <!-- Fin Cuenta -->
+
+    <!-- Cambiar Domicilio de Envio -->
+    <definition name=".pad.cuenta.view.cambiarDomEnvioIngreso" extends=".siatStdLayout">
+	    <put name="body" value="/pad/cuenta/cambiarDomEnvioIngreso.jsp"/>
+    </definition>
+
+    <definition name=".pad.cuenta.view.cambiarDomEnvioCuentasRel" extends=".siatStdLayout">
+	    <put name="body" value="/pad/cuenta/cambiarDomEnvioCuentasRel.jsp"/>
+    </definition>
+
+    <definition name=".pad.cuenta.view.cambiarDomEnvioNuevoDom" extends=".siatStdLayout">
+	    <put name="body" value="/pad/cuenta/cambiarDomEnvioNuevoDom.jsp"/>
+    </definition>
+
+    <definition name=".pad.cuenta.view.cambiarDomEnvioSolicitante" extends=".siatStdLayout">
+	    <put name="body" value="/pad/cuenta/cambiarDomEnvioSolicitante.jsp"/>
+    </definition>
+    <!-- Fin Cambiar Domicilio de Envio -->    
+    
+    <!-- Repartidor -->	
+	<definition name=".pad.distribucion.view.repartidorSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/pad/distribucion/repartidorSearchPage.jsp"/>
+    </definition>
+
+    <definition name=".pad.distribucion.view.repartidorEncEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/pad/distribucion/repartidorEncEditAdapter.jsp"/>
+    </definition>  	
+
+	<definition name=".pad.distribucion.view.repartidorViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/pad/distribucion/repartidorViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".pad.distribucion.view.repartidorAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/pad/distribucion/repartidorAdapter.jsp"/>
+    </definition>
+	<!-- Fin Repartidor -->  
+
+	<!-- CriRepCat -->	
+	<definition name=".pad.distribucion.view.criRepCatViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/pad/distribucion/criRepCatViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".pad.distribucion.view.criRepCatEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/pad/distribucion/criRepCatEditAdapter.jsp"/>
+    </definition>
+	<!-- Fin CriRepCat --> 
+	
+	<!-- CriRepCalle -->	
+	<definition name=".pad.distribucion.view.criRepCalleViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/pad/distribucion/criRepCalleViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".pad.distribucion.view.criRepCalleEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/pad/distribucion/criRepCalleEditAdapter.jsp"/>
+    </definition>
+	<!-- Fin CriRepCalle -->  
+	
+	<!-- Broche -->	
+	<definition name=".pad.distribucion.view.brocheSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/pad/distribucion/brocheSearchPage.jsp"/>
+    </definition>
+
+    <definition name=".pad.distribucion.view.brocheEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/pad/distribucion/brocheEditAdapter.jsp"/>
+    </definition>  	
+
+	<definition name=".pad.distribucion.view.brocheViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/pad/distribucion/brocheViewAdapter.jsp"/>
+    </definition>
+   	<!-- Fin Broche -->  
+	
+	<!-- BroCue -->	
+	<definition name=".pad.distribucion.view.broCueSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/pad/distribucion/broCueSearchPage.jsp"/>
+    </definition>
+	
+	<definition name=".pad.distribucion.view.broCueAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/pad/distribucion/broCueAdapter.jsp"/>
+    </definition>
+	
+	<definition name=".pad.distribucion.view.broCueViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/pad/distribucion/broCueViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".pad.distribucion.view.broCueEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/pad/distribucion/broCueEditAdapter.jsp"/>
+    </definition>
+	<!-- Fin BroCue --> 
+	
+	<!-- CueExcSel --> 
+	<definition name=".pad.cuenta.view.cueExcSelSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/pad/cuenta/cueExcSelSearchPage.jsp"/>
+	</definition>
+	
+	<definition name=".pad.cuenta.view.cueExcSelEncEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/pad/cuenta/cueExcSelEncEditAdapter.jsp"/>
+    </definition>
+    
+     <definition name=".pad.cuenta.view.cueExcSelViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/pad/cuenta/cueExcSelViewAdapter.jsp"/>
+    </definition>
+ 
+    <definition name=".pad.cuenta.view.cueExcSelAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/pad/cuenta/cueExcSelAdapter.jsp"/>
+    </definition>
+	<!-- Fin CueExcSel --> 
+
+	<!-- CueExcSelDeu --> 
+	<definition name=".pad.cuenta.view.cueExcSelDeuAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/pad/cuenta/cueExcSelDeuAdapter.jsp"/>
+    </definition>
+    
+   	<definition name=".pad.cuenta.view.cueExcSelDeuViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/pad/cuenta/cueExcSelDeuViewAdapter.jsp"/>
+    </definition>
+	<!-- Fin CueExcSelDeu --> 
+
+	<!-- BuzonCambios -->
+    <definition name=".pad.reclamo.view.buzonCambiosEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/pad/reclamo/buzonCambiosEditAdapter.jsp"/>
+    </definition>
+    <!-- fin BuzonCambios -->
+    
+	<!-- Mantenedor de AltaOficio -->
+    <definition name=".pad.altaOficio.view.altaOficioSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/pad/objetoImponible/altaOficioSearchPage.jsp"/>
+    </definition>	
+    
+    <definition name=".pad.altaOficio.view.altaOficioEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/pad/objetoImponible/altaOficioEditAdapter.jsp"/>
+    </definition>    
+    
+    <definition name=".pad.altaOficio.view.altaOficioViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/pad/objetoImponible/altaOficioViewAdapter.jsp"/>
+    </definition>
+	<!-- FIN Mantenedor de AltaOficio -->
+	
+	<!-- Mantenedor de CierreComercio -->
+    <definition name=".pad.cierreComercio.view.cierreComercioSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/pad/objetoImponible/cierreComercioSearchPage.jsp"/>
+    </definition>	
+	<!-- FIN Mantenedor de CierreComercio -->
+	
+	<!-- Mantenedor de EstCue -->
+    <definition name=".pad.cuenta.view.estCueSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/pad/cuenta/estCueSearchPage.jsp"/>
+    </definition>	
+    
+    <definition name=".pad.cuenta.view.estCueEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/pad/cuenta/estCueEditAdapter.jsp"/>
+    </definition>    
+    
+    <definition name=".pad.cuenta.view.estCueViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/pad/cuenta/estCueViewAdapter.jsp"/>
+    </definition>
+	<!-- FIN Mantenedor de EstCue -->
+	
+</tiles-definitions>

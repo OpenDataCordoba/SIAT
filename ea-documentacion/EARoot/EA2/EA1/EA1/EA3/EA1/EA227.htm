@@ -1,0 +1,150 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Habilitar Planillas de Envio y Constancias de Deuda</title>
+<link href="../../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="pageHeader"></div>
+<div class="PageBody">
+	<span class="ObjectTitle">Habilitar Planillas de Envio y Constancias de Deuda  : public   usecase</span>
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">14/03/2008 15:27:14</td>
+		</tr>
+		<tr>
+			<td class="ObjectDetailsTopic">Modified:</td>
+			<td class="ObjectDetailsValue">22/08/2008 18:31:38</td>
+		</tr>
+		<tr style="height: 10px"><td colspan="2"></td></tr>
+		<tr>
+			<td class="ObjectDetailsTopic"><img src="../../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td class="ObjectDetailsValue">tecso</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td class="ObjectDetailsValue">1.0</td>
+		</tr>
+		<tr id="proj02" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Phase:</td>
+			<td class="ObjectDetailsValue">1.0</td>
+		</tr>
+		<tr id="proj03" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Status:</td>
+			<td class="ObjectDetailsValue">R2</td>
+		</tr>
+		<tr id="proj04" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Complexity:</td>
+			<td class="ObjectDetailsValue">Medium</td>
+		</tr>
+		<tr>
+			<td class="ObjectDetailsTopic"><img src="../../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">UUID:</td>
+			<td class="ObjectDetailsValue">{3E78523B-B55A-4959-9838-CC0DC11D146B}</td>
+		</tr>
+		<tr id="adv01" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
+			<td class="ObjectDetailsValue"><a href="../EA209.htm">Diagrama Administración Proc. Judicial</a></td>
+		</tr>
+	</table>
+	<div class="ObjectDetailsNotes">El objetivo de este CU es habilitar Planillas de Envío y Constancias de Deuda asociadas.<br /><br />La habilitación surge de la necesidad de proporcionar un intervalo de tiempo entre el envío de deuda a Cobranza Judicial y la entrega fehaciente de documentación al Procurador correspondiente para que éste comience a realizar la gestión de la deuda.<br /><br />La habilitación puede realizarse para una planilla entera o para un conjunto de constancias en particular.<br /><br />Los Procuradores únicamente podrán realizar acciones sobre deudas incluidas en Constancias de Deuda cuando éstas sean habilitadas, de lo contrario solamente podrán visualizar la información.</div>
+
+	<div class="TableGroup" id="TableGroup">
+		<ul class="ItemTitle">
+			<li onClick="parent.toggleItem('Scenario');" id="ScenarioTitle">Scenarios</li>
+			<li onClick="parent.toggleItem('Files');" id="FilesTitle">Files</li>
+			<li onClick="parent.toggleItem('Links');" id="LinksTitle">Other Links</li>
+		</ul>
+		<div class="ItemBody" id="ScenarioTable">
+			<table align="center" border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="24%" class="TableHeading">Scenario</td>
+					<td width="8%" class="TableHeading">Type</td>
+					<td width="68%" class="TableHeading">Detail</td>
+				</tr>
+				<tr>
+					<td width="24%" class="TableRow">Habilitar Constancia de Deuda creada manualmente</td>
+					<td width="8%" class="TableRow">Alternate</td>
+					<td width="68%" class="TableRow"><div class="ObjectDetailsNotes">Permite habilitar una Constancia paticular con estado &quot;Creada&quot; para que pueda ser gestionada por el Procurador asociado.<br />Al habilitar, se actualiza el estado de la Constancia  y se registra el cambio de estado en el histórico de estado respectivo.<br />Además se guarda la fecha de habilitación en la Constancia.<br /></div>
+</td>
+				</tr>
+				<tr>
+					<td width="24%" class="TableRow">Habilitar Constancias de Deuda</td>
+					<td width="8%" class="TableRow">Alternate</td>
+					<td width="68%" class="TableRow"><div class="ObjectDetailsNotes">A partir de la Planilla de Envío seleccionada se obtienen todas las Constancias de deudas asociadas. <br />A partir de esta lista, se podrá analizar las Constancias que se desea habilitar para que pueda ser gestionada por el Procurador correspondiente.<br />Solamente podrán habilitarse aquellas Constancias con estado &quot;Emitida&quot; o &quot;Recompuesta&quot;.<br />La habilitación unicamente podrá iniciarse si todas las Constancias fueron seleccionadas.<br />Al habilitar, se actualiza el estado de las Constancias y de la Planilla asociada a &quot;Habilitada&quot; y se registra el cambio de estado en los históricos de estado respectivos.<br />Además se guarda la fecha de habilitación en todas las Constancias y en la Planilla de Envío asociada.<br /><br /><br /></div>
+</td>
+				</tr>
+				<tr>
+					<td width="24%" class="TableRow">Habilitar Planilla de Envío de Deuda</td>
+					<td width="8%" class="TableRow">Alternate</td>
+					<td width="68%" class="TableRow"><div class="ObjectDetailsNotes">Para realizar la habilitación, se valida que el estado de la Planilla de Envío seleccionada sea &quot;Emitida&quot; o &quot;Recompuesta&quot;.<br />Luego se obtienen todas las Constancias de Deudas asociadas a la Planilla de Envío y se valida que tengan estado &quot;Emitida&quot; o &quot;Recompuesta&quot;. En dicho caso, se actualiza el estado de cada Constancia a &quot;Habilitada&quot;, y se guarda un registro de dicho cambio en el histótico de estados de cada Constancia, asociando el estado con el id de la Constancia, fecha desde igual a la fecha del día y agregando el log &quot;Habilitación de la Constancia&quot;.<br />También se actualiza el estado de la Planilla de Envío a &quot;Habilitada&quot; y se registra dicho cambio en el histórico de estados de la Planilla.<br />Se guarda la Fecha de Habilitación en todas las Constancias y en la Planilla habilitada.<br /></div>
+</td>
+				</tr>
+
+			</table>
+		</div>
+		<div class="ItemBody" id="FilesTable">
+			<table border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="50%" class="TableHeading">File</td>
+					<td width="10%" class="TableHeading">Type</td>
+					<td width="40%" class="TableHeading">Details</td>
+				</tr>
+			<tr>
+				<td width="50%" class="TableRow"><a href="c:\siatdoc\docGenerada\capacitacion\gdeuda\Administrar Proc. Judicial\MDU - Habilitar Planillas de Envio y Constancias de Deuda.doc">c:\siatdoc\docGenerada\capacitacion\gdeuda\Administrar Proc. Judicial\MDU - Habilitar Planillas de Envio y Constancias de Deuda.doc</a></td>
+				<td width="10%" class="TableRow">Local File</td>
+				<td width="40%" class="TableRow">
+					<div class="ObjectDetailsNotes">Manual de usuario</div>
+<br />
+					<span class="NoteHeading">File Size:</span> 173 k<br />
+					<span class="NoteHeading">Time Stamp:</span> 20/08/2008 02:29:12 p.m.<br />
+				</td>
+			</tr>
+
+			</table>
+		</div>
+		<div class="ItemBody" id="LinksTable">
+			<table align="center" border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="30%" class="TableHeading">Object</td>
+					<td width="15%" class="TableHeading">Type</td>
+					<td width="15%" class="TableHeading">Connection</td>
+					<td width="40%" class="TableHeading">Notes</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA216.htm">Administrar Planillas de Envío de Deuda</a></td>
+					<td width="15%" class="TableRow" valign="top">UseCase</td>
+					<td width="15%" class="TableRow" valign="top">Includes</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA217.htm">Administrar Constancias de Deuda</a></td>
+					<td width="15%" class="TableRow" valign="top">UseCase</td>
+					<td width="15%" class="TableRow" valign="top">Includes</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+
+			</table>
+		</div>
+	</div>
+<div class="pageFooter"></div>
+ 
+</body>
+</html>

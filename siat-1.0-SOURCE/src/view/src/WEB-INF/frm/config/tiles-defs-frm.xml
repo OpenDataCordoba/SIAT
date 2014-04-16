@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+ <!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 1.1//EN"
+       "http://jakarta.apache.org/struts/dtds/tiles-config_1_1.dtd">
+
+<tiles-definitions>
+	
+	<!-- Formulario -->
+    <definition name=".frm.formulario.view.formularioSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/frm/formulario/formularioSearchPage.jsp"/>
+    </definition>
+	
+	<definition name=".frm.formulario.view.formularioViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/frm/formulario/formularioViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".frm.formulario.view.formularioEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/frm/formulario/formularioEditAdapter.jsp"/>
+    </definition>
+    <!-- fin Formulario -->
+    
+    <!--  Es es el caso de un Encabezado/Detalle -->
+    <!-- Formulario (Encabezado) -->
+	<definition name=".frm.formulario.view.formularioSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/frm/formulario/formularioSearchPage.jsp"/>
+    </definition>
+
+    <definition name=".frm.formulario.view.formularioEncEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/frm/formulario/formularioEncEditAdapter.jsp"/>
+    </definition>  	
+
+	<definition name=".frm.formulario.view.formularioViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/frm/formulario/formularioViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".frm.formulario.view.formularioAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/frm/formulario/formularioAdapter.jsp"/>
+    </definition>
+	<!-- Fin Formulario -->
+    
+	<!-- ForCam (Detalle)-->
+	<definition name=".frm.formulario.view.forCamViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/frm/formulario/forCamViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".frm.formulario.view.forCamEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/frm/formulario/forCamEditAdapter.jsp"/>
+    </definition>    
+	<!-- Fin ForCam -->
+	<!-- Fin Formulario -->
+	
+    <!-- Fin caso de un Encabezado/Detalle -->	
+	
+</tiles-definitions>

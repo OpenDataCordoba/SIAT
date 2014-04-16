@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC 
+"-//Apache Software Foundation//DTD Struts Configuration 1.2//EN"  
+"[WWW] http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+	<form-beans>
+	    <form-bean name="fraseSearchPage" type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="fraseAdapter"    type="org.apache.struts.action.DynaActionForm"/>
+		
+	</form-beans>
+
+	<action-mappings>
+		
+		<!-- Mantenedor de Frase -->
+	    <action
+	    	path="/fra/BuscarFrase"
+	        type="ar.gov.rosario.siat.fra.view.struts.BuscarFraseDAction"
+			scope="request"
+	       	validate="false"
+	        name="fraseSearchPage"
+	        parameter="method"
+	   		input=".fra.frase.view.fraseSearchPage"
+	        attribute="fraseSearchPage">
+	           
+	   	    <forward name="fraseSearchPage"   	path=".fra.frase.view.fraseSearchPage" />
+	   	    <forward name="administrarFrase" 	path="/fra/AdministrarFrase.do?method=inicializar" />
+	    </action>
+		
+		<action
+     		path="/fra/AdministrarFrase"
+	        type="ar.gov.rosario.siat.fra.view.struts.AdministrarFraseDAction"
+		    scope="request"
+        	validate="false"
+	        name="fraseAdapter"
+            parameter="method"
+    	    input=".fra.frase.view.fraseEditAdapter"
+	        attribute="fraseAdapter">
+            
+    	    <forward name="fraseViewAdapter"		path=".fra.frase.view.fraseViewAdapter" />
+    	    <forward name="fraseEditAdapter"      	path=".fra.frase.view.fraseEditAdapter" />
+	    </action>
+	    <!-- Fin Mantenedor de Frase -->
+	    
+	    
+	</action-mappings>
+
+</struts-config>

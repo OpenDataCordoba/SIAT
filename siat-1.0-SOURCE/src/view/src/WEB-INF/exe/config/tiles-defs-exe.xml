@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+ <!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 1.1//EN"
+       "http://jakarta.apache.org/struts/dtds/tiles-config_1_1.dtd">
+
+<tiles-definitions>
+	
+    <!-- Tipo Sujeto -->
+    <definition name=".exe.exencion.view.tipoSujetoSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/exe/definicion/tipoSujetoSearchPage.jsp"/>
+    </definition>
+	
+	<definition name=".exe.exencion.view.tipoSujetoViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/exe/definicion/tipoSujetoViewAdapter.jsp"/>
+    </definition>
+    <definition name=".exe.exencion.view.tipoSujetoAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/exe/definicion/tipoSujetoAdapter.jsp"/>
+    </definition>    
+     <definition name=".exe.exencion.view.tipoSujetoEncEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/exe/definicion/tipoSujetoEncEditAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".exe.exencion.view.tipSujExeEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/exe/definicion/tipSujExeEditAdapter.jsp"/>
+    </definition>    
+    <definition name=".exe.exencion.view.tipSujExeViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/exe/definicion/tipSujExeViewAdapter.jsp"/>
+    </definition>    
+    <!-- fin Tipo Sujeto -->
+    
+    <!-- Exencion (Encabezado) -->
+	<definition name=".exe.definicion.view.exencionSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/exe/definicion/exencionSearchPage.jsp"/>
+    </definition>
+
+    <definition name=".exe.definicion.view.exencionEncEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/exe/definicion/exencionEncEditAdapter.jsp"/>
+    </definition>  	
+    
+    <definition name=".exe.definicion.view.exencionViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/exe/definicion/exencionViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".exe.definicion.view.exencionAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/exe/definicion/exencionAdapter.jsp"/>
+    </definition>
+    
+	<!-- Fin Exencion -->
+    
+     <!-- EstadoCueExe  -->
+	<definition name=".exe.definicion.view.estadoCueExeSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/exe/definicion/estadoCueExeSearchPage.jsp"/>
+    </definition>
+
+    <definition name=".exe.definicion.view.estadoCueExenEncEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/exe/definicion/estadoCueExeEncEditAdapter.jsp"/>
+    </definition>  	
+
+	<definition name=".exe.definicion.view.estadoCueExeViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/exe/definicion/estadoCueExeViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".exe.definicion.view.estadoCueExeEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/exe/definicion/estadoCueExeEditAdapter.jsp"/>
+    </definition>   
+
+    <definition name=".exe.definicion.view.estadoCueExeAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/exe/definicion/estadoCueExeAdapter.jsp"/>
+    </definition>
+    
+	<!-- Fin EstadoCueExe -->
+	
+	<!-- ExeRecCon (Detalle)-->
+	<definition name=".exe.definicion.view.exeRecConViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/exe/definicion/exeRecConViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".exe.definicion.view.exeRecConEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/exe/definicion/exeRecConEditAdapter.jsp"/>
+    </definition>    
+	<!-- Fin ExeRecCon -->
+	<!-- Fin Exencion -->
+	
+	<!-- ContribExe -->
+    <definition name=".exe.definicion.view.contribExeSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/exe/definicion/contribExeSearchPage.jsp"/>
+    </definition>
+	
+	<definition name=".exe.definicion.view.contribExeViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/exe/definicion/contribExeViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".exe.definicion.view.contribExeEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/exe/definicion/contribExeEditAdapter.jsp"/>
+    </definition>
+    <!-- fin ContribExe -->
+		
+	<!-- CueExe -->
+    <definition name=".exe.exencion.view.cueExeSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/exe/exencion/cueExeSearchPage.jsp"/>
+    </definition>
+	
+	<definition name=".exe.exencion.view.cueExeAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/exe/exencion/cueExeAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".exe.exencion.view.cueExeViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/exe/exencion/cueExeViewAdapter.jsp"/>
+    </definition>
+        
+    <definition name=".exe.exencion.view.cueExeEncEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/exe/exencion/cueExeEncEditAdapter.jsp"/>
+    </definition>
+        
+    <definition name=".exe.exencion.view.cambioEstadoCueExeAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/exe/exencion/cambioEstadoCueExeAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".exe.exencion.view.agregarSolicitudCueExeAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/exe/exencion/agregarSolicitudCueExeAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".exe.exencion.view.cueExeConvivAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/exe/exencion/cueExeConvivAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".exe.exencion.view.seleccionDeudaEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/exe/exencion/seleccionDeudaEditAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".exe.exencion.view.hisEstCueExeViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/exe/exencion/hisEstCueExeViewAdapter.jsp"/>
+    </definition>
+    <!-- fin CueExe -->
+	
+	<!-- cueExeConviviente -->
+	<definition name=".exe.exencion.view.cueExeConvivEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/exe/exencion/cueExeConvivEditAdapter.jsp"/>
+    </definition>	
+	<!-- FIN cueExeConviviente -->
+	
+	<!-- ADM Marcas de exenciones -->
+	<definition name=".exe.exencion.view.marcaCueExeSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/exe/exencion/marcaCueExeSearchPage.jsp"/>
+    </definition>
+	<!-- FIN ADM Marcas de exenciones -->
+	
+	<!-- Administrar Deuda Exencion -->
+	<definition name=".exe.exencion.view.deudaExencionIngresoAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/exe/exencion/deudaExencionIngresoAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".exe.exencion.view.cuentaExencionAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/exe/exencion/cuentaExencionAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".exe.exencion.view.deudaExencionAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/exe/exencion/deudaExencionAdapter.jsp"/>
+    </definition>
+    <!-- Fin Administrar Deuda Exencion -->	    
+    	    
+</tiles-definitions>

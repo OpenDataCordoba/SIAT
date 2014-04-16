@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+ <!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 1.1//EN"
+       "http://jakarta.apache.org/struts/dtds/tiles-config_1_1.dtd">
+
+<tiles-definitions>
+	<definition name=".base.view.grs" extends=".siatStdLayout">
+		<put name="body" value="/base/grs.jsp"/>
+	</definition>
+
+	<definition name=".base.view.siatMessage" extends=".siatStdLayout">
+		<put name="body" value="/base/siatMessage.jsp"/>
+	</definition>
+    
+    <definition name=".base.view.siatIndex" extends=".siatStdLayout">
+	    <put name="body" value="/base/siatIndex.jsp"/>
+	</definition>
+
+	<definition name=".base.view.siatErrorNavegacion" extends=".siatStdLayout">
+		<put name="body" value="/base/siatErrorNavegacion.jsp"/>
+	</definition>
+
+	<definition name=".base.view.siatErrorServer" extends=".siatStdLayout">
+		<!--put name="body" value="/base/siatErrorServer.jsp"/-->
+		<put name="body" value="/error.jsp"/>
+	</definition>
+
+	<definition name=".base.view.siatErrorPrint" extends=".siatStdLayout"> 
+		<put name="header" value="/layouts/headerVacio.jsp" />
+		<put name="menutab" value="/seg/menutabVacio.jsp" />
+		<put name="body" value="/base/siatErrorPrint.jsp"/>
+		<put name="footer" value="/layouts/footerVacio.jsp" />
+	</definition>
+
+	<definition name=".base.view.imprimir" extends=".siatStdLayout">
+		<put name="body" value="/base/imprimir.jsp"/>
+	</definition>
+	
+	<definition name=".base.view.siatOffLine" extends=".siatStdLayout">
+		<put name="body" value="/base/siatOffLine.jsp"/>
+	</definition>
+</tiles-definitions>

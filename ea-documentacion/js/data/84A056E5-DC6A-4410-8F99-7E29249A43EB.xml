@@ -1,0 +1,6 @@
+tocTab[tocTab.length] = new Array("2.1.5.8:1", "", "Diagrama de Balance", "EARoot/EA2/EA1/EA5/EA8/EA437.htm", "180.png", "278", "0", "", "Use Case diagram");
+tocTab[tocTab.length] = new Array("2.1.5.8:2", "", "Consulta de Días de Cobranza", "EARoot/EA2/EA1/EA5/EA8/EA439.htm", "7.png", "5026", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.5.8:3", "", "Control de Conciliación de Banco", "EARoot/EA2/EA1/EA5/EA8/EA440.htm", "7.png", "5028", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.5.8:4", "", "Mantenedor de Caja 7 Auxiliar", "EARoot/EA2/EA1/EA5/EA8/EA441.htm", "7.png", "5027", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.5.8:5", "", "Administrar Balance", "EARoot/EA2/EA1/EA5/EA8/EA442.htm", "7.png", "3618", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.5.8.1", "1", "Indeterminados", "EARoot/EA2/EA1/EA5/EA8/EA443.htm", "4.png", "", "", "{D88DEEBD-F6EB-4e54-B9A6-F0A74F18786C}", "Package");

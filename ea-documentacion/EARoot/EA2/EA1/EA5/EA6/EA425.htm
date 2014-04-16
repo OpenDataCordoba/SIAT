@@ -1,0 +1,216 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Administrar Asentamiento de Pago</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="pageHeader"></div>
+<div class="PageBody">
+	<span class="ObjectTitle">Administrar Asentamiento de Pago  : public   usecase</span>
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">09/11/2007 15:55:52</td>
+		</tr>
+		<tr>
+			<td class="ObjectDetailsTopic">Modified:</td>
+			<td class="ObjectDetailsValue">06/11/2009 17:18:40</td>
+		</tr>
+		<tr style="height: 10px"><td colspan="2"></td></tr>
+		<tr>
+			<td class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td class="ObjectDetailsValue">1.0</td>
+		</tr>
+		<tr id="proj02" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Phase:</td>
+			<td class="ObjectDetailsValue">1.0</td>
+		</tr>
+		<tr id="proj03" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Status:</td>
+			<td class="ObjectDetailsValue">R2</td>
+		</tr>
+		<tr id="proj04" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Complexity:</td>
+			<td class="ObjectDetailsValue">Difficult</td>
+		</tr>
+		<tr>
+			<td class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">UUID:</td>
+			<td class="ObjectDetailsValue">{B463E64E-AA20-4ef9-91E7-FE327B360A36}</td>
+		</tr>
+		<tr id="adv01" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
+			<td class="ObjectDetailsValue"><a href="EA422.htm">Asentamiento</a></td>
+		</tr>
+	</table>
+	<div class="ObjectDetailsNotes">Este CU tiene como objetivo la Administración de los Asentamientos de Pagos rendidos por el banco.<br />Es un proceso que consta de los siguientes pasos:<br /><br />1. Incorporar las transacciones recibidas: El sistema obtiene todas las transacciones indicadas en el archivo correspondiente y por cada una de ellas, realiza una serie de validaciones en cuanto a consistencia general. Genera dos reportes: Totales por sistema, y Detalle de transacciones.<br />Con la implementación del proceso de Balance este paso unicamente genera los reportes.<br /><br />2. Realiza la simulación de la distribución: Para cada transaccion, según se trate de un pago de deuda, pago de recibo, pago de cuota de convenio o pago de recibo de cuota de convenio, obtiene el distribuidor de partidas que corresponda y realiza la simulación de la distribución. Durante este proceso se realizan validaciones de los datos recibidos, lo que implica realizar una actualización de los montos originales a la fecha de pago y verificar que no existan diferencias con lo recibido o en caso de existir que estén dentro de las tolerancias aceptadas. Como resultado del paso, se generan los siguientes reportes: Totales por partida, Totales por partida para servicio banco, resultados generales del proceso y detalles de pagos, indeterminados y saldos a favor detectados por el proceso.<br /><br />3. Realiza el asentamiento propiamente dicho: En caso que los controles sobre los archivos anteriores resulten satisfactorios, se procede al asentamiento propiamente dicho. Como resultado del proceso, se modificarán los archivos de deuda, se cancelarán los convenios que correspondan, y se generarán las notificaciones que el proceso determine. Anteriormente se generaban los tres archivos que deberán ser incorporados al balance general. Con la implementación del Balance pasa estos datos al proceso maestro de Balance.</div>
+
+	<div class="TableGroup" id="TableGroup">
+		<ul class="ItemTitle">
+			<li onClick="parent.toggleItem('Scenario');" id="ScenarioTitle">Scenarios</li>
+			<li onClick="parent.toggleItem('Files');" id="FilesTitle">Files</li>
+			<li onClick="parent.toggleItem('Links');" id="LinksTitle">Other Links</li>
+		</ul>
+		<div class="ItemBody" id="ScenarioTable">
+			<table align="center" border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="24%" class="TableHeading">Scenario</td>
+					<td width="8%" class="TableHeading">Type</td>
+					<td width="68%" class="TableHeading">Detail</td>
+				</tr>
+				<tr>
+					<td width="24%" class="TableRow">Administración del Proceso</td>
+					<td width="8%" class="TableRow">Alternate</td>
+					<td width="68%" class="TableRow"><div class="ObjectDetailsNotes"><br />Permite consultar el estado de la Corrida del Proceso y, configurarla en caso que aún no se lo haya hecho. Para ello se invoca al CU &quot;Administrar Corrida de Proceso&quot;.</div>
+</td>
+				</tr>
+				<tr>
+					<td width="24%" class="TableRow">Buscar Asentamiento de Pago</td>
+					<td width="8%" class="TableRow">Alternate</td>
+					<td width="68%" class="TableRow"><div class="ObjectDetailsNotes">Muestra cada uno de los Asentamientos asociados al Balance, indicando la Fecha de Asentamiento, el Recurso y el Estado del Asentamiento y las acciones asociadas: &quot;Visualización del Asentamiento&quot;, &quot;Modificacion del Asentamiento&quot;, &quot;Eliminación del Asentamiento&quot;, &quot;Administración del Proceso&quot;, &quot;Relanzar el Asentamiento&quot;, y &quot;Estadísticas del Asentamiento&quot; .</div>
+</td>
+				</tr>
+				<tr>
+					<td width="24%" class="TableRow">Eliminar Asentamiento de Pago</td>
+					<td width="8%" class="TableRow">Alternate</td>
+					<td width="68%" class="TableRow"><div class="ObjectDetailsNotes">Permite realizar la Eliminación del Asentamiento de Pago, sólo en caso que la Corrida asociada se encuentre en estado &quot;En Preparación&quot;. Esto implica que, además de realizar la eliminación física del Asentamiento de Pago, se eliminará también la Corrida asociada.</div>
+</td>
+				</tr>
+				<tr>
+					<td width="24%" class="TableRow">Estadísticas del Asentamiento de Pago</td>
+					<td width="8%" class="TableRow">Alternate</td>
+					<td width="68%" class="TableRow"><div class="ObjectDetailsNotes"><br />Permite consultar la distribución en rubros de balance del asentamiento de pago en cuestión. Presenta los totales por transacciones y los totales de la distribución.</div>
+</td>
+				</tr>
+				<tr>
+					<td width="24%" class="TableRow">Modificar Asentamiento de Pago</td>
+					<td width="8%" class="TableRow">Alternate</td>
+					<td width="68%" class="TableRow"><div class="ObjectDetailsNotes"><br />Permite realizar la Modificacion del Asentamiento de Pago, sólo en caso que la Corrida asociada se encuentre en estado &quot;En Preparación&quot;. <br />En caso que así sea, se podrá modificar la Observación.</div>
+</td>
+				</tr>
+				<tr>
+					<td width="24%" class="TableRow">Relanzamiento del Asentamiento de Pago</td>
+					<td width="8%" class="TableRow">Alternate</td>
+					<td width="68%" class="TableRow"><div class="ObjectDetailsNotes"><br />Permite Relanzar el Asentamiento de Pago, sólo en caso que la Corrida asociada se encuentre en estado &quot;Cancelada&quot;, &quot;Abortada&quot;, &quot;Procesado con Error&quot;. Para ello se debe ingresar la Observación. Esta acción genera una nueva Corrida del proceso correspondiente al Asentamiento de Pago en cuestión, en estado &quot;En Preparación&quot;, la cual se asocia al Balance antes generado.  Como fecha de asentamiento se toma la fecha actual.</div>
+</td>
+				</tr>
+				<tr>
+					<td width="24%" class="TableRow">Ver Asentamiento de Pago</td>
+					<td width="8%" class="TableRow">Alternate</td>
+					<td width="68%" class="TableRow"><div class="ObjectDetailsNotes"> Permite visualizar los datos del Asentamiento de Pago.<br /></div>
+</td>
+				</tr>
+
+			</table>
+		</div>
+		<div class="ItemBody" id="FilesTable">
+			<table border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="50%" class="TableHeading">File</td>
+					<td width="10%" class="TableHeading">Type</td>
+					<td width="40%" class="TableHeading">Details</td>
+				</tr>
+			<tr>
+				<td width="50%" class="TableRow"><a href="C:\siatdoc\docGenerada\analisisDisenio\especificacion\BAL - Asentamiento de Pagos.doc">C:\siatdoc\docGenerada\analisisDisenio\especificacion\BAL - Asentamiento de Pagos.doc</a></td>
+				<td width="10%" class="TableRow">Local File</td>
+				<td width="40%" class="TableRow">
+					<div class="ObjectDetailsNotes">Especificación</div>
+<br />
+					<span class="NoteHeading">File Size:</span> 536 k<br />
+					<span class="NoteHeading">Time Stamp:</span> 15/09/2008 08:38:44 a.m.<br />
+				</td>
+			</tr>
+
+			</table>
+		</div>
+		<div class="ItemBody" id="LinksTable">
+			<table align="center" border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="30%" class="TableHeading">Object</td>
+					<td width="15%" class="TableHeading">Type</td>
+					<td width="15%" class="TableHeading">Connection</td>
+					<td width="40%" class="TableHeading">Notes</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../../../../EA1/EA1/EA18.htm">«Functional» 70- Para la distribución en partidas presupuestarias de los conceptos tributarios que se recaudan, se deberán utilizar fórmulas que permitan aplicar cambios sin modificar el código de la aplicación.</a></td>
+					<td width="15%" class="TableRow" valign="top">Requirement</td>
+					<td width="15%" class="TableRow" valign="top">Realisation</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../../../../EA1/EA1/EA25.htm">«Functional» 77- Reprocesar asentamientos en forma masiva o puntual por rescates de sistemas de planes de pago (para "dar vuelta" pagos a cuenta).</a></td>
+					<td width="15%" class="TableRow" valign="top">Requirement</td>
+					<td width="15%" class="TableRow" valign="top">Realisation</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../../../../EA1/EA5/EA63.htm">«Functional» 1- El sistema deberá dar soporte a todos los procesos de la Administración Tributaria.</a></td>
+					<td width="15%" class="TableRow" valign="top">Requirement</td>
+					<td width="15%" class="TableRow" valign="top">Realisation</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../../EA11/EA1/EA618.htm">Administrar Corrida de Proceso</a></td>
+					<td width="15%" class="TableRow" valign="top">UseCase</td>
+					<td width="15%" class="TableRow" valign="top">Includes</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="./EA1/EA431.htm">Asentamiento de Pago TGI</a></td>
+					<td width="15%" class="TableRow" valign="top">UseCase</td>
+					<td width="15%" class="TableRow" valign="top">Generalization</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="./EA1/EA427.htm">Asentamiento de Pago CdM</a></td>
+					<td width="15%" class="TableRow" valign="top">UseCase</td>
+					<td width="15%" class="TableRow" valign="top">Generalization</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="./EA1/EA429.htm">Asentamiento de Pago Ex. Gre</a></td>
+					<td width="15%" class="TableRow" valign="top">UseCase</td>
+					<td width="15%" class="TableRow" valign="top">Generalization</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="./EA1/EA428.htm">Asentamiento de Pago Drei</a></td>
+					<td width="15%" class="TableRow" valign="top">UseCase</td>
+					<td width="15%" class="TableRow" valign="top">Generalization</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../../../../EA1/EA1/EA19.htm">«Functional» 71- Asentar pagos rendidos por entidad recaudadora.</a></td>
+					<td width="15%" class="TableRow" valign="top">Requirement</td>
+					<td width="15%" class="TableRow" valign="top">Realisation</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+
+			</table>
+		</div>
+	</div>
+<div class="pageFooter"></div>
+ 
+</body>
+</html>

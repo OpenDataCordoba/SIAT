@@ -1,0 +1,7 @@
+tocTab[tocTab.length] = new Array("2.1.2.9:1", "", "Novedades sistemas origen", "EARoot/EA2/EA1/EA2/EA9/EA342.htm", "180.png", "563", "0", "", "Use Case diagram");
+tocTab[tocTab.length] = new Array("2.1.2.9:2", "", "Procesar Novedades Catastro", "EARoot/EA2/EA1/EA2/EA9/EA344.htm", "7.png", "4031", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.2.9:3", "", "Procesar Novedades Habilitaciones", "EARoot/EA2/EA1/EA2/EA9/EA345.htm", "7.png", "4032", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.2.9:4", "", "Procesar Novedades Objeto Imponible", "EARoot/EA2/EA1/EA2/EA9/EA346.htm", "7.png", "1736", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.2.9:5", "", "Procesar Novedades Relaciones de Cuentas", "EARoot/EA2/EA1/EA2/EA9/EA347.htm", "7.png", "2032", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.2.9:6", "", "Procesar Novedades Titulares Cuenta", "EARoot/EA2/EA1/EA2/EA9/EA348.htm", "7.png", "2031", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.2.9:7", "", "Validar Exención", "EARoot/EA2/EA1/EA2/EA9/EA349.htm", "7.png", "3764", "0", "", "UseCase");

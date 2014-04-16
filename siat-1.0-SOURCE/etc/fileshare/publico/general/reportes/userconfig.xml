@@ -1,0 +1,91 @@
+<!--<!DOCTYPE configuration SYSTEM "config.dtd"> -->
+<!-- this file contains templates which allow an user easy configuration 
+	of Fop. Actually normally you don't need this configuration file, but if 
+	you need to change configuration, you should always use this file and *not* 
+	config.xml. Usage: java org.apache.fop.apps.Fop -c userconfig.xml -fo fo-file 
+	-pdf pdf-file -->
+
+<configuration>
+	<!-- baseDir: normally the base directory is the directory where the fo 
+		file is located. if you want to specify your own, uncomment this entry. This 
+		value can also be a URL. Actually, the value is converted to a URL. -->
+
+	<!-- <entry> 
+			<key>baseDir</key> 
+			<value></value> 
+		 </entry> -->
+
+	<!-- fontBaseDir: Similar to baseDir, except that this value is used for 
+		fonts. If it isn't specified, the value from baseDir is used. -->
+		
+	<!-- <entry> 
+			<key>fontBaseDir</key> 
+			<value></value> 
+		 </entry> -->
+
+	<!-- ************************************************************************ 
+		HYPHENATION ************************************************************************ -->
+
+	<!-- hyphenation directory if you want to specify your own directory with 
+		hyphenation pattern then uncomment the next entry and add the directory name -->
+
+	<!-- <entry> 
+			<key>hyphenation-dir</key> 
+			<value>/java/xml-fop/hyph</value> 
+		</entry> -->
+
+	<!-- ************************************************************************ 
+		Add fonts here ************************************************************************ -->
+
+	<fonts>
+		<font metrics-file="file:///mnt/publico/general/reportes/metrics/DINB____.xml"
+			kerning="yes" embed-file="file:///mnt/publico/general/reportes/fonts/DINB____.ttf">
+			<font-triplet name="DIN-Black" style="normal" weight="normal" />
+		</font>
+		<font metrics-file="file:///mnt/publico/general/reportes/metrics/DINBA___.xml"
+			kerning="yes" embed-file="file:///mnt/publico/general/reportes/fonts/DINBA___.ttf">
+			<font-triplet name="DIN-Bold" style="normal" weight="normal" />
+		</font>
+		<font metrics-file="file:///mnt/publico/general/reportes/metrics/DingsbumsBats.xml"
+			kerning="yes" embed-file="file:///mnt/publico/general/reportes/fonts/DingsbumsBats.ttf">
+			<font-triplet name="DingsbumsBats" style="normal" weight="normal" />
+		</font>
+		<font metrics-file="file:///mnt/publico/general/reportes/metrics/DINL____.xml"
+			kerning="yes" embed-file="file:///mnt/publico/general/reportes/fonts/DINL____.ttf">
+			<font-triplet name="DIN-Light" style="normal" weight="normal" />
+		</font>
+		<font metrics-file="file:///mnt/publico/general/reportes/metrics/DINLA___.xml"
+			kerning="yes" embed-file="file:///mnt/publico/general/reportes/fonts/DINLA___.ttf">
+			<font-triplet name="DIN-LightAlternate" style="normal" weight="normal" />
+		</font>
+		<font metrics-file="file:///mnt/publico/general/reportes/metrics/DINLE___.xml"
+			kerning="yes" embed-file="file:///mnt/publico/general/reportes/fonts/DINLE___.ttf">
+			<font-triplet name="DIN-LightExpert" style="normal" weight="normal" />
+		</font>
+		<font metrics-file="file:///mnt/publico/general/reportes/metrics/DINM____.xml"
+			kerning="yes" embed-file="file:///mnt/publico/general/reportes/fonts/DINM____.ttf">
+			<font-triplet name="DIN-Medium" style="normal" weight="normal" />
+		</font>
+		<font metrics-file="file:///mnt/publico/general/reportes/metrics/DINMA___.xml"
+			kerning="yes" embed-file="file:///mnt/publico/general/reportes/fonts/DINMA___.ttf">
+			<font-triplet name="DIN-MediumAlternate" style="normal" weight="normal" />
+		</font>
+		<font metrics-file="file:///mnt/publico/general/reportes/metrics/DINME___.xml"
+			kerning="yes" embed-file="file:///mnt/publico/general/reportes/fonts/DINME___.ttf">
+			<font-triplet name="DIN-MediumExpert" style="normal" weight="normal" />
+		</font>
+		<font metrics-file="file:///mnt/publico/general/reportes/metrics/DINR____.xml"
+			kerning="yes" embed-file="file:///mnt/publico/general/reportes/fonts/DINR____.ttf">
+			<font-triplet name="DIN-Regular" style="normal" weight="normal" />
+		</font>
+		<font metrics-file="file:///mnt/publico/general/reportes/metrics/DINRA___.xml"
+			kerning="yes" embed-file="file:///mnt/publico/general/reportes/fonts/DINRA___.ttf">
+			<font-triplet name="DIN-RegularAlternate" style="normal" weight="normal" />
+		</font>
+		<font metrics-file="file:///mnt/publico/general/reportes/metrics/DINRE___.xml"
+			kerning="yes" embed-file="file:///mnt/publico/general/reportes/fonts/DINRE___.ttf">
+			<font-triplet name="DIN-RegularExpert" style="normal" weight="normal" />
+		</font>
+		
+	</fonts>
+</configuration>

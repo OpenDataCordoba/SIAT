@@ -1,0 +1,611 @@
+<?xml version='1.0' encoding='iso-8859-1'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+		<property name="dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+
+		<!-- View -->
+		<property name="connection.datasource">java:comp/env/ds/siat</property>
+		
+		<!-- JDBC connection pool (use the built-in) -->
+		<!--property name="connection.pool_size">1</property-->
+
+		<!-- Enable Hibernate's automatic session context management -->
+		<!--property name="current_session_context_class">thread</property-->
+
+		<!-- Disable the second-level cache  -->
+		<property name="cache.provider_class">org.hibernate.cache.NoCacheProvider</property>
+
+		<!-- Dirty read / read uncommited -->
+		<property name="hibernate.connection.isolation">1</property>
+
+
+		<!-- List of annotated classes-->
+		
+		<!--  Definicion -->		
+		<mapping class="ar.gov.rosario.siat.def.buss.bean.Atributo"/>
+		<mapping class="ar.gov.rosario.siat.def.buss.bean.TipoAtributo"/>
+		<mapping class="ar.gov.rosario.siat.def.buss.bean.DomAtr"/>
+		<mapping class="ar.gov.rosario.siat.def.buss.bean.DomAtrVal"/>
+		<mapping class="ar.gov.rosario.siat.def.buss.bean.TipObjImp"/>
+		<mapping class="ar.gov.rosario.siat.def.buss.bean.TipObjImpAtr"/>
+		<mapping class="ar.gov.rosario.siat.def.buss.bean.TipObjImpAreO"/>		
+		<mapping class="ar.gov.rosario.siat.def.buss.bean.Area"/>
+		<mapping class="ar.gov.rosario.siat.def.buss.bean.Feriado"/>
+		<mapping class="ar.gov.rosario.siat.def.buss.bean.Vencimiento"/>
+		<mapping class="ar.gov.rosario.siat.def.buss.bean.Recurso"/>
+		<mapping class="ar.gov.rosario.siat.def.buss.bean.Categoria"/>
+		<mapping class="ar.gov.rosario.siat.def.buss.bean.Tipo"/>
+		<mapping class="ar.gov.rosario.siat.def.buss.bean.ServicioBanco"/>
+		<mapping class="ar.gov.rosario.siat.def.buss.bean.SerBanRec"/>
+		<mapping class="ar.gov.rosario.siat.def.buss.bean.RecAtrVal"/>
+		<mapping class="ar.gov.rosario.siat.def.buss.bean.RecCon"/>
+		<mapping class="ar.gov.rosario.siat.def.buss.bean.RecClaDeu"/>		
+		<mapping class="ar.gov.rosario.siat.def.buss.bean.RecGenCueAtrVa"/>
+		<mapping class="ar.gov.rosario.siat.def.buss.bean.RecEmi"/>
+		<mapping class="ar.gov.rosario.siat.def.buss.bean.RecAtrCueEmi"/>
+		<mapping class="ar.gov.rosario.siat.def.buss.bean.TipoEmision"/>
+		<mapping class="ar.gov.rosario.siat.def.buss.bean.PeriodoDeuda"/>
+		<mapping class="ar.gov.rosario.siat.def.buss.bean.GenCue"/>
+		<mapping class="ar.gov.rosario.siat.def.buss.bean.GenCodGes"/>
+		<mapping class="ar.gov.rosario.siat.def.buss.bean.ConAtr"/>		
+		<mapping class="ar.gov.rosario.siat.def.buss.bean.RecAtrCue"/>
+		<mapping class="ar.gov.rosario.siat.def.buss.bean.ViaDeuda"/>
+		<mapping class="ar.gov.rosario.siat.def.buss.bean.Zona"/>
+		<mapping class="ar.gov.rosario.siat.def.buss.bean.Seccion"/>
+		<mapping class="ar.gov.rosario.siat.def.buss.bean.TipoDeuda"/>		
+		<mapping class="ar.gov.rosario.siat.def.buss.bean.Parametro"/>
+		<mapping class="ar.gov.rosario.siat.def.buss.bean.DesImp"/>
+		<mapping class="ar.gov.rosario.siat.def.buss.bean.Banco"/>
+		<mapping class="ar.gov.rosario.siat.def.buss.bean.Calendario"/>	
+		<mapping class="ar.gov.rosario.siat.def.buss.bean.EmiMat"/>
+		<mapping class="ar.gov.rosario.siat.def.buss.bean.ColEmiMat"/>
+		<mapping class="ar.gov.rosario.siat.def.buss.bean.RecConADec"/>
+		<mapping class="ar.gov.rosario.siat.def.buss.bean.RecTipAli"/>
+		<mapping class="ar.gov.rosario.siat.def.buss.bean.RecAli"/>
+		<mapping class="ar.gov.rosario.siat.def.buss.bean.RecMinDec"/>
+		<mapping class="ar.gov.rosario.siat.def.buss.bean.RecTipUni"/>
+		<mapping class="ar.gov.rosario.siat.def.buss.bean.ValUnRecConADe"/>
+		<mapping class="ar.gov.rosario.siat.def.buss.bean.TipRecConADec"/>
+		<mapping class="ar.gov.rosario.siat.def.buss.bean.MinRecConADec"/>		
+		<mapping class="ar.gov.rosario.siat.def.buss.bean.CodEmi" />
+		<mapping class="ar.gov.rosario.siat.def.buss.bean.TipCodEmi" />
+		<mapping class="ar.gov.rosario.siat.def.buss.bean.HistCodEmi" />
+		<mapping class="ar.gov.rosario.siat.def.buss.bean.SituacionInmueble" />
+		<mapping class="ar.gov.rosario.siat.def.buss.bean.SolicitudInmueble" />
+		<mapping class="ar.gov.rosario.siat.def.buss.bean.CategoriaInmueble" />
+		<mapping class="ar.gov.rosario.siat.def.buss.bean.SuperficieInmueble" />
+		<mapping class="ar.gov.rosario.siat.def.buss.bean.SiatScript" />
+		<mapping class="ar.gov.rosario.siat.def.buss.bean.SiatScriptUsr" />
+		<mapping class="ar.gov.rosario.siat.def.buss.bean.RecursoArea"/>
+		<!--  Fin Definicion -->
+
+		<!-- Frase -->
+		<mapping class="ar.gov.rosario.siat.fra.buss.bean.Frase"/>
+		<!-- Fin Frase -->
+		
+		<!--  Gestion Deuda -->
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.SerBanDesGen"/>
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.DesGen"/>
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.CriAsiPro"/>
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.DeudaAdmin"/>
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.DeudaAnulada"/>
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.DeudaCancelada"/>
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.DeudaJudicial"/>
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.DeuAdmRecCon"/>
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.DeuAnuRecCon"/>
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.DeuCanRecCon"/>
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.DeuJudRecCon"/>
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.EstadoDeuda"/>
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.TipoSelAlm"/>
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.SelAlm"/>
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.SelAlmDeuda"/>		
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.SelAlmDet"/>		
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.TipProMas"/>
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.ProcesoMasivo"/>
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.Procurador"/>
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.TipoProcurador"/>
+		
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.ProRec"/>
+	
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.Convenio"/>
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.ConvenioCuota"/>
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.ConvenioDeuda"/>
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.EstadoConCuo"/>
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.EstadoConvenio"/>
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.Plan"/>
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.PlanDescuento"/>
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.PlanIntFin"/>
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.TipoDeudaPlan"/>
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.TipoDocApo"/>
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.TipoPerFor"/>
+		
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.SelAlmLog"/>
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.AccionLog"/>
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.ProMasProExc"/>
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.ProMasDeuInc"/>
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.ProMasDeuExc"/>
+		
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.DesEsp"/>
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.DesRecClaDeu"/>
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.DesAtrVal"/>
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.DesEspExe"/>
+				
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.MotExc"/>
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.ProRecDesHas"/>
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.ProRecCom"/>		
+
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.PlanClaDeu"/>
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.PlanMotCad"/>
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.PlanForActDeu"/>
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.PlanDescuento"/>
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.PlanIntFin"/>
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.PlanVen"/>	
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.PlanAtrVal"/>	
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.PlanExe"/>
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.PlanProrroga"/>
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.PlanImpMin"/>
+	
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.EstConDeu"/>
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.EstPlaEnvDeuPr"/>
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.PlaEnvDeuPro"/>
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.ConstanciaDeu"/>
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.ConDeuDet"/>
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.ConDeuTit"/>
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.HistEstConDeu"/>
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.HistEstPlaEnvDP"/>						
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.GesJudEvento"/>
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.PlaEnvDeuPDet"/>
+	
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.Recibo"/>
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.ReciboDeuda"/>
+		
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.PagoDeuda"/>
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.ConDeuCuo"/>
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.TipoPago"/>
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.ReciboConvenio"/>
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.Rescate"/>
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.ConEstCon"/>
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.RecConCuo"/>
+		
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.Evento"/>
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.EtapaProcesal"/>
+		
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.TraspasoDeuda"/>
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.DevolucionDeuda"/>
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.TraDeuDet"/>
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.DevDeuDet"/>
+		
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.GesJud"/>
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.GesJudDeu"/>
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.HistGesJud"/>				
+		
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.CtrlInfDeu"/>
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.HisInfDeu"/>
+				
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.LiqCom"/>	
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.LiqComPro"/>
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.LiqComProDeu"/>
+
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.ResDet"/>
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.AuxAplPagCue"/>
+
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.AuxLiqComProDeu"/>
+			
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.MotAnuDeu" />
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.Anulacion" />
+		
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.ProPreDeu" />
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.ProPreDeuDet" />
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.EstProPreDeuDet" />
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.Desglose" />
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.DesgloseDet" />
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.AgeRet" />
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.IndiceCompensacion" />
+		<!--  Fin Gestion Deuda -->
+
+		<!--  Recurso -->
+		<mapping class="ar.gov.rosario.siat.rec.buss.bean.TipoObra"/>
+		<mapping class="ar.gov.rosario.siat.rec.buss.bean.FormaPago"/>
+		<mapping class="ar.gov.rosario.siat.rec.buss.bean.TipoContrato"/>
+		<mapping class="ar.gov.rosario.siat.rec.buss.bean.Contrato"/>
+		<mapping class="ar.gov.rosario.siat.rec.buss.bean.PlanillaCuadra"/>
+		<mapping class="ar.gov.rosario.siat.rec.buss.bean.UsoCdM"/>
+		<mapping class="ar.gov.rosario.siat.rec.buss.bean.EstPlaCua"/>
+		<mapping class="ar.gov.rosario.siat.rec.buss.bean.PlaCuaDet"/>
+		<mapping class="ar.gov.rosario.siat.rec.buss.bean.TipPlaCuaDet"/>		
+		<mapping class="ar.gov.rosario.siat.rec.buss.bean.EstPlaCuaDet"/>		
+		<mapping class="ar.gov.rosario.siat.rec.buss.bean.HisEstPlaCua"/>
+		<mapping class="ar.gov.rosario.siat.rec.buss.bean.HisEstadoObra"/>		
+		<mapping class="ar.gov.rosario.siat.rec.buss.bean.Obra"/>
+		<mapping class="ar.gov.rosario.siat.rec.buss.bean.EstadoObra"/>
+		<mapping class="ar.gov.rosario.siat.rec.buss.bean.ObraFormaPago"/>
+		<mapping class="ar.gov.rosario.siat.rec.buss.bean.HisObrRepPla"/>
+		<mapping class="ar.gov.rosario.siat.rec.buss.bean.HisCamPla"/>	
+		<mapping class="ar.gov.rosario.siat.rec.buss.bean.ObrRepVen"/>
+		<mapping class="ar.gov.rosario.siat.rec.buss.bean.AnulacionObra"/>
+		<mapping class="ar.gov.rosario.siat.rec.buss.bean.AnuObrDet"/>	
+		<!--  Fin Recurso -->
+		
+		<!--  Caso -->
+		<mapping class="ar.gov.rosario.siat.cas.buss.bean.SistemaOrigen"/>
+		<mapping class="ar.gov.rosario.siat.cas.buss.bean.AccionExp"/>
+		<mapping class="ar.gov.rosario.siat.cas.buss.bean.UsoExpediente"/>
+		<mapping class="ar.gov.rosario.siat.cas.buss.bean.TipoSolicitud"/>
+		<mapping class="ar.gov.rosario.siat.cas.buss.bean.EstSolicitud"/>
+		<mapping class="ar.gov.rosario.siat.cas.buss.bean.Solicitud"/>
+		<mapping class="ar.gov.rosario.siat.cas.buss.bean.SolicitudCUIT"/>
+		<mapping class="ar.gov.rosario.siat.cas.buss.bean.AreaSolicitud"/>
+		<!--  Fin Caso -->		
+		
+		<!--  Proceso -->		
+		<mapping class="ar.gov.rosario.siat.pro.buss.bean.Proceso"/>
+		<mapping class="ar.gov.rosario.siat.pro.buss.bean.TipoEjecucion"/>
+		<mapping class="ar.gov.rosario.siat.pro.buss.bean.TipoProgEjec"/>
+		<mapping class="ar.gov.rosario.siat.pro.buss.bean.Corrida"/>
+		<mapping class="ar.gov.rosario.siat.pro.buss.bean.EstadoCorrida"/>	
+		<mapping class="ar.gov.rosario.siat.pro.buss.bean.PasoCorrida"/>
+		<mapping class="ar.gov.rosario.siat.pro.buss.bean.LogCorrida"/>	
+		<mapping class="ar.gov.rosario.siat.pro.buss.bean.FileCorrida"/>	
+		<!--  Fin Proceso -->		
+		
+		<!--  Padron -->
+		<mapping class="ar.gov.rosario.siat.pad.buss.bean.Cuenta"/>
+		<mapping class="ar.gov.rosario.siat.pad.buss.bean.ObjImp"/>
+		<mapping class="ar.gov.rosario.siat.pad.buss.bean.EstCue"/>
+		<mapping class="ar.gov.rosario.siat.pad.buss.bean.ObjImpAtrVal"/>
+		<mapping class="ar.gov.rosario.siat.pad.buss.bean.Contribuyente"/>
+		<mapping class="ar.gov.rosario.siat.pad.buss.bean.ConAtrVal"/>	
+		<mapping class="ar.gov.rosario.siat.pad.buss.bean.ConAtrValSec"/>	
+		<mapping class="ar.gov.rosario.siat.pad.buss.bean.Domicilio"/>	
+		<mapping class="ar.gov.rosario.siat.pad.buss.bean.TipoDomicilio"/>	
+		<mapping class="ar.gov.rosario.siat.pad.buss.bean.TipoTitular"/>
+		<mapping class="ar.gov.rosario.siat.pad.buss.bean.CuentaTitular"/>
+		<mapping class="ar.gov.rosario.siat.pad.buss.bean.CuentaRel"/>
+		<mapping class="ar.gov.rosario.siat.pad.buss.bean.CamDomWeb"/>		
+		<mapping class="ar.gov.rosario.siat.pad.buss.bean.Repartidor"/>	
+		<mapping class="ar.gov.rosario.siat.pad.buss.bean.TipoRepartidor"/>	
+		<mapping class="ar.gov.rosario.siat.pad.buss.bean.CriRep"/>	
+		<mapping class="ar.gov.rosario.siat.pad.buss.bean.CriRepCalle"/>	
+		<mapping class="ar.gov.rosario.siat.pad.buss.bean.CriRepCat"/>	
+		<mapping class="ar.gov.rosario.siat.pad.buss.bean.Broche"/>	
+		<mapping class="ar.gov.rosario.siat.pad.buss.bean.TipoBroche"/>	
+		<mapping class="ar.gov.rosario.siat.pad.buss.bean.BroCue"/>
+		<mapping class="ar.gov.rosario.siat.pad.buss.bean.RecAtrCueV"/>
+		<mapping class="ar.gov.rosario.siat.pad.buss.bean.CueExcSel"/>		
+		<mapping class="ar.gov.rosario.siat.pad.buss.bean.CueExcSelDeu"/>
+		<mapping class="ar.gov.rosario.siat.pad.buss.bean.AltaOficio"/>
+		<mapping class="ar.gov.rosario.siat.pad.buss.bean.EstObjImp"/>
+		<mapping class="ar.gov.rosario.siat.pad.buss.bean.Persona"/>
+		<mapping class="ar.gov.rosario.siat.pad.buss.bean.TipoDocumento"/>
+
+		<!--  Fin Padron -->		
+		
+		<!-- Exencion -->
+		<mapping class="ar.gov.rosario.siat.exe.buss.bean.Exencion"/>
+		<mapping class="ar.gov.rosario.siat.exe.buss.bean.ExeRecCon"/>
+		<mapping class="ar.gov.rosario.siat.exe.buss.bean.ContribExe"/>
+		<mapping class="ar.gov.rosario.siat.exe.buss.bean.CueExe"/>
+		<mapping class="ar.gov.rosario.siat.exe.buss.bean.EstadoCueExe"/>
+		<mapping class="ar.gov.rosario.siat.exe.buss.bean.TipoSujeto"/>
+		<mapping class="ar.gov.rosario.siat.exe.buss.bean.TipSujExe"/>
+		<mapping class="ar.gov.rosario.siat.exe.buss.bean.HisEstCueExe"/>
+		<mapping class="ar.gov.rosario.siat.exe.buss.bean.Conviviente"/>
+		<!-- Fin Exencion -->
+
+		<!-- Concurso y Quiebra -->
+		<mapping class="ar.gov.rosario.siat.cyq.buss.bean.Procedimiento"/>
+        <mapping class="ar.gov.rosario.siat.cyq.buss.bean.EstadoProced"/>
+        <mapping class="ar.gov.rosario.siat.cyq.buss.bean.HisEstProced"/>
+        <mapping class="ar.gov.rosario.siat.cyq.buss.bean.Abogado"/>                
+        <mapping class="ar.gov.rosario.siat.cyq.buss.bean.Juzgado"/>
+        <mapping class="ar.gov.rosario.siat.cyq.buss.bean.TipoProceso"/>
+	  	<mapping class="ar.gov.rosario.siat.cyq.buss.bean.MotivoBaja"/>
+	 	<mapping class="ar.gov.rosario.siat.cyq.buss.bean.MotivoResInf"/>
+	 	<mapping class="ar.gov.rosario.siat.cyq.buss.bean.ProCueNoDeu"/>
+	 	<mapping class="ar.gov.rosario.siat.cyq.buss.bean.ProDet" />
+        <mapping class="ar.gov.rosario.siat.cyq.buss.bean.TipoPrivilegio"/>
+        <mapping class="ar.gov.rosario.siat.cyq.buss.bean.DeudaPrivilegio"/>
+        <mapping class="ar.gov.rosario.siat.cyq.buss.bean.PagoPriv"/>
+        <mapping class="ar.gov.rosario.siat.cyq.buss.bean.PagoPrivDeu"/>
+		<!-- Fin Concurso y Quiebra -->	
+
+		<!-- Seguridad -->	
+		<mapping class="ar.gov.rosario.siat.seg.buss.bean.UsuarioSiat"/>
+		<mapping class="ar.gov.rosario.siat.seg.buss.bean.Oficina"/>
+			
+		<!-- Fin Seguridad -->	
+		
+		
+		<!-- Balance  -->	
+		<mapping class="ar.gov.rosario.siat.bal.buss.bean.Canal"/>
+		<mapping class="ar.gov.rosario.siat.bal.buss.bean.Sistema"/>
+		<mapping class="ar.gov.rosario.siat.bal.buss.bean.Partida"/>
+		<mapping class="ar.gov.rosario.siat.bal.buss.bean.TipoImporte"/>
+		<mapping class="ar.gov.rosario.siat.bal.buss.bean.DisPar"/>
+		<mapping class="ar.gov.rosario.siat.bal.buss.bean.DisParDet"/>
+		<mapping class="ar.gov.rosario.siat.bal.buss.bean.DisParRec"/>		
+		<mapping class="ar.gov.rosario.siat.bal.buss.bean.DisParPla"/>
+		<mapping class="ar.gov.rosario.siat.bal.buss.bean.Accion"/>
+		<mapping class="ar.gov.rosario.siat.bal.buss.bean.AccionSellado"/>
+		<mapping class="ar.gov.rosario.siat.bal.buss.bean.Sellado"/>
+		<mapping class="ar.gov.rosario.siat.bal.buss.bean.ImpSel"/>
+		<mapping class="ar.gov.rosario.siat.bal.buss.bean.TipoSellado"/>
+		<mapping class="ar.gov.rosario.siat.bal.buss.bean.Asentamiento"/>
+		<mapping class="ar.gov.rosario.siat.bal.buss.bean.Ejercicio"/>
+		<mapping class="ar.gov.rosario.siat.bal.buss.bean.EstEjercicio"/>
+		<mapping class="ar.gov.rosario.siat.bal.buss.bean.Transaccion"/>
+		<mapping class="ar.gov.rosario.siat.bal.buss.bean.TransaccionTGI"/>
+		<mapping class="ar.gov.rosario.siat.bal.buss.bean.TransaccionCDM"/>
+		<mapping class="ar.gov.rosario.siat.bal.buss.bean.TransaccionETUR"/>
+		<mapping class="ar.gov.rosario.siat.bal.buss.bean.TransaccionDREI"/>
+		<mapping class="ar.gov.rosario.siat.bal.buss.bean.TransaccionOTRTRI"/>
+		<mapping class="ar.gov.rosario.siat.bal.buss.bean.TransaccionSEL"/>
+		<mapping class="ar.gov.rosario.siat.bal.buss.bean.TransaccionCEM"/>
+		<mapping class="ar.gov.rosario.siat.bal.buss.bean.TransaccionRCM"/>
+		<mapping class="ar.gov.rosario.siat.bal.buss.bean.TransaccionDER"/>
+		<mapping class="ar.gov.rosario.siat.bal.buss.bean.TipoDistrib"/>
+		<mapping class="ar.gov.rosario.siat.bal.buss.bean.ParSel"/>
+		<mapping class="ar.gov.rosario.siat.bal.buss.bean.Tolerancia"/>
+		<mapping class="ar.gov.rosario.siat.bal.buss.bean.AuxRecaudado"/>
+		<mapping class="ar.gov.rosario.siat.bal.buss.bean.AuxPagDeu"/>
+		<mapping class="ar.gov.rosario.siat.bal.buss.bean.SinSalAFav"/>
+		<mapping class="ar.gov.rosario.siat.bal.buss.bean.SinPartida"/>
+		<mapping class="ar.gov.rosario.siat.bal.buss.bean.SinIndet"/>
+		<mapping class="ar.gov.rosario.siat.bal.buss.bean.AuxSellado"/>
+		<mapping class="ar.gov.rosario.siat.bal.buss.bean.TipoIndet"/>
+		<mapping class="ar.gov.rosario.siat.bal.buss.bean.AuxPagCuo"/>
+		<mapping class="ar.gov.rosario.siat.bal.buss.bean.AuxConDeu"/>
+		<mapping class="ar.gov.rosario.siat.bal.buss.bean.AuxConDeuCuo"/>
+		<mapping class="ar.gov.rosario.siat.bal.buss.bean.AuxConvenio"/>
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.SalPorCad"/>
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.SelAlmPlanes"/>
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.SalPorCadDet"/>
+		<mapping class="ar.gov.rosario.siat.bal.buss.bean.EstadoReclamo"/>
+		<mapping class="ar.gov.rosario.siat.bal.buss.bean.Reclamo"/>
+		<mapping class="ar.gov.rosario.siat.bal.buss.bean.SaldoAFavor"/>
+		<mapping class="ar.gov.rosario.siat.bal.buss.bean.EstSalAFav"/>
+		<mapping class="ar.gov.rosario.siat.bal.buss.bean.TipoOrigen"/>
+		<mapping class="ar.gov.rosario.siat.bal.buss.bean.TipoSalAFav"/>
+		<mapping class="ar.gov.rosario.siat.bal.buss.bean.CuentaBanco"/>
+		<mapping class="ar.gov.rosario.siat.bal.buss.bean.TipCueBan"/>
+		<mapping class="ar.gov.rosario.siat.bal.buss.bean.ParCueBan"/>
+		<mapping class="ar.gov.rosario.siat.bal.buss.bean.Clasificador"/>
+		<mapping class="ar.gov.rosario.siat.bal.buss.bean.Nodo"/>
+		<mapping class="ar.gov.rosario.siat.bal.buss.bean.RelCla"/>
+		<mapping class="ar.gov.rosario.siat.bal.buss.bean.RelPartida"/>
+		<mapping class="ar.gov.rosario.siat.bal.buss.bean.DiarioPartida"/>
+		<mapping class="ar.gov.rosario.siat.bal.buss.bean.TipOriMov"/>
+		<mapping class="ar.gov.rosario.siat.bal.buss.bean.EstDiaPar"/>
+		<mapping class="ar.gov.rosario.siat.bal.buss.bean.HisEstDiaPar"/>
+		<mapping class="ar.gov.rosario.siat.bal.buss.bean.OtrIngTes"/>
+		<mapping class="ar.gov.rosario.siat.bal.buss.bean.EstOtrIngTes"/>
+		<mapping class="ar.gov.rosario.siat.bal.buss.bean.HisEstOtrIngTes"/>
+		<mapping class="ar.gov.rosario.siat.bal.buss.bean.OtrIngTesPar"/>
+		<mapping class="ar.gov.rosario.siat.bal.buss.bean.OtrIngTesRecCon"/>
+		<mapping class="ar.gov.rosario.siat.bal.buss.bean.Caja7"/>
+		<mapping class="ar.gov.rosario.siat.bal.buss.bean.Balance"/>
+		<mapping class="ar.gov.rosario.siat.bal.buss.bean.ImpPar"/>
+		<mapping class="ar.gov.rosario.siat.bal.buss.bean.Archivo"/>
+		<mapping class="ar.gov.rosario.siat.bal.buss.bean.TipoArc"/>
+		<mapping class="ar.gov.rosario.siat.bal.buss.bean.EstadoArc"/>
+		<mapping class="ar.gov.rosario.siat.bal.buss.bean.TranArc"/>	
+		<mapping class="ar.gov.rosario.siat.bal.buss.bean.Folio"/>
+		<mapping class="ar.gov.rosario.siat.bal.buss.bean.FolCom"/>
+		<mapping class="ar.gov.rosario.siat.bal.buss.bean.FolDiaCob"/>
+		<mapping class="ar.gov.rosario.siat.bal.buss.bean.FolDiaCobCol"/>
+		<mapping class="ar.gov.rosario.siat.bal.buss.bean.TipoCob"/>
+		<mapping class="ar.gov.rosario.siat.bal.buss.bean.EstadoFol"/>
+		<mapping class="ar.gov.rosario.siat.bal.buss.bean.TipoCom"/>
+		<mapping class="ar.gov.rosario.siat.bal.buss.bean.ComDeu"/>
+		<mapping class="ar.gov.rosario.siat.bal.buss.bean.TipoComDeu"/>
+		<mapping class="ar.gov.rosario.siat.bal.buss.bean.EstadoCom"/>
+		<mapping class="ar.gov.rosario.siat.bal.buss.bean.HisEstCom"/>
+		<mapping class="ar.gov.rosario.siat.bal.buss.bean.Compensacion"/>
+		<mapping class="ar.gov.rosario.siat.bal.buss.bean.Reingreso"/>
+		<mapping class="ar.gov.rosario.siat.bal.buss.bean.Caja69"/>
+		<mapping class="ar.gov.rosario.siat.bal.buss.bean.TranBal"/>
+		<mapping class="ar.gov.rosario.siat.bal.buss.bean.AseDel"/>
+		<mapping class="ar.gov.rosario.siat.bal.buss.bean.TranDel"/>
+		<mapping class="ar.gov.rosario.siat.bal.buss.bean.IndetBal"/>
+		<mapping class="ar.gov.rosario.siat.bal.buss.bean.SaldoBal"/>
+		<mapping class="ar.gov.rosario.siat.bal.buss.bean.AuxCaja7"/>
+		<mapping class="ar.gov.rosario.siat.bal.buss.bean.LeyParAcu"/>
+		<mapping class="ar.gov.rosario.siat.bal.buss.bean.AuxDeuMdf"/>
+		<mapping class="ar.gov.rosario.siat.bal.buss.bean.EnvioOsiris"/>
+		<mapping class="ar.gov.rosario.siat.bal.buss.bean.EnvNotObl"/>
+		<mapping class="ar.gov.rosario.siat.bal.buss.bean.EstadoEnvio"/>
+		<mapping class="ar.gov.rosario.siat.bal.buss.bean.CierreBanco"/>
+		<mapping class="ar.gov.rosario.siat.bal.buss.bean.TipoOperacion"/>
+		<mapping class="ar.gov.rosario.siat.bal.buss.bean.EstTranAfip"/>
+		<mapping class="ar.gov.rosario.siat.bal.buss.bean.TranAfip"/>
+		<mapping class="ar.gov.rosario.siat.bal.buss.bean.LogTranAfip"/>
+		<mapping class="ar.gov.rosario.siat.bal.buss.bean.EstDetPago"/>
+		<mapping class="ar.gov.rosario.siat.bal.buss.bean.DetallePago"/>
+		<mapping class="ar.gov.rosario.siat.bal.buss.bean.LogDetallePago"/>
+		<mapping class="ar.gov.rosario.siat.bal.buss.bean.AuxImpRec"/>
+		<mapping class="ar.gov.rosario.siat.bal.buss.bean.EstDetDJ"/>
+		<mapping class="ar.gov.rosario.siat.bal.buss.bean.DetalleDJ"/>
+		<mapping class="ar.gov.rosario.siat.bal.buss.bean.LogDetalleDJ"/>
+		<mapping class="ar.gov.rosario.siat.bal.buss.bean.NotaImpto"/>
+		<mapping class="ar.gov.rosario.siat.bal.buss.bean.CierreSucursal"/>
+		<mapping class="ar.gov.rosario.siat.bal.buss.bean.NovedadEnvio"/>
+		<mapping class="ar.gov.rosario.siat.bal.buss.bean.Conciliacion"/>
+		<mapping class="ar.gov.rosario.siat.bal.buss.bean.NotaConc"/>
+		<mapping class="ar.gov.rosario.siat.bal.buss.bean.MovBan"/>
+		<mapping class="ar.gov.rosario.siat.bal.buss.bean.MovBanDet"/>
+		<mapping class="ar.gov.rosario.siat.bal.buss.bean.Indeterminado"/>
+		<mapping class="ar.gov.rosario.siat.bal.buss.bean.Duplice"/>
+		<mapping class="ar.gov.rosario.siat.bal.buss.bean.ReingIndet"/>
+		<mapping class="ar.gov.rosario.siat.bal.buss.bean.IndetAudit"/>
+		<!-- Fin Balance -->
+		
+		<!-- Formulario -->
+		<mapping class="ar.gov.rosario.siat.frm.buss.bean.ForCam"/>
+		<mapping class="ar.gov.rosario.siat.frm.buss.bean.Formulario"/>
+		<!-- Fin Formulario -->
+		
+		<!-- Emision -->
+		<mapping class="ar.gov.rosario.siat.emi.buss.bean.ResLiqDeu" />
+		<mapping class="ar.gov.rosario.siat.emi.buss.bean.EmiInfCue" />
+		<mapping class="ar.gov.rosario.siat.emi.buss.bean.Emision"/>
+		<mapping class="ar.gov.rosario.siat.emi.buss.bean.AuxDeuda"/>
+		<mapping class="ar.gov.rosario.siat.emi.buss.bean.ValEmiMat"/>
+		<mapping class="ar.gov.rosario.siat.emi.buss.bean.EmiValEmiMat" />
+		<mapping class="ar.gov.rosario.siat.emi.buss.bean.ImpMasDeu" />
+		<mapping class="ar.gov.rosario.siat.emi.buss.bean.ProPasDeb"/>		
+		<!-- Fin Emision -->
+		
+		<!-- PlanRecurso -->
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.PlanRecurso"/>
+		
+		<!-- PlanRecurso -->
+			
+		<!-- Estrategia Fiscal -->
+		<mapping class="ar.gov.rosario.siat.ef.buss.bean.Inspector"/>
+		<mapping class="ar.gov.rosario.siat.ef.buss.bean.EstadoPlanFis"/>
+		<mapping class="ar.gov.rosario.siat.ef.buss.bean.PlanFiscal"/>
+		<mapping class="ar.gov.rosario.siat.ef.buss.bean.Investigador"/>
+		<mapping class="ar.gov.rosario.siat.ef.buss.bean.EstOpeInv"/>
+		<mapping class="ar.gov.rosario.siat.ef.buss.bean.OpeInv"/>
+		<mapping class="ar.gov.rosario.siat.ef.buss.bean.HisEstOpeInv"/>
+		<mapping class="ar.gov.rosario.siat.ef.buss.bean.EstadoOpeInvCon"/>
+		<mapping class="ar.gov.rosario.siat.ef.buss.bean.EstadoActa"/>
+		<mapping class="ar.gov.rosario.siat.ef.buss.bean.ActaInv"/>
+		<mapping class="ar.gov.rosario.siat.ef.buss.bean.OpeInvCon"/>						
+		<mapping class="ar.gov.rosario.siat.ef.buss.bean.HisEstOpeInvCon"/>		
+		<mapping class="ar.gov.rosario.siat.ef.buss.bean.OpeInvBus"/>
+		<mapping class="ar.gov.rosario.siat.ef.buss.bean.OpeInvConCue"/>
+		<mapping class="ar.gov.rosario.siat.ef.buss.bean.SelAlmContr"/>
+		<mapping class="ar.gov.rosario.siat.ef.buss.bean.SelAlmCueTit"/>
+		<mapping class="ar.gov.rosario.siat.ef.buss.bean.TipoOrden"/>
+		<mapping class="ar.gov.rosario.siat.ef.buss.bean.TipoPeriodo"/>
+		<mapping class="ar.gov.rosario.siat.ef.buss.bean.OrigenOrden"/>
+		<mapping class="ar.gov.rosario.siat.ef.buss.bean.EstadoOrden"/>
+		<mapping class="ar.gov.rosario.siat.ef.buss.bean.OrdenControl"/>
+		<mapping class="ar.gov.rosario.siat.ef.buss.bean.OrdConCue"/>
+		<mapping class="ar.gov.rosario.siat.ef.buss.bean.HisEstOrdCon"/>
+		<mapping class="ar.gov.rosario.siat.ef.buss.bean.Supervisor"/>	
+		<mapping class="ar.gov.rosario.siat.ef.buss.bean.InsSup"/>
+		<mapping class="ar.gov.rosario.siat.ef.buss.bean.PeriodoOrden"/>
+		<mapping class="ar.gov.rosario.siat.ef.buss.bean.TipoActa"/>
+		<mapping class="ar.gov.rosario.siat.ef.buss.bean.Acta"/>
+		<mapping class="ar.gov.rosario.siat.ef.buss.bean.TipoDoc"/>
+		<mapping class="ar.gov.rosario.siat.ef.buss.bean.Documentacion"/>
+		<mapping class="ar.gov.rosario.siat.ef.buss.bean.OrdConDoc"/>
+		<mapping class="ar.gov.rosario.siat.ef.buss.bean.FuenteInfo"/>
+		<mapping class="ar.gov.rosario.siat.ef.buss.bean.InicioInv"/>
+		<mapping class="ar.gov.rosario.siat.ef.buss.bean.PlaFueDat"/>
+		<mapping class="ar.gov.rosario.siat.ef.buss.bean.PlaFueDatCol"/>
+		<mapping class="ar.gov.rosario.siat.ef.buss.bean.PlaFueDatDet"/>
+		<mapping class="ar.gov.rosario.siat.ef.buss.bean.Comparacion"/>
+		<mapping class="ar.gov.rosario.siat.ef.buss.bean.CompFuente"/>
+		<mapping class="ar.gov.rosario.siat.ef.buss.bean.PlaFueDatCom"/>
+		<mapping class="ar.gov.rosario.siat.ef.buss.bean.CompFuenteCol"/>
+		<mapping class="ar.gov.rosario.siat.ef.buss.bean.CompFuenteRes"/>
+		<mapping class="ar.gov.rosario.siat.ef.buss.bean.OrdConBasImp"/>
+		<mapping class="ar.gov.rosario.siat.ef.buss.bean.DetAju"/>
+		<mapping class="ar.gov.rosario.siat.ef.buss.bean.DetAjuDet"/>
+		<mapping class="ar.gov.rosario.siat.ef.buss.bean.AliComFueCol"/>
+		<mapping class="ar.gov.rosario.siat.ef.buss.bean.MesaEntrada"/>
+		<mapping class="ar.gov.rosario.siat.ef.buss.bean.AproOrdCon"/>
+		<mapping class="ar.gov.rosario.siat.ef.buss.bean.DocSop"/>
+		<mapping class="ar.gov.rosario.siat.ef.buss.bean.DetAjuDocSop"/>
+		<mapping class="ar.gov.rosario.siat.ef.buss.bean.ComAju"/>
+		<mapping class="ar.gov.rosario.siat.ef.buss.bean.ComAjuDet"/>
+		<!-- Fin Estrategia Fiscal -->
+
+		<!-- Espectaculos Publicos  -->	
+		<mapping class="ar.gov.rosario.siat.esp.buss.bean.Habilitacion"/>
+		<mapping class="ar.gov.rosario.siat.esp.buss.bean.PrecioEvento"/>
+		<mapping class="ar.gov.rosario.siat.esp.buss.bean.TipoEntrada"/>
+		<mapping class="ar.gov.rosario.siat.esp.buss.bean.EntHab"/>
+		<mapping class="ar.gov.rosario.siat.esp.buss.bean.HisEstHab"/>
+		<mapping class="ar.gov.rosario.siat.esp.buss.bean.EstHab"/>
+		<mapping class="ar.gov.rosario.siat.esp.buss.bean.TipoCobro"/>
+		<mapping class="ar.gov.rosario.siat.esp.buss.bean.TipoHab"/>
+		<mapping class="ar.gov.rosario.siat.esp.buss.bean.ValoresCargados"/>
+		<mapping class="ar.gov.rosario.siat.esp.buss.bean.EntVen"/>
+		<mapping class="ar.gov.rosario.siat.esp.buss.bean.TipoEvento"/>
+		<mapping class="ar.gov.rosario.siat.esp.buss.bean.HabExe"/>
+		<mapping class="ar.gov.rosario.siat.esp.buss.bean.LugarEvento"/>
+		<!-- Fin Espectaculos Publicos  -->	
+		
+		<!-- Declaraciones Juradas -->
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.TipDecJur"/>
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.TipDecJurRec"/>
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.OriDecJur"/>
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.DecJur"/>
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.DecJurDet"/>
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.DecJurPag"/>
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.TipPagDecJur"/>
+		<!-- Fin declaraciones juradas -->
+
+		<!-- Multa  -->
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.TipoMulta"/>
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.Multa"/>
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.MultaDet"/>
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.DescuentoMulta"/>
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.MultaHistorico"/>
+		<!-- Fin Multa -->
+		
+		<!-- Recurso DReI -->
+		<mapping class="ar.gov.rosario.siat.rec.buss.bean.CatRSDrei"/>
+		<mapping class="ar.gov.rosario.siat.rec.buss.bean.TipoTramiteRS"/>
+		<mapping class="ar.gov.rosario.siat.rec.buss.bean.NovedadRS"/>
+		
+		
+		<!-- Cierre Comercio -->
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.CierreComercio"/>
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.MotivoCierre"/>
+		
+		<!-- Mandatario -->
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.Mandatario"/>
+		
+		<!-- TramiteRA -->
+		<mapping class="ar.gov.rosario.siat.rod.buss.bean.TramiteRA"/>
+		<mapping class="ar.gov.rosario.siat.rod.buss.bean.EstadoTramiteRA"/>
+		<mapping class="ar.gov.rosario.siat.rod.buss.bean.HisEstTra"/>
+		<mapping class="ar.gov.rosario.siat.rod.buss.bean.Propietario"/>
+		
+		<!-- Gestion Cobranza -->
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.EstadoCobranza"/>
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.Cobranza"/>
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.EstadoAjuste"/>
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.GesCob"/>
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.CobranzaDet"/>
+		
+		<!-- PerCob -->
+		<mapping class="ar.gov.rosario.siat.gde.buss.bean.PerCob"/>
+		
+		
+		<!-- Afip-->
+		<mapping class="ar.gov.rosario.siat.afi.buss.bean.Local"/>
+		<mapping class="ar.gov.rosario.siat.afi.buss.bean.ActLoc"/>		
+		<mapping class="ar.gov.rosario.siat.afi.buss.bean.DatosDomicilio"/>
+		<mapping class="ar.gov.rosario.siat.afi.buss.bean.DatosPagoCta"/>
+		<mapping class="ar.gov.rosario.siat.afi.buss.bean.DecActLoc"/>
+		<mapping class="ar.gov.rosario.siat.afi.buss.bean.ExeActLoc"/>
+		<mapping class="ar.gov.rosario.siat.afi.buss.bean.ForDecJur"/>
+		<mapping class="ar.gov.rosario.siat.afi.buss.bean.HabLoc"/>		
+		<mapping class="ar.gov.rosario.siat.afi.buss.bean.OtrosPagos"/>		
+		<mapping class="ar.gov.rosario.siat.afi.buss.bean.RetYPer"/>
+		<mapping class="ar.gov.rosario.siat.afi.buss.bean.Socio"/>
+		<mapping class="ar.gov.rosario.siat.afi.buss.bean.TotDerYAccDJ"/>
+		<mapping class="ar.gov.rosario.siat.afi.buss.bean.EstForDecJur"/>
+		<!-- Fin Afip-->
+
+
+		<!-- Personas -->
+		<mapping class="ar.gov.rosario.siat.per.buss.bean.PerProvincia"/>
+		<mapping class="ar.gov.rosario.siat.per.buss.bean.PerLocalidad"/>
+		<!-- Fin Personas -->
+
+	
+
+
+	</session-factory>
+</hibernate-configuration>

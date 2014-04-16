@@ -1,0 +1,4 @@
+tocTab[tocTab.length] = new Array("2.1.2.7:1", "", "Recurso: Esp.Pub.", "EARoot/EA2/EA1/EA2/EA7/EA336.htm", "180.png", "576", "0", "", "Use Case diagram");
+tocTab[tocTab.length] = new Array("2.1.2.7:2", "", "Administrar Habilitación de Espectáculos Públicos", "EARoot/EA2/EA1/EA2/EA7/EA338.htm", "7.png", "2840", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.2.7:3", "", "Declaración Jurada de Entradas Vendidas", "EARoot/EA2/EA1/EA2/EA7/EA339.htm", "7.png", "5072", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.2.7:4", "", "Reporte de Habilitación", "EARoot/EA2/EA1/EA2/EA7/EA340.htm", "7.png", "5070", "0", "", "UseCase");

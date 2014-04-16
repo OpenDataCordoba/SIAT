@@ -1,0 +1,12 @@
+tocTab[tocTab.length] = new Array("2.1.9.3:1", "", "Diagrama de Balance", "EARoot/EA2/EA1/EA9/EA3/EA535.htm", "180.png", "495", "0", "", "Use Case diagram");
+tocTab[tocTab.length] = new Array("2.1.9.3:2", "", "Leyenda de Acumuladores de Partidas", "EARoot/EA2/EA1/EA9/EA3/EA537.htm", "7.png", "5056", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.9.3:3", "", "Mantenedor de Banco", "EARoot/EA2/EA1/EA9/EA3/EA538.htm", "7.png", "5053", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.9.3:4", "", "Mantenedor de Clasificadores de Rubros", "EARoot/EA2/EA1/EA9/EA3/EA539.htm", "7.png", "4541", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.9.3:5", "", "Mantenedor de Cuentas Bancarias", "EARoot/EA2/EA1/EA9/EA3/EA540.htm", "7.png", "4540", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.9.3:6", "", "Mantenedor de Distribuidores de Partidas", "EARoot/EA2/EA1/EA9/EA3/EA541.htm", "7.png", "4059", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.9.3:7", "", "Mantenedor de Ejercicios", "EARoot/EA2/EA1/EA9/EA3/EA542.htm", "7.png", "4075", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.9.3:8", "", "Mantenedor de Partidas", "EARoot/EA2/EA1/EA9/EA3/EA543.htm", "7.png", "4111", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.9.3:9", "", "Mantenedor de Tipo de Cobranza", "EARoot/EA2/EA1/EA9/EA3/EA544.htm", "7.png", "5055", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.9.3:10", "", "Mantenedor de Tipo de Compensación", "EARoot/EA2/EA1/EA9/EA3/EA545.htm", "7.png", "5054", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.9.3:11", "", "Mantenedor de Tipos de Cuentas Bancarias", "EARoot/EA2/EA1/EA9/EA3/EA546.htm", "7.png", "4539", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.9.3:12", "", "Mantenedor Sellado", "EARoot/EA2/EA1/EA9/EA3/EA547.htm", "7.png", "1661", "0", "", "UseCase");

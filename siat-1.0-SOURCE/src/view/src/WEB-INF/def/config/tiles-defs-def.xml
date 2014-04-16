@@ -1,0 +1,498 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+ <!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 1.1//EN"
+       "http://jakarta.apache.org/struts/dtds/tiles-config_1_1.dtd">
+
+<tiles-definitions>
+	<!-- Atributo -->
+	<definition name=".def.atributo.view.atributoSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/def/atributo/atributoSearchPage.jsp"/>
+    </definition>
+	
+	<definition name=".def.atributo.view.atributoViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/def/atributo/atributoViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".def.atributo.view.atributoEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/def/atributo/atributoEditAdapter.jsp"/>
+    </definition>
+    <!-- Fin Atributo -->
+    
+    <!-- Feriado -->
+    <definition name=".def.gravamen.view.feriadoSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/def/gravamen/feriadoSearchPage.jsp"/>
+    </definition>
+	
+	<definition name=".def.gravamen.view.feriadoViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/def/gravamen/feriadoViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".def.gravamen.view.feriadoEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/def/gravamen/feriadoEditAdapter.jsp"/>
+    </definition>
+    <!-- fin Feriado -->
+    
+    <!-- Vencimiento -->
+	<definition name=".def.gravamen.view.vencimientoSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/def/gravamen/vencimientoSearchPage.jsp"/>
+    </definition>
+	
+	<definition name=".def.gravamen.view.vencimientoViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/def/gravamen/vencimientoViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".def.gravamen.view.vencimientoEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/def/gravamen/vencimientoEditAdapter.jsp"/>
+    </definition>
+    <!-- Fin Vencimiento -->
+    
+	<!-- Categoria -->
+	<definition name=".def.gravamen.view.categoriaSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/def/gravamen/categoriaSearchPage.jsp"/>
+    </definition>
+    
+    <definition name=".def.gravamen.view.categoriaEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/def/gravamen/categoriaEditAdapter.jsp"/>
+    </definition>  	
+    
+    <definition name=".def.gravamen.view.categoriaViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/def/gravamen/categoriaViewAdapter.jsp"/>
+    </definition>  	
+    <!-- Fin Categoria -->
+    
+	<!-- Dominio Atributo -->	
+	<definition name=".def.atributo.view.domAtrSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/def/atributo/domAtrSearchPage.jsp"/>
+    </definition>
+
+    <definition name=".def.atributo.view.domAtrEncEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/def/atributo/domAtrEncEditAdapter.jsp"/>
+    </definition>  	
+
+	<definition name=".def.atributo.view.domAtrViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/def/atributo/domAtrViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".def.atributo.view.domAtrAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/def/atributo/domAtrAdapter.jsp"/>
+    </definition>
+	<!-- Fin Dominio Atributo -->    
+    
+	<!-- Dominio Atributo Valor-->	
+	<definition name=".def.atributo.view.domAtrValViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/def/atributo/domAtrValViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".def.atributo.view.domAtrValEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/def/atributo/domAtrValEditAdapter.jsp"/>
+    </definition>    
+	<!-- Fin Dominio Atributo Valor-->
+    
+	<!-- TipObjImp (Busqueda y Encabezado)-->
+	<definition name=".def.objetoImponible.view.tipObjImpSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/def/objetoImponible/tipObjImpSearchPage.jsp"/>
+    </definition>
+
+    <definition name=".def.objetoImponible.view.tipObjImpEncEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/def/objetoImponible/tipObjImpEncEditAdapter.jsp"/>
+    </definition>  	
+
+	<definition name=".def.objetoImponible.view.tipObjImpViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/def/objetoImponible/tipObjImpViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".def.objetoImponible.view.tipObjImpAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/def/objetoImponible/tipObjImpAdapter.jsp"/>
+    </definition>
+    <!-- Fin TipObjImp -->
+
+	<!-- TipObjAreO -->
+	<definition name=".def.objetoImponible.view.tipObjImpAreOAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/def/objetoImponible/tipObjImpAreOAdapter.jsp"/>
+    </definition>
+    <definition name=".def.objetoImponible.view.tipObjImpAreOViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/def/objetoImponible/tipObjImpAreOViewAdapter.jsp"/>
+    </definition>
+    <definition name=".def.objetoImponible.view.tipObjImpAreOEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/def/objetoImponible/tipObjImpAreOEditAdapter.jsp"/>
+    </definition>
+    <!-- Fin TipObjImpAreO -->
+
+	<!-- TipObjImpAtr (Detalle) -->
+	<definition name=".def.objetoImponible.view.tipObjImpAtrViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/def/objetoImponible/tipObjImpAtrViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".def.objetoImponible.view.tipObjImpAtrEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/def/objetoImponible/tipObjImpAtrEditAdapter.jsp"/>
+    </definition>
+	<!-- Fin TipObjImpAtr -->
+
+	
+	<!-- Servicio Banco -->	
+	<definition name=".def.servicioBanco.view.servicioBancoSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/def/servicioBanco/servicioBancoSearchPage.jsp"/>
+    </definition>
+
+    <definition name=".def.servicioBanco.view.servicioBancoEncEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/def/servicioBanco/servicioBancoEncEditAdapter.jsp"/>
+    </definition>  	
+
+	<definition name=".def.servicioBanco.view.servicioBancoViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/def/servicioBanco/servicioBancoViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".def.servicioBanco.view.servicioBancoAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/def/servicioBanco/servicioBancoAdapter.jsp"/>
+    </definition>
+	<!-- Fin Servicio Banco -->    
+
+	<!-- Servicio Banco Recurso-->	
+	<definition name=".def.servicioBanco.view.serBanRecViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/def/servicioBanco/serBanRecViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".def.servicioBanco.view.serBanRecEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/def/servicioBanco/serBanRecEditAdapter.jsp"/>
+    </definition>
+    <!-- Fin Servicio Banco Recurso-->
+    
+    <!-- ConAtr -->
+	<definition name=".def.contribuyente.view.conAtrSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/def/contribuyente/conAtrSearchPage.jsp"/>
+    </definition>
+    
+    <definition name=".def.contribuyente.view.conAtrEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/def/contribuyente/conAtrEditAdapter.jsp"/>
+    </definition>  	
+    
+    <definition name=".def.contribuyente.view.conAtrViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/def/contribuyente/conAtrViewAdapter.jsp"/>
+    </definition>  	
+    <!-- Fin ConAtr -->
+
+	<!-- Recurso -->	
+	<definition name=".def.gravamen.view.recursoSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/def/gravamen/recursoSearchPage.jsp"/>
+    </definition>
+
+    <definition name=".def.gravamen.view.recursoEncEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/def/gravamen/recursoEncEditAdapter.jsp"/>
+    </definition>  	
+
+	<definition name=".def.gravamen.view.recursoViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/def/gravamen/recursoViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".def.gravamen.view.recursoNoTribViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/def/gravamen/recursoNoTribViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".def.gravamen.view.recursoAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/def/gravamen/recursoAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".def.gravamen.view.recursoNoTribEncAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/def/gravamen/recursoNoTribEncEditAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".def.gravamen.view.recursoNoTribAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/def/gravamen/recursoNoTribAdapter.jsp"/>
+    </definition>
+    
+	<!-- Fin Recurso -->  
+
+	<!-- Recurso AutoLiquidable-->	
+    <definition name=".def.gravamen.view.recursoAutoLiquidableAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/def/gravamen/recursoAutoLiquidableAdapter.jsp"/>
+    </definition>
+	<!-- Fin Recurso AutoLiquidable-->
+	
+	<!-- RecAtrVal -->	
+	<definition name=".def.gravamen.view.recAtrValViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/def/gravamen/recAtrValViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".def.gravamen.view.recAtrValEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/def/gravamen/recAtrValEditAdapter.jsp"/>
+    </definition>
+	<!-- Fin RecAtrVal -->  
+
+	<!-- RecCon -->	
+	<definition name=".def.gravamen.view.recConViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/def/gravamen/recConViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".def.gravamen.view.recConEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/def/gravamen/recConEditAdapter.jsp"/>
+    </definition>
+	<!-- Fin RecCon -->  
+
+	<!-- RecClaDeu -->	
+	<definition name=".def.gravamen.view.recClaDeuViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/def/gravamen/recClaDeuViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".def.gravamen.view.recClaDeuEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/def/gravamen/recClaDeuEditAdapter.jsp"/>
+    </definition>
+	<!-- Fin RecClaDeu -->  
+
+	<!-- RecGenCueAtrVa -->	
+	<definition name=".def.gravamen.view.recGenCueAtrVaViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/def/gravamen/recGenCueAtrVaViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".def.gravamen.view.recGenCueAtrVaEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/def/gravamen/recGenCueAtrVaEditAdapter.jsp"/>
+    </definition>
+	<!-- Fin RecGenCueAtrVa -->  
+	
+	<!-- RecConADec -->	
+	<definition name=".def.gravamen.view.recConADecViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/def/gravamen/recConADecViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".def.gravamen.view.recConADecEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/def/gravamen/recConADecEditAdapter.jsp"/>
+    </definition>
+	<!-- Fin RecConADec -->
+	
+	<!-- ValUnRecConADe -->	
+	<definition name=".def.gravamen.view.valUnRecConADeViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/def/gravamen/valUnRecConADeViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".def.gravamen.view.valUnRecConADeEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/def/gravamen/valUnRecConADeEditAdapter.jsp"/>
+    </definition>
+	<!-- Fin ValUnRecConADe -->
+
+	<!-- RecEmi -->	
+	<definition name=".def.gravamen.view.recEmiViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/def/gravamen/recEmiViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".def.gravamen.view.recEmiEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/def/gravamen/recEmiEditAdapter.jsp"/>
+    </definition>
+	<!-- Fin RecEmi -->  
+
+	<!-- RecAtrCueEmi -->	
+	<definition name=".def.gravamen.view.recAtrCueEmiViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/def/gravamen/recAtrCueEmiViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".def.gravamen.view.recAtrCueEmiEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/def/gravamen/recAtrCueEmiEditAdapter.jsp"/>
+    </definition>
+	<!-- Fin RecAtrCueEmi -->  
+	
+	<!-- RecAtrCue -->	
+	<definition name=".def.gravamen.view.recAtrCueViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/def/gravamen/recAtrCueViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".def.gravamen.view.recAtrCueEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/def/gravamen/recAtrCueEditAdapter.jsp"/>
+    </definition>
+	<!-- Fin RecAtrCue -->
+
+	<!-- RecursoArea -->
+	<definition name=".def.configuracion.view.recursoAreaAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/def/configuracion/recursoAreaAdapter.jsp"/>
+    </definition>
+    
+	<definition name=".def.configuracion.view.recursoAreaViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/def/configuracion/recursoAreaViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".def.configuracion.view.recursoAreaEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/def/configuracion/recursoAreaEditAdapter.jsp"/>
+    </definition>
+	<!-- Fin RecursoArea -->
+	
+	<!-- Area -->
+    <definition name=".def.configuracion.view.areaSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/def/configuracion/areaSearchPage.jsp"/>
+    </definition>
+	
+	<definition name=".def.configuracion.view.areaViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/def/configuracion/areaViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".def.configuracion.view.areaEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/def/configuracion/areaEditAdapter.jsp"/>
+    </definition>
+    <!-- fin Area -->
+    
+    <!-- Parametro -->
+    <definition name=".def.configuracion.view.parametroSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/def/configuracion/parametroSearchPage.jsp"/>
+    </definition>
+	
+	<definition name=".def.configuracion.view.parametroViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/def/configuracion/parametroViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".def.configuracion.view.parametroEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/def/configuracion/parametroEditAdapter.jsp"/>
+    </definition>
+    <!-- fin Parametro -->
+
+	<!-- Rubro -->
+    <definition name=".def.gravamen.view.rubroAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/def/gravamen/rubroAdapter.jsp"/>
+    </definition>  	
+    
+    <definition name=".def.gravamen.view.rubroAMAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/def/gravamen/rubroAMAdapter.jsp"/>
+    </definition>  	
+
+	<definition name=".def.gravamen.view.rubroVEAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/def/gravamen/rubroVEAdapter.jsp"/>
+    </definition>
+    <!-- Fin Rubro -->
+   
+	<!-- Subrubro -->
+    <definition name=".def.gravamen.view.subrubroAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/def/gravamen/subrubroAdapter.jsp"/>
+    </definition>  	
+    
+    <definition name=".def.gravamen.view.subrubroAMAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/def/gravamen/subrubroAMAdapter.jsp"/>
+    </definition>  	
+
+	<definition name=".def.gravamen.view.subrubroVEAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/def/gravamen/subrubroVEAdapter.jsp"/>
+    </definition>
+    <!-- Fin Subrubro -->    
+	
+	<!-- Calendario -->
+	<definition name=".def.gravamen.view.calendarioSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/def/gravamen/calendarioSearchPage.jsp"/>
+    </definition>  	
+    
+    <definition name=".def.gravamen.view.calendarioViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/def/gravamen/calendarioViewAdapter.jsp"/>
+    </definition>  	
+
+    <definition name=".def.gravamen.view.calendarioEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/def/gravamen/calendarioEditAdapter.jsp"/>
+    </definition>  	
+	<!-- Fin Calendario -->    
+
+	<!-- Cache -->
+    <definition name=".def.configuracion.view.cacheViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/def/configuracion/cacheViewAdapter.jsp"/>
+    </definition>
+	<!-- Fin Cache -->
+	
+	<!-- Matrices de Emision -->
+	<definition name=".def.emision.view.emiMatSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/def/emision/emiMatSearchPage.jsp"/>
+    </definition>  	
+
+	<definition name=".def.emision.view.emiMatEncEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/def/emision/emiMatEncEditAdapter.jsp"/>
+    </definition>  	
+
+	<definition name=".def.emision.view.emiMatAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/def/emision/emiMatAdapter.jsp"/>
+    </definition>  	
+
+	<definition name=".def.emision.view.emiMatViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/def/emision/emiMatViewAdapter.jsp"/>
+    </definition>  	
+
+	<definition name=".def.emision.view.colEmiMatViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/def/emision/colEmiMatViewAdapter.jsp"/>
+    </definition>  	
+
+	<definition name=".def.emision.view.colEmiMatEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/def/emision/colEmiMatEditAdapter.jsp"/>
+    </definition>  	
+	<!-- Fin Matrices de Emision -->
+	
+	<!-- RecMinDec -->	
+	<definition name=".def.gravamen.view.recMinDecViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/def/gravamen/recMinDecViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".def.gravamen.view.recMinDecEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/def/gravamen/recMinDecEditAdapter.jsp"/>
+    </definition>
+	<!-- Fin RecMinDec -->
+	
+	<!-- RecAli -->	
+	<definition name=".def.gravamen.view.recAliViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/def/gravamen/recAliViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".def.gravamen.view.recAliEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/def/gravamen/recAliEditAdapter.jsp"/>
+    </definition>
+	<!-- Fin RecAli -->
+
+	<!-- Codigo Emision -->
+	<definition name=".def.emision.view.codEmiSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/def/emision/codEmiSearchPage.jsp"/>
+    </definition>  	
+
+	<definition name=".def.emision.view.codEmiEncEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/def/emision/codEmiEncEditAdapter.jsp"/>
+    </definition>  	
+
+	<definition name=".def.emision.view.codEmiAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/def/emision/codEmiAdapter.jsp"/>
+    </definition>  	
+
+	<definition name=".def.emision.view.codEmiViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/def/emision/codEmiViewAdapter.jsp"/>
+    </definition>  	
+	<!-- Fin Codigo Emision -->
+
+	<!-- Banco -->
+	<definition name=".def.servicioBanco.view.bancoSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/def/servicioBanco/bancoSearchPage.jsp"/>
+    </definition>
+	
+	<definition name=".def.servicioBanco.view.bancoViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/def/servicioBanco/bancoViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".def.servicioBanco.view.bancoEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/def/servicioBanco/bancoEditAdapter.jsp"/>
+    </definition>
+    <!-- Fin Banco -->
+    
+    <!-- SiatScript -->
+    <definition name=".def.configuracion.view.siatScriptSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/def/configuracion/siatScriptSearchPage.jsp"/>
+    </definition>
+    
+    <definition name=".def.configuracion.view.siatScriptViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/def/configuracion/siatScriptViewAdapter.jsp"/>
+    </definition>    
+    
+     <definition name=".def.configuracion.view.siatScriptEditAdapter" extends=".siatStdLayout">
+	     <put name="body" value="/def/configuracion/siatScriptAdapter.jsp"/>
+    </definition>  
+     
+    <definition name=".def.configuracion.view.siatScriptEncEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/def/configuracion/siatScriptEncEditAdapter.jsp"/>
+    </definition>                     
+    <!-- Fin SiatScript -->
+    
+    <!-- SiatScriptUsr -->
+    <definition name=".def.configuracion.view.siatScriptUsrViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/def/configuracion/siatScriptUsrViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".def.configuracion.view.siatScriptUsrEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/def/configuracion/siatScriptUsrEditAdapter.jsp"/>
+    </definition>
+    
+    <!-- Fin SiatScriptUsr -->                  
+</tiles-definitions>

@@ -1,0 +1,1034 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC 
+"-//Apache Software Foundation//DTD Struts Configuration 1.2//EN"  
+"[WWW] http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="inspectorSearchPage"
+			type="org.apache.struts.action.DynaActionForm" />
+
+		<form-bean name="inspectorAdapter"
+			type="org.apache.struts.action.DynaActionForm" />
+			
+		<form-bean name="fuenteInfoSearchPage"
+			type="org.apache.struts.action.DynaActionForm" />
+
+		<form-bean name="fuenteInfoAdapter"
+			type="org.apache.struts.action.DynaActionForm" />
+
+		<form-bean name="planFiscalSearchPage"
+			type="org.apache.struts.action.DynaActionForm" />
+
+		<form-bean name="planFiscalAdapter"
+			type="org.apache.struts.action.DynaActionForm" />
+
+		<form-bean name="investigadorSearchPage"
+			type="org.apache.struts.action.DynaActionForm" />
+
+		<form-bean name="investigadorAdapter"
+			type="org.apache.struts.action.DynaActionForm" />
+
+		<form-bean name="opeInvSearchPage"
+			type="org.apache.struts.action.DynaActionForm" />
+
+		<form-bean name="opeInvAdapter"
+			type="org.apache.struts.action.DynaActionForm" />
+
+		<form-bean name="opeInvConSearchPage"
+			type="org.apache.struts.action.DynaActionForm" />
+
+		<form-bean name="opeInvConAdapter"
+			type="org.apache.struts.action.DynaActionForm" />
+
+		<form-bean name="opeInvConActasSearchPage"
+			type="org.apache.struts.action.DynaActionForm" />
+
+		<form-bean name="opeInvBusSearchPage"
+			type="org.apache.struts.action.DynaActionForm" />
+
+		<form-bean name="opeInvBusAdapter"
+			type="org.apache.struts.action.DynaActionForm" />
+
+		<form-bean name="procesoOpeInvBusAdapter"
+			type="org.apache.struts.action.DynaActionForm" />
+
+		<form-bean name="actasInicioAdapterVO"
+			type="org.apache.struts.action.DynaActionForm" />
+
+		<form-bean name="actaInvSearchPage"
+			type="org.apache.struts.action.DynaActionForm" />
+
+		<form-bean name="actaInvAdapterVO"
+			type="org.apache.struts.action.DynaActionForm" />
+
+		<form-bean name="aprobacionActaInvSearchPage"
+			type="org.apache.struts.action.DynaActionForm" />
+
+		<form-bean name="aprobActaInvAdapterVO"
+			type="org.apache.struts.action.DynaActionForm" />
+
+		<form-bean name="ordenControlSearchPage"
+			type="org.apache.struts.action.DynaActionForm" />
+
+		<form-bean name="ordenControlContrSearchPage"
+			type="org.apache.struts.action.DynaActionForm" />
+
+		<form-bean name="ordenControlAdapter"
+			type="org.apache.struts.action.DynaActionForm" />
+
+		<form-bean name="supervisorSearchPage"
+			type="org.apache.struts.action.DynaActionForm" />
+
+		<form-bean name="supervisorAdapter"
+			type="org.apache.struts.action.DynaActionForm" />
+
+		<form-bean name="insSupAdapter"
+			type="org.apache.struts.action.DynaActionForm" />
+
+		<form-bean name="ordenControlFisSearchPage"
+			type="org.apache.struts.action.DynaActionForm" />
+
+		<form-bean name="ordenControlFisAdapter"
+			type="org.apache.struts.action.DynaActionForm" />
+
+		<form-bean name="periodoOrdenAdapter"
+			type="org.apache.struts.action.DynaActionForm" />
+
+		<form-bean name="actaAdapter"
+			type="org.apache.struts.action.DynaActionForm" />
+
+		<form-bean name="ordConDocAdapter"
+			type="org.apache.struts.action.DynaActionForm" />
+
+		<form-bean name="InicioInvAdapter"
+			type="org.apache.struts.action.DynaActionForm" />
+
+		<form-bean name="plaFueDatAdapter"
+			type="org.apache.struts.action.DynaActionForm" />
+
+		<form-bean name="plaFueDatColAdapter"
+			type="org.apache.struts.action.DynaActionForm" />
+
+		<form-bean name="plaFueDatDetAdapter"
+			type="org.apache.struts.action.DynaActionForm" />
+
+		<form-bean name="comparacionAdapter"
+			type="org.apache.struts.action.DynaActionForm" />
+
+		<form-bean name="compFuenteAdapter"
+			type="org.apache.struts.action.DynaActionForm" />
+			
+		<form-bean name="ordConBasImpAdapter"    type="org.apache.struts.action.DynaActionForm"/>
+		
+		<form-bean name="detAjuAdapter"    type="org.apache.struts.action.DynaActionForm"/>
+		
+		<form-bean name="aliComFueColAdapter"    type="org.apache.struts.action.DynaActionForm"/>
+		
+		<form-bean name="mesaEntradaAdapter"    type="org.apache.struts.action.DynaActionForm"/>
+		
+		<form-bean name="aproOrdConAdapter"    type="org.apache.struts.action.DynaActionForm"/>
+		
+		<form-bean name="detAjuDocSopAdapter"    type="org.apache.struts.action.DynaActionForm"/>
+		
+		<form-bean name="docSopSearchPage" type="org.apache.struts.action.DynaActionForm" />
+
+		<form-bean name="docSopAdapter" type="org.apache.struts.action.DynaActionForm" />
+
+		
+		<form-bean name="comAjuAdapter"    type="org.apache.struts.action.DynaActionForm"/>
+
+	</form-beans>
+
+	<action-mappings>
+
+		<!-- Mantenedor de Inspector -->
+		<action path="/ef/BuscarInspector"
+			type="ar.gov.rosario.siat.ef.view.struts.BuscarInspectorDAction"
+			scope="request" validate="false" name="inspectorSearchPage"
+			parameter="method" input=".ef.definicion.view.inspectorSearchPage"
+			attribute="inspectorSearchPage">
+
+			<forward name="inspectorSearchPage"
+				path=".ef.definicion.view.inspectorSearchPage" />
+			<forward name="doSearch"
+				path="/ef/BuscarInspector.do?method=buscar" />
+			<forward name="administrarEncInspector"
+				path="/ef/AdministrarEncInspector.do?method=inicializar" />
+			<forward name="administrarInspector"
+				path="/ef/AdministrarInspector.do?method=inicializar" />
+		</action>
+
+		<action path="/ef/AdministrarInspector"
+			type="ar.gov.rosario.siat.ef.view.struts.AdministrarInspectorDAction"
+			scope="request" validate="false" name="inspectorAdapter"
+			parameter="method" input=".ef.definicion.view.inspectorEditAdapter"
+			attribute="inspectorAdapter">
+
+			<forward name="inspectorAdapter"
+				path=".ef.definicion.view.inspectorAdapter" />
+			<forward name="inspectorViewAdapter"
+				path=".ef.definicion.view.inspectorViewAdapter" />
+			<forward name="administrarEncInspector"
+				path="/ef/AdministrarEncInspector.do?method=inicializar" />
+			<forward name="buscarPersona"
+				path="/pad/BuscarPersona.do?method=inicializar" />
+			<forward name="administrarInsSup"
+				path="/ef/AdministrarInsSup.do?method=inicializar" />
+		</action>
+
+		<action path="/ef/AdministrarEncInspector"
+			type="ar.gov.rosario.siat.ef.view.struts.AdministrarEncInspectorDAction"
+			scope="request" validate="false" name="inspectorAdapter"
+			parameter="method"
+			input=".ef.definicion.view.inspectorEncEditAdapter"
+			attribute="inspectorAdapter">
+
+
+			<forward name="buscarPersona"
+				path="/pad/BuscarPersona.do?method=inicializar" />
+			<forward name="InspectorEncEditAdapter"
+				path=".ef.definicion.view.inspectorEncEditAdapter" />
+		</action>
+
+		<action path="/ef/AdministrarInsSup"
+			type="ar.gov.rosario.siat.ef.view.struts.AdministrarInsSupDAction"
+			scope="request" validate="false" name="insSupAdapter"
+			parameter="method" input=".ef.definicion.view.insSupEditAdapter"
+			attribute="insSupAdapter">
+
+			<forward name="InsSupEditAdapter"
+				path=".ef.definicion.view.insSupEditAdapter" />
+			<forward name="InsSupViewAdapter"
+				path=".ef.definicion.view.insSupViewAdapter" />
+
+		</action>
+
+		<!-- FIN Mantenedor de Inspector -->
+
+		<!-- Mantenedor de Supervisor -->
+		<action path="/ef/BuscarSupervisor"
+			type="ar.gov.rosario.siat.ef.view.struts.BuscarSupervisorDAction"
+			scope="request" validate="false" name="supervisorSearchPage"
+			parameter="method" input=".ef.definicion.view.supervisorSearchPage"
+			attribute="supervisorSearchPage">
+
+			<forward name="supervisorSearchPage"
+				path=".ef.definicion.view.supervisorSearchPage" />
+			<forward name="administrarSupervisor"
+				path="/ef/AdministrarSupervisor.do?method=inicializar" />
+		</action>
+
+		<action path="/ef/AdministrarSupervisor"
+			type="ar.gov.rosario.siat.ef.view.struts.AdministrarSupervisorDAction"
+			scope="request" validate="false" name="supervisorAdapter"
+			parameter="method" input=".ef.definicion.view.supervisorEditAdapter"
+			attribute="supervisorAdapter">
+
+			<forward name="supervisorEditAdapter"
+				path=".ef.definicion.view.supervisorEditAdapter" />
+			<forward name="supervisorViewAdapter"
+				path=".ef.definicion.view.supervisorViewAdapter" />
+			<forward name="buscarPersona"
+				path="/pad/BuscarPersona.do?method=inicializar" />
+		</action>
+
+		<!-- FIN Mantenedor de Supervisor -->
+
+		<!-- ADM. Plan Fiscal -->
+		<action path="/ef/BuscarPlanFiscal"
+			type="ar.gov.rosario.siat.ef.view.struts.BuscarPlanFiscalDAction"
+			scope="request" validate="false" name="planFiscalSearchPage"
+			parameter="method" input=".ef.planFiscal.view.planFiscalSearchPage"
+			attribute="planFiscalSearchPage">
+
+			<forward name="planFiscalSearchPage"
+				path=".ef.planFiscal.view.planFiscalSearchPage" />
+			<forward name="administrarPlanFiscal"
+				path="/ef/AdministrarPlanFiscal.do?method=inicializar" />
+		</action>
+
+		<action path="/ef/AdministrarPlanFiscal"
+			type="ar.gov.rosario.siat.ef.view.struts.AdministrarPlanFiscalDAction"
+			scope="request" validate="false" name="planFiscalAdapter"
+			parameter="method" input=".ef.planFiscal.view.planFiscalEditAdapter"
+			attribute="planFiscalAdapter">
+
+			<forward name="planFiscalEditAdapter"
+				path=".ef.planFiscal.view.planFiscalEditAdapter" />
+			<forward name="planFiscalViewAdapter"
+				path=".ef.planFiscal.view.planFiscalViewAdapter" />
+		</action>
+		<!-- FIN ADM. Plan Fiscal -->
+
+		<!-- Mantenedor de Investigador -->
+		<action path="/ef/BuscarInvestigador"
+			type="ar.gov.rosario.siat.ef.view.struts.BuscarInvestigadorDAction"
+			scope="request" validate="false" name="investigadorSearchPage"
+			parameter="method"
+			input=".ef.investigador.view.investigadorSearchPage"
+			attribute="investigadorSearchPage">
+
+			<forward name="investigadorSearchPage"
+				path=".ef.investigador.view.investigadorSearchPage" />
+			<forward name="administrarInvestigador"
+				path="/ef/AdministrarInvestigador.do?method=inicializar" />
+		</action>
+
+		<action path="/ef/AdministrarInvestigador"
+			type="ar.gov.rosario.siat.ef.view.struts.AdministrarInvestigadorDAction"
+			scope="request" validate="false" name="investigadorAdapter"
+			parameter="method"
+			input=".ef.investigador.view.investigadorEditAdapter"
+			attribute="investigadorAdapter">
+
+			<forward name="investigadorEditAdapter"
+				path=".ef.investigador.view.investigadorEditAdapter" />
+			<forward name="investigadorViewAdapter"
+				path=".ef.investigador.view.investigadorViewAdapter" />
+			<forward name="buscarPersona"
+				path="/pad/BuscarPersona.do?method=inicializar" />
+		</action>
+		<!-- FIN Mantenedor de Investigador -->
+
+		<!-- Mantenedor de OpeInv -->
+		<action path="/ef/BuscarOpeInv"
+			type="ar.gov.rosario.siat.ef.view.struts.BuscarOpeInvDAction"
+			scope="request" validate="false" name="opeInvSearchPage"
+			parameter="method" input=".ef.OpeInv.view.opeInvSearchPage"
+			attribute="opeInvSearchPage">
+
+			<forward name="opeInvSearchPage"
+				path=".ef.opeInv.view.opeInvSearchPage" />
+			<forward name="administrarOpeInv"
+				path="/ef/AdministrarOpeInv.do?method=inicializar" />
+			<forward name="administrarOpeInvCon"
+				path="/ef/BuscarOpeInvCon.do?method=inicializar" />
+		</action>
+
+		<action path="/ef/AdministrarOpeInv"
+			type="ar.gov.rosario.siat.ef.view.struts.AdministrarOpeInvDAction"
+			scope="request" validate="false" name="opeInvAdapter"
+			parameter="method" input=".ef.opeInv.view.opeInvEditAdapter"
+			attribute="opeInvAdapter">
+
+			<forward name="opeInvEditAdapter"
+				path=".ef.opeInv.view.opeInvEditAdapter" />
+			<forward name="opeInvViewAdapter"
+				path=".ef.opeInv.view.opeInvViewAdapter" />
+		</action>
+		<!-- FIN Mantenedor de OpeInv -->
+
+		<!-- ADM OpeInvCon -->
+		<action path="/ef/BuscarOpeInvCon"
+			type="ar.gov.rosario.siat.ef.view.struts.BuscarOpeInvConDAction"
+			scope="request" validate="false" name="opeInvConSearchPage"
+			parameter="method" input=".ef.OpeInvCon.view.opeInvConSearchPage"
+			attribute="opeInvConSearchPage">
+
+			<forward name="opeInvConSearchPage"
+				path=".ef.opeInvCon.view.opeInvConSearchPage" />
+			<forward name="administrarOpeInvCon"
+				path="/ef/AdministrarOpeInvCon.do?method=inicializar" />
+			<forward name="administrarOpeInvBus"
+				path="/ef/BuscarOpeInvBus.do?method=inicializar" />
+		</action>
+
+		<action path="/ef/AdministrarOpeInvCon"
+			type="ar.gov.rosario.siat.ef.view.struts.AdministrarOpeInvConDAction"
+			scope="request" validate="false" name="opeInvConAdapter"
+			parameter="method" input=".ef.opeInvCon.view.opeInvConEditAdapter"
+			attribute="opeInvConAdapter">
+
+			<forward name="opeInvConEditAdapter"
+				path=".ef.opeInvCon.view.opeInvConEditAdapter" />
+			<forward name="opeInvConViewAdapter"
+				path=".ef.opeInvCon.view.opeInvConViewAdapter" />
+			<forward name="buscarPersona"
+				path="/pad/BuscarPersona.do?method=inicializar" />
+			<forward name="estadoCuentaAdapter"
+				path="/gde/AdministrarLiqEstadoCuenta.do?method=inicializar" />
+			<forward name="testMapa"
+				path="/ef/investigacion/testMapa.jsp" />
+		</action>
+
+
+
+		<!-- FIN ADM OpeInvCon -->
+
+		<!--ADM OpeInvBUs -->
+		<action path="/ef/BuscarOpeInvBus"
+			type="ar.gov.rosario.siat.ef.view.struts.BuscarOpeInvBusDAction"
+			scope="request" validate="false" name="opeInvBusSearchPage"
+			parameter="method" input=".ef.opeInvBus.view.opeInvBusSearchPage"
+			attribute="opeInvBusSearchPage">
+
+			<forward name="opeInvBusSearchPage"
+				path=".ef.opeInvBus.view.opeInvBusSearchPage" />
+			<forward name="administrarOpeInvBus"
+				path="/ef/AdministrarOpeInvBus.do?method=inicializar" />
+			<forward name="admProcesoOpeInvBus"
+				path="/ef/AdministrarProcesoOpeInvBus.do?method=inicializar" />
+		</action>
+
+		<action path="/ef/AdministrarOpeInvBus"
+			type="ar.gov.rosario.siat.ef.view.struts.AdministrarOpeInvBusDAction"
+			scope="request" validate="false" name="opeInvBusAdapter"
+			parameter="method" input=".ef.opeInvBus.view.opeInvBusEditAdapter"
+			attribute="opeInvBusAdapter">
+
+			<forward name="opeInvBusEditAdapter"
+				path=".ef.opeInvBus.view.opeInvBusEditAdapter" />
+			<forward name="opeInvBusViewAdapter"
+				path=".ef.opeInvBus.view.opeInvBusViewAdapter" />
+		</action>
+
+		<action path="/ef/AdministrarProcesoOpeInvBus"
+			type="ar.gov.rosario.siat.ef.view.struts.AdministrarProcesoOpeInvBusDAction"
+			scope="request" validate="false" name="procesoOpeInvBusAdapter"
+			parameter="method" input=".ef.OpeInvBus.view.procesoOpeInvBusAdapter"
+			attribute="procesoOpeInvBusAdapter">
+
+			<forward name="administrarAdpCorridaOpeInvBus"
+				path="/pro/AdministrarAdpCorrida.do?method=inicializar" />
+			<forward name="procesoOpeInvBusAdapter"
+				path=".ef.opeInvBus.view.procesoOpeInvBusAdapter" />
+			<forward name="administrarOpeInvBus"
+				path="/ef/AdministrarOpeInvBus.do?method=inicializar" />
+		</action>
+
+
+		<!--FIN ADM OpeInvBUs -->
+
+
+		<!-- ABM OpeInvConActas -->
+		<action path="/ef/BuscarOpeInvConActas"
+			type="ar.gov.rosario.siat.ef.view.struts.BuscarOpeInvConActasDAction"
+			scope="request" validate="false" name="opeInvConActasSearchPage"
+			parameter="method" input=".ef.OpeInvCon.view.opeInvConActaSearchPage"
+			attribute="opeInvConActasSearchPage">
+
+			<forward name="opeInvConActaSearchPage"
+				path=".ef.opeInvCon.view.opeInvConActaSearchPage" />
+			<forward name="administrarOpeInvCon"
+				path="/ef/AdministrarOpeInvCon.do?method=inicializar" />
+			<forward name="asignarInvAdapter"
+				path="/ef/AdministrarOpeInvConActas.do?method=inicializar" />
+			<forward name="buscarPersona"
+				path="/pad/BuscarPersona.do?method=inicializar" />
+		</action>
+
+		<action path="/ef/AdministrarOpeInvConActas"
+			type="ar.gov.rosario.siat.ef.view.struts.AdministrarOpeInvConActasDAction"
+			scope="request" validate="false" name="actasInicioAdapterVO"
+			parameter="method"
+			input=".ef.opeInvConActas.view.actasInicioHojaRutaAdapterVO"
+			attribute="actasInicioAdapterVO">
+
+			<forward name="asignarInvAdapter"
+				path=".ef.opeInvConActas.view.actasInicioInvestigadorAdapterVO" />
+			<forward name="generarHojaRuta"
+				path=".ef.opeInvConActas.view.actasInicioHojaRutaAdapterVO" />
+			<forward name="verMapa"
+				path=".ef.opeInvConActas.view.verMapa" />
+		</action>
+		<!-- FIN ABM OpeInvConActas -->
+
+		<!-- ADM Actas -->
+		<action path="/ef/BuscarActaInv"
+			type="ar.gov.rosario.siat.ef.view.struts.BuscarActaInvDAction"
+			scope="request" validate="false" name="actaInvSearchPage"
+			parameter="method" input=".ef.ActaInv.view.ActaInvSearchPage"
+			attribute="actaInvSearchPage">
+
+			<forward name="actaInvSearchPage"
+				path=".ef.ActaInv.view.ActaInvSearchPage" />
+			<forward name="verOpeInvCon"
+				path="/ef/AdministrarOpeInvCon.do?method=inicializar" />
+			<forward name="administrarActaInv"
+				path="/ef/AdministrarActaInv.do?method=inicializar" />
+		</action>
+
+		<action path="/ef/AdministrarActaInv"
+			type="ar.gov.rosario.siat.ef.view.struts.AdministrarActaInvDAction"
+			scope="request" validate="false" name="actaInvAdapterVO"
+			parameter="method" input=".ef.actaInv.view.actasInvAdapterVO"
+			attribute="actaInvAdapterVO">
+
+			<forward name="actaInvAdapter"
+				path=".ef.actaInv.view.actasInvAdapterVO" />
+
+		</action>
+		<!-- FIN ADM Actas -->
+
+		<!-- ADM Aprobacion de actas -->
+		<action path="/ef/BuscarAprobacionActaInv"
+			type="ar.gov.rosario.siat.ef.view.struts.BuscarAprobacionActaInvDAction"
+			scope="request" validate="false" name="aprobacionActaInvSearchPage"
+			parameter="method"
+			input=".ef.ActaInv.view.aprobacionActaInvSearchPage"
+			attribute="aprobacionActaInvSearchPage">
+
+			<forward name="aprobacionActaInvSearchPage"
+				path=".ef.ActaInv.view.aprobacionActaInvSearchPage" />
+			<forward name="aprovActInv"
+				path="/ef/AdministrarAprobActaInv.do?method=inicializar" />
+		</action>
+
+		<action path="/ef/AdministrarAprobActaInv"
+			type="ar.gov.rosario.siat.ef.view.struts.AdministrarAprobActaInvDAction"
+			scope="request" validate="false" name="aprobActaInvAdapterVO"
+			parameter="method" input=".ef.actaInv.view.aprobActaInvAdapterVO"
+			attribute="aprobActaInvAdapterVO">
+
+			<forward name="aprobActaInvAdapter"
+				path=".ef.actaInv.view.aprobActaInvAdapterVO" />
+
+		</action>
+
+		<!-- FIN ADM Aprobacion de actas -->
+
+		<!-- ABM Orden Control -->
+		<action path="/ef/BuscarOrdenControl"
+			type="ar.gov.rosario.siat.ef.view.struts.BuscarOrdenControlDAction"
+			scope="request" validate="false" name="ordenControlSearchPage"
+			parameter="method"
+			input=".ef.ordenControl.view.ordenControlSearchPage"
+			attribute="ordenControlSearchPage">
+
+			<forward name="ordenControlSearchPage"
+				path=".ef.ordenControl.view.ordenControlSearchPage" />
+			<forward name="buscarContr"
+				path="/ef/BuscarOrdenControlContr.do?method=inicializar" />
+			<forward name="estadoCuentaAdapter"
+				path="/gde/AdministrarLiqEstadoCuenta.do?method=inicializar" />
+			<forward name="admOrdenControl"
+				path="/ef/AdministrarOrdenControl.do?method=inicializar" />
+			<forward name="buscarPersona"
+				path="/pad/BuscarPersona.do?method=inicializar" />
+			<forward name="admOrdenControlInv"
+				path="/ef/AdministrarOrdenControl.do?method=inicializar" />
+		</action>
+
+		<action path="/ef/BuscarOrdenControlContr"
+			type="ar.gov.rosario.siat.ef.view.struts.BuscarOrdenControlContrDAction"
+			scope="request" validate="false" name="ordenControlContrSearchPage"
+			parameter="method"
+			input=".ef.ordenControlContr.view.ordenControlContrSearchPage"
+			attribute="ordenControlContrSearchPage">
+
+			<forward name="ordenControlContrSearchPage"
+				path=".ef.ordenControlContr.view.ordenControlContrSearchPage" />
+			<forward name="estadoCuentaAdapter"
+				path="/gde/AdministrarLiqEstadoCuenta.do?method=inicializar" />
+			<forward name="buscarPersona"
+				path="/pad/BuscarPersona.do?method=inicializar" />
+			<forward name="inicializarDeudaContrib"        	path="/gde/BuscarDeudaContrib.do?method=inicializar" />
+		</action>
+
+		<action path="/ef/AdministrarOrdenControl"
+			type="ar.gov.rosario.siat.ef.view.struts.AdministrarOrdenControlDAction"
+			scope="request" validate="false" name="ordenControlAdapter"
+			parameter="method"
+			input=".ef.ordenControlContr.view.ordenControlAdapter"
+			attribute="ordenControlAdapter">
+
+			<forward name="ordenControlAdapter"
+				path=".ef.ordenControlContr.view.ordenControlAdapter" />
+			<forward name="ordenControlImprimirAdapter"
+				path=".ef.ordenControlContr.view.ordenControlAdapter.imprimir" />
+			<forward name="ordenControlInvEditAdapter"
+				path=".ef.ordenControl.view.ordenControlInvEditAdapter" />
+		</action>
+		<!-- ABM Orden Control -->
+
+		<!-- Buscar OrdenControlFis -->
+		<action path="/ef/BuscarOrdenControlFis"
+			type="ar.gov.rosario.siat.ef.view.struts.BuscarOrdenControlFisDAction"
+			scope="request" validate="false" name="ordenControlFisSearchPage"
+			parameter="method"
+			input=".ef.ordenControl.view.ordenControlFisSearchPage"
+			attribute="ordenControlFisSearchPage">
+
+			<forward name="ordenControlFisSearchPage"
+				path=".ef.ordenControl.view.ordenControlFisSearchPage" />
+			<forward name="buscarPersona"
+				path="/pad/BuscarPersona.do?method=inicializar" />
+			<forward name="buscarInspector"
+				path="/ef/BuscarInspector.do?method=inicializar" />
+			<forward name="buscarSupervisor"
+				path="/ef/BuscarSupervisor.do?method=inicializar" />
+			<forward name="admOrdenControlFis"
+				path="/ef/AdministrarOrdenControlFis.do?method=inicializar" />
+		</action>
+		<!-- FIN Buscar OrdenControlFis -->
+
+		<!-- ADM OrdenControl fiscal -->
+		<action path="/ef/AdministrarOrdenControlFis"
+			type="ar.gov.rosario.siat.ef.view.struts.AdministrarOrdenControlFisDAction"
+			scope="request" validate="false" name="ordenControlFisAdapter"
+			parameter="method"
+			input=".ef.ordenControlFis.view.ordenControlFisEditAdapter"
+			attribute="ordenControlFisAdapter">
+
+			<forward name="ordenControlFisEditAdapter"
+				path=".ef.ordenControlFis.view.ordenControlFisEditAdapter" />
+			<forward name="ordenControlFisViewAdapter"
+				path=".ef.ordenControlFis.view.ordenControlFisViewAdapter" />
+			<forward name="estadoCuentaAdapter"
+				path="/gde/AdministrarLiqEstadoCuenta.do?method=inicializar" />
+			<forward name="ordenControlFisAdapter"
+				path=".ef.ordenControlFis.view.ordenControlFisAdapter" />
+
+			<forward name="adminisrtarPeriodoOrden"
+				path="/ef/AdministrarPeriodoOrden.do?method=inicializar" />
+			<forward name="administrarEncActa"
+				path="/ef/AdministrarEncActa.do?method=inicializar" />
+			<forward name="administrarEncPlaFueDat"
+				path="/ef/AdministrarEncPlaFueDat.do?method=inicializar" />
+			<forward name="administrarPlaFueDat"
+				path="/ef/AdministrarPlaFueDat.do?method=inicializar" />
+			<forward name="administrarActa"
+				path="/ef/AdministrarActa.do?method=inicializar" />
+			<forward name="administrarInicioInv"
+				path="/ef/AdministrarInicioInv.do?method=inicializar" />
+			<forward name="administrarEncComparacion"
+				path="/ef/AdministrarEncComparacion.do?method=inicializar" />
+			<forward name="administrarComparacion"
+               path="/ef/AdministrarComparacion.do?method=inicializar" />
+			<forward name="administrarOrdConBasImp"
+				path="/ef/AdministrarOrdConBasImp.do?method=inicializar" />					
+            <forward name="asignarOrdenAdapter"
+				path=".ef.ordenControlFis.view.asignarOrdenControlFisAdapter" /> 
+            <forward name="administrarEncDetAju"
+				path="/ef/AdministrarEncDetAju.do?method=inicializar" /> 
+            <forward name="administrarDetAju"
+				path="/ef/AdministrarDetAju.do?method=inicializar" />				
+            <forward name="administrarMesaEntrada"
+				path="/ef/AdministrarMesaEntrada.do?method=inicializar" />				
+			<forward name="administrarAproOrdCon"	path="/ef/AdministrarAproOrdCon.do?method=inicializar"/>
+			<forward name="administrarDetAjuDocSop"	path="/ef/AdministrarDetAjuDocSop.do?method=inicializar"/>
+			<forward name="administrarComAju" 		path="/ef/AdministrarComAju.do?method=inicializar" />
+			<forward name="administrarEncComAju" 	path="/ef/AdministrarEncComAju.do?method=inicializar" />
+		</action>
+		<!-- FIN ADM OrdenControl fiscal -->
+
+		<!-- PeriodoOrden -->
+		<action path="/ef/AdministrarPeriodoOrden"
+			type="ar.gov.rosario.siat.ef.view.struts.AdministrarPeriodoOrdenDAction"
+			scope="request" validate="false" name="periodoOrdenAdapter"
+			parameter="method"
+			input=".ef.periodoOrdenAdapter.view.ordenControlFisEditAdapter"
+			attribute="periodoOrdenAdapter">
+
+			<forward name="periodoOrdenEditAdapter"
+				path=".ef.periodoOrdenAdapter.view.ordenControlFisEditAdapter" />
+			<forward name="periodoOrdenViewAdapter"
+				path=".ef.periodoOrdenAdapter.view.ordenControlFisViewAdapter" />
+		</action>
+		<!-- PeriodoOrden -->
+
+		<!-- Acta -->
+		<action path="/ef/AdministrarEncActa"
+			type="ar.gov.rosario.siat.ef.view.struts.AdministrarEncActaDAction"
+			scope="request" validate="false" name="actaAdapter"
+			parameter="method"
+			input=".ef.actaEncEditAdapter.view.actaEncEditAdapter"
+			attribute="actaAdapter">
+
+			<forward name="actaEncEditAdapter"
+				path=".ef.actaEncEditAdapter.view.actaEncEditAdapter" />
+			<forward name="buscarPersona"
+				path="/pad/BuscarPersona.do?method=inicializar" />
+		</action>
+
+		<action path="/ef/AdministrarActa"
+			type="ar.gov.rosario.siat.ef.view.struts.AdministrarActaDAction"
+			scope="request" validate="false" name="actaAdapter"
+			parameter="method" input=".ef.actaAdapter.view.actaAdapter"
+			attribute="actaAdapter">
+
+			<forward name="actaAdapter"
+				path=".ef.actaAdapter.view.actaAdapter" />
+			<forward name="actaViewAdapter"
+				path=".ef.actaViewAdapter.view.actaViewAdapter" />
+			<forward name="administrarEncActa"
+				path="/ef/AdministrarEncActa.do?method=inicializar" />
+			<forward name="administarOrdConDoc"
+				path="/ef/AdministrarOrdConDoc.do?method=inicializar" />
+			<forward name="imprimir"
+				path="/ef/AdministrarActa.do?method=imprimir" />
+		</action>
+		<!-- Acta -->
+
+		<!-- OrdConDoc -->
+		<action path="/ef/AdministrarOrdConDoc"
+			type="ar.gov.rosario.siat.ef.view.struts.AdministrarOrdConDocDAction"
+			scope="request" validate="false" name="ordConDocAdapter"
+			parameter="method" input=".ef.ordConDocAdapter.edit.ordConDocAdapter"
+			attribute="ordConDocAdapter">
+
+			<forward name="ordConDocEditAdapter"
+				path=".ef.ordConDocAdapter.edit.ordConDocAdapter" />
+			<forward name="ordConDocViewAdapter"
+				path=".ef.ordConDocAdapter.view.ordConDocAdapter" />
+		</action>
+		<!-- OrdConDoc -->
+
+		<!-- InicioInv -->
+		<action path="/ef/AdministrarInicioInv"
+			type="ar.gov.rosario.siat.ef.view.struts.AdministrarInicioInvDAction"
+			scope="request" validate="false" name="InicioInvAdapter"
+			parameter="method" input=".ef.inicioInvAdapter.edit.inicioInvAdapter"
+			attribute="inicioInvAdapter">
+
+			<forward name="inicioInvEditAdapter"
+				path=".ef.inicioInvAdapter.edit.inicioInvAdapter" />
+		</action>
+		<!-- InicioInv -->
+
+		<!-- PlaFueDat -->
+		<action path="/ef/AdministrarEncPlaFueDat"
+			type="ar.gov.rosario.siat.ef.view.struts.AdministrarEncPlaFueDatDAction"
+			scope="request" validate="false" name="plaFueDatAdapter"
+			parameter="method"
+			input=".ef.plaFueDatEncEditAdapter.view.plaFueDatEncEditAdapter"
+			attribute="plaFueDatAdapter">
+
+			<forward name="PlaFueDatEncEditAdapter"
+				path=".ef.plaFueDatEncEditAdapter.view.plaFueDatEncEditAdapter" />
+		</action>
+
+		<action path="/ef/AdministrarPlaFueDat"
+			type="ar.gov.rosario.siat.ef.view.struts.AdministrarPlaFueDatDAction"
+			scope="request" validate="false" name="plaFueDatAdapter"
+			parameter="method" input=".ef.plaFueDatAdapter.view.plaFueDatAdapter"
+			attribute="plaFueDatAdapter">
+
+			<forward name="plaFueDatAdapter"
+				path=".ef.plaFueDatAdapter.view.plaFueDatAdapter" />
+			<forward name="plaFueDatViewAdapter"
+				path=".ef.plaFueDatViewAdapter.view.plaFueDatViewAdapter" />
+			<forward name="administrarEncPlaFueDat"
+				path="/ef/AdministrarEncPlaFueDat.do?method=inicializar" />
+			<forward name="administrarPlaFueDatCol"
+				path="/ef/AdministrarPlaFueDatCol.do?method=inicializar" />
+			<forward name="administrarPlaFueDatDet"
+				path="/ef/AdministrarPlaFueDatDet.do?method=inicializar" />
+			<forward name="imprimir"
+				path="/ef/AdministrarActa.do?method=imprimir" />				
+		</action>
+		<!-- PlaFueDat -->
+
+		<!-- PlaFueDatCol -->
+		<action path="/ef/AdministrarPlaFueDatCol"
+			type="ar.gov.rosario.siat.ef.view.struts.AdministrarPlaFueDatColDAction"
+			scope="request" validate="false" name="plaFueDatColAdapter"
+			parameter="method"
+			input=".ef.plaFueDatColAdapter.edit.plaFueDatColEditAdapter"
+			attribute="plaFueDatColAdapter">
+
+			<forward name="plaFueDatColViewAdapter"
+				path=".ef.plaFueDatColAdapter.view.plaFueDatColViewAdapter" />
+			<forward name="plaFueDatColEditAdapter"
+				path=".ef.plaFueDatColAdapter.edit.plaFueDatColEditAdapter" />
+		</action>
+		<!-- PlaFueDatCol -->
+		
+		<!-- PlaFueDatDet -->
+		<action path="/ef/AdministrarPlaFueDatDet"
+			type="ar.gov.rosario.siat.ef.view.struts.AdministrarPlaFueDatDetDAction"
+			scope="request" validate="false" name="plaFueDatDetAdapter"
+			parameter="method"
+			input=".ef.plaFueDatDetAdapter.edit.plaFueDatDetEditAdapter"
+			attribute="plaFueDatDetAdapter">
+
+			<forward name="plaFueDatDetViewAdapter" path=".ef.plaFueDatDetAdapter.view.plaFueDatDetViewAdapter" />
+			<forward name="plaFueDatDetEditAdapter" path=".ef.plaFueDatDetAdapter.edit.plaFueDatDetEditAdapter" />
+		</action>
+		<!-- PlaFueDatDet -->
+		
+        <!-- Mantenedor de FuenteInfo -->
+		<action path="/ef/BuscarFuenteInfo"
+			type="ar.gov.rosario.siat.ef.view.struts.BuscarFuenteInfoDAction"
+			scope="request" validate="false" name="fuenteInfoSearchPage"
+			parameter="method" input=".ef.definicion.view.fuenteInfoSearchPage"
+			attribute="fuenteInfoSearchPage">
+
+			<forward name="fuenteInfoSearchPage"
+				path=".ef.definicion.view.fuenteInfoSearchPage" />
+			<forward name="administrarFuenteInfo"
+				path="/ef/AdministrarFuenteInfo.do?method=inicializar" />
+		</action>
+
+		<action path="/ef/AdministrarFuenteInfo"
+			type="ar.gov.rosario.siat.ef.view.struts.AdministrarFuenteInfoDAction"
+			scope="request" validate="false" name="fuenteInfoAdapter"
+			parameter="method" input=".ef.definicion.view.fuenteInfoEditAdapter"
+			attribute="fuenteInfoAdapter">
+
+			<forward name="fuenteInfoEditAdapter"
+				path=".ef.definicion.view.fuenteInfoEditAdapter" />
+			<forward name="fuenteInfoViewAdapter"
+				path=".ef.definicion.view.fuenteInfoViewAdapter" />
+			<forward name="buscarPersona"
+				path="/pad/BuscarPersona.do?method=inicializar" />
+		</action>
+
+        <!-- ADM SolicitudEmiPerRetro-->
+		<action path="/ef/AdministrarSolicitudEmiPerRetro"
+			type="ar.gov.rosario.siat.ef.view.struts.AdministrarSolicitudEmiPerRetroDAction"
+			scope="request" validate="false" name="ordenControlAdapter"
+			parameter="method"
+			input=".ef.fiscalizacion.view.solicitudEmiPerRetroEditAdapter"
+			attribute="ordenControlAdapter">
+			
+				<forward name="solicitudEmiPerRetroEditAdapter" path=".ef.fiscalizacion.view.solicitudEmiPerRetroEditAdapter" />
+		   
+		 </action>
+         <!-- ADM SolicitudEmiPerRetro-->
+  
+    	<!-- Mantenedor de Comparacion -->
+		<action
+     		path="/ef/AdministrarEncComparacion"
+	        type="ar.gov.rosario.siat.ef.view.struts.AdministrarEncComparacionDAction"
+		    scope="request"
+        	validate="false"
+	        name="comparacionAdapter"
+            parameter="method"
+    	    input=".ef.fiscalizacion.view.comparacionEncEditAdapter"
+	        attribute="comparacionAdapter">
+
+    	    <forward name="comparacionEncEditAdapter"     path=".ef.fiscalizacion.view.comparacionEncEditAdapter" />
+	    </action>
+	    
+   		<action
+     		path="/ef/AdministrarComparacion"
+	        type="ar.gov.rosario.siat.ef.view.struts.AdministrarComparacionDAction"
+		    scope="request"
+        	validate="false"
+	        name="comparacionAdapter"
+            parameter="method"
+    	    input=".ef.fiscalizacion.view.comparacionAdapter"
+	        attribute="comparacionAdapter">
+            
+    	    <forward name="comparacionViewAdapter"    	path=".ef.fiscalizacion.view.comparacionViewAdapter" />
+    	    <forward name="comparacionAdapter"        	path=".ef.fiscalizacion.view.comparacionAdapter" />
+     	    <forward name="administrarEncComparacion" 	path="/ef/AdministrarEncComparacion.do?method=inicializar" />
+    	    <forward name="administrarCompFuente" 		path="/ef/AdministrarCompFuente.do?method=inicializar" />
+	    </action>
+	    <!-- Mantenedor de Comparacion -->
+	    
+	    <!-- Administrar CompFuente -->
+	    <action
+     		path="/ef/AdministrarCompFuente"
+	        type="ar.gov.rosario.siat.ef.view.struts.AdministrarCompFuenteDAction"
+		    scope="request"
+        	validate="false"
+	        name="compFuenteAdapter"
+            parameter="method"
+    	    input=".ef.fiscalizacion.view.compFuenteEditAdapter"
+	        attribute="compFuenteAdapter">
+            
+    	    <forward name="compFuenteViewAdapter"      path=".ef.fiscalizacion.view.compFuenteViewAdapter" />
+    	    <forward name="compFuenteEditAdapter"      path=".ef.fiscalizacion.view.compFuenteEditAdapter" />
+        
+	    </action>
+	    
+	    <!-- Mantenedor de OrdConBasImp -->
+		<action
+     		path="/ef/AdministrarOrdConBasImp"
+	        type="ar.gov.rosario.siat.ef.view.struts.AdministrarOrdConBasImpDAction"
+		    scope="request"
+        	validate="false"
+	        name="ordConBasImpAdapter"
+            parameter="method"
+    	    input=".ef.fiscalizacion.view.ordConBasImpEditAdapter"
+	        attribute="ordConBasImpAdapter">
+            
+    	    <forward name="ordConBasImpViewAdapter"				path=".ef.fiscalizacion.view.ordConBasImpViewAdapter" />
+    	    <forward name="ordConBasImpEditAdapter"     		path=".ef.fiscalizacion.view.ordConBasImpEditAdapter" />
+       	    <forward name="ordConBasImpAdapter"					path=".ef.fiscalizacion.view.ordConBasImpAdapter" />
+       	    <forward name="ordConBasImpAjEditAdapter"   		path=".ef.fiscalizacion.view.ordConBasImpAjEditAdapter" />
+       	    <forward name="ordConBasImpAjustarPeriodosAdapter"  path=".ef.fiscalizacion.view.ordConBasImpAjustarPeriodosAdapter" />
+       	    <forward name="ordConBasImpAlicuotasAdapter"  		path=".ef.fiscalizacion.view.ordConBasImpAlicuotasAdapter" />
+	    </action>
+	    
+	    <!-- Mantenedor de DetAju -->
+		<action
+     		path="/ef/AdministrarDetAju"
+	        type="ar.gov.rosario.siat.ef.view.struts.AdministrarDetAjuDAction"
+		    scope="request"
+        	validate="false"
+	        name="detAjuAdapter"
+            parameter="method"
+    	    input=".ef.fiscalizacion.view.detAjuAdapter"
+	        attribute="detAjuAdapter">
+            
+    	    <forward name="detAjuViewAdapter"    		path=".ef.fiscalizacion.view.detAjuViewAdapter" />
+    	    <forward name="detAjuAdapter"        		path=".ef.fiscalizacion.view.detAjuAdapter" />
+     	    <forward name="administrarEncDetAju" 		path="/ef/AdministrarEncDetAju.do?method=inicializar" />
+    	    <forward name="administrarDetAjuDet" 		path="/ef/AdministrarDetAjuDet.do?method=inicializar" />
+    	    <forward name="administrarAliComFueCol"  	path="/ef/AdministrarAliComFueCol.do?method=inicializar" />
+    	    <forward name="agregarMasivo"        		path=".ef.fiscalizacion.view.detAjuAgregarMasivoAdapter" />
+    	    <forward name="modifRetAdapter"	     	 	path=".ef.fiscalizacion.view.detAjuModifRetAdapter" />
+	    </action>
+	    
+		<action
+     		path="/ef/AdministrarEncDetAju"
+	        type="ar.gov.rosario.siat.ef.view.struts.AdministrarEncDetAjuDAction"
+		    scope="request"
+        	validate="false"
+	        name="detAjuAdapter"
+            parameter="method"
+    	    input=".ef.fiscalizacion.view.detAjuEncEditAdapter"
+	        attribute="detAjuAdapter">
+
+    	    <forward name="detAjuEncEditAdapter"     path=".ef.fiscalizacion.view.detAjuEncEditAdapter" />    	        	    
+	    </action>
+	    
+	    <!-- Administrar DetAjuDet -->
+	    <action
+     		path="/ef/AdministrarDetAjuDet"
+	        type="ar.gov.rosario.siat.ef.view.struts.AdministrarDetAjuDetDAction"
+		    scope="request"
+        	validate="false"
+	        name="detAjuDetAdapter"
+            parameter="method"
+    	    input=".ef.fiscalizacion.view.detAjuDetEditAdapter"
+	        attribute="detAjuDetAdapter">
+            
+    	    <forward name="detAjuDetViewAdapter"      path=".ef.fiscalizacion.view.detAjuDetViewAdapter" />
+    	    <forward name="detAjuDetEditAdapter"      path=".ef.fiscalizacion.view.detAjuDetEditAdapter" />
+	    </action>
+	    <!-- Fin Mantenedor de DetAju -->
+	    
+	    <!-- AliComFueCol -->
+	    <action
+     		path="/ef/AdministrarAliComFueCol"
+	        type="ar.gov.rosario.siat.ef.view.struts.AdministrarAliComFueColDAction"
+		    scope="request"
+        	validate="false"
+	        name="aliComFueColAdapter"
+            parameter="method"
+    	    input=".ef.fiscalizacion.view.aliComFueColEditAdapter"
+	        attribute="aliComFueColAdapter">
+            
+    	    <forward name="aliComFueColViewAdapter"		 		 path=".ef.fiscalizacion.view.aliComFueColViewAdapter" />
+    	    <forward name="aliComFueColEditAdapter"      		 path=".ef.fiscalizacion.view.aliComFueColEditAdapter" />
+    	    <forward name="aliComFueColInitAdapter"      		 path=".ef.fiscalizacion.view.aliComFueColInitAdapter" />
+    	    <forward name="aliComFueColHistAlicuotaAdapter"      path=".ef.fiscalizacion.view.aliComFueColHistAlicuotaAdapter" />
+	    </action>
+	    <!-- FIN AliComFueCol -->
+	    	    	  
+	    <!-- Mesa Entrada -->
+   		<action
+     		path="/ef/AdministrarMesaEntrada"
+	        type="ar.gov.rosario.siat.ef.view.struts.AdministrarMesaEntradaDAction"
+		    scope="request"
+        	validate="false"
+	        name="mesaEntradaAdapter"
+            parameter="method"
+    	    input=".ef.fiscalizacion.view.mesaEntradaEditAdapter"
+	        attribute="mesaEntradaAdapter">
+            
+    	    <forward name="mesaEntradaViewAdapter"		path=".ef.fiscalizacion.view.mesaEntradaViewAdapter" />
+    	    <forward name="mesaEntradaEditAdapter"      path=".ef.fiscalizacion.view.mesaEntradaEditAdapter" />
+	    </action>
+	    
+	    <!-- AproOrdCon -->
+   		<action
+     		path="/ef/AdministrarAproOrdCon"
+	        type="ar.gov.rosario.siat.ef.view.struts.AdministrarAproOrdConDAction"
+		    scope="request"
+        	validate="false"
+	        name="aproOrdConAdapter"
+            parameter="method"
+    	    input=".ef.fiscalizacion.view.aproOrdConEditAdapter"
+	        attribute="aproOrdConAdapter">
+            
+    	    <forward name="aproOrdConViewAdapter"		path=".ef.fiscalizacion.view.aproOrdConViewAdapter" />
+    	    <forward name="aproOrdConEditAdapter"      path=".ef.fiscalizacion.view.aproOrdConEditAdapter" />
+	    </action>	
+	    <!-- FIN AproOrdCon -->
+	    
+	    <!-- DetAjuDocSop -->
+   		<action
+     		path="/ef/AdministrarDetAjuDocSop"
+	        type="ar.gov.rosario.siat.ef.view.struts.AdministrarDetAjuDocSopDAction"
+		    scope="request"
+        	validate="false"
+	        name="detAjuDocSopAdapter"
+            parameter="method"
+    	    input=".ef.fiscalizacion.view.detAjuDocSopEditAdapter"
+	        attribute="detAjuDocSopAdapter">
+            
+    	    <forward name="detAjuDocSopViewAdapter"		path=".ef.fiscalizacion.view.detAjuDocSopViewAdapter" />
+    	    <forward name="detAjuDocSopEditAdapter"     path=".ef.fiscalizacion.view.detAjuDocSopEditAdapter" />
+	    </action>    
+	    <!-- FIN DetAjuDocSop -->
+	    
+	    <!-- ComAju -->
+		<action
+     		path="/ef/AdministrarEncComAju"
+	        type="ar.gov.rosario.siat.ef.view.struts.AdministrarEncComAjuDAction"
+		    scope="request"
+        	validate="false"
+	        name="comAjuAdapter"
+            parameter="method"
+    	    input=".ef.fiscalizacion.view.comAjuEncEditAdapter"
+	        attribute="comAjuAdapter">
+
+    	    <forward name="comAjuEncEditAdapter"     path=".ef.fiscalizacion.view.comAjuEncEditAdapter" />
+	    </action>
+	    
+	    <action
+     		path="/ef/AdministrarComAju"
+	        type="ar.gov.rosario.siat.ef.view.struts.AdministrarComAjuDAction"
+		    scope="request"
+        	validate="false"
+	        name="comAjuAdapter"
+            parameter="method"
+    	    input=".ef.fiscalizacion.view.comAjuEditAdapter"
+	        attribute="comAjuAdapter">
+            
+    	    <forward name="comAjuViewAdapter"		path=".ef.fiscalizacion.view.comAjuViewAdapter" />
+    	    <forward name="comAjuEditAdapter"   	path=".ef.fiscalizacion.view.comAjuEditAdapter" />
+    	    <forward name="comAjuAdapter"      		path=".ef.fiscalizacion.view.comAjuAdapter" />
+			<forward name="administrarEncComAju"	path="/ef/AdministrarEncComAju.do?method=inicializar" />
+    	    
+	    </action>
+	    <!-- FIN ComAju -->	    
+	    
+	    <!-- Mantenedor de DocSop -->
+		<action path="/ef/BuscarDocSop"
+			type="ar.gov.rosario.siat.ef.view.struts.BuscarDocSopDAction"
+			scope="request" 
+			validate="false" 
+			name="docSopSearchPage"
+			parameter="method" 
+			input=".ef.definicion.view.docSopSearchPage"
+			attribute="docSopSearchPage">
+
+			<forward name="docSopSearchPage"  path=".ef.definicion.view.docSopSearchPage" />
+			<forward name="administrarDocSop" path="/ef/AdministrarDocSop.do?method=inicializar" />
+		</action>
+
+		<action path="/ef/AdministrarDocSop"
+			type="ar.gov.rosario.siat.ef.view.struts.AdministrarDocSopDAction"
+			scope="request" 
+			validate="false" 
+			name="docSopAdapter"
+			parameter="method" 
+			input=".ef.definicion.view.docSopEditAdapter"
+			attribute="docSopAdapter">
+
+			<forward name="docSopEditAdapter" path=".ef.definicion.view.docSopEditAdapter" />
+			<forward name="docSopViewAdapter" path=".ef.definicion.view.docSopViewAdapter" />
+		</action>
+
+		<!-- FIN Mantenedor de DocSop -->
+	    
+	</action-mappings>
+
+</struts-config>

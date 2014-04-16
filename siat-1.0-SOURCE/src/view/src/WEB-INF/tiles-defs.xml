@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+ <!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 1.1//EN"
+       "http://jakarta.apache.org/struts/dtds/tiles-config_1_1.dtd">
+
+
+<tiles-definitions>
+
+	<definition name=".siatStdLayout" path="/layouts/siatStdLayout.jsp">
+		<put name="header" value="/layouts/header.jsp" />
+		<put name="menutab" value="/seg/menutab.jsp" />
+		<put name="body"   value="" />
+		<put name="footer" value="/layouts/footer.jsp" />
+	</definition>
+
+	<definition name=".siatNoLayout" path="/layouts/siatNoLayout.jsp">
+		<put name="body"   value="" />
+	</definition>
+	
+	<definition name=".siatBlankLayout" path="/layouts/siatStdLayout.jsp">
+		<put name="header" value="/layouts/headerVacio.jsp" />
+		<put name="menutab" value="/seg/menutabVacio.jsp" />
+		<put name="body"   value="" />
+		<put name="footer" value="/layouts/footerVacio.jsp" />
+	</definition>
+	
+
+</tiles-definitions>

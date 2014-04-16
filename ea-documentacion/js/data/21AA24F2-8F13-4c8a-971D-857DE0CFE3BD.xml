@@ -1,0 +1,3 @@
+tocTab[tocTab.length] = new Array("2.1.9.6:1", "", "Diagrama de Calendario", "EARoot/EA2/EA1/EA9/EA6/EA561.htm", "180.png", "496", "0", "", "Use Case diagram");
+tocTab[tocTab.length] = new Array("2.1.9.6:2", "", "Mantenedor de Feriados", "EARoot/EA2/EA1/EA9/EA6/EA563.htm", "7.png", "4130", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.9.6:3", "", "Mantenedor Vencimiento", "EARoot/EA2/EA1/EA9/EA6/EA564.htm", "7.png", "1659", "0", "", "UseCase");

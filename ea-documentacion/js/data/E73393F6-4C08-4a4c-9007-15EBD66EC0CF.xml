@@ -1,0 +1,4 @@
+tocTab[tocTab.length] = new Array("2.1.2.5:1", "", "Diagrama de Distribución", "EARoot/EA2/EA1/EA2/EA5/EA305.htm", "180.png", "372", "0", "", "Use Case diagram");
+tocTab[tocTab.length] = new Array("2.1.2.5:2", "", "Mantenedor Broche", "EARoot/EA2/EA1/EA2/EA5/EA308.htm", "7.png", "1784", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.2.5:3", "", "Mantenedor Repartidor", "EARoot/EA2/EA1/EA2/EA5/EA309.htm", "7.png", "1783", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.2.5.1", "1", "Secundarios", "EARoot/EA2/EA1/EA2/EA5/EA307.htm", "4.png", "", "", "{E745017D-94BC-4852-9A35-949F97FCCDB5}", "Package");

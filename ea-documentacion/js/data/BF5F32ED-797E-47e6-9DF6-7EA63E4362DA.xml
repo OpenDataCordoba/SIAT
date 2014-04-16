@@ -1,0 +1,2 @@
+tocTab[tocTab.length] = new Array("2.1.7.2.1:1", "", "Registrar uso de expediente", "EARoot/EA2/EA1/EA7/EA2/EA1/EA496.htm", "7.png", "4045", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.7.2.1:2", "", "Validar expediente en sistema origen", "EARoot/EA2/EA1/EA7/EA2/EA1/EA497.htm", "7.png", "4043", "0", "", "UseCase");

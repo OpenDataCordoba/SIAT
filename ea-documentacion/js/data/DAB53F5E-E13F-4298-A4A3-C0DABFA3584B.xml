@@ -1,0 +1,2 @@
+tocTab[tocTab.length] = new Array("2.1.5.10:1", "", "Novedades Pagos BMROS", "EARoot/EA2/EA1/EA5/EA10/EA453.htm", "180.png", "577", "0", "", "Use Case diagram");
+tocTab[tocTab.length] = new Array("2.1.5.10:2", "", "Procesar Novedades pagos BMROS", "EARoot/EA2/EA1/EA5/EA10/EA455.htm", "7.png", "4778", "0", "", "UseCase");

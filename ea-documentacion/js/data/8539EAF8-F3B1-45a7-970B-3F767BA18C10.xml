@@ -1,0 +1,10 @@
+tocTab[tocTab.length] = new Array("2.1.2.6:1", "", "Diagrama de estados: Recurso CdM", "EARoot/EA2/EA1/EA2/EA6/EA314.htm", "180.png", "371", "0", "", "Use Case diagram");
+tocTab[tocTab.length] = new Array("2.1.2.6:2", "", "Diagrama de estados: Obras CdM", "EARoot/EA2/EA1/EA2/EA6/EA316.htm", "183.png", "293", "0", "", "Statechart diagram");
+tocTab[tocTab.length] = new Array("2.1.2.6:3", "", "Diagrama de estados: Planillas CdM", "EARoot/EA2/EA1/EA2/EA6/EA318.htm", "183.png", "417", "0", "", "Statechart diagram");
+tocTab[tocTab.length] = new Array("2.1.2.6:4", "", "Mantenedor de Usos - CdM", "EARoot/EA2/EA1/EA2/EA6/EA320.htm", "7.png", "4102", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.2.6:5", "", "Mantenedor Contrato - CdM", "EARoot/EA2/EA1/EA2/EA6/EA330.htm", "7.png", "3889", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.2.6:6", "", "Mantenedor Tipo Obra - CdM", "EARoot/EA2/EA1/EA2/EA6/EA331.htm", "7.png", "2001", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.2.6:7", "", "Mantenedor de Formas de Pago - CdM", "EARoot/EA2/EA1/EA2/EA6/EA332.htm", "7.png", "3926", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.2.6:8", "", "Administrar Planilla de Cuadra Ejecutada - CdM", "EARoot/EA2/EA1/EA2/EA6/EA333.htm", "7.png", "3793", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.2.6:9", "", "Administrar Obras a Emitir - CdM", "EARoot/EA2/EA1/EA2/EA6/EA334.htm", "7.png", "2003", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.2.6.1", "1", "Secundarios", "EARoot/EA2/EA1/EA2/EA6/EA329.htm", "4.png", "", "", "{9827F70C-921D-4286-A164-D5484D674806}", "Package");

@@ -1,0 +1,19 @@
+<service name="drei" scope="application">
+    <description>
+        drei: DreI - Municipalidad Rosario - 2009
+    </description>
+
+	<schema schemaNamespace="http://siat.rosario.gov.ar/siat/ws"/>
+	
+    <messageReceivers>
+        <messageReceiver 
+            mep="http://www.w3.org/2004/08/wsdl/in-only"
+    class="org.apache.axis2.rpc.receivers.RPCInOnlyMessageReceiver"/>
+        <messageReceiver
+            mep="http://www.w3.org/2004/08/wsdl/in-out"
+    class="org.apache.axis2.rpc.receivers.RPCMessageReceiver"/>
+    </messageReceivers>
+    <parameter name="ServiceClass">
+        ar.gov.rosario.siat.pad.buss.ws.drei.DreiWebService
+    </parameter>
+</service>

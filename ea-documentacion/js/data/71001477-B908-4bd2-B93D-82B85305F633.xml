@@ -1,0 +1,2 @@
+tocTab[tocTab.length] = new Array("2.1.9.7:1", "", "Diagrama de Usuario SIAT", "EARoot/EA2/EA1/EA9/EA7/EA565.htm", "180.png", "497", "0", "", "Use Case diagram");
+tocTab[tocTab.length] = new Array("2.1.9.7:2", "", "Mantenedor Usuario SIAT", "EARoot/EA2/EA1/EA9/EA7/EA567.htm", "7.png", "3065", "0", "", "UseCase");

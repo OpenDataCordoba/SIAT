@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC 
+"-//Apache Software Foundation//DTD Struts Configuration 1.2//EN"  
+"[WWW] http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+	<form-beans>	
+	   	<form-bean name="forDecJurSearchPage" 	 type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="forDecJurAdapter"   	 type="org.apache.struts.action.DynaActionForm"/>	
+		
+		<form-bean name="actLocAdapter"    		 type="org.apache.struts.action.DynaActionForm"/>	
+		<form-bean name="datosDomicilioAdapter"  type="org.apache.struts.action.DynaActionForm"/>	
+		<form-bean name="datosPagoCtaAdapter"    type="org.apache.struts.action.DynaActionForm"/>	
+		<form-bean name="retYPerAdapter"    	 type="org.apache.struts.action.DynaActionForm"/>	
+		<form-bean name="totDerYAccDJAdapter"    type="org.apache.struts.action.DynaActionForm"/>	
+		<form-bean name="socioAdapter" 			 type="org.apache.struts.action.DynaActionForm"/>	
+		<form-bean name="localAdapter"			 type="org.apache.struts.action.DynaActionForm"/>	
+		<form-bean name="habLocAdapter"			 type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="otrosPagoCtaAdapter"	 type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="otrosPagosAdapter"		 type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="decActLocAdapter"		 type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="exeActLocAdapter"		 type="org.apache.struts.action.DynaActionForm"/>
+			
+		
+			
+	</form-beans>
+
+	<action-mappings>		
+		<!-- Consultar Formulario de Declaracion Jurada -->	    
+	    <action
+	    	path="/afi/BuscarForDecJur"
+	        type="ar.gov.rosario.siat.afi.view.struts.BuscarForDecJurDAction"
+			scope="request"
+	       	validate="false"
+	        name="forDecJurSearchPage"
+	        parameter="method"
+	   		input=".afi.formulariosDJ.view.forDecJurSearchPage"
+	        attribute="forDecJurSearchPage">
+	           
+	   	    <forward name="forDecJurSearchPage"   		path=".afi.formulariosDJ.view.forDecJurSearchPage" />
+	   	    <forward name="administrarForDecJur" 		path="/afi/AdministrarForDecJur.do?method=inicializar" />
+	    </action>
+		
+		<action
+     		path="/afi/AdministrarForDecJur"
+	        type="ar.gov.rosario.siat.afi.view.struts.AdministrarForDecJurDAction"
+		    scope="request"
+        	validate="false"
+	        name="forDecJurAdapter"
+            parameter="method"
+    	    input=".afi.formulariosDJ.view.forDecJurViewAdapter"
+	        attribute="forDecJurAdapter">
+            
+    	    <forward name="forDecJurViewAdapter"		 path=".afi.formulariosDJ.view.forDecJurViewAdapter" />
+    	    <forward name="administrarRetYPer" 	   	 	 path="/afi/AdministrarRetYPer.do?method=inicializar" />	        	    
+    	    <forward name="administrarSocio"	 	  	 path="/afi/AdministrarSocio.do?method=inicializar" />
+    	    <forward name="administrarDatosDomicilio"  	 path="/afi/AdministrarDatosDomicilio.do?method=inicializar" />
+    	    <forward name="administrarLocal"	 	  	 path="/afi/AdministrarLocal.do?method=inicializar" />
+    	    <forward name="administrarTotDerYAccDJ" 	 path="/afi/AdministrarTotDerYAccDJ.do?method=inicializar" />
+	    </action>
+	    <!-- Fin Consultar Formulario de Declaracion Jurada -->
+	    	    
+	    	    
+	   	<!-- Consultar ActLoc -->
+	    <action
+     		path="/afi/AdministrarActLoc"
+	        type="ar.gov.rosario.siat.afi.view.struts.AdministrarActLocDAction"
+		    scope="request"
+        	validate="false"
+	        name="actLocAdapter"
+            parameter="method"
+    	    input=".afi.formulariosDJ.view.actLocViewAdapter"
+	        attribute="actLocAdapter">
+            
+    	    <forward name="actLocViewAdapter"		path=".afi.formulariosDJ.view.actLocViewAdapter" />
+    	    <forward name="administrarExeActLoc"  	path="/afi/AdministrarExeActLoc.do?method=inicializar" />
+	    </action>
+	    <!-- Fin Consultar ActLocJur -->
+
+ 		<!-- Consultar DatosDomicilio -->
+	    <action
+     		path="/afi/AdministrarDatosDomicilio"
+	        type="ar.gov.rosario.siat.afi.view.struts.AdministrarDatosDomicilioDAction"
+		    scope="request"
+        	validate="false"
+	        name="datosDomicilioAdapter"
+            parameter="method"
+    	    input=".afi.formulariosDJ.view.datosDomicilioViewAdapter"
+	        attribute="datosDomicilioAdapter">
+            
+    	    <forward name="datosDomicilioViewAdapter"		path=".afi.formulariosDJ.view.datosDomicilioViewAdapter" />
+    	  	<forward name="administrarActLoc" 	   			path="/afi/AdministrarActLoc.do?method=inicializar" />  	        	    
+			<forward name="administrarSocio" 	   			path="/afi/AdministrarSocio.do?method=inicializar" /> 	        	    
+		
+	    </action>
+	    <!-- Fin Consultar DatosDomicilio -->
+	    
+	    <!-- Consultar DatosPagoCta -->
+	    <action
+     		path="/afi/AdministrarDatosPagoCta"
+	        type="ar.gov.rosario.siat.afi.view.struts.AdministrarDatosPagoCtaDAction"
+		    scope="request"
+        	validate="false"
+	        name="datosPagoCtaAdapter"
+            parameter="method"
+    	    input=".afi.formulariosDJ.view.datosPagoCtaViewAdapter"
+	        attribute="datosPagoCtaAdapter">
+            
+    	    <forward name="datosPagoCtaViewAdapter"		path=".afi.formulariosDJ.view.datosPagoCtaViewAdapter" />
+    	 
+	    </action>
+	    <!-- Fin Consultar DatosPagoCta -->	    
+	    
+	    <!-- Consultar DecActLoc -->
+	    <action
+     		path="/afi/AdministrarDecActLoc"
+	        type="ar.gov.rosario.siat.afi.view.struts.AdministrarDecActLocDAction"
+		    scope="request"
+        	validate="false"
+	        name="decActLocAdapter"
+            parameter="method"
+    	    input=".afi.formulariosDJ.view.decActLocViewAdapter"
+	        attribute="decActLocAdapter">
+            
+    	    <forward name="decActLocViewAdapter"		path=".afi.formulariosDJ.view.decActLocViewAdapter" />
+    	 
+	    </action>
+	    <!-- Fin Consultar DecActLoc -->
+	    
+	    <!-- Consultar DecActLoc -->
+	    <action
+     		path="/afi/AdministrarDecActLoc"
+	        type="ar.gov.rosario.siat.afi.view.struts.AdministrarDecActLocDAction"
+		    scope="request"
+        	validate="false"
+	        name="decActLocAdapter"
+            parameter="method"
+    	    input=".afi.formulariosDJ.view.decActLocViewAdapter"
+	        attribute="decActLocAdapter">
+            
+    	    <forward name="decActLocViewAdapter"		path=".afi.formulariosDJ.view.decActLocViewAdapter" />
+    	 
+	    </action>
+	    <!-- Fin Consultar DecActLoc -->
+
+	    <!-- Consultar ExeActLoc -->
+	    <action
+     		path="/afi/AdministrarExeActLoc"
+	        type="ar.gov.rosario.siat.afi.view.struts.AdministrarExeActLocDAction"
+		    scope="request"
+        	validate="false"
+	        name="exeActLocAdapter"
+            parameter="method"
+    	    input=".afi.formulariosDJ.view.exeActLocViewAdapter"
+	        attribute="exeActLocAdapter">
+            
+    	    <forward name="exeActLocViewAdapter"		path=".afi.formulariosDJ.view.exeActLocViewAdapter" />    	  
+    	 
+	    </action>
+	    <!-- Fin Consultar ExeActLoc -->
+
+	    <!-- Consultar HabLoc -->
+	    <action
+     		path="/afi/AdministrarHabLoc"
+	        type="ar.gov.rosario.siat.afi.view.struts.AdministrarHabLocDAction"
+		    scope="request"
+        	validate="false"
+	        name="habLocAdapter"
+            parameter="method"
+    	    input=".afi.formulariosDJ.view.habLocViewAdapter"
+	        attribute="habLocAdapter">
+            
+    	    <forward name="habLocViewAdapter"		path=".afi.formulariosDJ.view.habLocViewAdapter" />    	  
+    	 
+	    </action>
+	    <!-- Fin Consultar HabLoc -->	 
+	    
+	    <!-- Consultar Local -->
+	    <action
+     		path="/afi/AdministrarLocal"
+	        type="ar.gov.rosario.siat.afi.view.struts.AdministrarLocalDAction"
+		    scope="request"
+        	validate="false"
+	        name="localAdapter"
+            parameter="method"
+    	    input=".afi.formulariosDJ.view.localViewAdapter"
+	        attribute="localAdapter">
+            
+    	    <forward name="localViewAdapter"		path=".afi.formulariosDJ.view.localViewAdapter" />  
+    	    <forward name="administrarDatosPagoCta"	path="/afi/AdministrarDatosPagoCta.do?method=inicializar" />  	        	    
+    	    <forward name="administrarOtrosPagos"	path="/afi/AdministrarOtrosPagos.do?method=inicializar" />
+    	    <forward name="administrarDecActLoc"	path="/afi/AdministrarDecActLoc.do?method=inicializar" />
+    	    <forward name="administrarActLoc"		path="/afi/AdministrarActLoc.do?method=inicializar" />	  	  
+    		<forward name="administrarHabLoc"		path="/afi/AdministrarHabLoc.do?method=inicializar" />	
+	    </action>
+	    <!-- Fin Consultar Local -->  
+	    
+	    <!-- Consultar OtrosPagos -->
+	    <action
+     		path="/afi/AdministrarOtrosPagos"
+	        type="ar.gov.rosario.siat.afi.view.struts.AdministrarOtrosPagosDAction"
+		    scope="request"
+        	validate="false"
+	        name="otrosPagosAdapter"
+            parameter="method"
+    	    input=".afi.formulariosDJ.view.otrosPagosViewAdapter"
+	        attribute="otrosPagosAdapter">
+            
+    	    <forward name="otrosPagosViewAdapter"		path=".afi.formulariosDJ.view.otrosPagosViewAdapter" />    	  
+    	 
+	    </action>
+	    <!-- Fin Consultar OtrosPagos -->	 
+	    
+	    <!-- Consultar RetYPer -->
+	    <action
+     		path="/afi/AdministrarRetYPer"
+	        type="ar.gov.rosario.siat.afi.view.struts.AdministrarRetYPerDAction"
+		    scope="request"
+        	validate="false"
+	        name="retYPerAdapter"
+            parameter="method"
+    	    input=".afi.formulariosDJ.view.retYPerViewAdapter"
+	        attribute="retYPerAdapter">
+            
+    	    <forward name="retYPerViewAdapter"		path=".afi.formulariosDJ.view.retYPerViewAdapter" />    	  
+    	 
+	    </action>
+	    <!-- Fin Consultar RetYPer -->
+
+	    <!-- Consultar Socio -->
+	    <action
+     		path="/afi/AdministrarSocio"
+	        type="ar.gov.rosario.siat.afi.view.struts.AdministrarSocioDAction"
+		    scope="request"
+        	validate="false"
+	        name="socioAdapter"
+            parameter="method"
+    	    input=".afi.formulariosDJ.view.socioViewAdapter"
+	        attribute="socioAdapter">
+            
+    	    <forward name="socioViewAdapter"		path=".afi.formulariosDJ.view.socioViewAdapter" />    	  
+    	 
+	    </action>
+	    <!-- Fin Consultar Socio -->
+	    
+	    <!-- Consultar TotDerYAccDJ -->
+	    <action
+     		path="/afi/AdministrarTotDerYAccDJ"
+	        type="ar.gov.rosario.siat.afi.view.struts.AdministrarTotDerYAccDJDAction"
+		    scope="request"
+        	validate="false"
+	        name="totDerYAccDJAdapter"
+            parameter="method"
+    	    input=".afi.formulariosDJ.view.totDerYAccDJViewAdapter"
+	        attribute="totDerYAccDJAdapter">
+            
+    	    <forward name="totDerYAccDJViewAdapter"		path=".afi.formulariosDJ.view.totDerYAccDJViewAdapter" />    	  
+    	 
+	    </action>
+	    <!-- Fin Consultar TotDerYAccDJ -->	    	    
+	    
+	    	
+	</action-mappings>
+
+</struts-config>
+<!-- <template> -->

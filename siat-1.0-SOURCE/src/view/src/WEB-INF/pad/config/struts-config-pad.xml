@@ -1,0 +1,772 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts-config PUBLIC 
+"-//Apache Software Foundation//DTD Struts Configuration 1.2//EN"  
+"[WWW] http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+
+<struts-config>
+	<form-beans>
+
+	    <form-bean name="personaSearchPage"    type="org.apache.struts.action.DynaActionForm"/>
+	    
+		<form-bean name="personaAdapter"       type="org.apache.struts.action.DynaActionForm"/>		
+
+		<form-bean name="contribuyenteAdapter" type="org.apache.struts.action.DynaActionForm"/>	    
+	
+		<form-bean name="calleSearchPage"      type="org.apache.struts.action.DynaActionForm"/>
+		
+		<form-bean name="localidadSearchPage"  type="org.apache.struts.action.DynaActionForm"/>
+				
+		<form-bean name="domicilioAdapter"     type="org.apache.struts.action.DynaActionForm"/>
+		
+		<form-bean name="domicilioSearchPage"  type="org.apache.struts.action.DynaActionForm"/>
+		
+		<form-bean name="objImpSearchPage"     type="org.apache.struts.action.DynaActionForm"/>
+		
+		<form-bean name="objImpAdapter"        type="org.apache.struts.action.DynaActionForm"/>
+		
+		<form-bean name="objImpAtrValAdapter"  type="org.apache.struts.action.DynaActionForm"/>
+		
+		<form-bean name="cuentaTitularAdapter" type="org.apache.struts.action.DynaActionForm"/>
+		
+		<form-bean name="cuentaRelAdapter" type="org.apache.struts.action.DynaActionForm"/>
+		
+		<form-bean name="cuentaSearchPage"     type="org.apache.struts.action.DynaActionForm"/>
+		
+		<form-bean name="cuentaAdapter"        type="org.apache.struts.action.DynaActionForm"/>
+		
+		<form-bean name="cambiarDomEnvioAdapter" type="org.apache.struts.action.DynaActionForm"/>
+
+		<form-bean name="repartidorSearchPage"    type="org.apache.struts.action.DynaActionForm"/>
+		
+		<form-bean name="repartidorAdapter"    type="org.apache.struts.action.DynaActionForm"/>
+		
+		<form-bean name="criRepCatAdapter"    type="org.apache.struts.action.DynaActionForm"/>
+
+		<form-bean name="criRepCalleAdapter"    type="org.apache.struts.action.DynaActionForm"/>
+		
+		<form-bean name="brocheSearchPage"    type="org.apache.struts.action.DynaActionForm"/>
+		
+		<form-bean name="brocheAdapter"    type="org.apache.struts.action.DynaActionForm"/>
+		
+		<form-bean name="broCueSearchPage"    type="org.apache.struts.action.DynaActionForm"/>
+		
+		<form-bean name="broCueAdapter"    type="org.apache.struts.action.DynaActionForm"/>
+		
+		<form-bean name="cueExcSelSearchPage"    type="org.apache.struts.action.DynaActionForm"/>
+		
+		<form-bean name="cueExcSelAdapter"    type="org.apache.struts.action.DynaActionForm"/>
+
+		<form-bean name="cueExcSelDeuAdapter"    type="org.apache.struts.action.DynaActionForm"/>
+		
+		<form-bean name="buzonCambiosAdapter"    type="org.apache.struts.action.DynaActionForm"/>
+				
+		<form-bean name="altaOficioSearchPage"    type="org.apache.struts.action.DynaActionForm"/>
+		
+		<form-bean name="altaOficioAdapter"    type="org.apache.struts.action.DynaActionForm"/>
+		
+		<form-bean name="cierreComercioSearchPage"    type="org.apache.struts.action.DynaActionForm"/>
+		
+		<form-bean name="cierreComercioAdapter"    type="org.apache.struts.action.DynaActionForm"/>		
+		
+		<form-bean name="recAtrCueVAdapter"    type="org.apache.struts.action.DynaActionForm"/>	
+		
+		<form-bean name="estCueSearchPage"    type="org.apache.struts.action.DynaActionForm"/>	
+	
+		<form-bean name="estCueAdapter"    type="org.apache.struts.action.DynaActionForm"/>	
+		
+		
+	</form-beans>
+
+	<action-mappings>
+	    <!-- Mantenedor Persona -->
+	    <action
+	    	path="/pad/BuscarPersona"
+	        type="ar.gov.rosario.siat.pad.view.struts.BuscarPersonaDAction"
+			scope="request"
+	       	validate="false"
+	        name="personaSearchPage"
+	        parameter="method"
+	   		input=".pad.persona.view.personaFisicaSearchPage"
+	        attribute="personaSearchPage">
+	           
+	   	    <forward name="personaFisicaSearchPage"    	 path=".pad.persona.view.personaFisicaSearchPage" />
+	   	    <forward name="personaJuridicaSearchPage"    path=".pad.persona.view.personaJuridicaSearchPage" />
+	   	    <forward name="administrarContribuyente"     path="/pad/AdministrarContribuyente.do?method=inicializar" />
+	   	    <forward name="administrarPersona"           path="/pad/AdministrarPersona.do?method=inicializar" />
+	    </action>
+		<!-- Fin Mantenedor Persona -->
+		
+	    <!-- Mantenedor Contribuyente -->		
+		<action
+     		path="/pad/AdministrarContribuyente"
+	        type="ar.gov.rosario.siat.pad.view.struts.AdministrarContribuyenteDAction"
+		    scope="request"
+        	validate="false"
+	        name="contribuyenteAdapter"
+            parameter="method"
+    	    input=".pad.contribuyente.view.contribuyenteAdapter"
+	        attribute="contribuyenteAdapter">
+            
+    	    <forward name="contribuyenteViewAdapter"    path=".pad.contribuyente.view.contribuyenteViewAdapter" />
+    	    <forward name="contribuyenteAdapter"        path=".pad.contribuyente.view.contribuyenteAdapter" />
+     	    <forward name="administrarEncContribuyente" path="/pad/AdministrarEncContribuyente.do?method=inicializar" />
+     	    <forward name="administrarPersona"          path="/pad/AdministrarPersona.do?method=inicializar" />     	    
+    	    <forward name="administrarConAtrVal"        path="/pad/AdministrarConAtrVal.do?method=inicializar" />
+    	    <forward name="administrarCuentaTitular"    path="/pad/AdministrarCuentaTitular.do?method=inicializar" />
+	    </action>
+	    
+		<action
+     		path="/pad/AdministrarEncContribuyente"
+	        type="ar.gov.rosario.siat.pad.view.struts.AdministrarEncContribuyenteDAction"
+		    scope="request"
+        	validate="false"
+	        name="contribuyenteAdapter"
+            parameter="method"
+    	    input=".pad.contribuyente.view.contribuyenteEncEditAdapter"
+	        attribute="contribuyenteAdapter">
+
+    	    <forward name="contribuyenteEncEditAdapter"     path=".pad.contribuyente.view.contribuyenteEncEditAdapter" />
+	    </action>
+	    
+		<action
+     		path="/pad/AdministrarConAtrVal"
+	        type="ar.gov.rosario.siat.pad.view.struts.AdministrarConAtrValDAction"
+		    scope="request"
+        	validate="false"
+	        name="contribuyenteAdapter"
+            parameter="method"
+    	    input=".pad.contribuyente.view.conAtrValEditAdapter"
+	        attribute="conAtrValAdapter">
+
+    	    <forward name="conAtrValEditAdapter"    path=".pad.contribuyente.view.conAtrValEditAdapter" />
+    	    <forward name="conAtrValViewAdapter"    path=".pad.contribuyente.view.conAtrValViewAdapter" />
+	    </action>
+	    <!-- Fin Mantenedor Contribuyente -->		
+
+	    <!-- Mantenedor Persona -->		
+		<action
+     		path="/pad/AdministrarPersona"
+	        type="ar.gov.rosario.siat.pad.view.struts.AdministrarPersonaDAction"
+		    scope="request"
+        	validate="false"
+	        name="personaAdapter"
+            parameter="method"
+    	    input=".pad.persona.view.personaEditAdapter"
+	        attribute="personaAdapter">
+															
+    	    <forward name="personaEditAdapter"      path=".pad.persona.view.personaEditAdapter" />            
+     	    <forward name="buscarLocalidad"         path="/pad/BuscarLocalidad.do?method=inicializar" />     	    
+    	    <forward name="buscarCalle" 	       	path="/pad/BuscarCalle.do?method=inicializar" />
+    	    <forward name="domicilioSearchPage" 	path="/pad/BuscarDomicilio.do?method=inicializar" />
+    	    <forward name="personaViewAdapter"      path=".pad.persona.view.personaViewAdapter" />            
+	    </action>
+	    <!-- Fin Mantenedor Persona -->		
+
+	
+		<!-- Buscardor de Calles -->
+	    <action
+	    	path="/pad/BuscarCalle"
+	        type="ar.gov.rosario.siat.pad.view.struts.BuscarCalleDAction"
+			scope="request"
+	       	validate="false"
+	        name="calleSearchPage"
+	        parameter="method"
+	   		input=".pad.calle.view.calleSearchPage"
+	        attribute="calleSearchPage">
+	           
+	   	    <forward name="calleSearchPage"    	 path=".pad.calle.view.calleSearchPage" />	   	    
+	    </action>
+	    <!-- Fin Buscardor de Calles -->
+		
+		<!-- Buscardor de Localidades -->
+	    <action
+	    	path="/pad/BuscarLocalidad"
+	        type="ar.gov.rosario.siat.pad.view.struts.BuscarLocalidadDAction"
+			scope="request"
+	       	validate="false"
+	        name="localidadSearchPage"
+	        parameter="method"
+	   		input=".pad.localidad.view.localidadSearchPage"
+	        attribute="localidadSearchPage">
+	           
+	   	    <forward name="localidadSearchPage"    	 path=".pad.localidad.view.localidadSearchPage" />	   	    
+	    </action>
+	    <!-- Fin Buscardor de Localidades -->
+	    
+	    <!-- Domicilio -->
+	    <action
+     		path="/pad/AdministrarDomicilio"
+	        type="ar.gov.rosario.siat.pad.view.struts.AdministrarDomicilioDAction"
+		    scope="request"
+        	validate="false"
+	        name="domicilioAdapter"
+            parameter="method"
+    	    input=".pad.ubicacion.view.domicilioEditAdapter"
+	        attribute="domicilioAdapter">
+            
+    	    <forward name="domicilioViewAdapter"		path=".pad.ubicacion.view.domicilioViewAdapter" />
+    	    <forward name="domicilioEditAdapter"        path=".pad.ubicacion.view.domicilioEditAdapter" />
+    	    <forward name="buscarLocalidad" 	       	path="/pad/BuscarLocalidad.do?method=inicializar" />
+    	    <forward name="buscarCalle" 	       		path="/pad/BuscarCalle.do?method=inicializar" />
+    	    <forward name="buscarDomicilio" 	       	path="/pad/BuscarDomicilio.do?method=buscar" />
+	    </action>
+	    
+	    <action
+	    	path="/pad/BuscarDomicilio"
+	        type="ar.gov.rosario.siat.pad.view.struts.BuscarDomicilioDAction"
+			scope="request"
+	       	validate="false"
+	        name="domicilioSearchPage"
+	        parameter="method"
+	   		input=".pad.ubicacion.view.domicilioSearchPage"
+	        attribute="domicilioSearchPage">
+	           
+	   	    <forward name="domicilioSearchPage"   	path=".pad.ubicacion.view.domicilioSearchPage" />
+	   	    <forward name="administrarDomicilio" 	path="/pad/AdministrarDomicilio.do?method=inicializar" />
+	    </action>	    
+	    <!-- Domicilio -->
+	    
+	    <!-- Mantenedor Objeto Imponible -->	    
+	    <action
+	    	path="/pad/BuscarObjImp"
+	        type="ar.gov.rosario.siat.pad.view.struts.BuscarObjImpDAction"
+			scope="request"
+	       	validate="false"
+	        name="objImpSearchPage"
+	        parameter="method"
+	   		input=".pad.objetoImponible.view.objImpSearchPage"
+	        attribute="objImpSearchPage">
+	           
+	   	    <forward name="objImpSearchPage"   		path=".pad.objetoImponible.view.objImpSearchPage" />
+	   	    <forward name="objImpSearchPageAva"   	path=".pad.objetoImponible.view.objImpSearchPageAva" />
+	   	    <forward name="administrarObjImp" 		path="/pad/AdministrarObjImp.do?method=inicializar" />
+	    </action>
+		
+		<action
+     		path="/pad/AdministrarObjImp"
+	        type="ar.gov.rosario.siat.pad.view.struts.AdministrarObjImpDAction"
+		    scope="request"
+        	validate="false"
+	        name="objImpAdapter"
+            parameter="method"
+    	    input=".pad.objetoImponible.view.objImpEditAdapter"
+	        attribute="objImpAdapter">
+            
+    	    <forward name="objImpViewAdapter"		path=".pad.objetoImponible.view.objImpViewAdapter" />
+    	    <forward name="objImpEditAdapter"       path=".pad.objetoImponible.view.objImpEditAdapter" />
+    	    <forward name="objImpAdapter"       	path=".pad.objetoImponible.view.objImpAdapter" />
+    	    <forward name="buscarObjImp" 	       	path="/pad/BuscarObjImp.do?method=buscar" />
+    	    <forward name="administrarObjImpAtrVal" path="/pad/AdministrarObjImpAtrVal.do?method=inicializar" />
+     	    <forward name="administrarEncObjImp"    path="/pad/AdministrarEncObjImp.do?method=inicializar" />    	    
+	    </action>
+	    
+	    <!-- Objeto Imponible Atributo Valor -->
+	    <action
+     		path="/pad/AdministrarObjImpAtrVal"
+	        type="ar.gov.rosario.siat.pad.view.struts.AdministrarObjImpAtrValDAction"
+		    scope="request"
+        	validate="false"
+	        name="objImpAtrValAdapter"
+            parameter="method"
+    	    input=".pad.objetoImponible.view.objImpAtrValEditAdapter"
+	        attribute="objImpAtrValAdapter">
+            
+    	    <forward name="objImpAtrValViewAdapter"		path=".pad.objetoImponible.view.objImpAtrValViewAdapter" />
+    	    <forward name="objImpAtrValEditAdapter"      path=".pad.objetoImponible.view.objImpAtrValEditAdapter" />    	    
+	    </action>
+	    
+		<action
+     		path="/pad/AdministrarEncObjImp"
+	        type="ar.gov.rosario.siat.pad.view.struts.AdministrarEncObjImpDAction"
+		    scope="request"
+        	validate="false"
+	        name="objImpAdapter"
+            parameter="method"
+    	    input=".pad.objImp.view.objImpEncEditAdapter"
+	        attribute="objImpAdapter">
+
+    	    <forward name="objImpEncEditAdapter"     path=".pad.objImp.view.objImpEncEditAdapter" />
+	    </action>
+	    
+	    <!-- Fin Mantenedor Objeto Imponible -->
+
+
+	    <!-- Cuenta -->
+	    <action
+	    	path="/pad/BuscarCuenta"
+	        type="ar.gov.rosario.siat.pad.view.struts.BuscarCuentaDAction"
+		    scope="request"
+	       	validate="false"
+	        name="cuentaSearchPage"
+	        parameter="method"
+	   	    input=".pad.cuenta.view.cuentaSearchPage"
+	        attribute="cuentaSearchPage">
+	        
+	        <forward name="cuentaSearchPage"    	path=".pad.cuenta.view.cuentaSearchPage" />
+	        <forward name="buscarPersona" 	       	path="/pad/BuscarPersona.do?method=inicializar" />
+	   	    <forward name="administrarEncCuenta" 	path="/pad/AdministrarEncCuenta.do?method=inicializar" />	        
+	   	    <forward name="administrarCuenta" 	    path="/pad/AdministrarCuenta.do?method=inicializar" />
+   	   	    <forward name="relacionarCuenta" 	    path="/pad/RelacionarCuenta.do?method=inicializar" />
+	    </action>
+
+		<action
+	    	path="/pad/BuscarCuentaCMD"
+	        type="ar.gov.rosario.siat.pad.view.struts.BuscarCuentaCMDDAction"
+		    scope="request"
+	       	validate="false"
+	        name="cuentaSearchPage"
+	        parameter="method"
+	   	    input=".pad.cuenta.view.cuentaCMDSearchPage"
+	        attribute="cuentaSearchPage">
+	        
+	        <forward name="cuentaCMDSearchPage"    	path=".pad.cuenta.view.cuentaCMDSearchPage" />
+	        <forward name="buscarPersona" 	       	path="/pad/BuscarPersona.do?method=inicializar" />
+	   	    <forward name="administrarEncCuenta" 	path="/pad/AdministrarEncCuenta.do?method=inicializar" />	        
+	   	    <forward name="administrarCuenta" 	    path="/pad/AdministrarCuenta.do?method=inicializar" />
+   	   	    <forward name="relacionarCuenta" 	    path="/pad/RelacionarCuenta.do?method=inicializar" />
+	    </action>
+
+	    <action
+     		path="/pad/AdministrarCuenta"
+	        type="ar.gov.rosario.siat.pad.view.struts.AdministrarCuentaDAction"
+		    scope="request"
+        	validate="false"
+	        name="cuentaAdapter"
+            parameter="method"
+    	    input=".pad.cuenta.view.cuentaAdapter"
+	        attribute="cuentaAdapter">
+            
+    	    <forward name="cuentaViewAdapter"		  path=".pad.cuenta.view.cuentaViewAdapter" />
+    	    <forward name="cuentaEditAdapter"		  path=".pad.cuenta.view.cuentaEditAdapter" />
+    	    <forward name="cuentaAdapter"       	  path=".pad.cuenta.view.cuentaAdapter" />
+    	    <forward name="administrarCuenta"         path="/pad/AdministrarCuenta.do?method=inicializar" />
+    	    <forward name="administrarCuentaTitular"  path="/pad/AdministrarCuentaTitular.do?method=inicializar" />
+     	    <forward name="administrarEncCuenta"      path="/pad/AdministrarEncCuenta.do?method=inicializar" />
+     	    <forward name="administrarDomicilioEnvio" path="/pad/AdministrarDomicilioEnvio.do?method=inicializar" />
+	        <forward name="buscarPersona" 	       	  path="/pad/BuscarPersona.do?method=inicializar" />
+	        <forward name="buscarBroche" 	       	  path="/pad/BuscarBroche.do?method=inicializar" />
+	        <forward name="volverBuscarCuenta" 	      path="/pad/BuscarCuenta.do?method=buscar" />
+	        <forward name="administrarRecAtrCueV"     path="/pad/AdministrarRecAtrCueV.do?method=inicializar" />
+	    </action>
+	    
+	    <action
+     		path="/pad/AdministrarEncCuenta"
+	        type="ar.gov.rosario.siat.pad.view.struts.AdministrarEncCuentaDAction"
+		    scope="request"
+        	validate="false"
+	        name="cuentaAdapter"
+            parameter="method"
+    	    input=".pad.cuenta.view.cuentaEncEditAdapter"
+	        attribute="cuentaAdapter">
+
+    	    <forward name="cuentaEncEditAdapter"         path=".pad.cuenta.view.cuentaEncEditAdapter" />
+    	    <forward name="cuentaEncEditAgregarAdapter"  path=".pad.cuenta.view.cuentaEncEditAgregarAdapter" />
+	        <forward name="buscarObjImp" 	       	     path="/pad/BuscarObjImp.do?method=inicializar" />
+       	    <forward name="buscarLocalidad" 	       	 path="/pad/BuscarLocalidad.do?method=inicializar" />
+    	    <forward name="buscarCalle" 	       		 path="/pad/BuscarCalle.do?method=inicializar" />
+    	    <forward name="buscarDomicilio" 	       	 path="/pad/BuscarDomicilio.do?method=buscar" />
+    	    <forward name="cuentaDomicilioEnvioAdapter"  path=".pad.cuenta.view.cuentaDomicilioEnvioAdapter" />
+    	    <forward name="domicilioSearchPage" 	     path="/pad/BuscarDomicilio.do?method=inicializar" />
+    	    <forward name="buscarPersona" 				 path="/pad/BuscarPersona.do?method=inicializar"/>
+	    </action>
+	    
+	    <action
+     		path="/pad/RelacionarCuenta"
+	        type="ar.gov.rosario.siat.pad.view.struts.RelacionarCuentaDAction"
+		    scope="request"
+        	validate="false"
+	        name="cuentaAdapter"
+            parameter="method"
+    	    input=".pad.cuenta.view.relacionarCuentaAdapter"
+	        attribute="cuentaAdapter">
+            
+    	    <forward name="relacionarCuentaAdapter"   path=".pad.cuenta.view.relacionarCuentaAdapter" />
+	 	    <forward name="administrarCuentaRel"      path="/pad/AdministrarCuentaRel.do?method=inicializar" />	
+	    </action>
+	    
+	    <action
+     		path="/pad/AdministrarCuentaRel"
+	        type="ar.gov.rosario.siat.pad.view.struts.AdministrarCuentaRelDAction"
+		    scope="request"
+        	validate="false"
+	        name="cuentaRelAdapter"
+            parameter="method"
+    	    input=".pad.cuenta.view.cuentaRelEditAdapter"
+	        attribute="cuentaRelAdapter">
+            
+    	    <forward name="cuentaRelViewAdapter"	  path=".pad.cuenta.view.cuentaRelViewAdapter" />
+    	    <forward name="cuentaRelEditAdapter"	  path=".pad.cuenta.view.cuentaRelEditAdapter" />
+  	        <forward name="buscarCuenta" 		      path="/pad/BuscarCuenta.do?method=inicializar" />
+    	</action>
+	    <!-- Fin Mantenedor Cuenta -->	    
+
+	    <!-- Cuenta Titular -->
+	    <action
+     		path="/pad/AdministrarCuentaTitular"
+	        type="ar.gov.rosario.siat.pad.view.struts.AdministrarCuentaTitularDAction"
+		    scope="request"
+        	validate="false"
+	        name="cuentaTitularAdapter"
+            parameter="method"
+    	    input=".pad.cuenta.view.cuentaTitularEditAdapter" 
+	        attribute="cuentaTitularAdapter">
+            
+    	    <forward name="cuentaTitularViewAdapter"	path=".pad.cuenta.view.cuentaTitularViewAdapter" />
+    	    <forward name="cuentaTitularEditAdapter"	path=".pad.cuenta.view.cuentaTitularEditAdapter" />
+    	    
+	    </action>
+	    <!-- Fin Mantenedor Cuenta Titular -->
+	    
+	    <!-- Cambiar Domicilio de Envio -->
+	    <action
+     		path="/pad/AdministrarCambiarDomEnvio"
+	        type="ar.gov.rosario.siat.pad.view.struts.AdministrarCambiarDomEnvioDAction"
+		    scope="request"
+        	validate="false"
+	        name="cambiarDomEnvioAdapter"
+            parameter="method"
+    	    input=".pad.cuenta.view.cambiarDomEnvioIngreso"
+	        attribute="cambiarDomEnvioAdapter">
+            
+            <forward name="cambiarDomEnvioIngreso"	           path=".pad.cuenta.view.cambiarDomEnvioIngreso" />
+            <forward name="cambiarDomEnvioCuentasRel"          path=".pad.cuenta.view.cambiarDomEnvioCuentasRel" />
+            <forward name="cambiarDomEnvioNuevoDom"            path=".pad.cuenta.view.cambiarDomEnvioNuevoDom" />
+            <forward name="cambiarDomEnvioSolicitante"         path=".pad.cuenta.view.cambiarDomEnvioSolicitante" />
+	    </action>
+   	    <!-- Fin Cambiar Domicilio de Envio -->
+   	    
+   	    <!-- Mantenedor de atributos valorizados de la cuenta -->
+   	    
+   	    <action
+     		path="/pad/AdministrarRecAtrCueV"
+	        type="ar.gov.rosario.siat.pad.view.struts.AdministrarRecAtrCueVDAction"
+		    scope="request"
+        	validate="false"
+	        name="recAtrCueVAdapter"
+            parameter="method"
+    	    input=".pad.cuenta.view.recAtrCueVEditAdapter" 
+	        attribute="recAtrCueVAdapter">
+            
+    	    <forward name="recAtrCueVEditAdapter"	path=".pad.cuenta.view.recAtrCueVEditAdapter" />    	   
+	    </action>
+   	    <!-- Fin Mantenedor de atributos valorizados de la cuenta -->
+   	    
+   	    
+	 	<!-- Mantenedor Repartidor-->
+	    <action
+	    	path="/pad/BuscarRepartidor"
+	        type="ar.gov.rosario.siat.pad.view.struts.BuscarRepartidorDAction"
+		    scope="request"
+	       	validate="false"
+	        name="repartidorSearchPage"
+	        parameter="method"
+	   	    input=".pad.distribucion.view.repartidorSearchPage"
+	        attribute="repartidorSearchPage">
+	        
+	   	    <forward name="administrarEncRepartidor" 	path="/pad/AdministrarEncRepartidor.do?method=inicializar" />	        
+	   	    <forward name="repartidorSearchPage"    	path=".pad.distribucion.view.repartidorSearchPage" />
+	   	    <forward name="administrarRepartidor" 	    path="/pad/AdministrarRepartidor.do?method=inicializar" />
+	    </action>
+		
+		<action
+     		path="/pad/AdministrarRepartidor"
+	        type="ar.gov.rosario.siat.pad.view.struts.AdministrarRepartidorDAction"
+		    scope="request"
+        	validate="false"
+	        name="repartidorAdapter"
+            parameter="method"
+    	    input=".pad.distribucion.view.repartidorAdapter"
+	        attribute="repartidorAdapter">
+            
+    	    <forward name="repartidorViewAdapter"  	  path=".pad.distribucion.view.repartidorViewAdapter" />
+    	    <forward name="repartidorAdapter"         path=".pad.distribucion.view.repartidorAdapter" />
+     	    <forward name="administrarEncRepartidor"  path="/pad/AdministrarEncRepartidor.do?method=inicializar" />
+    	    <forward name="administrarCriRepCat"  	  path="/pad/AdministrarCriRepCat.do?method=inicializar" />
+       	    <forward name="administrarCriRepCalle" 	  path="/pad/AdministrarCriRepCalle.do?method=inicializar" />
+	   	</action>
+	    
+		<action
+     		path="/pad/AdministrarEncRepartidor"
+	        type="ar.gov.rosario.siat.pad.view.struts.AdministrarEncRepartidorDAction"
+		    scope="request"
+        	validate="false"
+	        name="repartidorAdapter"
+            parameter="method"
+    	    input=".pad.distribucion.view.repartidorEncEditAdapter"
+	        attribute="repartidorAdapter">
+
+    	    <forward name="repartidorEncEditAdapter"     path=".pad.distribucion.view.repartidorEncEditAdapter" />
+	  	    <forward name="buscarPersona" 	       	  	 path="/pad/BuscarPersona.do?method=inicializar" />
+	    </action>
+	    
+	    <action
+     		path="/pad/AdministrarCriRepCat"
+	        type="ar.gov.rosario.siat.pad.view.struts.AdministrarCriRepCatDAction"
+		    scope="request"
+        	validate="false"
+	        name="criRepCatAdapter"
+            parameter="method"
+    	    input=".pad.distribucion.view.criRepCatEditAdapter"
+	        attribute="criRepCatAdapter">
+            
+    	    <forward name="criRepCatViewAdapter"      path=".pad.distribucion.view.criRepCatViewAdapter" />
+    	    <forward name="criRepCatEditAdapter"      path=".pad.distribucion.view.criRepCatEditAdapter" />
+	    </action>
+
+	    <action
+     		path="/pad/AdministrarCriRepCalle"
+	        type="ar.gov.rosario.siat.pad.view.struts.AdministrarCriRepCalleDAction"
+		    scope="request"
+        	validate="false"
+	        name="criRepCalleAdapter"
+            parameter="method"
+    	    input=".pad.distribucion.view.criRepCalleEditAdapter"
+	        attribute="criRepCalleAdapter">
+            
+    	    <forward name="criRepCalleViewAdapter"      path=".pad.distribucion.view.criRepCalleViewAdapter" />
+    	    <forward name="criRepCalleEditAdapter"      path=".pad.distribucion.view.criRepCalleEditAdapter" />
+       	    <forward name="buscarCalle" 	       		path="/pad/BuscarCalle.do?method=inicializar" />
+	    </action>
+   	    
+	 	<!-- Mantenedor Broche-->
+	    <action
+	    	path="/pad/BuscarBroche"
+	        type="ar.gov.rosario.siat.pad.view.struts.BuscarBrocheDAction"
+		    scope="request"
+	       	validate="false"
+	        name="brocheSearchPage"
+	        parameter="method"
+	   	    input=".pad.distribucion.view.brocheSearchPage"
+	        attribute="brocheSearchPage">
+	        
+	   	    <forward name="brocheSearchPage"    	path=".pad.distribucion.view.brocheSearchPage" />
+	   	    <forward name="administrarBroche" 	    path="/pad/AdministrarBroche.do?method=inicializar" />
+   	     	<forward name="broCueSearchPage"    	path="/pad/BuscarBroCue.do?method=inicializar" />
+	    </action>
+		
+		<action
+     		path="/pad/AdministrarBroche"
+	        type="ar.gov.rosario.siat.pad.view.struts.AdministrarBrocheDAction"
+		    scope="request"
+        	validate="false"
+	        name="brocheAdapter"
+            parameter="method"
+    	    input=".pad.distribucion.view.brocheEditAdapter"
+	        attribute="brocheAdapter">
+            
+    	    <forward name="brocheViewAdapter"  	  	  path=".pad.distribucion.view.brocheViewAdapter" />
+    	    <forward name="brocheEditAdapter"         path=".pad.distribucion.view.brocheEditAdapter" />
+    	    <forward name="broCueAdapter"      		  path=".pad.distribucion.view.broCueAdapter" />
+	   	</action>
+	   	
+	    <action
+	    	path="/pad/BuscarBroCue"
+	        type="ar.gov.rosario.siat.pad.view.struts.BuscarBroCueDAction"
+		    scope="request"
+	       	validate="false"
+	        name="broCueSearchPage"
+	        parameter="method"
+	   	    input=".pad.distribucion.view.broCueSearchPage"
+	        attribute="broCueSearchPage">
+	        
+	   	    <forward name="broCueSearchPage"    	path=".pad.distribucion.view.broCueSearchPage" />
+	   	    <forward name="administrarBroCue" 	    path="/pad/AdministrarBroCue.do?method=inicializar" />
+	    </action>
+	    
+	    <action
+     		path="/pad/AdministrarBroCue"
+	        type="ar.gov.rosario.siat.pad.view.struts.AdministrarBroCueDAction"
+		    scope="request"
+        	validate="false"
+	        name="broCueAdapter"
+            parameter="method"
+    	    input=".pad.distribucion.view.broCueEditAdapter"
+	        attribute="broCueAdapter">
+            
+    	    <forward name="broCueViewAdapter"      path=".pad.distribucion.view.broCueViewAdapter" />
+    	    <forward name="broCueEditAdapter"      path=".pad.distribucion.view.broCueEditAdapter" />
+			<forward name="buscarBroCue" 	       path="/pad/BuscarBroCue.do?method=buscar" /> 
+    	    <forward name="buscarCuenta" 	       path="/pad/BuscarCuenta.do?method=inicializar" />
+	    </action>
+   	    
+   	    <!-- Mantenedor Cuentas Excluidas Seleccionar -->
+	    <action
+	    	path="/pad/BuscarCueExcSel"
+	        type="ar.gov.rosario.siat.pad.view.struts.BuscarCueExcSelDAction"
+			scope="request"
+	       	validate="false"
+	        name="cueExcSelSearchPage"
+	        parameter="method"
+	   		input=".pad.cuenta.view.cueExcSelSearchPage"
+	        attribute="cueExcSelSearchPage">
+	           
+	   	    <forward name="cueExcSelSearchPage"    	     path=".pad.cuenta.view.cueExcSelSearchPage" />
+	   	    <forward name="administrarEncCueExcSel"      path="/pad/AdministrarEncCueExcSel.do?method=inicializar" />
+	   	    <forward name="administrarCueExcSel"         path="/pad/AdministrarCueExcSel.do?method=inicializar" />
+	   	    <forward name="buscarCuenta"				 path="/pad/BuscarCuenta.do?method=inicializar" />
+	    </action>
+   	    
+   	 	<action
+     		path="/pad/AdministrarEncCueExcSel"
+	        type="ar.gov.rosario.siat.pad.view.struts.AdministrarEncCueExcSelDAction"
+		    scope="request"
+        	validate="false"
+	        name="cueExcSelAdapter"
+            parameter="method"
+    	    input=".pad.cuenta.view.cueExcSelEncEditAdapter"
+	        attribute="cueExcSelAdapter">
+
+    	    <forward name="cueExcSelEncEditAdapter"   	    path=".pad.cuenta.view.cueExcSelEncEditAdapter" />
+   	   	    <forward name="buscarCuenta"					path="/pad/BuscarCuenta.do?method=inicializar" />
+	    </action>
+	    
+	    <action
+     		path="/pad/AdministrarCueExcSel"
+	        type="ar.gov.rosario.siat.pad.view.struts.AdministrarCueExcSelDAction"
+		    scope="request"
+        	validate="false"
+	        name="cueExcSelAdapter"
+            parameter="method"
+    	    input=".pad.cuenta.view.cueExcSelAdapter"
+	        attribute="cueExcSelAdapter">
+
+    	    <forward name="cueExcSelViewAdapter"   	    path=".pad.cuenta.view.cueExcSelViewAdapter" />
+ 	        <forward name="cueExcSelAdapter"   	        path=".pad.cuenta.view.cueExcSelAdapter" />
+		   	<forward name="administrarEncCueExcSel"     path="/pad/AdministrarEncCueExcSel.do?method=inicializar" />
+   	   	    <forward name="administrarCueExcSelDeu"     path="/pad/AdministrarCueExcSelDeu.do?method=inicializar" />
+	    </action>
+	    
+		<action
+     		path="/pad/AdministrarCueExcSelDeu"
+	        type="ar.gov.rosario.siat.pad.view.struts.AdministrarCueExcSelDeuDAction"
+		    scope="request"
+        	validate="false"
+	        name="cueExcSelDeuAdapter"
+            parameter="method"
+    	    input=".pad.cuenta.view.cueExcSelDeuAdapter"
+	        attribute="cueExcSelDeuAdapter">
+
+ 	        <forward name="cueExcSelDeuAdapter"      path=".pad.cuenta.view.cueExcSelDeuAdapter" />
+ 	        <forward name="cueExcSelDeuViewAdapter"  path=".pad.cuenta.view.cueExcSelDeuViewAdapter" />
+	    </action>
+		
+		<!-- Buzon de Cambios de datos de Personas -->
+		<action
+     		path="/pad/AdministrarBuzonCambios"
+	        type="ar.gov.rosario.siat.pad.view.struts.AdministrarBuzonCambiosDAction"
+		    scope="request"
+        	validate="false"
+	        name="buzonCambiosAdapter"
+            parameter="method"
+    	    input=".pad.reclamo.view.buzonCambiosEditAdapter"
+	        attribute="buzonCambiosAdapter">
+            
+    	    <forward name="buzonCambiosEditAdapter"      path=".pad.reclamo.view.buzonCambiosEditAdapter" />
+	    </action>
+	    <!-- Fin Buzon de Cambios de datos de Personas -->
+		
+		<!-- Mantenedor de AltaOficio -->
+		<action
+     		path="/pad/BuscarAltaOficio"
+	        type="ar.gov.rosario.siat.pad.view.struts.BuscarAltaOficioDAction"
+		    scope="request"
+        	validate="false"
+	        name="altaOficioSearchPage"
+            parameter="method"
+    	    input=".pad.altaOficio.view.altaOficioSearchPage"
+	        attribute="altaOficioSearchPage">
+            
+    	    <forward name="altaOficioSearchPage"      path=".pad.altaOficio.view.altaOficioSearchPage" />
+    	    <forward name="administrarAltaOficio"     path="/pad/AdministrarAltaOficio.do?method=inicializar" />
+    	    <forward name="buscarCuenta" 	       	   path="/pad/BuscarCuenta.do?method=inicializar" />    	        	    
+	    </action>
+
+		<action
+     		path="/pad/AdministrarAltaOficio"
+	        type="ar.gov.rosario.siat.pad.view.struts.AdministrarAltaOficioDAction"
+		    scope="request"
+        	validate="false"
+	        name="altaOficioAdapter"
+            parameter="method"
+    	    input=".pad.altaOficio.view.altaOficioEditAdapter"
+	        attribute="altaOficioAdapter">
+            
+    	    <forward name="altaOficioEditAdapter"      path=".pad.altaOficio.view.altaOficioEditAdapter" />
+    	    <forward name="altaOficioViewAdapter"  	   path=".pad.altaOficio.view.altaOficioViewAdapter" />
+    	    <forward name="buscarPersona" 	       	   path="/pad/BuscarPersona.do?method=inicializar" />
+    	    <forward name="buscarInspector"	       	   path="/ef/BuscarInspector.do?method=inicializar" />
+     	    <forward name="buscarLocalidad"         path="/pad/BuscarLocalidad.do?method=inicializar" />     	    
+    	    <forward name="buscarCalle" 	       	path="/pad/BuscarCalle.do?method=inicializar" />
+    	    <forward name="domicilioSearchPage" 	path="/pad/BuscarDomicilio.do?method=inicializar" />
+	    </action>
+		<!-- FIN Mantenedor de AltaOficio -->
+		
+		<!-- Mantenedor de CierreComercio -->
+		<action
+     		path="/pad/BuscarCierreComercio"
+	        type="ar.gov.rosario.siat.pad.view.struts.BuscarCierreComercioDAction"
+		    scope="request"
+        	validate="false"
+	        name="cierreComercioSearchPage"
+            parameter="method"
+    	    input=".pad.cierreComercio.view.cierreComercioSearchPage"
+	        attribute="cierreComercioSearchPage">
+            
+    	    <forward name="cierreComercioSearchPage"      path=".pad.cierreComercio.view.cierreComercioSearchPage" />
+    	    <forward name="administrarCierreComercio"     path="/gde/AdministrarCierreComercio.do?method=inicializar" />
+	    </action>
+	    
+	    <!-- Mantenedor de EstCue -->
+	    <action
+     		path="/pad/BuscarEstCue"
+	        type="ar.gov.rosario.siat.pad.view.struts.BuscarEstCueDAction"
+		    scope="request"
+        	validate="false"
+	        name="estCueSearchPage"
+            parameter="method"
+    	    input=".pad.cuenta.view.estCueSearchPage"
+	        attribute="estCueSearchPage">
+            
+    	    <forward name="estCueSearchPage"      path=".pad.cuenta.view.estCueSearchPage" />
+    	     <forward name="administrarEstCue"     path="/pad/AdministrarEstCue.do?method=inicializar" />
+	    </action>
+	    
+	    <action
+     		path="/pad/AdministrarEstCue"
+	        type="ar.gov.rosario.siat.pad.view.struts.AdministrarEstCueDAction"
+		    scope="request"
+        	validate="false"
+	        name="estCueAdapter"
+            parameter="method"
+    	    input=".pad.cuenta.view.estCueEditAdapter"
+	        attribute="estCueAdapter">
+            
+    	    <forward name="estCueAdapter"      	   path=".pad.cuenta.view.estCueAdapter" />
+    	    <forward name="estCueEditAdapter"      path=".pad.cuenta.view.estCueEditAdapter" />
+    	    <forward name="estCueViewAdapter"  	   path=".pad.cuenta.view.estCueViewAdapter" />
+    	    
+	    </action>
+	    <!-- FIN Mantenedor de EstCue -->
+
+		<!--
+		<action
+     		path="/pad/AdministrarCierreComercio"
+	        type="ar.gov.rosario.siat.gde.view.struts.AdministrarCierreComercioDAction"
+		    scope="request"
+        	validate="false"
+	        name="cierreComercioAdapter"
+            parameter="method"
+    	    input=".pad.cierreComercio.view.cierreComercioEditAdapter"
+	        attribute="cierreComercioAdapter">
+
+    	    <forward name="cierreComercioEditAdapter"      path=".pad.cierreComercio.view.cierreComercioEditAdapter" />
+    	    <forward name="cierreComercioViewAdapter"  	   path=".pad.cierreComercio.view.cierreComercioViewAdapter" />
+	    </action>
+		-->
+
+		<!-- FIN Mantenedor de CierreComercio -->
+		
+	</action-mappings>    	    
+</struts-config>

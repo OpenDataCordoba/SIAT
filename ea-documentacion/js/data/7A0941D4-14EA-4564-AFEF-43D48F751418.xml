@@ -1,0 +1,14 @@
+tocTab[tocTab.length] = new Array("2.4.2:1", "", "Constancia de Deuda", "EARoot/EA2/EA4/EA2/EA679.htm", "183.png", "453", "0", "", "Statechart diagram");
+tocTab[tocTab.length] = new Array("2.4.2:2", "", "Detalle Constancia de Deuda", "EARoot/EA2/EA4/EA2/EA681.htm", "183.png", "482", "0", "", "Statechart diagram");
+tocTab[tocTab.length] = new Array("2.4.2:3", "", "Activo", "EARoot/EA2/EA4/EA2/EA683.htm", "20.png", "3999", "0", "", "State");
+tocTab[tocTab.length] = new Array("2.4.2:4", "", "Anulada", "EARoot/EA2/EA4/EA2/EA684.htm", "20.png", "3748", "0", "", "State");
+tocTab[tocTab.length] = new Array("2.4.2:5", "", "Cancelada", "EARoot/EA2/EA4/EA2/EA685.htm", "20.png", "3749", "0", "", "State");
+tocTab[tocTab.length] = new Array("2.4.2:6", "", "Creada", "EARoot/EA2/EA4/EA2/EA686.htm", "20.png", "4019", "0", "", "State");
+tocTab[tocTab.length] = new Array("2.4.2:7", "", "Emitida", "EARoot/EA2/EA4/EA2/EA687.htm", "20.png", "3746", "0", "", "State");
+tocTab[tocTab.length] = new Array("2.4.2:8", "", "Final", "EARoot/EA2/EA4/EA2/EA688.htm", "69.png", "3751", "0", "", "StateNode");
+tocTab[tocTab.length] = new Array("2.4.2:9", "", "Habilitada", "EARoot/EA2/EA4/EA2/EA689.htm", "20.png", "3747", "0", "", "State");
+tocTab[tocTab.length] = new Array("2.4.2:10", "", "Inactivo", "EARoot/EA2/EA4/EA2/EA690.htm", "20.png", "4000", "0", "", "State");
+tocTab[tocTab.length] = new Array("2.4.2:11", "", "Initial", "EARoot/EA2/EA4/EA2/EA691.htm", "68.png", "3745", "0", "", "StateNode");
+tocTab[tocTab.length] = new Array("2.4.2:12", "", "Initial", "EARoot/EA2/EA4/EA2/EA692.htm", "68.png", "3998", "0", "", "StateNode");
+tocTab[tocTab.length] = new Array("2.4.2:13", "", "Modificada", "EARoot/EA2/EA4/EA2/EA693.htm", "20.png", "3978", "0", "", "State");
+tocTab[tocTab.length] = new Array("2.4.2:14", "", "Recompuesta", "EARoot/EA2/EA4/EA2/EA694.htm", "20.png", "3750", "0", "", "State");

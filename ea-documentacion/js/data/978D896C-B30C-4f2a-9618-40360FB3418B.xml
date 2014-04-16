@@ -1,0 +1,4 @@
+tocTab[tocTab.length] = new Array("2.1.5.5:1", "", "Tesorería", "EARoot/EA2/EA1/EA5/EA5/EA417.htm", "180.png", "578", "0", "", "Use Case diagram");
+tocTab[tocTab.length] = new Array("2.1.5.5:2", "", "Administrar Folios de Envíos a Balance", "EARoot/EA2/EA1/EA5/EA5/EA419.htm", "7.png", "4780", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.5.5:3", "", "Administrar Movimiento Bancario AFIP", "EARoot/EA2/EA1/EA5/EA5/EA420.htm", "7.png", "5186", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.5.5:4", "", "Administrar Otros Ingresos Tesoreria", "EARoot/EA2/EA1/EA5/EA5/EA421.htm", "7.png", "4549", "0", "", "UseCase");

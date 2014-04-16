@@ -1,0 +1,1027 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts-config PUBLIC 
+"-//Apache Software Foundation//DTD Struts Configuration 1.2//EN"  
+"[WWW] http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+
+<struts-config>
+	<form-beans>
+	    <form-bean name="atributoSearchPage" type="org.apache.struts.action.DynaActionForm"/>
+
+		<form-bean name="atributoAdapter"    type="org.apache.struts.action.DynaActionForm"/>
+		
+	    <form-bean name="domAtrSearchPage" type="org.apache.struts.action.DynaActionForm"/>
+
+		<form-bean name="domAtrAdapter"    type="org.apache.struts.action.DynaActionForm"/>
+
+		<form-bean name="domAtrValAdapter"   type="org.apache.struts.action.DynaActionForm"/>
+		
+		<form-bean name="tipObjImpSearchPage" type="org.apache.struts.action.DynaActionForm"/>
+
+		<form-bean name="tipObjImpAdapter"    type="org.apache.struts.action.DynaActionForm"/>
+		
+		<form-bean name="tipObjImpAreOAdapter"    type="org.apache.struts.action.DynaActionForm"/>
+		
+		<form-bean name="tipObjImpAtrAdapter"    type="org.apache.struts.action.DynaActionForm"/>
+
+	    <form-bean name="categoriaSearchPage" type="org.apache.struts.action.DynaActionForm"/>
+
+		<form-bean name="categoriaAdapter"   type="org.apache.struts.action.DynaActionForm"/>
+		
+		<form-bean name="rubroAdapter"    type="org.apache.struts.action.DynaActionForm"/>
+		
+		<form-bean name="subrubroAdapter"    type="org.apache.struts.action.DynaActionForm"/>
+		
+		<form-bean name="feriadoSearchPage" type="org.apache.struts.action.DynaActionForm"/>
+		
+		<form-bean name="feriadoAdapter" type="org.apache.struts.action.DynaActionForm"/>
+		
+		<form-bean name="vencimientoSearchPage" type="org.apache.struts.action.DynaActionForm"/>
+
+		<form-bean name="vencimientoAdapter"    type="org.apache.struts.action.DynaActionForm"/>
+
+	    <form-bean name="servicioBancoSearchPage" type="org.apache.struts.action.DynaActionForm"/>
+
+		<form-bean name="servicioBancoAdapter"    type="org.apache.struts.action.DynaActionForm"/>
+
+		<form-bean name="serBanRecAdapter"   type="org.apache.struts.action.DynaActionForm"/>
+
+		<form-bean name="conAtrAdapter"    type="org.apache.struts.action.DynaActionForm"/>
+
+		<form-bean name="conAtrSearchPage"   type="org.apache.struts.action.DynaActionForm"/>
+		
+		<form-bean name="recursoSearchPage" type="org.apache.struts.action.DynaActionForm"/>
+
+		<form-bean name="recursoAdapter"    type="org.apache.struts.action.DynaActionForm"/>
+		
+		<form-bean name="recAtrValAdapter"    type="org.apache.struts.action.DynaActionForm"/>
+		
+		<form-bean name="recConAdapter"    type="org.apache.struts.action.DynaActionForm"/>
+		
+		<form-bean name="recClaDeuAdapter"    type="org.apache.struts.action.DynaActionForm"/>
+		
+		<form-bean name="recGenCueAtrVaAdapter"    type="org.apache.struts.action.DynaActionForm"/>
+		
+		<form-bean name="recEmiAdapter"    type="org.apache.struts.action.DynaActionForm"/>
+		
+		<form-bean name="recAtrCueEmiAdapter"    type="org.apache.struts.action.DynaActionForm"/>
+		
+		<form-bean name="recAtrCueAdapter"    type="org.apache.struts.action.DynaActionForm"/>
+		
+	    <form-bean name="areaSearchPage" type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="areaAdapter"    type="org.apache.struts.action.DynaActionForm"/>
+		
+		<form-bean name="parametroSearchPage" type="org.apache.struts.action.DynaActionForm"/>
+
+		<form-bean name="parametroAdapter"    type="org.apache.struts.action.DynaActionForm"/>
+		
+		<form-bean name="calendarioSearchPage" type="org.apache.struts.action.DynaActionForm"/>
+
+		<form-bean name="calendarioAdapter" type="org.apache.struts.action.DynaActionForm"/>
+		
+		<form-bean name="emiMatSearchPage"  type="org.apache.struts.action.DynaActionForm"/>
+
+		<form-bean name="emiMatAdapter"		type="org.apache.struts.action.DynaActionForm"/>
+		
+		<form-bean name="colEmiMatAdapter"	type="org.apache.struts.action.DynaActionForm"/>
+		
+		<form-bean name="recConADecAdapter" type="org.apache.struts.action.DynaActionForm"/>
+		
+		<form-bean name="valUnRecConADeAdapter" type="org.apache.struts.action.DynaActionForm"/>
+		
+		<form-bean name="recMinDecAdapter"    type="org.apache.struts.action.DynaActionForm"/>
+		
+		<form-bean name="recAliAdapter"    type="org.apache.struts.action.DynaActionForm"/>
+		
+		<form-bean name="codEmiSearchPage" type="org.apache.struts.action.DynaActionForm"/>
+		
+		<form-bean name="codEmiAdapter"    type="org.apache.struts.action.DynaActionForm"/>
+			   
+	    <form-bean name="bancoSearchPage" type="org.apache.struts.action.DynaActionForm"/>
+
+		<form-bean name="bancoAdapter"    type="org.apache.struts.action.DynaActionForm"/>
+		
+		<form-bean name="recursoAreaAdapter"    type="org.apache.struts.action.DynaActionForm"/>
+		
+		<form-bean name="siatScriptSearchPage" type="org.apache.struts.action.DynaActionForm"/>				
+		<form-bean name="siatScriptAdapter"    type="org.apache.struts.action.DynaActionForm"/>		
+		<form-bean name="siatScriptUsrAdapter" type="org.apache.struts.action.DynaActionForm"/>	
+	</form-beans>
+
+	<action-mappings>
+	    <!-- Mantenedor Atributo -->
+	    <action
+	    	path="/def/BuscarAtributo"
+	        type="ar.gov.rosario.siat.def.view.struts.BuscarAtributoDAction"
+			scope="request"
+	       	validate="false"
+	        name="atributoSearchPage"
+	        parameter="method"
+	   		input=".def.atributo.view.atributoSearchPage"
+	        attribute="atributoSearchPage">
+	           
+	   	    <forward name="atributoSearchPage"    	path=".def.atributo.view.atributoSearchPage" />
+	   	    <forward name="administrarAtributo" 	path="/def/AdministrarAtributo.do?method=inicializar" />
+	    </action>
+		
+		<action
+     		path="/def/AdministrarAtributo"
+	        type="ar.gov.rosario.siat.def.view.struts.AdministrarAtributoDAction"
+		    scope="request"
+        	validate="false"
+	        name="atributoAdapter"
+            parameter="method"
+    	    input=".def.atributo.view.atributoEditAdapter"
+	        attribute="atributoAdapter">
+            
+    	    <forward name="atributoViewAdapter"		path=".def.atributo.view.atributoViewAdapter" />
+    	    <forward name="atributoEditAdapter"     path=".def.atributo.view.atributoEditAdapter" />
+    	    <forward name="buscarAtributo" 	       	path="/def/BuscarAtributo.do?method=buscar" />    	    
+	    </action>
+		<!-- Fin Mantenedor Atributo -->
+		
+		<!-- Mantenedor de Feriados -->	    
+	    <action
+	    	path="/def/BuscarFeriado"
+	        type="ar.gov.rosario.siat.def.view.struts.BuscarFeriadoDAction"
+			scope="request"
+	       	validate="false"
+	        name="feriadoSearchPage"
+	        parameter="method"
+	   		input=".def.gravamen.view.feriadoSearchPage"
+	        attribute="feriadoSearchPage">
+	           
+	   	    <forward name="feriadoSearchPage"   	path=".def.gravamen.view.feriadoSearchPage" />
+	   	    <forward name="administrarFeriado" 		path="/def/AdministrarFeriado.do?method=inicializar" />
+	    </action>
+		
+		<action
+     		path="/def/AdministrarFeriado"
+	        type="ar.gov.rosario.siat.def.view.struts.AdministrarFeriadoDAction"
+		    scope="request"
+        	validate="false"
+	        name="feriadoAdapter"
+            parameter="method"
+    	    input=".def.gravamen.view.feriadoEditAdapter"
+	        attribute="feriadoAdapter">
+            
+    	    <forward name="feriadoViewAdapter"		path=".def.gravamen.view.feriadoViewAdapter" />
+    	    <forward name="feriadoEditAdapter"      path=".def.gravamen.view.feriadoEditAdapter" />
+    	    <forward name="buscarFeriado" 	       	path="/def/BuscarFeriado.do?method=buscar" />    	    
+	    </action>
+	    <!-- Fin Mantenedor de Feriados -->
+	    
+	    <!-- Mantenedor Vencimiento -->
+	    <action
+	    	path="/def/BuscarVencimiento"
+	        type="ar.gov.rosario.siat.def.view.struts.BuscarVencimientoDAction"
+			scope="request"
+	       	validate="false"
+	        name="vencimientoSearchPage"
+	        parameter="method"
+	   		input=".def.gravamen.view.vencimientoSearchPage"
+	        attribute="vencimientoSearchPage">
+	           
+	   	    <forward name="vencimientoSearchPage"    	path=".def.gravamen.view.vencimientoSearchPage" />
+	   	    <forward name="administrarVencimiento" 	path="/def/AdministrarVencimiento.do?method=inicializar" />
+	    </action>
+		
+		<action
+     		path="/def/AdministrarVencimiento"
+	        type="ar.gov.rosario.siat.def.view.struts.AdministrarVencimientoDAction"
+		    scope="request"
+        	validate="false"
+	        name="vencimientoAdapter"
+            parameter="method"
+    	    input=".def.gravamen.view.vencimientoEditAdapter"
+	        attribute="vencimientoAdapter">
+            
+    	    <forward name="vencimientoViewAdapter"		path=".def.gravamen.view.vencimientoViewAdapter" />
+    	    <forward name="vencimientoEditAdapter"     path=".def.gravamen.view.vencimientoEditAdapter" />
+    	    <forward name="buscarVencimiento" 	       	path="/def/BuscarVencimiento.do?method=buscar" />    	    
+	    </action>
+		<!-- Fin Mantenedor Vencimiento -->
+
+		<!-- Mantenedor Categoria -->
+		<action
+	    	path="/def/BuscarCategoria"
+	        type="ar.gov.rosario.siat.def.view.struts.BuscarCategoriaDAction"
+		    scope="request"
+	       	validate="false"
+	        name="categoriaSearchPage"
+	        parameter="method"
+	   	    input=".def.gravamen.view.categoriaSearchPage"
+	        attribute="categoriaSearchPage">
+	        
+	   	    <forward name="categoriaSearchPage"    	path=".def.gravamen.view.categoriaSearchPage" />
+	   	    <forward name="administrarCategoria" 	path="/def/AdministrarCategoria.do?method=inicializar" />
+	    </action>
+
+	    <action
+     		path="/def/AdministrarCategoria"
+	        type="ar.gov.rosario.siat.def.view.struts.AdministrarCategoriaDAction"
+		    scope="request"
+        	validate="false"
+	        name="categoriaAdapter"
+            parameter="method"
+    	    input=".def.gravamen.view.categoriaEditAdapter"
+	        attribute="categoriaAdapter">
+            
+    	    <forward name="categoriaViewAdapter"		path=".def.gravamen.view.categoriaViewAdapter" />
+    	    <forward name="categoriaEditAdapter"     path=".def.gravamen.view.categoriaEditAdapter" />
+    	    <forward name="buscarCategoria" 	       	path="/def/BuscarCategoria.do?method=buscar" />    	    
+	    </action>
+		<!-- Fin Mantenedor Categoria -->
+		
+		<!-- Mantenedor Dominio Atributo y Dominio Atributo Valor-->
+	    <action
+	    	path="/def/BuscarDomAtr"
+	        type="ar.gov.rosario.siat.def.view.struts.BuscarDomAtrDAction"
+		    scope="request"
+	       	validate="false"
+	        name="domAtrSearchPage"
+	        parameter="method"
+	   	    input=".def.atributo.view.domAtrSearchPage"
+	        attribute="domAtrSearchPage">
+	        
+	   	    <forward name="administrarEncDomAtr" 	path="/def/AdministrarEncDomAtr.do?method=inicializar" />	        
+	   	    <forward name="domAtrSearchPage"    	path=".def.atributo.view.domAtrSearchPage" />
+	   	    <forward name="administrarDomAtr" 	    path="/def/AdministrarDomAtr.do?method=inicializar" />
+	    </action>
+		
+		<action
+     		path="/def/AdministrarDomAtr"
+	        type="ar.gov.rosario.siat.def.view.struts.AdministrarDomAtrDAction"
+		    scope="request"
+        	validate="false"
+	        name="domAtrAdapter"
+            parameter="method"
+    	    input=".def.atributo.view.domAtrAdapter"
+	        attribute="domAtrAdapter">
+            
+    	    <forward name="domAtrViewAdapter"    path=".def.atributo.view.domAtrViewAdapter" />
+    	    <forward name="domAtrAdapter"        path=".def.atributo.view.domAtrAdapter" />
+     	    <forward name="administrarEncDomAtr" path="/def/AdministrarEncDomAtr.do?method=inicializar" />
+    	    <forward name="administrarDomAtrVal" path="/def/AdministrarDomAtrVal.do?method=inicializar" />
+	    </action>
+	    
+		<action
+     		path="/def/AdministrarEncDomAtr"
+	        type="ar.gov.rosario.siat.def.view.struts.AdministrarEncDomAtrDAction"
+		    scope="request"
+        	validate="false"
+	        name="domAtrAdapter"
+            parameter="method"
+    	    input=".def.atributo.view.domAtrEncEditAdapter"
+	        attribute="domAtrAdapter">
+
+    	    <forward name="domAtrEncEditAdapter"     path=".def.atributo.view.domAtrEncEditAdapter" />
+	    </action>
+	    
+	    <action
+     		path="/def/AdministrarDomAtrVal"
+	        type="ar.gov.rosario.siat.def.view.struts.AdministrarDomAtrValDAction"
+		    scope="request"
+        	validate="false"
+	        name="domAtrValAdapter"
+            parameter="method"
+    	    input=".def.atributo.view.domAtrValEditAdapter"
+	        attribute="domAtrValAdapter">
+            
+    	    <forward name="domAtrValViewAdapter"      path=".def.atributo.view.domAtrValViewAdapter" />
+    	    <forward name="domAtrValEditAdapter"      path=".def.atributo.view.domAtrValEditAdapter" />
+	    </action>
+	    <!-- Fin Mantenedor Dominio Atributo -->		
+
+		<!-- Mantenedor Servicio Banco y Servicio Banco Recurso-->
+	    <action
+	    	path="/def/BuscarServicioBanco"
+	        type="ar.gov.rosario.siat.def.view.struts.BuscarServicioBancoDAction"
+		    scope="request"
+	       	validate="false"
+	        name="servicioBancoSearchPage"
+	        parameter="method"
+	   	    input=".def.servicioBanco.view.servicioBancoSearchPage"
+	        attribute="servicioBancoSearchPage">
+	        
+	   	    <forward name="administrarEncServicioBanco" 	path="/def/AdministrarEncServicioBanco.do?method=inicializar" />	        
+	   	    <forward name="servicioBancoSearchPage"    	path=".def.servicioBanco.view.servicioBancoSearchPage" />
+	   	    <forward name="administrarServicioBanco" 	    path="/def/AdministrarServicioBanco.do?method=inicializar" />
+	    </action>
+		
+		<action
+     		path="/def/AdministrarServicioBanco"
+	        type="ar.gov.rosario.siat.def.view.struts.AdministrarServicioBancoDAction"
+		    scope="request"
+        	validate="false"
+	        name="servicioBancoAdapter"
+            parameter="method"
+    	    input=".def.servicioBanco.view.servicioBancoAdapter"
+	        attribute="servicioBancoAdapter">
+            
+    	    <forward name="servicioBancoViewAdapter"    path=".def.servicioBanco.view.servicioBancoViewAdapter" />
+    	    <forward name="servicioBancoAdapter"        path=".def.servicioBanco.view.servicioBancoAdapter" />
+     	    <forward name="administrarEncServicioBanco" path="/def/AdministrarEncServicioBanco.do?method=inicializar" />
+    	    <forward name="administrarSerBanRec" path="/def/AdministrarSerBanRec.do?method=inicializar" />
+	   	    <forward name="administrarSerBanDesGen" path="/gde/AdministrarSerBanDesGen.do?method=inicializar" />
+	    </action>
+	    
+		<action
+     		path="/def/AdministrarEncServicioBanco"
+	        type="ar.gov.rosario.siat.def.view.struts.AdministrarEncServicioBancoDAction"
+		    scope="request"
+        	validate="false"
+	        name="servicioBancoAdapter"
+            parameter="method"
+    	    input=".def.servicioBanco.view.servicioBancoEncEditAdapter"
+	        attribute="servicioBancoAdapter">
+
+    	    <forward name="servicioBancoEncEditAdapter"     path=".def.servicioBanco.view.servicioBancoEncEditAdapter" />
+	    </action>
+	    
+	    <action
+     		path="/def/AdministrarSerBanRec"
+	        type="ar.gov.rosario.siat.def.view.struts.AdministrarSerBanRecDAction"
+		    scope="request"
+        	validate="false"
+	        name="serBanRecAdapter"
+            parameter="method"
+    	    input=".def.servicioBanco.view.serBanRecEditAdapter"
+	        attribute="serBanRecAdapter">
+            
+    	    <forward name="serBanRecViewAdapter"      path=".def.servicioBanco.view.serBanRecViewAdapter" />
+    	    <forward name="serBanRecEditAdapter"      path=".def.servicioBanco.view.serBanRecEditAdapter" />
+	    </action>
+	    <!-- Fin Mantenedor Servicio Banco -->		
+		
+		
+	    
+	    <!-- Mantenedor Tipo Objeto Imponible -->
+	   	<action
+	    	path="/def/BuscarTipObjImp"
+	        type="ar.gov.rosario.siat.def.view.struts.BuscarTipObjImpDAction"
+		    scope="request"
+	       	validate="false"
+	        name="tipObjImpSearchPage"
+	        parameter="method"
+	   	    input=".def.objetoImponible.view.tipObjImpSearchPage"
+	        attribute="tipObjImpSearchPage">
+	        
+	   	    <forward name="administrarEncTipObjImp" 	path="/def/AdministrarEncTipObjImp.do?method=inicializar" />	        
+	   	    <forward name="administrarTipObjImp" 	    path="/def/AdministrarTipObjImp.do?method=inicializar" />
+	   	    <forward name="tipObjImpSearchPage"      path=".def.objetoImponible.view.tipObjImpSearchPage" />
+    	    <forward name="administrarTipObjImpAreO" path="/def/AdministrarTipObjImpAreO.do?method=inicializar" />	   	    
+	    </action>
+		
+		<action
+     		path="/def/AdministrarTipObjImp"
+	        type="ar.gov.rosario.siat.def.view.struts.AdministrarTipObjImpDAction"
+		    scope="request"
+        	validate="false"
+	        name="tipObjImpAdapter"
+            parameter="method"
+    	    input=".def.objetoImponible.view.tipObjImpAdapter"
+	        attribute="tipObjImpAdapter">
+            
+    	    <forward name="tipObjImpViewAdapter"     path=".def.objetoImponible.view.tipObjImpViewAdapter" />
+    	    <forward name="tipObjImpAdapter"         path=".def.objetoImponible.view.tipObjImpAdapter" />
+     	    <forward name="administrarEncTipObjImp"  path="/def/AdministrarEncTipObjImp.do?method=inicializar" />
+    	    <forward name="administrarTipObjImpAtr"  path="/def/AdministrarTipObjImpAtr.do?method=inicializar" />
+
+    	    <forward name="tipObjImpAreOAdapter"     path=".def.objetoImponible.view.tipObjImpAreOAdapter" />
+    	    <forward name="administrarTipObjImpAreO" path="/def/AdministrarTipObjImpAreO.do?method=inicializar" />
+    	    <forward name="buscarAtributo"           path="/def/BuscarAtributo.do?method=inicializar" />
+	    </action>
+	    
+		<action
+     		path="/def/AdministrarEncTipObjImp"
+	        type="ar.gov.rosario.siat.def.view.struts.AdministrarEncTipObjImpDAction"
+		    scope="request"
+        	validate="false"
+	        name="tipObjImpAdapter"
+            parameter="method"
+    	    input=".def.objetoImponible.view.tipObjImpEncEditAdapter"
+	        attribute="tipObjImpAdapter">
+
+	   	    <forward name="administrarTipObjImp" 	 path="/def/AdministrarTipObjImp.do?method=inicializar" />
+    	    <forward name="tipObjImpEncEditAdapter"  path=".def.objetoImponible.view.tipObjImpEncEditAdapter" />
+
+    	    <forward name="buscarTipObjImp" 	     path="/def/BuscarTipObjImp.do?method=buscar" /> <!-- ver si es necesaria -->
+	    </action>
+
+	    <action
+     		path="/def/AdministrarTipObjImpAreO"
+	        type="ar.gov.rosario.siat.def.view.struts.AdministrarTipObjImpAreODAction"
+		    scope="request"
+        	validate="false"
+	        name="tipObjImpAreOAdapter"
+            parameter="method"
+    	    input=".def.objetoImponible.view.tipObjImpAreOEditAdapter"
+	        attribute="tipObjImpAreOAdapter">
+            
+    	    <forward name="tipObjImpAreOAdapter"      path=".def.objetoImponible.view.tipObjImpAreOAdapter" />
+    	    <forward name="tipObjImpAreOViewAdapter"  path=".def.objetoImponible.view.tipObjImpAreOViewAdapter" />
+    	    <forward name="tipObjImpAreOEditAdapter"  path=".def.objetoImponible.view.tipObjImpAreOEditAdapter" />
+	    </action>
+
+	    <action
+     		path="/def/AdministrarTipObjImpAtr"
+	        type="ar.gov.rosario.siat.def.view.struts.AdministrarTipObjImpAtrDAction"
+		    scope="request"
+        	validate="false"
+	        name="tipObjImpAtrAdapter"
+            parameter="method"
+    	    input=".def.objetoImponible.view.tipObjImpAtrEditAdapter"
+	        attribute="tipObjImpAtrAdapter">
+            
+    	    <forward name="tipObjImpAtrViewAdapter"  path=".def.objetoImponible.view.tipObjImpAtrViewAdapter" />
+    	    <forward name="tipObjImpAtrEditAdapter"  path=".def.objetoImponible.view.tipObjImpAtrEditAdapter" />
+    	    <forward name="buscarAtributo"      path="/def/BuscarAtributo.do?method=inicializar" />
+	    </action>
+	    <!-- Fin Mantenedor Tipo Objeto Imponible -->
+	    
+		<!-- Mantenedor ConAtr -->
+		<action
+	    	path="/def/BuscarConAtr"
+	        type="ar.gov.rosario.siat.def.view.struts.BuscarConAtrDAction"
+		    scope="request"
+	       	validate="false"
+	        name="conAtrSearchPage"
+	        parameter="method"
+	   	    input=".def.contribuyente.view.conAtrSearchPage"
+	        attribute="conAtrSearchPage">
+	        
+	   	    <forward name="conAtrSearchPage"    path=".def.contribuyente.view.conAtrSearchPage" />
+	   	    <forward name="administrarConAtr" 	path="/def/AdministrarConAtr.do?method=inicializar" />
+	   	    <forward name="buscarAtributo" 	    path="/def/BuscarAtributo.do?method=inicializar" />	   	    
+	    </action>
+
+	    <action
+     		path="/def/AdministrarConAtr"
+	        type="ar.gov.rosario.siat.def.view.struts.AdministrarConAtrDAction"
+		    scope="request"
+        	validate="false"
+	        name="conAtrAdapter"
+            parameter="method"
+    	    input=".def.contribuyente.view.conAtrEditAdapter"
+	        attribute="conAtrAdapter">
+            
+    	    <forward name="conAtrViewAdapter"		path=".def.contribuyente.view.conAtrViewAdapter" />
+    	    <forward name="conAtrEditAdapter"       path=".def.contribuyente.view.conAtrEditAdapter" />
+    	    <forward name="buscarConAtr" 	       	path="/def/BuscarConAtr.do?method=buscar" />    	    
+    	    <forward name="buscarAtributo" 	       	path="/def/BuscarAtributo.do?method=inicializar" />    	    
+	    </action>
+		<!-- Fin Mantenedor ConAtr -->
+
+		<!-- Mantenedor Recurso-->
+	    <action
+	    	path="/def/BuscarRecurso"
+	        type="ar.gov.rosario.siat.def.view.struts.BuscarRecursoDAction"
+		    scope="request"
+	       	validate="false"
+	        name="recursoSearchPage"
+	        parameter="method"
+	   	    input=".def.gravamen.view.recursoSearchPage"
+	        attribute="recursoSearchPage">
+	        
+	   	    <forward name="administrarEncRecurso" 				path="/def/AdministrarEncRecurso.do?method=inicializar" />	        
+	   	    <forward name="recursoSearchPage"    				path=".def.gravamen.view.recursoSearchPage" />
+	   	    <forward name="administrarRecurso" 	   				path="/def/AdministrarRecurso.do?method=inicializar" />
+	   	    <forward name="administrarRecursoAutoLiquidable" 	path="/def/AdministrarRecursoAutoLiquidable.do?method=inicializar" />
+	    </action>
+		
+		<action
+     		path="/def/AdministrarRecurso"
+	        type="ar.gov.rosario.siat.def.view.struts.AdministrarRecursoDAction"
+		    scope="request"
+        	validate="false"
+	        name="recursoAdapter"
+            parameter="method"
+    	    input=".def.gravamen.view.recursoAdapter"
+	        attribute="recursoAdapter">
+            
+    	    <forward name="recursoViewAdapter"    	  path=".def.gravamen.view.recursoViewAdapter" />
+    	    <forward name="recursoNoTribViewAdapter"  path=".def.gravamen.view.recursoNoTribViewAdapter" />
+    	    <forward name="recursoAdapter"        	  path=".def.gravamen.view.recursoAdapter" />
+    	    <forward name="recursoNoTribAdapter"      path=".def.gravamen.view.recursoNoTribAdapter" />
+     	    <forward name="administrarEncRecurso" 	  path="/def/AdministrarEncRecurso.do?method=inicializar" />
+    	    <forward name="administrarRecAtrVal"  	  path="/def/AdministrarRecAtrVal.do?method=inicializar" />
+       	    <forward name="administrarRecAtrCue"  	  path="/def/AdministrarRecAtrCue.do?method=inicializar" />
+	   	    <forward name="administrarRecCon" 	  	  path="/def/AdministrarRecCon.do?method=inicializar" />
+	   	    <forward name="administrarRecClaDeu"  	  path="/def/AdministrarRecClaDeu.do?method=inicializar" />
+  	   	    <forward name="administrarRecGenCueAtrVa" path="/def/AdministrarRecGenCueAtrVa.do?method=inicializar" />
+  	   	    <forward name="administrarRecEmi" 	  	  path="/def/AdministrarRecEmi.do?method=inicializar" />
+		    <forward name="administrarRecAtrCueEmi"   path="/def/AdministrarRecAtrCueEmi.do?method=inicializar" />		    
+	   	</action>
+	    
+	    <action
+     		path="/def/AdministrarRecursoAutoLiquidable"
+	        type="ar.gov.rosario.siat.def.view.struts.AdministrarRecursoAutoLiquidableDAction"
+		    scope="request"
+        	validate="false"
+	        name="recursoAdapter"
+            parameter="method"
+    	    input=".def.gravamen.view.recursoAutoLiquidableAdapter"
+	        attribute="recursoAdapter">
+            
+    	    <forward name="recursoViewAdapter"    	  		path=".def.gravamen.view.recursoViewAdapter" />
+    	    <forward name="recursoAutoLiquidableAdapter" 	path=".def.gravamen.view.recursoAutoLiquidableAdapter" />
+    	    <forward name="administrarRecConADec"     		path="/def/AdministrarRecConADec.do?method=inicializar"/>
+		    <forward name="administrarRecMinDec"  	  		path="/def/AdministrarRecMinDec.do?method=inicializar" />	   	  
+		    <forward name="administrarRecAli"	  	  		path="/def/AdministrarRecAli.do?method=inicializar" />
+	   	</action>
+	   	
+		<action
+     		path="/def/AdministrarEncRecurso"
+	        type="ar.gov.rosario.siat.def.view.struts.AdministrarEncRecursoDAction"
+		    scope="request"
+        	validate="false"
+	        name="recursoAdapter"
+            parameter="method"
+    	    input=".def.gravamen.view.recursoEncEditAdapter"
+	        attribute="recursoAdapter">
+
+    	    <forward name="recursoEncEditAdapter"     path=".def.gravamen.view.recursoEncEditAdapter" />
+    	    <forward name="recursoNoTribEncAdapter"      path=".def.gravamen.view.recursoNoTribEncAdapter" />
+	    </action>
+	    
+	    <action
+     		path="/def/AdministrarRecAtrVal"
+	        type="ar.gov.rosario.siat.def.view.struts.AdministrarRecAtrValDAction"
+		    scope="request"
+        	validate="false"
+	        name="recAtrValAdapter"
+            parameter="method"
+    	    input=".def.gravamen.view.recAtrValEditAdapter"
+	        attribute="recAtrValAdapter">
+            
+    	    <forward name="recAtrValViewAdapter"      path=".def.gravamen.view.recAtrValViewAdapter" />
+    	    <forward name="recAtrValEditAdapter"      path=".def.gravamen.view.recAtrValEditAdapter" />
+   	     	<forward name="buscarAtributo"           path="/def/BuscarAtributo.do?method=inicializar" />
+	    </action>
+	    
+	     <action
+     		path="/def/AdministrarRecCon"
+	        type="ar.gov.rosario.siat.def.view.struts.AdministrarRecConDAction"
+		    scope="request"
+        	validate="false"
+	        name="recConAdapter"
+            parameter="method"
+    	    input=".def.gravamen.view.recConEditAdapter"
+	        attribute="recConAdapter">
+            
+    	    <forward name="recConViewAdapter"      path=".def.gravamen.view.recConViewAdapter" />
+    	    <forward name="recConEditAdapter"      path=".def.gravamen.view.recConEditAdapter" />
+	    </action>
+	    
+	     <action
+     		path="/def/AdministrarRecClaDeu"
+	        type="ar.gov.rosario.siat.def.view.struts.AdministrarRecClaDeuDAction"
+		    scope="request"
+        	validate="false"
+	        name="recClaDeuAdapter"
+            parameter="method"
+    	    input=".def.gravamen.view.recClaDeuEditAdapter"
+	        attribute="recClaDeuAdapter">
+            
+    	    <forward name="recClaDeuViewAdapter"      path=".def.gravamen.view.recClaDeuViewAdapter" />
+    	    <forward name="recClaDeuEditAdapter"      path=".def.gravamen.view.recClaDeuEditAdapter" />
+	    </action>
+	    
+	     <action
+     		path="/def/AdministrarRecAtrCue"
+	        type="ar.gov.rosario.siat.def.view.struts.AdministrarRecAtrCueDAction"
+		    scope="request"
+        	validate="false"
+	        name="recAtrCueAdapter"
+            parameter="method"
+    	    input=".def.gravamen.view.recAtrCueEditAdapter"
+	        attribute="recAtrCueAdapter">
+            
+    	    <forward name="recAtrCueViewAdapter"      path=".def.gravamen.view.recAtrCueViewAdapter" />
+    	    <forward name="recAtrCueEditAdapter"      path=".def.gravamen.view.recAtrCueEditAdapter" />
+    	    <forward name="buscarAtributo"            path="/def/BuscarAtributo.do?method=inicializar" />
+	    </action>
+	    
+	     <action
+     		path="/def/AdministrarRecGenCueAtrVa"
+	        type="ar.gov.rosario.siat.def.view.struts.AdministrarRecGenCueAtrVaDAction"
+		    scope="request"
+        	validate="false"
+	        name="recGenCueAtrVaAdapter"
+            parameter="method"
+    	    input=".def.gravamen.view.recGenCueAtrVaEditAdapter"
+	        attribute="recGenCueAtrVaAdapter">
+            
+    	    <forward name="recGenCueAtrVaViewAdapter"      path=".def.gravamen.view.recGenCueAtrVaViewAdapter" />
+    	    <forward name="recGenCueAtrVaEditAdapter"      path=".def.gravamen.view.recGenCueAtrVaEditAdapter" />
+	    </action>
+	    
+	    <action
+	    	path="/def/AdministrarRecConADec"
+	    	type="ar.gov.rosario.siat.def.view.struts.AdministrarRecConADecDAction"
+	    	scope="request"
+	    	validate="false"
+	    	name="recConADecAdapter"
+	    	parameter="method"
+	    	input=".def.gravamen.view.recConADecEditAdapter"
+	    	attribute="recConADecAdapter">
+	    	
+	    	<forward name="recConADecViewAdapter"			path=".def.gravamen.view.recConADecViewAdapter"/>
+	    	<forward name="recConADecEditAdapter"			path=".def.gravamen.view.recConADecEditAdapter"/>
+	    	<forward name="administrarValUnRecConADe"		path="/def/AdministrarValUnRecConADe.do?method=inicializar"/>
+	    </action>
+	    
+	    <action
+     		path="/def/AdministrarValUnRecConADe"
+	        type="ar.gov.rosario.siat.def.view.struts.AdministrarValUnRecConADeDAction"
+		    scope="request"
+        	validate="false"
+	        name="valUnRecConADeAdapter"
+            parameter="method"
+    	    input=".def.gravamen.view.valUnRecConADeEditAdapter"
+	        attribute="valUnRecConADeAdapter">
+            
+    	    <forward name="valUnRecConADeViewAdapter"      path=".def.gravamen.view.valUnRecConADeViewAdapter"/>
+    	    <forward name="valUnRecConADeEditAdapter"      path=".def.gravamen.view.valUnRecConADeEditAdapter"/>
+	    </action>
+	    
+	     <action
+     		path="/def/AdministrarRecEmi"
+	        type="ar.gov.rosario.siat.def.view.struts.AdministrarRecEmiDAction"
+		    scope="request"
+        	validate="false"
+	        name="recEmiAdapter"
+            parameter="method"
+    	    input=".def.gravamen.view.recEmiEditAdapter"
+	        attribute="recEmiAdapter">
+            
+    	    <forward name="recEmiViewAdapter"      path=".def.gravamen.view.recEmiViewAdapter" />
+    	    <forward name="recEmiEditAdapter"      path=".def.gravamen.view.recEmiEditAdapter" />
+	    </action>
+	    
+	     <action
+     		path="/def/AdministrarRecAtrCueEmi"
+	        type="ar.gov.rosario.siat.def.view.struts.AdministrarRecAtrCueEmiDAction"
+		    scope="request"
+        	validate="false"
+	        name="recAtrCueEmiAdapter"
+            parameter="method"
+    	    input=".def.gravamen.view.recAtrCueEmiEditAdapter"
+	        attribute="recAtrCueEmiAdapter">
+            
+    	    <forward name="recAtrCueEmiViewAdapter"      path=".def.gravamen.view.recAtrCueEmiViewAdapter" />
+    	    <forward name="recAtrCueEmiEditAdapter"      path=".def.gravamen.view.recAtrCueEmiEditAdapter" />
+    	     <forward name="buscarAtributo"            	 path="/def/BuscarAtributo.do?method=inicializar" />
+	    </action>
+	    
+	    <action
+     		path="/def/AdministrarRecMinDec"
+	        type="ar.gov.rosario.siat.def.view.struts.AdministrarRecMinDecDAction"
+		    scope="request"
+        	validate="false"
+	        name="recMinDecAdapter"
+            parameter="method"
+    	    input=".def.gravamen.view.recMinDecEditAdapter"
+	        attribute="recMinDecAdapter">
+            
+    	    <forward name="recMinDecViewAdapter"      path=".def.gravamen.view.recMinDecViewAdapter" />
+    	    <forward name="recMinDecEditAdapter"      path=".def.gravamen.view.recMinDecEditAdapter" />
+	    </action>
+	    
+	    <action
+     		path="/def/AdministrarRecAli"
+	        type="ar.gov.rosario.siat.def.view.struts.AdministrarRecAliDAction"
+		    scope="request"
+        	validate="false"
+	        name="recAliAdapter"
+            parameter="method"
+    	    input=".def.gravamen.view.recAliEditAdapter"
+	        attribute="recAliAdapter">
+            
+    	    <forward name="recAliViewAdapter"      path=".def.gravamen.view.recAliViewAdapter" />
+    	    <forward name="recAliEditAdapter"      path=".def.gravamen.view.recAliEditAdapter" />
+	    </action>
+	    
+	    <!-- Fin Mantenedor Recurso-->
+	    
+		<!-- Area -->	    
+	    <action
+	    	path="/def/BuscarArea"
+	        type="ar.gov.rosario.siat.def.view.struts.BuscarAreaDAction"
+			scope="request"
+	       	validate="false"
+	        name="areaSearchPage"
+	        parameter="method"
+	   		input=".def.configuracion.view.areaSearchPage"
+	        attribute="areaSearchPage">
+	           
+	   	    <forward name="areaSearchPage"   	path=".def.configuracion.view.areaSearchPage" />
+	   	    <forward name="administrarArea" 	path="/def/AdministrarArea.do?method=inicializar" />
+	   	   	<forward name="buscarOficina" 	    path="/seg/BuscarOficina.do?method=inicializar" />
+	    </action>
+		
+		<action
+     		path="/def/AdministrarArea"
+	        type="ar.gov.rosario.siat.def.view.struts.AdministrarAreaDAction"
+		    scope="request"
+        	validate="false"
+	        name="areaAdapter"
+            parameter="method"
+    	    input=".def.configuracion.view.areaEditAdapter"
+	        attribute="areaAdapter">
+            
+    	    <forward name="areaViewAdapter"		 path=".def.configuracion.view.areaViewAdapter" />
+    	    <forward name="areaEditAdapter"      path=".def.configuracion.view.areaEditAdapter" />
+    	    <forward name="recursoAreaAdapter"   path=".def.configuracion.view.recursoAreaAdapter" />
+	   	   	<forward name="administrarRecursoArea"    path="/def/AdministrarRecursoArea.do?method=inicializar" />
+	    </action>
+	    
+	    <action
+     		path="/def/AdministrarRecursoArea"
+	        type="ar.gov.rosario.siat.def.view.struts.AdministrarRecursoAreaDAction"
+		    scope="request"
+        	validate="false"
+	        name="recursoAreaAdapter"
+            parameter="method"
+    	    input=".def.configuracion.view.recursoAreaEditAdapter"
+	        attribute="recursoAreaAdapter">
+            
+    	    <forward name="recursoAreaViewAdapter"      path=".def.configuracion.view.recursoAreaViewAdapter" />
+    	    <forward name="recursoAreaEditAdapter"      path=".def.configuracion.view.recursoAreaEditAdapter" />
+    	    <forward name="administrarArea"    			path="/def/AdministrarArea.do?method=inicializar" />
+	    </action>
+	    
+	    <!-- Fin Area -->
+	    
+	    
+	    <!-- Parametro -->	    
+	    <action
+	    	path="/def/BuscarParametro"
+	        type="ar.gov.rosario.siat.def.view.struts.BuscarParametroDAction"
+			scope="request"
+	       	validate="false"
+	        name="parametroSearchPage"
+	        parameter="method"
+	   		input=".def.configuracion.view.parametroSearchPage"
+	        attribute="parametroSearchPage">
+	           
+	   	    <forward name="parametroSearchPage"   	path=".def.configuracion.view.parametroSearchPage" />
+	   	    <forward name="administrarParametro" 	path="/def/AdministrarParametro.do?method=inicializar" />
+	    </action>
+		
+		<action
+     		path="/def/AdministrarParametro"
+	        type="ar.gov.rosario.siat.def.view.struts.AdministrarParametroDAction"
+		    scope="request"
+        	validate="false"
+	        name="parametroAdapter"
+            parameter="method"
+    	    input=".def.configuracion.view.parametroEditAdapter"
+	        attribute="parametroAdapter">
+            
+    	    <forward name="parametroViewAdapter" 	path=".def.configuracion.view.parametroViewAdapter" />
+    	    <forward name="parametroEditAdapter"    path=".def.configuracion.view.parametroEditAdapter" />
+	    </action>
+	    <!-- Fin Parametro -->
+	    
+		<!-- Calendario -->	    
+	    <action
+	    	path="/def/BuscarCalendario"
+	        type="ar.gov.rosario.siat.def.view.struts.BuscarCalendarioDAction"
+			scope="request"
+	       	validate="false"
+	        name="calendarioSearchPage"
+	        parameter="method"
+	   		input=".def.gravamen.view.calendarioSearchPage"
+	        attribute="calendarioSearchPage">
+	           
+	   	    <forward name="calendarioSearchPage"   	path=".def.gravamen.view.calendarioSearchPage" />
+	   	    <forward name="administrarCalendario" 	path="/def/AdministrarCalendario.do?method=inicializar" />
+	    </action>
+		
+		<action
+     		path="/def/AdministrarCalendario"
+	        type="ar.gov.rosario.siat.def.view.struts.AdministrarCalendarioDAction"
+		    scope="request"
+        	validate="false"
+	        name="calendarioAdapter"
+            parameter="method"
+    	    input=".def.gravamen.view.calendarioEditAdapter"
+	        attribute="calendarioAdapter">
+            
+    	    <forward name="calendarioViewAdapter" 	 path=".def.gravamen.view.calendarioViewAdapter" />
+    	    <forward name="calendarioEditAdapter"    path=".def.gravamen.view.calendarioEditAdapter" />
+	    </action>
+	    <!-- Fin Calendario -->
+ 
+        <!-- Cache -->
+        <action path="/def/AdministrarCache" parameter=".def.configuracion.view.cacheViewAdapter" type="org.apache.struts.actions.ForwardAction"/>
+        <!-- Fin Cache -->
+        
+		<!-- Matriz de Parametros de Emision-->
+	    <action
+	    	path="/def/BuscarEmiMat"
+	        type="ar.gov.rosario.siat.def.view.struts.BuscarEmiMatDAction"
+			scope="request"
+	       	validate="false"
+	        name="emiMatSearchPage"
+	        parameter="method"
+	   		input=".def.emision.view.emiMatSearchPage"
+	        attribute="emiMatSearchPage">
+	           
+	   	    <forward name="emiMatSearchPage"    	path=".def.emision.view.emiMatSearchPage" />
+	   	    <forward name="administrarEncEmiMat" 	path="/def/AdministrarEncEmiMat.do?method=inicializar" />
+	   	    <forward name="administrarEmiMat" 	    path="/def/AdministrarEmiMat.do?method=inicializar" />
+	    </action>
+	    
+	    <action
+     		path="/def/AdministrarEncEmiMat"
+	        type="ar.gov.rosario.siat.def.view.struts.AdministrarEncEmiMatDAction"
+		    scope="request"
+        	validate="false"
+	        name="emiMatAdapter"
+            parameter="method"
+    	    input=".def.emision.view.emiMatEncEditAdapter"
+	        attribute="emiMatAdapter">
+
+    	    <forward name="emiMatEncEditAdapter"    path=".def.emision.view.emiMatEncEditAdapter" />
+    	    <forward name="administrarEmiMat" 	    path="/def/AdministrarEmiMat.do?method=inicializar" />
+	    </action>
+
+	    <action
+     		path="/def/AdministrarEmiMat"
+	        type="ar.gov.rosario.siat.def.view.struts.AdministrarEmiMatDAction"
+		    scope="request"
+        	validate="false"
+	        name="emiMatAdapter"
+            parameter="method"
+    	    input=".def.emision.view.emiMatAdapter"
+	        attribute="emiMatAdapter">
+
+			<forward name="emiMatAdapter"     		path=".def.emision.view.emiMatAdapter" />
+			<forward name="emiMatViewAdapter"      	path=".def.emision.view.emiMatViewAdapter" />
+			<forward name="administrarEncEmiMat" 	path="/def/AdministrarEncEmiMat.do?method=inicializar" />
+    	    <forward name="administrarColEmiMat" 	path="/def/AdministrarColEmiMat.do?method=inicializar" />
+	    </action>
+	    
+		<action
+     		path="/def/AdministrarColEmiMat"
+	        type="ar.gov.rosario.siat.def.view.struts.AdministrarColEmiMatDAction"
+		    scope="request"
+        	validate="false"
+	        name="colEmiMatAdapter"
+            parameter="method"
+    	    input=".def.emision.view.colEmiMatEditAdapter"
+	        attribute="colEmiMatAdapter">
+
+			<forward name="colEmiMatViewAdapter"    path=".def.emision.view.colEmiMatViewAdapter" />
+			<forward name="colEmiMatEditAdapter"    path=".def.emision.view.colEmiMatEditAdapter" />
+		</action>
+	    <!-- FIN Matriz de Parametros de Emision-->
+	    
+		<!-- CodEmi -->	    
+	    <action
+	    	path="/def/BuscarCodEmi"
+	        type="ar.gov.rosario.siat.def.view.struts.BuscarCodEmiDAction"
+			scope="request"
+	       	validate="false"
+	        name="codEmiSearchPage"
+	        parameter="method"
+	   		input=".def.emision.view.codEmiSearchPage"
+	        attribute="codEmiSearchPage">
+	           
+	   	    <forward name="codEmiSearchPage"   	 path=".def.emision.view.codEmiSearchPage" />
+	   	    <forward name="administrarCodEmi"  	 path="/def/AdministrarCodEmi.do?method=inicializar" />
+	   	    <forward name="administrarEncCodEmi" path="/def/AdministrarEncCodEmi.do?method=inicializar" />
+	    </action>
+
+		<action
+     		path="/def/AdministrarEncCodEmi"
+	        type="ar.gov.rosario.siat.def.view.struts.AdministrarEncCodEmiDAction"
+		    scope="request"
+        	validate="false"
+	        name="codEmiAdapter"
+            parameter="method"
+    	    input=".def.emision.view.codEmiEncEditAdapter"
+	        attribute="codEmiAdapter">
+            
+            <forward name="administrarCodEmi"  	   path="/def/AdministrarCodEmi.do?method=inicializar" />
+    	    <forward name="codEmiEncEditAdapter"   path=".def.emision.view.codEmiEncEditAdapter" />
+	    </action>
+		
+		<action
+     		path="/def/AdministrarCodEmi"
+	        type="ar.gov.rosario.siat.def.view.struts.AdministrarCodEmiDAction"
+		    scope="request"
+        	validate="false"
+	        name="codEmiAdapter"
+            parameter="method"
+    	    input=".def.emision.view.codEmiAdapter"
+	        attribute="codEmiAdapter">
+            
+    	    <forward name="codEmiAdapter"   	 path=".def.emision.view.codEmiAdapter" />
+    	    <forward name="codEmiViewAdapter" 	 path=".def.emision.view.codEmiViewAdapter" />
+			<forward name="administrarEncCodEmi" path="/def/AdministrarEncCodEmi.do?method=inicializar" />
+		</action>
+		<!-- Fin CodEmi -->
+	    		
+	    <!-- Mantenedor Banco -->
+	    <action
+	    	path="/def/BuscarBanco"
+	        type="ar.gov.rosario.siat.def.view.struts.BuscarBancoDAction"
+			scope="request"
+	       	validate="false"
+	        name="bancoSearchPage"
+	        parameter="method"
+	   		input=".def.servicioBanco.view.bancoSearchPage"
+	        attribute="bancoSearchPage">
+	           
+	   	    <forward name="bancoSearchPage"    	path=".def.servicioBanco.view.bancoSearchPage" />
+	   	    <forward name="administrarBanco" 	path="/def/AdministrarBanco.do?method=inicializar" />
+	    </action>
+		
+		<action
+     		path="/def/AdministrarBanco"
+	        type="ar.gov.rosario.siat.def.view.struts.AdministrarBancoDAction"
+		    scope="request"
+        	validate="false"
+	        name="bancoAdapter"
+            parameter="method"
+    	    input=".def.servicioBanco.view.bancoEditAdapter"
+	        attribute="bancoAdapter">
+            
+    	    <forward name="bancoViewAdapter"		path=".def.servicioBanco.view.bancoViewAdapter" />
+    	    <forward name="bancoEditAdapter"    	path=".def.servicioBanco.view.bancoEditAdapter" />
+    	    <forward name="buscarBanco" 	       	path="/def/BuscarBanco.do?method=buscar" />    	    
+	    </action>
+		<!-- Fin Mantenedor Banco -->
+		
+		<!-- Mantenedor SiatScript -->	    
+	    <action
+	    	path="/def/BuscarSiatScript"
+	        type="ar.gov.rosario.siat.def.view.struts.BuscarSiatScriptDAction"
+			scope="request"
+	       	validate="false"
+	        name="siatScriptSearchPage"
+	        parameter="method"
+	   		input=".def.configuracion.view.siatScriptSearchPage"
+	        attribute="siatScriptSearchPage">
+	        	        
+	   	    <forward name="administrarSiatScript" 		path="/def/AdministrarSiatScript.do?method=inicializar" />	
+	   	    <forward name="siatScriptSearchPage"   		path=".def.configuracion.view.siatScriptSearchPage" />  
+	   	    <forward name="administrarEncSiatScript" 	path="/def/AdministrarEncSiatScript.do?method=inicializar" />      
+	    </action>
+		
+		<action
+     		path="/def/AdministrarSiatScript"
+	        type="ar.gov.rosario.siat.def.view.struts.AdministrarSiatScriptDAction"
+		    scope="request"
+        	validate="false"
+	        name="siatScriptAdapter"
+            parameter="method"
+    	    input=".def.configuracion.view.siatScriptEditAdapter"
+	        attribute="siatScriptAdapter">
+	        
+	        	        
+	        <forward name="siatScriptViewAdapter"		path=".def.configuracion.view.siatScriptViewAdapter" />
+	        <forward name="siatScriptEditAdapter"		path=".def.configuracion.view.siatScriptEditAdapter" />	        
+	        <forward name="administrarEncSiatScript" 	path="/def/AdministrarEncSiatScript.do?method=inicializar" />
+	        <forward name="administrarSiatScriptUsr" 	path="/def/AdministrarSiatScriptUsr.do?method=inicializar" /> 	        
+	    </action>
+	    
+	    <action
+     		path="/def/AdministrarSiatScriptUsr"
+	        type="ar.gov.rosario.siat.def.view.struts.AdministrarSiatScriptUsrDAction"
+		    scope="request"
+        	validate="false"
+	        name="siatScriptUsrAdapter"
+            parameter="method"
+    	    input=".def.configuracion.view.siatScriptUsrEditAdapter"
+	        attribute="siatScriptAdapter">
+	        
+	        <forward name="siatScriptUsrViewAdapter"	path=".def.configuracion.view.siatScriptUsrViewAdapter" />
+    	    <forward name="siatScriptUsrEditAdapter"    path=".def.configuracion.view.siatScriptUsrEditAdapter" />	          
+    	    
+	   </action>
+	   
+	   	    <action
+     		path="/def/AdministrarEncSiatScript"
+	        type="ar.gov.rosario.siat.def.view.struts.AdministrarEncSiatScriptDAction"
+		    scope="request"
+        	validate="false"
+	        name="siatScriptAdapter"
+            parameter="method"
+    	    input=".def.configuracion.view.siatScriptEncEditAdapter"
+	        attribute="siatScriptAdapter">
+	        
+	        <forward name="siatScriptEncEditAdapter"	path=".def.configuracion.view.siatScriptEncEditAdapter" />
+	        
+	   </action>
+	   
+	   
+	    <!-- Fin Mantenedor SiatScript -->
+		
+ 	</action-mappings>    
+</struts-config>

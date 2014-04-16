@@ -1,0 +1,6 @@
+tocTab[tocTab.length] = new Array("2.1.9.5:1", "", "Diagrama de Estrategia Fiscal", "EARoot/EA2/EA1/EA9/EA5/EA554.htm", "180.png", "366", "0", "", "Use Case diagram");
+tocTab[tocTab.length] = new Array("2.1.9.5:2", "", "Mantenedor de Documentación de Soporte", "EARoot/EA2/EA1/EA9/EA5/EA556.htm", "7.png", "5062", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.9.5:3", "", "Mantenedor de Fuente de Información", "EARoot/EA2/EA1/EA9/EA5/EA557.htm", "7.png", "5061", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.9.5:4", "", "Mantenedor de Supervisor", "EARoot/EA2/EA1/EA9/EA5/EA558.htm", "7.png", "4193", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.9.5:5", "", "Mantenedor Inspector", "EARoot/EA2/EA1/EA9/EA5/EA559.htm", "7.png", "1702", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.9.5:6", "", "Mantenedor Investigador", "EARoot/EA2/EA1/EA9/EA5/EA560.htm", "7.png", "1703", "0", "", "UseCase");

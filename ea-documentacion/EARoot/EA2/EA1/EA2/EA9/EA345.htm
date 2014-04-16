@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Procesar Novedades Habilitaciones</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="pageHeader"></div>
+<div class="PageBody">
+	<span class="ObjectTitle">Procesar Novedades Habilitaciones  : public   usecase</span>
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">28/03/2008 13:05:05</td>
+		</tr>
+		<tr>
+			<td class="ObjectDetailsTopic">Modified:</td>
+			<td class="ObjectDetailsValue">22/09/2009 11:59:56</td>
+		</tr>
+		<tr style="height: 10px"><td colspan="2"></td></tr>
+		<tr>
+			<td class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td class="ObjectDetailsValue">tecso</td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td class="ObjectDetailsValue">1.0</td>
+		</tr>
+		<tr id="proj02" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Phase:</td>
+			<td class="ObjectDetailsValue">1.0</td>
+		</tr>
+		<tr id="proj03" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Status:</td>
+			<td class="ObjectDetailsValue">R5-AFIP</td>
+		</tr>
+		<tr id="proj04" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Complexity:</td>
+			<td class="ObjectDetailsValue">Medium</td>
+		</tr>
+		<tr>
+			<td class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">UUID:</td>
+			<td class="ObjectDetailsValue">{6D2B76D0-48EC-47f6-BF89-1FF812691621}</td>
+		</tr>
+		<tr id="adv01" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
+			<td class="ObjectDetailsValue"><a href="EA342.htm">Novedades sistemas origen</a>, <a href="../../EA1/EA8/EA261.htm">Novedades Osiris</a>, <a href="../../../EA5/EA4/EA867.htm">Procesos AFIP</a></td>
+		</tr>
+	</table>
+	<div class="ObjectDetailsNotes">Procesa archivos provenientes del área de Habilitaciones. Se agrega toda la información requerida para la implementación de Rs y Rg sobre Osiris.<br />Con el alta de una cuenta, se presupone alta en el Régimen general de DREI y por lo tanto se debe generar la deuda hasta el último período emitido</div>
+
+	<div class="TableGroup" id="TableGroup">
+		<ul class="ItemTitle">
+			<li onClick="parent.toggleItem('Scenario');" id="ScenarioTitle">Scenarios</li>
+			<li onClick="parent.toggleItem('Links');" id="LinksTitle">Other Links</li>
+		</ul>
+		<div class="ItemBody" id="ScenarioTable">
+			<table align="center" border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="24%" class="TableHeading">Scenario</td>
+					<td width="8%" class="TableHeading">Type</td>
+					<td width="68%" class="TableHeading">Detail</td>
+				</tr>
+				<tr>
+					<td width="24%" class="TableRow">Alta de Comercio</td>
+					<td width="8%" class="TableRow">Alternate</td>
+					<td width="68%" class="TableRow"><div class="ObjectDetailsNotes">Input: archivo de texto con transacciones con los siguientes datos por líneas:<br />0- Código Transacción=1<br />1- Código Tipo Obj imponible=&quot;COMERCIO&quot;<br />2- Cod Area Origen=&quot;HAB&quot;<br />3- Fecha Acción <br />4- Código Acción=&quot;A&quot;<br />5- Nro Cuenta <br />6- Nro Cuenta <br />7- Fecha Vigencia<br />8- Fecha Inicio Actividad<br />9- Nro de Comercio<br />10- Domicilio Envio<br />11- Catastral <br />12- Radio <br />13- Ult. Nro Permiso Habilitaciones <br />14- Ingresos Brutos (Nro convenio multilateral)<br />15- Descripción de actividad <br />16-30- Cod.Rubro(6) $ fecha_Desde(8) $ fecha_Hasta(8)<br />31- Fecha inicio Toldos<br />32- Cant.Parantes de Toldos<br />33- Código de gestión personal<br />34- Cantidad Personal<br /><br /><br /><br />1.1.	Obtener la lista de atributos del Objeto imponible consultando def_tipObjImpAtr cuyo idTipObjImp=2 (comercio) y es atributo Siat=No o (es atributo = Si y valor por defecto = (codAtributo de la misma tabla con esSiat=No)) <br />1.2.	Para cada línea de transacción informada:<br />1.2.1.	Para cada atributo de la lista de atributos:<br />1.2.1.1.	Validar que no exista otro Comercio con la misma clave y clave funcional, si existe terminar el proceso para la transacción.<br />1.2.1.2.	Crear un objeto imponible tipo Comercio.<br />1.2.1.3.	Obtener la lista de atributos para el tipo de objeto imponible tipo Comercio donde esSiat= No o (esSiat=Si y el valor por defecto = código de un atributo para el mismo tipo de objeto imponible y esSiat=No)<br />1.2.1.4.	Para cada atributo:<br />1.2.1.4.1.	Si no es multivalor:<br />1.2.1.4.1.1.	Obtener y guardar el valor en la columna de interfaz definida en el atributo.<br />1.2.1.4.2.	Si es multivalor:<br />1.2.1.4.2.1.	Para cada columna definida en los campos posColIn<br />1.2.1.5.	Si no es multivalor (esMultivalor=No) obtener el valor contenido en la transacción en la columna cuya posición está definida en el campo posColInt <br />1.2.1.5.1.	Guardar <br />1.2.1.6.	Si es multivalor para cada columna <br />1.3.	Al recibir las novedades de objeto imponible verificar si ya existe un comercio con el mismo titular (el titular no se recibe en la novedad de alta de comercio) y en la misma sección / manzana, si ya existe un comercio con esas características:<br />1.3.1.	Verificar el estado de la cuenta del comercio ya existente en Siat<br />1.3.1.1.	Si el estado es “Habilitado” enviar una solicitud a Mantenimiento de Padrón para analizar si se trata de dos comercios diferentes o es en realidad un anexo de rubros. <br />1.3.1.2.	Si el estado es “Alta de Oficio” enviar solicitud  a Mantenimiento de Padrón  de análisis de vinculación de cuentas.<br />1.3.1.3.	Si el estado es “Espera de Habilitación” enviar solicitud para analizar si correspondía una modificación de comercio.<br />1.4.	Crear la cuenta DReI del objeto imponible:<br />1.4.1.	Si el análisis de duplicidad dio positivo y se envió una solicitud para análisis colocar la cuenta en estado: &quot;ANALISIS DUPLICIDAD&quot; y setear la bandera emisión=No<br />1.4.2.	Si no existe el Nro de ficha colocar estado en &quot;ESPERA DE HABILITACION&quot;, Sino &quot;HABILITADO&quot;.<br />1.5.	Por cada rubro habilitado para el comercio verificar si éste existe en la lista de atributos valorizados que dan de alta el recurso ETuR, en caso afirmativo dar de alta la cuenta de ETuR con el mismo número que la de DReI.<br />1.6.	Verificar si existe fecha de inicio de toldos, si existe dar de alta la cuenta de Ocupación de espacio aéreo (con el mismo número).<br /></div>
+</td>
+				</tr>
+				<tr>
+					<td width="24%" class="TableRow">Modificación de Comercio</td>
+					<td width="8%" class="TableRow">Alternate</td>
+					<td width="68%" class="TableRow"><div class="ObjectDetailsNotes">Input: archivo de texto de transacciones<br /><br />3.1.	Los atributos que pueden ser modificados son los siguientes:<br />3.1.1.	Domicilio <br />3.1.2.	Catastral<br />3.1.3.	Radio<br />3.1.4.	Fecha de inicio de actividad declarada<br />3.1.5.	Último Nro de Permiso de Habilitaciones (actual “nro de ficha”). <br />3.1.6.	Nro convenio multilateral<br />3.1.7.	Descripción de actividad<br />3.1.8.	{Rubro – fecha_desde – fecha_hasta} (cuando es una eliminación viene informado con fecha baja)<br />3.1.9.	Fecha de inicio de toldos<br />3.1.10.	Cantidad de Parantes del Toldo<br />3.2.	Verificar si los datos que se encuentran en la base para atributos que son Siat =si y sus correspondientes Siat=No son iguales, si no lo son verificar si los datos que provienen en la modificación son iguales a los datos replicados, si lo son modificar los valores de habilitaciones y terminar el proceso.<br />3.3.	Si los datos que se encuentran en la base no coinciden con los marcados como Siat=Si, y los valores a ingresar no coinciden con los replicados enviar solicitud a inspección<br />3.4.	Si los valores en la base y sus replicados son iguales:<br />3.4.1.	Si cambia la fecha de inicio de actividad, enviar una  solicitud de emisión o anulación de períodos de deuda.<br />3.4.2.	Si cambia la fecha de inicio de Toldos o la cantidad de parantes enviar una solicitud de emisión o anulación de deuda.<br />3.4.3.	Obtener la Cantidad de Rubros activos  pre-existentes del comercio que afectan al recurso ETuR.<br />3.4.4.	Tiene Cuenta ETuR = No (puede un comercio dar de baja una cuenta y luego volver a darla de alta? Tiene que conservar el nro? En análisis)<br />3.4.5.	Si la Cantidad de Rubros &gt; 0<br />3.4.5.1.	Tiene Cuenta ETuR=Si<br />3.4.6.	Si Tiene Cuenta ETuR obtener la Menor Fecha de Inicio de los rubros activos (sin fecha fin) afectado a ETuR, sino Menor Fecha de Inicio = Nula<br />3.4.7.	Nueva fecha inicio = Menor Fecha Inicio<br />3.4.8.	Para cada rubro informado en la novedad:<br />3.4.8.1.	Consultar la base para saber si ya existe el mismo.<br />3.4.8.2.	Si existe, validar si es un rubro afectado a ETuR y si se modificó su fecha de inicio o fecha de fin<br />3.4.8.2.1.	Si se modificó la fecha de inicio :<br />3.4.8.2.1.1.	Nueva fecha Inicio = fecha de Inicio informada del  rubro <br />3.4.8.2.2.	Sino<br />3.4.8.2.2.1.	Si Nueva fecha Inicio &gt; fecha de Inicio informada:<br />3.4.8.2.2.1.1.	Nueva fecha Inicio = fecha de Inicio informada.<br />3.4.8.2.3.	Si se modificó la fecha de fin (se da de baja el rubro):<br />3.4.8.2.3.1.	Restar uno a la cantidad de Rubros afectados a ETuR.<br />3.4.8.3.	Si no existe y es un rubro afectado por Etur<br />3.4.8.3.1.	Sumar uno a la Cantidad de Rubros afectados a ETuR.<br />3.4.8.3.2.	Nueva fecha Inicio = fecha de Inicio informada del  rubro<br />3.4.9.	Si Tiene Cuenta ETuR= No y Nueva fecha Inicio no es nula<br />3.4.9.1.	Crear la cuenta de ETuR con vigencia a partir de Nueva fecha Inicio.<br />3.4.10.	Si Tiene Cuenta ETuR=Si y Nueva fecha Inicio &lt;&gt; Menor fecha Inicio<br />3.4.10.1.	Enviar solicitud de análisis de emisión o anulación de períodos<br />3.4.11.	Si Tiene Cuenta ETuR = SI y Cantidad de Rubros afectados a ETuR = 0<br />3.4.11.1.	Dar de baja la cuenta de ETuR. <br /></div>
+</td>
+				</tr>
+
+			</table>
+		</div>
+		<div class="ItemBody" id="LinksTable">
+			<table align="center" border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="30%" class="TableHeading">Object</td>
+					<td width="15%" class="TableHeading">Type</td>
+					<td width="15%" class="TableHeading">Connection</td>
+					<td width="40%" class="TableHeading">Notes</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="EA346.htm">Procesar Novedades Objeto Imponible</a></td>
+					<td width="15%" class="TableRow" valign="top">UseCase</td>
+					<td width="15%" class="TableRow" valign="top">Generalization</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../../../../EA1/EA5/EA63.htm">«Functional» 1- El sistema deberá dar soporte a todos los procesos de la Administración Tributaria.</a></td>
+					<td width="15%" class="TableRow" valign="top">Requirement</td>
+					<td width="15%" class="TableRow" valign="top">Realisation</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+
+			</table>
+		</div>
+	</div>
+<div class="pageFooter"></div>
+ 
+</body>
+</html>

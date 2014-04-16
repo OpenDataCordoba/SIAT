@@ -1,0 +1,10 @@
+tocTab[tocTab.length] = new Array("2.4.3:1", "", "Contribuyentes Operativos de Investigación", "EARoot/EA2/EA4/EA3/EA696.htm", "183.png", "387", "0", "", "Statechart diagram");
+tocTab[tocTab.length] = new Array("2.4.3:2", "", "Con Acta de Inicio", "EARoot/EA2/EA4/EA3/EA698.htm", "20.png", "3148", "0", "", "State");
+tocTab[tocTab.length] = new Array("2.4.3:3", "", "Con Acta de Inicio Registrada", "EARoot/EA2/EA4/EA3/EA699.htm", "20.png", "3149", "0", "", "State");
+tocTab[tocTab.length] = new Array("2.4.3:4", "", "Con Interés Fiscal (a investigar)", "EARoot/EA2/EA4/EA3/EA700.htm", "20.png", "3150", "0", "", "State");
+tocTab[tocTab.length] = new Array("2.4.3:5", "", "Con Orden de Control Emitida", "EARoot/EA2/EA4/EA3/EA701.htm", "20.png", "3152", "0", "", "State");
+tocTab[tocTab.length] = new Array("2.4.3:6", "", "Final", "EARoot/EA2/EA4/EA3/EA702.htm", "69.png", "3144", "0", "", "StateNode");
+tocTab[tocTab.length] = new Array("2.4.3:7", "", "Incluido en el Operativo de Control Fiscal", "EARoot/EA2/EA4/EA3/EA703.htm", "20.png", "3147", "0", "", "State");
+tocTab[tocTab.length] = new Array("2.4.3:8", "", "Initial", "EARoot/EA2/EA4/EA3/EA704.htm", "68.png", "3143", "0", "", "StateNode");
+tocTab[tocTab.length] = new Array("2.4.3:9", "", "No Incluido en el Operativo de Control Fiscal", "EARoot/EA2/EA4/EA3/EA705.htm", "20.png", "3146", "0", "", "State");
+tocTab[tocTab.length] = new Array("2.4.3:10", "", "Sin Interés Fiscal", "EARoot/EA2/EA4/EA3/EA707.htm", "20.png", "3151", "0", "", "State");

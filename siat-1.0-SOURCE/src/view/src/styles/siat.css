@@ -1,0 +1,294 @@
+/* estilos para el siat */
+#top_user {
+	background-color: #FF8940;
+        background-image: url(../images/logo_siat.svg);
+        background-size: 80px;
+        background-position: left;
+	background-repeat: no-repeat;
+	padding: 0px;
+	margin: 0px;
+}
+
+/* Pie usuario siat */
+
+#pie_user {
+	background-color: #006699;
+	color: #FFFFFF;
+	height: 16px;
+	clear: both;
+	padding-top: 5px;
+	text-align: center;
+	font-size:93%;
+}
+
+#pie_user a {
+	color: #FFFFFF;
+	font-weight: bold;
+}
+
+#pie_user a:hover {
+	color: #CCCCCC;
+}
+
+#userinfo {
+    width:100%;
+    text-align: right;
+    color: white;
+	background-color: #666666;
+	padding: 4px;
+	font-size:93%;
+}
+
+#userinfo a {
+	color: #FFFFFF;
+	font-weight: bold;
+	background-image: url();
+	float:none;
+	clear:both; display:inline;
+	text-decoration: none;
+	margin: 0px;
+	padding: 0px;
+	border: 0px;
+}
+
+#pie_user a:hover {
+	text-decoration: none;
+	color: #CCCCCC;
+}
+
+.tabladatos 
+{ width: 100%;}
+.tabladatos td
+  { height: 18px; white-space: nowrap; text-align:right; width:20%; }
+.tabladatos td.normal
+  { height: 18px; white-space: normal; text-align:left; width:30%; }
+.tabladatos td.normalWrap
+  {text-align:left;} 
+.tabladatos td.center
+  { height: 18px; white-space: nowrap; text-align:center; width:20%; }
+
+
+.iframeheaduser {
+  height:76px;
+}
+
+.iframehead {
+  height:76px;
+}
+
+.iframehead_anon {
+  height:150px;
+}
+
+.listahorizontalSiat dd {
+	display:inline; 
+	color:#666;
+	font-weight: normal;
+	margin: 10px 2px 0px 2px;
+	padding: 0px;
+}
+
+.listahorizontalSiat dt {
+	display:inline; 
+ 	font-weight: normal;
+ 	color: #222; 
+	margin: 10px 2px 0px 2px;
+	padding: 0px;
+}
+
+.listabloqueSiat dd {
+	display:block; 
+	color:#666;
+	font-weight: normal;
+	margin: 10px 0px 0px 0px;
+	padding-left:40px;
+}
+
+.listabloqueSiat dt {
+	display:block; 
+ 	font-weight: normal;
+ 	color: #222; 
+	margin: 10px 0px 0px 0px;
+	padding: 0px;
+}
+
+
+.link_siat{
+		cursor: pointer; 
+		cursor: hand; 
+		vertical-align: middle;
+		font-size:8pt;
+}
+
+/*  login / logout  */
+#tools_siat {
+	float: right;
+	display: block;
+	margin: 0px 0px 0px 0px;
+}
+
+
+#tools_siat ul {
+	list-style: none;
+	margin: 0px 0px 0px 0px;
+	padding: 5px;
+}
+
+#tools_siat ul li {
+	float: left;
+	background-image: url(../images/ico_login_out.png);
+	margin: 0px 0px 0px 0px;
+	padding: 5px;
+}
+
+#tools_siat ul li a {
+	display: block;
+	background-image: url(../images/ico_login_over.png);
+	padding: 5px;
+	font-weight: bold;
+}
+
+.boton_menor {
+}
+
+.messages {	
+    background-color: #ffffcc;
+    border: 1px solid #FF0000;
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin: 10px auto;
+    padding: 3px;
+    text-align: center;
+    vertical-align: bottom;
+}
+
+.tramonline th.tramonlineCaption { 
+	font-weight:bold ;
+	color:white !important ;
+	background-color:#FF8940;
+	padding: 10px 15px 5px 30px ;
+	text-align: left ;
+	font-size:125% ; 
+}
+
+button.botonDeshabilitado {
+	font-size: 90%;
+	color: #999999;
+	font-weight: normal;
+	cursor: default;
+}
+
+.msgBold {	
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 110%;
+    margin: 10px auto;
+    padding: 3px;
+    text-align: left;
+    vertical-align: bottom;
+}
+
+table.tableDeuda {
+	text-align: left;
+	border: 0px solid #006699;
+	width: 100%;
+	margin: 0px 0px 0px 0px;
+}
+
+.tableDeuda caption {
+	font-weight:bold;
+	color:#4d4d4d;
+	background-color: #ddddff;
+	padding: 8px 15px 5px 15px;
+	text-align: center;
+	font-size:125%;
+	border: 1px solid #ddddff;
+}
+
+.tableDeuda th a {
+	color:#fff;
+	font-weight:normal;
+}
+
+.tableDeuda th a:hover{
+	color:#eee;
+}
+
+.tableDeuda td {
+	padding: 3px 5px;
+	border-bottom: 1px solid #999999;
+	border-right: 1px solid #999999;
+	vertical-align:top;
+
+}
+
+.tableDeuda td.celdatotales {
+	background-color:#dddddd;
+}
+
+.tableDeuda th.separadorAuto {	
+	width:1px;
+	cellspacing:0px; 
+	padding:0px 0px 0px 0px;
+	margin:0px;
+}
+
+.tableDeuda td.separadorAuto {
+	background-color:#dddddd;
+	width:1px;
+	padding:0px 0px 0px 0px; 
+	margin:0px;
+}
+
+.tableDeuda .subencabezado, .tableDeuda th {
+	font-size:110%;
+	background-color: #eeeeee;
+	padding: 2px 2px 2px 2px;
+	border: 1px solid #999999;
+	color:#555555 !important;
+	vertical-align:middle;
+	font-weight: bold;
+}
+
+.tableDeuda .linea {
+	border-bottom:1px solid #CCCCCC;
+	background-color: #eeeeee;
+	text-align:left;
+}
+
+.tableDeuda .etiqueta {
+	font-weight: bold;
+}
+
+.tableDeuda .datos {
+	padding:2px 3px;
+}
+
+
+label.filtro {
+	font-weight: bold;
+	color: #666666;
+	margin: 0px 10px 0px 0px;
+}
+
+input, textarea, button {
+	border: 1px solid #ddddef;
+	border-radius: 3px 3px;
+	color: #666;
+}
+
+button, input[type='button'] {
+	padding-left: 8px;
+	padding-right: 8px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	margin-left:4px;
+	margin-right:4px;
+}
+
+input[type='button']:hover, button:hover {
+	background-color: #ddddff;
+}
+

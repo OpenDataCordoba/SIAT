@@ -1,0 +1,70 @@
+/* Grid Styles */ 
+
+table .grid {
+  width: 100%;
+}
+
+.grid caption {
+  font-size: 100%; 
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 10px 15px 5px 30px;
+  color: white;
+  background-color : #006699;
+}
+
+.grid .scrollableContent {
+  overflow: hidden;
+}
+
+.grid .innerTable {
+  margin: -5px;
+}
+
+.grid th {
+  font-size: small;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  vertical-align: middle;
+  /*border: 1px solid #006699;*/
+  border-bottom: 0px;
+  white-space: nowrap;
+  padding: 0px 0px 0px 0px;
+
+  /*color: #006699;  
+  background-color: #B9D2E1;*/
+}
+
+.grid .idcell {
+  height: 25px;
+  width: 30px;
+  font-size: small;
+  text-align: center;
+  vertical-align: top;
+  white-space: nowrap;
+  padding: 0px 0px 0px 0px;
+}
+
+.grid .cell {
+  height: 25px;
+  font-size: small;
+  vertical-align: top;
+  padding: 0px 0px 0px 0px;
+}
+
+.grid .datainput {
+  /*color: #006699;*/
+  height: 20px;
+  font-size: 100%;
+  font-weight: bold;
+  text-indent: 3px;
+  border-style: none;
+  padding: 0px 0px 0px 0px;
+  margin: 0px;
+}
+
+.grid div {
+  margin-bottom: 0px;
+}

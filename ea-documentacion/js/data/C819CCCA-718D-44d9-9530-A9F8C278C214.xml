@@ -1,0 +1,14 @@
+tocTab[tocTab.length] = new Array("2.4.8:1", "", "Solicitudes Exenciones (tmp)", "EARoot/EA2/EA4/EA8/EA748.htm", "183.png", "498", "0", "", "Statechart diagram");
+tocTab[tocTab.length] = new Array("2.4.8:3", "", "Alta de Quita de Sobre Tasa", "EARoot/EA2/EA4/EA8/EA753.htm", "68.png", "4160", "0", "", "StateNode");
+tocTab[tocTab.length] = new Array("2.4.8:4", "", "Alta de Solicitud en CMD o DGLT-DE", "EARoot/EA2/EA4/EA8/EA754.htm", "68.png", "4152", "0", "", "StateNode");
+tocTab[tocTab.length] = new Array("2.4.8:5", "", "Apelada", "EARoot/EA2/EA4/EA8/EA755.htm", "20.png", "4164", "0", "", "State");
+tocTab[tocTab.length] = new Array("2.4.8:6", "", "Creada", "EARoot/EA2/EA4/EA8/EA756.htm", "20.png", "4153", "0", "", "State");
+tocTab[tocTab.length] = new Array("2.4.8:7", "", "En análisis", "EARoot/EA2/EA4/EA8/EA757.htm", "20.png", "4154", "0", "", "State");
+tocTab[tocTab.length] = new Array("2.4.8:8", "", "Final", "EARoot/EA2/EA4/EA8/EA758.htm", "69.png", "4162", "0", "", "StateNode");
+tocTab[tocTab.length] = new Array("2.4.8:9", "", "Ha Lugar", "EARoot/EA2/EA4/EA8/EA759.htm", "20.png", "4155", "0", "", "State");
+tocTab[tocTab.length] = new Array("2.4.8:10", "", "No Ha Lugar", "EARoot/EA2/EA4/EA8/EA760.htm", "20.png", "4157", "0", "", "State");
+tocTab[tocTab.length] = new Array("2.4.8:11", "", "Prorrogada", "EARoot/EA2/EA4/EA8/EA761.htm", "20.png", "4158", "0", "", "State");
+tocTab[tocTab.length] = new Array("2.4.8:12", "", "Reconsideración", "EARoot/EA2/EA4/EA8/EA762.htm", "20.png", "4163", "0", "", "State");
+tocTab[tocTab.length] = new Array("2.4.8:13", "", "Revocada", "EARoot/EA2/EA4/EA8/EA763.htm", "20.png", "4156", "0", "", "State");
+tocTab[tocTab.length] = new Array("2.4.8:14", "", "StateMachine1", "EARoot/EA2/EA4/EA8/EA764.htm", "195.png", "4170", "0", "", "StateMachine");
+tocTab[tocTab.length] = new Array("2.4.8:2", "", "StateMachine1", "EARoot/EA2/EA4/EA8/EA750.htm", "183.png", "500", "4170", "", "Statechart diagram");

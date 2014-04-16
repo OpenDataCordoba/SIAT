@@ -1,0 +1,10 @@
+tocTab[tocTab.length] = new Array("2.1.5.1", "1", "Clasificación", "EARoot/EA2/EA1/EA5/EA386.htm", "4.png", "", "", "{6ADE6F9A-AC66-4552-A3B4-3C7191B906DE}", "Package");
+tocTab[tocTab.length] = new Array("2.1.5.2", "1", "Indeterminados", "EARoot/EA2/EA1/EA5/EA387.htm", "4.png", "", "", "{57935DEC-8E8C-4906-9C16-8564503C5329}", "Package");
+tocTab[tocTab.length] = new Array("2.1.5.3", "1", "Osiris", "EARoot/EA2/EA1/EA5/EA388.htm", "4.png", "", "", "{E03D0E94-FC95-4af3-9B04-C8627845F521}", "Package");
+tocTab[tocTab.length] = new Array("2.1.5.4", "1", "Conciliación de envíos", "EARoot/EA2/EA1/EA5/EA389.htm", "4.png", "", "", "{A4559195-CEB7-43ae-B24B-B0D2127EBA8C}", "Package");
+tocTab[tocTab.length] = new Array("2.1.5.5", "1", "Tesorería", "EARoot/EA2/EA1/EA5/EA390.htm", "4.png", "", "", "{978D896C-B30C-4f2a-9618-40360FB3418B}", "Package");
+tocTab[tocTab.length] = new Array("2.1.5.6", "1", "Asentamiento", "EARoot/EA2/EA1/EA5/EA391.htm", "4.png", "", "", "{93FF5EFC-F2F0-4fb8-9FE1-747121CFA799}", "Package");
+tocTab[tocTab.length] = new Array("2.1.5.7", "1", "Compensaciones", "EARoot/EA2/EA1/EA5/EA392.htm", "4.png", "", "", "{589A13A1-96C2-4197-B974-F5A2578FB4BE}", "Package");
+tocTab[tocTab.length] = new Array("2.1.5.8", "1", "Balance", "EARoot/EA2/EA1/EA5/EA393.htm", "4.png", "", "", "{84A056E5-DC6A-4410-8F99-7E29249A43EB}", "Package");
+tocTab[tocTab.length] = new Array("2.1.5.9", "1", "Reclamos", "EARoot/EA2/EA1/EA5/EA394.htm", "4.png", "", "", "{0DE850C4-23A5-4754-9EEB-AA3E981AAA3C}", "Package");
+tocTab[tocTab.length] = new Array("2.1.5.10", "1", "«ADP-Novedades» Novedades Pagos BMROS", "EARoot/EA2/EA1/EA5/EA395.htm", "4.png", "", "", "{DAB53F5E-E13F-4298-A4A3-C0DABFA3584B}", "Package");

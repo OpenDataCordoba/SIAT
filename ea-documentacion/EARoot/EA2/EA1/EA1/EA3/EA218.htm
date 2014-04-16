@@ -1,0 +1,196 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Traspaso de Deuda y Devoluciones</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="pageHeader"></div>
+<div class="PageBody">
+	<span class="ObjectTitle">Traspaso de Deuda y Devoluciones  : public   usecase</span>
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">09/11/2007 20:09:47</td>
+		</tr>
+		<tr>
+			<td class="ObjectDetailsTopic">Modified:</td>
+			<td class="ObjectDetailsValue">18/04/2008 15:26:37</td>
+		</tr>
+		<tr style="height: 10px"><td colspan="2"></td></tr>
+		<tr>
+			<td class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td class="ObjectDetailsValue">1.0</td>
+		</tr>
+		<tr id="proj02" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Phase:</td>
+			<td class="ObjectDetailsValue">1.0</td>
+		</tr>
+		<tr id="proj03" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Status:</td>
+			<td class="ObjectDetailsValue">R2</td>
+		</tr>
+		<tr id="proj04" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Complexity:</td>
+			<td class="ObjectDetailsValue">Medium</td>
+		</tr>
+		<tr>
+			<td class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">UUID:</td>
+			<td class="ObjectDetailsValue">{9D182710-7E2D-464a-86F7-D6FB08B761A3}</td>
+		</tr>
+		<tr id="adv01" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
+			<td class="ObjectDetailsValue"><a href="EA209.htm">Diagrama Administración Proc. Judicial</a></td>
+		</tr>
+	</table>
+	<div class="ObjectDetailsNotes">Este CU tiene como objetivo traspasar deuda previamente asignada a un Procurador durante un envío a judicial a otro Procurador.<br />El traspaso de deuda podrá realizarse a partir de una constancia en particular o de una Cuenta que incluya deudas en vía judicial con o sin Constancias asociadas.<br />El traspaso puede realizarse antes o después de la habilitación de Planillas de Envío y Constancias asociadas.<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /></div>
+
+	<div class="TableGroup" id="TableGroup">
+		<ul class="ItemTitle">
+			<li onClick="parent.toggleItem('Scenario');" id="ScenarioTitle">Scenarios</li>
+			<li onClick="parent.toggleItem('Files');" id="FilesTitle">Files</li>
+			<li onClick="parent.toggleItem('Links');" id="LinksTitle">Other Links</li>
+		</ul>
+		<div class="ItemBody" id="ScenarioTable">
+			<table align="center" border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="24%" class="TableHeading">Scenario</td>
+					<td width="8%" class="TableHeading">Type</td>
+					<td width="68%" class="TableHeading">Detail</td>
+				</tr>
+				<tr>
+					<td width="24%" class="TableRow">Buscar Traspasos de Deudas entre Procuradores</td>
+					<td width="8%" class="TableRow">Alternate</td>
+					<td width="68%" class="TableRow"><div class="ObjectDetailsNotes">Permite consultar los Traspasos de Deudas entre Procuradores por Recurso, Procurador Origen, Procurador Destino, Cuenta, y rangos de Fechas de Traspaso.<br />Si existen resultados se muestra de cada uno de los registros la Fecha de Traspaso, el Recurso, Procurador Origen, Procurador Destino, y la Cuenta y las acciones asociadas: &quot;Ver Traspaso de Deudas entre Procuradores&quot; y &quot;Modificar Traspaso de Deudas entre Procuradores&quot; y &quot;Eliminar Traspaso de Deudas entre Procuradores&quot;.<br />Para realizar un nuevo Traspaso, existe la opción &quot;Agregar Traspaso de Deudas entre Procuradores&quot;.<br /></div>
+</td>
+				</tr>
+				<tr>
+					<td width="24%" class="TableRow">Eliminar Traspaso de Deudas entre Procuradores</td>
+					<td width="8%" class="TableRow">Alternate</td>
+					<td width="68%" class="TableRow"><div class="ObjectDetailsNotes">Permite eliminar un Traspaso de deudas en caso que no tenga detalle asociado, es decir únicamente se creó la cabecera del Traspaso pero no fueron seleccionadas ni incluidas deudas a dicho traspaso.</div>
+</td>
+				</tr>
+				<tr>
+					<td width="24%" class="TableRow">Agregar Traspaso de Deudas entre Procuradores</td>
+					<td width="8%" class="TableRow">Alternate</td>
+					<td width="68%" class="TableRow"><div class="ObjectDetailsNotes">Para agregar un nuevo Traspado de Deudas entre Procuradores, se debe indicar la Fecha del Traspaso, el Recurso, Procurador Origen, Procurador Destino, Cuenta y  Observaciones. <br />Con los datos ingresados se obtienen todos los registros de Deuda en vía Judicial correspondientes y por cada uno se muestra una casilla de check seleccionable junto a la opción &quot;Ver Detalle Deuda&quot;.<br />Unicamente se podrán traspasar los registros de deuda que cumplan con las siguientes validaciones:<br />. deuda no cancelada.<br />. deuda no indeterminada<br />. deuda no incluida en un convenio de pago, salvo que el estado del mismo sea &quot;Anulado&quot; o &quot;Recompuesto&quot;.<br />En caso que exista deuda incluida en un recibo de reconfección o en una gestión judicial no se impedirá el traspaso de la deuda.<br /><br />Una vez seleccionados los registros de deuda a traspasar se inicia el proceso de traspaso:<br />- se genera una nueva Planilla de Envío con estado &quot;Emitida&quot; asociada al Procurador Destino, una nueva Constancia de Deuda con estado &quot;Emitida&quot; y se registrarán todas las deudas traspasadas en el Detalle de la Constancia con estado &quot;activo&quot;.<br /><br />- se actualiza el estado de Constancias, Detalles de Constancias y Planillas de Envío que incluyen deudas traspasadas:<br />     <br />      * Si todas las deudas incluidas en una Constancia fueron         traspasadas (traspaso total), luego la Constancia pasa al estado “Anulada”,  los registros del Detalle de la Constancia pasan al estado “Inactivo”, y la Planilla de envío correspondiente pasa al estado “Anulada”, si es que todas las Constancias asociadas a la misma fueron anuladas, sino pasa al estado “Modificada”.<br />      * Si el traspaso fue parcial, es decir que hubo deudas de Constancias que no pudieron ser traspasadas o en el caso de que siguen existiendo deudas incluidas en una Constancia, luego pasa al estado “Modificada”, los registros del Detalle de la Constancia que fueron traspasados pasan al estado “Inactivo”, permaneciendo otros con estado “Activo” y la Planilla de Envío correspondiente pasa al estado “Modificada”.<br /><br />- se registra los cambios de estado en los históricos de estados respectivos.</div>
+</td>
+				</tr>
+				<tr>
+					<td width="24%" class="TableRow">Ver Traspaso de Deudas entre Procuradores</td>
+					<td width="8%" class="TableRow">Alternate</td>
+					<td width="68%" class="TableRow"><div class="ObjectDetailsNotes">Permite visualizar información propia del Traspaso de Deuda seleccionada y la lista de Deudas que fueron traspasadas al nuevo Procurador y por cada una la opción &quot;Ver Detalle Deuda&quot;.<br />El traspaso puede incluir tanto deudas en vía judicial sin Constancias asociadas como deudas incluidas en detalles de Constancias.En caso de incluir deudas asociadas a Constancias, se muestra entre los datos de la deuda, el número y año de la constancia original. <br /></div>
+</td>
+				</tr>
+				<tr>
+					<td width="24%" class="TableRow">Modificar Traspaso de Deudas entre Procuradores</td>
+					<td width="8%" class="TableRow">Alternate</td>
+					<td width="68%" class="TableRow"><div class="ObjectDetailsNotes">Permite actualizar la Observación del Traspaso realizado.</div>
+</td>
+				</tr>
+
+			</table>
+		</div>
+		<div class="ItemBody" id="FilesTable">
+			<table border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="50%" class="TableHeading">File</td>
+					<td width="10%" class="TableHeading">Type</td>
+					<td width="40%" class="TableHeading">Details</td>
+				</tr>
+			<tr>
+				<td width="50%" class="TableRow"><a href="c:\siatdoc\docGenerada\analisisDisenio\especificacion\GDEUDA - Traspaso y Devolucion de Deuda.doc">c:\siatdoc\docGenerada\analisisDisenio\especificacion\GDEUDA - Traspaso y Devolucion de Deuda.doc</a></td>
+				<td width="10%" class="TableRow">Local File</td>
+				<td width="40%" class="TableRow">
+					<div class="ObjectDetailsNotes">Especificación</div>
+<br />
+					<span class="NoteHeading">File Size:</span> 359 k<br />
+					<span class="NoteHeading">Time Stamp:</span> 05/05/2008 07:19:17 a.m.<br />
+				</td>
+			</tr>
+			<tr>
+				<td width="50%" class="TableRow"><a href="c:\siatdoc\docGenerada\capacitacion\gdeuda\Administrar Proc. Judicial\MDU - Administrar Traspaso de Deuda entre Procuradores.doc">c:\siatdoc\docGenerada\capacitacion\gdeuda\Administrar Proc. Judicial\MDU - Administrar Traspaso de Deuda entre Procuradores.doc</a></td>
+				<td width="10%" class="TableRow">Local File</td>
+				<td width="40%" class="TableRow">
+					<div class="ObjectDetailsNotes">Manual de usuario</div>
+<br />
+					<span class="NoteHeading">File Size:</span> 240 k<br />
+					<span class="NoteHeading">Time Stamp:</span> 22/08/2008 09:25:13 a.m.<br />
+				</td>
+			</tr>
+
+			</table>
+		</div>
+		<div class="ItemBody" id="LinksTable">
+			<table align="center" border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="30%" class="TableHeading">Object</td>
+					<td width="15%" class="TableHeading">Type</td>
+					<td width="15%" class="TableHeading">Connection</td>
+					<td width="40%" class="TableHeading">Notes</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../../../../EA1/EA4/EA52.htm">«Functional» 54- Enviar deudas a CJ puntual o masivamente y emitir los padrones necesarios.</a></td>
+					<td width="15%" class="TableRow" valign="top">Requirement</td>
+					<td width="15%" class="TableRow" valign="top">Realisation</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../../../../EA1/EA5/EA63.htm">«Functional» 1- El sistema deberá dar soporte a todos los procesos de la Administración Tributaria.</a></td>
+					<td width="15%" class="TableRow" valign="top">Requirement</td>
+					<td width="15%" class="TableRow" valign="top">Realisation</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../../../../EA1/EA5/EA67.htm">«Functional» 13- Todo evento que actúe sobre la cuenta corriente de más de un contribuyente, deberá poder ser dirigido a un segmento de contribuyentes seleccionado por el usuario.</a></td>
+					<td width="15%" class="TableRow" valign="top">Requirement</td>
+					<td width="15%" class="TableRow" valign="top">Realisation</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="EA216.htm">Administrar Planillas de Envío de Deuda</a></td>
+					<td width="15%" class="TableRow" valign="top">UseCase</td>
+					<td width="15%" class="TableRow" valign="top">Includes</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../../../../EA1/EA4/EA54.htm">«Functional» 56- Emitir constancias de deuda.</a></td>
+					<td width="15%" class="TableRow" valign="top">Requirement</td>
+					<td width="15%" class="TableRow" valign="top">Realisation</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../../../../EA1/EA4/EA55.htm">«Functional» 57- Registrar la gestión judicial que realizan los procuradores (reclamos extrajudiciales, judiciales, juicios, sentencias, etc.).</a></td>
+					<td width="15%" class="TableRow" valign="top">Requirement</td>
+					<td width="15%" class="TableRow" valign="top">Realisation</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+
+			</table>
+		</div>
+	</div>
+<div class="pageFooter"></div>
+ 
+</body>
+</html>

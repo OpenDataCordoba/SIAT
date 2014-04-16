@@ -1,0 +1,9 @@
+tocTab[tocTab.length] = new Array("2.1.2.1", "1", "Recurso: DReI", "EARoot/EA2/EA1/EA2/EA271.htm", "4.png", "", "", "{6726B62B-1190-4a5c-86F9-0FED9953AF26}", "Package");
+tocTab[tocTab.length] = new Array("2.1.2.2", "1", "Contribuyentes", "EARoot/EA2/EA1/EA2/EA272.htm", "4.png", "", "", "{DCE8F551-0B2C-456d-807C-248285C9398B}", "Package");
+tocTab[tocTab.length] = new Array("2.1.2.3", "1", "Objetos Imponibles", "EARoot/EA2/EA1/EA2/EA273.htm", "4.png", "", "", "{1AE3D170-9908-4aad-A9A4-A43A67810F03}", "Package");
+tocTab[tocTab.length] = new Array("2.1.2.4", "1", "Cuentas Contributivas", "EARoot/EA2/EA1/EA2/EA274.htm", "4.png", "", "", "{62EA2449-0BC3-406a-B397-359FD20BABF4}", "Package");
+tocTab[tocTab.length] = new Array("2.1.2.5", "1", "Distribución", "EARoot/EA2/EA1/EA2/EA275.htm", "4.png", "", "", "{E73393F6-4C08-4a4c-9007-15EBD66EC0CF}", "Package");
+tocTab[tocTab.length] = new Array("2.1.2.6", "1", "Recurso: CdM", "EARoot/EA2/EA1/EA2/EA276.htm", "4.png", "", "", "{8539EAF8-F3B1-45a7-970B-3F767BA18C10}", "Package");
+tocTab[tocTab.length] = new Array("2.1.2.7", "1", "Recurso: Esp.Pub.", "EARoot/EA2/EA1/EA2/EA277.htm", "4.png", "", "", "{C83339B7-5ADC-4dd1-BDBA-9B5B4DF22E80}", "Package");
+tocTab[tocTab.length] = new Array("2.1.2.8", "1", "«Web Service» Servicios Alta,Baja,Modif,Recategoriz RS", "EARoot/EA2/EA1/EA2/EA278.htm", "4.png", "", "", "{D8D07596-844B-478e-8630-BDFEE96BB93A}", "Package");
+tocTab[tocTab.length] = new Array("2.1.2.9", "1", "«ADP-Novedades» Novedades sistemas origen", "EARoot/EA2/EA1/EA2/EA279.htm", "4.png", "", "", "{68AAEF59-A25E-4b5a-A14B-70ECCA8CF5CC}", "Package");

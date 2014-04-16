@@ -1,0 +1,13 @@
+tocTab[tocTab.length] = new Array("2.1.1.3:1", "", "Diagrama Administración Proc. Judicial", "EARoot/EA2/EA1/EA1/EA3/EA209.htm", "180.png", "491", "0", "", "Use Case diagram");
+tocTab[tocTab.length] = new Array("2.1.1.3:2", "", "Consultar deudas en Juicios", "EARoot/EA2/EA1/EA1/EA3/EA215.htm", "7.png", "4536", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.1.3:3", "", "Administrar Planillas de Envío de Deuda", "EARoot/EA2/EA1/EA1/EA3/EA216.htm", "7.png", "3069", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.1.3:4", "", "Administrar Constancias de Deuda", "EARoot/EA2/EA1/EA1/EA3/EA217.htm", "7.png", "4006", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.1.3:5", "", "Traspaso de Deuda y Devoluciones", "EARoot/EA2/EA1/EA1/EA3/EA218.htm", "7.png", "3635", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.1.3:6", "", "Consultar Cuentas por Procurador", "EARoot/EA2/EA1/EA1/EA3/EA219.htm", "7.png", "3652", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.1.3:7", "", "Consultar Deudas Judiciales sin Constancia", "EARoot/EA2/EA1/EA1/EA3/EA220.htm", "7.png", "4013", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.1.3:8", "", "Administrar Gestión Judicial", "EARoot/EA2/EA1/EA1/EA3/EA221.htm", "7.png", "1653", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.1.3:9", "", "Incorporar lote de eventos gestión judicial", "EARoot/EA2/EA1/EA1/EA3/EA222.htm", "7.png", "4175", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.1.3:10", "", "Administrar Liquidación de Comisiones a Procuradores", "EARoot/EA2/EA1/EA1/EA3/EA223.htm", "7.png", "3637", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.1.3:11", "", "Reporte Seguimiento Gestion Judicial", "EARoot/EA2/EA1/EA1/EA3/EA224.htm", "7.png", "4183", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.1.3:12", "", "Consultar Convenios y Recibos no Liquidables", "EARoot/EA2/EA1/EA1/EA3/EA225.htm", "7.png", "4083", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.1.3.1", "1", "Secundarios", "EARoot/EA2/EA1/EA1/EA3/EA214.htm", "4.png", "", "", "{34CBE20F-9FA5-46ca-916B-AD62AAE21F90}", "Package");

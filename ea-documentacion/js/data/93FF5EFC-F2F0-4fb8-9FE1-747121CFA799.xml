@@ -1,0 +1,4 @@
+tocTab[tocTab.length] = new Array("2.1.5.6:1", "", "Asentamiento", "EARoot/EA2/EA1/EA5/EA6/EA422.htm", "180.png", "580", "0", "", "Use Case diagram");
+tocTab[tocTab.length] = new Array("2.1.5.6:2", "", "Administrar Asentamiento de Pago", "EARoot/EA2/EA1/EA5/EA6/EA425.htm", "7.png", "3625", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.5.6:3", "", "Administrar delegador de asentamientos", "EARoot/EA2/EA1/EA5/EA6/EA426.htm", "7.png", "4786", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.5.6.1", "1", "Secundarios", "EARoot/EA2/EA1/EA5/EA6/EA424.htm", "4.png", "", "", "{9F838D55-2B78-4470-9CAD-805218FBE908}", "Package");

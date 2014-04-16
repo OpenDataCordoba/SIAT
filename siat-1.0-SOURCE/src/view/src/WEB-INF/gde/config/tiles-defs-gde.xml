@@ -1,0 +1,1185 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+ <!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 1.1//EN"
+       "http://jakarta.apache.org/struts/dtds/tiles-config_1_1.dtd">
+
+<tiles-definitions>
+	
+	<!-- Servicio Banco Descuentos Generales-->	
+	<definition name=".gde.definicion.view.serBanDesGenViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/definicion/serBanDesGenViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".gde.definicion.view.serBanDesGenEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/definicion/serBanDesGenEditAdapter.jsp"/>
+    </definition>
+    <!-- Fin Servicio Descuentos Generales-->	
+    
+    <!-- Deuda por Contribuyente -->
+    <definition name=".gde.gDeuda.view.deudaContribSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/gde/gdeuda/deudaContribSearchPage.jsp"/>
+    </definition>
+    <!-- Fin Deuda por Contribuyente -->  
+	
+		
+	<!-- Liquidacion Deuda -->
+	<definition name=".gde.gdeuda.view.liqDeudaIngresoGrAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/gdeuda/liqDeudaIngresoGrAdapter.jsp"/>
+    </definition>
+    
+     <definition name=".gde.gdeuda.view.liqDeudaIngresoContrAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/gdeuda/liqDeudaIngresoContrAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".gde.gdeuda.view.liqDeudaAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/gdeuda/liqDeudaAdapter.jsp"/>
+    </definition>
+
+    <definition name=".gde.gdeuda.view.liqDetalleDeudaViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/gdeuda/liqDetalleDeudaViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".gde.gdeuda.view.liqReclamoEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/gdeuda/liqReclamoEditAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".gde.gdeuda.view.liqReclamoMsg" extends=".siatStdLayout">
+	    <put name="body" value="/gde/gdeuda/liqReclamoMsg.jsp"/>
+    </definition>
+    
+    <definition name=".gde.gdeuda.view.liqConvenioCuentaAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/gdeuda/liqConvenioCuentaAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".gde.gdeuda.view.liqImprimirInformeDeuda" extends=".siatStdLayout">
+	    <put name="body" value="/gde/gdeuda/liqImpInformeDeuda.jsp"/>
+    </definition>
+        
+    <definition name=".gde.gdeuda.view.liqReclamoCuotaEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/gdeuda/liqReclamoCuotaEditAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".gde.gdeuda.view.liqReclamoCuotaMsg" extends=".siatStdLayout">
+	    <put name="body" value="/gde/gdeuda/liqReclamoCuotaMsg.jsp"/>
+    </definition>
+    
+    <definition name=".gde.gdeuda.view.liqHistoricoExeAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/gdeuda/liqHistoricoExeAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".gde.gdeuda.view.liqDeudaFilterCuentaAutoAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/gdeuda/liqDeudaFilterCuentaAutoAdapter.jsp"/>
+    </definition>
+    
+    	<!-- Reconfeccion de Deuda -->
+    <definition name=".gde.gdeuda.view.liqReconfeccionAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/gdeuda/liqReconfeccionAdapter.jsp"/>
+    </definition>
+
+    <definition name=".gde.gdeuda.view.liqReconfeccionFinalizada" extends=".siatStdLayout">
+	    <put name="body" value="/gde/gdeuda/liqReconfeccionFinalizada.jsp"/>
+    </definition>    
+
+    <definition name=".gde.gdeuda.view.liqReconfeccionImprimirRecibos" extends=".siatStdLayout">
+	    <put name="body" value="/gde/gdeuda/liqReconfeccionImpRecibos.jsp"/>
+    </definition>    
+
+  	<!-- Volante de Pago Intereses RS -->
+    <definition name=".gde.gdeuda.view.liqVolantePagoIntRSAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/gdeuda/liqVolantePagoIntRSAdapter.jsp"/>
+    </definition>
+
+    <definition name=".gde.gdeuda.view.liqVolantePagoIntRSFinalizada" extends=".siatStdLayout">
+	    <put name="body" value="/gde/gdeuda/liqVolantePagoIntRSFinalizada.jsp"/>
+    </definition>    
+
+    <definition name=".gde.gdeuda.view.liqVolantePagoIntRSImprimirRecibos" extends=".siatStdLayout">
+	    <put name="body" value="/gde/gdeuda/liqVolantePagoIntRSImprimirRecibos.jsp"/>
+    </definition>  
+  	<!-- Fin Volante de Pago Intereses RS -->
+    
+		<!-- Formalizacion de Convenio de Pago -->
+    <definition name=".gde.gdeuda.view.liqFormConvenioAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/gdeuda/liqFormConvenioAdapter.jsp"/>
+    </definition>    
+
+	<definition name=".gde.gdeuda.view.liqFormConvenioPlanesAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/gdeuda/liqFormConvenioPlanesAdapter.jsp"/>
+    </definition>
+    
+	<definition name=".gde.gdeuda.view.liqFormConvenioCuotasAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/gdeuda/liqFormConvenioCuotasAdapter.jsp"/>
+    </definition>
+
+	<definition name=".gde.gdeuda.view.liqFormConvenioSimulaCuotasAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/gdeuda/liqFormConvenioSimulaCuotasAdapter.jsp"/>
+    </definition> 
+
+	<definition name=".gde.gdeuda.view.liqFormConvenioFormalAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/gdeuda/liqFormConvenioFormalAdapter.jsp"/>
+    </definition>
+    
+    
+	<definition name=".gde.gdeuda.view.liqFormConvenioPrintAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/gdeuda/liqFormConvenioPrintAdapter.jsp"/>
+    </definition>
+    
+	<definition name=".gde.gdeuda.view.liqFormConvenioImpForm" extends=".siatStdLayout">
+	    <put name="body" value="/gde/gdeuda/liqFormConvenioImpForm.jsp"/>
+    </definition>
+
+	<definition name=".gde.gdeuda.view.liqFormConvenioImpRecibos" extends=".siatStdLayout">
+	    <put name="body" value="/gde/gdeuda/liqFormConvenioImpRecibos.jsp"/>
+    </definition>
+    
+    <definition name=".gde.gdeuda.view.liqFormConvenioImpAltCuotas" extends=".siatStdLayout">
+	    <put name="body" value="/gde/gdeuda/liqFormConvenioImpAltCuotas.jsp"/>
+    </definition>
+    
+    <definition name=".gde.gdeuda.view.liqFormConvenioImpFormAuto" extends=".siatStdLayout">
+	    <put name="body" value="/gde/gdeuda/liqFormConvenioImpFormAuto.jsp"/>
+    </definition>
+    
+    <!-- Convenio Especial -->
+    <definition name=".gde.gdeuda.view.liqFormConvenioEspAdapter" extends=".siatStdLayout"> 
+    	<put name="body" value="/gde/gdeuda/liqFormConvenioEspAdapter.jsp"/>
+	</definition>
+    <!-- Fin Convenio Especial -->
+    
+    <!-- Convenio Cyq -->
+    <definition name=".cyq.concursoyQuiebra.view.liqFormConvenioCyqPrintAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/cyq/concursoyQuiebra/liqFormConvenioPrintAdapter.jsp"/>
+    </definition> 
+    <!-- Convenio Cyq -->
+    
+    <!-- Saldo por Caducidad Individual -->
+    <definition name=".gde.gdeuda.view.liqConvenioSalPorCadAdapter" extends=".siatStdLayout">
+    	<put name="body" value="/gde/gdeuda/liqConvenioSalPorCadAdapter.jsp"/>
+    </definition>
+    
+    <!-- Saldo por Caducidad Individual -->
+
+	<!--  Cuota Saldo -->
+	<definition name=".gde.gdeuda.view.liqConvenioCuotaSaldoAdapter" extends=".siatStdLayout">
+		<put name="body" value="/gde/gdeuda/liqConvenioCuotaSaldoAdapter.jsp"/>
+	</definition>
+	<!-- Fin Cuota Saldo -->
+	
+	<!-- Aplicar Pagos a Cuenta -->
+	<definition name=".gde.gdeuda.view.liqConvenioPagoCuentaAdapter" extends=".siatStdLayout">
+		<put name="body" value="/gde/gdeuda/liqConvenioPagoCuentaAdapter.jsp"/>
+	</definition>
+	<!-- Fin Aplicar Pagos a Cuenta -->
+	
+	<!-- Rescate Individual -->
+	<definition name=".gde.gdeuda.view.rescateIndividualAdapter" extends=".siatStdLayout">
+		<put name="body" value="/gde/planPago/rescateIndividualAdapter.jsp"/>
+	</definition>
+	
+	<definition name=".gde.planPago.view.saldoPorCaducidadSearchPage" extends=".siatStdLayout">
+		<put name="body" value="/gde/planPago/saldoPorCaducidadSearchPage.jsp"/>
+	</definition>
+	
+	<definition name=".gde.planPago.view.salPorCadMasivoAdapter" extends=".siatStdLayout">
+		<put name="body" value="/gde/planPago/salPorCadMasivoAdapter.jsp"/>
+	</definition>
+	
+	<definition name=".gde.planPago.view.salPorCadMasivoAdministrarAdapter" extends=".siatStdLayout">
+		<put name="body" value="/gde/planPago/salPorCadMasivoAdministrarAdapter.jsp"/>
+	</definition>
+	
+	<definition name=".gde.planPago.view.salPorCadMasivoSelAdapter" extends=".siatStdLayout">
+		<put name="body" value="/gde/planPago/salPorCadMasivoSelAdapter.jsp"/>
+	</definition>
+	
+	<definition name=".gde.cdm.view.cambioPlanCDMAdapter" extends=".siatStdLayout">
+		<put name="body" value="/gde/cdm/cambioPlanCDMAdapter.jsp"/>
+	</definition>
+		
+	<definition name=".gde.cdm.view.deudaVencidaCDMAdapter" extends=".siatStdLayout">
+		<put name="body" value="/gde/cdm/deudaVencidaCDMAdapter.jsp"/>
+	</definition>
+	
+	<definition name=".gde.cdm.view.cambioPlanCDMPrintAdapter" extends=".siatStdLayout">
+		<put name="body" value="/gde/cdm/cambioPlanCDMPrintAdapter.jsp"/>
+	</definition>
+	
+	<definition name=".gde.cdm.view.cambioPlanCDMImpForm" extends=".siatStdLayout">
+		<put name="body" value="/gde/cdm/cambioPlanCDMImpForm.jsp"/>
+	</definition>
+	
+	<definition name=".gde.cdm.view.cambioPlanCDMImpRecibo" extends=".siatStdLayout">
+		<put name="body" value="/gde/cdm/cambioPlanCDMImpRecibo.jsp"/>
+	</definition>
+	
+	<definition name=".gde.cdm.view.cuotaSaldoCDMAdapter" extends=".siatStdLayout">
+		<put name="body" value="/gde/cdm/cuotaSaldoCDMAdapter.jsp"/>
+	</definition>
+	
+	<definition name=".gde.cdm.view.cuotaSaldoCDMPrintAdapter" extends=".siatStdLayout">
+		<put name="body" value="/gde/cdm/cuotaSaldoCDMPrintAdapter.jsp"/>
+	</definition>
+	
+	<definition name=".gde.cdm.view.cuotaSaldoCDMImpRecibo" extends=".siatStdLayout">
+		<put name="body" value="/gde/cdm/cuotaSaldoCDMImpRecibo.jsp"/>
+	</definition>
+	
+	<definition name=".gde.gdeudaauto.view.cierreComercioAdapter" extends=".siatStdLayout">
+		<put name="body" value="/gde/gdeudaauto/cierreComercioAdapter.jsp"/>
+	</definition>
+	
+		<!-- Declaracion Jurada Masiva -->	
+	<definition name=".gde.gdeudaauto.view.liqDecJurAdapterInit" extends=".siatStdLayout">
+		<put name="body" value="/gde/gdeudaauto/liqDecJurAdapterInit.jsp"/>
+	</definition>
+	
+	<definition name=".gde.gdeudaauto.view.liqDecJurAdapterDetalle" extends=".siatStdLayout">
+		<put name="body" value="/gde/gdeudaauto/liqDecJurAdapterDetalle.jsp"/>
+	</definition>
+	
+	<definition name=".gde.gdeudaauto.view.liqDecJurAdapterGeneral" extends=".siatStdLayout">
+		<put name="body" value="/gde/gdeudaauto/liqDecJurAdapterGeneral.jsp"/>
+	</definition>
+	
+	<definition name=".gde.gdeudaauto.view.liqDecJurAdapterSimula" extends=".siatStdLayout">
+		<put name="body" value="/gde/gdeudaauto/liqDecJurAdapterSimula.jsp"/>
+	</definition>
+	
+    <!-- Fin Liquidacion Deuda -->
+
+    
+	<!-- Envio Judicial -->
+	<definition name=".gde.gdeudaJudicial.view.procesoMasivoSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/gde/gdeudaJudicial/procesoMasivoSearchPage.jsp"/>
+    </definition>
+    
+    <definition name=".gde.gdeudaJudicial.view.procesoMasivoViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/gdeudaJudicial/procesoMasivoViewAdapter.jsp"/>
+    </definition>
+
+    <definition name=".gde.gdeudaJudicial.view.procesoMasivoEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/gdeudaJudicial/procesoMasivoEditAdapter.jsp"/>
+    </definition>
+    <!-- Fin Envio Judicial -->
+    
+    <!-- Proceso Envio Judicial -->
+    <definition name=".gde.gdeudaJudicial.view.procesoMasivoAdmProcesoAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/gdeudaJudicial/procesoMasivoAdmProcesoAdapter.jsp"/>
+    </definition>
+	<!-- Deuda Incluida -->
+    <definition name=".gde.gdeudaJudicial.view.deudaIncProMasEliminarSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/gde/gdeudaJudicial/deudaIncProMasEliminarSearchPage.jsp"/>
+    </definition>    
+    
+    <definition name=".gde.gdeudaJudicial.view.deudaIncProMasEliminarSelIndSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/gde/gdeudaJudicial/deudaIncProMasEliminarSelIndSearchPage.jsp"/>
+    </definition>    
+
+    <definition name=".gde.gdeudaJudicial.view.deudaIncProMasArmadoSeleccionAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/gdeudaJudicial/deudaIncProMasArmadoSeleccionAdapter.jsp"/>
+    </definition>    
+                      
+    <definition name=".gde.gdeudaJudicial.view.deudaIncProMasPlanillasDeudaAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/gdeudaJudicial/deudaIncProMasPlanillasDeudaAdapter.jsp"/>
+    </definition>   
+    
+    <definition name=".gde.gdeudaJudicial.view.deudaIncProMasConsPorCtaSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/gde/gdeudaJudicial/deudaIncProMasConsPorCtaSearchPage.jsp"/>
+    </definition>   
+    
+   	<!-- Deuda Excluida -->
+   	<definition name=".gde.gdeudaJudicial.view.deudaExcProMasAgregarSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/gde/gdeudaJudicial/deudaExcProMasAgregarSearchPage.jsp"/>
+    </definition>
+    
+    <definition name=".gde.gdeudaJudicial.view.deudaExcProMasAgregarSelIndSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/gde/gdeudaJudicial/deudaExcProMasAgregarSelIndSearchPage.jsp"/>
+    </definition>    
+    
+    <definition name=".gde.gdeudaJudicial.view.deudaExcProMasEliminarSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/gde/gdeudaJudicial/deudaExcProMasEliminarSearchPage.jsp"/>
+    </definition>
+    
+    <definition name=".gde.gdeudaJudicial.view.deudaExcProMasEliminarSelIndSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/gde/gdeudaJudicial/deudaExcProMasEliminarSelIndSearchPage.jsp"/>
+    </definition>    
+    
+    <definition name=".gde.gdeudaJudicial.view.deudaExcProMasArmadoSeleccionAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/gdeudaJudicial/deudaExcProMasArmadoSeleccionAdapter.jsp"/>
+    </definition>    
+                      
+    <definition name=".gde.gdeudaJudicial.view.deudaExcProMasPlanillasDeudaAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/gdeudaJudicial/deudaExcProMasPlanillasDeudaAdapter.jsp"/>
+    </definition>   
+    
+    <definition name=".gde.gdeudaJudicial.view.deudaExcProMasConsPorCtaSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/gde/gdeudaJudicial/deudaExcProMasConsPorCtaSearchPage.jsp"/>
+    </definition>   
+
+    <definition name=".gde.gdeudaJudicial.view.proMasProExcEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/gdeudaJudicial/proMasProExcEditAdapter.jsp"/>
+    </definition>   
+
+    <definition name=".gde.gdeudaJudicial.view.proMasProExcViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/gdeudaJudicial/proMasProExcViewAdapter.jsp"/>
+    </definition>   
+
+    <definition name=".gde.gdeudaJudicial.view.procesoMasivoReportesDeudaIncluidaAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/gdeudaJudicial/procesoMasivoReportesDeudaIncluidaAdapter.jsp"/>
+    </definition>   
+
+    <definition name=".gde.gdeudaJudicial.view.procesoMasivoReportesDeudaExcluidaAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/gdeudaJudicial/procesoMasivoReportesDeudaExcluidaAdapter.jsp"/>
+    </definition>   
+    
+    <definition name=".gde.gdeudaJudicial.view.corridaProcesoMasivoViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/gdeudaJudicial/corridaProcesoMasivoViewAdapter.jsp"/>
+    </definition>
+    
+    <!-- Fin Proceso Envio Judicial -->
+    
+    <!-- Parametros de la SelAlm -->
+    <definition name=".gde.selAlm.view.selAlmAgregarParametrosSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/gde/selAlm/selAlmAgregarParametrosSearchPage.jsp"/>
+    </definition>   
+    <!-- Fin Parametros de la SelAlm -->    
+    
+    
+    <!-- Descuentos Generales-->	
+	<definition name=".gde.definicion.view.desGenSearhPage" extends=".siatStdLayout">
+	    <put name="body" value="/gde/definicion/desGenSearchPage.jsp"/>
+    </definition>
+    <definition name=".gde.definicion.view.desGenEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/definicion/desGenEditAdapter.jsp"/>
+    </definition>
+    <definition name=".gde.definicion.view.desGenViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/definicion/desGenViewAdapter.jsp"/>
+    </definition>    
+    
+    <!-- Fin Descuentos Generales-->	
+    
+    <!-- Descuentos Especiales -->	
+	<definition name=".gde.definicion.view.desEspSearhPage" extends=".siatStdLayout">
+	    <put name="body" value="/gde/definicion/desEspSearchPage.jsp"/>
+    </definition>
+    <definition name=".gde.definicion.view.desEspEncEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/definicion/desEspEncEditAdapter.jsp"/>
+    </definition>
+    <definition name=".gde.definicion.view.desEspViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/definicion/desEspViewAdapter.jsp"/>
+    </definition>    
+    
+    <definition name=".gde.definicion.view.desEspAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/definicion/desEspAdapter.jsp"/>
+    </definition>
+    <!-- Fin Descuentos Especiales-->
+    
+    <!-- DesRecClaDeu -->	
+    <definition name=".gde.definicion.view.desRecClaDeuEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/definicion/desRecClaDeuEditAdapter.jsp"/>
+    </definition>
+    <definition name=".gde.definicion.view.desRecClaDeuViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/definicion/desRecClaDeuViewAdapter.jsp"/>
+    </definition>
+    <!-- Fin DesRecClaDeu -->	
+    
+    <!-- DesAtrVal -->
+    <definition name=".gde.definicion.view.desAtrValEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/definicion/desAtrValEditAdapter.jsp"/>
+    </definition>
+    <definition name=".gde.definicion.view.desAtrValViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/definicion/desAtrValViewAdapter.jsp"/>
+    </definition>    
+    <!-- DesAtrVal -->
+    
+    <!-- DesEspExe -->
+    <definition name=".gde.definicion.view.desEspExeEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/definicion/desEspExeEditAdapter.jsp"/>
+    </definition>
+    <definition name=".gde.definicion.view.desEspExeViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/definicion/desEspExeViewAdapter.jsp"/>
+    </definition>    
+    <!-- DesEspExe -->    
+    
+    
+        <!--  Es es el caso de un Encabezado/Detalle -->
+    <!-- Plan (Encabezado) -->
+	<definition name=".gde.definicion.view.planSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/gde/definicion/planSearchPage.jsp"/>
+    </definition>
+
+    <definition name=".gde.definicion.view.planEncEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/definicion/planEncEditAdapter.jsp"/>
+    </definition>  	
+
+	<definition name=".gde.definicion.view.planViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/definicion/planViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".gde.definicion.view.planAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/definicion/planAdapter.jsp"/>
+    </definition>
+	<!-- Fin Plan -->
+    
+		<!-- PlanClaDeu (Detalle)-->
+	<definition name=".gde.definicion.view.planClaDeuViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/definicion/planClaDeuViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".gde.definicion.view.planClaDeuEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/definicion/planClaDeuEditAdapter.jsp"/>
+    </definition>    
+		<!-- Fin PlanClaDeu -->
+		
+		<!-- PlanMotCad (Detalle)-->
+	<definition name=".gde.definicion.view.planMotCadViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/definicion/planMotCadViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".gde.definicion.view.planMotCadEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/definicion/planMotCadEditAdapter.jsp"/>
+    </definition>    
+		<!-- Fin PlanMotCad -->	
+	
+		<!-- PlanForActDeu (Detalle)-->
+	<definition name=".gde.definicion.view.planForActDeuViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/definicion/planForActDeuViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".gde.definicion.view.planForActDeuEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/definicion/planForActDeuEditAdapter.jsp"/>
+    </definition>    
+		<!-- Fin PlanForActDeu -->	
+		
+		<!-- PlanDescuento (Detalle)-->
+	<definition name=".gde.definicion.view.planDescuentoViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/definicion/planDescuentoViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".gde.definicion.view.planDescuentoEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/definicion/planDescuentoEditAdapter.jsp"/>
+    </definition>    
+		<!-- Fin PlanDescuento -->
+
+		<!-- PlanIntFin (Detalle)-->
+	<definition name=".gde.definicion.view.planIntFinViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/definicion/planIntFinViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".gde.definicion.view.planIntFinEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/definicion/planIntFinEditAdapter.jsp"/>
+    </definition>    
+		<!-- Fin PlanIntFin -->
+	
+		<!-- PlanVen (Detalle)-->
+	<definition name=".gde.definicion.view.planVenViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/definicion/planVenViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".gde.definicion.view.planVenEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/definicion/planVenEditAdapter.jsp"/>
+    </definition>    
+		<!-- Fin PlanVen -->
+
+		<!-- PlanExe (Detalle)-->
+	<definition name=".gde.definicion.view.planExeViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/definicion/planExeViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".gde.definicion.view.planExeEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/definicion/planExeEditAdapter.jsp"/>
+    </definition>    
+		<!-- Fin PlanExe -->
+	
+		<!-- PlanProrroga (Detalle)-->
+	<definition name=".gde.definicion.view.planProrrogaAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/definicion/planProrrogaAdapter.jsp"/>
+    </definition>
+    
+	<definition name=".gde.definicion.view.planProrrogaViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/definicion/planProrrogaViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".gde.definicion.view.planProrrogaEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/definicion/planProrrogaEditAdapter.jsp"/>
+    </definition>    
+		<!-- Fin PlanProrroga -->	
+
+		<!-- PlanAtrVal (Detalle)-->
+	<definition name=".gde.definicion.view.planAtrValViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/definicion/planAtrValViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".gde.definicion.view.planAtrValEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/definicion/planAtrValEditAdapter.jsp"/>
+    </definition>    
+		<!-- Fin PlanAtrVal -->	
+		
+		<!-- PlanImpMin (Detalle)-->
+	<definition name=".gde.definicion.view.planImpMinViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/definicion/planImpMinViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".gde.definicion.view.planImpMinEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/definicion/planImpMinEditAdapter.jsp"/>
+    </definition>    
+		<!-- Fin PlanImpMin -->
+	<!-- Fin Plan -->
+	
+	<!-- Procurador -->
+    <definition name=".gde.definicion.view.procuradorSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/gde/definicion/procuradorSearchPage.jsp"/>
+    </definition> 
+    
+    <definition name=".gde.definicion.view.procuradorViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/definicion/procuradorViewAdapter.jsp"/>
+    </definition>    
+    
+    <definition name=".gde.definicion.view.procuradorEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/definicion/procuradorEditAdapter.jsp"/>
+    </definition>       
+    
+    <definition name=".gde.definicion.view.procuradorAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/definicion/procuradorAdapter.jsp"/>
+    </definition>      
+    
+    <definition name=".gde.definicion.view.procuradorEncEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/definicion/procuradorEncEditAdapter.jsp"/>
+    </definition>       
+    
+    <definition name=".gde.definicion.view.proRecEncEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/definicion/proRecEncEditAdapter.jsp"/>
+    </definition>       
+    
+    <definition name=".gde.definicion.view.proRecAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/definicion/proRecAdapter.jsp"/>
+    </definition>       
+    
+ 	<definition name=".gde.definicion.view.proRecViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/definicion/proRecViewAdapter.jsp"/>
+    </definition>       
+    
+    <definition name=".gde.definicion.view.proRecDesHasEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/definicion/proRecDesHasEditAdapter.jsp"/>
+    </definition>       
+    
+    <definition name=".gde.definicion.view.proRecDesHasViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/definicion/proRecDesHasViewAdapter.jsp"/>
+    </definition>     
+    
+    <definition name=".gde.definicion.view.proRecComEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/definicion/proRecComEditAdapter.jsp"/>
+    </definition>       
+    
+    <definition name=".gde.definicion.view.proRecComViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/definicion/proRecComViewAdapter.jsp"/>
+    </definition>     
+    
+     <!--Fin Procuracor --> 
+  
+  	 <!-- Administrar Planillas Envio Deuda Judicial -->
+	    <definition name=".gde.admDeuJud.view.plaEnvDeuProSearchPage" extends=".siatStdLayout">
+		    <put name="body" value="/gde/adminDeuJud/plaEnvDeuProSearchPage.jsp"/>
+	    </definition> 
+
+		<definition name=".gde.admDeuJud.view.plaEnvDeuProViewAdapter" extends=".siatStdLayout">
+		    <put name="body" value="/gde/adminDeuJud/plaEnvDeuProViewAdapter.jsp"/>
+	    </definition>
+	    
+	    <definition name=".gde.admDeuJud.view.plaEnvDeuProEditAdapter" extends=".siatStdLayout">
+		    <put name="body" value="/gde/adminDeuJud/plaEnvDeuProEditAdapter.jsp"/>
+	    </definition>
+
+		<definition name=".gde.admDeuJud.view.plaEnvDeuProRecomponer" extends=".siatStdLayout">
+		    <put name="body" value="/gde/adminDeuJud/plaEnvDeuProRecomponer.jsp"/>
+	    </definition>
+
+		<definition name=".gde.admDeuJud.view.verArchivosProcurador" extends=".siatStdLayout">
+		    <put name="body" value="/gde/adminDeuJud/verArchivosProcurador.jsp"/>
+	    </definition>
+  	 
+	 <!-- FIN Administrar Planillas Envio Deuda Judicial -->  	 
+	 
+	 <!-- Evento -->
+    <definition name=".gde.definicion.view.eventoSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/gde/definicion/eventoSearchPage.jsp"/>
+    </definition> 
+ 	
+ 	<definition name=".gde.definicion.view.eventoEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/definicion/eventoEditAdapter.jsp"/>
+	</definition> 
+	 
+  	<definition name=".gde.definicion.view.eventoViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/definicion/eventoViewAdapter.jsp"/>
+    </definition> 
+	 <!-- Fin Evento -->
+	 
+	 <!-- Administrar Constancias de Deuda -->
+	    <definition name=".gde.admDeuJud.view.constanciaDeuSearchPage" extends=".siatStdLayout">
+		    <put name="body" value="/gde/adminDeuJud/constanciaDeuSearchPage.jsp"/>
+	    </definition> 
+
+		<definition name=".gde.admDeuJud.view.constanciaDeuViewAdapter" extends=".siatStdLayout">
+		    <put name="body" value="/gde/adminDeuJud/constanciaDeuViewAdapter.jsp"/>
+	    </definition>
+	    
+	    <definition name=".gde.admDeuJud.view.constanciaDeuEncEditAdapter" extends=".siatStdLayout">
+		    <put name="body" value="/gde/adminDeuJud/constanciaDeuEncEditAdapter.jsp"/>
+	    </definition>
+  	 	 
+	    <definition name=".gde.admDeuJud.view.constanciaDeuAdapter" extends=".siatStdLayout">
+		    <put name="body" value="/gde/adminDeuJud/constanciaDeuAdapter.jsp"/>
+	    </definition>
+
+	    <definition name=".gde.admDeuJud.view.constanciaDeuViewAdapter" extends=".siatStdLayout">
+		    <put name="body" value="/gde/adminDeuJud/constanciaDeuViewAdapter.jsp"/>
+	    </definition>
+
+	    <definition name=".gde.admDeuJud.view.constanciaDeuDomEnvAdapter" extends=".siatStdLayout">
+		    <put name="body" value="/gde/adminDeuJud/constanciaDeuDomEnvAdapter.jsp"/>
+	    </definition>
+
+	    <definition name=".gde.admDeuJud.view.conDeuTitViewAdapter" extends=".siatStdLayout">
+		    <put name="body" value="/gde/adminDeuJud/conDeuTitViewAdapter.jsp"/>
+	    </definition>
+	    
+	    <definition name=".gde.admDeuJud.view.conDeuDetViewAdapter" extends=".siatStdLayout">
+		    <put name="body" value="/gde/adminDeuJud/conDeuDetViewAdapter.jsp"/>
+	    </definition>
+	    
+	    <definition name=".gde.admDeuJud.view.conDeuDetEditAdapter" extends=".siatStdLayout">
+		    <put name="body" value="/gde/adminDeuJud/conDeuDetEditAdapter.jsp"/>
+	    </definition>
+	    				  
+	    <definition name=".gde.admDeuJud.view.imprimirConstanciaDeu" extends=".siatStdLayout">	    	
+		    <put name="body" value="/gde/adminDeuJud/imprimirConstanciaDeu.jsp"/>
+	    </definition>	    
+	      
+	 <!-- FIN Administrar Constancias de Deuda -->	
+	 
+	  <!-- Administrar Deuda Judicial sin Constancia-->
+ 	    <definition name=".gde.admDeuJud.view.deuJudSinConstanciaSearchPage" extends=".siatStdLayout">
+		    <put name="body" value="/gde/adminDeuJud/deuJudSinConstanciaSearchPage.jsp"/>
+	    </definition> 
+	    
+   	    <definition name=".gde.admDeuJud.view.deuJudSinConstanciaAdapter" extends=".siatStdLayout">
+		    <put name="body" value="/gde/adminDeuJud/deuJudSinConstanciaAdapter.jsp"/>
+	    </definition> 
+	  <!-- FIN Administrar Deuda Judicial sin Constancia-->
+	
+	  <!-- Administrar Traspaso y Devolucion de Deudas --> 
+ 	    <definition name=".gde.gdeudaJudicial.view.traspasoDevolucionDeudaSearchPage" extends=".siatStdLayout">
+		    <put name="body" value="/gde/gdeudaJudicial/traspasoDevolucionDeudaSearchPage.jsp"/>
+	    </definition>
+	    <definition name=".gde.gdeudaJudicial.view.traspasoDevolucionDeudaEncEditAdapter" extends=".siatStdLayout">
+		    <put name="body" value="/gde/gdeudaJudicial/traspasoDevolucionDeudaEncEditAdapter.jsp"/>
+	    </definition> 
+	    <definition name=".gde.gdeudaJudicial.view.traspasoDevolucionDeudaAdapter" extends=".siatStdLayout">
+		    <put name="body" value="/gde/gdeudaJudicial/traspasoDevolucionDeudaAdapter.jsp"/>
+	    </definition> 
+	    
+	  <!-- Fin Administrar Traspaso y Devolucion de Deudas -->
+
+	 <!-- Consultar Convenio -->	 
+	  <definition name=".gde.gdeuda.view.convenioSearchPage" extends=".siatStdLayout">
+		    <put name="body" value="/gde/gdeuda/convenioSearchPage.jsp"/>
+	  </definition> 
+	<!-- Fin Consultar Convenio -->	
+	
+	 <!-- Cuenta por Objeto Imponible -->
+    <definition name=".gde.gDeuda.view.cuentaObjImpSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/gde/gdeuda/cuentaObjImpSearchPage.jsp"/>
+    </definition>
+    <!-- Fin Cuenta por Objeto Imponible --> 
+
+	 <!-- Cuenta por Procurador -->
+    <definition name=".gde.gDeuda.view.cuentasProcuradorSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/gde/adminDeuJud/cuentasProcuradorSearchPage.jsp"/>
+    </definition>
+    <!-- Fin Cuenta por Procurador -->
+    
+    <!-- Gestiones Judiciales -->
+    <definition name=".gde.gDeuda.view.gesJudSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/gde/adminDeuJud/gesJudSearchPage.jsp"/>
+    </definition>
+    <definition name=".gde.gdeudaJudicial.view.gesJudEncEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/adminDeuJud/gesJudEncEditAdapter.jsp"/>
+	</definition> 
+    <definition name=".gde.gdeudaJudicial.view.gesJudViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/adminDeuJud/gesJudViewAdapter.jsp"/>
+	</definition> 
+    <definition name=".gde.gdeudaJudicial.view.gesJudViewHistoricosAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/adminDeuJud/gesJudViewHistoricosAdapter.jsp"/>
+	</definition>	
+    <definition name=".gde.gdeudaJudicial.view.gesJudAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/adminDeuJud/gesJudAdapter.jsp"/>
+	</definition>	
+    <definition name=".gde.gdeudaJudicial.view.gesJudRegCaducidadAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/adminDeuJud/gesJudRegCaducidadAdapter.jsp"/>
+	</definition>	
+
+    <definition name=".gde.gdeudaJudicial.view.gesJudDeuEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/adminDeuJud/gesJudDeuEditAdapter.jsp"/>
+	</definition>        
+    <definition name=".gde.gdeudaJudicial.view.gesJudDeuViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/adminDeuJud/gesJudDeuViewAdapter.jsp"/>
+	</definition>	
+	
+    <definition name=".gde.gdeudaJudicial.view.gesJudEventoEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/adminDeuJud/gesJudEventoEditAdapter.jsp"/>
+	</definition>        
+    <definition name=".gde.gdeudaJudicial.view.gesJudEventoViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/adminDeuJud/gesJudEventoViewAdapter.jsp"/>
+	</definition>	
+    <!-- Gestiones Judiciales -->	
+        
+    <!-- Rescate -->
+    <definition name=".gde.planPago.view.rescateSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/gde/planPago/rescateSearchPage.jsp"/>
+    </definition>
+    
+    <definition name=".gde.planPago.view.rescateViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/planPago/rescateViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".gde.planPago.view.rescateEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/planPago/rescateEditAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".gde.planPago.view.rescateMasivoSelAdapter" extends=".siatStdLayout">
+    	<put name="body" value="/gde/planPago/rescateMasivoSelAdapter.jsp"/>
+    </definition>
+    
+    <!-- Consulta de EstadoCuenta -->
+    <definition name=".gde.gdeuda.view.estadoCuentaSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/gde/gdeuda/estadoCuentaSearchPage.jsp"/>
+	</definition>        
+    <definition name=".gde.gdeuda.view.estadoCuentaAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/gdeuda/estadoCuentaAdapter.jsp"/>
+	</definition>        
+    <definition name=".gde.gdeuda.view.estadoCuentaImprimir" extends=".siatStdLayout">
+	    <put name="body" value="/gde/gdeuda/estadoCuentaImprimir.jsp"/>
+	</definition>	
+	    
+    <!-- FIN Consulta de EstadoCuenta -->
+	
+	<!-- Tramite -->
+    <definition name=".gde.gdeuda.view.tramiteSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/gde/gdeuda/tramiteSearchPage.jsp"/>
+    </definition>
+    
+    <definition name=".gde.gdeuda.view.tramiteAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/gdeuda/tramiteAdapter.jsp"/>
+    </definition>
+
+    <definition name=".gde.gdeuda.view.tramitePrint" extends=".siatStdLayout">
+	    <put name="body" value="/gde/gdeuda/tramitePrint.jsp"/>
+    </definition>    
+    
+    <!-- Fin Tramite -->
+
+    
+    <!-- Reporte Convenio -->
+    <definition name=".gde.reporte.view.convenioReport" extends=".siatStdLayout">
+	    <put name="body" value="/gde/reporte/convenioReport.jsp"/>
+    </definition>
+
+    <!-- Reporte Recaudacion -->
+    <definition name=".gde.reporte.view.recaudacionReport" extends=".siatStdLayout">
+	    <put name="body" value="/gde/reporte/recaudacionReport.jsp"/>
+    </definition>
+
+    <!-- Reporte Respuesta Operativos -->
+    <definition name=".gde.reporte.view.respuestaOperativosReport" extends=".siatStdLayout">
+	    <put name="body" value="/gde/reporte/respuestaOperativosReport.jsp"/>
+    </definition>
+    
+    <!-- Reporte Convenios A Caducar -->
+    <definition name=".gde.reporte.view.convenioACaducarReport" extends=".siatStdLayout">
+	    <put name="body" value="/gde/reporte/convenioACaducarReport.jsp"/>
+    </definition>
+	
+	<!-- ABM LiqCom -->
+    <definition name=".gde.gdeuda.view.liqComSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/gde/gdeudaJudicial/liqComSearchPage.jsp"/>
+    </definition>
+    
+    <definition name=".gde.gdeuda.view.liqComEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/gdeudaJudicial/liqComEditAdapter.jsp"/>
+    </definition>
+
+    <definition name=".gde.gdeuda.view.liqComViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/gdeudaJudicial/liqComViewAdapter.jsp"/>
+    </definition>    
+    
+    <definition name=".gde.liqCom.view.procesoLiqComAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/gdeudaJudicial/procesoLiqComAdapter.jsp"/>
+    </definition>    
+	<!-- Fin ABM LiqCom -->
+	
+	<!-- Administrar Anular Deuda -->
+    <definition name=".gde.gdeuda.view.anularDeudaIngresoAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/gdeuda/anularDeudaIngresoAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".gde.gdeuda.view.anularDeudaAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/gdeuda/anularDeudaAdapter.jsp"/>
+    </definition>
+
+    <definition name=".gde.gdeuda.view.anularDeudaAnularAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/gdeuda/anularDeudaAnularAdapter.jsp"/>
+    </definition>	
+	<!-- Fin Administrar Anular Deuda -->
+	    
+	<!-- consultar convenio/recibo no liquidables -->
+    <definition name=".gde.admDeuJud.view.conRecNoLiqSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/gde/adminDeuJud/conRecNoLiqSearchPage.jsp"/>
+    </definition>	
+    
+    <definition name=".gde.admDeuJud.view.conRecNoLiqViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/adminDeuJud/conRecNoLiqViewAdapter.jsp"/>
+    </definition>    
+	<!-- FIN consultar convenio/recibo no liquidables -->
+	
+	<!-- Ver pagos Convenios -->
+	<definition name=".gde.gdeuda.view.verPagosConvenioAdapter" extends=".siatStdLayout">
+		<put name="body" value="/gde/gdeuda/verPagosConvenioAdapter.jsp"/>
+	</definition>
+	
+	<!-- Consultar Importe a Recaudar -->
+	<definition name=".gde.gdeuda.view.importeRecaudarReport" extends=".siatStdLayout">
+		<put name="body" value="/gde/reporte/importeRecaudarReport.jsp"/>
+	</definition>	
+	<!-- FIN Consultar Importe a Recaudar -->
+
+	<!-- Consultar Recibos -->
+    <definition name=".gde.gdeuda.view.reciboSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/gde/gdeuda/reciboSearchPage.jsp"/>
+    </definition>
+    <definition name=".gde.gdeuda.view.reciboAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/gdeuda/reciboAdapter.jsp"/>
+    </definition>
+    <!-- fin Consultar Recibos -->
+    
+    <!-- Consulta de importe Recaudado de planes -->
+	<definition name=".gde.gdeuda.view.importeRecaudadoReport" extends=".siatStdLayout">
+		<put name="body" value="/gde/reporte/importeRecaudadoReport.jsp"/>
+	</definition>	
+    <!-- FIN Consulta de importe Recaudado de planes -->
+    
+   	<!-- Consulta de importe Total Contribuyente Cer -->
+	<definition name=".gde.gdeuda.view.contribuyenteCerReport" extends=".siatStdLayout">
+		<put name="body" value="/gde/reporte/contribuyenteCerReport.jsp"/>
+	</definition>	
+    <!-- FIN Consulta de importe Total Contribuyente Cer -->
+    
+    <!-- Consulta de importe Total Contribuyente Cer x Recurso -->
+	<definition name=".gde.gdeuda.view.recConCerReport" extends=".siatStdLayout">
+		<put name="body" value="/gde/reporte/recConCerReport.jsp"/>
+	</definition>	
+    <!-- FIN Consulta de importe Total Contribuyente Cer x Recurso -->
+    
+    <!-- Consulta de importe Total Recaudacion Cer x Sector -->
+  	<definition name=".gde.gdeuda.view.recaudacionCerReport" extends=".siatStdLayout">
+		<put name="body" value="/gde/reporte/recaudacionCerReport.jsp"/>
+	</definition>	
+	   <!-- Consulta de importe Total Recaudacion detallada Cer x Sector -->
+  	<definition name=".gde.gdeuda.view.detRecaudacionCerReport" extends=".siatStdLayout">
+		<put name="body" value="/gde/reporte/detRecaudacionCerReport.jsp"/>
+	</definition>	
+    <!-- FIN Consulta de importe Total Recaudacion detallada Cer x Sector -->
+   
+    <!-- Consulta de Estados de Convenios -->
+    <definition name=".gde.gdeuda.view.convenioEstadosAdapter" extends=".siatStdLayout">
+    	<put name="body" value="/gde/gdeuda/convenioEstadosAdapter.jsp"/>
+    </definition>
+    
+    <!-- PlanRecurso -->
+    <definition name=".gde.definicion.view.planRecursoEditAdapter" extends=".siatStdLayout">
+    	<put name="body" value="/gde/definicion/planRecursoEditAdapter.jsp"/>
+    </definition>
+    <definition name=".gde.definicion.view.planRecursoViewAdapter" extends=".siatStdLayout">
+    	<put name="body" value="/gde/definicion/planRecursoViewAdapter.jsp"/>
+    </definition>
+    
+    <!-- Reporte Convenio Formalizado -->
+    <definition name=".gde.reporte.view.convenioFormReport" extends=".siatStdLayout">
+	    <put name="body" value="/gde/reporte/convenioFormReport.jsp"/>
+    </definition>
+    <!-- Fin Reporte Convenio Formalizado -->
+    
+    <!-- upload evento de gesJud -->
+    <definition name=".gde.gdeudaJudicial.view.uploadEventoGesJudAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/adminDeuJud/uploadFileEventoGesJud.jsp"/>
+    </definition>    
+    <!-- FIN upload evento de gesJud -->
+    
+    <!-- Reportes de Seguimiento de las Gestión Judicial -->
+    <definition name=".gde.gdeuda.view.gesJudReport" extends=".siatStdLayout">
+	    <put name="body" value="/gde/reporte/gesJudReport.jsp"/>
+    </definition>
+    <!-- FIN Reportes de Seguimiento de las Gestión Judicial -->
+
+    
+    <!-- Verificar consistencia de convenios -->
+    <definition name=".gde.gdeuda.view.convenioConsistenciaAdapter" extends=".siatStdLayout">
+    	<put name="body" value="/gde/gdeuda/convenioConsistenciaAdapter.jsp"/>
+    </definition>
+     <!-- Fin Verificar consistencia de convenios -->
+    
+    <!-- Reporte de deudas de cuenta en gestion judicial -->
+    <definition name=".gde.gdeudaJudicial.view.deuCueGesJudSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/gde/adminDeuJud/deuCueGesJudSearchPage.jsp"/>
+    </definition>
+    <!-- FIn Reporte de deudas de cuenta en gestion judicial -->
+    
+    <!-- Reporte de Anulacion de Deuda -->
+    <definition name=".gde.reporte.view.deudaAnuladaReport" extends=".siatStdLayout">
+	    <put name="body" value="/gde/reporte/deudaAnuladaReport.jsp"/>
+    </definition>
+    <!-- FIN Reporte de Anulacion de Deuda -->
+    
+   	<!-- Reporte de total de emision -->
+	<definition name=".gde.reporte.view.emisionReport" extends=".siatStdLayout">
+	    <put name="body" value="/gde/reporte/emisionReport.jsp"/>
+    </definition>
+	<!-- FIN Reporte de total de emision -->
+	
+	<!-- Reporte de recaudado NUEVO -->
+	<definition name=".gde.reporte.view.recaudadoReport" extends=".siatStdLayout">
+	    <put name="body" value="/gde/reporte/recaudadoReport.jsp"/>
+    </definition>
+	<!-- FIN Reporte de recaudado NUEVO -->
+
+   	<!-- Reporte de Distribucion de Totales Emitidos -->
+	<definition name=".gde.reporte.view.distribucionReport" extends=".siatStdLayout">
+	    <put name="body" value="/gde/reporte/distribucionReport.jsp"/>
+    </definition>
+	<!-- FIN Reporte de Distribucion de Totales Emitidos -->
+	
+	<!-- Reporte Deuda por Procurador -->
+	<definition name=".gde.reporte.view.deudaProcuradorReport" extends=".siatStdLayout">
+	    <put name="body" value="/gde/reporte/deudaProcuradorReport.jsp"/>
+    </definition>	
+	<!-- FIN Reporte Deuda por Procurador -->    
+	
+	<!-- Consulta de Cod Ref Pago -->
+	<definition name=".gde.gdeuda.view.codRefPagSearchPage" extends=".siatStdLayout">
+		<put name="body" value="/gde/gdeuda/codRefPagSearchPage.jsp"/>
+	</definition>
+	
+	<!-- Proceso de Prescripcion de Deuda -->
+	<definition name=".gde.admDeuCon.view.proPreDeuSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/gde/admDeuCon/proPreDeuSearchPage.jsp"/>
+    </definition>	
+
+	<definition name=".gde.admDeuCon.view.proPreDeuViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/admDeuCon/proPreDeuViewAdapter.jsp"/>
+    </definition>
+
+	<definition name=".gde.admDeuCon.view.proPreDeuEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/admDeuCon/proPreDeuEditAdapter.jsp"/>
+    </definition>	
+	
+	<definition name=".gde.admDeuCon.view.procesoPrescripcionDeudaAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/admDeuCon/procesoPrescripcionDeudaAdapter.jsp"/>
+    </definition>
+
+	<definition name=".gde.admDeuCon.view.procesoPrescripcionDeudaAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/admDeuCon/procesoPrescripcionDeudaAdapter.jsp"/>
+    </definition>
+
+	<definition name=".gde.admDeuCon.view.proPreDeuDetSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/gde/admDeuCon/proPreDeuDetSearchPage.jsp"/>
+    </definition>
+    <!-- FIN Proceso de Prescripcion de Deuda -->
+
+	<!-- Acciones a Convenios -->
+    <definition name=".gde.gdeuda.view.accionConvenioAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/planPago/accionConvenioAdapter.jsp"/>
+    </definition>
+    <!-- FIN Acciones a Convenios -->
+    
+    <!-- Declaraciones Juradas -->
+    <definition name=".gde.gdeuda.view.decJurSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/gde/gdeuda/decJurSearchPage.jsp"/>
+    </definition>
+    <definition name=".gde.gdeuda.view.decJurEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/gdeuda/decJurEditAdapter.jsp"/>
+    </definition>
+    <definition name=".gde.gdeuda.view.decJurViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/gdeuda/decJurViewAdapter.jsp"/>
+    </definition>
+    <!-- FIN Declaraciones Juradas -->
+    
+    <!-- Detalle Declaraciones Juradas -->
+    <definition name=".gde.gdeuda.view.decJurDetEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/gdeuda/decJurDetEditAdapter.jsp"/>
+    </definition>
+    <definition name=".gde.gdeuda.view.decJurDetViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/gdeuda/decJurDetViewAdapter.jsp"/>
+    </definition>
+    <!-- FIN Detalle Declaraciones Juradas -->
+    
+     <!-- Detalle Pagos de Declaraciones Juradas -->
+    <definition name=".gde.gdeuda.view.decJurPagEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/gdeuda/decJurPagEditAdapter.jsp"/>
+    </definition>
+    <definition name=".gde.gdeuda.view.decJurPagViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/gdeuda/decJurPagViewAdapter.jsp"/>
+    </definition>
+    <!-- FIN Detalle Pagos de Declaraciones Juradas -->
+    
+    <!-- Desglose Ajuste-->
+    <definition name=".gde.gdeuda.view.desgloseAjusteAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/gdeuda/desgloseAjusteAdapter.jsp"/>
+    </definition>
+   <!-- FIN Desglose Ajuste-->
+    
+    <!-- Multa -->
+    <definition name=".gde.gdeudaauto.view.multaSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/gde/gdeudaauto/multaSearchPage.jsp"/>
+    </definition>
+	
+	<definition name=".gde.gdeudaauto.view.multaViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/gdeudaauto/multaViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".gde.gdeudaauto.view.multaEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/gdeudaauto/multaEditAdapter.jsp"/>
+    </definition>
+    
+   <definition name=".gde.gdeudaauto.view.multaHistoricoAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/gdeudaauto/multaHistoricoAdapter.jsp"/>
+    </definition>
+    <!-- fin Multa -->
+    
+    <!-- Mandatario -->
+	<definition name=".gde.definicion.view.mandatarioSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/gde/definicion/mandatarioSearchPage.jsp"/>
+    </definition> 
+    
+    <definition name=".gde.definicion.view.mandatarioViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/definicion/mandatarioViewAdapter.jsp"/>
+    </definition>    
+    
+    <definition name=".gde.definicion.view.mandatarioEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/definicion/mandatarioEditAdapter.jsp"/>
+    </definition>       
+    
+    <definition name=".gde.definicion.view.mandatarioAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/definicion/mandatarioAdapter.jsp"/>
+    </definition>          
+    <!-- fin Mandatario -->
+    
+    <!-- Cobranza -->
+   <definition name=".gde.gestionCobranza.view.cobranzaSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/gde/gestionCobranza/cobranzaSearchPage.jsp"/>
+    </definition>
+    
+    <definition name=".gde.gestionCobranza.view.cobranzaEditAdapter" extends=".siatStdLayout">
+    	<put name="body" value="/gde/gestionCobranza/cobranzaEditAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".gde.gestionCobranza.view.cobranzaViewAdapter" extends=".siatStdLayout">
+    	<put name="body" value="/gde/gestionCobranza/cobranzaViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".gde.gestionCobranza.view.cobranzaAsignarAdapter" extends=".siatStdLayout">
+    	<put name="body" value="/gde/gestionCobranza/cobranzaAsignarAdapter.jsp"/>
+    </definition>
+    <!-- Fin Cobranza -->
+
+	<!-- PerCob -->
+	<definition name=".gde.definicion.view.perCobSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/gde/definicion/perCobSearchPage.jsp"/>
+    </definition> 
+    
+    <definition name=".gde.definicion.view.perCobViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/definicion/perCobViewAdapter.jsp"/>
+    </definition>    
+    
+    <definition name=".gde.definicion.view.perCobEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/definicion/perCobEditAdapter.jsp"/>
+    </definition>       
+    
+    <definition name=".gde.definicion.view.perCobAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/definicion/perCobAdapter.jsp"/>
+    </definition>          
+    <!-- fin PerCob -->
+
+	<!-- Agente de Retención -->
+    <definition name=".gde.definicion.view.ageRetSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/gde/definicion/ageRetSearchPage.jsp"/>
+    </definition>
+	
+	<definition name=".gde.definicion.view.ageRetViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/definicion/ageRetViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".gde.definicion.view.ageRetEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/definicion/ageRetEditAdapter.jsp"/>
+    </definition>
+    <!-- fin Agente de Retención -->
+
+	<!-- Mantenedor de CierreComercio -->
+    <definition name=".gde.cierreComercio.view.cierreComercioEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/gdeudaauto/cierreComercioEditAdapter.jsp"/>
+    </definition>    
+    
+    <definition name=".gde.cierreComercio.view.cierreComercioViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/gdeudaauto/cierreComercioViewAdapter.jsp"/>
+    </definition>
+	<!-- FIN Mantenedor de CierreComercio -->
+
+	<!-- Tipos de Multa -->
+    <definition name=".gde.definicion.view.tipoMultaSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/gde/definicion/tipoMultaSearchPage.jsp"/>
+    </definition>
+	
+	<definition name=".gde.definicion.view.tipoMultaViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/definicion/tipoMultaViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".gde.definicion.view.tipoMultaEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/definicion/tipoMultaEditAdapter.jsp"/>
+    </definition>
+    <!-- fin Tipos de Multa -->
+
+	<!-- Indice de Compensacion -->
+    <definition name=".gde.definicion.view.indiceCompensacionSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/gde/definicion/indiceCompensacionSearchPage.jsp"/>
+    </definition>
+	
+	<definition name=".gde.definicion.view.indiceCompensacionViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/definicion/indiceCompensacionViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".gde.definicion.view.indiceCompensacionEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/definicion/indiceCompensacionEditAdapter.jsp"/>
+    </definition>
+    <!-- fin Indice de Compensacion -->
+
+    <definition name=".gde.gdeuda.view.simActualizaDeuViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/gdeuda/simActualizaDeuViewAdapter.jsp"/>
+    </definition>
+
+    <definition name=".gde.gdeuda.view.ctrlInfDeuViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/gdeuda/ctrlInfDeuViewAdapter.jsp"/>
+    </definition>
+    
+    <!-- Tipos de Pago -->
+    <definition name=".gde.definicion.view.tipoPagoSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/gde/definicion/tipoPagoSearchPage.jsp"/>
+    </definition>
+	
+	<definition name=".gde.definicion.view.tipoPagoViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/definicion/tipoPagoViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".gde.definicion.view.tipoPagoEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/gde/definicion/tipoPagoEditAdapter.jsp"/>
+    </definition>
+    <!-- fin Tipos de Pago -->    
+</tiles-definitions>

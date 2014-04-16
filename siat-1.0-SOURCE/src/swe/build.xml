@@ -1,0 +1,173 @@
+<project name="siatgpl-swe" default="swe">
+	<property name="build.sysclasspath" value="last"/>
+	
+	<property environment="env" />
+	<property name="dist" value="build"/>
+	<property name="deploy" value="${env.CATALINA_BASE}/webapps/swe"/>
+	<property name="externalJars" value="../externalJars"/>
+	<property name="dist_demoda" value="../build"/>
+	
+	<property name="classes" value="${dist}/classes"/>
+
+	<property file="${env.SIAT_ENV}.properties"/>
+	
+	<path id="externalJars_path">
+	<fileset dir="${externalJars}">
+		<include name="tomcat/**/*.jar"/>
+		<include name="lib/**/*.jar"/>
+		<include name="extra/**/*.jar"/>
+	</fileset>
+	</path>
+	
+	<target name="init">
+		<mkdir dir="${dist}/lib"/>
+		<mkdir dir="${classes}"/>
+	</target>
+	
+	<target name="clean" description="Limpia las classes y estructuras intermedias de la compilacion.">
+		<delete quiet="true" includeemptydirs="true">
+			<fileset dir="${dist}" includes="**/*"/>
+		</delete>
+	</target>
+
+	<target name="cleandeploy" description="Limpia los archivos desplegados de siat y adpsiat en el CATALINA_BASE">
+		<delete dir="${deploy_intrasiat}"/>
+		<delete file="${env.CATALINA_BASE}/webapps/swe.war"/>
+		<delete file="${env.CATALINA_BASE}/conf/Catalina/localhos/swe.xml"/>
+	</target>
+
+
+	<target name="compile" depends="">
+		<mkdir dir="${classes}/view"/>
+		<mkdir dir="${classes}/iface"/>
+		<mkdir dir="${classes}/buss"/>
+
+		<echo>compile siat swe iface...</echo>
+		<javac destdir="${classes}/iface"
+				debug="on" encoding="utf-8">
+			<src>
+				<pathelement path="iface/src"/>
+			</src>
+			<classpath>
+				<path refid="externalJars_path"/>
+				<fileset dir="${dist}/lib" includes="siatdemoda.jar"/>
+			</classpath>
+		</javac>		
+
+		<echo>jar siat swe iface</echo>
+		<jar destfile="${dist}/lib/sweiface.jar"
+			 basedir="${classes}/iface"
+			 includes="ar/gov/rosario/swe/**"/>
+		<copy todir="${externalJars}/lib" file="${dist}/lib/sweiface.jar" />
+
+		<echo>compile siat swe buss...</echo>
+		<javac destdir="${classes}/buss"
+				debug="on" encoding="utf-8">
+			<src>
+				<pathelement path="buss/src"/>
+			</src>
+			<classpath>
+				<path refid="externalJars_path"/>
+				<fileset dir="${dist}/lib" includes="siatdemoda.jar, sweiface.jar"/>
+			</classpath>
+		</javac>
+		<copy todir="${classes}/buss" file="view/src/WEB-INF/src/swe.hibernate.cfg.xml" />
+
+		<echo>jar siat swe buss</echo>
+		<jar destfile="${dist}/lib/swebuss.jar"
+			 basedir="${classes}/buss"
+			 includes="swe.hibernate.cfg.xml, ar/gov/rosario/swe/**"/>
+		<copy todir="${externalJars}/lib" file="${dist}/lib/swebuss.jar" />
+		
+		<echo>compile siat swe view...</echo>
+		<javac destdir="${classes}/view"
+				debug="on" encoding="utf-8">
+			<src>
+				<pathelement path="view/src/WEB-INF/src"/>
+			</src>
+			<classpath>
+				<path refid="externalJars_path"/>
+				<fileset dir="${dist}/lib" includes="siatdemoda.jar, sweiface.jar"/>
+			</classpath>
+		</javac>
+
+		<echo>jar siat swe view</echo>
+		<jar destfile="${dist}/lib/sweview.jar"
+			 basedir="${classes}/view"
+			 includes="ar/gov/rosario/swe/**"/>
+	</target>
+	
+	<target name="prepare" depends="init">
+		<echo>Estructura Webapp Swe Siat</echo>
+	
+		<copy todir="${dist}/swe">
+			<!-- jsp, xml, properties, etc. -->
+			<fileset dir="view/src/"
+		       includes="**/*"
+		       excludes="**/lib/*, **/classes/**, **/\${modulo}/**, **/src/**"/>
+		</copy>
+	
+		<copy todir="${dist}/swe/WEB-INF/classes">
+			<!-- xml, properties, del classes -->
+			<fileset dir="view/src/WEB-INF/src"
+		       includes="**/*"
+		       excludes="**/\${modulo}/**, **/*.java"/>		
+		</copy>
+	
+		<copy todir="${dist}/swe/WEB-INF/lib" flatten="true">
+			<fileset dir="${externalJars}/lib"
+		       includes="**/*.jar"
+			   excludes="servlet-api.jar" />
+		</copy>
+		
+		<copy todir="${dist}/swe">
+			<!-- jsp, xml, properties, etc. -->
+			<fileset dir="view/src/"
+		       includes="**/*"
+		       excludes="**/lib/*, **/classes/**, **/\${modulo}/**, **/src/**"/>
+		</copy>
+
+		<copy todir="${dist}/lib">
+			<fileset dir="${dist_demoda}/lib" includes="siatdemoda.jar"/>
+		</copy>
+
+	</target>	
+
+	<target name="opendeploy" depends="webapp">
+		<mkdir dir="${deploy}"/>
+		
+		<copy todir="${deploy}">
+			<fileset dir="${dist}/swe" includes="**/*" excludes=""/>
+		</copy>
+				
+		<tstamp><format property="TODAY" pattern="yyyy-MM-dd hh:mm:ss"/></tstamp>
+		<echo>Finished at:${TODAY}</echo>
+	</target>
+	
+	<target name="webapp" depends="prepare, compile">
+		<echo>Generando Webapp siat swe</echo>
+	
+		<copy todir="${dist}/WEB-INF/lib" includeEmptyDirs="false">
+			<!-- jars del siat swe -->
+			<fileset dir="${dist_demoda}/lib" includes="siatdemoda.jar"/>
+			<fileset dir="${dist}/lib" includes="swebuss.jar"/>
+			<fileset dir="${dist}/lib" includes="sweiface.jar"/>
+			<fileset dir="${dist}/lib" includes="sweview.jar"/>
+		</copy>
+	</target>
+	
+	<target name="swe-war" depends="swe" description="Igual swe, y luego genera un el WAR para desplegar.">
+		<jar destfile="${dist}/intra/swe.war"
+			 basedir="${dist}"
+			 includes="**/*"
+			 excludes=""/>
+	</target>
+
+	<target name="swe-lib" depends="webapp" description="Compila swe y deja sus librerias en externalJars/lib">
+	</target>
+
+	<target name="swe" depends="opendeploy" description="Igual swe-lib, y luego despliegua en CATALINA_HOME/webapps">
+	</target>
+	
+	<!-- end swe -->
+</project>

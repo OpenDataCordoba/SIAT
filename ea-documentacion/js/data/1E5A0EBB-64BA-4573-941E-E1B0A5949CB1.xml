@@ -1,0 +1,11 @@
+tocTab[tocTab.length] = new Array("5:1", "", "INDET-MD", "EARoot/EA5/EA1520.htm", "175.png", "557", "0", "", "Logical diagram");
+tocTab[tocTab.length] = new Array("5:2", "", "«table» duplicados", "EARoot/EA5/EA1522.htm", "28.png", "4564", "0", "", "Class");
+tocTab[tocTab.length] = new Array("5:3", "", "«table» indet_baja", "EARoot/EA5/EA1523.htm", "28.png", "4565", "0", "", "Class");
+tocTab[tocTab.length] = new Array("5:4", "", "«table» indet_hist", "EARoot/EA5/EA1524.htm", "28.png", "4569", "0", "", "Class");
+tocTab[tocTab.length] = new Array("5:5", "", "«table» indet_modif", "EARoot/EA5/EA1525.htm", "28.png", "4566", "0", "", "Class");
+tocTab[tocTab.length] = new Array("5:6", "", "«table» indet_tot", "EARoot/EA5/EA1526.htm", "28.png", "4567", "0", "", "Class");
+tocTab[tocTab.length] = new Array("5:7", "", "«table» motivos_modif", "EARoot/EA5/EA1527.htm", "28.png", "4568", "0", "", "Class");
+tocTab[tocTab.length] = new Array("5:8", "", "«table» motivos_traspaso", "EARoot/EA5/EA1528.htm", "28.png", "4570", "0", "", "Class");
+tocTab[tocTab.length] = new Array("5:9", "", "«table» reingresos", "EARoot/EA5/EA1529.htm", "28.png", "4571", "0", "", "Class");
+tocTab[tocTab.length] = new Array("5:10", "", "«table» tipos_indet", "EARoot/EA5/EA1530.htm", "28.png", "4562", "0", "", "Class");
+tocTab[tocTab.length] = new Array("5:11", "", "«table» tipos_ingresos", "EARoot/EA5/EA1531.htm", "28.png", "4563", "0", "", "Class");

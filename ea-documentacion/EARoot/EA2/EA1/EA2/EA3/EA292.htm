@@ -1,0 +1,237 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Mantenedor Objeto Imponible </title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="pageHeader"></div>
+<div class="PageBody">
+	<span class="ObjectTitle">Mantenedor Objeto Imponible   : public   usecase</span>
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">17/07/2007 17:31:58</td>
+		</tr>
+		<tr>
+			<td class="ObjectDetailsTopic">Modified:</td>
+			<td class="ObjectDetailsValue">23/09/2008 16:23:43</td>
+		</tr>
+		<tr style="height: 10px"><td colspan="2"></td></tr>
+		<tr>
+			<td class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td class="ObjectDetailsValue">1.0</td>
+		</tr>
+		<tr id="proj02" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Phase:</td>
+			<td class="ObjectDetailsValue">1.0</td>
+		</tr>
+		<tr id="proj03" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Status:</td>
+			<td class="ObjectDetailsValue">R1</td>
+		</tr>
+		<tr id="proj04" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Complexity:</td>
+			<td class="ObjectDetailsValue">Medium</td>
+		</tr>
+		<tr>
+			<td class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">UUID:</td>
+			<td class="ObjectDetailsValue">{146B4AF3-A99E-4d5c-933E-1E571CBBC2D1}</td>
+		</tr>
+		<tr id="adv01" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
+			<td class="ObjectDetailsValue"><a href="EA287.htm">Objetos Imponibles</a></td>
+		</tr>
+	</table>
+	<div class="ObjectDetailsNotes">Este CU tiene como objetivo la administración del padrón de objetos imponibles. <br />En SIAT existirán padrones de: Parcelas, Comercios, Licencias, Sepulturas y cualuier otro Tipo de Objeto Imponible que pueda requerirse en el futuro.<br />Mediante el módulo de definición se permite identificar cuales son los atributos que posee cada Tipo de Objeto Imponible. Por ejemplo: para las Parcelas, se indicará que poseen: Radio, Zona, Superficie Cubierta, Valuación, etc.<br />Mediante este CU se permite realizar altas, bajas y modificaciones de los distintos objetos imponibles de cada tipo. Adicionalmente, se desarrollan las acciones que pudieran estar relacionadas con cada evento, de acuerdo a la configuración definida para cada Recurso. Por ejemplo, el alta de una Parcela, estará acopañada del alta de la cuenta de TGI relacionada y el alta de un Comercio estará acompañada del alta de la cuenta de DReI y Etur en caso que corresponda.<br /><br />La modificación del valor de un atributo con vigencia retroactiva, genera una solicitud de análisis de retroactivo para el Dpto. Emisión. (lo mismo ocurre cuando se ingresa una revocación sobre una exención)<br /><br /></div>
+
+	<div class="TableGroup" id="TableGroup">
+		<ul class="ItemTitle">
+			<li onClick="parent.toggleItem('AssociationsFrom');" id="AssociationsFromTitle">Associations From</li>
+			<li onClick="parent.toggleItem('Scenario');" id="ScenarioTitle">Scenarios</li>
+			<li onClick="parent.toggleItem('Files');" id="FilesTitle">Files</li>
+			<li onClick="parent.toggleItem('Links');" id="LinksTitle">Other Links</li>
+		</ul>
+		<div class="ItemBody" id="AssociationsFromTable">
+			<table border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="20%" class="TableHeading">Element</td>
+					<td width="25%" class="TableHeading">Source Role</td>
+					<td width="25%" class="TableHeading">Target Role</td>
+					<td width="30%" class="TableHeading">Details</td>
+				</tr>
+				<tr>
+					<td width="20%" class="TableRow" valign="top">
+						<a href="../../../EA3/EA646.htm">Mantenimiento Padrón y Emisión</a><br />
+						Actor &nbsp;
+					</td>
+					<td width="20%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;
+					</td>
+					<td width="20%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;	
+					</td>
+					<td width="30%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+
+			</table>
+		</div>
+		<div class="ItemBody" id="ScenarioTable">
+			<table align="center" border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="24%" class="TableHeading">Scenario</td>
+					<td width="8%" class="TableHeading">Type</td>
+					<td width="68%" class="TableHeading">Detail</td>
+				</tr>
+				<tr>
+					<td width="24%" class="TableRow">Buscar Objeto Imponible</td>
+					<td width="8%" class="TableRow">Alternate</td>
+					<td width="68%" class="TableRow"><div class="ObjectDetailsNotes">Permite consultar los objetos imponibles disponibles en el SIAT mediante diferentes criterios de búsqueda. Permite buscar por Tipo de Objeto Imponible y Clave. (para el caso de Parcelas, la Clave será la Catastral, para el caso de Comercio, la Clave será el número de comercio)<br /><br />Se permitirá realizar también una Busqueda Avanzada, donde se podrá buscar por los atributos definidos para cada tipo de objeto imponible, por rango o multivalor según corresponda. (siempre y cuando el atributo sea atributo de búsqueda).<br /><br />Si existen resultados se muestra de cada uno de los registros clave, cuenta, fecha desde, fecha hasta, si está o no vigente y las acciones asociadas: &quot;Ver Objeto Imponible&quot;, &quot;Modificar Objeto Imponible&quot;, &quot;Eliminar Objeto Imponible&quot; y &quot;Activar/Desactivar Objeto Imponible&quot;. Para agregar un nuevo objeto imponible al padrón, existe la opción &quot;Agregar objeto imponible&quot;.<br /></div>
+</td>
+				</tr>
+				<tr>
+					<td width="24%" class="TableRow">Ver Objeto Imponible</td>
+					<td width="8%" class="TableRow">Alternate</td>
+					<td width="68%" class="TableRow"><div class="ObjectDetailsNotes">Permite visualizar información del Objeto Imponible seleccionado y los atributos del tipo de objeto imponible valorizados con sus vigencias.<br /></div>
+</td>
+				</tr>
+				<tr>
+					<td width="24%" class="TableRow">Agregar Objeto Imponible</td>
+					<td width="8%" class="TableRow">Alternate</td>
+					<td width="68%" class="TableRow"><div class="ObjectDetailsNotes">Para crear un nuevo objeto imponible inicialmente se debe indicar de que Tipo de Objeto Imponible se trata. Para ello el sistema presentará una lista de todos aquellos Tipos de Objetos que fueron indicados con el atributo: esSIAT. Una vez indicado el Tipo de Objeto imponible, el sistema mostrará todos los atributos definidos para el mismo, junto con una fecha desde.<br /><br />Luego se deberán valorizar los atributos del Tipo de Objeto Imponible seleccionado. <br />Para dar de alta estos valores/atributos se deberá ingresar por cada uno uno el valor correspondiente. <br />Luego, con la Fecha de Alta y los valores para cada uno de los atributos, se prepara un Objeto Imponible para ser almacenado físicamente y se invoca al CU: &quot;Alta Objeto Imponible&quot;.<br /></div>
+</td>
+				</tr>
+				<tr>
+					<td width="24%" class="TableRow">Eliminar Objeto Imponible</td>
+					<td width="8%" class="TableRow">Alternate</td>
+					<td width="68%" class="TableRow"><div class="ObjectDetailsNotes">Elimina en forma física el registro de objeto imponible si no está siendo referenciada. (Sólo se utilizaría para los casos que se acaba de dar de alta un objeto imponible y se descubre un error)<br /></div>
+</td>
+				</tr>
+				<tr>
+					<td width="24%" class="TableRow">Modificar Objeto Imponible</td>
+					<td width="8%" class="TableRow">Alternate</td>
+					<td width="68%" class="TableRow"><div class="ObjectDetailsNotes">Permite modificar la fecha de alta y cada uno de los atributos que componen al Objeto Imponible siempre y cuando estén marcados como: esAtributoSIAT. <br />Aquí el comportamiento es distinto dependiendo de si el atributo posee la marca de: poseeVigencia. (Los atributos con dicha marca son aquellos que podrían ocasionar un efecto retroactivo en la emisión del Recurso correspondiente)<br /><br />Para los atributos que no poseen vigencia, al modificarse su valor, se reemplazará el valor actual por el nuevo.<br /><br />Para los atributos que poseen vigencia la modificación implica la creación de un registro asociado a una nueva vigencia. En este caso, además del valor de altributo, se deberá informar: Fecha Novedad y Fecha Desde. La Fecha de Novedad representa el momento en que se conoce la Novedad (que generalmente debería ser el momento en que se carga) y la Fecha Desde representa la fecha desde la cual debería considerarse el efecto del cambio. Si la fecha Desde es anterior a la fecha actual, podría tratarse de un efecto retroactivo.<br /><br />Luego, se prepara el Objeto Imponible con los cambios y se invoca al CU: &quot;Modificar Objeto Imponible&quot;.<br /></div>
+</td>
+				</tr>
+				<tr>
+					<td width="24%" class="TableRow">Activar/Desactivar Objeto Imponible</td>
+					<td width="8%" class="TableRow">Alternate</td>
+					<td width="68%" class="TableRow"><div class="ObjectDetailsNotes">Se invoca al CU: Activar/Desactivar Objeto Imponible</div>
+</td>
+				</tr>
+
+			</table>
+		</div>
+		<div class="ItemBody" id="FilesTable">
+			<table border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="50%" class="TableHeading">File</td>
+					<td width="10%" class="TableHeading">Type</td>
+					<td width="40%" class="TableHeading">Details</td>
+				</tr>
+			<tr>
+				<td width="50%" class="TableRow"><a href="c:\siatdoc\docGenerada\capacitacion\padron\Objetos Imponibles\MDU - Mantenedor de Objeto Imponible.doc">c:\siatdoc\docGenerada\capacitacion\padron\Objetos Imponibles\MDU - Mantenedor de Objeto Imponible.doc</a></td>
+				<td width="10%" class="TableRow">Local File</td>
+				<td width="40%" class="TableRow">
+					<div class="ObjectDetailsNotes">Manual de usuario</div>
+<br />
+					<span class="NoteHeading">File Size:</span> 416 k<br />
+					<span class="NoteHeading">Time Stamp:</span> 08/09/2008 07:36:21 a.m.<br />
+				</td>
+			</tr>
+
+			</table>
+		</div>
+		<div class="ItemBody" id="LinksTable">
+			<table align="center" border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="30%" class="TableHeading">Object</td>
+					<td width="15%" class="TableHeading">Type</td>
+					<td width="15%" class="TableHeading">Connection</td>
+					<td width="40%" class="TableHeading">Notes</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../../../../EA1/EA6/EA88.htm">«Functional» 36- Mantener datos propios de Contribuyentes y sus objetos imponibles (domicilios de envío, etc.).</a></td>
+					<td width="15%" class="TableRow" valign="top">Requirement</td>
+					<td width="15%" class="TableRow" valign="top">Realisation</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../../../../EA1/EA6/EA88.htm">«Functional» 36- Mantener datos propios de Contribuyentes y sus objetos imponibles (domicilios de envío, etc.).</a></td>
+					<td width="15%" class="TableRow" valign="top">Requirement</td>
+					<td width="15%" class="TableRow" valign="top">Realisation</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../../../../EA1/EA6/EA87.htm">«Functional» 35- Registrar los distintos estados tributarios de cada objeto imponible (eximición, exoneración, quitas sobre determinados conceptos, casos sociales, etc.) sistematizando sus vigencias.</a></td>
+					<td width="15%" class="TableRow" valign="top">Requirement</td>
+					<td width="15%" class="TableRow" valign="top">Realisation</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../../../../EA1/EA6/EA89.htm">«Functional» 37- Permitir unificar objetos imponibles del mismo tributo y contribuyente a partir de una fecha.</a></td>
+					<td width="15%" class="TableRow" valign="top">Requirement</td>
+					<td width="15%" class="TableRow" valign="top">Realisation</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../../../../EA1/EA5/EA74.htm">«Functional» 4- Se deberá diseñar el sistema teniendo en cuenta que todos los tributos de esta Municipalidad se administran de la misma manera (administración por función y no por tributo).</a></td>
+					<td width="15%" class="TableRow" valign="top">Requirement</td>
+					<td width="15%" class="TableRow" valign="top">Realisation</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../../../../EA1/EA5/EA75.htm">«Functional» 5- El sistema deberá tener un alto grado de parametrización, a efectos de permitir su adecuación a cambios, sin necesidad de modificar las aplicaciones.</a></td>
+					<td width="15%" class="TableRow" valign="top">Requirement</td>
+					<td width="15%" class="TableRow" valign="top">Realisation</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../../../../EA1/EA5/EA76.htm">«Functional» 6- Cualquier actualización de datos sensibles a la administración tributaria (que afecten cálculos, titularidades, etc) debe quedar registrado con su correspondiente vigencia. </a></td>
+					<td width="15%" class="TableRow" valign="top">Requirement</td>
+					<td width="15%" class="TableRow" valign="top">Realisation</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="./EA1/EA294.htm">Alta Objeto Imponible</a></td>
+					<td width="15%" class="TableRow" valign="top">UseCase</td>
+					<td width="15%" class="TableRow" valign="top">Extends</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="./EA1/EA293.htm">Activar/Desactivar Objeto Imponible</a></td>
+					<td width="15%" class="TableRow" valign="top">UseCase</td>
+					<td width="15%" class="TableRow" valign="top">Extends</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+
+			</table>
+		</div>
+	</div>
+<div class="pageFooter"></div>
+ 
+</body>
+</html>

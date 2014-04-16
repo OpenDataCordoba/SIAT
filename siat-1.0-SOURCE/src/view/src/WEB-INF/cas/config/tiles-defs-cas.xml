@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+ <!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 1.1//EN"
+       "http://jakarta.apache.org/struts/dtds/tiles-config_1_1.dtd">
+
+<tiles-definitions>
+
+	<!-- Solicitud -->
+    <definition name=".cas.solicitud.view.solicitudSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/cas/solicitud/solicitudSearchPage.jsp"/>
+    </definition>
+	
+    <definition name=".cas.solicitud.view.solicitudPendAreaSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/cas/solicitud/solicitudPendAreaSearchPage.jsp"/>
+    </definition>
+    
+    <definition name=".cas.solicitud.view.solicitudEmitidasAreaSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/cas/solicitud/solicitudEmitidasAreaSearchPage.jsp"/>
+    </definition>    
+    
+	<definition name=".cas.solicitud.view.solicitudViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/cas/solicitud/solicitudViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".cas.solicitud.view.solicitudEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/cas/solicitud/solicitudEditAdapter.jsp"/>
+    </definition>
+    <!-- fin Solicitud -->
+    
+    <!-- UsoExpediente -->
+    <definition name=".cas.caso.view.usoExpedienteSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/cas/caso/usoExpedienteSearchPage.jsp"/>
+    </definition>
+	
+	<definition name=".cas.caso.view.usoExpedienteViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/cas/caso/usoExpedienteViewAdapter.jsp"/>
+    </definition>
+    <!-- fin UsoExpediente -->
+    
+    <!--Tipo Solicitud -->
+    <definition name=".cas.solicitud.view.tipoSolicitudSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/cas/solicitud/tipoSolicitudSearchPage.jsp"/>
+    </definition>
+    
+    <definition name=".cas.solicitud.view.tipoSolicitudViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/cas/solicitud/tipoSolicitudViewAdapter.jsp"/>
+    </definition>           
+    
+    <definition name=".cas.solicitud.view.tipoSolicitudAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/cas/solicitud/tipoSolicitudAdapter.jsp"/>
+    </definition>    
+    
+     <definition name=".cas.solicitud.view.tipoSolicitudEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/cas/solicitud/tipoSolicitudAdapter.jsp"/>
+    </definition>    
+    
+    <definition name=".cas.solicitud.view.tipoSolicitudEncEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/cas/solicitud/tipoSolicitudEncEditAdapter.jsp"/>
+    </definition>    
+     
+    <!-- fin Tipo Solicitud -->  
+    
+    <!-- Area Solicitud -->
+    
+    <definition name=".cas.solicitud.view.areaSolicitudEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/cas/solicitud/areaSolicitudEditAdapter.jsp"/>
+    </definition> 
+    
+    <definition name=".cas.solicitud.view.areaSolicitudViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/cas/solicitud/areaSolicitudViewAdapter.jsp"/>
+    </definition> 
+  
+    <!-- fin Area Solicitud -->
+
+    
+    <!-- Reporte Solicitudes Pendientes -->
+    
+    <definition name=".cas.reporte.view.solPendReport" extends=".siatStdLayout">
+	    <put name="body" value="/cas/reporte/solPendReport.jsp"/>
+    </definition>
+    
+    <!-- FIN Reporte Solicitudes Pendientes -->
+
+</tiles-definitions>

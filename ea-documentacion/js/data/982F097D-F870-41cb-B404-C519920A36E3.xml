@@ -1,0 +1,15 @@
+tocTab[tocTab.length] = new Array("2.1.6.1:1", "", "Fiscalizacion", "EARoot/EA2/EA1/EA6/EA1/EA458.htm", "180.png", "509", "0", "", "Use Case diagram");
+tocTab[tocTab.length] = new Array("2.1.6.1:2", "", "Administrar Comparaciones", "EARoot/EA2/EA1/EA6/EA1/EA460.htm", "7.png", "4225", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.6.1:3", "", "Administrar Compensaciones de Ajustes", "EARoot/EA2/EA1/EA6/EA1/EA461.htm", "7.png", "4826", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.6.1:4", "", "Administrar Información de Fuentes", "EARoot/EA2/EA1/EA6/EA1/EA462.htm", "7.png", "4224", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.6.1:5", "", "Administrar Orden de Control", "EARoot/EA2/EA1/EA6/EA1/EA463.htm", "7.png", "3024", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.6.1:6", "", "Ajuste por coeficiente unificado", "EARoot/EA2/EA1/EA6/EA1/EA464.htm", "7.png", "4830", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.6.1:7", "", "Aplicar Alícuotas de Convenio Multilateral", "EARoot/EA2/EA1/EA6/EA1/EA465.htm", "7.png", "4605", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.6.1:8", "", "Aprobar Emisiones de períodos retroactivos", "EARoot/EA2/EA1/EA6/EA1/EA466.htm", "7.png", "4229", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.6.1:9", "", "Asignar Orden de Control a Inspector", "EARoot/EA2/EA1/EA6/EA1/EA467.htm", "7.png", "3022", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.6.1:10", "", "Confeccionar Actas", "EARoot/EA2/EA1/EA6/EA1/EA468.htm", "7.png", "3240", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.6.1:11", "", "Determinar Ajustes", "EARoot/EA2/EA1/EA6/EA1/EA469.htm", "7.png", "4227", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.6.1:12", "", "Iniciar Investigación", "EARoot/EA2/EA1/EA6/EA1/EA470.htm", "7.png", "4223", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.6.1:13", "", "Seleccionar Bases Imponibles", "EARoot/EA2/EA1/EA6/EA1/EA471.htm", "7.png", "4226", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.6.1:14", "", "Seleccionar Períodos a Fiscalizar", "EARoot/EA2/EA1/EA6/EA1/EA472.htm", "7.png", "4220", "0", "", "UseCase");
+tocTab[tocTab.length] = new Array("2.1.6.1:15", "", "Solicitar emisión de períodos retroactivos", "EARoot/EA2/EA1/EA6/EA1/EA473.htm", "7.png", "4221", "0", "", "UseCase");

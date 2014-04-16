@@ -1,0 +1,265 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Administrar Saldos por Caducidad Masivos</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="pageHeader"></div>
+<div class="PageBody">
+	<span class="ObjectTitle">Administrar Saldos por Caducidad Masivos  : public   usecase</span>
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">06/11/2007 22:44:47</td>
+		</tr>
+		<tr>
+			<td class="ObjectDetailsTopic">Modified:</td>
+			<td class="ObjectDetailsValue">17/04/2008 15:08:04</td>
+		</tr>
+		<tr style="height: 10px"><td colspan="2"></td></tr>
+		<tr>
+			<td class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td class="ObjectDetailsValue">1.0</td>
+		</tr>
+		<tr id="proj02" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Phase:</td>
+			<td class="ObjectDetailsValue">1.0</td>
+		</tr>
+		<tr id="proj03" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Status:</td>
+			<td class="ObjectDetailsValue">R2</td>
+		</tr>
+		<tr id="proj04" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Complexity:</td>
+			<td class="ObjectDetailsValue">Difficult</td>
+		</tr>
+		<tr>
+			<td class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">UUID:</td>
+			<td class="ObjectDetailsValue">{8CDC3E36-D6AE-44bc-AAD9-02C82B9059AF}</td>
+		</tr>
+		<tr id="adv01" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
+			<td class="ObjectDetailsValue"><a href="EA198.htm">Diagrama Administración Deuda/Convenios</a></td>
+		</tr>
+	</table>
+	<div class="ObjectDetailsNotes">Este CU tiene como objetivo la Administración del proceso de la Generación de Saldo por Caducidad masivos.<br /><br />El proceso implica, inicialmente indicar una serie de parámetros para la selección de convenios. Estos parámetros son: Plan, Entorno de fechas para formalización, indicación de si se consideran convenios caducos o convenios a caducar respecto de una fecha y valor mínimo de cuota.<br /><br />Como resultado de esta primer selección, el sistema construye una lista de convenios a procesar, que puede ser consultada mediante el sistema o exportadas en archivos Excel para su validación. En caso que se detecte algún convenio al cual no se le debe ejecutar el saldo por caducidad, podrá ser eliminado de la lista.<br /><br />Luego, en caso que las validaciones de los usuarios resulten satisfactorias, el sistema procede al proceso propiamente dicho, lo que implica obtener cada uno de los convenios y ejecutar el saldo por caducidad correspondiente.<br /><br />Como resultado del proceso, se obtienen un listado de los convenios a los cuales se les realizó el saldo y eventualmente, un informe de las modificaciones a las partidas presupuestarias actualizadas como producto de la ejecución de los saldos en casos de convenios con pagos a cuenta.<br /></div>
+
+	<div class="TableGroup" id="TableGroup">
+		<ul class="ItemTitle">
+			<li onClick="parent.toggleItem('AssociationsFrom');" id="AssociationsFromTitle">Associations From</li>
+			<li onClick="parent.toggleItem('Scenario');" id="ScenarioTitle">Scenarios</li>
+			<li onClick="parent.toggleItem('Files');" id="FilesTitle">Files</li>
+			<li onClick="parent.toggleItem('Links');" id="LinksTitle">Other Links</li>
+		</ul>
+		<div class="ItemBody" id="AssociationsFromTable">
+			<table border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="20%" class="TableHeading">Element</td>
+					<td width="25%" class="TableHeading">Source Role</td>
+					<td width="25%" class="TableHeading">Target Role</td>
+					<td width="30%" class="TableHeading">Details</td>
+				</tr>
+				<tr>
+					<td width="20%" class="TableRow" valign="top">
+						<a href="../../../EA3/EA637.htm">Cobranza Administrativa</a><br />
+						Actor &nbsp;
+					</td>
+					<td width="20%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;
+					</td>
+					<td width="20%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;	
+					</td>
+					<td width="30%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="20%" class="TableRow" valign="top">
+						<a href="../../../EA3/EA638.htm">Cobranza Judicial</a><br />
+						Actor &nbsp;
+					</td>
+					<td width="20%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;
+					</td>
+					<td width="20%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;	
+					</td>
+					<td width="30%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="20%" class="TableRow" valign="top">
+						<a href="../../../EA3/EA654.htm">Usuario CMD</a><br />
+						Actor &nbsp;
+					</td>
+					<td width="20%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;
+					</td>
+					<td width="20%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;	
+					</td>
+					<td width="30%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+
+			</table>
+		</div>
+		<div class="ItemBody" id="ScenarioTable">
+			<table align="center" border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="24%" class="TableHeading">Scenario</td>
+					<td width="8%" class="TableHeading">Type</td>
+					<td width="68%" class="TableHeading">Detail</td>
+				</tr>
+				<tr>
+					<td width="24%" class="TableRow">Búsqueda de la Generación de Saldo por Caducidad</td>
+					<td width="8%" class="TableRow">Alternate</td>
+					<td width="68%" class="TableRow"><div class="ObjectDetailsNotes">Permite consultar las Generaciones de Saldo por Caducidad por Recurso, Planes de Pago, rangos de Fecha y Estado de la Generación de Saldo por Caducidad.<br />Si existen resultados se muestra de cada uno de los registros la Fecha, el Recurso, el Plan y el Estado de la Generación de Saldo por Caducidad y las acciones asociadas: &quot;Visualización de la Generación de Saldo por Caducidad&quot;, &quot;Modificación de los datos de la Generación de Saldo por Caducidad&quot;, &quot;Eliminación de la Generación de Saldo por Caducidad&quot;, &quot;Selección del Plan a Generar Saldo por Caducidad&quot; y &quot;Administración del Proceso&quot;.<br />Para realizar una nueva Generación de Saldo por Caducidad, existe la opción &quot;Agregar una Generación de Saldo por Caducidad&quot;.</div>
+</td>
+				</tr>
+				<tr>
+					<td width="24%" class="TableRow">Administración del Proceso</td>
+					<td width="8%" class="TableRow">Alternate</td>
+					<td width="68%" class="TableRow"><div class="ObjectDetailsNotes">Permite consultar el estado de la Corrida del Proceso y, configurarla en caso que aún no se lo haya hecho. Para ello se invoca al CU &quot;Administrar Corrida de Proceso&quot;.<br /></div>
+</td>
+				</tr>
+				<tr>
+					<td width="24%" class="TableRow">Agregar una Generación de Saldo por Caducidad</td>
+					<td width="8%" class="TableRow">Alternate</td>
+					<td width="68%" class="TableRow"><div class="ObjectDetailsNotes">Para agregar una nueva Generación de Saldo por Caducidad , se debe indicar la Fecha, el Recurso, el Plan de Pago, y una Observación. Con estos datos se genera un Saldo por Caducidad, una nueva Corrida del proceso correspondiente a la Generación de Saldo por Caducidad, en estado &quot;En Preparación&quot;, la cual se asocia a la Generación de Saldo por Caducidad antes creada. También se genera una nueva Selección Almacenada y se la asocia a la Generación de Saldo por Caducidad. Dicha Selección Almacenada es de Tipo Plan y solamente permitirá Plan del Recurso indicado en la creación de la Generación de Saldo por Caducidad.</div>
+</td>
+				</tr>
+				<tr>
+					<td width="24%" class="TableRow">Eliminación de la Generación de Saldo por Caducidad</td>
+					<td width="8%" class="TableRow">Alternate</td>
+					<td width="68%" class="TableRow"><div class="ObjectDetailsNotes">Permite realizar la Eliminación de la Generación de Saldo por Caducidad, sólo en caso que la Corrida asociada se encuentre en estado &quot;En Preparación&quot;. Esto implica que, además de realizar la eliminación física de la Generación de Saldo por Caducidad, se eliminará también la Corrida asociada y la Selección Almacenada generada al crear la Generación de Saldo por Caducidad.</div>
+</td>
+				</tr>
+				<tr>
+					<td width="24%" class="TableRow">Modificación de los datos de la Generación de Saldo por Caducidad</td>
+					<td width="8%" class="TableRow">Alternate</td>
+					<td width="68%" class="TableRow"><div class="ObjectDetailsNotes">Permite realizar la Modificación de los datos de la Generación de Saldo por Caducidad, sólo en caso que la Corrida asociada se encuentre en estado &quot;En Preparación&quot;. <br />En caso que así sea, se podrá modificar sólo la Observación.</div>
+</td>
+				</tr>
+				<tr>
+					<td width="24%" class="TableRow">Selección del Plan</td>
+					<td width="8%" class="TableRow">Alternate</td>
+					<td width="68%" class="TableRow"><div class="ObjectDetailsNotes">Permite seleccionar los planes formalizados para los cuales se Generará Saldo por Caducidad, para lo cual se invoca al CU  &quot;Administrar Selección Almacenada&quot;, indicando como parámetros la Selección Almacenada y el Recurso.</div>
+</td>
+				</tr>
+				<tr>
+					<td width="24%" class="TableRow">Visualización de la Generación de Saldo por Caducidad</td>
+					<td width="8%" class="TableRow">Alternate</td>
+					<td width="68%" class="TableRow"><div class="ObjectDetailsNotes">Permite visualizar los datos de la Generación de Saldo por Caducidad y los registros de Plan incluídos en dicha Generación de Saldo por Caducidad.</div>
+</td>
+				</tr>
+
+			</table>
+		</div>
+		<div class="ItemBody" id="FilesTable">
+			<table border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="50%" class="TableHeading">File</td>
+					<td width="10%" class="TableHeading">Type</td>
+					<td width="40%" class="TableHeading">Details</td>
+				</tr>
+			<tr>
+				<td width="50%" class="TableRow"><a href="C:\siatdoc\docGenerada\analisisDisenio\especificacion\GDEUDA - Saldos por Caducidad Masivos.doc">C:\siatdoc\docGenerada\analisisDisenio\especificacion\GDEUDA - Saldos por Caducidad Masivos.doc</a></td>
+				<td width="10%" class="TableRow">Local File</td>
+				<td width="40%" class="TableRow">
+					<div class="ObjectDetailsNotes">Especificación</div>
+<br />
+					<span class="NoteHeading">File Size:</span> 531 k<br />
+					<span class="NoteHeading">Time Stamp:</span> 23/06/2008 06:45:38 a.m.<br />
+				</td>
+			</tr>
+			<tr>
+				<td width="50%" class="TableRow"><a href="c:\siatdoc\docGenerada\capacitacion\gdeuda\Administracion Deuda  Convenios\MDU - Administrar Saldos por Caducidad Masivos.doc">c:\siatdoc\docGenerada\capacitacion\gdeuda\Administracion Deuda  Convenios\MDU - Administrar Saldos por Caducidad Masivos.doc</a></td>
+				<td width="10%" class="TableRow">Local File</td>
+				<td width="40%" class="TableRow">
+					<div class="ObjectDetailsNotes">Manual de usuario</div>
+<br />
+					<span class="NoteHeading">File Size:</span> 462 k<br />
+					<span class="NoteHeading">Time Stamp:</span> 17/09/2008 06:49:23 a.m.<br />
+				</td>
+			</tr>
+
+			</table>
+		</div>
+		<div class="ItemBody" id="LinksTable">
+			<table align="center" border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="30%" class="TableHeading">Object</td>
+					<td width="15%" class="TableHeading">Type</td>
+					<td width="15%" class="TableHeading">Connection</td>
+					<td width="40%" class="TableHeading">Notes</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../../../../EA1/EA5/EA63.htm">«Functional» 1- El sistema deberá dar soporte a todos los procesos de la Administración Tributaria.</a></td>
+					<td width="15%" class="TableRow" valign="top">Requirement</td>
+					<td width="15%" class="TableRow" valign="top">Realisation</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../../../../EA1/EA5/EA67.htm">«Functional» 13- Todo evento que actúe sobre la cuenta corriente de más de un contribuyente, deberá poder ser dirigido a un segmento de contribuyentes seleccionado por el usuario.</a></td>
+					<td width="15%" class="TableRow" valign="top">Requirement</td>
+					<td width="15%" class="TableRow" valign="top">Realisation</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../../../../EA1/EA7/EA99.htm">«Functional» 69- Permitir realizar anulaciones y caducidades masivas para un determinado tipo de plan.</a></td>
+					<td width="15%" class="TableRow" valign="top">Requirement</td>
+					<td width="15%" class="TableRow" valign="top">Realisation</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../../EA11/EA1/EA618.htm">Administrar Corrida de Proceso</a></td>
+					<td width="15%" class="TableRow" valign="top">UseCase</td>
+					<td width="15%" class="TableRow" valign="top">Includes</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../EA1/EA1/EA189.htm">Generar Saldo por Caducidad Individual</a></td>
+					<td width="15%" class="TableRow" valign="top">UseCase</td>
+					<td width="15%" class="TableRow" valign="top">Includes</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../../../../EA1/EA7/EA96.htm">«Functional» 66- Para los convenios formalizados, deberá poderse: reimprimir/reconfeccionar cuotas, emitir cuotas saldo,  realizar saldos por caducidad de convenios caducos y anular convenios totalmente impagos.</a></td>
+					<td width="15%" class="TableRow" valign="top">Requirement</td>
+					<td width="15%" class="TableRow" valign="top">Realisation</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+
+			</table>
+		</div>
+	</div>
+<div class="pageFooter"></div>
+ 
+</body>
+</html>

@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+ <!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 1.1//EN"
+       "http://jakarta.apache.org/struts/dtds/tiles-config_1_1.dtd">
+
+<tiles-definitions>
+	
+    
+    <!-- Procedimiento (Encabezado) -->
+	<definition name=".cyq.concursoyQuiebra.view.procedimientoSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/cyq/concursoyQuiebra/procedimientoSearchPage.jsp"/>
+    </definition>
+
+	<definition name=".cyq.concursoyQuiebra.view.procedimientoAvaSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/cyq/concursoyQuiebra/procedimientoAvaSearchPage.jsp"/>
+    </definition>
+
+    <definition name=".cyq.concursoyQuiebra.view.procedimientoEncEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/cyq/concursoyQuiebra/procedimientoEncEditAdapter.jsp"/>
+    </definition>  	
+
+	<definition name=".cyq.concursoyQuiebra.view.procedimientoBajaAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/cyq/concursoyQuiebra/procedimientoBajaAdapter.jsp"/>
+    </definition> 
+    
+    <definition name=".cyq.concursoyQuiebra.view.procedimientoConversionAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/cyq/concursoyQuiebra/procedimientoConversionAdapter.jsp"/>
+    </definition> 
+    
+    <definition name=".cyq.concursoyQuiebra.view.procedimientoInformeAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/cyq/concursoyQuiebra/procedimientoInformeAdapter.jsp"/>
+    </definition>
+    
+	<definition name=".cyq.concursoyQuiebra.view.procedimientoViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/cyq/concursoyQuiebra/procedimientoViewAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".cyq.concursoyQuiebra.view.procedimientoAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/cyq/concursoyQuiebra/procedimientoAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".cyq.concursoyQuiebra.view.deudaCyqCuentaSearch" extends=".siatStdLayout">
+	    <put name="body" value="/cyq/concursoyQuiebra/deudaCyqCuentaSearch.jsp"/>
+    </definition>
+	
+	<definition name=".cyq.concursoyQuiebra.view.deudaCyqAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/cyq/concursoyQuiebra/deudaCyqAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".cyq.concursoyQuiebra.view.messageDeudaCyqAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/cyq/concursoyQuiebra/messageDeudaCyqAdapter.jsp"/>
+    </definition>    
+    
+    <definition name=".cyq.concursoyQuiebra.view.cambioEstadoProcedimientoAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/cyq/concursoyQuiebra/cambioEstadoProcedimientoAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".cyq.concursoyQuiebra.view.proCueNoDeuEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/cyq/concursoyQuiebra/proCueNoDeuEditAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".cyq.concursoyQuiebra.view.proCueNoDeuViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/cyq/concursoyQuiebra/proCueNoDeuViewAdapter.jsp"/>
+    </definition>
+     
+    <!-- Liquidacion de Deuda Cyq -->    
+    <definition name=".cyq.concursoyQuiebra.view.liqDeudaCyqAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/cyq/concursoyQuiebra/liqDeudaCyqAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".cyq.concursoyQuiebra.view.deudaPrivilegioEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/cyq/concursoyQuiebra/deudaPrivilegioEditAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".cyq.concursoyQuiebra.view.deudaPrivilegioViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/cyq/concursoyQuiebra/deudaPrivilegioViewAdapter.jsp"/>
+    </definition>
+	
+	<definition name=".cyq.concursoyQuiebra.view.pagoPrivEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/cyq/concursoyQuiebra/pagoPrivEditAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".cyq.concursoyQuiebra.view.pagoPrivViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/cyq/concursoyQuiebra/pagoPrivViewAdapter.jsp"/>
+    </definition>
+    
+    <!-- Formalizacion de Convenio Cyq -->
+    <definition name=".cyq.concursoyQuiebra.view.liqFormConvenioAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/cyq/concursoyQuiebra/liqFormConvenioAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".cyq.concursoyQuiebra.view.liqFormConvenioPlanesAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/cyq/concursoyQuiebra/liqFormConvenioPlanesAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".cyq.concursoyQuiebra.view.liqFormConvenioCuotasAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/cyq/concursoyQuiebra/liqFormConvenioCuotasAdapter.jsp"/>
+    </definition>
+
+	<definition name=".cyq.concursoyQuiebra.view.liqFormConvenioSimulaCuotasAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/cyq/concursoyQuiebra/liqFormConvenioSimulaCuotasAdapter.jsp"/>
+    </definition> 
+
+	<definition name=".cyq.concursoyQuiebra.view.liqFormConvenioFormalAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/cyq/concursoyQuiebra/liqFormConvenioFormalAdapter.jsp"/>
+    </definition>
+    
+	<definition name=".cyq.concursoyQuiebra.view.liqFormConvenioPrintAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/cyq/concursoyQuiebra/liqFormConvenioPrintAdapter.jsp"/>
+    </definition>
+
+    <!-- Se reuliza la impresion de formulario de GDE -->
+	<definition name=".cyq.concursoyQuiebra.view.liqFormConvenioImpForm" extends=".siatStdLayout">
+	    <put name="body" value="/gde/gdeuda/liqFormConvenioImpForm.jsp"/>
+    </definition>
+
+	<!-- Se reuliza la impresion de recibos de GDE -->
+	<definition name=".cyq.concursoyQuiebra.view.liqFormConvenioImpRecibos" extends=".siatStdLayout">
+	    <put name="body" value="/gde/gdeuda/liqFormConvenioImpRecibos.jsp"/>
+    </definition>
+    
+    <definition name=".cyq.concursoyQuiebra.view.liqFormConvenioImpAltCuotas" extends=".siatStdLayout">
+	    <put name="body" value="/cyq/concursoyQuiebra/liqFormConvenioImpAltCuotas.jsp"/>
+    </definition>
+    
+    <!-- Convenio Especial -->
+    <definition name=".cyq.concursoyQuiebra.view.liqFormConvenioEspAdapter" extends=".siatStdLayout"> 
+    	<put name="body" value="/cyq/concursoyQuiebra/liqFormConvenioEspAdapter.jsp"/>
+	</definition>
+	
+	<definition name=".cyq.concursoyQuiebra.view.liqFormConvenioPlanesEspAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/cyq/concursoyQuiebra/liqFormConvenioPlanesEspAdapter.jsp"/>
+    </definition>
+	
+	<definition name=".cyq.concursoyQuiebra.view.liqFormConvenioCuotasEspAdapter" extends=".siatStdLayout"> 
+    	<put name="body" value="/cyq/concursoyQuiebra/liqFormConvenioCuotasEspAdapter.jsp"/>
+	</definition>
+	
+	<definition name=".cyq.concursoyQuiebra.view.liqFormConvenioCuotasEspEditAdapter" extends=".siatStdLayout"> 
+    	<put name="body" value="/cyq/concursoyQuiebra/liqFormConvenioCuotasEspEditAdapter.jsp"/>
+	</definition>
+	
+    <!-- Fin Convenio Especial -->
+    
+	<!-- Fin Procedimiento -->
+	
+	<!-- Mantenedor de Juzgado -->
+    <definition name=".cyq.definicion.view.juzgadoSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/cyq/definicion/juzgadoSearchPage.jsp"/>
+    </definition>
+    
+    <definition name=".cyq.definicion.view.juzgadoEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/cyq/definicion/juzgadoEditAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".cyq.definicion.view.juzgadoViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/cyq/definicion/juzgadoViewAdapter.jsp"/>
+    </definition>
+	<!-- Mantenedor de Juzgado -->
+	
+	<!-- Mantenedor de Abogado -->
+    <definition name=".cyq.definicion.view.abogadoSearchPage" extends=".siatStdLayout">
+	    <put name="body" value="/cyq/definicion/abogadoSearchPage.jsp"/>
+    </definition>
+    
+    <definition name=".cyq.definicion.view.abogadoEditAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/cyq/definicion/abogadoEditAdapter.jsp"/>
+    </definition>
+    
+    <definition name=".cyq.definicion.view.abogadoViewAdapter" extends=".siatStdLayout">
+	    <put name="body" value="/cyq/definicion/abogadoViewAdapter.jsp"/>
+    </definition>
+	<!-- Mantenedor de Abogado -->
+</tiles-definitions>

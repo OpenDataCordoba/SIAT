@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC 
+"-//Apache Software Foundation//DTD Struts Configuration 1.2//EN"  
+"[WWW] http://struts.apache.org/dtds/struts-config_1_2.dtd">
+
+<struts-config>
+	<form-beans>
+		
+		<form-bean name="tipoSujetoSearchPage" type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="tipoSujetoAdapter"    type="org.apache.struts.action.DynaActionForm"/>						 
+		<form-bean name="tipSujExeAdapter"    type="org.apache.struts.action.DynaActionForm"/>
+		
+		<form-bean name="exencionSearchPage" type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="exencionAdapter" 	 type="org.apache.struts.action.DynaActionForm"/>
+		
+		<form-bean name="estadoCueExeSearchPage" type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="estadoCueExeAdapter" 	 type="org.apache.struts.action.DynaActionForm"/>
+		
+		<form-bean name="exeRecConAdapter" 	 type="org.apache.struts.action.DynaActionForm"/>
+		
+		<form-bean name="contribExeSearchPage" type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="contribExeAdapter"    type="org.apache.struts.action.DynaActionForm"/>
+		
+		<form-bean name="cueExeSearchPage" type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="cueExeAdapter"    type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="cueExeConvivAdapter"    type="org.apache.struts.action.DynaActionForm"/>
+		<form-bean name="hisEstCueExeAdapter"    type="org.apache.struts.action.DynaActionForm"/>
+		
+		<form-bean name="marcaCueExeSearchPage" type="org.apache.struts.action.DynaActionForm"/>
+		
+		<form-bean name="deudaExencionAdapter"    type="org.apache.struts.action.DynaActionForm"/>
+	</form-beans>
+
+	<action-mappings>
+		
+	     <!-- Mantenedor de Tipo Sujeto -->
+	     <action
+	    	path="/exe/BuscarTipoSujeto"
+	        type="ar.gov.rosario.siat.exe.view.struts.BuscarTipoSujetoDAction"
+			scope="request"
+	       	validate="false"
+	        name="tipoSujetoSearchPage"
+	        parameter="method"
+	   		input=".exe.exencion.view.tipoSujetoSearchPage"
+	        attribute="tipoSujetoSearchPage">
+	        
+	        <forward name="administrarEncTipoSujeto"	path="/exe/AdministrarEncTipoSujeto.do?method=inicializar"/>	  
+	   	    <forward name="tipoSujetoSearchPage"   	path=".exe.exencion.view.tipoSujetoSearchPage" />
+	   	    <forward name="administrarTipoSujeto" 		path="/exe/AdministrarTipoSujeto.do?method=inicializar" />
+	    </action>
+		
+		<action
+     		path="/exe/AdministrarTipoSujeto"
+	        type="ar.gov.rosario.siat.exe.view.struts.AdministrarTipoSujetoDAction"
+		    scope="request"
+        	validate="false"
+	        name="tipoSujetoAdapter"
+            parameter="method"
+    	    input=".exe.exencion.view.tipoSujetoAdapter"
+	        attribute="tipoSujetoAdapter">
+	      	  
+            <forward name="tipoSujetoAdapter"          path=".exe.exencion.view.tipoSujetoAdapter"/> 
+    	    <forward name="tipoSujetoViewAdapter"	   path=".exe.exencion.view.tipoSujetoViewAdapter" />
+    	    <forward name="tipoSujetoEditAdapter"      path=".exe.exencion.view.tipoSujetoEditAdapter" />
+    	    <forward name="administrarEncTipoSujeto"   path="/exe/AdministrarEncTipoSujeto.do?method=inicializar" />    	    
+    	    <forward name="administrarTipSujExe"   	   path="/exe/AdministrarTipSujExe.do?method=inicializar" />
+	     </action>
+	     
+	     <action
+     		path="/exe/AdministrarEncTipoSujeto"
+	        type="ar.gov.rosario.siat.exe.view.struts.AdministrarEncTipoSujetoDAction"
+		    scope="request"
+        	validate="false"
+	        name="tipoSujetoAdapter"
+            parameter="method"
+    	    input=".exe.exencion.view.tipoSujetoEncEditAdapter"
+	        attribute="tipoSujetoAdapter">
+
+    	    <forward name="tipoSujetoEncEditAdapter"     path=".exe.exencion.view.tipoSujetoEncEditAdapter" />
+	    </action>
+	    
+	    <action
+     		path="/exe/AdministrarTipSujExe"
+	        type="ar.gov.rosario.siat.exe.view.struts.AdministrarTipSujExeDAction"
+		    scope="request"
+        	validate="false"
+	        name="tipSujExeAdapter"
+            parameter="method"
+    	    input=".exe.exencion.view.tipSujExeEditAdapter"
+	        attribute="tipSujExeAdapter">
+	      	  
+            <forward name="tipSujExeViewAdapter"	   path=".exe.exencion.view.tipSujExeViewAdapter" />
+    	    <forward name="tipSujExeEditAdapter"      path=".exe.exencion.view.tipSujExeEditAdapter" />    	    
+	     </action>
+	    
+	     <!-- Fin Mantenedor de Tipo Sujeto -->
+	     
+	    <!-- Mantenedor de Exencion (Encabezado/Detalle) -->
+	    <action
+	    	path="/exe/BuscarExencion"
+	        type="ar.gov.rosario.siat.exe.view.struts.BuscarExencionDAction"
+		    scope="request"
+	       	validate="false"
+	        name="exencionSearchPage"
+	        parameter="method"
+	   	    input=".exe.definicion.view.exencionSearchPage"
+	        attribute="exencionSearchPage">
+	        
+	   	    <forward name="administrarEncExencion" 	path="/exe/AdministrarEncExencion.do?method=inicializar" />	        
+	   	    <forward name="exencionSearchPage"    	path=".exe.definicion.view.exencionSearchPage" />
+	   	    <forward name="administrarExencion" 	path="/exe/AdministrarExencion.do?method=inicializar" />
+	    </action>
+		
+		<action
+     		path="/exe/AdministrarExencion"
+	        type="ar.gov.rosario.siat.exe.view.struts.AdministrarExencionDAction"
+		    scope="request"
+        	validate="false"
+	        name="exencionAdapter"
+            parameter="method"
+    	    input=".exe.definicion.view.exencionAdapter"
+	        attribute="exencionAdapter">
+            
+    	    <forward name="exencionViewAdapter"    path=".exe.definicion.view.exencionViewAdapter" />
+    	    <forward name="exencionAdapter"        path=".exe.definicion.view.exencionAdapter" />
+     	    <forward name="administrarEncExencion" path="/exe/AdministrarEncExencion.do?method=inicializar" />
+    	    <forward name="administrarExeRecCon"   path="/exe/AdministrarExeRecCon.do?method=inicializar" />
+    	    <forward name="administrarExeRes"      path="/exe/AdministrarExeRes.do?method=inicializar" />
+    	    <forward name="buscarResolucion" 	   path="/exe/BuscarResolucion.do?method=inicializar" />
+	    </action>
+	    
+		<action
+     		path="/exe/AdministrarEncExencion"
+	        type="ar.gov.rosario.siat.exe.view.struts.AdministrarEncExencionDAction"
+		    scope="request"
+        	validate="false"
+	        name="exencionAdapter"
+            parameter="method"
+    	    input=".exe.definicion.view.exencionEncEditAdapter"
+	        attribute="exencionAdapter">
+
+    	    <forward name="exencionEncEditAdapter"     path=".exe.definicion.view.exencionEncEditAdapter" />
+	    </action>
+	    
+	    <!-- Administrar ExeRecCon -->
+	    <action
+     		path="/exe/AdministrarExeRecCon"
+	        type="ar.gov.rosario.siat.exe.view.struts.AdministrarExeRecConDAction"
+		    scope="request"
+        	validate="false"
+	        name="exeRecConAdapter"
+            parameter="method"
+    	    input=".exe.definicion.view.exeRecConEditAdapter"
+	        attribute="exeRecConAdapter">
+            
+    	    <forward name="exeRecConViewAdapter"      path=".exe.definicion.view.exeRecConViewAdapter" />
+    	    <forward name="exeRecConEditAdapter"      path=".exe.definicion.view.exeRecConEditAdapter" />
+	    </action>
+	    <!-- Fin Mantenedor de Exencion (Encabezado/Detalle) -->
+	    
+		<!-- Mantenedor de ContribExe -->	    
+	    <action
+	    	path="/exe/BuscarContribExe"
+	        type="ar.gov.rosario.siat.exe.view.struts.BuscarContribExeDAction"
+			scope="request"
+	       	validate="false"
+	        name="contribExeSearchPage"
+	        parameter="method"
+	   		input=".exe.definicion.view.contribExeSearchPage"
+	        attribute="contribExeSearchPage">
+	           
+	   	    <forward name="contribExeSearchPage"   	path=".exe.definicion.view.contribExeSearchPage" />
+	   	    <forward name="administrarContribExe" 	path="/exe/AdministrarContribExe.do?method=inicializar" />
+    	    <forward name="buscarPersona"           path="/pad/BuscarPersona.do?method=inicializar" />
+	    </action>
+		
+		<action
+     		path="/exe/AdministrarContribExe"
+	        type="ar.gov.rosario.siat.exe.view.struts.AdministrarContribExeDAction"
+		    scope="request"
+        	validate="false"
+	        name="contribExeAdapter"
+            parameter="method"
+    	    input=".exe.definicion.view.contribExeEditAdapter"
+	        attribute="contribExeAdapter">
+
+    	    <forward name="contribExeViewAdapter"		path=".exe.definicion.view.contribExeViewAdapter" />
+    	    <forward name="contribExeEditAdapter"       path=".exe.definicion.view.contribExeEditAdapter" />
+    	    <forward name="administrarContribExe"       path="/exe/AdministrarContribExe.do?method=inicializar" />
+    	    <forward name="buscarPersona"               path="/pad/BuscarPersona.do?method=inicializar" />
+    	    <forward name="buscarBroche"                path="/pad/BuscarBroche.do?method=inicializar" />
+    	    <forward name="volverBuscarContribExe"      path="/exe/BuscarContribExe.do?method=buscar"/>
+	    </action>
+	    <!-- Fin Mantenedor de ContribExe -->
+	    
+	    <!-- Mantenedor de EstadoCueExe -->	    
+	    <action
+	    	path="/exe/BuscarEstadoCueExe"
+	        type="ar.gov.rosario.siat.exe.view.struts.BuscarEstadoCueExeDAction"
+			scope="request"
+	       	validate="false"
+	        name="estadoCueExeSearchPage"
+	        parameter="method"
+	   		input=".exe.definicion.view.estadoCueExeSearchPage"
+	        attribute="estadoCueExeSearchPage">
+	           
+	   	    <forward name="estadoCueExeSearchPage"   	path=".exe.definicion.view.estadoCueExeSearchPage" />
+	   	    <forward name="administrarEstadoCueExe" 	path="/exe/AdministrarEstadoCueExe.do?method=inicializar" />
+    	   </action>
+		
+		<action
+     		path="/exe/AdministrarEstadoCueExe"
+	        type="ar.gov.rosario.siat.exe.view.struts.AdministrarEstadoCueExeDAction"
+		    scope="request"
+        	validate="false"
+	        name="estadoCueExeAdapter"
+            parameter="method"
+    	    input=".exe.definicion.view.estadoCueExeEditAdapter"
+	        attribute="estadoCueExeAdapter">
+
+    	    <forward name="estadoCueExeViewAdapter"		path=".exe.definicion.view.estadoCueExeViewAdapter" />
+    	    <forward name="estadoCueExeEditAdapter"       path=".exe.definicion.view.estadoCueExeEditAdapter" />
+    	    <forward name="administrarEstadoCueExe"       path="/exe/AdministrarEstadoCueExe.do?method=inicializar" />
+    	    <forward name="volverBuscarEstadoCueExe"      path="/exe/BuscarEstadoCueExe.do?method=buscar"/>
+	    </action>
+	    <!-- Fin Mantenedor de EstadoCueExe -->
+	    
+	    <!-- Administrar Exencion -->	    
+	    <action
+	    	path="/exe/BuscarCueExe"
+	        type="ar.gov.rosario.siat.exe.view.struts.BuscarCueExeDAction"
+			scope="request"
+	       	validate="false"
+	        name="cueExeSearchPage"
+	        parameter="method"
+	   		input=".exe.exencion.view.cueExeSearchPage"
+	        attribute="cueExeSearchPage">
+	           
+	   	    <forward name="cueExeSearchPage"   			path=".exe.exencion.view.cueExeSearchPage" />
+	   	    <forward name="administrarCueExe" 			path="/exe/AdministrarCueExe.do?method=inicializar" />
+	   	    <forward name="administrarCueExeConviv" 	path="/exe/AdministrarCueExeConviv.do?method=inicializar" />
+	   	    <forward name="administrarEncCueExe" 		path="/exe/AdministrarEncCueExe.do?method=inicializar" />
+	   	    <forward name="buscarCuenta" 				path="/pad/BuscarCuenta.do?method=inicializar" />
+	    </action>
+		
+		<action
+     		path="/exe/AdministrarCueExe"
+	        type="ar.gov.rosario.siat.exe.view.struts.AdministrarCueExeDAction"
+		    scope="request"
+        	validate="false"
+	        name="cueExeAdapter"
+            parameter="method"
+    	    input=".exe.exencion.view.cueExeAdapter"
+	        attribute="cueExeAdapter">
+            
+    	    <forward name="cueExeAdapter"			path=".exe.exencion.view.cueExeAdapter" />
+    	    <forward name="cueExeViewAdapter"		path=".exe.exencion.view.cueExeViewAdapter" />
+    	    <forward name="administrarEncCueExe" 	path="/exe/AdministrarEncCueExe.do?method=inicializar" />
+    	    <forward name="administrarCambioEstadoCueExe" 	path="/exe/AdministrarCambioEstadoCueExe.do?method=inicializar" />
+    	    <forward name="administrarHisEstCueExe" path="/exe/AdministrarHisEstCueExe.do?method=inicializar" />
+	    </action>
+	    
+	    <action
+     		path="/exe/AdministrarEncCueExe"
+	        type="ar.gov.rosario.siat.exe.view.struts.AdministrarEncCueExeDAction"
+		    scope="request"
+        	validate="false"
+	        name="cueExeAdapter"
+            parameter="method"
+    	    input=".exe.exencion.view.cueExeEncEditAdapter"
+	        attribute="cueExeAdapter">
+
+    	    <forward name="cueExeEncEditAdapter"     path=".exe.exencion.view.cueExeEncEditAdapter" />
+    	    <forward name="buscarCuenta" 			 path="/pad/BuscarCuenta.do?method=inicializar" />
+    	    <forward name="buscarPersona"           path="/pad/BuscarPersona.do?method=inicializar" />
+	    </action>
+	    
+	    <action
+     		path="/exe/AdministrarCambioEstadoCueExe"
+	        type="ar.gov.rosario.siat.exe.view.struts.AdministrarCambioEstadoCueExeDAction"
+		    scope="request"
+        	validate="false"
+	        name="cueExeAdapter"
+            parameter="method"
+    	    input=".exe.exencion.view.cambioEstadoCueExeAdapter"
+	        attribute="cueExeAdapter">
+            			   
+    	    <forward name="cambioEstadoCueExeAdapter"			path=".exe.exencion.view.cambioEstadoCueExeAdapter" />
+    	    <forward name="agregarSolicitudCueExeAdapter"		path=".exe.exencion.view.agregarSolicitudCueExeAdapter" />
+    	    <forward name="seleccionarDeuda"           			path="/exe/AdministrarSeleccionDeuda.do?method=inicializar" />
+       	    <forward name="buscarPersona"           			path="/pad/BuscarPersona.do?method=inicializar" /> 
+	    </action>
+	    
+	    <action
+     		path="/exe/AdministrarSeleccionDeuda"
+	        type="ar.gov.rosario.siat.exe.view.struts.AdministrarSeleccionDeudaDAction"
+		    scope="request"
+        	validate="false"
+	        name="cueExeAdapter"
+            parameter="method"
+    	    input=".exe.exencion.view.seleccionDeudaEditAdapter"
+	        attribute="cueExeAdapter">
+	        
+    	    <forward name="seleccionDeudaEditAdapter"  path=".exe.exencion.view.seleccionDeudaEditAdapter" />
+    	    <forward name="cambioEstadoCueExeAdapter"  path=".exe.exencion.view.cambioEstadoCueExeAdapter" />    	    
+	    </action>
+	    
+	    <action
+     		path="/exe/AdministrarCueExeConviv"
+	        type="ar.gov.rosario.siat.exe.view.struts.AdministrarCueExeConvivDAction"
+		    scope="request"
+        	validate="false"
+	        name="cueExeConvivAdapter"
+            parameter="method"
+    	    input=".exe.exencion.view.cueExeConvivEditAdapter"
+	        attribute="cueExeConvivAdapter">
+            
+    	    <forward name="cueExeConvivAdapter"			path=".exe.exencion.view.cueExeConvivAdapter" />
+    	    <forward name="cueExeConvivEditAdapter"		path=".exe.exencion.view.cueExeConvivEditAdapter" />    	  
+	    </action>
+	    
+	    
+	    <action
+     		path="/exe/AdministrarHisEstCueExe"
+	        type="ar.gov.rosario.siat.exe.view.struts.AdministrarHisEstCueExeDAction"
+		    scope="request"
+        	validate="false"
+	        name="hisEstCueExeAdapter"
+            parameter="method"
+    	    input=".exe.exencion.view.hisEstCueExeEditAdapter"
+	        attribute="hisEstCueExeAdapter">
+            
+    	    <forward name="hisEstCueExeViewAdapter"      path=".exe.exencion.view.hisEstCueExeViewAdapter" />    	    
+	    </action>
+	    <!-- Fin Administrar Exencion -->
+	
+		<!-- ADM Marcas de exenciones -->
+	    <action
+	    	path="/exe/BuscarMarcaCueExe"
+	        type="ar.gov.rosario.siat.exe.view.struts.BuscarMarcaCueExeDAction"
+			scope="request"
+	       	validate="false"
+	        name="marcaCueExeSearchPage"
+	        parameter="method"
+	   		input=".exe.exencion.view.marcaCueExeSearchPage"
+	        attribute="marcaCueExeSearchPage">
+	           
+	   	    <forward name="marcaCueExeSearchPage"   	path=".exe.exencion.view.marcaCueExeSearchPage" />
+	   	    <forward name="buscarCuenta" 				path="/pad/BuscarCuenta.do?method=inicializar" />
+	    </action>
+		<!-- FIN ADM Marcas de exenciones -->
+		
+		<!-- Administrar Deuda Exencion -->
+	    <action
+     		path="/exe/AdministrarDeudaExencion"
+	        type="ar.gov.rosario.siat.exe.view.struts.AdministrarDeudaExencionDAction"
+		    scope="request"
+        	validate="false"
+	        name="deudaExencionAdapter"
+            parameter="method"
+    	    input=".exe.exencion.view.deudaExencionIngresoAdapter"
+	        attribute="deudaExencionAdapter">
+            
+    	    <forward name="deudaExencionIngresoAdapter"		path=".exe.exencion.view.deudaExencionIngresoAdapter" />
+    	    <forward name="cuentaExencionAdapter"       	path=".exe.exencion.view.cuentaExencionAdapter" />
+    	    <forward name="deudaExencionAdapter"       		path=".exe.exencion.view.deudaExencionAdapter" />
+    	    <forward name="buscarCuenta" 					path="/pad/BuscarCuenta.do?method=inicializar" />
+	    </action>
+	    <!-- Fin Administrar Deuda Exencion -->
+	    
+    </action-mappings>
+</struts-config>

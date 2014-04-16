@@ -1,0 +1,189 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Mantenedor Exención</title>
+<link href="../../../../../css/ea.css" rel="stylesheet" type="text/css" />
+<script>
+function initPage(src) {
+	if(parent==this&&(this.location+"").indexOf('EARoot')!=-1)
+		document.location=(this.location+"").substring(0,(this.location+"").indexOf('EARoot'))+"index"+(this.location+"").substring((this.location+"").lastIndexOf('.'))+"?goto="+((this.location+"").substring((this.location+"").indexOf('EARoot')+7,(this.location+"").lastIndexOf('.')).replace(/\//g,':').replace(/EA/g,""));
+	else
+		parent.initPage(src);
+}
+</script>
+</head>
+<body onload="initPage(this);" class="Content">
+<div class="pageHeader"></div>
+<div class="PageBody">
+	<span class="ObjectTitle">Mantenedor Exención  : public   usecase</span>
+	<table border="0" cellpadding="0" cellspacing="0" class="ObjectDetails">
+		<tr>
+			<td width="15%" class="ObjectDetailsTopic">Created:</td>
+			<td width="85%" class="ObjectDetailsValue">17/07/2007 17:30:34</td>
+		</tr>
+		<tr>
+			<td class="ObjectDetailsTopic">Modified:</td>
+			<td class="ObjectDetailsValue">25/09/2008 18:19:05</td>
+		</tr>
+		<tr style="height: 10px"><td colspan="2"></td></tr>
+		<tr>
+			<td class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="proj" onclick="parent.toggleData(this.id)" />Project:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="proj00" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Author:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="proj01" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Version:</td>
+			<td class="ObjectDetailsValue">1.0</td>
+		</tr>
+		<tr id="proj02" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Phase:</td>
+			<td class="ObjectDetailsValue">1.0</td>
+		</tr>
+		<tr id="proj03" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Status:</td>
+			<td class="ObjectDetailsValue">R1</td>
+		</tr>
+		<tr id="proj04" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Complexity:</td>
+			<td class="ObjectDetailsValue">Medium</td>
+		</tr>
+		<tr>
+			<td class="ObjectDetailsTopic"><img src="../../../../../images/plus03.gif" align="absmiddle" id="adv" onclick="parent.toggleData(this.id)" />Advanced:</td>
+			<td class="ObjectDetailsValue"></td>
+		</tr>
+		<tr id="adv00" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">UUID:</td>
+			<td class="ObjectDetailsValue">{53EBAECA-82F5-442a-978C-6CE3AF11C366}</td>
+		</tr>
+		<tr id="adv01" style="display: none;">
+			<td class="ObjectDetailsTopic" style="padding-left: 18px;">Appears In:</td>
+			<td class="ObjectDetailsValue"><a href="EA548.htm">Diagrama de Exenciones</a></td>
+		</tr>
+	</table>
+	<div class="ObjectDetailsNotes">Este CU tiene como objetivo la administración de Exenciones/Casos Sociales/Otros. <br /><br />Dentro de este punto consideramos las exenciones propiamente dichas (descuento total o parcial de un período de deuda),  Casos Sociales (no actualiza deuda, ni se envía a judiciales o concursos y quiebras. Además permite la suscripción a convenios de pago especiales), las Quitas de sobretasa (en caso de obra en construcción), condonaciones de deuda y liberaciones de deuda (dispensa el pago de determinados montos adeudados a contribuyentes).<br /></div>
+
+	<div class="TableGroup" id="TableGroup">
+		<ul class="ItemTitle">
+			<li onClick="parent.toggleItem('AssociationsFrom');" id="AssociationsFromTitle">Associations From</li>
+			<li onClick="parent.toggleItem('Scenario');" id="ScenarioTitle">Scenarios</li>
+			<li onClick="parent.toggleItem('Links');" id="LinksTitle">Other Links</li>
+		</ul>
+		<div class="ItemBody" id="AssociationsFromTable">
+			<table border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="20%" class="TableHeading">Element</td>
+					<td width="25%" class="TableHeading">Source Role</td>
+					<td width="25%" class="TableHeading">Target Role</td>
+					<td width="30%" class="TableHeading">Details</td>
+				</tr>
+				<tr>
+					<td width="20%" class="TableRow" valign="top">
+						<a href="../../../EA3/EA646.htm">Mantenimiento Padrón y Emisión</a><br />
+						Actor &nbsp;
+					</td>
+					<td width="20%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;
+					</td>
+					<td width="20%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;	
+					</td>
+					<td width="30%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="20%" class="TableRow" valign="top">
+						<a href="../../../EA3/EA642.htm">Exenciones (Legal Tributaria)</a><br />
+						Actor &nbsp;
+					</td>
+					<td width="20%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;
+					</td>
+					<td width="20%" class="TableRow" valign="top">
+						<strong>Name:</strong> &nbsp;<br />
+						&nbsp;	
+					</td>
+					<td width="30%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+
+			</table>
+		</div>
+		<div class="ItemBody" id="ScenarioTable">
+			<table align="center" border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="24%" class="TableHeading">Scenario</td>
+					<td width="8%" class="TableHeading">Type</td>
+					<td width="68%" class="TableHeading">Detail</td>
+				</tr>
+				<tr>
+					<td width="24%" class="TableRow">Buscar Exención/Caso Social/Otro</td>
+					<td width="8%" class="TableRow">Alternate</td>
+					<td width="68%" class="TableRow"><div class="ObjectDetailsNotes">Permite consultar las Exenciones/Casos Sociales/Otros disponibles en el SIAT por Recurso, Código y Descripción.<br />Si existen resultados se muestra de cada uno de los registros el Recurso, Código, la Descripción, el Estado y las acciones asociadas: &quot;Ver Exención/Caso Social/Otro&quot;, &quot;Modificar Exención/Caso Social/Otro&quot;, &quot;Eliminar Exención/Caso Social/Otro&quot; y &quot;Activar/Desactivar Exención/Caso Social/Otro&quot;.<br />Para agregar una nueva exención, existe la opción &quot;Agregar Exención/Caso Social/Otro&quot;.</div>
+</td>
+				</tr>
+				<tr>
+					<td width="24%" class="TableRow">Ver Exención/Caso Social/Otro</td>
+					<td width="8%" class="TableRow">Alternate</td>
+					<td width="68%" class="TableRow"><div class="ObjectDetailsNotes">Permite visualizar información de la Exención/Caso Social/Otro seleccionada junto a los Conceptos y Acciones/Resoluciones asociados.<br /></div>
+</td>
+				</tr>
+				<tr>
+					<td width="24%" class="TableRow">Agregar Exención/Caso Social/Otro</td>
+					<td width="8%" class="TableRow">Alternate</td>
+					<td width="68%" class="TableRow"><div class="ObjectDetailsNotes">Para crear una nueva Exención/Caso Social/Otro, debemos ingresar los siguientes datos: <br />- Recurso<br />- Código <br />- Descripción<br />- Indicar si Actualiza deuda: implica que la Deuda correspondiente a la Cuenta asociada a la Exención puede ser actualizada. Los Casos Sociales, por ejemplo, no Actualizan Deuda.<br />- Indicar si Envía Deuda a Judicial: implica que la Deuda correspondiente a la Cuenta asociada a la Exención podrá ser enviada a la Vía Judicial. Los Casos Sociales, por ejemplo,  no permiten el envío de deuda a Judiciales.<br />- Indicar si Envía Deuda a Concursos y Quiebras: implica que la Deuda correspondiente a la Cuenta asociada a la Exención podrá ser enciada a Concurso y Quiebras. Los Casos Sociales, por ejemplo, no permiten el envío de deuda a C y Q.<br />- Indicar si Afecta emisión: implica que la Cuenta asociada a la Exención tendrá un descuento parcial o total de la deuda correspondiente. Los Casos Sociales, por ejemplo no afectan la emisión, aunque si permite aplicar convenios especiales a la cuentas asociadas a los mismos.<br />- Indicar si Es Parcial: determina si el beneficio de la Exención es total o parcial. En el caso de DREI, pueden existir comercios que están exentos en ciertos Rubros.<br />- Caso<br />- Monto mínimo: dato utilizado al momento del cálculo del importe exento<br />- Aplica mínimo: determina si debe aplicarse el Monto Mínimo.	<br /></div>
+</td>
+				</tr>
+				<tr>
+					<td width="24%" class="TableRow">Eliminar Exención/Caso Social/Otro</td>
+					<td width="8%" class="TableRow">Alternate</td>
+					<td width="68%" class="TableRow"><div class="ObjectDetailsNotes">Elimina en forma física la Exención/Caso Social/Otro seleccionado siempre y cuando no esté siendo refenciado.</div>
+</td>
+				</tr>
+				<tr>
+					<td width="24%" class="TableRow">Modificar Exención/Caso Social/Otro</td>
+					<td width="8%" class="TableRow">Alternate</td>
+					<td width="68%" class="TableRow"><div class="ObjectDetailsNotes">Permite actualizar todos los datos de la exención menos el Código y el Caso, siempre que la Exención no esté asociada a una Solicitud. <br />Además se permite agregar las Acciones/Resoluciones que podrán asociarse a la Exención (del maestro de acciones) y definir los Conceptos. <br /><br />Las Acciones asociadas a una Exención únicamente podrán eliminarse en caso de que no exista ninguna Solicitud de dicha Exención con la Acción asociada.<br /><br />Cuando una Exención tiene configurado la opción &quot;Afecta Emisión = SI&quot;, y no se especifica ningún Concepto, se hará una quita del total del importe del Período asociado. Si tiene un descuento asociado a un Concepto del Recurso de la Exención, entonces se deberá especificar por cada Concepto el Porcentaje o Importe correspondiente y la vigencia correspondiente.</div>
+</td>
+				</tr>
+				<tr>
+					<td width="24%" class="TableRow">Activar/Desactivar Exención/Caso Social/Otro</td>
+					<td width="8%" class="TableRow">Alternate</td>
+					<td width="68%" class="TableRow"><div class="ObjectDetailsNotes">Permite cambiar el estado de una Exención/Caso Social/Otro. Cuando el estado de la Exención/Caso Social/Otro es Activa, podrá pasar a estado Inactiva no pudiendo ser nuevamente referenciada por una Solicitud y si tiene estado Inactiva pasará al estado Activa.</div>
+</td>
+				</tr>
+
+			</table>
+		</div>
+		<div class="ItemBody" id="LinksTable">
+			<table align="center" border="0" cellspacing="0" cellpadding="0" class="Table">
+				<tr>
+					<td width="30%" class="TableHeading">Object</td>
+					<td width="15%" class="TableHeading">Type</td>
+					<td width="15%" class="TableHeading">Connection</td>
+					<td width="40%" class="TableHeading">Notes</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../../../../EA1/EA6/EA87.htm">«Functional» 35- Registrar los distintos estados tributarios de cada objeto imponible (eximición, exoneración, quitas sobre determinados conceptos, casos sociales, etc.) sistematizando sus vigencias.</a></td>
+					<td width="15%" class="TableRow" valign="top">Requirement</td>
+					<td width="15%" class="TableRow" valign="top">Realisation</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="30%" class="TableRow" valign="top"><a href="../../EA3/EA1/EA354.htm">Administrar Exenciones</a></td>
+					<td width="15%" class="TableRow" valign="top">UseCase</td>
+					<td width="15%" class="TableRow" valign="top">Includes</td>
+					<td width="40%" class="TableRow" valign="top">&nbsp;</td>
+				</tr>
+
+			</table>
+		</div>
+	</div>
+<div class="pageFooter"></div>
+ 
+</body>
+</html>
